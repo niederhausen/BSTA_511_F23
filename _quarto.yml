@@ -7,7 +7,7 @@ website:
   navbar:
     background: primary
     search: true
-    logo: "images/IMG_8165.png"
+    logo: "images/IMG_8165sq_med.png"
     foreground: "#fff"
     collapse-below: sm
     left:

@@ -14,7 +14,7 @@ link-external-newwindow: true
 
 &nbsp;
 
-![](images/IMG_8165sq.png){fig-align="center" width="210"}
+![](images/IMG_8165sq_med.png){fig-align="center" width="210"}
 
 :::
 
