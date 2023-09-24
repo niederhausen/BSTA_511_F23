@@ -1,11 +1,82 @@
 ---
-title: "BSTA_511_F23"
+title: ""
+toc: false
+sidebar: true
+page-layout: full
+link-external-newwindow: true
 ---
 
-This is a Quarto website.
+::: {style="background-color: #008cba"}
+::: {style="color: #FFFFFF"}
+::: grid
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+::: g-col-4
 
-```{r}
-1 + 1
-```
+&nbsp;
+
+![](images/IMG_8165sq.png){fig-align="center" width="210"}
+
+:::
+
+::: g-col-8
+# Welcome to BSTA 511/611!
+
+### Estimation and Hypothesis Testing
+### Applied Biostatistics I
+
+#### Fall 2023
+:::
+
+:::
+:::
+:::
+
+::: grid
+
+::: g-col-3
+### Instructor
+
+{{< iconify fluent person-24-filled size=24px >}} Dr. Meike Niederhausen
+
+{{< iconify bi building-fill size=24px >}} Vanport 660E
+
+{{< iconify tabler mail-filled size=24px >}} [niederha\@ohsu.edu](mailto:niederha@ohsu.edu)
+:::
+
+::: g-col-3
+### Office Hours
+
+{{< iconify fa6-solid calendar-days size=24px >}} TBD
+
+{{< iconify icon-park-solid time size=24px >}} TBD
+:::
+
+::: g-col-3
+### Course details
+
+{{< iconify fa6-solid calendar-days size=24px >}} Mondays, Wednesdays
+
+{{< iconify fa6-solid calendar size=24px >}} Sept 25 - Dec 4
+
+{{< iconify icon-park-solid time size=24px >}} 1:00 PM - 2:50 PM
+
+{{< iconify fa6-solid person-chalkboard size=24px >}} In-person
+:::
+
+::: g-col-3
+### Contacting me
+
+E-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: grid
+::: g-col-8
+:::
+
+::: g-col-4
+[{{< iconify icomoon-free github size=24px >}} View the source on GitHub](https://github.com/niederhausen/BSTA_511_F23)
+:::
+:::

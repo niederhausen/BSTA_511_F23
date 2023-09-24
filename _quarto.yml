@@ -3,16 +3,32 @@ project:
   output-dir: docs
 
 website:
-  title: "BSTA_511_F23"
+  title: "BSTA 511/611 Fall 2023"
   navbar:
+    background: primary
+    search: true
+    logo: "images/IMG_8165.png"
+    foreground: "#fff"
+    collapse-below: sm
     left:
       - href: index.qmd
         text: Home
       - about.qmd
 
+  sidebar:
+    style: "docked"
+    search: true
+    collapse-level: 4
+    contents:
+      - href: index.qmd
+        text: Home
+      - section: "Course Info"
+        contents:
+          - href: instructors.qmd
+            text: Instructors        
 format:
   html:
-    theme: cosmo
+    theme: yeti
     css: styles.css
     toc: true
 

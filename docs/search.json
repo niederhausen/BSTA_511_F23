@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "BSTA_511_F23",
+    "title": "Welcome to BSTA 511/611!",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Welcome to BSTA 511/611!\n\nEstimation and Hypothesis Testing\n\n\nApplied Biostatistics I\n\nFall 2023\n\n\n\n\n\n\n\n\nInstructor\n Dr. Meike Niederhausen\n Vanport 660E\n niederha@ohsu.edu\n\n\nOffice Hours\n TBD\n TBD\n\n\nCourse details\n Mondays, Wednesdays\n Sept 25 - Dec 4\n 1:00 PM - 2:50 PM\n In-person\n\n\nContacting me\nE-mail or Slack is the best way to get in contact with me. I will try to respond to all course-related e-mails within 24 hours Monday-Friday.\n\n\n\n\n\n\n\n\n View the source on GitHub"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,33 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\nHere is a change I am making.\nAnother change for another test!"
+  },
+  {
+    "objectID": "index.html#estimation-and-hypothesis-testing",
+    "href": "index.html#estimation-and-hypothesis-testing",
+    "title": "BSTA 511/611",
+    "section": "",
+    "text": "Welcome!"
+  },
+  {
+    "objectID": "instructors.html",
+    "href": "instructors.html",
+    "title": "Instructors",
+    "section": "",
+    "text": "Email: niederha@ohsu.edu\nOffice: VPT 660E\n\nPronouns: she/her/hers\nBest method to contact: Email or Slack.\n\n\n\nTBD!!"
+  },
+  {
+    "objectID": "instructors.html#instructor-meike-niederhausen-phd",
+    "href": "instructors.html#instructor-meike-niederhausen-phd",
+    "title": "Instructors",
+    "section": "",
+    "text": "Email: niederha@ohsu.edu\nOffice: VPT 660E\n\nPronouns: she/her/hers\nBest method to contact: Email or Slack.\n\n\n\nTBD!!"
+  },
+  {
+    "objectID": "instructors.html#ta-tbd",
+    "href": "instructors.html#ta-tbd",
+    "title": "Instructors",
+    "section": "TA: TBD",
+    "text": "TA: TBD"
   }
 ]
