@@ -24,6 +24,8 @@ Intro to R & RStudio
 
 * [html](../slides/Day01_bsta511.qmd)
 * [pdf](../pdf_slides/Day01_bsta511.pdf)
+* [webpage](../slides_md/Day01_bsta511_md.qmd)
+* [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_md/Day01_bsta511_md.qmd)
 
 ## Homework
 
