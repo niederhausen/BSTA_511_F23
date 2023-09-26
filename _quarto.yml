@@ -10,10 +10,13 @@ website:
     logo: "images/IMG_8165sq_med.png"
     foreground: "#fff"
     collapse-below: sm
-    left:
+    right:
       - href: index.qmd
         text: Home
-
+      - href: class_slides.qmd
+        text: Slides
+      - href: weeks.qmd
+        text: Weeks
   sidebar:
     style: "docked"
     search: true
@@ -21,10 +24,13 @@ website:
     contents:
       - href: index.qmd
         text: Home
-      - section: "Course Info"
-        contents:
-          - href: instructors.qmd
-            text: Instructors        
+      - href: instructors.qmd
+        text: Instructors        
+      - href: class_slides.qmd
+        text: Slides
+      - href: weeks.qmd
+        text: Weeks
+            
 format:
   html:
     theme: yeti
