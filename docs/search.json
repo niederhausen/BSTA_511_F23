@@ -333,7 +333,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\nHere is a change I am making.\nAnother change for another test!"
+    "text": "Assistant Professor of Biostatistics in the OHSU-PSU School of Public Health\nFaculty Biostatistician for OHSU’s Biostatistics & Design Program\nAffiliate Investigator for the HSR&D Center to Improve Veteran Involvement in Care (CIVIC) at the Portland VA"
   },
   {
     "objectID": "class_slides.html",
@@ -614,5 +614,26 @@
     "title": "Day 1: Intro to R & Rstudio",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nFrom Quarto’s Markdown Basics webpage, https://quarto.org/docs/authoring/markdown-basics.html↩︎\nrequires LaTeX installation↩︎\nGrolemund, Garrett. 2014. Hands-on Programming with R. O’Reilly. https://rstudio-education.github.io/hopr/↩︎"
+  },
+  {
+    "objectID": "about.html#course-info",
+    "href": "about.html#course-info",
+    "title": "About",
+    "section": "Course info",
+    "text": "Course info\nThis webpage was created for BSTA 511/611 in the OHSU-PSU School of Public Health. BSTA 511 is taken primarily by students in the Biostatistics MS/MPH and Epidemiology MPH programs. BSTA 611 is taken by PhD students in various programs across OHSU."
+  },
+  {
+    "objectID": "about.html#acknowledgements",
+    "href": "about.html#acknowledgements",
+    "title": "About",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\nThank you to Nicky Wakim for creating her amazing webpage for BSTA 550, and sharing her code on GitHub. Having her template made creating this website a much smoother process.\nThank you also to Andrew Bray for presenting the From R Markdown to Quarto ASA Travelling Workshop to the Oregon Chapter of the ASA in June 2023. This workshop was a great starting point in making the switch from RMarkdown to Quarto and also create Quarto webpages."
+  },
+  {
+    "objectID": "about.html#meike-niederhausen",
+    "href": "about.html#meike-niederhausen",
+    "title": "About",
+    "section": "",
+    "text": "Assistant Professor of Biostatistics in the OHSU-PSU School of Public Health\nFaculty Biostatistician for OHSU’s Biostatistics & Design Program\nAffiliate Investigator for the HSR&D Center to Improve Veteran Involvement in Care (CIVIC) at the Portland VA"
   }
 ]

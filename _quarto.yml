@@ -17,6 +17,8 @@ website:
         text: Slides
       - href: weeks.qmd
         text: Weeks
+      - href: about.qmd
+        text: About
   sidebar:
     style: "docked"
     search: true
