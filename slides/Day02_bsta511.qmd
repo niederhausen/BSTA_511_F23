@@ -873,10 +873,10 @@ range |
 
 # Back to R...
 
-<!-- background-image: url(img/tidyverse_celestial.png) -->
+<!-- background-image: url(img/tidyverse_celestial.jpg) -->
 <!-- background-size: cover -->
 
-![](/img_slides/tidyverse_celestial.png){fig-align="center"}
+![](/img_slides/tidyverse_celestial.jpg){fig-align="center"}
 
 
 
@@ -990,7 +990,7 @@ library(oibiostat)
 
 #### Compare water sources across the world by country and family income
 
-![[Gapminder Dollarstreet](https://www.gapminder.org/dollar-street?topic=get-water)](/img_slides/gapminder_dollarstreet_getwater.png){fig-align="center"}
+![[Gapminder Dollarstreet](https://www.gapminder.org/dollar-street?topic=get-water)](/img_slides/gapminder_dollarstreet_getwater.jpg){fig-align="center"}
 
 
 Check out Gapminder's Dollar Street for many more examples: https://www.gapminder.org/dollar-street 
