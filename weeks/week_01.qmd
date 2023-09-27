@@ -2,7 +2,7 @@
 title: "Week 1"
 description: "Intro to R & RStudio"
 date: "09/25/2023"
-date-modified: "9/25/2023"
+date-modified: "9/27/2023"
 categories: [""]
 format: 
   html:
@@ -29,4 +29,4 @@ Intro to R & RStudio
 
 ## Homework
 
-Coming soon!
+* [HW 1](../homework/HW_1_F23_bsta511.qmd) due on Sat, 10/7

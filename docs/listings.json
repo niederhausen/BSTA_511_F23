@@ -8,7 +8,15 @@
   {
     "listing": "/class_slides.html",
     "items": [
-      "/slides/Day01_bsta511.html"
+      "/slides/Day01_bsta511.html",
+      "/slides/Day02_bsta511.html"
+    ]
+  },
+  {
+    "listing": "/homework.html",
+    "items": [
+      "/homework/HW_1_F23_bsta511.html",
+      "/homework/HW_2_F23_bsta511.html"
     ]
   }
 ]

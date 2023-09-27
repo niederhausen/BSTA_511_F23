@@ -17,6 +17,8 @@ website:
         text: Slides
       - href: weeks.qmd
         text: Weeks
+      - href: homework.qmd
+        text: Homework
       - href: about.qmd
         text: About
   sidebar:
@@ -28,10 +30,14 @@ website:
         text: Home
       - href: instructors.qmd
         text: Instructors        
+      - href: schedule.qmd
+        text: Schedule
       - href: class_slides.qmd
         text: Slides
       - href: weeks.qmd
         text: Weeks
+      - href: homework.qmd
+        text: Homework
             
 format:
   html:

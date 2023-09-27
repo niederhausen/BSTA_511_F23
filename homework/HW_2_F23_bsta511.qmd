@@ -1,0 +1,108 @@
+---
+title: "draft HW 2: BSTA 511-611 F22"
+author: "Your name here - update this!!!!"
+date: "Due 10/14/23"
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    toc_float:
+      collapsed: false
+    theme: lumen
+---
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+[*This is a draft of HW 2 - more exercises will be added!*]{style="color:red"}
+
+**Due 10/14/23**
+
+Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_2_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_2_F23_bsta511.qmd)
+
+
+## Directions
+
+* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
+* For each question, make sure to include all code and resulting output in the html file to support your answers. 
+
+:::{.callout-tip}
+It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
+:::
+
+
+
+# Book exercises
+
+## 1.24 Income and education in US counties
+
+
+## 1.28 Mix-and-match
+
+
+
+## 1.36 Associations
+
+
+
+# R exercises
+
+(@) __<font color="green">Load all the packages you need below here. </font>__
+
+
+## R1: NHANES
+
+* Below you will be using the dataset called NHANES from the `NHANES` R package. 
+* Install and load the NHANES package using the code below.
+    * This loads the dataset also called NHANES that is within the NHANES package.
+
+```{r eval=FALSE}
+install.packages("NHANES")
+```
+
+```{r}
+library(NHANES)
+data("NHANES")
+```
+
+
+> The National Health and Nutrition Examination Survey (NHANES) is a survey conducted annually by the US National Center for Health Statistics (NCHS). While the original data uses a survey design that oversamples certain subpopulations, the data have been reweighted to undo oversampling effects and can be treated as if it were a simple random sample from the American population.
+
+* To view the complete list of study variables and their descriptions, access the NHANES documentation page with `?NHANES`. 
+  * You must first install the `NHANES` package to see the help files.
+
+
+(@) __<font color="green">What are the dimensions and column names of the dataset?</font>__
+
+
+
+(@) __<font color="green">How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?  </font>__
+
+
+
+(@) __<font color="green">Using numerical and graphical summaries, describe the distribution of ages among study participants.</font>__
+
+
+
+
+(@) __<font color="green">Using numerical and graphical summaries, describe the distribution of heights among study participants.</font>__
+
+
+
+(@) __<font color="green">Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?</font>__ *Use whatever EDA tools you think are appropriate to answer this question.*
+
+
+
+
+(@) __<font color="green">Calculate the median and interquartile range of the distribution of the variable `Poverty`. Write a sentence explaining the median and IQR in the context of these data.</font>__
+
+
+
+
+
+
