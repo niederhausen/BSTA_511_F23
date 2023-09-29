@@ -407,19 +407,33 @@ Meike Niederhausen, PhD
 
   <p class="date">2023-10-02</p>
 </section>
-<section class="slide level2">
-
-<div class="cell">
-<style type="text/css">
-code.sourceCode {
-  font-size: 1.5em;
-  /* or try font-size: xx-large; */
-}
-</style>
-</div>
+<section id="goals-for-today" class="title-slide slide level1 smaller center">
+<h1>Goals for today</h1>
+<ul>
+<li>(1.3) <strong>Data collection principles</strong>
+<ul>
+<li>Population vs.&nbsp;sample</li>
+<li>Sampling methods</li>
+<li>Experiments vs.&nbsp;Observational studies</li>
+</ul></li>
+<li>(1.2) <strong>Intro to Data</strong>
+<ul>
+<li>Data types</li>
+<li>How are data stored in R?</li>
+<li>Working with data in R</li>
+</ul></li>
+<li>(1.4) <strong>Summarizing numerical data</strong>
+<ul>
+<li>Mean, median, mode, SD, IQR, range, 5 number summary</li>
+<li>Empirical Rule</li>
+<li>robust statistics</li>
+</ul></li>
+<li><strong>R packages</strong> -&gt; <strong><span style="color:darkorange">install for next class!!!</span></strong></li>
+</ul>
 </section>
+
 <section>
-<section id="recap-of-last-time" class="title-slide slide level1 center">
+<section id="recap-of-last-time" class="title-slide slide level1 smaller center">
 <h1>Recap of last time</h1>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -451,7 +465,7 @@ code.sourceCode {
 </div>
 </div>
 </section>
-<section id="useful-keyboard-shortcuts" class="slide level2">
+<section id="useful-keyboard-shortcuts" class="slide level2 smaller">
 <h2>Useful keyboard shortcuts</h2>
 <p><a href="https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts">Full list of keyboard shortcuts</a><br>
 &nbsp;</p>
@@ -509,7 +523,7 @@ code.sourceCode {
 <h2>Another resource for an introduction to R</h2>
 <ul>
 <li><p>If you would like another perspective on what we covered the first week, you might find <strong>Danielle Navarro’s</strong> online book <strong><em>Learning Statistics with R</em></strong> to be helpful.</p></li>
-<li><p>Download free pdf: https://learningstatisticswithr.com/</p></li>
+<li><p>Download free pdf: <a href="https://learningstatisticswithr.com/">https://learningstatisticswithr.com/</a></p></li>
 <li><p>See Sections 3.1-3.7.1 for some of the topics we covered on first day</p></li>
 </ul>
 </section></section>
@@ -532,32 +546,6 @@ code.sourceCode {
 </div>
 </div>
 </div>
-</section>
-
-<section id="goals-for-today" class="title-slide slide level1 center">
-<h1>Goals for today</h1>
-<!-- update -->
-<ul>
-<li>(1.3) <strong>Data collection principles</strong>
-<ul>
-<li>Population vs.&nbsp;sample</li>
-<li>Sampling methods</li>
-<li>Experiments vs.&nbsp;Observational studies</li>
-</ul></li>
-<li>(1.2) <strong>Intro to Data</strong>
-<ul>
-<li>Data types</li>
-<li>How are data stored in R?</li>
-<li>Working with data in R</li>
-</ul></li>
-<li>(1.4) <strong>Summarizing numerical data</strong>
-<ul>
-<li>Mean, median, mode, SD, IQR, range, 5 number summary</li>
-<li>Empirical Rule</li>
-<li>robust statistics</li>
-</ul></li>
-<li><strong>R packages</strong> -&gt; <strong><font color="darkorange">install for next class!!!</font></strong></li>
-</ul>
 </section>
 
 <section>
@@ -588,9 +576,8 @@ code.sourceCode {
 <li>group on which data are collected</li>
 <li>often a small subset of the population</li>
 </ul>
-<!-- update: include examples -->
 </section>
-<section id="sampling-methods-14" class="slide level2">
+<section id="sampling-methods-14" class="slide level2 smaller">
 <h2>Sampling methods (1/4)</h2>
 <p>Goal is to get a <strong>representative</strong> sample of the population:<br>
 the characteristics of the sample are similar to the characteristics of the population</p>
@@ -623,7 +610,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 </div>
 </div>
 </section>
-<section id="sampling-methods-24" class="slide level2">
+<section id="sampling-methods-24" class="slide level2 smaller">
 <h2>Sampling methods (2/4)</h2>
 <p><em>Good sampling plans don’t guarantee samples representative of the population</em></p>
 <div class="columns">
@@ -652,7 +639,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 </div>
 </div>
 </section>
-<section id="sampling-methods-34" class="slide level2">
+<section id="sampling-methods-34" class="slide level2 smaller">
 <h2>Sampling methods (3/4)</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -677,7 +664,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 </div>
 </div>
 </section>
-<section id="sampling-methods-44" class="slide level2">
+<section id="sampling-methods-44" class="slide level2 smaller">
 <h2>Sampling methods (4/4)</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -703,9 +690,9 @@ the characteristics of the sample are similar to the characteristics of the popu
 </div>
 </div>
 </section>
-<section id="experiments" class="slide level2">
-<h2>Experiments</h2>
-<div style="font-size: 90%;">
+<section id="experiments-12" class="slide level2">
+<h2>Experiments (1/2)</h2>
+<div style="font-size: 75%;">
 <ul>
 <li>Researchers assign individuals to different <strong>treatment</strong> or <strong>intervention groups</strong>
 <ul>
@@ -722,6 +709,13 @@ the characteristics of the sample are similar to the characteristics of the popu
 </ul></li>
 <li><strong>blocking (stratification)</strong>: group individuals into blocks (strata) before randomizing if there are certain characteristics that may influence the outcome other than treatment (i.e.&nbsp;gender, age group)</li>
 </ul></li>
+</ul>
+</div>
+</section>
+<section id="experiments-22" class="slide level2">
+<h2>Experiments (2/2)</h2>
+<div style="font-size: 90%;">
+<ul>
 <li><strong>Replication</strong>
 <ul>
 <li>accomplished by collecting a sufficiently large sample</li>
@@ -737,6 +731,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 </section>
 <section id="observational-studies" class="slide level2">
 <h2>Observational studies</h2>
+<div style="font-size: 90%;">
 <ul>
 <li>data are observed and recorded without interference</li>
 <li>often done via surveys, electronic health records, or medical chart reviews</li>
@@ -751,6 +746,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 </ul></li>
 <li>prospective vs.&nbsp;retrospective studies</li>
 </ul>
+</div>
 </section>
 <section id="comparing-study-designs" class="slide level2">
 <h2>Comparing study designs</h2>
@@ -761,7 +757,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 <h1>(1.2) Intro to Data</h1>
 
 <img data-src="../img_slides/horst_data_cowboy.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></p></section>
-<section id="how-are-data-stored-how-do-we-use-them" class="slide level2">
+<section id="how-are-data-stored-how-do-we-use-them" class="slide level2 smaller">
 <h2>How are data stored, how do we use them?</h2>
 <ul>
 <li>Often, data are in an Excel sheet, or a plain text file (.csv, .txt)</li>
@@ -784,7 +780,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 <section id="data-frame-example" class="slide level2">
 <h2>Data frame example</h2>
 <div class="columns">
-<div class="column" style="width:49%;">
+<div class="column" style="width:54%;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb2-2"><a href="#cb2-2"></a>  <span class="at">IDs=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, </span>
@@ -809,7 +805,8 @@ the characteristics of the sample are similar to the characteristics of the popu
 </ul>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:49%;">
+</div><div class="column" style="width:44%;">
+<div style="font-size: 90%;">
 <ul>
 <li><p>Different columns can be of different data types (i.e.&nbsp;numeric vs.&nbsp;text)</p></li>
 <li><p>Both numeric and text can be stored within a column (stored together as <em>text</em>).</p></li>
@@ -818,6 +815,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 <li>There are other types of R objects to store data, such as matrices, lists.</li>
 </ul></li>
 </ul>
+</div>
 </div>
 </div>
 </section>
@@ -841,18 +839,21 @@ the characteristics of the sample are similar to the characteristics of the popu
 </figure>
 </div>
 </div><div class="column" style="width:40%;">
+<div style="font-size: 90%;">
 <ul>
 <li><p>Book refers to a dataset as a <em>data matrix</em></p></li>
 <li><p>Rows are usually <strong>observations</strong></p></li>
 <li><p>Columns are usually <strong>variables</strong></p></li>
-<li><p><strong><font color="green">How many observations are in this dataset?</font></strong></p></li>
-<li><p><strong><font color="green">What are the variable types in this dataset?</font></strong></p></li>
+<li><p><strong><span style="color:green">How many observations are in this dataset?</span></strong></p></li>
+<li><p><strong><span style="color:green">What are the variable types in this dataset?</span></strong></p></li>
 </ul>
+</div>
 </div>
 </div>
 </section>
 <section id="variable-column-types" class="slide level2">
 <h2>Variable (column) types</h2>
+<div style="font-size: 70%;">
 <table>
 <colgroup>
 <col style="width: 33%">
@@ -898,6 +899,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 <ul>
 <li>View the <strong>structure</strong> of our data frame to see what the variable types are:</li>
 </ul>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">str</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -911,7 +913,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 </div>
 <!-- * Note that the ID column is _integer_ type since the values are all whole numbers, although we likely would think of it as being a categorical variable and thus prefer it to be a factor. -->
 </section>
-<section id="fishers-or-andersons-iris-data-set" class="slide level2">
+<section id="fishers-or-andersons-iris-data-set" class="slide level2 smaller">
 <h2>Fisher’s (or Anderson’s) Iris data set</h2>
 <p>Data description:</p>
 <ul>
@@ -925,7 +927,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 <li>sepal length, sepal width, petal length, petal width, and species</li>
 </ul></li>
 </ul>
-<p><em><font color="purple">Can the iris species be determined by these variables?</font></em></p>
+<p><em><span style="color:purple">Can the iris species be determined by these variables?</span></em></p>
 <center>
 <img src="../img_slides/Iris_types.png" width="70%" height="50%"><img src="../img_slides/Iris_parts.png" width="28%" height="50%">
 </center>
@@ -933,24 +935,41 @@ the characteristics of the sample are similar to the characteristics of the popu
 </section>
 <section id="view-the-iris-dataset" class="slide level2">
 <h2>View the <code>iris</code> dataset</h2>
+<div style="font-size: 80%;">
 <ul>
 <li>The <code>iris</code> dataset is already pre-loaded in <em>base</em> R and ready to use.</li>
 <li>Type the following command in the console window
 <ul>
-<li><em>Warning: this command cannot be knitted. It will give an error.</em></li>
+<li><em>Warning: this command cannot be rendered. It will give an error.</em></li>
 </ul></li>
 </ul>
+</div>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:30%;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">View</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div style="font-size: 80%;">
 <p>A new tab in the scripting window should appear with the <code>iris</code> dataset.</p>
-
-<img data-src="../img_slides/screenshot_iris_View.png" class="r-stretch quarto-figure-center"></section>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/screenshot_iris_View.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="data-structure" class="slide level2">
 <h2>Data structure</h2>
 <ul>
 <li>What are the different <strong>variable types</strong> in this data set?</li>
 </ul>
+<p><br>
+</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">str</span>(iris)   <span class="co"># structure of data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1006,8 +1025,8 @@ the characteristics of the sample are similar to the characteristics of the popu
 </div>
 </div>
 </section>
-<section id="view-the-beginning-or-end-of-a-data-set" class="slide level2">
-<h2>View the beginning or end of a data set</h2>
+<section id="view-the-beginning-or-end-of-a-dataset" class="slide level2">
+<h2>View the beginning or end of a dataset</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1031,8 +1050,8 @@ the characteristics of the sample are similar to the characteristics of the popu
 </div>
 </div>
 </section>
-<section id="specify-how-many-rows-to-view-at-beginning-or-end-of-a-data-set" class="slide level2">
-<h2>Specify how many rows to view at beginning or end of a data set</h2>
+<section id="specify-how-many-rows-to-view-at-beginning-or-end-of-a-dataset" class="slide level2">
+<h2>Specify how many rows to view at beginning or end of a dataset</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">head</span>(iris, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1076,6 +1095,8 @@ the characteristics of the sample are similar to the characteristics of the popu
 <section id="example-using-the" class="slide level2">
 <h2>Example using the <code>$</code></h2>
 <p>The <code>$</code> is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.</p>
+<p><br>
+</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">mean</span>(iris<span class="sc">$</span>Petal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1093,6 +1114,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 </section>
 <section id="inline-code" class="slide level2">
 <h2>Inline code</h2>
+<div style="font-size: 90%;">
 <ul>
 <li>With markdown you can also report <strong>R code output inline</strong> with the text instead of using a chunk.</li>
 </ul>
@@ -1113,6 +1135,7 @@ the characteristics of the sample are similar to the characteristics of the popu
 <li>Reporting summary statistics this way in a report, makes the numbers computationally reproducible.</li>
 <li>For example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values.</li>
 </ul>
+</div>
 </section></section>
 <section>
 <section id="summarizing-numerical-data" class="title-slide slide level1 center">
@@ -1142,16 +1165,19 @@ the characteristics of the sample are similar to the characteristics of the popu
 </div><div class="column" style="width:40%;">
 <p><em>Are We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis</em><br>
 J Barton et al.<br>
-Arthritis Care &amp; Research. 2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569172/</p>
+Arthritis Care &amp; Research.<br>
+2021 Sep 27 <a href="https://pubmed.ncbi.nlm.nih.gov/34569172/">https://pubmed.ncbi.nlm.nih.gov/34569172/</a></p>
 </div>
 </div>
 </section>
 <section id="measures-of-center-mean" class="slide level2">
 <h2>Measures of center: mean</h2>
-<p><strong><font color="darkorange">Sample mean</font></strong>: the average value of observations</p>
+<div style="font-size: 80%;">
+<p><strong><span style="color:darkorange">Sample mean</span></strong>: the average value of observations</p>
 <p><span class="math display">\[\overline{x} = \frac{x_1+x_2+\cdots+x_n}{n} = \sum_{i=1}^{n}\frac{x_i}{n}\]</span></p>
 <p>where <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> represent the <span class="math inline">\(n\)</span> observed values in a sample</p>
 <p><strong>Example</strong>: What is the mean age in the toy dataset <code>df</code> defined earlier?</p>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1168,21 +1194,27 @@ Arthritis Care &amp; Research. 2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569
 </section>
 <section id="measures-of-center-median" class="slide level2">
 <h2>Measures of center: median</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<div style="font-size: 90%;">
 <ul>
-<li><p>The <strong><font color="darkorange">median</font></strong> is the middle value of the observations in a sample.</p></li>
+<li><p>The <strong><span style="color:darkorange">median</span></strong> is the middle value of the observations in a sample.</p></li>
 <li><p>The median is the 50th percentile, meaning</p>
 <ul>
 <li>50% of observations lie below and</li>
 <li>50% of observations lie above the median.</li>
 </ul></li>
-<li><p>If the number of observations is</p>
+</ul>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 90%;">
+<ul>
+<li>If the number of observations is
 <ul>
 <li>odd: the median is the middle observed value</li>
 <li>even: the median is the average of the two middle observed values</li>
 </ul></li>
 </ul>
+</div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>df<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1204,7 +1236,7 @@ Arthritis Care &amp; Research. 2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569
 <section id="measures-of-center-mean-vs.-median" class="slide level2">
 <h2>Measures of center: mean vs.&nbsp;median</h2>
 
-<img data-src="Day02_bsta511_files/figure-revealjs/unnamed-chunk-18-1.png" width="1344" class="r-stretch"><div class="cell">
+<img data-src="Day02_bsta511_files/figure-revealjs/unnamed-chunk-17-1.png" width="1344" class="r-stretch"><div class="cell">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">summary</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
@@ -1226,23 +1258,31 @@ Arthritis Care &amp; Research. 2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569
 </section>
 <section id="measures-of-center-mode" class="slide level2">
 <h2>Measures of center: mode</h2>
-<p><strong><font color="darkorange">mode</font></strong>: the most frequent value in a dataset</p>
+<p><strong><span style="color:darkorange">mode</span></strong>: the most frequent value in a dataset</p>
+
+<img data-src="Day02_bsta511_files/figure-revealjs/unnamed-chunk-19-1.png" width="1344" class="r-stretch"></section>
+<section id="measures-of-spread-standard-deviation-sd-13" class="slide level2 smaller">
+<h2>Measures of spread: standard deviation (SD) (1/3)</h2>
+<p><strong>standard deviation</strong> is (approximately) the average distance between a typical observation and the mean</p>
+<ul>
+<li>An observation’s <strong>deviation</strong> is the distance between its value <span class="math inline">\(x\)</span> and the sample mean <span class="math inline">\(\overline{x}\)</span>: deviation = <span class="math inline">\(x - \overline{x}\)</span>.</li>
+</ul>
 
 <img data-src="Day02_bsta511_files/figure-revealjs/unnamed-chunk-20-1.png" width="1344" class="r-stretch"></section>
-<section id="measures-of-spread-standard-deviation-sd" class="slide level2">
-<h2>Measures of spread: standard deviation (SD)</h2>
-<p><strong>standard deviation</strong> is (approximately) the distance between a typical observation and the mean</p>
+<section id="measures-of-spread-sd-23" class="slide level2 smaller">
+<h2>Measures of spread: SD (2/3)</h2>
 <ul>
-<li><p>An observation’s <strong>deviation</strong> is the distance between its value <span class="math inline">\(x\)</span> and the sample mean <span class="math inline">\(\overline{x}\)</span>: deviation = <span class="math inline">\(x - \overline{x}\)</span>.</p></li>
 <li><p>The <strong>sample variance</strong> <span class="math inline">\(s^2\)</span> is the sum of squared deviations divided by the number of observations minus 1. <span class="math display">\[s^2 = \frac{(x_1 - \overline{x})^2+(x_2 - \overline{x})^2+\cdots+(x_n - \overline{x})^2}{n-1} = \sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}\]</span> where <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> represent the <span class="math inline">\(n\)</span> observed values.</p></li>
 <li><p>The <strong>standard deviation</strong> <span class="math inline">\(s\)</span> is the square root of the variance. <span class="math display">\[s = \sqrt{\frac{({x_1 - \overline{x})}^{2}+({x_2 - \overline{x})}^{2}+\cdots+({x_n - \overline{x})}^{2}}{n-1}} = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}}\]</span></p></li>
 </ul>
 </section>
-<section id="measures-of-spread-standard-deviation-sd-1" class="slide level2">
-<h2>Measures of spread: standard deviation (SD)</h2>
+<section id="measures-of-spread-sd-33" class="slide level2">
+<h2>Measures of spread: SD (3/3)</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
+<div style="font-size: 80%;">
 <p>Let’s calculate the sample standard deviation for our toy example</p>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>df<span class="sc">$</span>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1262,13 +1302,14 @@ Arthritis Care &amp; Research. 2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569
 </div>
 </div>
 </div>
-<p><span class="math display">\[s = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}} = \]</span></p>
+<p><span class="math inline">\(s = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}} =\)</span></p>
 <!-- \sqrt{\frac{({28 - 31.5)}^{2}+({35.5 - 31.5)}^{2}+({31 - 31.5)}^{2}}{3-1}} = 3.775 -->
 </section>
 <section id="empirical-rule-one-way-to-think-about-the-sd-12" class="slide level2">
 <h2>Empirical Rule: one way to think about the SD (1/2)</h2>
+<div style="font-size: 80%;">
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
 <p>For symmetric bell-shaped data, about</p>
 <ul>
 <li>68% of the data are within 1 SD of the mean</li>
@@ -1276,12 +1317,13 @@ Arthritis Care &amp; Research. 2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569
 <li>99.7% of the data are within 3 SD’s of the mean</li>
 </ul>
 <p>These percentages are based off of percentages of a true normal distribution.</p>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../img_slides/empirical-rule.png"></p>
+<p><img data-src="../img_slides/empirical-rule.png" width="660"></p>
 <figcaption><a href="https://statistics-made-easy.com/empirical-rule/">https://statistics-made-easy.com/empirical-rule/</a></figcaption>
 </figure>
+</div>
 </div>
 </div>
 </div>
@@ -1310,7 +1352,7 @@ Arthritis Care &amp; Research. 2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569
 </div>
 </div>
 </section>
-<section id="measures-of-spread-interquartile-range-iqr-12" class="slide level2">
+<section id="measures-of-spread-interquartile-range-iqr-12" class="slide level2 smaller">
 <h2>Measures of spread: interquartile range (IQR) (1/2)</h2>
 <p>The <span class="math inline">\(p^{th}\)</span> percentile is the observation such that <span class="math inline">\(p\%\)</span> of the remaining observations fall below this observation.</p>
 <ul>
@@ -1318,14 +1360,14 @@ Arthritis Care &amp; Research. 2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569
 <li>The <em>second quartile</em> <span class="math inline">\(Q_2\)</span>, i.e., the median, is the <span class="math inline">\(50^{th}\)</span> percentile.</li>
 <li>The <em>third quartile</em> <span class="math inline">\(Q_3\)</span> is the <span class="math inline">\(75^{th}\)</span> percentile.</li>
 </ul>
-<p>The <strong><font color="darkorange">interquartile range (IQR)</font></strong> is the distance between the third and first quartiles. <span class="math display">\[IQR = Q_3 - Q_1\]</span></p>
+<p>The <strong><span style="color:darkorange">interquartile range (IQR)</span></strong> is the distance between the third and first quartiles. <span class="math display">\[IQR = Q_3 - Q_1\]</span></p>
 <ul>
 <li>IQR is the width of the <em>middle half</em> of the data</li>
 </ul>
 </section>
 <section id="measures-of-spread-iqr-22" class="slide level2">
 <h2>Measures of spread: IQR (2/2)</h2>
-<p><strong><font color="darkorange">5 number summary</font></strong></p>
+<p><strong><span style="color:darkorange">5 number summary</span></strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="fu">summary</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1353,13 +1395,17 @@ Arthritis Care &amp; Research. 2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569
 <pre><code>75% 
 0.5 </code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a><span class="fu">IQR</span>(iris<span class="sc">$</span>Sepal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5</code></pre>
+</div>
 </div>
 </div>
 </div>
 </section>
 <section id="robust-estimates" class="slide level2">
 <h2>Robust estimates</h2>
-<p>Summary statistics are called <strong><font color="darkorange">robust estimates</font></strong> if extreme observations have little effect on their values</p>
+<p>Summary statistics are called <strong><span style="color:darkorange">robust estimates</span></strong> if extreme observations have little effect on their values</p>
 <table>
 <thead>
 <tr class="header">
@@ -1395,56 +1441,76 @@ Arthritis Care &amp; Research. 2021 Sep 27 https://pubmed.ncbi.nlm.nih.gov/34569
 </tbody>
 </table>
 </section></section>
-<section id="back-to-r" class="title-slide slide level1 center">
-<h1>Back to R…</h1>
+<section>
+<section id="r-packages" class="title-slide slide level1 center">
+<h1>R Packages</h1>
 <!-- background-image: url(img/tidyverse_celestial.jpg) -->
 <!-- background-size: cover -->
 
 <img data-src="../img_slides/tidyverse_celestial.jpg" class="r-stretch quarto-figure-center"></section>
-
-<section>
-<section id="r-packages" class="title-slide slide level1 center">
-<h1>R Packages</h1>
+<section id="r-packages-1" class="slide level2">
+<h2>R Packages</h2>
 <p>A good analogy for R packages is that they<br>
 are like apps you can download onto a mobile phone:</p>
 
 <img data-src="../img_slides/R_vs_R_packages.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://moderndive.netlify.com/1-getting-started.html#packages">ModernDive Figure 1.4</a></p></section>
 <section id="installing-packages" class="slide level2">
 <h2>Installing packages</h2>
+<div style="font-size: 80%;">
 <ul>
 <li>Packages contain additional functions and data</li>
 </ul>
-<p>Two options to install packages: 1. <code>install.packages()</code> <em>or</em> 2. The “Packages” tab in Files/Plots/Packages/Help/Viewer window</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)   <span class="co"># only do this ONCE, use quotes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Two options to install packages:</p>
+<ol type="1">
+<li><code>install.packages()</code> <em>or</em></li>
+<li>The “Packages” tab in Files/Plots/Packages/Help/Viewer window</li>
+</ol>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)   <span class="co"># only do this ONCE, use quotes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 80%;">
 <ul>
-<li><strong>Only install pacakges once</strong> <em>(unless you want to update them)</em></li>
+<li><strong>Only install packages once</strong> <em>(unless you want to update them)</em></li>
 <li>Installed from <a href="https://cran.r-project.org/">Comprehensive R Archive Network (CRAN)</a> = package mothership</li>
 </ul>
-
-<img data-src="../img_slides/screenshot_packages_window.png" class="r-stretch quarto-figure-center"></section>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/screenshot_packages_window.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="video-on-installing-packages" class="slide level2">
 <h2>Video on installing packages</h2>
 <ul>
-<li>Danielle Navarro’s YouTube video on <strong><em>Installing and loading R packages</em></strong>: https://www.youtube.com/watch?v=kpHZVyDvEhQ</li>
+<li>Danielle Navarro’s YouTube video on <strong><em>Installing and loading R packages</em></strong>: <a href="https://www.youtube.com/watch?v=kpHZVyDvEhQ">https://www.youtube.com/watch?v=kpHZVyDvEhQ</a></li>
 </ul>
 </section>
 <section id="load-packages-with-library-command" class="slide level2">
 <h2>Load packages with <code>library()</code> command</h2>
+<div style="font-size: 80%;">
 <ul>
 <li>Tip: at the top of your Rmd file, create a chunk that loads all of the R packages you want to use in that file.</li>
 <li>Use the <code>library()</code> command to load each required package.</li>
 <li>Packages need to be reloaded <em>every</em> time you open Rstudio.</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a><span class="fu">library</span>(dplyr)    <span class="co"># run this every time you open Rstudio</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a><span class="fu">library</span>(dplyr)    <span class="co"># run this every time you open Rstudio</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div style="font-size: 80%;">
 <ul>
 <li>You can use a function without loading the package with <code>PackageName::CommandName</code></li>
 </ul>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a>dplyr<span class="sc">::</span><span class="fu">arrange</span>(iris, Petal.Width)   <span class="co"># what does arrange do?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a>dplyr<span class="sc">::</span><span class="fu">arrange</span>(iris, Petal.Width)   <span class="co"># what does arrange do?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
 1            4.9         3.1          1.5         0.1     setosa
@@ -1602,6 +1668,7 @@ are like apps you can download onto a mobile phone:</p>
 </section>
 <section id="install-the-pacakges-listed-below-before-day-3" class="slide level2">
 <h2>Install the pacakges listed below <span style="color:darkorange">before Day 3</span></h2>
+<div style="font-size: 50%;">
 <ul>
 <li><code>knitr</code>
 <ul>
@@ -1612,11 +1679,11 @@ are like apps you can download onto a mobile phone:</p>
 <ul>
 <li>this is actually a bundle of packages</li>
 <li><em>Warning: it will take a while to install!!!</em></li>
-<li>see more info at https://tidyverse.tidyverse.org/</li>
+<li>see more info at <a href="https://tidyverse.tidyverse.org/">https://tidyverse.tidyverse.org/</a></li>
 </ul></li>
-<li><code>skimr</code>
+<li><code>rstatix</code>
 <ul>
-<li>for skimming and getting a summary of a dataset</li>
+<li>for summary statistics of a dataset</li>
 </ul></li>
 <li><code>janitor</code>
 <ul>
@@ -1637,9 +1704,11 @@ are like apps you can download onto a mobile phone:</p>
 <li><strong>see the next slide for directions on how to install <code>oi_biostat_data</code></strong></li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="directions-for-installing-package-oibiostat" class="slide level2">
 <h2>Directions for installing package <code>oibiostat</code></h2>
+<div style="font-size: 70%;">
 <ul>
 <li>The textbook’s datasets are in the R package <code>oibiostat</code></li>
 <li>Explanation of code below
@@ -1648,38 +1717,34 @@ are like apps you can download onto a mobile phone:</p>
 <li>The code <code>devtools::install_github()</code> tells R to use the command <code>install_github()</code> from the <code>devtools</code> package without loading the entire package and all of its commands (which <code>library(devtools)</code> would do).</li>
 </ul></li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb70-2"><a href="#cb70-2"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"OI-Biostat/oi_biostat_data"</span>, <span class="at">force =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb72-2"><a href="#cb72-2"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"OI-Biostat/oi_biostat_data"</span>, <span class="at">force =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div style="font-size: 70%;">
 <ul>
-<li>After running the code above, put <code>#</code> in front of the commands so that RStudio doesn’t evaluate them when knitting.</li>
+<li>After running the code above, put <code>#</code> in front of the commands so that RStudio doesn’t evaluate them when rendering.</li>
 <li>Now load the <code>oibiostat</code> package
 <ul>
 <li><span style="color:darkorange">the code below needs to be run <em>every time</em> you restart R or knit an Rmd file</span></li>
 </ul></li>
 </ul>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="fu">library</span>(oibiostat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="fu">library</span>(oibiostat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
-<section>
-<section id="a-visual-dataset" class="title-slide slide level1 center">
+<section id="a-visual-dataset" class="title-slide slide level1 smaller center">
 <h1>A visual dataset</h1>
+<p>Compare water sources across the world by country and family income</p>
 
-</section>
-<h4 id="compare-water-sources-across-the-world-by-country-and-family-income">Compare water sources across the world by country and family income</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../img_slides/gapminder_dollarstreet_getwater.jpg"></p>
-<figcaption><a href="https://www.gapminder.org/dollar-street?topic=get-water">Gapminder Dollarstreet</a></figcaption>
-</figure>
-</div>
-<p>Check out Gapminder’s Dollar Street for many more examples: https://www.gapminder.org/dollar-street</p>
+<img data-src="../img_slides/gapminder_dollarstreet_getwater.jpg" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://www.gapminder.org/dollar-street?topic=get-water">Gapminder Dollarstreet</a></p><p>Check out Gapminder’s Dollar Street for many more examples: <a href="https://www.gapminder.org/dollar-street">https://www.gapminder.org/dollar-street</a></p>
 
 <div class="footer footer-default">
 
-</div></section>
+</div>
+</section>
     </div>
   </div>
 
@@ -1859,15 +1924,15 @@ are like apps you can download onto a mobile phone:</p>
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1600,
+        width: 1100,
 
-        height: 1200,
+        height: 825,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],

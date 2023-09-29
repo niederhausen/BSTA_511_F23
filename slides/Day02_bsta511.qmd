@@ -10,9 +10,13 @@ format:
       scrollable: true
       chalkboard: true
       theme: sky
-      width:  1600 # 1050 #default 1050; ipad 3:4, 1600
-      height: 1200 #800 #default 700; 788 for 3:4, 1200
+      width:  1100 #1200 # 1050 #default 1050; ipad 3:4, 1600
+      height: 825 #900 #800 #default 700; 788 for 3:4, 1200
       slide-number: true
+      html-math-method: mathjax
+  # html:
+  #   link-external-newwindow: true
+  #   toc: true
 execute:
   echo: true
 # editor: visual
@@ -34,18 +38,34 @@ library(here)
 
 # terminal: for icons
 # quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
 ```
 
-```{css}
-#| echo: false
+# Goals for today {.smaller}
 
-code.sourceCode {
-  font-size: 1.5em;
-  /* or try font-size: xx-large; */
-}
-```
+* (1.3) __Data collection principles__
+  - Population vs. sample
+  - Sampling methods
+  - Experiments vs. Observational studies
 
-# Recap of last time
+* (1.2) __Intro to Data__
+  - Data types
+  - How are data stored in R?
+  - Working with data in R
+  
+* (1.4) __Summarizing numerical data__ 
+  - Mean, median, mode, SD, IQR, range, 5 number summary
+  - Empirical Rule
+  - robust statistics
+
+* __R packages__ -> __[install for next class!!!]{style="color:darkorange"}__
+
+
+
+
+# Recap of last time {.smaller}
 
 ::: columns
 ::: {.column width="40%"}
@@ -70,9 +90,7 @@ code.sourceCode {
 :::
 
 
-
-
-## Useful keyboard shortcuts
+## Useful keyboard shortcuts {.smaller}
 
 
 [Full list of keyboard shortcuts](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts)\
@@ -105,17 +123,13 @@ y
 ```
 
 
-
 ## Another resource for an introduction to R
 
 * If you would like another perspective on what we covered the first week, you might find __Danielle Navarro’s__ online book __*Learning Statistics with R*__ to be helpful. 
 
-* Download free pdf: https://learningstatisticswithr.com/
+* Download free pdf: [https://learningstatisticswithr.com/](https://learningstatisticswithr.com/)
 
 * See Sections 3.1-3.7.1 for some of the topics we covered on first day 
-
-
-
 
 
 # MoRitz's tip of the day
@@ -137,27 +151,6 @@ Customize your RStudio interface!
 
 
 
-# Goals for today
-
-<!-- update -->
-
-* (1.3) __Data collection principles__
-  - Population vs. sample
-  - Sampling methods
-  - Experiments vs. Observational studies
-
-* (1.2) __Intro to Data__
-  - Data types
-  - How are data stored in R?
-  - Working with data in R
-  
-* (1.4) __Summarizing numerical data__ 
-  - Mean, median, mode, SD, IQR, range, 5 number summary
-  - Empirical Rule
-  - robust statistics
-
-* __R packages__ -> __<font color="darkorange">install for next class!!!</font>__
-
 
 
 # (1.3) Data collection principles
@@ -165,8 +158,6 @@ Customize your RStudio interface!
 *  Population vs. sample
 * Sampling methods
 *  Experiments vs. Observational studies
-
-
 
 
 ## Population vs. sample
@@ -187,11 +178,7 @@ Customize your RStudio interface!
 * often a small subset of the population
 
 
-<!-- update: include examples -->
-
-
-
-## Sampling methods (1/4)
+## Sampling methods (1/4) {.smaller}
 
 Goal is to get a __representative__ sample of the population:  
 the characteristics of the sample are similar to the characteristics of the population
@@ -223,7 +210,7 @@ __Convenience sample__
 
 
 
-## Sampling methods (2/4)
+## Sampling methods (2/4) {.smaller}
 
 _Good sampling plans don't guarantee samples representative of the population_
 
@@ -253,9 +240,7 @@ __"Random" samples can be unrepresentative by random chance__
 :::
 :::
 
-
-
-## Sampling methods (3/4)
+## Sampling methods (3/4) {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
@@ -273,8 +258,7 @@ __"Random" samples can be unrepresentative by random chance__
 :::
 :::
 
-
-## Sampling methods (4/4)
+## Sampling methods (4/4) {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
@@ -295,9 +279,9 @@ __"Random" samples can be unrepresentative by random chance__
 :::
 :::
 
-## Experiments
+## Experiments (1/2) 
 
-::: {style="font-size: 90%;"}
+::: {style="font-size: 75%;"}
 * Researchers assign individuals to different __treatment__ or __intervention groups__
   * __control group__: often receive a __placebo__ or usual care
   * different treatment groups are often called __study arms__
@@ -307,6 +291,13 @@ __"Random" samples can be unrepresentative by random chance__
       * treatment is the only systematic difference between groups
       * establish causality
   * __blocking (stratification)__: group individuals into blocks (strata) before randomizing if there are certain characteristics that may influence the outcome other than treatment (i.e. gender, age group)
+
+:::
+
+## Experiments (2/2) 
+
+::: {style="font-size: 90%;"}
+
 * __Replication__
   * accomplished by collecting a sufficiently large sample
   * results usually more reliable with a large sample size
@@ -316,9 +307,9 @@ __"Random" samples can be unrepresentative by random chance__
 :::
 
 
+## Observational studies 
 
-## Observational studies
-
+::: {style="font-size: 90%;"}
 * data are observed and recorded without interference
 * often done via surveys, electronic health records, or medical chart reviews
 * cohorts
@@ -328,6 +319,7 @@ __"Random" samples can be unrepresentative by random chance__
   * variables associated with both the explanatory and response variables
 
 * prospective vs. retrospective studies
+:::
 
 ## Comparing study designs
 
@@ -342,7 +334,7 @@ __"Random" samples can be unrepresentative by random chance__
 
 
 
-## How are data stored, how do we use them?
+## How are data stored, how do we use them? {.smaller}
 
 - Often, data are in an Excel sheet, or a plain text file (.csv, .txt)
 - .csv files open in Excel automatically, but actually are plain text
@@ -361,7 +353,7 @@ __"Random" samples can be unrepresentative by random chance__
 ## Data frame example
 
 ::: columns
-::: {.column width="49%"}
+::: {.column width="54%"}
 
 ```{r}
 df <- data.frame(
@@ -382,13 +374,14 @@ df
 ::: {.column width="2%"}
 :::
 
-::: {.column width="49%"}
-
+::: {.column width="44%"}
+::: {style="font-size: 90%;"}
 * Different columns can be of different data types (i.e. numeric vs. text)
 * Both numeric and text can be stored within a column (stored together as *text*).
 
 * Vectors and data frames are examples of _**objects**_ in R. 
   + There are other types of R objects to store data, such as matrices, lists.
+:::
 :::
 :::
 
@@ -406,16 +399,17 @@ df
 
 :::
 ::: {.column width="40%"}
+::: {style="font-size: 90%;"}
 * Book refers to a dataset as a _data matrix_ 
 
 * Rows are usually __observations__
 * Columns are usually __variables__ 
 
 
-* __<font color="green">How many observations are in this dataset?</font>__
+* __[How many observations are in this dataset?]{style="color:green"}__
 
-* __<font color="green">What are the variable types in this dataset?</font>__
- 
+* __[What are the variable types in this dataset?]{style="color:green"}__
+::: 
 :::
 :::
 
@@ -423,7 +417,7 @@ df
 
 
 ## Variable (column) types
-
+::: {style="font-size: 70%;"}
 R type | variable type| description
 ---|---|---
 integer | discrete | integer-valued numbers
@@ -435,7 +429,7 @@ logical | categorical | boolean (TRUE, FALSE)
 <!-- Each variable (column) in a data frame can be of a different type. -->
 
 * View the __structure__ of our data frame to see what the variable types are:
-
+:::
 ```{r}
 str(df)
 ```
@@ -445,7 +439,7 @@ str(df)
 
 
 
-## Fisher's (or Anderson's) Iris data set
+## Fisher's (or Anderson's) Iris data set {.smaller}
 
 Data description: 
 
@@ -455,7 +449,7 @@ Data description:
 * __variables__:
   + sepal length, sepal width, petal length, petal width, and species
 
-_<font color="purple">Can the iris species be determined by these variables?</font>_
+_[Can the iris species be determined by these variables?]{style="color:purple"}_
 
 <center><img src="/img_slides/Iris_types.png" width="70%" height="50%"><img src="/img_slides/Iris_parts.png" width="28%" height="50%"></center>
 [Gareth Duffy](https://github.com/Datagatherer2357/Gareth-Duffy-GMIT-Project)
@@ -464,25 +458,38 @@ _<font color="purple">Can the iris species be determined by these variables?</fo
 
 ## View the `iris` dataset
 
+::: {style="font-size: 80%;"}
 * The `iris` dataset is already pre-loaded in *base* R and ready to use.
 * Type the following command in the console window
-  - _Warning: this command cannot be knitted. It will give an error._ 
+  - _Warning: this command cannot be rendered. It will give an error._
+:::
+
+\
+
+:::columns
+::: {.column width="30%"}
 ```{r}
 #| eval: false
 
 View(iris)
 ```
-
+::: {style="font-size: 80%;"}
 A new tab in the scripting window should appear with the `iris` dataset.
+:::
+:::
+
+::: {.column width="70%"}
 
 ![](/img_slides/screenshot_iris_View.png){fig-align="center"}
-
+:::
+:::
 
 
 ## Data structure
 
 * What are the different __variable types__ in this data set?
 
+\
 
 ```{r}
 str(iris)   # structure of data
@@ -511,7 +518,7 @@ names(iris)
 
 
 
-## View the beginning or end of a data set
+## View the beginning or end of a dataset
 
 ```{r}
 head(iris)
@@ -520,7 +527,7 @@ tail(iris)
 
 
 
-## Specify how many rows to view at beginning or end of a data set
+## Specify how many rows to view at beginning or end of a dataset
 
 ```{r}
 head(iris, 3)
@@ -545,6 +552,8 @@ iris$Petal.Width
 
 The `$` is helpful if you want to create a new dataset for just that one variable, or, more commonly, if you want to calculate summary statistics for that one variable.
 
+\
+
 ```{r}
 mean(iris$Petal.Width)
 sd(iris$Petal.Width)
@@ -555,6 +564,7 @@ median(iris$Petal.Width)
 
 ## Inline code
 
+::: {style="font-size: 90%;"}
 * With markdown you can also report __R code output inline__ with the text instead of using a chunk.
 
 ::: columns
@@ -576,7 +586,7 @@ The mean petal width for all 3 species combined is `r round(mean(iris$Petal.Widt
 
 - Reporting summary statistics this way in a report, makes the numbers computationally reproducible.
 - For example, if this were for an abstract and a year later you are wondering where the numbers came from, your R code will tell you exactly which dataset was used to calculate the values.
-
+:::
 
 
 # (1.4) Summarizing numerical data 
@@ -606,8 +616,9 @@ Measures of center &  spread
 ::: {.column width="40%"}
 *Are We on the Same Page?: A Cross-Sectional Study of Patient-Clinician Goal Concordance in Rheumatoid Arthritis*  
 J Barton et al.  
-Arthritis Care & Research. 2021 Sep 27
-https://pubmed.ncbi.nlm.nih.gov/34569172/ 
+Arthritis Care & Research.  
+2021 Sep 27
+[https://pubmed.ncbi.nlm.nih.gov/34569172/](https://pubmed.ncbi.nlm.nih.gov/34569172/) 
 :::
 :::
 
@@ -615,7 +626,8 @@ https://pubmed.ncbi.nlm.nih.gov/34569172/
 
 ## Measures of center: mean
 
-__<font color="darkorange">Sample mean</font>__: the average value of observations
+::: {style="font-size: 80%;"}
+__[Sample mean]{style="color:darkorange"}__: the average value of observations
 
 $$\overline{x} = \frac{x_1+x_2+\cdots+x_n}{n} = \sum_{i=1}^{n}\frac{x_i}{n}$$  
 
@@ -623,7 +635,7 @@ where $x_1, x_2, \ldots, x_n$ represent the $n$ observed values in a sample
 
 
 __Example__: What is the mean age in the toy dataset `df` defined earlier?
-
+:::
 
 ```{r}
 #| eval: false
@@ -650,18 +662,21 @@ mean(df$age)
 
 ## Measures of center: median
 
-::: columns
-::: {.column width="50%"}
-* The __<font color="darkorange">median</font>__ is the middle value of the observations in a sample.  
+::: {style="font-size: 90%;"}
+* The __[median]{style="color:darkorange"}__ is the middle value of the observations in a sample.  
 
 * The median is the 50th percentile, meaning
   - 50% of observations lie below and
   - 50% of observations lie above the median.
+:::
 
+::: columns
+::: {.column width="50%"}
+::: {style="font-size: 90%;"}
 * If the number of observations is 
   - odd: the median is the middle observed value
   - even: the median is the average of the two middle observed values
-
+:::
 :::
 
 ::: {.column width="50%"}
@@ -702,7 +717,7 @@ summary(iris)
 ## Measures of center: mode
 
 
-__<font color="darkorange">mode</font>__: the most frequent value in a dataset
+__[mode]{style="color:darkorange"}__: the most frequent value in a dataset
 
 
 
@@ -721,11 +736,37 @@ ggplot(iris_long, aes(x= value)) +
 
 
 
-## Measures of spread: standard deviation (SD)
+## Measures of spread: standard deviation (SD) (1/3) {.smaller}
 
-__standard deviation__ is (approximately) the distance between a typical observation and the mean 
+__standard deviation__ is (approximately) the average distance between a typical observation and the mean 
 
 - An observation's **deviation** is the distance between its value $x$ and the sample mean $\overline{x}$: deviation = $x - \overline{x}$.
+
+```{r}
+#| echo: false
+#| fig.height: 4
+#| fig.width: 14
+
+sim_diff_sd <- data.frame(
+  id = 1:100,
+  sd1 = rnorm(1000, mean = 0, sd = 10),
+  sd2 = rnorm(1000, mean = 0, sd = 30),
+  sd3 = rnorm(1000, mean = 0, sd = 50)
+)
+
+sim_diff_sd_long <- sim_diff_sd %>%
+  pivot_longer(sd1:sd3, names_to = "sd")
+
+ggplot(sim_diff_sd_long, aes(x= value)) +
+  facet_grid(cols = vars(sd)) +
+  geom_histogram() +
+  labs(title = "Simulated data with different standard deviations")
+
+```
+
+
+
+## Measures of spread: SD  (2/3) {.smaller}
 
 - The **sample variance** $s^2$ is the sum of squared deviations divided by the number of observations minus 1.
 $$s^2 = \frac{(x_1 - \overline{x})^2+(x_2 - \overline{x})^2+\cdots+(x_n - \overline{x})^2}{n-1} = \sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}$$
@@ -737,11 +778,14 @@ $$s = \sqrt{\frac{({x_1 - \overline{x})}^{2}+({x_2 - \overline{x})}^{2}+\cdots+(
 
 
 
-## Measures of spread: standard deviation (SD)
+## Measures of spread: SD  (3/3) 
 
 ::: columns
 ::: {.column width="40%"}
+
+::: {style="font-size: 80%;"}
 Let's calculate the sample standard deviation for our toy example
+:::
 
 ```{r}
 df$age
@@ -759,16 +803,18 @@ sd(df$age)
 :::
 :::
 
-$$s = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}} = $$
+$s = \sqrt{\sum_{i=1}^{n}\frac{(x_i - \overline{x})^2}{n-1}} =$
 
 <!-- \sqrt{\frac{({28 - 31.5)}^{2}+({35.5 - 31.5)}^{2}+({31 - 31.5)}^{2}}{3-1}} = 3.775 -->
 
 
 
-## Empirical Rule: one way to think about the SD (1/2)
+## Empirical Rule: one way to think about the SD (1/2) 
+
+::: {style="font-size: 80%;"}
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="40%"}
 For symmetric bell-shaped data, about
 
 * 68% of the data are within 1 SD of the mean
@@ -777,21 +823,21 @@ For symmetric bell-shaped data, about
 
 These percentages are based off of percentages of a true normal distribution.
 :::
-::: {.column width="50%"}
+::: {.column width="60%"}
 
-![[https://statistics-made-easy.com/empirical-rule/](https://statistics-made-easy.com/empirical-rule/)](/img_slides/empirical-rule.png){fig-align="center"}
+![[https://statistics-made-easy.com/empirical-rule/](https://statistics-made-easy.com/empirical-rule/)](/img_slides/empirical-rule.png){fig-align="center" width="660"}
 
 :::
 :::
-
+:::
 
 
 ## Empirical Rule: one way to think about the SD (2/2)
 
-
 ::: columns
 ::: {.column width="50%"}
 ```{r}
+#| fig.height: 8
 hist(iris$Sepal.Width)
 
 ```
@@ -808,8 +854,7 @@ sd(iris$Sepal.Width)
 :::
 
 
-
-## Measures of spread: interquartile range (IQR) (1/2)
+## Measures of spread: interquartile range (IQR) (1/2) {.smaller}
 
 The $p^{th}$ percentile is the observation such that $p\%$ of the remaining observations fall below this observation.
 
@@ -817,7 +862,7 @@ The $p^{th}$ percentile is the observation such that $p\%$ of the remaining obse
   - The *second quartile* $Q_2$, i.e., the median, is the $50^{th}$ percentile.
   - The *third quartile* $Q_3$ is the $75^{th}$ percentile.
     
-The __<font color="darkorange">interquartile range (IQR)</font>__ is the distance between the third and first quartiles.
+The __[interquartile range (IQR)]{style="color:darkorange"}__ is the distance between the third and first quartiles.
 $$IQR = Q_3 - Q_1$$
 
 * IQR is the width of the *middle half* of the data
@@ -826,7 +871,7 @@ $$IQR = Q_3 - Q_1$$
 
 ## Measures of spread: IQR (2/2)
 
-__<font color="darkorange">5 number summary</font>__
+__[5 number summary]{style="color:darkorange"}__
 ```{r}
 summary(iris$Sepal.Width)
 ```
@@ -849,6 +894,8 @@ What is the IQR of the sepal widths?
 ```{r}
 quantile(iris$Sepal.Width, c(.25, .75))
 diff(quantile(iris$Sepal.Width, c(.25, .75)))
+
+IQR(iris$Sepal.Width)
 ```
 
 :::
@@ -857,7 +904,7 @@ diff(quantile(iris$Sepal.Width, c(.25, .75)))
 
 ## Robust estimates
 
-Summary statistics are called __<font color="darkorange">robust estimates</font>__ if extreme observations have little effect on their values
+Summary statistics are called __[robust estimates]{style="color:darkorange"}__ if extreme observations have little effect on their values
 
 estimate | robust? 
 ---| ---
@@ -871,7 +918,7 @@ range |
 
 
 
-# Back to R...
+# R Packages
 
 <!-- background-image: url(img/tidyverse_celestial.jpg) -->
 <!-- background-size: cover -->
@@ -881,7 +928,7 @@ range |
 
 
 
-# R Packages
+## R Packages
 
 A good analogy for R packages is that they   
 are like apps you can download onto a mobile phone:
@@ -891,11 +938,14 @@ are like apps you can download onto a mobile phone:
 
 ## Installing packages
 
+::: {style="font-size: 80%;"}
 - Packages contain additional functions and data
 
 Two options to install packages:
+
 1. `install.packages()` _or_
 2. The "Packages" tab in Files/Plots/Packages/Help/Viewer window
+:::
 
 ```{r}
 #| eval: false
@@ -903,34 +953,40 @@ Two options to install packages:
 install.packages("dplyr")   # only do this ONCE, use quotes
 ```
 
-
-+ **Only install pacakges once** *(unless you want to update them)*
+:::columns
+::: {.column width="50%"}
+::: {style="font-size: 80%;"}
++ **Only install packages once** *(unless you want to update them)*
 + Installed from [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/) = package mothership
+:::
+:::
 
-
+::: {.column width="50%"}
 ![](/img_slides/screenshot_packages_window.png){fig-align="center"}
+:::
+:::
 
 
 ## Video on installing packages
 
-* Danielle Navarro’s YouTube video on __*Installing and loading R packages*__: https://www.youtube.com/watch?v=kpHZVyDvEhQ
-
-
-
-
+* Danielle Navarro’s YouTube video on __*Installing and loading R packages*__: [https://www.youtube.com/watch?v=kpHZVyDvEhQ](https://www.youtube.com/watch?v=kpHZVyDvEhQ)
 
 
 ## Load packages with `library()` command
 
+::: {style="font-size: 80%;"}
 - Tip: at the top of your Rmd file, create a chunk that loads all of the R packages you want to use in that file. 
 - Use the `library()` command to load each required package.
 - Packages need to be reloaded *every* time you open Rstudio. 
+:::
 
 ```{r}
 library(dplyr)    # run this every time you open Rstudio
 ```
 
+::: {style="font-size: 80%;"}
 - You can use a function without loading the package with `PackageName::CommandName`
+:::
 ```{r}
 dplyr::arrange(iris, Petal.Width)   # what does arrange do?
 ```
@@ -938,17 +994,18 @@ dplyr::arrange(iris, Petal.Width)   # what does arrange do?
 
 
 
-## Install the pacakges listed below <span style="color:darkorange">before Day 3</span>
+## Install the pacakges listed below [before Day 3]{style="color:darkorange"}
 
+::: {style="font-size: 50%;"}
 * `knitr` 
   - this might actually already be installed
   - check your packages list
 * `tidyverse` 
   - this is actually a bundle of packages
   - *Warning: it will take a while to install!!!*
-  - see more info at https://tidyverse.tidyverse.org/ 
-* `skimr`
-  - for skimming and getting a summary of a dataset
+  - see more info at [https://tidyverse.tidyverse.org/](https://tidyverse.tidyverse.org/) 
+* `rstatix`
+  - for summary statistics of a dataset
 * `janitor`
   - for cleaning and exploring data
 * `ggridges`
@@ -959,41 +1016,45 @@ dplyr::arrange(iris, Petal.Width)   # what does arrange do?
 * `oi_biostat_data` 
   - this package is on github 
   - __see the next slide for directions on how to install `oi_biostat_data`__
-  
+
+:::  
 
 
+## Directions for installing package `oibiostat` 
 
-## Directions for installing package `oibiostat`
-
+::: {style="font-size: 70%;"}
 * The textbook's datasets are in the R package `oibiostat`
 * Explanation of code below
   * Installation of `oibiostat` package requires first installing `devtools` package
   * The code `devtools::install_github()` tells R to use the command `install_github()` from the `devtools` package without loading the entire package and all of its commands (which `library(devtools)` would do).
+:::
+  
 ```{r}
 #| eval: false
 
 install.packages("devtools")
 devtools::install_github("OI-Biostat/oi_biostat_data", force = TRUE)
 ```
-* After running the code above, put `#` in front of the commands so that RStudio doesn't evaluate them when knitting.
+
+::: {style="font-size: 70%;"}
+* After running the code above, put `#` in front of the commands so that RStudio doesn't evaluate them when rendering.
 * Now load the `oibiostat` package
-  * <span style="color:darkorange">the code below needs to be run _every time_ you restart R or knit an Rmd file</span>
+  * [the code below needs to be run _every time_ you restart R or knit an Rmd file]{style="color:darkorange"}
+:::
+
 ```{r}
 library(oibiostat)
 ```
 
 
+# A visual dataset {.smaller}
 
-
-
-# A visual dataset
-
-#### Compare water sources across the world by country and family income
+Compare water sources across the world by country and family income
 
 ![[Gapminder Dollarstreet](https://www.gapminder.org/dollar-street?topic=get-water)](/img_slides/gapminder_dollarstreet_getwater.jpg){fig-align="center"}
 
 
-Check out Gapminder's Dollar Street for many more examples: https://www.gapminder.org/dollar-street 
+Check out Gapminder's Dollar Street for many more examples: [https://www.gapminder.org/dollar-street](https://www.gapminder.org/dollar-street) 
 
 
 
