@@ -332,14 +332,14 @@ __"Random" samples can be unrepresentative by random chance__
 ![[STEM: Systematically Testing the Evidence on Marijuana](https://www.cannabisevidence.org/)](/img_slides/STEM_systematic_review.jpg){fig-align="center"}
 
 ::: columns
-::: {.column width="80%"}
-::: {style="font-size: 70%;"}
+::: {.column width="85%"}
+::: {style="font-size: 65%;"}
 STEM is a collaborative project between the US Department of Veterans Affairs and the [Center for Evidence-based Policy](https://centerforevidencebasedpolicy.org/) at Oregon Health & Science University.  
 The project is funded by the US Department of Veterans Affairs: Office of Rural Health.
 :::
 :::
 
-::: {.column width="20%"}
+::: {.column width="15%"}
 ![](/img_slides/logo_CenterEvidenceBasedPolicy.jpg){fig-align="center"}
 :::
 :::
