@@ -26,6 +26,13 @@ editor_options:
 * [webpage](../slides_md/Day02_bsta511_md.qmd)
 * [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_md/Day02_bsta511_md.qmd)
 
+### Recordings
+
+* __Pre-recorded__ lessons are on Echo Cloud (aka echo 360 or echo video).
+    * These can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the `Echo Cloud` option in the left-side menu. 
+    * This will redirect you to an echo video page with a list of pre-recorded videos.
+* __In-class__ recording links are on Sakai. Navigate to _Course Materials_ -> _Schedule with links to in-class recordings_. Note that the password to the recordings is at the top of the page.  
+
 ### Class discussion
 
 Please look over the following topics. We will be discussing these in class. 
