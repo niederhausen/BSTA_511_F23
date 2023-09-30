@@ -326,7 +326,22 @@ __"Random" samples can be unrepresentative by random chance__
 
 ![[Science Media Centre](https://www.sciencemediacentre.co.nz/coveringscience/types-of-scientific-evidence/)](/img_slides/strength_of_evidence.jpeg){fig-align="center"}
 
+## Systematic Reviews example
 
+![[STEM: Systematically Testing the Evidence on Marijuana](https://www.cannabisevidence.org/)](/img_slides/STEM_systematic_review.jpg){fig-align="center"}
+
+::: columns
+::: {.column width="80%"}
+::: {style="font-size: 70%;"}
+STEM is a collaborative project between the US Department of Veterans Affairs and the [Center for Evidence-based Policy](https://centerforevidencebasedpolicy.org/) at Oregon Health & Science University.  
+The project is funded by the US Department of Veterans Affairs: Office of Rural Health.
+:::
+:::
+
+::: {.column width="20%"}
+![](/img_slides/logo_CenterEvidenceBasedPolicy.jpg){fig-align="center"}
+:::
+:::
 
 
 # (1.2) Intro to Data
