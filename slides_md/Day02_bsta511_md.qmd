@@ -1010,7 +1010,7 @@ dplyr::arrange(iris, Petal.Width)   # what does arrange do?
 
 
 
-## Install the pacakges listed below [before Day 3]{style="color:darkorange"}
+## Install the packages listed below [before Day 3]{style="color:darkorange"}
 
 ::: {style="font-size: 50%;"}
 * `knitr` 

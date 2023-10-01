@@ -1881,5 +1881,26 @@
     "title": "Day 2: Data collection & numerical summaries",
     "section": "Directions for installing package oibiostat",
     "text": "Directions for installing package oibiostat\n\nThe textbook’s datasets are in the R package oibiostat\nExplanation of code below\n\nInstallation of oibiostat package requires first installing devtools package\nThe code devtools::install_github() tells R to use the command install_github() from the devtools package without loading the entire package and all of its commands (which library(devtools) would do).\n\n\n\ninstall.packages(\"devtools\")\ndevtools::install_github(\"OI-Biostat/oi_biostat_data\", force = TRUE)\n\n\nAfter running the code above, put # in front of the commands so that RStudio doesn’t evaluate them when rendering.\nNow load the oibiostat package\n\nthe code below needs to be run every time you restart R or knit an Rmd file\n\n\n\nlibrary(oibiostat)"
+  },
+  {
+    "objectID": "slides/Day02_bsta511.html#install-the-packages-listed-below-before-day-3",
+    "href": "slides/Day02_bsta511.html#install-the-packages-listed-below-before-day-3",
+    "title": "Day 2: Data collection & numerical summaries",
+    "section": "Install the packages listed below before Day 3",
+    "text": "Install the packages listed below before Day 3\n\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data"
+  },
+  {
+    "objectID": "slides_md/Day02_bsta511_md.html#install-the-packages-listed-below-before-day-3",
+    "href": "slides_md/Day02_bsta511_md.html#install-the-packages-listed-below-before-day-3",
+    "title": "Day 2: Data collection & numerical summaries",
+    "section": "Install the packages listed below before Day 3",
+    "text": "Install the packages listed below before Day 3\n\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data"
+  },
+  {
+    "objectID": "slides_code/Day02_bsta511_code.html#install-the-packages-listed-below-before-day-3",
+    "href": "slides_code/Day02_bsta511_code.html#install-the-packages-listed-below-before-day-3",
+    "title": "Day 2: Data collection & numerical summaries",
+    "section": "Install the packages listed below before Day 3",
+    "text": "Install the packages listed below before Day 3\n\nknitr\n\nthis might actually already be installed\ncheck your packages list\n\ntidyverse\n\nthis is actually a bundle of packages\nWarning: it will take a while to install!!!\nsee more info at https://tidyverse.tidyverse.org/\n\nrstatix\n\nfor summary statistics of a dataset\n\njanitor\n\nfor cleaning and exploring data\n\nggridges\n\nfor creating ridgeline plots\n\ndevtools\n\nused to create R packages\nfor our purposes, needed to install some packages\n\noi_biostat_data\n\nthis package is on github\nsee the next slide for directions on how to install oi_biostat_data"
   }
 ]

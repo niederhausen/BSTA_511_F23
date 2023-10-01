@@ -727,15 +727,9 @@ summary(iris)
 ```
 
 
-
-
-
 ## Measures of center: mode
 
-
 __[mode]{style="color:darkorange"}__: the most frequent value in a dataset
-
-
 
 ```{r}
 #| echo: false
@@ -748,7 +742,6 @@ ggplot(iris_long, aes(x= value)) +
   labs(title = "Iris sepal and petal lengths & widths")
 
 ```
-
 
 
 
@@ -1010,7 +1003,7 @@ dplyr::arrange(iris, Petal.Width)   # what does arrange do?
 
 
 
-## Install the pacakges listed below [before Day 3]{style="color:darkorange"}
+## Install the packages listed below [before Day 3]{style="color:darkorange"}
 
 ::: {style="font-size: 50%;"}
 * `knitr` 
