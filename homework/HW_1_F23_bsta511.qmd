@@ -91,7 +91,7 @@ Slack invite link: [https://join.slack.com/t/slack-zlc9838/shared_invite/zt-23wi
 
 # R exercises
 
-(@) __<font color="green">Load all the packages you need below here. </font>__
+1. __<font color="green">Load all the packages you need below here. </font>__
 
 ## R1: Formatting text practice
 
@@ -115,12 +115,12 @@ source("http://www.openintro.org/stat/data/cdc.R")
 * Write your answers in complete sentences as if communicating the results to a collaborator. 
 
 
-(@) __<font color="green">How many rows and columns are in the dataset?</font>__
+2. __<font color="green">How many rows and columns are in the dataset?</font>__
 
 
 
 
-(@) __<font color="green">For each variable, what identify both its "statistical" variable type (numerical (discrete, continuous) or categorical (nominal, ordinal) and its R variable type.</font>__  
+3. __<font color="green">For each variable, what identify both its "statistical" variable type (numerical (discrete, continuous) or categorical (nominal, ordinal) and its R variable type.</font>__  
 *Fill in your answers in the table I created below.*
 
 variable name | R type | variable type
@@ -137,14 +137,14 @@ gender    |     |
 
 
 
-(@) __<font color="green">What is the difference between the average weight and the average desired weight?</font>__
+4.  __<font color="green">What is the difference between the average weight and the average desired weight?</font>__
 
 
 
-(@) __<font color="green">Which of the height, weight, and desired weight variables has the most variability? Which has the least variability?</font>__
+5.  __<font color="green">Which of the height, weight, and desired weight variables has the most variability? Which has the least variability?</font>__
 
 
 
 
-(@) __<font color="green">Calculate the mean of the `hlthplan` variable. How do we interpret this mean? In other words, what does this mean measure?</font>__
+6.  __<font color="green">Calculate the mean of the `hlthplan` variable. How do we interpret this mean? In other words, what does this mean measure?</font>__
 
