@@ -47,6 +47,11 @@ Please look over the following topics. We will be discussing these in class.
 * Data visualization, exploratory data analysis (EDA), and summarizing categorical data
 * Sections 1.5-1.7 & supplementary material
 
+:::{.callout-note}
+As I mentioned in the recording, the various options in more complex figures I usually look up how to implement when I need them. I show them so that you are aware of some of the functionality and options one has in creating figures using the ggplot2 package. At the end of the slides, we cover how to create tables summarizing data, especially categorical data. This part has some very useful code and data wrangling in it.
+:::
+
+
 ### Slides
 
 * [html](../slides/Day03_bsta511.qmd)

@@ -1551,7 +1551,7 @@
     "href": "weeks/week_02.html#day03",
     "title": "Week 2",
     "section": "Day03",
-    "text": "Day03\n\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\nSections 1.5-1.7 & supplementary material\n\n\nSlides\n\nhtml\npdf\nwebpage\nCode file: qmd, html\n\n\n\nClass discussion\n\nCan distribution shape and sample size be determined from a boxplot? (see slide 30)\nIs there evidence of ethnicity (Hispanic vs. White non-Hispanic) discrimination in DDS expenditures? Why or why not?"
+    "text": "Day03\n\nData visualization, exploratory data analysis (EDA), and summarizing categorical data\nSections 1.5-1.7 & supplementary material\n\n\n\n\n\n\n\nNote\n\n\n\nAs I mentioned in the recording, the various options in more complex figures I usually look up how to implement when I need them. I show them so that you are aware of some of the functionality and options one has in creating figures using the ggplot2 package. At the end of the slides, we cover how to create tables summarizing data, especially categorical data. This part has some very useful code and data wrangling in it.\n\n\n\nSlides\n\nhtml\npdf\nwebpage\nCode file: qmd, html\n\n\n\nClass discussion\n\nCan distribution shape and sample size be determined from a boxplot? (see slide 30)\nIs there evidence of ethnicity (Hispanic vs. White non-Hispanic) discrimination in DDS expenditures? Why or why not?"
   },
   {
     "objectID": "slides_md/Day02_bsta511_md.html#systematic-reviews-example",
