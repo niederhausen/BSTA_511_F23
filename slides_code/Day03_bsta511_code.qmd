@@ -100,6 +100,7 @@ str(dds.discr)      # base R
 ### `glimpse()`
 
 __New: `glimpse()`__
+
 * Use `glimpse()` from the `tidyverse` package (technically it's from the `dplyr` package) to get information about variable types. 
 * `glimpse()` tends to have nicer output for `tibbles` than `str()`
 
