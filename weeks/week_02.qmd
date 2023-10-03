@@ -54,6 +54,11 @@ Please look over the following topics. We will be discussing these in class.
 * [webpage](../slides_md/Day03_bsta511_md.qmd)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_code.qmd), [html](../slides_code/Day03_bsta511_code.qmd)
 
+### Class discussion
+
+* Can distribution shape and sample size be determined from a boxplot? (see slide 30)
+* Is there evidence of ethnicity (Hispanic vs. White non-Hispanic) discrimination in DDS expenditures? Why or why not?
+
 
 ## Homework
 
