@@ -47,9 +47,15 @@ Please look over the following topics. We will be discussing these in class.
 * Data visualization, exploratory data analysis (EDA), and summarizing categorical data
 * Sections 1.5-1.7 & supplementary material
 
-## Homework
+### Slides
 
-### Slides - coming soon!
+* [html](../slides/Day03_bsta511.qmd)
+* [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
+* [webpage](../slides_md/Day03_bsta511_md.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_code.qmd), [html](../slides_code/Day03_bsta511_code.qmd)
+
+
+## Homework
 
 * [HW 1](../homework/HW_1_F23_bsta511.qmd) due on Sat, 10/7
 
