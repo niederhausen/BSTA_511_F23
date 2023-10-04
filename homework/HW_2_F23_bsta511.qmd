@@ -1,5 +1,5 @@
 ---
-title: "draft HW 2: BSTA 511-611 F22"
+title: "HW 2: BSTA 511-611 F23"
 author: "Your name here - update this!!!!"
 date: "Due 10/14/23"
 format: 
@@ -8,6 +8,8 @@ format:
     toc: true
     toc_float:
       collapsed: false
+    number-sections: true
+    number-depth: 3
     theme: lumen
 ---
 
@@ -19,14 +21,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-[*This is a draft of HW 2 - more exercises will be added!*]{style="color:red"}
-
 **Due 10/14/23**
 
 Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_2_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_2_F23_bsta511.qmd)
 
 
-## Directions
+## Directions {.unnumbered}
 
 * Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
 * For each question, make sure to include all code and resulting output in the html file to support your answers. 
@@ -37,25 +37,41 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 
 
-# Book exercises
+# Book exercises {.unnumbered}
 
-## 1.24 Income and education in US counties
-
-
-## 1.28 Mix-and-match
+## 1.24 Income and education in US counties {.unnumbered}
 
 
-
-## 1.36 Associations
+## 1.28 Mix-and-match {.unnumbered}
 
 
 
-# R exercises
-
-(@) __<font color="green">Load all the packages you need below here. </font>__
+## 1.36 Associations {.unnumbered}
 
 
-## R1: NHANES
+## 1.38 Smoking and stenosis {.unnumbered}
+*See Section1.6.2 for more on how the relative risk is calculated.*
+
+## 2.6 Poverty and language {.unnumbered}
+
+*Part (b) asks you to create a Venn Diagram. You do not need to turn this part in. If you want an R challenge though, you can use the `VennDiagram` or other package to create one. See https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/ for some examples.* 
+
+## 2.8 School absences {.unnumbered}
+
+*Part (b) asks you to create a Venn Diagram. You do not need to turn this part in. If you want an R challenge though, you can use the `VennDiagram` or other package to create one. See https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/ for some examples.* 
+
+## 2.10 Health coverage, frequencies {.unnumbered}
+
+
+## 2.14 Health coverage, relative frequencies {.unnumbered}
+
+
+# R exercises {.unnumbered}
+
+### Load all the packages you need below here. 
+
+
+# R1: NHANES
 
 * Below you will be using the dataset called NHANES from the `NHANES` R package. 
 * Install and load the NHANES package using the code below.
@@ -77,32 +93,67 @@ data("NHANES")
   * You must first install the `NHANES` package to see the help files.
 
 
-(@) __<font color="green">What are the dimensions and column names of the dataset?</font>__
+## What are the dimensions and column names of the dataset?
 
 
 
-(@) __<font color="green">How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?  </font>__
+## How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?  
 
 
 
-(@) __<font color="green">Using numerical and graphical summaries, describe the distribution of ages among study participants.</font>__
-
-
-
-
-(@) __<font color="green">Using numerical and graphical summaries, describe the distribution of heights among study participants.</font>__
-
-
-
-(@) __<font color="green">Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?</font>__ *Use whatever EDA tools you think are appropriate to answer this question.*
+## Using numerical and graphical summaries, describe the distribution of ages among study participants.
 
 
 
 
-(@) __<font color="green">Calculate the median and interquartile range of the distribution of the variable `Poverty`. Write a sentence explaining the median and IQR in the context of these data.</font>__
+## Using numerical and graphical summaries, describe the distribution of heights among study participants.
 
 
 
+## Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not? 
+
+*Use whatever EDA tools you think are appropriate to answer this question.*
+
+
+
+
+## Calculate the median and interquartile range of the distribution of the variable `Poverty`. Write a sentence explaining the median and IQR in the context of these data.
+
+
+# R2: NHANES
+
+Continue using the same NHANES data as for the previous problem. 
+
+
+__<font color="darkorange">IMPORTANT R tip</font>__
+
+* For most of the summary statistic base R commands (such as `mean()`, `sd()`, `median()`, etc.), you will get `NA` as the result if there are missing values. 
+* In order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the `na.rm = TRUE` option within the parentheses of the command: `mean(dataset$variablename, na.rm = TRUE)`. 
+
+## Use the `mutate()` command explained on Slide 23 of the Day 4 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.
+
+*Tips:*
+
+* Column names cannot start with a number or symbol
+* Names are case sensitive
+* It's easier to work with column names that don't have spaces in them. I usually use _ or . instead of spaces.
+
+
+## What proportion of Americans at least 25 years of age are college graduates?
+*Hint: First create a new dataset that is restricted to Americans at least 25 years old.*
+
+
+
+
+## What proportion of Americans at least 25 years of age with a high school degree are college graduates?
+
+
+
+## Construct a two-way table (contingency table), with `PhysActive` as the row variable and `Diabetes` as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?
+
+
+
+## In this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one's chance of becoming diabetic?
 
 
 

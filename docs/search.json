@@ -340,7 +340,7 @@
     "href": "class_slides.html",
     "title": "Class Slides",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides_md/Day01_bsta511_md.html",
@@ -1087,35 +1087,35 @@
   {
     "objectID": "homework/HW_2_F23_bsta511.html",
     "href": "homework/HW_2_F23_bsta511.html",
-    "title": "draft HW 2: BSTA 511-611 F22",
+    "title": "HW 2: BSTA 511-611 F23",
     "section": "",
-    "text": "This is a draft of HW 2 - more exercises will be added!\nDue 10/14/23\nDownload the .qmd file for this assignment from https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_2_F23_bsta511.qmd"
+    "text": "Due 10/14/23\nDownload the .qmd file for this assignment from https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_2_F23_bsta511.qmd"
   },
   {
     "objectID": "homework/HW_2_F23_bsta511.html#directions",
     "href": "homework/HW_2_F23_bsta511.html#directions",
-    "title": "draft HW 2: BSTA 511-611 F22",
+    "title": "HW 2: BSTA 511-611 F23",
     "section": "Directions",
     "text": "Directions\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW_2_F23_bsta511.html#income-and-education-in-us-counties",
     "href": "homework/HW_2_F23_bsta511.html#income-and-education-in-us-counties",
-    "title": "draft HW 2: BSTA 511-611 F22",
+    "title": "HW 2: BSTA 511-611 F23",
     "section": "1.24 Income and education in US counties",
     "text": "1.24 Income and education in US counties"
   },
   {
     "objectID": "homework/HW_2_F23_bsta511.html#mix-and-match",
     "href": "homework/HW_2_F23_bsta511.html#mix-and-match",
-    "title": "draft HW 2: BSTA 511-611 F22",
+    "title": "HW 2: BSTA 511-611 F23",
     "section": "1.28 Mix-and-match",
     "text": "1.28 Mix-and-match"
   },
   {
     "objectID": "homework/HW_2_F23_bsta511.html#associations",
     "href": "homework/HW_2_F23_bsta511.html#associations",
-    "title": "draft HW 2: BSTA 511-611 F22",
+    "title": "HW 2: BSTA 511-611 F23",
     "section": "1.36 Associations",
     "text": "1.36 Associations"
   },
@@ -1123,15 +1123,15 @@
     "objectID": "homework/HW_2_F23_bsta511.html#r1-nhanes",
     "href": "homework/HW_2_F23_bsta511.html#r1-nhanes",
     "title": "draft HW 2: BSTA 511-611 F22",
-    "section": "R1: NHANES",
-    "text": "R1: NHANES\n\nBelow you will be using the dataset called NHANES from the NHANES R package.\nInstall and load the NHANES package using the code below.\n\nThis loads the dataset also called NHANES that is within the NHANES package.\n\n\n\ninstall.packages(\"NHANES\")\n\n\nlibrary(NHANES)\ndata(\"NHANES\")\n\n\nThe National Health and Nutrition Examination Survey (NHANES) is a survey conducted annually by the US National Center for Health Statistics (NCHS). While the original data uses a survey design that oversamples certain subpopulations, the data have been reweighted to undo oversampling effects and can be treated as if it were a simple random sample from the American population.\n\n\nTo view the complete list of study variables and their descriptions, access the NHANES documentation page with ?NHANES.\n\nYou must first install the NHANES package to see the help files.\n\n\n\nWhat are the dimensions and column names of the dataset?\nHow many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers? \nUsing numerical and graphical summaries, describe the distribution of ages among study participants.\nUsing numerical and graphical summaries, describe the distribution of heights among study participants.\nInvestigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not? Use whatever EDA tools you think are appropriate to answer this question.\nCalculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data."
+    "section": "1.1 R1: NHANES",
+    "text": "1.1 R1: NHANES\n\nBelow you will be using the dataset called NHANES from the NHANES R package.\nInstall and load the NHANES package using the code below.\n\nThis loads the dataset also called NHANES that is within the NHANES package.\n\n\n\ninstall.packages(\"NHANES\")\n\n\nlibrary(NHANES)\ndata(\"NHANES\")\n\n\nThe National Health and Nutrition Examination Survey (NHANES) is a survey conducted annually by the US National Center for Health Statistics (NCHS). While the original data uses a survey design that oversamples certain subpopulations, the data have been reweighted to undo oversampling effects and can be treated as if it were a simple random sample from the American population.\n\n\nTo view the complete list of study variables and their descriptions, access the NHANES documentation page with ?NHANES.\n\nYou must first install the NHANES package to see the help files.\n\n\n\n1.1.1 What are the dimensions and column names of the dataset?\n\n\n1.1.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?\n\n\n1.1.3 Using numerical and graphical summaries, describe the distribution of ages among study participants.\n\n\n1.1.4 Using numerical and graphical summaries, describe the distribution of heights among study participants.\n\n\n1.1.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?\nUse whatever EDA tools you think are appropriate to answer this question.\n\n\n1.1.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data."
   },
   {
     "objectID": "homework.html",
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\ndraft HW 2: BSTA 511-611 F22\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\nHW 2: BSTA 511-611 F23\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/Day02_bsta511.html#experiments-12",
@@ -3022,5 +3022,369 @@
     "title": "Day 3: Data visualization",
     "section": "",
     "text": "Exploratory Data Analysis (EDA) (Sections 1.4, 1.5, 1.6, 1.7.1)\n\nData visualization with ggplot\n\nnumerical & categorical variables, and relationships between variables\n\nSummarizing numerical data\nFrequency (two-way) tables\n\nSome data wrangling techniques along the way\n\n\n\n\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "href": "slides/Day03_bsta511_part2.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Case study: discrimination in developmental disability support (1.7.1)",
+    "text": "Case study: discrimination in developmental disability support (1.7.1)\n\nPrevious research\n\nResearchers examined DDS expenditures for developmentally disabled residents by ethnicity\nFound that the mean annual expenditures on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?"
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#load-dds.discr-dataset-from-oibiostat-package",
+    "href": "slides/Day03_bsta511_part2.html#load-dds.discr-dataset-from-oibiostat-package",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Load dds.discr dataset from oibiostat package",
+    "text": "Load dds.discr dataset from oibiostat package\n\n\nThe textbook’s datasets are in the R package oibiostat\nMake sure the oibiostat package is installed before running the code below.\nLoad the oibiostat package and the dataset dds.discr\n\nthe code below needs to be run every time you restart R or render a Qmd file\n\nlibrary(oibiostat)\ndata(\"dds.discr\")\n\n\nAfter loading the dataset dds.discr using data(\"dds.discr\"), you will see dds.discr in the Data list of the Environment window."
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#glimpse",
+    "href": "slides/Day03_bsta511_part2.html#glimpse",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "glimpse()",
+    "text": "glimpse()\n\nNew: glimpse()\n\nUse glimpse() from the tidyverse package (technically it’s from the dplyr package) to get information about variable types.\nglimpse() tends to have nicer output for tibbles than str()\n\n\n\nlibrary(tidyverse)\nglimpse(dds.discr)  # from tidyverse package (dplyr)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…"
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#recall-previous-data-viz",
+    "href": "slides/Day03_bsta511_part2.html#recall-previous-data-viz",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Recall previous data viz",
+    "text": "Recall previous data viz"
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#visualize-in-more-detail",
+    "href": "slides/Day03_bsta511_part2.html#visualize-in-more-detail",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Visualize in more detail:",
+    "text": "Visualize in more detail:\nethnicity, age, and expenditures (code on next slide)"
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#code-for-visualize-in-more-detail-ethnicity-age-and-expenditures",
+    "href": "slides/Day03_bsta511_part2.html#code-for-visualize-in-more-detail-ethnicity-age-and-expenditures",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Code for Visualize in more detail: ethnicity, age, and expenditures",
+    "text": "Code for Visualize in more detail: ethnicity, age, and expenditures\n\nPlot on previous slide\n\n\ndds.discr_Hips_WhnH &lt;- dds.discr %&gt;%  \n  filter(ethnicity == \"White not Hispanic\" | ethnicity == \"Hispanic\" ) %&gt;% \n  droplevels()   # remove empty factor levels\n\nggplot(data = dds.discr_Hips_WhnH,   \n       aes(x = expenditures,\n           y = age.cohort)) + \n  geom_boxplot(color=\"darkgrey\") + \n  facet_grid(rows = \"ethnicity\") +   \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\") +\n  geom_jitter(     \n    aes(color = ethnicity),      \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(     \n      height = 0.4))"
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#mean-annual-dds-expenditures-by-raceethnicity-default-long-format",
+    "href": "slides/Day03_bsta511_part2.html#mean-annual-dds-expenditures-by-raceethnicity-default-long-format",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Mean annual DDS expenditures by race/ethnicity: default long format",
+    "text": "Mean annual DDS expenditures by race/ethnicity: default long format\n\n\n\nmean_expend &lt;- \n  dds.discr_Hips_WhnH %&gt;% \n  group_by(\n    ethnicity, age.cohort)%&gt;% \n  summarize(\n    ave = mean(expenditures))\n\n\n\nmean_expend\n\n# A tibble: 12 × 3\n# Groups:   ethnicity [2]\n   ethnicity          age.cohort    ave\n   &lt;fct&gt;              &lt;fct&gt;       &lt;dbl&gt;\n 1 Hispanic           0-5         1393.\n 2 Hispanic           6-12        2312.\n 3 Hispanic           13-17       3955.\n 4 Hispanic           18-21       9960.\n 5 Hispanic           22-50      40924.\n 6 Hispanic           51+        55585 \n 7 White not Hispanic 0-5         1367.\n 8 White not Hispanic 6-12        2052.\n 9 White not Hispanic 13-17       3904.\n10 White not Hispanic 18-21      10133.\n11 White not Hispanic 22-50      40188.\n12 White not Hispanic 51+        52670."
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#mean-annual-dds-expenditures-by-raceethnicity-wide-format",
+    "href": "slides/Day03_bsta511_part2.html#mean-annual-dds-expenditures-by-raceethnicity-wide-format",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Mean annual DDS expenditures by race/ethnicity: wide format",
+    "text": "Mean annual DDS expenditures by race/ethnicity: wide format\n\n\n\nmean_expend_wide &lt;- \n  mean_expend %&gt;% \n  pivot_wider(\n    names_from = ethnicity,\n    values_from = ave)\n\n\n\nmean_expend_wide\n\n# A tibble: 6 × 3\n  age.cohort Hispanic `White not Hispanic`\n  &lt;fct&gt;         &lt;dbl&gt;                &lt;dbl&gt;\n1 0-5           1393.                1367.\n2 6-12          2312.                2052.\n3 13-17         3955.                3904.\n4 18-21         9960.               10133.\n5 22-50        40924.               40188.\n6 51+          55585                52670."
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#differences-in-mean-annual-dds-expenditures-by-age-cohort-and-raceethnicity",
+    "href": "slides/Day03_bsta511_part2.html#differences-in-mean-annual-dds-expenditures-by-age-cohort-and-raceethnicity",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Differences in mean annual DDS expenditures by age cohort and race/ethnicity",
+    "text": "Differences in mean annual DDS expenditures by age cohort and race/ethnicity\n\nmean_expend_wide &lt;- mean_expend_wide %&gt;% \n  mutate(diff_mean = `White not Hispanic` - Hispanic)\n\nmean_expend_wide\n\n# A tibble: 6 × 4\n  age.cohort Hispanic `White not Hispanic` diff_mean\n  &lt;fct&gt;         &lt;dbl&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 0-5           1393.                1367.     -26.3\n2 6-12          2312.                2052.    -260. \n3 13-17         3955.                3904.     -50.9\n4 18-21         9960.               10133.     173. \n5 22-50        40924.               40188.    -736. \n6 51+          55585                52670.   -2915. \n\n\n\nQuestion: Are the data sufficient evidence of ethnic discrimination in DDS expenditures when comparing Hispanics with White non-Hispanics?"
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#simpsons-paradox",
+    "href": "slides/Day03_bsta511_part2.html#simpsons-paradox",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Simpson’s paradox",
+    "text": "Simpson’s paradox\n\n\nThis case study is an example of confounding known as Simpson’s paradox\nSimpson’s paradox happens when an association observed in several groups disappears or reverses direction when the groups are combined.\nIn other words, an association between two variables \\(X\\) and \\(Y\\) may disappear or reverse direction once data are partitioned into subpopulations based on a third variable \\(Z\\) (i.e., a confounding variable)."
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#tools-for-wrangling-data",
+    "href": "slides/Day03_bsta511_part2.html#tools-for-wrangling-data",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Tools for wrangling data",
+    "text": "Tools for wrangling data\n\n\ntidyverse functions\n\ntidyverse is a suite of packages that implement tidy methods for data importing, cleaning, wrangling, and visualizing\nload the tidyverse packages by running the code library(tidyverse)\n\nDon’t forget to first install tidyverse!\n\n\nFunctions to easily work with rows and columns, such as\n\nsubset rows/columns\nadd new rows/columns\njoin together different data sets\nmake data long or wide\n\nThere are often many steps to tidy data\n\nwe string together commands\nto be performed sequentially\nusing pipes %&gt;%"
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#summary-of-data-wrangling-so-far",
+    "href": "slides/Day03_bsta511_part2.html#summary-of-data-wrangling-so-far",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Summary of data wrangling so far",
+    "text": "Summary of data wrangling so far\n\n\nThe pipe %&gt;% to string together commands in sequence\nmutate() to add a new variable to a dataset\nselect() to select columns (or deselect columns with -variable)\nfilter() to select specific rows\npivot_wider() to reshape a dataset from a long to a wide format\n\nSummarizing data\n\ntabyl() from janitor package to make frequency tables of categorical variables\nsummarize() to get summary statistics of variables\ngroup_by() to group data by categorical variables before finding summaries"
+  },
+  {
+    "objectID": "slides/Day03_bsta511_part2.html#what-packages-are-included-in-the-tidyverse",
+    "href": "slides/Day03_bsta511_part2.html#what-packages-are-included-in-the-tidyverse",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "What packages are included in the tidyverse?",
+    "text": "What packages are included in the tidyverse?\n\n\nCore packages\nThese automatically load when loading the tidyverse package\n\n\n\nhttps://www.tidyverse.org/\n\n\n\nList of all packages:\n\ntidyverse_packages(include_self = TRUE)\n\n [1] \"broom\"         \"conflicted\"    \"cli\"           \"dbplyr\"       \n [5] \"dplyr\"         \"dtplyr\"        \"forcats\"       \"ggplot2\"      \n [9] \"googledrive\"   \"googlesheets4\" \"haven\"         \"hms\"          \n[13] \"httr\"          \"jsonlite\"      \"lubridate\"     \"magrittr\"     \n[17] \"modelr\"        \"pillar\"        \"purrr\"         \"ragg\"         \n[21] \"readr\"         \"readxl\"        \"reprex\"        \"rlang\"        \n[25] \"rstudioapi\"    \"rvest\"         \"stringr\"       \"tibble\"       \n[29] \"tidyr\"         \"xml2\"          \"tidyverse\"    \n\n\n\nPackages not a part of the core get installed with the tidyverse suite, but need to be loaded separately.\n\nSee https://www.tidyverse.org/packages/ for more info."
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part2.html",
+    "href": "slides_code/Day03_bsta511_code_part2.html",
+    "title": "Day 3 code: Data visualization",
+    "section": "",
+    "text": "Previous research\n\nResearchers examined DDS expenditures for developmentally disabled residents by ethnicity\nFound that the mean annual expenditures on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?\n\n\n\n\n\nThe textbook’s datasets are in the R package oibiostat\nMake sure the oibiostat package is installed before running the code below.\nLoad the oibiostat package and the dataset dds.discr\n\nthe code below needs to be run every time you restart R or render a Qmd file\n\nlibrary(oibiostat)\ndata(\"dds.discr\")\n\n\nAfter loading the dataset dds.discr using data(\"dds.discr\"), you will see dds.discr in the Data list of the Environment window.\n\n\n\nNew: glimpse()\n\nUse glimpse() from the tidyverse package (technically it’s from the dplyr package) to get information about variable types.\nglimpse() tends to have nicer output for tibbles than str()\n\n\nlibrary(tidyverse)\nglimpse(dds.discr)  # from tidyverse package (dplyr)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n\n\n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = expenditures,\n           y = ethnicity)) + \n  geom_boxplot(color=\"darkgrey\") + \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\") +\n  geom_jitter(     \n    aes(color = ethnicity),      \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(height = 0.4))      \n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age,\n           y = expenditures)) + \n  geom_point() +       \n  labs(x = \"Age\",\n       y = \"Annual Expenditures ($)\") \n\n\n\n\n\n\n\n\ndds.discr_Hips_WhnH &lt;- dds.discr %&gt;%  \n  filter(ethnicity == \"White not Hispanic\" | ethnicity == \"Hispanic\" ) %&gt;% \n  droplevels()   # remove empty factor levels\n  \n\nggplot(data = dds.discr_Hips_WhnH,   \n       aes(x = expenditures,\n           y = age.cohort)) + \n  geom_boxplot(color=\"darkgrey\") + \n  facet_grid(rows = \"ethnicity\") +   \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\") +\n  geom_jitter(     \n    aes(color = ethnicity),      \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(     \n      height = 0.4))      \n\n\n\n\n\n\n\n\n\n\nmean_expend &lt;- dds.discr_Hips_WhnH %&gt;% \n  group_by(ethnicity, age.cohort)%&gt;% \n  summarize(ave = mean(expenditures))\n\nmean_expend\n\n# A tibble: 12 × 3\n# Groups:   ethnicity [2]\n   ethnicity          age.cohort    ave\n   &lt;fct&gt;              &lt;fct&gt;       &lt;dbl&gt;\n 1 Hispanic           0-5         1393.\n 2 Hispanic           6-12        2312.\n 3 Hispanic           13-17       3955.\n 4 Hispanic           18-21       9960.\n 5 Hispanic           22-50      40924.\n 6 Hispanic           51+        55585 \n 7 White not Hispanic 0-5         1367.\n 8 White not Hispanic 6-12        2052.\n 9 White not Hispanic 13-17       3904.\n10 White not Hispanic 18-21      10133.\n11 White not Hispanic 22-50      40188.\n12 White not Hispanic 51+        52670.\n\n\n\n\n\n\nmean_expend_wide &lt;- mean_expend %&gt;% \n  pivot_wider(names_from = ethnicity,\n              values_from = ave)\n\nmean_expend_wide\n\n# A tibble: 6 × 3\n  age.cohort Hispanic `White not Hispanic`\n  &lt;fct&gt;         &lt;dbl&gt;                &lt;dbl&gt;\n1 0-5           1393.                1367.\n2 6-12          2312.                2052.\n3 13-17         3955.                3904.\n4 18-21         9960.               10133.\n5 22-50        40924.               40188.\n6 51+          55585                52670.\n\n\n\n\n\n\n\nmean_expend_wide &lt;- mean_expend_wide %&gt;% \n  mutate(diff_mean = `White not Hispanic` - Hispanic)\n\nmean_expend_wide\n\n# A tibble: 6 × 4\n  age.cohort Hispanic `White not Hispanic` diff_mean\n  &lt;fct&gt;         &lt;dbl&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 0-5           1393.                1367.     -26.3\n2 6-12          2312.                2052.    -260. \n3 13-17         3955.                3904.     -50.9\n4 18-21         9960.               10133.     173. \n5 22-50        40924.               40188.    -736. \n6 51+          55585                52670.   -2915. \n\n\nQuestion: Are the data sufficient evidence of ethnic discrimination in DDS expenditures when comparing Hispanics with White non-Hispanics?"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part2.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "href": "slides_code/Day03_bsta511_code_part2.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "title": "Day 3 code: Data visualization",
+    "section": "",
+    "text": "Previous research\n\nResearchers examined DDS expenditures for developmentally disabled residents by ethnicity\nFound that the mean annual expenditures on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part2.html#load-dds.discr-dataset-from-oibiostat-package",
+    "href": "slides_code/Day03_bsta511_code_part2.html#load-dds.discr-dataset-from-oibiostat-package",
+    "title": "Day 3 code: Data visualization",
+    "section": "",
+    "text": "The textbook’s datasets are in the R package oibiostat\nMake sure the oibiostat package is installed before running the code below.\nLoad the oibiostat package and the dataset dds.discr\n\nthe code below needs to be run every time you restart R or render a Qmd file\n\nlibrary(oibiostat)\ndata(\"dds.discr\")\n\n\nAfter loading the dataset dds.discr using data(\"dds.discr\"), you will see dds.discr in the Data list of the Environment window.\n\n\n\nNew: glimpse()\n\nUse glimpse() from the tidyverse package (technically it’s from the dplyr package) to get information about variable types.\nglimpse() tends to have nicer output for tibbles than str()\n\n\nlibrary(tidyverse)\nglimpse(dds.discr)  # from tidyverse package (dplyr)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part2.html#recall-previous-data-viz",
+    "href": "slides_code/Day03_bsta511_code_part2.html#recall-previous-data-viz",
+    "title": "Day 3 code: Data visualization",
+    "section": "",
+    "text": "ggplot(data = dds.discr, \n       aes(x = expenditures,\n           y = ethnicity)) + \n  geom_boxplot(color=\"darkgrey\") + \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\") +\n  geom_jitter(     \n    aes(color = ethnicity),      \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(height = 0.4))      \n\n\n\n\n\nggplot(data = dds.discr, \n       aes(x = age,\n           y = expenditures)) + \n  geom_point() +       \n  labs(x = \"Age\",\n       y = \"Annual Expenditures ($)\")"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part2.html#visualize-in-more-detail-ethnicity-age-and-expenditures",
+    "href": "slides_code/Day03_bsta511_code_part2.html#visualize-in-more-detail-ethnicity-age-and-expenditures",
+    "title": "Day 3 code: Data visualization",
+    "section": "",
+    "text": "dds.discr_Hips_WhnH &lt;- dds.discr %&gt;%  \n  filter(ethnicity == \"White not Hispanic\" | ethnicity == \"Hispanic\" ) %&gt;% \n  droplevels()   # remove empty factor levels\n  \n\nggplot(data = dds.discr_Hips_WhnH,   \n       aes(x = expenditures,\n           y = age.cohort)) + \n  geom_boxplot(color=\"darkgrey\") + \n  facet_grid(rows = \"ethnicity\") +   \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\") +\n  geom_jitter(     \n    aes(color = ethnicity),      \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(     \n      height = 0.4))"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part2.html#mean-annual-dds-expenditures-by-raceethnicity",
+    "href": "slides_code/Day03_bsta511_code_part2.html#mean-annual-dds-expenditures-by-raceethnicity",
+    "title": "Day 3 code: Data visualization",
+    "section": "",
+    "text": "mean_expend &lt;- dds.discr_Hips_WhnH %&gt;% \n  group_by(ethnicity, age.cohort)%&gt;% \n  summarize(ave = mean(expenditures))\n\nmean_expend\n\n# A tibble: 12 × 3\n# Groups:   ethnicity [2]\n   ethnicity          age.cohort    ave\n   &lt;fct&gt;              &lt;fct&gt;       &lt;dbl&gt;\n 1 Hispanic           0-5         1393.\n 2 Hispanic           6-12        2312.\n 3 Hispanic           13-17       3955.\n 4 Hispanic           18-21       9960.\n 5 Hispanic           22-50      40924.\n 6 Hispanic           51+        55585 \n 7 White not Hispanic 0-5         1367.\n 8 White not Hispanic 6-12        2052.\n 9 White not Hispanic 13-17       3904.\n10 White not Hispanic 18-21      10133.\n11 White not Hispanic 22-50      40188.\n12 White not Hispanic 51+        52670.\n\n\n\n\n\n\nmean_expend_wide &lt;- mean_expend %&gt;% \n  pivot_wider(names_from = ethnicity,\n              values_from = ave)\n\nmean_expend_wide\n\n# A tibble: 6 × 3\n  age.cohort Hispanic `White not Hispanic`\n  &lt;fct&gt;         &lt;dbl&gt;                &lt;dbl&gt;\n1 0-5           1393.                1367.\n2 6-12          2312.                2052.\n3 13-17         3955.                3904.\n4 18-21         9960.               10133.\n5 22-50        40924.               40188.\n6 51+          55585                52670."
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part2.html#differences-in-mean-annual-dds-expenditures-by-age-cohort-and-raceethnicity",
+    "href": "slides_code/Day03_bsta511_code_part2.html#differences-in-mean-annual-dds-expenditures-by-age-cohort-and-raceethnicity",
+    "title": "Day 3 code: Data visualization",
+    "section": "",
+    "text": "mean_expend_wide &lt;- mean_expend_wide %&gt;% \n  mutate(diff_mean = `White not Hispanic` - Hispanic)\n\nmean_expend_wide\n\n# A tibble: 6 × 4\n  age.cohort Hispanic `White not Hispanic` diff_mean\n  &lt;fct&gt;         &lt;dbl&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 0-5           1393.                1367.     -26.3\n2 6-12          2312.                2052.    -260. \n3 13-17         3955.                3904.     -50.9\n4 18-21         9960.               10133.     173. \n5 22-50        40924.               40188.    -736. \n6 51+          55585                52670.   -2915. \n\n\nQuestion: Are the data sufficient evidence of ethnic discrimination in DDS expenditures when comparing Hispanics with White non-Hispanics?"
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "href": "slides_md/Day03_bsta511_md_part2.html#case-study-discrimination-in-developmental-disability-support-1.7.1",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "",
+    "text": "Previous research\n\nResearchers examined DDS expenditures for developmentally disabled residents by ethnicity\nFound that the mean annual expenditures on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?"
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#load-dds.discr-dataset-from-oibiostat-package",
+    "href": "slides_md/Day03_bsta511_md_part2.html#load-dds.discr-dataset-from-oibiostat-package",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "",
+    "text": "The textbook’s datasets are in the R package oibiostat\nMake sure the oibiostat package is installed before running the code below.\nLoad the oibiostat package and the dataset dds.discr\n\nthe code below needs to be run every time you restart R or render a Qmd file\n\nlibrary(oibiostat)\ndata(\"dds.discr\")\n\n\nAfter loading the dataset dds.discr using data(\"dds.discr\"), you will see dds.discr in the Data list of the Environment window."
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#glimpse",
+    "href": "slides_md/Day03_bsta511_md_part2.html#glimpse",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "",
+    "text": "New: glimpse()\n\nUse glimpse() from the tidyverse package (technically it’s from the dplyr package) to get information about variable types.\nglimpse() tends to have nicer output for tibbles than str()\n\n\n\nlibrary(tidyverse)\nglimpse(dds.discr)  # from tidyverse package (dplyr)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…"
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#recall-previous-data-viz",
+    "href": "slides_md/Day03_bsta511_md_part2.html#recall-previous-data-viz",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Recall previous data viz",
+    "text": "Recall previous data viz"
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#visualize-in-more-detail",
+    "href": "slides_md/Day03_bsta511_md_part2.html#visualize-in-more-detail",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "",
+    "text": "ethnicity, age, and expenditures (code on next slide)"
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#code-for-visualize-in-more-detail-ethnicity-age-and-expenditures",
+    "href": "slides_md/Day03_bsta511_md_part2.html#code-for-visualize-in-more-detail-ethnicity-age-and-expenditures",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "",
+    "text": "Plot on previous slide\n\n\ndds.discr_Hips_WhnH &lt;- dds.discr %&gt;%  \n  filter(ethnicity == \"White not Hispanic\" | ethnicity == \"Hispanic\" ) %&gt;% \n  droplevels()   # remove empty factor levels\n\nggplot(data = dds.discr_Hips_WhnH,   \n       aes(x = expenditures,\n           y = age.cohort)) + \n  geom_boxplot(color=\"darkgrey\") + \n  facet_grid(rows = \"ethnicity\") +   \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\") +\n  geom_jitter(     \n    aes(color = ethnicity),      \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(     \n      height = 0.4))"
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#mean-annual-dds-expenditures-by-raceethnicity-default-long-format",
+    "href": "slides_md/Day03_bsta511_md_part2.html#mean-annual-dds-expenditures-by-raceethnicity-default-long-format",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "",
+    "text": "mean_expend &lt;- \n  dds.discr_Hips_WhnH %&gt;% \n  group_by(\n    ethnicity, age.cohort)%&gt;% \n  summarize(\n    ave = mean(expenditures))\n\n`summarise()` has grouped output by 'ethnicity'. You can override using the\n`.groups` argument.\n\n\n\n\nmean_expend\n\n# A tibble: 12 × 3\n# Groups:   ethnicity [2]\n   ethnicity          age.cohort    ave\n   &lt;fct&gt;              &lt;fct&gt;       &lt;dbl&gt;\n 1 Hispanic           0-5         1393.\n 2 Hispanic           6-12        2312.\n 3 Hispanic           13-17       3955.\n 4 Hispanic           18-21       9960.\n 5 Hispanic           22-50      40924.\n 6 Hispanic           51+        55585 \n 7 White not Hispanic 0-5         1367.\n 8 White not Hispanic 6-12        2052.\n 9 White not Hispanic 13-17       3904.\n10 White not Hispanic 18-21      10133.\n11 White not Hispanic 22-50      40188.\n12 White not Hispanic 51+        52670."
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#mean-annual-dds-expenditures-by-raceethnicity-wide-format",
+    "href": "slides_md/Day03_bsta511_md_part2.html#mean-annual-dds-expenditures-by-raceethnicity-wide-format",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "",
+    "text": "mean_expend_wide &lt;- \n  mean_expend %&gt;% \n  pivot_wider(\n    names_from = ethnicity,\n    values_from = ave)\n\n\n\nmean_expend_wide\n\n# A tibble: 6 × 3\n  age.cohort Hispanic `White not Hispanic`\n  &lt;fct&gt;         &lt;dbl&gt;                &lt;dbl&gt;\n1 0-5           1393.                1367.\n2 6-12          2312.                2052.\n3 13-17         3955.                3904.\n4 18-21         9960.               10133.\n5 22-50        40924.               40188.\n6 51+          55585                52670."
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#differences-in-mean-annual-dds-expenditures-by-age-cohort-and-raceethnicity",
+    "href": "slides_md/Day03_bsta511_md_part2.html#differences-in-mean-annual-dds-expenditures-by-age-cohort-and-raceethnicity",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "",
+    "text": "mean_expend_wide &lt;- mean_expend_wide %&gt;% \n  mutate(diff_mean = `White not Hispanic` - Hispanic)\n\nmean_expend_wide\n\n# A tibble: 6 × 4\n  age.cohort Hispanic `White not Hispanic` diff_mean\n  &lt;fct&gt;         &lt;dbl&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 0-5           1393.                1367.     -26.3\n2 6-12          2312.                2052.    -260. \n3 13-17         3955.                3904.     -50.9\n4 18-21         9960.               10133.     173. \n5 22-50        40924.               40188.    -736. \n6 51+          55585                52670.   -2915. \n\n\n\nQuestion: Are the data sufficient evidence of ethnic discrimination in DDS expenditures when comparing Hispanics with White non-Hispanics?"
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#simpsons-paradox",
+    "href": "slides_md/Day03_bsta511_md_part2.html#simpsons-paradox",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "",
+    "text": "This case study is an example of confounding known as Simpson’s paradox\nSimpson’s paradox happens when an association observed in several groups disappears or reverses direction when the groups are combined.\nIn other words, an association between two variables \\(X\\) and \\(Y\\) may disappear or reverse direction once data are partitioned into subpopulations based on a third variable \\(Z\\) (i.e., a confounding variable)."
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#tools-for-wrangling-data",
+    "href": "slides_md/Day03_bsta511_md_part2.html#tools-for-wrangling-data",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Tools for wrangling data",
+    "text": "Tools for wrangling data\n\n\ntidyverse functions\n\ntidyverse is a suite of packages that implement tidy methods for data importing, cleaning, wrangling, and visualizing\nload the tidyverse packages by running the code library(tidyverse)\n\nDon’t forget to first install tidyverse!\n\n\nFunctions to easily work with rows and columns, such as\n\nsubset rows/columns\nadd new rows/columns\njoin together different data sets\nmake data long or wide\n\nThere are often many steps to tidy data\n\nwe string together commands\nto be performed sequentially\nusing pipes %&gt;%"
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#summary-of-data-wrangling-so-far",
+    "href": "slides_md/Day03_bsta511_md_part2.html#summary-of-data-wrangling-so-far",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "Summary of data wrangling so far",
+    "text": "Summary of data wrangling so far\n\n\nThe pipe %&gt;% to string together commands in sequence\nmutate() to add a new variable to a dataset\nselect() to select columns (or deselect columns with -variable)\nfilter() to select specific rows\npivot_wider() to reshape a dataset from a long to a wide format\n\nSummarizing data\n\ntabyl() from janitor package to make frequency tables of categorical variables\nsummarize() to get summary statistics of variables\ngroup_by() to group data by categorical variables before finding summaries"
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html#what-packages-are-included-in-the-tidyverse",
+    "href": "slides_md/Day03_bsta511_md_part2.html#what-packages-are-included-in-the-tidyverse",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "What packages are included in the tidyverse?",
+    "text": "What packages are included in the tidyverse?\n\n\nCore packages\nThese automatically load when loading the tidyverse package\n\n\n\nhttps://www.tidyverse.org/\n\n\n\nList of all packages:\n\ntidyverse_packages(include_self = TRUE)\n\n [1] \"broom\"         \"conflicted\"    \"cli\"           \"dbplyr\"       \n [5] \"dplyr\"         \"dtplyr\"        \"forcats\"       \"ggplot2\"      \n [9] \"googledrive\"   \"googlesheets4\" \"haven\"         \"hms\"          \n[13] \"httr\"          \"jsonlite\"      \"lubridate\"     \"magrittr\"     \n[17] \"modelr\"        \"pillar\"        \"purrr\"         \"ragg\"         \n[21] \"readr\"         \"readxl\"        \"reprex\"        \"rlang\"        \n[25] \"rstudioapi\"    \"rvest\"         \"stringr\"       \"tibble\"       \n[29] \"tidyr\"         \"xml2\"          \"tidyverse\"    \n\n\n\nPackages not a part of the core get installed with the tidyverse suite, but need to be loaded separately.\n\nSee https://www.tidyverse.org/packages/ for more info."
+  },
+  {
+    "objectID": "slides_md/Day03_bsta511_md_part2.html",
+    "href": "slides_md/Day03_bsta511_md_part2.html",
+    "title": "Day 3: Data visualization - Part 2",
+    "section": "",
+    "text": "Previous research\n\nResearchers examined DDS expenditures for developmentally disabled residents by ethnicity\nFound that the mean annual expenditures on Hispanics was less than that on White non-Hispanics.\n\nResult: an allegation of ethnic discrimination was brought against the California DDS.\nQuestion: Are the data sufficient evidence of ethnic discrimination?\n\n\n\n\n\n\nThe textbook’s datasets are in the R package oibiostat\nMake sure the oibiostat package is installed before running the code below.\nLoad the oibiostat package and the dataset dds.discr\n\nthe code below needs to be run every time you restart R or render a Qmd file\n\nlibrary(oibiostat)\ndata(\"dds.discr\")\n\n\nAfter loading the dataset dds.discr using data(\"dds.discr\"), you will see dds.discr in the Data list of the Environment window.\n\n\n\n\n\n\nNew: glimpse()\n\nUse glimpse() from the tidyverse package (technically it’s from the dplyr package) to get information about variable types.\nglimpse() tends to have nicer output for tibbles than str()\n\n\n\nlibrary(tidyverse)\nglimpse(dds.discr)  # from tidyverse package (dplyr)\n\nRows: 1,000\nColumns: 6\n$ id           &lt;int&gt; 10210, 10409, 10486, 10538, 10568, 10690, 10711, 10778, 1…\n$ age.cohort   &lt;fct&gt; 13-17, 22-50, 0-5, 18-21, 13-17, 13-17, 13-17, 13-17, 13-…\n$ age          &lt;int&gt; 17, 37, 3, 19, 13, 15, 13, 17, 14, 13, 13, 14, 15, 17, 20…\n$ gender       &lt;fct&gt; Female, Male, Male, Female, Male, Female, Female, Male, F…\n$ expenditures &lt;int&gt; 2113, 41924, 1454, 6400, 4412, 4566, 3915, 3873, 5021, 28…\n$ ethnicity    &lt;fct&gt; White not Hispanic, White not Hispanic, Hispanic, Hispani…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nethnicity, age, and expenditures (code on next slide)\n\n\n\n\n\n\n\n\n\nPlot on previous slide\n\n\ndds.discr_Hips_WhnH &lt;- dds.discr %&gt;%  \n  filter(ethnicity == \"White not Hispanic\" | ethnicity == \"Hispanic\" ) %&gt;% \n  droplevels()   # remove empty factor levels\n\nggplot(data = dds.discr_Hips_WhnH,   \n       aes(x = expenditures,\n           y = age.cohort)) + \n  geom_boxplot(color=\"darkgrey\") + \n  facet_grid(rows = \"ethnicity\") +   \n  labs(x = \"Annual Expenditures ($)\",\n       y = \"Race and ethnicity\") +\n  geom_jitter(     \n    aes(color = ethnicity),      \n    alpha = 0.3,      \n    show.legend = FALSE,      \n    position = position_jitter(     \n      height = 0.4))      \n\n\n\n\n\n\n\nmean_expend &lt;- \n  dds.discr_Hips_WhnH %&gt;% \n  group_by(\n    ethnicity, age.cohort)%&gt;% \n  summarize(\n    ave = mean(expenditures))\n\n`summarise()` has grouped output by 'ethnicity'. You can override using the\n`.groups` argument.\n\n\n\n\nmean_expend\n\n# A tibble: 12 × 3\n# Groups:   ethnicity [2]\n   ethnicity          age.cohort    ave\n   &lt;fct&gt;              &lt;fct&gt;       &lt;dbl&gt;\n 1 Hispanic           0-5         1393.\n 2 Hispanic           6-12        2312.\n 3 Hispanic           13-17       3955.\n 4 Hispanic           18-21       9960.\n 5 Hispanic           22-50      40924.\n 6 Hispanic           51+        55585 \n 7 White not Hispanic 0-5         1367.\n 8 White not Hispanic 6-12        2052.\n 9 White not Hispanic 13-17       3904.\n10 White not Hispanic 18-21      10133.\n11 White not Hispanic 22-50      40188.\n12 White not Hispanic 51+        52670.\n\n\n\n\n\n\n\n\n\n\nmean_expend_wide &lt;- \n  mean_expend %&gt;% \n  pivot_wider(\n    names_from = ethnicity,\n    values_from = ave)\n\n\n\nmean_expend_wide\n\n# A tibble: 6 × 3\n  age.cohort Hispanic `White not Hispanic`\n  &lt;fct&gt;         &lt;dbl&gt;                &lt;dbl&gt;\n1 0-5           1393.                1367.\n2 6-12          2312.                2052.\n3 13-17         3955.                3904.\n4 18-21         9960.               10133.\n5 22-50        40924.               40188.\n6 51+          55585                52670.\n\n\n\n\n\n\n\n\nmean_expend_wide &lt;- mean_expend_wide %&gt;% \n  mutate(diff_mean = `White not Hispanic` - Hispanic)\n\nmean_expend_wide\n\n# A tibble: 6 × 4\n  age.cohort Hispanic `White not Hispanic` diff_mean\n  &lt;fct&gt;         &lt;dbl&gt;                &lt;dbl&gt;     &lt;dbl&gt;\n1 0-5           1393.                1367.     -26.3\n2 6-12          2312.                2052.    -260. \n3 13-17         3955.                3904.     -50.9\n4 18-21         9960.               10133.     173. \n5 22-50        40924.               40188.    -736. \n6 51+          55585                52670.   -2915. \n\n\n\nQuestion: Are the data sufficient evidence of ethnic discrimination in DDS expenditures when comparing Hispanics with White non-Hispanics?\n\n\n\n\n\n\nThis case study is an example of confounding known as Simpson’s paradox\nSimpson’s paradox happens when an association observed in several groups disappears or reverses direction when the groups are combined.\nIn other words, an association between two variables \\(X\\) and \\(Y\\) may disappear or reverse direction once data are partitioned into subpopulations based on a third variable \\(Z\\) (i.e., a confounding variable)."
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#load-all-the-packages-you-need-below-here.",
+    "href": "homework/HW_2_F23_bsta511.html#load-all-the-packages-you-need-below-here.",
+    "title": "draft HW 2: BSTA 511-611 F22",
+    "section": "1.1 Load all the packages you need below here. ",
+    "text": "1.1 Load all the packages you need below here."
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#r2-nhanes",
+    "href": "homework/HW_2_F23_bsta511.html#r2-nhanes",
+    "title": "draft HW 2: BSTA 511-611 F22",
+    "section": "1.2 R2: NHANES",
+    "text": "1.2 R2: NHANES\nContinue using the same NHANES data as for the previous problem.\nIMPORTANT R tip\n\nFor most of the summary statistic base R commands (such as mean(), sd(), median(), etc.), you will get NA as the result if there are missing values.\nIn order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the na.rm = TRUE option within the parentheses of the command: mean(dataset$variablename, na.rm = TRUE).\n\n\n1.2.1 Use the mutate() command explained on Slide 23 of the Day 4 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.\nTips:\n\nColumn names cannot start with a number or symbol\nNames are case sensitive\nIt’s easier to work with column names that don’t have spaces in them. I usually use _ or . instead of spaces.\n\n\n\n1.2.2 What proportion of Americans at least 25 years of age are college graduates?\nHint: First create a new dataset that is restricted to Americans at least 25 years old.\n\n\n1.2.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?\n\n\n1.2.4 Construct a two-way table (contingency table), with PhysActive as the row variable and Diabetes as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?\n\n\n1.2.5 In this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one’s chance of becoming diabetic?"
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#smoking-and-stenosis",
+    "href": "homework/HW_2_F23_bsta511.html#smoking-and-stenosis",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "1.38 Smoking and stenosis",
+    "text": "1.38 Smoking and stenosis\nSee Section1.6.2 for more on how the relative risk is calculated."
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#poverty-and-language",
+    "href": "homework/HW_2_F23_bsta511.html#poverty-and-language",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "2.6 Poverty and language",
+    "text": "2.6 Poverty and language\nPart (b) asks you to create a Venn Diagram. You do not need to turn this part in. If you want an R challenge though, you can use the VennDiagram or other package to create one. See https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/ for some examples."
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#school-absences",
+    "href": "homework/HW_2_F23_bsta511.html#school-absences",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "2.8 School absences",
+    "text": "2.8 School absences\nPart (b) asks you to create a Venn Diagram. You do not need to turn this part in. If you want an R challenge though, you can use the VennDiagram or other package to create one. See https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/ for some examples."
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#health-coverage-frequencies",
+    "href": "homework/HW_2_F23_bsta511.html#health-coverage-frequencies",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "2.10 Health coverage, frequencies",
+    "text": "2.10 Health coverage, frequencies"
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#health-coverage-relative-frequencies",
+    "href": "homework/HW_2_F23_bsta511.html#health-coverage-relative-frequencies",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "2.14 Health coverage, relative frequencies",
+    "text": "2.14 Health coverage, relative frequencies"
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#what-are-the-dimensions-and-column-names-of-the-dataset",
+    "href": "homework/HW_2_F23_bsta511.html#what-are-the-dimensions-and-column-names-of-the-dataset",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "1.1 What are the dimensions and column names of the dataset?",
+    "text": "1.1 What are the dimensions and column names of the dataset?"
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers",
+    "href": "homework/HW_2_F23_bsta511.html#how-many-unique-id-identifiers-are-in-the-dataset-compare-this-to-the-number-of-rows-in-the-dataset.-what-is-the-explanation-for-these-two-different-numbers",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "1.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?",
+    "text": "1.2 How many unique ID identifiers are in the dataset? Compare this to the number of rows in the dataset. What is the explanation for these two different numbers?"
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants.",
+    "href": "homework/HW_2_F23_bsta511.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-ages-among-study-participants.",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "1.3 Using numerical and graphical summaries, describe the distribution of ages among study participants.",
+    "text": "1.3 Using numerical and graphical summaries, describe the distribution of ages among study participants."
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants.",
+    "href": "homework/HW_2_F23_bsta511.html#using-numerical-and-graphical-summaries-describe-the-distribution-of-heights-among-study-participants.",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "1.4 Using numerical and graphical summaries, describe the distribution of heights among study participants.",
+    "text": "1.4 Using numerical and graphical summaries, describe the distribution of heights among study participants."
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not",
+    "href": "homework/HW_2_F23_bsta511.html#investigate-at-which-age-people-generally-reach-their-adult-height.-is-it-possible-to-do-the-same-for-weight-why-or-why-not",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "1.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?",
+    "text": "1.5 Investigate at which age people generally reach their adult height. Is it possible to do the same for weight; why or why not?\nUse whatever EDA tools you think are appropriate to answer this question."
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data.",
+    "href": "homework/HW_2_F23_bsta511.html#calculate-the-median-and-interquartile-range-of-the-distribution-of-the-variable-poverty.-write-a-sentence-explaining-the-median-and-iqr-in-the-context-of-these-data.",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "1.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data.",
+    "text": "1.6 Calculate the median and interquartile range of the distribution of the variable Poverty. Write a sentence explaining the median and IQR in the context of these data."
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#use-the-mutate-command-explained-on-slide-23-of-the-day-4-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches.",
+    "href": "homework/HW_2_F23_bsta511.html#use-the-mutate-command-explained-on-slide-23-of-the-day-4-notes-to-create-a-new-column-variable-in-the-nhanes-dataset-for-the-heights-in-inches.-then-find-the-mean-and-standard-deviation-of-the-heights-in-inches.-note-that-1-centimeter-is-approximately-0.3937-inches.",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "2.1 Use the mutate() command explained on Slide 23 of the Day 4 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.",
+    "text": "2.1 Use the mutate() command explained on Slide 23 of the Day 4 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.\nTips:\n\nColumn names cannot start with a number or symbol\nNames are case sensitive\nIt’s easier to work with column names that don’t have spaces in them. I usually use _ or . instead of spaces."
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates",
+    "href": "homework/HW_2_F23_bsta511.html#what-proportion-of-americans-at-least-25-years-of-age-are-college-graduates",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "2.2 What proportion of Americans at least 25 years of age are college graduates?",
+    "text": "2.2 What proportion of Americans at least 25 years of age are college graduates?\nHint: First create a new dataset that is restricted to Americans at least 25 years old."
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates",
+    "href": "homework/HW_2_F23_bsta511.html#what-proportion-of-americans-at-least-25-years-of-age-with-a-high-school-degree-are-college-graduates",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "2.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?",
+    "text": "2.3 What proportion of Americans at least 25 years of age with a high school degree are college graduates?"
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#construct-a-two-way-table-contingency-table-with-physactive-as-the-row-variable-and-diabetes-as-the-column-variable.-among-participants-who-are-not-physically-active-what-proportion-have-diabetes-what-proportion-of-physically-active-participants-have-diabetes",
+    "href": "homework/HW_2_F23_bsta511.html#construct-a-two-way-table-contingency-table-with-physactive-as-the-row-variable-and-diabetes-as-the-column-variable.-among-participants-who-are-not-physically-active-what-proportion-have-diabetes-what-proportion-of-physically-active-participants-have-diabetes",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "2.4 Construct a two-way table (contingency table), with PhysActive as the row variable and Diabetes as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?",
+    "text": "2.4 Construct a two-way table (contingency table), with PhysActive as the row variable and Diabetes as the column variable. Among participants who are not physically active, what proportion have diabetes? What proportion of physically active participants have diabetes?"
+  },
+  {
+    "objectID": "homework/HW_2_F23_bsta511.html#in-this-context-relative-risk-is-the-ratio-of-the-proportion-of-participants-who-have-diabetes-among-those-who-are-not-physically-active-to-the-proportion-of-participants-with-diabetes-among-those-physically-active.-relative-risks-greater-than-1-indicate-that-people-who-are-not-physically-active-seem-to-be-at-a-higher-risk-for-diabetes-than-physically-active-people.-calculate-the-relative-risk-of-diabetes-for-the-participants.-from-these-calculations-is-it-possible-to-conclude-that-being-physically-active-reduces-ones-chance-of-becoming-diabetic",
+    "href": "homework/HW_2_F23_bsta511.html#in-this-context-relative-risk-is-the-ratio-of-the-proportion-of-participants-who-have-diabetes-among-those-who-are-not-physically-active-to-the-proportion-of-participants-with-diabetes-among-those-physically-active.-relative-risks-greater-than-1-indicate-that-people-who-are-not-physically-active-seem-to-be-at-a-higher-risk-for-diabetes-than-physically-active-people.-calculate-the-relative-risk-of-diabetes-for-the-participants.-from-these-calculations-is-it-possible-to-conclude-that-being-physically-active-reduces-ones-chance-of-becoming-diabetic",
+    "title": "HW 2: BSTA 511-611 F23",
+    "section": "2.5 In this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one’s chance of becoming diabetic?",
+    "text": "2.5 In this context, relative risk is the ratio of the proportion of participants who have diabetes among those who are not physically active to the proportion of participants with diabetes among those physically active. Relative risks greater than 1 indicate that people who are not physically active seem to be at a higher risk for diabetes than physically active people. Calculate the relative risk of diabetes for the participants. From these calculations, is it possible to conclude that being physically active reduces one’s chance of becoming diabetic?"
   }
 ]
