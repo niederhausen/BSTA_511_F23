@@ -81,7 +81,7 @@ The Day 3 Part 3 slides provide more data wrangling examples. Some of the functi
 _HW 2 makes reference to some of the functions in these slides._
 
 * [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
-* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_part3_data_wrangling.qmd), [html](../slides_code/Day03_bsta511_part3_data_wrangling.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_code_part3_data_wrangling.qmd), [html](../slides_code/Day03_bsta511_code_part3_data_wrangling.qmd)
 
 ## Homework
 
