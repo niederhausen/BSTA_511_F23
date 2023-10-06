@@ -1,0 +1,68 @@
+---
+title: "Week 3"
+description: "Probability"
+date: "10/9/2023"
+date-modified: "10/5/2023"
+categories: [""]
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+## Recordings
+
+* __Pre-recorded__ lessons are on Echo Cloud (aka echo 360 or echo video).
+    * These can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the `Echo Cloud` option in the left-side menu. 
+    * This will redirect you to an echo video page with a list of pre-recorded videos.
+* __In-class__ recording links are on Sakai. Navigate to _Course Materials_ -> _Schedule with links to in-class recordings_. Note that the password to the recordings is at the top of the page.  
+
+
+
+## Day04 
+
+* Probability
+* Sections 2.1 - 2.2.4
+
+### Slides
+
+* [html](../slides/Day04_bsta511.qmd)
+* [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
+
+
+
+### Class discussion
+
+
+
+## Day05 
+
+* Conditional Probability and Bayes' Rule
+
+
+### Slides
+
+* [html](../slides/Day05_bsta511.qmd)
+* [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
+* [webpage](../slides_md/Day05_bsta511_md.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day05_bsta511_code.qmd), [html](../slides_code/Day05_bsta511_code.qmd)
+
+### Class discussion
+
+
+
+## Homework
+
+* [HW 2](../homework/HW_2_F23_bsta511.qmd) due on Sat, 10/14
+    * Covers Days 3-5
+* HW 3 due on Sat, 10/21
+    * Covers Days 6-7
+
+### Why is `{.unnumbered}` included at the end of some of the section headers on the HW?
+
+* I added the option for the sections to be numbered in the YAML (`number-sections: true`) so that the R exercises at the end of the file are numbered. 
+* However, the book exercises already have their own numbering, and so I added `{.unnumbered}` to the section headers of the book exercises so that they are not numbered twice. 
+

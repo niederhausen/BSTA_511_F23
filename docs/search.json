@@ -340,7 +340,7 @@
     "href": "class_slides.html",
     "title": "Class Slides",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n10/9/23\n\n\nDay 4: Probability\n\n\nWeek 3\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides_md/Day01_bsta511_md.html",
@@ -3533,5 +3533,159 @@
     "title": "HW 2: BSTA 511-611 F23",
     "section": "4.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.",
     "text": "4.1 Use the mutate() command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.\n\n\n\n\n\n\nTips\n\n\n\n\nColumn names cannot start with a number or symbol\nNames are case sensitive\nIt’s easier to work with column names that don’t have spaces in them. I usually use _ or . instead of spaces."
+  },
+  {
+    "objectID": "slides/Day04_bsta511.html",
+    "href": "slides/Day04_bsta511.html",
+    "title": "Day 4: Probability",
+    "section": "",
+    "text": "Download slides\n\nUnable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "weeks/week_03.html",
+    "href": "weeks/week_03.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "Pre-recorded lessons are on Echo Cloud (aka echo 360 or echo video).\n\nThese can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the Echo Cloud option in the left-side menu.\nThis will redirect you to an echo video page with a list of pre-recorded videos.\n\nIn-class recording links are on Sakai. Navigate to Course Materials -&gt; Schedule with links to in-class recordings. Note that the password to the recordings is at the top of the page."
+  },
+  {
+    "objectID": "weeks/week_03.html#recordings",
+    "href": "weeks/week_03.html#recordings",
+    "title": "Week 3",
+    "section": "",
+    "text": "Pre-recorded lessons are on Echo Cloud (aka echo 360 or echo video).\n\nThese can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the Echo Cloud option in the left-side menu.\nThis will redirect you to an echo video page with a list of pre-recorded videos.\n\nIn-class recording links are on Sakai. Navigate to Course Materials -&gt; Schedule with links to in-class recordings. Note that the password to the recordings is at the top of the page."
+  },
+  {
+    "objectID": "weeks/week_03.html#day04",
+    "href": "weeks/week_03.html#day04",
+    "title": "Week 3",
+    "section": "Day04",
+    "text": "Day04\n\nProbability\nSections 2.1 - 2.2.4\n\n\nSlides\n\nhtml\npdf\n\n\n\nClass discussion"
+  },
+  {
+    "objectID": "weeks/week_03.html#day05",
+    "href": "weeks/week_03.html#day05",
+    "title": "Week 3",
+    "section": "Day05",
+    "text": "Day05\n\nConditional Probability and Bayes’ Rule\n\n\nSlides\n\nhtml\npdf\nwebpage\nCode file: qmd, html\n\n\n\nClass discussion"
+  },
+  {
+    "objectID": "weeks/week_03.html#homework",
+    "href": "weeks/week_03.html#homework",
+    "title": "Week 3",
+    "section": "Homework",
+    "text": "Homework\n\nHW 2 due on Sat, 10/14\n\nCovers Days 3-5\n\nHW 3 due on Sat, 10/21\n\nCovers Days 6-7\n\n\n\nWhy is {.unnumbered} included at the end of some of the section headers on the HW?\n\nI added the option for the sections to be numbered in the YAML (number-sections: true) so that the R exercises at the end of the file are numbered.\nHowever, the book exercises already have their own numbering, and so I added {.unnumbered} to the section headers of the book exercises so that they are not numbered twice."
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(janitor)"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#load-dataset-dds.discr-from-package-oibiostat",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#load-dataset-dds.discr-from-package-oibiostat",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "Load dataset dds.discr from package oibiostat",
+    "text": "Load dataset dds.discr from package oibiostat\n\nThe textbook’s datasets are in the R package oibiostat\nIf you haven’t already installed the package oibiostat, then first do so using directions in previous slide.\nLoad the oibiostat package and the dataset dds.discr\n\nthe code below needs to be run every time you restart R or knit an Rmd file\n\n\n\nlibrary(oibiostat)\ndata(\"dds.discr\")\n\n\nAfter loading the dataset dds.discr using data(\"dds.discr\"), you will see dds.discr in the Data list of the Environment window."
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#getting-to-know-the-dataset",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#getting-to-know-the-dataset",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "Getting to know the dataset",
+    "text": "Getting to know the dataset\n\ndim(dds.discr)\n\n[1] 1000    6\n\nnames(dds.discr)\n\n[1] \"id\"           \"age.cohort\"   \"age\"          \"gender\"       \"expenditures\"\n[6] \"ethnicity\"   \n\nlength(unique(dds.discr$id)) # How many unique id's are there?\n\n[1] 1000"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#filter-rows-that-satisfy-specified-conditions",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#filter-rows-that-satisfy-specified-conditions",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "filter() rows that satisfy specified conditions",
+    "text": "filter() rows that satisfy specified conditions\n\nfilter() to select rows\nfilter data based on rows\n\nmath: &gt;, &lt;, &gt;=, &lt;=\ndouble = for “is equal to”: ==\n!= (not equal)\n& (and)\n| (or)\nis.na() to filter based on missing values\n%in% to filter based on group membership\n! in front negates the statement, as in\n\n!is.na(age)\n!(ethnicity %in% c(\"Asian\",\"Black\"))\n\n\n\n# Note: the output from the command below is not being saved \n# since it's not being assigned to a variable using &lt;-\ndds.discr %&gt;% filter(age &gt; 90)   \n\n# A tibble: 4 × 6\n     id age.cohort   age gender expenditures ethnicity\n  &lt;int&gt; &lt;fct&gt;      &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt;    \n1 19250 51+           94 Female        60871 Hispanic \n2 46726 51+           95 Male          55187 Hispanic \n3 55056 51+           95 Female        54680 Black    \n4 87737 51+           91 Male          54481 Asian    \n\n\n\n\nfilter() practice\nWhat do these commands do? Try them out:\n\ndds.discr %&gt;% filter(age &lt; 5)\ndds.discr %&gt;% filter(age/expenditures &lt; 0.5)    # can do math within filter command\ndds.discr %&gt;% filter((age &lt; 15) | (age &gt; 50))\n\n# simultaneously filter on multiple variables\ndds.discr %&gt;% filter(age &lt; 20, expenditures &gt; 1000, gender == \"Male\") \n\ndds.discr %&gt;% filter(id == 10210) # note the use of == instead of just =\ndds.discr %&gt;% filter(gender == \"Female\")\ndds.discr %&gt;% filter(!(age.cohort == \"51+\"))\ndds.discr %&gt;% filter(age.cohort %in% c(\"0-5\", \"6-12\"))\n\ndds.discr %&gt;% filter(is.na(age))\ndds.discr %&gt;% filter(!is.na(age))"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#subset-by-columns",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#subset-by-columns",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "Subset by columns",
+    "text": "Subset by columns\n\nselect() to choose columns\n\nselect columns (variables)\nno quotes needed around variable names\ncan be used to rearrange columns\nuses special syntax that is flexible and has many options\n\n\ndds.discr %&gt;% select(id, expenditures, ethnicity)\n\n# A tibble: 1,000 × 3\n      id expenditures ethnicity         \n   &lt;int&gt;        &lt;int&gt; &lt;fct&gt;             \n 1 10210         2113 White not Hispanic\n 2 10409        41924 White not Hispanic\n 3 10486         1454 Hispanic          \n 4 10538         6400 Hispanic          \n 5 10568         4412 White not Hispanic\n 6 10690         4566 Hispanic          \n 7 10711         3915 White not Hispanic\n 8 10778         3873 Black             \n 9 10820         5021 White not Hispanic\n10 10823         2887 Hispanic          \n# ℹ 990 more rows\n\n\n\n\nColumn selection syntax options\nThere are many ways to select a set of variable names (columns):\n\nvar1:var20: all columns from var1 to var20\none_of(c(\"a\", \"b\", \"c\")): all columns with names in the specified character vector of names\nRemoving columns\n\n-var1: remove the columnvar1\n-(var1:var20): remove all columns from var1 to var20\n\nSelect by specifying text within column names\n\ncontains(\"date\"), contains(\"_\"): all variable names that contain the specified string of characters\nstarts_with(\"a\") or ends_with(\"last\"): all variable names that start or end with the specified string\n\n\nSee other examples in the data transformation cheatsheet.\n\n\nselect() practice\nWhich columns are selected & in what order using these commands?\nFirst guess and then try them out.\n\ndds.discr %&gt;% select(id:gender)\ndds.discr %&gt;% select(one_of(c(\"age\",\"expenditures\", \"notindata\")))\n\ndds.discr %&gt;% select(-age.cohort,-gender)\ndds.discr %&gt;% select(-(id:gender))\n\ndds.discr %&gt;% select(contains(\"age\"))\ndds.discr %&gt;% select(starts_with(\"a\"))\ndds.discr %&gt;% select(-contains(\"a\"))"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#relocate-to-change-order-of-columns",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#relocate-to-change-order-of-columns",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "relocate() to change order of columns",
+    "text": "relocate() to change order of columns\n\nchange the order of columns in dataset\nspecified column names get put first,\n\nand unspecified column names after that in original order\n\nno quotes needed around variable names\nsimilar options as with select(),\n\nplus special ones such as .before and .after\n\n\n\ndds.discr %&gt;% relocate(age.cohort, ethnicity)\n\n# A tibble: 1,000 × 6\n   age.cohort ethnicity             id   age gender expenditures\n   &lt;fct&gt;      &lt;fct&gt;              &lt;int&gt; &lt;int&gt; &lt;fct&gt;         &lt;int&gt;\n 1 13-17      White not Hispanic 10210    17 Female         2113\n 2 22-50      White not Hispanic 10409    37 Male          41924\n 3 0-5        Hispanic           10486     3 Male           1454\n 4 18-21      Hispanic           10538    19 Female         6400\n 5 13-17      White not Hispanic 10568    13 Male           4412\n 6 13-17      Hispanic           10690    15 Female         4566\n 7 13-17      White not Hispanic 10711    13 Female         3915\n 8 13-17      Black              10778    17 Male           3873\n 9 13-17      White not Hispanic 10820    14 Female         5021\n10 13-17      Hispanic           10823    13 Male           2887\n# ℹ 990 more rows"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#relocate-practice",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#relocate-practice",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "relocate() practice",
+    "text": "relocate() practice\nWhat order are the columns in using these commands?\nFirst guess and then try them out.\n\ndds.discr %&gt;% relocate(age:ethnicity)\n\ndds.discr %&gt;% relocate(where(is.numeric))\ndds.discr %&gt;% relocate(where(is.factor))\n# note: the next command doesn't do anything \n# since there are no character type variables in the dataset\ndds.discr %&gt;% relocate(where(is.character))\n\ndds.discr %&gt;% relocate(age,.before = ethnicity)\ndds.discr %&gt;% relocate(ethnicity, .after = age.cohort)\ndds.discr %&gt;% relocate(age, .after = last_col())"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#mutate",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#mutate",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "mutate()",
+    "text": "mutate()\nUse mutate() to add new columns to a tibble * Many options in how to define new column of data\n\n# use = to define new a variable within mutate (not &lt;- or ==) \nnewdata &lt;- dds.discr %&gt;% \n  mutate(\n    log_expenditures = log(expenditures),\n    expend_per_yearage = expenditures / age)   \n\n\nnewdata %&gt;% select(id, age, expenditures, log_expenditures, expend_per_yearage)\n\n# A tibble: 1,000 × 5\n      id   age expenditures log_expenditures expend_per_yearage\n   &lt;int&gt; &lt;int&gt;        &lt;int&gt;            &lt;dbl&gt;              &lt;dbl&gt;\n 1 10210    17         2113             7.66               124.\n 2 10409    37        41924            10.6               1133.\n 3 10486     3         1454             7.28               485.\n 4 10538    19         6400             8.76               337.\n 5 10568    13         4412             8.39               339.\n 6 10690    15         4566             8.43               304.\n 7 10711    13         3915             8.27               301.\n 8 10778    17         3873             8.26               228.\n 9 10820    14         5021             8.52               359.\n10 10823    13         2887             7.97               222.\n# ℹ 990 more rows\n\n\n\nmutate() practice\nWhat do the following commands do?\nFirst guess and then try them out.\n\ndds.discr %&gt;% mutate(age_young = (age &lt; 18))\n\ndds.discr %&gt;% mutate(male = (gender == \"Male\"))\ndds.discr %&gt;% mutate(male = 1 * (gender == \"Male\"))"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#case_when-to-create-multi-valued-variables",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#case_when-to-create-multi-valued-variables",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "case_when() to create multi-valued variables",
+    "text": "case_when() to create multi-valued variables\n\nExample: create age groups based off of the age variable\n\n\ndds.discr2 &lt;- dds.discr %&gt;%\n  mutate(\n    age_group = case_when(\n      age &lt; 6 ~ \"0 to 5\",               # condition ~ new_value\n      age &gt;= 6 & age &lt; 13 ~ \"6 to 12\",\n      age &gt;= 13 & age &lt; 18 ~ \"13 to 17\",\n      age &gt;= 18 & age &lt; 22 ~ \"18 to 21\",\n      age &gt;= 22 & age &lt; 51 ~ \"22 to 50\",\n      age &gt;= 51 ~ \"51 plus\")\n    )\n\ndds.discr2 %&gt;% select(age, age_group) %&gt;% head()\n\n# A tibble: 6 × 2\n    age age_group\n  &lt;int&gt; &lt;chr&gt;    \n1    17 13 to 17 \n2    37 22 to 50 \n3     3 0 to 5   \n4    19 18 to 21 \n5    13 13 to 17 \n6    15 13 to 17 \n\ndds.discr2 %&gt;% tabyl(age.cohort, age_group)\n\n age.cohort 0 to 5 13 to 17 18 to 21 22 to 50 51 plus 6 to 12\n        0-5     82        0        0        0       0       0\n       6-12      0        0        0        0       0     175\n      13-17      0      212        0        0       0       0\n      18-21      0        0      199        0       0       0\n      22-50      0        0        0      226       0       0\n        51+      0        0        0        0     106       0"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#wide-vs.-long-data",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#wide-vs.-long-data",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "Wide vs. long data",
+    "text": "Wide vs. long data\n\nWide data has one row per individual,\n\nwith multiple columns for their repeated measurements\n\nLong data has multiple rows per individual,\n\nwith one column for the measurement variable and\nanother indicating from when/where the repeated measures are from"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#dds-example",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#dds-example",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "DDS example",
+    "text": "DDS example\nMean expenditures by ethnicity and age cohort (from Day 3 slides)"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#example-wide-toy-dataset",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#example-wide-toy-dataset",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "Example wide toy dataset",
+    "text": "Example wide toy dataset\nCopy and paste the code below into R to create this example dataset\n\nSBP_wide &lt;- tibble(id = letters[1:4],\n                     sex = c(\"F\", \"M\", \"M\", \"F\"),\n                     SBP_v1 = c(130, 120, 130, 119),\n                     SBP_v2 = c(110, 116, 136, 106),\n                     SBP_v3 = c(112, 122, 138, 118))\nSBP_wide\n\n# A tibble: 4 × 5\n  id    sex   SBP_v1 SBP_v2 SBP_v3\n  &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 a     F        130    110    112\n2 b     M        120    116    122\n3 c     M        130    136    138\n4 d     F        119    106    118\n\n\n\nWhat do you think the data in the table are measures of?\nHow can we tell the data are wide?"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#wide-to-long-pivot_longer",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#wide-to-long-pivot_longer",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "Wide to long: pivot_longer()",
+    "text": "Wide to long: pivot_longer()\n\nSBP_wide\n\n# A tibble: 4 × 5\n  id    sex   SBP_v1 SBP_v2 SBP_v3\n  &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 a     F        130    110    112\n2 b     M        120    116    122\n3 c     M        130    136    138\n4 d     F        119    106    118\n\n\nFor pivot_longer we need to specify: - cols: which columns to make long - names_to: the name of the variable that will be created from the data stored in the column names - values_to: the name of the variable that will be created from the data stored in the cell values\n\nSBP_long &lt;- SBP_wide %&gt;% \n  pivot_longer(\n    cols=c(SBP_v1,SBP_v2,SBP_v3), \n    names_to = \"visit\", \n    values_to = \"SBP\")\nSBP_long\n\n# A tibble: 12 × 4\n   id    sex   visit    SBP\n   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1 a     F     SBP_v1   130\n 2 a     F     SBP_v2   110\n 3 a     F     SBP_v3   112\n 4 b     M     SBP_v1   120\n 5 b     M     SBP_v2   116\n 6 b     M     SBP_v3   122\n 7 c     M     SBP_v1   130\n 8 c     M     SBP_v2   136\n 9 c     M     SBP_v3   138\n10 d     F     SBP_v1   119\n11 d     F     SBP_v2   106\n12 d     F     SBP_v3   118"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#long-to-wide-pivot_wider",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#long-to-wide-pivot_wider",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "Long to wide: pivot_wider()",
+    "text": "Long to wide: pivot_wider()\n\nSBP_long\n\n# A tibble: 12 × 4\n   id    sex   visit    SBP\n   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1 a     F     SBP_v1   130\n 2 a     F     SBP_v2   110\n 3 a     F     SBP_v3   112\n 4 b     M     SBP_v1   120\n 5 b     M     SBP_v2   116\n 6 b     M     SBP_v3   122\n 7 c     M     SBP_v1   130\n 8 c     M     SBP_v2   136\n 9 c     M     SBP_v3   138\n10 d     F     SBP_v1   119\n11 d     F     SBP_v2   106\n12 d     F     SBP_v3   118\n\n\nFor pivot_wider we need to specify: - names_from: which column contains the names for the new columns - values_from: which column contains the values that will fill in the cell values\n\nSBP_wide2 &lt;- SBP_long %&gt;% \n  pivot_wider(names_from = \"visit\", \n              values_from = \"SBP\")\nSBP_wide2\n\n# A tibble: 4 × 5\n  id    sex   SBP_v1 SBP_v2 SBP_v3\n  &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 a     F        130    110    112\n2 b     M        120    116    122\n3 c     M        130    136    138\n4 d     F        119    106    118\n\n\n\nClean up visit column in the long data (1/3)\n\nSBP_long\n\n# A tibble: 12 × 4\n   id    sex   visit    SBP\n   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1 a     F     SBP_v1   130\n 2 a     F     SBP_v2   110\n 3 a     F     SBP_v3   112\n 4 b     M     SBP_v1   120\n 5 b     M     SBP_v2   116\n 6 b     M     SBP_v3   122\n 7 c     M     SBP_v1   130\n 8 c     M     SBP_v2   136\n 9 c     M     SBP_v3   138\n10 d     F     SBP_v1   119\n11 d     F     SBP_v2   106\n12 d     F     SBP_v3   118\n\n\nGoal: remove the string “SBP_” from the visit variable’s values.\nMethod #1: tidy the visit column after making the data long\nMethod #2: tidy the visit column while making the data long\n\n\nClean up visit column in the long data (2/3)\nMethod #1: tidy the visit column after making the data long\n\nSBP_long2 &lt;- SBP_long %&gt;% \n  mutate(\n    visit = str_replace(\n      visit,\n      pattern = \"SBP_\",\n      replacement = \"\")\n    ) \nSBP_long2\n\n# A tibble: 12 × 4\n   id    sex   visit   SBP\n   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;\n 1 a     F     v1      130\n 2 a     F     v2      110\n 3 a     F     v3      112\n 4 b     M     v1      120\n 5 b     M     v2      116\n 6 b     M     v3      122\n 7 c     M     v1      130\n 8 c     M     v2      136\n 9 c     M     v3      138\n10 d     F     v1      119\n11 d     F     v2      106\n12 d     F     v3      118\n\n\n\n\nNote that mutate is replacing the existing visit column with new values\nIf I wanted to keep the original visit column instead of overwriting it, I would call the new column something else, such as visit_clean\nWithin str_replace(), double quotes need to be used around the characters specifying 1) the string of text to replace (\"SBP_\") and 2) what to replace the text with, where \"\" is used for no text\nCould instead use str_remove(): mutate(visit = str_remove(visit,\"SBP_\"))\n\n\n\nClean up visit column in the long data (3/3)\nMethod #2: tidy the visit column while making the data long\n\nSBP_long3 &lt;- SBP_wide %&gt;% \n pivot_longer(cols = c(SBP_v1, SBP_v2,SBP_v3), \n              names_to = \"visit\", \n              names_prefix = \"SBP_\", #&lt;&lt;\n              values_to = \"SBP\")\nSBP_long3\n\n# A tibble: 12 × 4\n   id    sex   visit   SBP\n   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;\n 1 a     F     v1      130\n 2 a     F     v2      110\n 3 a     F     v3      112\n 4 b     M     v1      120\n 5 b     M     v2      116\n 6 b     M     v3      122\n 7 c     M     v1      130\n 8 c     M     v2      136\n 9 c     M     v3      138\n10 d     F     v1      119\n11 d     F     v2      106\n12 d     F     v3      118\n\n\nRemarks:\n\nNote the new parameter names_prefix specifying what the prefix is that needs to be stripped.\nMore complex pivot_longer() examples are shown at https://tidyr.tidyverse.org/articles/pivot.html\n(the end of the url is articles/pivot.html)"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#specifying-cols-in-pivot_longer",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#specifying-cols-in-pivot_longer",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "Specifying cols in pivot_longer",
+    "text": "Specifying cols in pivot_longer\nIn the example creating SBP_long, the columns to make the tibble longer by were explicitly listed using cols=c(SBP_v1,SBP_v2,SBP_v3).\n\nSBP_long &lt;- SBP_wide %&gt;% \n pivot_longer(cols = c(SBP_v1, SBP_v2,SBP_v3), #&lt;&lt;\n              names_to = \"visit\", \n              values_to = \"SBP\")\nSBP_long\n\n# A tibble: 12 × 4\n   id    sex   visit    SBP\n   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1 a     F     SBP_v1   130\n 2 a     F     SBP_v2   110\n 3 a     F     SBP_v3   112\n 4 b     M     SBP_v1   120\n 5 b     M     SBP_v2   116\n 6 b     M     SBP_v3   122\n 7 c     M     SBP_v1   130\n 8 c     M     SBP_v2   136\n 9 c     M     SBP_v3   138\n10 d     F     SBP_v1   119\n11 d     F     SBP_v2   106\n12 d     F     SBP_v3   118\n\n\nHowever, we can specify the columns in many different ways, just like with select():\n\ncols = c(SBP_v1:SBP_v3)\ncols = c(-id, -sex)\ncols = starts_wth(\"SBP\")\ncols = contains(\"SBP\")"
+  },
+  {
+    "objectID": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#notes-on-pivot_-commands",
+    "href": "slides_code/Day03_bsta511_code_part3_data_wrangling.html#notes-on-pivot_-commands",
+    "title": "Day 3 part 3 code: Data wrangling",
+    "section": "Notes on pivot_*() commands",
+    "text": "Notes on pivot_*() commands\n\npivot_longer() and pivot_wider() are relatively new commands\npreviously we used gather() and spread(),\n\nwhich have different function parameters and are less intuitive to use\n\nif you search for help making data longer or wider,\n\nyou might still see references for gather() and spread()\n\nsee my workshop slides for gather() and spread() usage\nsee https://tidyr.tidyverse.org/articles/pivot.html for more pivot examples"
   }
 ]
