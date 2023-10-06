@@ -193,8 +193,13 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#slides-1" id="toc-slides-1" class="nav-link" data-scroll-target="#slides-1">Slides</a></li>
   <li><a href="#class-discussion-1" id="toc-class-discussion-1" class="nav-link" data-scroll-target="#class-discussion-1">Class discussion</a></li>
+  <li><a href="#part-2-slides" id="toc-part-2-slides" class="nav-link" data-scroll-target="#part-2-slides">Part 2 slides</a></li>
+  <li><a href="#part-3-slides-data-wrangling" id="toc-part-3-slides-data-wrangling" class="nav-link" data-scroll-target="#part-3-slides-data-wrangling">Part 3 slides: Data Wrangling</a></li>
   </ul></li>
-  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework">Homework</a></li>
+  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework">Homework</a>
+  <ul class="collapse">
+  <li><a href="#why-is-.unnumbered-included-at-the-end-of-some-of-the-section-headers-on-the-hw" id="toc-why-is-.unnumbered-included-at-the-end-of-some-of-the-section-headers-on-the-hw" class="nav-link" data-scroll-target="#why-is-.unnumbered-included-at-the-end-of-some-of-the-section-headers-on-the-hw">Why is <code>{.unnumbered}</code> included at the end of some of the section headers on the HW?</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -309,14 +314,51 @@ Note
 <li>Is there evidence of ethnicity (Hispanic vs.&nbsp;White non-Hispanic) discrimination in DDS expenditures? Why or why not?</li>
 </ul>
 </section>
+<section id="part-2-slides" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-slides">Part 2 slides</h3>
+<p>The Day 3 Part 2 slides include extra EDA to examine further the question of whether there is evidence of ethnicity (Hispanic vs.&nbsp;White non-Hispanic) discrimination in DDS expenditures based on the data.</p>
+<ul>
+<li><a href="../slides/Day03_bsta511_part2.html">html</a></li>
+<li><a href="https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn">pdf</a></li>
+<li><a href="../slides_md/Day03_bsta511_md_part2.html">webpage</a></li>
+<li>Code file: <a href="https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_code_part2.qmd">qmd</a>, <a href="../slides_code/Day03_bsta511_code_part2.html">html</a></li>
+</ul>
+</section>
+<section id="part-3-slides-data-wrangling" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-slides-data-wrangling">Part 3 slides: Data Wrangling</h3>
+<p>The Day 3 Part 3 slides provide more data wrangling examples. Some of the functions covered were used in the Day 3 Part 2 slides.</p>
+<p><em>HW 2 makes reference to some of the functions in these slides.</em></p>
+<ul>
+<li><a href="https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn">pdf</a></li>
+<li>Code file: <a href="https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_part3_data_wrangling.qmd">qmd</a>, <a href="../slides_code/Day03_bsta511_part3_data_wrangling.html">html</a></li>
+</ul>
+</section>
 </section>
 <section id="homework" class="level2">
 <h2 class="anchored" data-anchor-id="homework">Homework</h2>
 <ul>
-<li><a href="../homework/HW_1_F23_bsta511.html">HW 1</a> due on Sat, 10/7</li>
+<li><a href="../homework/HW_1_F23_bsta511.html">HW 1</a> due on Sat, 10/7
+<ul>
+<li>Covers Days 1-2</li>
+</ul></li>
+<li><a href="../homework/HW_2_F23_bsta511.html">HW 2</a> due on Sat, 10/14
+<ul>
+<li>Covers Days 3-5</li>
+</ul></li>
+<li>HW 3 due on Sat, 10/21
+<ul>
+<li>Covers Days 6-7</li>
+</ul></li>
+</ul>
+<section id="why-is-.unnumbered-included-at-the-end-of-some-of-the-section-headers-on-the-hw" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-.unnumbered-included-at-the-end-of-some-of-the-section-headers-on-the-hw">Why is <code>{.unnumbered}</code> included at the end of some of the section headers on the HW?</h3>
+<ul>
+<li>I added the option for the sections to be numbered in the YAML (<code>number-sections: true</code>) so that the R exercises at the end of the file are numbered.</li>
+<li>However, the book exercises already have their own numbering, and so I added <code>{.unnumbered}</code> to the section headers of the book exercises so that they are not numbered twice.</li>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

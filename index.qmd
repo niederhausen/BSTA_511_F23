@@ -36,32 +36,36 @@ link-external-newwindow: true
 ::: g-col-3
 ### Instructor
 
-{{< iconify fluent person-24-filled size=24px >}} Dr. Meike Niederhausen
+{{< iconify fluent person-24-filled size=20px >}} Dr. Meike Niederhausen
 
-{{< iconify bi building-fill size=24px >}} Vanport 660E
+{{< iconify bi building-fill size=20px >}} Vanport 660E
 
-{{< iconify tabler mail-filled size=24px >}} [niederha\@ohsu.edu](mailto:niederha@ohsu.edu)
-:::
-
-::: g-col-3
-### Office Hours
-
-{{< iconify fa6-solid calendar-days size=24px >}} TBD
-
-{{< iconify icon-park-solid time size=24px >}} TBD
+{{< iconify tabler mail-filled size=20px >}} [niederha\@ohsu.edu](mailto:niederha@ohsu.edu)
 :::
 
 ::: g-col-3
 ### Course details
 
-{{< iconify fa6-solid calendar-days size=24px >}} Mondays, Wednesdays
-
-{{< iconify fa6-solid calendar size=24px >}} Sept 25 - Dec 4
-
-{{< iconify icon-park-solid time size=24px >}} 1:00 PM - 2:50 PM
-
-{{< iconify fa6-solid person-chalkboard size=24px >}} In-person
+{{< iconify fa6-solid calendar-days size=20px >}} Mondays, Wednesdays   
+{{< iconify fa6-solid calendar size=20px >}} Sept 25 - Dec 4  
+{{< iconify icon-park-solid time size=20px >}} 1:00 PM - 2:50 PM  
+{{< iconify fa6-solid person-chalkboard size=20px >}} In-person
 :::
+
+::: g-col-3
+### Office Hours
+
+{{< iconify fa6-solid calendar-days size=20px >}} __Wednesdays 2:50-3:50 pm__  
+{{< iconify fa6-solid person-chalkboard size=20px >}} In classroom
+
+{{< iconify fa6-solid calendar-days size=20px >}} __Fridays 3:30-4:30 pm__  
+<!-- <i class="fa-solid fa-globe"></i> -->
+{{< fa globe >}} Webex (link on [Sakai](https://sakai.ohsu.edu/portal/site/BSTA-511-1-AA-F23/))
+:::
+
+<!-- {{< iconify fa6-solid fluent-mdl2:join-online-meeting size=20px >}}  -->
+<!-- arcticons:webex -->
+
 
 ::: g-col-3
 ### Contacting me
@@ -77,6 +81,6 @@ E-mail or Slack is the best way to get in contact with me. I will try to respond
 :::
 
 ::: g-col-4
-[{{< iconify icomoon-free github size=24px >}} View the source on GitHub](https://github.com/niederhausen/BSTA_511_F23)
+[{{< iconify icomoon-free github size=20px >}} View the source on GitHub](https://github.com/niederhausen/BSTA_511_F23)
 :::
 :::

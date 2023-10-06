@@ -64,10 +64,36 @@ As I mentioned in the recording, the various options in more complex figures I u
 * Can distribution shape and sample size be determined from a boxplot? (see slide 30)
 * Is there evidence of ethnicity (Hispanic vs. White non-Hispanic) discrimination in DDS expenditures? Why or why not?
 
+### Part 2 slides
+
+The Day 3 Part 2 slides include extra EDA to examine further the question of whether there is evidence of ethnicity (Hispanic vs. White non-Hispanic) discrimination in DDS expenditures based on the data.
+
+* [html](../slides/Day03_bsta511_part2.qmd)
+* [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
+* [webpage](../slides_md/Day03_bsta511_md_part2.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_code_part2.qmd), [html](../slides_code/Day03_bsta511_code_part2.qmd)
+
+
+### Part 3 slides: Data Wrangling
+
+The Day 3 Part 3 slides provide more data wrangling examples. Some of the functions covered were used in the Day 3 Part 2 slides. 
+
+_HW 2 makes reference to some of the functions in these slides._
+
+* [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_part3_data_wrangling.qmd), [html](../slides_code/Day03_bsta511_part3_data_wrangling.qmd)
 
 ## Homework
 
 * [HW 1](../homework/HW_1_F23_bsta511.qmd) due on Sat, 10/7
+    * Covers Days 1-2
+* [HW 2](../homework/HW_2_F23_bsta511.qmd) due on Sat, 10/14
+    * Covers Days 3-5
+* HW 3 due on Sat, 10/21
+    * Covers Days 6-7
 
+### Why is `{.unnumbered}` included at the end of some of the section headers on the HW?
 
+* I added the option for the sections to be numbered in the YAML (`number-sections: true`) so that the R exercises at the end of the file are numbered. 
+* However, the book exercises already have their own numbering, and so I added `{.unnumbered}` to the section headers of the book exercises so that they are not numbered twice. 
 

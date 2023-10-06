@@ -28,6 +28,12 @@ Download the .qmd file for this assignment from [https://github.com/niederhausen
 
 ## Directions {.unnumbered}
 
+:::{.callout-important}
+* The non-R exercises (see sections `Book exercises` and `Non-book exercise`) may be completed not using Quarto. I especially recommend writing out by hand the chapter 2 probability questions, whether on paper or a tablet.
+* If you complete part of the assignment not using Quarto, you will be uploading 3 files on Sakai for HW 2: qmd & html files for your R work, and a pdf with your written work. 
+* If you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.
+:::
+
 * Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
 * For each question, make sure to include all code and resulting output in the html file to support your answers. 
 
@@ -54,21 +60,29 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 ## 2.6 Poverty and language {.unnumbered}
 
-*Part (b) asks you to create a Venn Diagram. You do not need to turn this part in. If you want an R challenge though, you can use the `VennDiagram` or other package to create one. See https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/ for some examples.* 
+*Part (b) asks you to create a Venn Diagram. If you are submitting this question in R, you do not need to turn this part in. If you want an R challenge though, you can use the `VennDiagram` or other package to create one. See [https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/](https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/) for some examples.* 
 
 ## 2.8 School absences {.unnumbered}
 
-*Part (b) asks you to create a Venn Diagram. You do not need to turn this part in. If you want an R challenge though, you can use the `VennDiagram` or other package to create one. See https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/ for some examples.* 
+*Part (b) asks you to create a Venn Diagram. If you are submitting this question in R, you do not need to turn this part in. If you want an R challenge though, you can use the `VennDiagram` or other package to create one. See [https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/](https://www.geeksforgeeks.org/how-to-create-a-venn-diagram-in-r/) for some examples.*  
 
 ## 2.10 Health coverage, frequencies {.unnumbered}
 
 
 ## 2.14 Health coverage, relative frequencies {.unnumbered}
 
+## 2.18 Predisposition for thrombosis {.unnumbered}
 
-# R exercises {.unnumbered}
 
-### Load all the packages you need below here. 
+## 2.24 Breast cancer and age {.unnumbered}
+
+# Non-book exercise
+
+Suppose a patient has abdominal pain and their clinician suspects that they either have disease 1, disease 2, or no disease, where the probability of having abdominal pain if they have disease 1 is 0.80, the probability of having abdominal pain if they have disease 2 is 0.90, and the probability of having abdominal pain if they have no disease is 0.01. Based on the patient’s medical history, the probability of having disease 1 is 0.009, having disease 2 is 0.001, and having no disease is 0.99. What is the probability the patient has disease 2 given that they have abdominal pain? 
+
+# R exercises 
+
+## Load all the packages you need below here. 
 
 
 # R1: NHANES
@@ -125,19 +139,22 @@ data("NHANES")
 Continue using the same NHANES data as for the previous problem. 
 
 
-__<font color="darkorange">IMPORTANT R tip</font>__
+:::{.callout-warning}
 
 * For most of the summary statistic base R commands (such as `mean()`, `sd()`, `median()`, etc.), you will get `NA` as the result if there are missing values. 
 * In order for R to compute the statistic using the values in the data set, you need to tell R to remove the missing values using the `na.rm = TRUE` option within the parentheses of the command: `mean(dataset$variablename, na.rm = TRUE)`. 
+:::
 
-## Use the `mutate()` command explained on Slide 23 of the Day 4 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.
+## Use the `mutate()` command explained on Slide 23 (pdf pg 22) of the Day 3 Part 3 notes to create a new column (variable) in the NHANES dataset for the heights in inches. Then find the mean and standard deviation of the heights in inches. Note that 1 centimeter is approximately 0.3937 inches.
 
-*Tips:*
+:::{.callout-tip}
+
+## Tips
 
 * Column names cannot start with a number or symbol
 * Names are case sensitive
 * It's easier to work with column names that don't have spaces in them. I usually use _ or . instead of spaces.
-
+:::
 
 ## What proportion of Americans at least 25 years of age are college graduates?
 *Hint: First create a new dataset that is restricted to Americans at least 25 years old.*
