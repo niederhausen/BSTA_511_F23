@@ -1,5 +1,5 @@
 ---
-title: "Day 4: Probability"
+title: "Day 5: Probability Part 2 - Bayes' Rule"
 subtitle: "BSTA 511/611, OHSU"
 author: "Meike Niederhausen, PhD"
 date: "10/11/2023"

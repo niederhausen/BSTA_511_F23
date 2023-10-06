@@ -1,5 +1,5 @@
 ---
-title: "Day 4: Probability"
+title: "Day 4: Probability Part 1"
 subtitle: "BSTA 511/611, OHSU"
 author: "Meike Niederhausen, PhD"
 date: "10/9/2023"
