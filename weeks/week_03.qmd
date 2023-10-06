@@ -30,7 +30,7 @@ editor_options:
 ### Slides
 
 * [html](../slides/Day04_bsta511.qmd)
-* [pdf](../slides/Day04_bsta511.pdf)
+* [pdf](../LaTeX_slides/Day04_bsta511.pdf)
 
 
 

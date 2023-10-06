@@ -25,7 +25,7 @@ editor_options:
 ---
 
 
-* [Download](../slides/Day04_bsta511.pdf) slides
+* [Download](../LaTeX_slides/Day04_bsta511.pdf) slides
 
 
 
