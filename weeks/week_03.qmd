@@ -36,23 +36,21 @@ editor_options:
 
 ### Class discussion
 
-
+* Example 2.6 on pgs 8-9 of slides
 
 ## Day05 
 
-* Conditional Probability and Bayes' Rule
+* Bayes' Rule
 
 
 ### Slides
 
 * [html](../slides/Day05_bsta511.qmd)
-* [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
-* [webpage](../slides_md/Day05_bsta511_md.qmd)
-* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day05_bsta511_code.qmd), [html](../slides_code/Day05_bsta511_code.qmd)
+* [pdf](../LaTeX_slides/Day05_bsta511.pdf)
 
 ### Class discussion
 
-
+* Example 2.10 on pg 6 of slides
 
 ## Homework
 

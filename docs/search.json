@@ -340,7 +340,7 @@
     "href": "class_slides.html",
     "title": "Class Slides",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n10/9/23\n\n\nDay 4: Probability\n\n\nWeek 3\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n10/9/23\n\n\nDay 4: Probability\n\n\nWeek 3\n\n\n\n\n10/11/23\n\n\nDay 4: Probability\n\n\nWeek 3\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides_md/Day01_bsta511_md.html",
@@ -3560,14 +3560,14 @@
     "href": "weeks/week_03.html#day04",
     "title": "Week 3",
     "section": "Day04",
-    "text": "Day04\n\nProbability\nSections 2.1 - 2.2.4\n\n\nSlides\n\nhtml\npdf\n\n\n\nClass discussion"
+    "text": "Day04\n\nProbability\nSections 2.1 - 2.2.4\n\n\nSlides\n\nhtml\npdf\n\n\n\nClass discussion\n\nExample 2.6 on pgs 8-9 of slides"
   },
   {
     "objectID": "weeks/week_03.html#day05",
     "href": "weeks/week_03.html#day05",
     "title": "Week 3",
     "section": "Day05",
-    "text": "Day05\n\nConditional Probability and Bayes’ Rule\n\n\nSlides\n\nhtml\npdf\nwebpage\nCode file: qmd, html\n\n\n\nClass discussion"
+    "text": "Day05\n\nBayes’ Rule\n\n\nSlides\n\nhtml\npdf\n\n\n\nClass discussion\n\nExample 2.10 on pg 6 of slides"
   },
   {
     "objectID": "weeks/week_03.html#homework",
@@ -3687,5 +3687,12 @@
     "title": "Day 3 part 3 code: Data wrangling",
     "section": "Notes on pivot_*() commands",
     "text": "Notes on pivot_*() commands\n\npivot_longer() and pivot_wider() are relatively new commands\npreviously we used gather() and spread(),\n\nwhich have different function parameters and are less intuitive to use\n\nif you search for help making data longer or wider,\n\nyou might still see references for gather() and spread()\n\nsee my workshop slides for gather() and spread() usage\nsee https://tidyr.tidyverse.org/articles/pivot.html for more pivot examples"
+  },
+  {
+    "objectID": "slides/Day05_bsta511.html",
+    "href": "slides/Day05_bsta511.html",
+    "title": "Day 4: Probability",
+    "section": "",
+    "text": "Download slides\n\nUnable to display PDF file. Download instead."
   }
 ]
