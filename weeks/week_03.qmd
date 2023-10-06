@@ -30,7 +30,7 @@ editor_options:
 ### Slides
 
 * [html](../slides/Day04_bsta511.qmd)
-* [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
+* [pdf](../slides/Day04_bsta511.pdf)
 
 
 
