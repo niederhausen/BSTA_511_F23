@@ -1,8 +1,8 @@
 ---
 title: "Week 2"
-description: "Intro to R & RStudio"
+description: "Data collection & EDA"
 date: "10/2/2023"
-date-modified: "9/29/2023"
+date-modified: "10/5/2023"
 categories: [""]
 format: 
   html:

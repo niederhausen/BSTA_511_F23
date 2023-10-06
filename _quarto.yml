@@ -13,6 +13,8 @@ website:
     right:
       - href: index.qmd
         text: Home
+      - href: schedule.qmd
+        text: Schedule
       - href: class_slides.qmd
         text: Slides
       - href: weeks.qmd
