@@ -36,6 +36,7 @@ editor_options:
 
 ### Class discussion
 
+* Example 2.3 on pg 4 of slides
 * Example 2.6 on pgs 8-9 of slides
 
 ## Day05 
