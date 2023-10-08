@@ -31,7 +31,7 @@ editor_options:
 
 * [html](../slides/Day04_bsta511.qmd)
 * [pdf](../LaTeX_slides/Day04_bsta511.pdf)
-* Slides with [notes](../slides_notes/Day04_bsta511_notes.pdf)
+* Slides with [notes](https://drive.google.com/file/d/1Iq9v4wEQOpeWDH5PGXpspoC5RBB9WBui/view?usp=sharing)
 
 
 ### Class discussion

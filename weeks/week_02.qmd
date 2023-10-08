@@ -22,7 +22,7 @@ editor_options:
 ### Slides
 
 * [html](../slides/Day02_bsta511.qmd)
-* [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
+* [pdf](https://drive.google.com/file/d/1I59wEibQe1sXi5urIkYEv-lW1NHU6zzC/view?usp=sharing)
 * [webpage](../slides_md/Day02_bsta511_md.qmd)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day02_bsta511_code.qmd), [html](../slides_code/Day02_bsta511_code.qmd)
 
@@ -55,7 +55,7 @@ As I mentioned in the recording, the various options in more complex figures I u
 ### Slides
 
 * [html](../slides/Day03_bsta511.qmd)
-* [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
+* [pdf](https://drive.google.com/file/d/1IdkNDrcdGWozHGMrk28B5PXjDx-_ylqo/view?usp=sharing)
 * [webpage](../slides_md/Day03_bsta511_md.qmd)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_code.qmd), [html](../slides_code/Day03_bsta511_code.qmd)
 
@@ -69,7 +69,7 @@ As I mentioned in the recording, the various options in more complex figures I u
 The Day 3 Part 2 slides include extra EDA to examine further the question of whether there is evidence of ethnicity (Hispanic vs. White non-Hispanic) discrimination in DDS expenditures based on the data.
 
 * [html](../slides/Day03_bsta511_part2.qmd)
-* [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
+* [pdf](https://drive.google.com/file/d/1IofJF8cXrEyfVokBOw0WOcQGuGfETvsu/view?usp=sharing)
 * [webpage](../slides_md/Day03_bsta511_md_part2.qmd)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_code_part2.qmd), [html](../slides_code/Day03_bsta511_code_part2.qmd)
 
@@ -80,7 +80,7 @@ The Day 3 Part 3 slides provide more data wrangling examples. Some of the functi
 
 _HW 2 makes reference to some of the functions in these slides._
 
-* [pdf](https://drive.google.com/drive/folders/1I5-e1Dbso2jBYm5oIbMV0FqdpM-0q8pn)
+* [pdf](https://drive.google.com/file/d/1IfubP0ei-5jTIVs33dyoEqjMIY-Q8qBe/view?usp=sharing)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day03_bsta511_code_part3_data_wrangling.qmd), [html](../slides_code/Day03_bsta511_code_part3_data_wrangling.qmd)
 
 ## Homework
