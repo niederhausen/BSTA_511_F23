@@ -13,15 +13,6 @@ editor_options:
 ---
 
 
-## Recordings
-
-* __Pre-recorded__ lessons are on Echo Cloud (aka echo 360 or echo video).
-    * These can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the `Echo Cloud` option in the left-side menu. 
-    * This will redirect you to an echo video page with a list of pre-recorded videos.
-* __In-class__ recording links are on Sakai. Navigate to _Course Materials_ -> _Schedule with links to in-class recordings_. Note that the password to the recordings is at the top of the page.  
-
-
-
 ## Day04 
 
 * Probability
@@ -66,3 +57,10 @@ editor_options:
 * I added the option for the sections to be numbered in the YAML (`number-sections: true`) so that the R exercises at the end of the file are numbered. 
 * However, the book exercises already have their own numbering, and so I added `{.unnumbered}` to the section headers of the book exercises so that they are not numbered twice. 
 
+
+## Recordings
+
+* __Pre-recorded__ lessons are on [Echo Cloud](https://echo360.org/section/4a58d645-5753-4e4f-b962-f8825f59baba/home) (aka echo 360 or echo video).
+    * These can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the `Echo Cloud` option in the left-side menu. 
+    * This will redirect you to an echo video page with a list of pre-recorded videos.
+* __In-class__ recording links are on [Sakai](https://sakai.ohsu.edu/portal/site/BSTA-511-1-AA-F23/tool/1f70eae0-e36a-4052-9247-69c6917e6b73/). Navigate to _Course Materials_ -> _Schedule with links to in-class recordings_. Note that the password to the recordings is at the top of the page.  
