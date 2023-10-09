@@ -39,7 +39,7 @@ editor_options:
 * Example 2.3 on pg 4 of slides
 * Example 2.6 on pgs 8-9 of slides
 
-## Day05 
+## Day05    
 
 * Bayes' Rule
 
@@ -48,7 +48,7 @@ editor_options:
 
 * [html](../slides/Day05_bsta511.qmd)
 * [pdf](../LaTeX_slides/Day05_bsta511.pdf)
-
+* Slides with [notes](https://drive.google.com/file/d/1Is2JXTYLhp6e6Ia4dBF9SunrVgZhRkXQ/view?usp=sharing)
 
 ### Class discussion
 
