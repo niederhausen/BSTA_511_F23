@@ -9,6 +9,7 @@ format:
     toc_float:
       collapsed: false
     theme: lumen
+    self-contained: true
 ---
 
 ```{r}
