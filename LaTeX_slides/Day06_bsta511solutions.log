@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.7)  13 OCT 2023 12:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.7)  13 OCT 2023 19:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -625,23 +625,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 471--476
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 508--512
+<img/VH_LinearCombo_E[5X]_error.pdf, id=83, 626.34pt x 613.29124pt>
+File: img/VH_LinearCombo_E[5X]_error.pdf Graphic file (type pdf)
+<use img/VH_LinearCombo_E[5X]_error.pdf>
+Package pdftex.def Info: img/VH_LinearCombo_E[5X]_error.pdf  used on input line
+ 502.
+(pdftex.def)             Requested size: 505.89pt x 495.36884pt.
+
+Overfull \hbox (36.13498pt too wide) in paragraph at lines 502--505
+ [][] 
+ []
+
+[8 <./img/VH_LinearCombo_E[5X]_error.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 523--527
 
  []
 
-[8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 698--699
+[9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 713--714
 
  []
 
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 724.
+(amsmath)                 on input line 739.
 
-[11] [12]
+[12] [13]
 LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineMonoT-
-TLF on input line 810.
+TLF on input line 825.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/libertine/T1LinuxLibertineMonoT-T
 LF.fd
@@ -651,32 +663,35 @@ File: T1LinuxLibertineMonoT-TLF.fd 2019/05/20 (autoinst) Font definitions for T
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/m/n' in size <14.4> 
 not available
 (Font)              Font shape `T1/LinuxLibertineMonoT-TLF/regular/n' tried ins
-tead on input line 810.
+tead on input line 825.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/regular/n' will be
-(Font)              scaled to size 14.4pt on input line 810.
- [13{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.e
+(Font)              scaled to size 14.4pt on input line 825.
+ [14{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.e
 nc}]
-Overfull \hbox (26.40437pt too wide) in paragraph at lines 858--858
+Overfull \hbox (26.40437pt too wide) in paragraph at lines 873--873
  []\T1/LinuxLibertineMonoT-TLF/regular/n/14.4 pbinom(4, size=10, prob = .25, lo
 wer.tail = FALSE)[] 
  []
 
 
-Overfull \hbox (17.18839pt too wide) in paragraph at lines 863--863
+Overfull \hbox (17.18839pt too wide) in paragraph at lines 878--878
  []\T1/LinuxLibertineMonoT-TLF/regular/n/14.4 pbinom(4, size=10, prob = .25, lo
 wer.tail = TRUE)[] 
  []
 
-[14] (./Day06_bsta511solutions.aux)
+[15] (./Day06_bsta511solutions.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Day06_bsta511solutions.out' has not changed.
 
 (rerunfilecheck)             Checksum: A88B9E69CFA83E96300E8A4900594B88;699.
  ) 
 Here is how much of TeX's memory you used:
- 12253 strings out of 476025
- 197940 string characters out of 5790018
+ 12263 strings out of 476025
+ 198255 string characters out of 5790018
  1861388 words of memory out of 5000000
- 32249 multiletter control sequences out of 15000+600000
+ 32256 multiletter control sequences out of 15000+600000
  597739 words of font info for 98 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  75i,9n,76p,394b,804s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -694,10 +709,10 @@ exlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist
 /fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
 e1/urw/palatino/uplr8a.pfb>
-Output written on Day06_bsta511solutions.pdf (14 pages, 353406 bytes).
+Output written on Day06_bsta511solutions.pdf (15 pages, 583855 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 177 compressed objects within 2 object streams
- 65 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 233 PDF objects out of 1000 (max. 8388607)
+ 182 compressed objects within 2 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 30 words of extra memory for PDF output out of 10000 (max. 10000000)
 

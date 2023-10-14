@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.7)  13 OCT 2023 12:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.7)  13 OCT 2023 19:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -622,24 +622,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 437--442
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 474--478
+<img/VH_LinearCombo_E[5X]_error.pdf, id=81, 626.34pt x 613.29124pt>
+File: img/VH_LinearCombo_E[5X]_error.pdf Graphic file (type pdf)
+<use img/VH_LinearCombo_E[5X]_error.pdf>
+Package pdftex.def Info: img/VH_LinearCombo_E[5X]_error.pdf  used on input line
+ 468.
+(pdftex.def)             Requested size: 505.89pt x 495.36884pt.
+
+Overfull \hbox (36.13498pt too wide) in paragraph at lines 468--471
+ [][] 
+ []
+
+[8 <./img/VH_LinearCombo_E[5X]_error.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 489--493
 
  []
 
-[8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 667--668
+[9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 682--683
 
  []
 
-[11] [12] [13] [14] (./Day06_bsta511.aux)
+[12] [13] [14] [15] (./Day06_bsta511.aux)
 Package rerunfilecheck Info: File `Day06_bsta511.out' has not changed.
 (rerunfilecheck)             Checksum: A88B9E69CFA83E96300E8A4900594B88;699.
  ) 
 Here is how much of TeX's memory you used:
- 12202 strings out of 476025
- 196193 string characters out of 5790018
+ 12212 strings out of 476025
+ 196508 string characters out of 5790018
  1859388 words of memory out of 5000000
- 32210 multiletter control sequences out of 15000+600000
+ 32217 multiletter control sequences out of 15000+600000
  595908 words of font info for 93 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  75i,9n,76p,385b,743s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -654,10 +666,10 @@ b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive
 /2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2023/texmf
 -dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Day06_bsta511.pdf (14 pages, 298059 bytes).
+Output written on Day06_bsta511.pdf (15 pages, 528739 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 65 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 214 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 30 words of extra memory for PDF output out of 10000 (max. 10000000)
 
