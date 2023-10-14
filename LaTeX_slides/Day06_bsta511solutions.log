@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.7)  13 OCT 2023 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.7)  14 OCT 2023 02:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -680,9 +680,6 @@ wer.tail = TRUE)[]
  []
 
 [15] (./Day06_bsta511solutions.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `Day06_bsta511solutions.out' has not changed.
 
 (rerunfilecheck)             Checksum: A88B9E69CFA83E96300E8A4900594B88;699.
@@ -709,7 +706,7 @@ exlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist
 /fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
 e1/urw/palatino/uplr8a.pfb>
-Output written on Day06_bsta511solutions.pdf (15 pages, 583855 bytes).
+Output written on Day06_bsta511solutions.pdf (15 pages, 583843 bytes).
 PDF statistics:
  233 PDF objects out of 1000 (max. 8388607)
  182 compressed objects within 2 object streams

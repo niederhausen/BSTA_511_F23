@@ -22,7 +22,7 @@ editor_options:
 
 * [html](../slides/Day06_bsta511.qmd)
 * [pdf](../LaTeX_slides/Day06_bsta511.pdf)
-* Slides with [notes]()
+* Slides with [notes](https://drive.google.com/file/d/1IyPAIWGBVqXGRh61OH-RQQVS2BAx1fRo/view?usp=sharing)
 
 
 ### Class discussion
