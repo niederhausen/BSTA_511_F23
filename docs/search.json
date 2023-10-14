@@ -11,7 +11,7 @@
     "href": "weeks.html",
     "title": "Weekly Pages",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n9/25/23\n\n\nWeek 1\n\n\nIntro to R & RStudio\n\n\n\n\n10/2/23\n\n\nWeek 2\n\n\nData collection & EDA\n\n\n\n\n10/9/23\n\n\nWeek 3\n\n\nProbability\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n9/25/23\n\n\nWeek 1\n\n\nIntro to R & RStudio\n\n\n\n\n10/2/23\n\n\nWeek 2\n\n\nData collection & EDA\n\n\n\n\n10/9/23\n\n\nWeek 3\n\n\nProbability\n\n\n\n\n10/16/23\n\n\nWeek 4\n\n\nRandom variables and probability distributions\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "weeks/week_01.html",
@@ -340,7 +340,7 @@
     "href": "class_slides.html",
     "title": "Class Slides",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n10/9/23\n\n\nDay 4: Probability Part 1\n\n\nWeek 3\n\n\n\n\n10/11/23\n\n\nDay 5: Probability Part 2 - Bayes’ Rule\n\n\nWeek 3\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n10/9/23\n\n\nDay 4: Probability Part 1\n\n\nWeek 3\n\n\n\n\n10/11/23\n\n\nDay 5: Probability Part 2 - Bayes’ Rule\n\n\nWeek 3\n\n\n\n\n10/16/23\n\n\nDay 7: Normal and Poisson distributions\n\n\nWeek 4\n\n\n\n\n10/16/23\n\n\nDay 6: Random variables and Binomial distribution\n\n\nWeek 4\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides_md/Day01_bsta511_md.html",
@@ -3722,5 +3722,54 @@
     "title": "Instructors",
     "section": "TA: Antara Vidyarthi",
     "text": "TA: Antara Vidyarthi\n\nEmail: vidyarth@ohsu.edu\n\n\nOffice Hours: TBD"
+  },
+  {
+    "objectID": "weeks/week_04.html",
+    "href": "weeks/week_04.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "Random variables: Section 3.1\nBinomial distribution: Section 3.2\n\n\n\n\nhtml\npdf\nSlides with notes\n\n\n\n\n\nExample 3.3 on pg 2 of slides\n\nWrite R code to calculate the expected value by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\nHint: start with x &lt;- 1:6.\n\nExample 3.10 on pg 5 of slides\n\nWrite R code to calculate the variance and standard deviation by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\n\nExample 3.11 on pg 6 of slides\nExample 3.17 on pg 9 of slides\n\nHint: If you are unsure how to define the random variable T, take a look at how we defined the random variable M in example 3.16 for the amount of money one gets from 3 rolls of a die.\n\nExample 3.22 parts (1) and (2) on pg 14 of slides"
+  },
+  {
+    "objectID": "weeks/week_04.html#day06",
+    "href": "weeks/week_04.html#day06",
+    "title": "Week 4",
+    "section": "",
+    "text": "Random variables: Section 3.1\nBinomial distribution: Section 3.2\n\n\n\n\nhtml\npdf\nSlides with notes\n\n\n\n\n\nExample 3.3 on pg 2 of slides\n\nWrite R code to calculate the expected value by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\nHint: start with x &lt;- 1:6.\n\nExample 3.10 on pg 5 of slides\n\nWrite R code to calculate the variance and standard deviation by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\n\nExample 3.11 on pg 6 of slides\nExample 3.17 on pg 9 of slides\n\nHint: If you are unsure how to define the random variable T, take a look at how we defined the random variable M in example 3.16 for the amount of money one gets from 3 rolls of a die.\n\nExample 3.22 parts (1) and (2) on pg 14 of slides"
+  },
+  {
+    "objectID": "weeks/week_04.html#day07",
+    "href": "weeks/week_04.html#day07",
+    "title": "Week 4",
+    "section": "Day07",
+    "text": "Day07\n\nNormal distribution: Section 3.3\nPoisson distribution: Section 3.4\n\n\nSlides\n\nhtml\npdf\nSlides with notes\n\n\n\nClass discussion\n\nExample 3.3 parts (1) and (3) on pg 7 of slides\nHW problems\n\ncoming soon!"
+  },
+  {
+    "objectID": "weeks/week_04.html#homework",
+    "href": "weeks/week_04.html#homework",
+    "title": "Week 4",
+    "section": "Homework",
+    "text": "Homework\n\nHW 3 due on Sat, 10/21\n\nCovers Days 6-7\n\n\n\nWhy is {.unnumbered} included at the end of some of the section headers on the HW?\n\nI added the option for the sections to be numbered in the YAML (number-sections: true) so that the R exercises at the end of the file are numbered.\nHowever, the book exercises already have their own numbering, and so I added {.unnumbered} to the section headers of the book exercises so that they are not numbered twice."
+  },
+  {
+    "objectID": "weeks/week_04.html#recordings",
+    "href": "weeks/week_04.html#recordings",
+    "title": "Week 4",
+    "section": "Recordings",
+    "text": "Recordings\n\nPre-recorded lessons are on Echo Cloud (aka echo 360 or echo video).\n\nThese can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the Echo Cloud option in the left-side menu.\nThis will redirect you to an echo video page with a list of pre-recorded videos.\n\nIn-class recording links are on Sakai. Navigate to Course Materials -&gt; Schedule with links to in-class recordings. Note that the password to the recordings is at the top of the page."
+  },
+  {
+    "objectID": "slides/Day06_bsta511.html",
+    "href": "slides/Day06_bsta511.html",
+    "title": "Day 6: Random variables and Binomial distribution",
+    "section": "",
+    "text": "Download slides\n\nUnable to display PDF file. Download instead."
+  },
+  {
+    "objectID": "slides/Day07_bsta511.html",
+    "href": "slides/Day07_bsta511.html",
+    "title": "Day 7: Normal and Poisson distributions",
+    "section": "",
+    "text": "Download slides\n\nUnable to display PDF file. Download instead."
   }
 ]
