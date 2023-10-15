@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.7)  13 OCT 2023 19:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.7)  14 OCT 2023 23:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -728,7 +728,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
-<img/6895997.pdf, id=41, 361.35pt x 180.675pt>
+<img/6895997.pdf, id=42, 361.35pt x 180.675pt>
 File: img/6895997.pdf Graphic file (type pdf)
 <use img/6895997.pdf>
 Package pdftex.def Info: img/6895997.pdf  used on input line 146.
@@ -778,7 +778,7 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/sl' will be
 (Font)              scaled to size 14.4pt on input line 213.
 [3{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc
 }]
-<img/Appendix_z_tables.pdf, id=70, 455.30101pt x 728.48161pt>
+<img/Appendix_z_tables.pdf, id=71, 455.30101pt x 728.48161pt>
 File: img/Appendix_z_tables.pdf Graphic file (type pdf)
 <use img/Appendix_z_tables.pdf>
 Package pdftex.def Info: img/Appendix_z_tables.pdf  used on input line 279.
@@ -787,7 +787,7 @@ File: img/Appendix_z_tables.pdf Graphic file (type pdf)
 <use img/Appendix_z_tables.pdf>
 Package pdftex.def Info: img/Appendix_z_tables.pdf  used on input line 279.
 (pdftex.def)             Requested size: 455.2999pt x 728.47984pt.
-<img/Appendix_z_tables.pdf, id=73, page=1, 455.30101pt x 728.48161pt>
+<img/Appendix_z_tables.pdf, id=74, page=1, 455.30101pt x 728.48161pt>
 File: img/Appendix_z_tables.pdf Graphic file (type pdf)
 <use img/Appendix_z_tables.pdf, page 1>
 Package pdftex.def Info: img/Appendix_z_tables.pdf , page1 used on input line 2
@@ -814,7 +814,7 @@ Package pdftex.def Info: img/Appendix_z_tables.pdf , page1 used on input line 2
 79.
 (pdftex.def)             Requested size: 497.17836pt x 795.4854pt.
  [4 <./img/Appendix_z_tables.pdf>]
-<img/Appendix_z_tables.pdf, id=103, page=2, 455.30101pt x 728.48161pt>
+<img/Appendix_z_tables.pdf, id=104, page=2, 455.30101pt x 728.48161pt>
 File: img/Appendix_z_tables.pdf Graphic file (type pdf)
 <use img/Appendix_z_tables.pdf, page 2>
 Package pdftex.def Info: img/Appendix_z_tables.pdf , page2 used on input line 2
@@ -835,7 +835,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
 
-<img/X_to_Z_transformation_Brase.png, id=112, 670.1838pt x 542.025pt>
+<img/X_to_Z_transformation_Brase.png, id=113, 670.1838pt x 542.025pt>
 File: img/X_to_Z_transformation_Brase.png Graphic file (type png)
 <use img/X_to_Z_transformation_Brase.png>
 Package pdftex.def Info: img/X_to_Z_transformation_Brase.png  used on input lin
@@ -874,7 +874,7 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 395.
 
-<img/fourBinomialModelsShowingApproxToNormal.pdf, id=129, 397.485pt x 296.10625
+<img/fourBinomialModelsShowingApproxToNormal.pdf, id=130, 397.485pt x 296.10625
 pt>
 File: img/fourBinomialModelsShowingApproxToNormal.pdf Graphic file (type pdf)
 <use img/fourBinomialModelsShowingApproxToNormal.pdf>
@@ -884,13 +884,13 @@ on input line 405.
 [8{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/lo
 cal/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc} <./img/fourBinomialMod
 elsShowingApproxToNormal.pdf>]
-<img/binom_n100_p25_crop.png, id=143, 825.0825pt x 421.575pt>
+<img/binom_n100_p25_crop.png, id=144, 825.0825pt x 421.575pt>
 File: img/binom_n100_p25_crop.png Graphic file (type png)
 <use img/binom_n100_p25_crop.png>
 Package pdftex.def Info: img/binom_n100_p25_crop.png  used on input line 431.
 (pdftex.def)             Requested size: 289.07999pt x 147.70784pt.
  [9 <./img/binom_n100_p25_crop.png>] [10]
-<img/Poisson_L5.png, id=159, 2160.07pt x 674.52pt>
+<img/Poisson_L5.png, id=160, 2160.07pt x 674.52pt>
 File: img/Poisson_L5.png Graphic file (type png)
 <use img/Poisson_L5.png>
 Package pdftex.def Info: img/Poisson_L5.png  used on input line 538.
@@ -900,40 +900,50 @@ Package pdftex.def Info: img/Poisson_L5.png  used on input line 538.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Day07_bsta511.out' has not changed.
-(rerunfilecheck)             Checksum: 52E2767851559ED493388CA4C8CF5593;709.
+
+Package rerunfilecheck Warning: File `Day07_bsta511.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Day07_bsta511.out':
+(rerunfilecheck)             Before: 0E5FAAAD8399E3206A3BAEA3378F8501;709
+(rerunfilecheck)             After:  B1070EAFDD8ABF2492289E1119EB5C21;709.
  ) 
 Here is how much of TeX's memory you used:
- 14779 strings out of 476025
- 246301 string characters out of 5790018
+ 14780 strings out of 476025
+ 246315 string characters out of 5790018
  1859388 words of memory out of 5000000
  34722 multiletter control sequences out of 15000+600000
  607370 words of font info for 125 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 75i,17n,77p,385b,749s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinBiolinumT
-.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinBiolin
-umTB.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinBi
-olinumTBO.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/
-LinBiolinumTI.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libert
-ine/LinLibertineMT.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mat
-hpazo/fplmbb.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts
-/jkpmi.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpmn
-8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpsy.pfb
-></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/loc
-al/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive
-/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2023/texm
-f-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2023/texmf-dist/font
-s/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
-lic/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8
-.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr
-/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texl
-ive/2023/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on Day07_bsta511.pdf (12 pages, 1041060 bytes).
+ 75i,17n,77p,385b,748s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{subsection.3.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.p
+fb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinBiolinum
+TB.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinBiol
+inumTBO.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/Li
+nBiolinumTI.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertin
+e/LinLibertineMT.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/mathp
+azo/fplmbb.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/j
+kpmi.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a
+.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpsy.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local
+/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2
+023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2023/texmf-
+dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/
+type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
+c/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.p
+fb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texliv
+e/2023/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on Day07_bsta511.pdf (12 pages, 1041091 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
+ 277 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
