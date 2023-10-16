@@ -3567,7 +3567,7 @@
     "href": "weeks/week_03.html#day05",
     "title": "Week 3",
     "section": "Day05",
-    "text": "Day05\n\nBayes’ Rule\n\n\nSlides\n\nhtml\npdf\nSlides with notes\n\n\n\nClass discussion\n\nExample 2.10 on pg 6 of slides"
+    "text": "Day05\n\nBayes’ Rule\n\n\nSlides\n\nhtml\npdf\nSlides with notes\n\n\n\nClass discussion\nClass discussion Google doc link\n\nExample 2.10 on pg 6 of slides\nAdded in class: Textbook exerices 2.18 (from HW)"
   },
   {
     "objectID": "weeks/week_03.html#homework",
@@ -3728,21 +3728,21 @@
     "href": "weeks/week_04.html",
     "title": "Week 4",
     "section": "",
-    "text": "Random variables: Section 3.1\nBinomial distribution: Section 3.2\n\n\n\n\nhtml\npdf\nSlides with notes\nCalculating probabilities in R code file: qmd, html\n\n\n\n\n\nExample 3.3 on pg 2 of slides\n\nWrite R code to calculate the expected value by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\nHint: start with x &lt;- 1:6.\n\nExample 3.10 on pg 5 of slides\n\nWrite R code to calculate the variance and standard deviation by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\n\nExample 3.11 on pg 6 of slides\nExample 3.17 on pg 9 of slides\n\nHint: If you are unsure how to define the random variable T, take a look at how we defined the random variable M in example 3.16 for the amount of money one gets from 3 rolls of a die.\n\nExample 3.22 parts (1) and (2) on pg 14 of slides"
+    "text": "Random variables: Section 3.1\nBinomial distribution: Section 3.2\n\n\n\n\nhtml\npdf\nSlides with notes\nCalculating probabilities in R code file: qmd, html\n\n\n\n\nClass discussion Google doc link\n\nExample 3.3 on pg 2 of slides\n\nWrite R code to calculate the expected value by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\nHint: start with x &lt;- 1:6.\n\nExample 3.10 on pg 5 of slides\n\nWrite R code to calculate the variance and standard deviation by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\n\nExample 3.11 on pg 6 of slides\nExample 3.17 on pg 10 of slides\n\nHint: If you are unsure how to define the random variable T, take a look at how we defined the random variable M in example 3.16 for the amount of money one gets from 3 rolls of a die.\n\nExample 3.22 parts (1) and (2) on pg 14 of slides"
   },
   {
     "objectID": "weeks/week_04.html#day06",
     "href": "weeks/week_04.html#day06",
     "title": "Week 4",
     "section": "",
-    "text": "Random variables: Section 3.1\nBinomial distribution: Section 3.2\n\n\n\n\nhtml\npdf\nSlides with notes\nCalculating probabilities in R code file: qmd, html\n\n\n\n\n\nExample 3.3 on pg 2 of slides\n\nWrite R code to calculate the expected value by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\nHint: start with x &lt;- 1:6.\n\nExample 3.10 on pg 5 of slides\n\nWrite R code to calculate the variance and standard deviation by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\n\nExample 3.11 on pg 6 of slides\nExample 3.17 on pg 9 of slides\n\nHint: If you are unsure how to define the random variable T, take a look at how we defined the random variable M in example 3.16 for the amount of money one gets from 3 rolls of a die.\n\nExample 3.22 parts (1) and (2) on pg 14 of slides"
+    "text": "Random variables: Section 3.1\nBinomial distribution: Section 3.2\n\n\n\n\nhtml\npdf\nSlides with notes\nCalculating probabilities in R code file: qmd, html\n\n\n\n\nClass discussion Google doc link\n\nExample 3.3 on pg 2 of slides\n\nWrite R code to calculate the expected value by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\nHint: start with x &lt;- 1:6.\n\nExample 3.10 on pg 5 of slides\n\nWrite R code to calculate the variance and standard deviation by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.\n\nExample 3.11 on pg 6 of slides\nExample 3.17 on pg 10 of slides\n\nHint: If you are unsure how to define the random variable T, take a look at how we defined the random variable M in example 3.16 for the amount of money one gets from 3 rolls of a die.\n\nExample 3.22 parts (1) and (2) on pg 14 of slides"
   },
   {
     "objectID": "weeks/week_04.html#day07",
     "href": "weeks/week_04.html#day07",
     "title": "Week 4",
     "section": "Day07",
-    "text": "Day07\n\nNormal distribution: Section 3.3\nPoisson distribution: Section 3.4\n\n\nSlides\n\nhtml\npdf\nSlides with notes\nCalculating probabilities in R code file (same file as listed above for Day 6): qmd, html\n\n\n\nClass discussion\n\nExample 3.3 parts (1) and (3) on pg 7 of slides\nExample 3.8 parts (2) and (3) on pg 11 of slides\nHW problems\n\n3.28, 3.32"
+    "text": "Day07\n\nNormal distribution: Section 3.3\nPoisson distribution: Section 3.4\n\n\nSlides\n\nhtml\npdf\nSlides with notes\nCalculating probabilities in R code file (same file as listed above for Day 6): qmd, html\n\n\n\nClass discussion\nClass discussion Google doc link\n\nExample 3.3 parts (1) and (3) on pg 7 of slides\nExample 3.8 parts (2) and (3) on pg 11 of slides\nHW problems\n\n3.28, 3.32"
   },
   {
     "objectID": "weeks/week_04.html#homework",
@@ -3981,5 +3981,47 @@
     "title": "HW 3: BSTA 511-611 F23",
     "section": "3.22 Triathlon times",
     "text": "3.22 Triathlon times"
+  },
+  {
+    "objectID": "slides_code/Day06_bsta511_code_class_discussion.html",
+    "href": "slides_code/Day06_bsta511_code_class_discussion.html",
+    "title": "Day 3 code: Data visualization",
+    "section": "",
+    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary) # NEW!!"
+  },
+  {
+    "objectID": "slides_code/Day06_bsta511_code_class_discussion.html#load-packages",
+    "href": "slides_code/Day06_bsta511_code_class_discussion.html#load-packages",
+    "title": "Day 3 code: Data visualization",
+    "section": "",
+    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary) # NEW!!"
+  },
+  {
+    "objectID": "slides_code/Day06_bsta511_code_class_discussion.html#what-is-the-probability-distribution-of-the-r.v.-x",
+    "href": "slides_code/Day06_bsta511_code_class_discussion.html#what-is-the-probability-distribution-of-the-r.v.-x",
+    "title": "Day 3 code: Data visualization",
+    "section": "What is the probability distribution of the r.v. \\(X\\)?",
+    "text": "What is the probability distribution of the r.v. \\(X\\)?\n\n(X &lt;- 1:6)\n\n[1] 1 2 3 4 5 6\n\n(pX &lt;- rep(1/6, 6))\n\n[1] 0.1666667 0.1666667 0.1666667 0.1666667 0.1666667 0.1666667\n\n# probability distribution\nc(X, pX) \n\n [1] 1.0000000 2.0000000 3.0000000 4.0000000 5.0000000 6.0000000 0.1666667\n [8] 0.1666667 0.1666667 0.1666667 0.1666667 0.1666667\n\n(sum.pX &lt;- sum(pX))   # should equal 1 since a probability distribution\n\n[1] 1"
+  },
+  {
+    "objectID": "slides_code/Day06_bsta511_code_class_discussion.html#what-is-the-expected-outcome-of-the-r.v.-x",
+    "href": "slides_code/Day06_bsta511_code_class_discussion.html#what-is-the-expected-outcome-of-the-r.v.-x",
+    "title": "Day 3 code: Data visualization",
+    "section": "What is the expected outcome of the r.v. \\(X\\)?",
+    "text": "What is the expected outcome of the r.v. \\(X\\)?\n\\(E[X]\\)\n\n#new vector to be used to calculate expected value of X: E[X] sum(Xi*pXi)\n(XpX &lt;- X*pX)\n\n[1] 0.1666667 0.3333333 0.5000000 0.6666667 0.8333333 1.0000000\n\n(muX &lt;- sum(XpX)) # mu = E(x)\n\n[1] 3.5"
+  },
+  {
+    "objectID": "slides_code/Day06_bsta511_code_class_discussion.html#now-suppose-the-6-sided-die-is-not-fair.-how-would-we-calculate-the-expected-outcome",
+    "href": "slides_code/Day06_bsta511_code_class_discussion.html#now-suppose-the-6-sided-die-is-not-fair.-how-would-we-calculate-the-expected-outcome",
+    "title": "Day 3 code: Data visualization",
+    "section": "Now suppose the 6-sided die is not fair. How would we calculate the expected outcome?",
+    "text": "Now suppose the 6-sided die is not fair. How would we calculate the expected outcome?\n\n(Y &lt;- 1:6)\n\n[1] 1 2 3 4 5 6\n\n(pY &lt;- c(0.10, 0.20, 0.05, 0.05, 0.25, 0.35))\n\n[1] 0.10 0.20 0.05 0.05 0.25 0.35\n\n# probability distribution\nc(Y, pY) \n\n [1] 1.00 2.00 3.00 4.00 5.00 6.00 0.10 0.20 0.05 0.05 0.25 0.35\n\n(sum.pY &lt;- sum(pY))   # should equal 1 since a probability distribution\n\n[1] 1\n\n\n\\(E[Y]\\)\n\n#new vector to be used to calculate expected value of Y: E[Y] sum(Yi*pYi)\n(YpY &lt;- Y*pY)\n\n[1] 0.10 0.40 0.15 0.20 1.25 2.10\n\n(muY &lt;- sum(YpY)) # mu = E(x)\n\n[1] 4.2"
+  },
+  {
+    "objectID": "slides_code/Day06_bsta511_code_class_discussion.html#find-the-variance-and-standard-deviation-of-x.",
+    "href": "slides_code/Day06_bsta511_code_class_discussion.html#find-the-variance-and-standard-deviation-of-x.",
+    "title": "Day 3 code: Data visualization",
+    "section": "Find the variance and standard deviation of \\(X\\).",
+    "text": "Find the variance and standard deviation of \\(X\\).\nStandard deviation: \\(SD(X)\\)\n\n# X & P(X) from above\n(X &lt;- 1:6)\n\n[1] 1 2 3 4 5 6\n\n(pX &lt;- rep(1/6, 6))\n\n[1] 0.1666667 0.1666667 0.1666667 0.1666667 0.1666667 0.1666667\n\n# first calculate the variance. V[X] = sum(Xi-mu)^2(P(X = xi))\n(dev &lt;- X-muX) # calc Xi-mu\n\n[1] -2.5 -1.5 -0.5  0.5  1.5  2.5\n\n(dev.sqr &lt;- dev^2) # calc (Xi-mu)^2\n\n[1] 6.25 2.25 0.25 0.25 2.25 6.25\n\n(dev.sqrP &lt;- dev.sqr*pX) # calc (Xi-mu)^2(P(X = xi))\n\n[1] 1.04166667 0.37500000 0.04166667 0.04166667 0.37500000 1.04166667\n\n(var &lt;- sum(dev.sqrP)) # sum(Xi-mu)^2(P(X = xi))\n\n[1] 2.916667\n\n(SD &lt;- sqrt(var)) # take sqrt to find sd\n\n[1] 1.707825"
   }
 ]

@@ -27,13 +27,15 @@ editor_options:
 
 ### Class discussion
 
+[Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
+
 * Example 3.3 on pg 2 of slides
     * Write R code to calculate the expected value by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.
     * Hint: start with `x <- 1:6`.
 * Example 3.10 on pg 5 of slides
     * Write R code to calculate the variance and standard deviation by defining vectors in R with the relevant values and then doing the appropriate calculations with the vectors.
 * Example 3.11 on pg 6 of slides
-* Example 3.17 on pg 9 of slides
+* Example 3.17 on pg 10 of slides
     * _Hint: If you are unsure how to define the random variable T, take a look at how we defined the random variable M in example 3.16 for the amount of money one gets from 3 rolls of a die._
 * Example 3.22 parts (1) and (2) on pg 14 of slides
 
@@ -52,6 +54,8 @@ editor_options:
 * Calculating probabilities in R code file (same file as listed above for Day 6): [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Probability_distributions_in_R_bsta511.qmd), [html](../slides_code/Probability_distributions_in_R_bsta511.qmd)
 
 ### Class discussion
+
+[Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
 
 * Example 3.3 parts (1) and (3) on pg 7 of slides
 * Example 3.8 parts (2) and (3) on pg 11 of slides

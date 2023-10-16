@@ -43,7 +43,11 @@ editor_options:
 
 ### Class discussion
 
+[Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
+
 * Example 2.10 on pg 6 of slides
+* Added in class: Textbook exerices 2.18 (from HW)
+
 
 ## Homework
 

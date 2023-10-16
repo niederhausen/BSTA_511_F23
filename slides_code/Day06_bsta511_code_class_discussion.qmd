@@ -1,0 +1,111 @@
+---
+title: "Day 3 code: Data visualization"
+subtitle: "BSTA 511/611, OHSU"
+author: "Meike Niederhausen, PhD"
+date: "10/4/2023"
+categories: ["Week 2"]
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+execute:
+  echo: true
+# editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE, fig.height=3, fig.width=5, message = F)
+```
+
+
+
+## Load packages
+
+* Packages need to be loaded _every time_ you restart R or render an Qmd file
+
+```{r}
+# run these every time you open Rstudio
+library(tidyverse)    
+library(oibiostat)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary) # NEW!!
+```
+
+
+# Example 3.3: Rolling a die
+
+Suppose you roll a fair die. Let the random variable (r.v.) $X$ be the outcome of the roll, i.e. the value of the face showing on the die. 
+
+## What is the probability distribution of the r.v. $X$?
+
+```{r}
+(X <- 1:6)
+(pX <- rep(1/6, 6))
+
+# probability distribution
+c(X, pX) 
+(sum.pX <- sum(pX))   # should equal 1 since a probability distribution
+```
+
+
+## What is the expected outcome of the r.v. $X$?
+
+$E[X]$
+
+```{r}
+#new vector to be used to calculate expected value of X: E[X] sum(Xi*pXi)
+(XpX <- X*pX)
+(muX <- sum(XpX)) # mu = E(x)
+```
+
+## Now suppose the 6-sided die is not fair. How would we calculate the expected outcome?
+
+```{r}
+(Y <- 1:6)
+(pY <- c(0.10, 0.20, 0.05, 0.05, 0.25, 0.35))
+
+# probability distribution
+c(Y, pY) 
+(sum.pY <- sum(pY))   # should equal 1 since a probability distribution
+```
+
+$E[Y]$
+
+```{r}
+#new vector to be used to calculate expected value of Y: E[Y] sum(Yi*pYi)
+(YpY <- Y*pY)
+(muY <- sum(YpY)) # mu = E(x)
+```
+
+
+# Example 3.10: Rolling a die
+
+Suppose you roll a fair die. Let the random variable (r.v.) $X$ be the outcome of the roll, i.e. the value of the face showing on the die. 
+
+## Find the variance and standard deviation of $X$.
+
+
+Standard deviation: $SD(X)$
+
+```{r}
+# X & P(X) from above
+(X <- 1:6)
+(pX <- rep(1/6, 6))
+
+# first calculate the variance. V[X] = sum(Xi-mu)^2(P(X = xi))
+(dev <- X-muX) # calc Xi-mu
+(dev.sqr <- dev^2) # calc (Xi-mu)^2
+(dev.sqrP <- dev.sqr*pX) # calc (Xi-mu)^2(P(X = xi))
+(var <- sum(dev.sqrP)) # sum(Xi-mu)^2(P(X = xi))
+(SD <- sqrt(var)) # take sqrt to find sd
+```
+
+
+
