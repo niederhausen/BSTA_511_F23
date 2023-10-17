@@ -11,7 +11,7 @@
     "href": "weeks.html",
     "title": "Weekly Pages",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n9/25/23\n\n\nWeek 1\n\n\nIntro to R & RStudio\n\n\n\n\n10/2/23\n\n\nWeek 2\n\n\nData collection & EDA\n\n\n\n\n10/9/23\n\n\nWeek 3\n\n\nProbability\n\n\n\n\n10/16/23\n\n\nWeek 4\n\n\nRandom variables and probability distributions\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n9/25/23\n\n\nWeek 1\n\n\nIntro to R & RStudio\n\n\n\n\n10/2/23\n\n\nWeek 2\n\n\nData collection & EDA\n\n\n\n\n10/9/23\n\n\nWeek 3\n\n\nProbability\n\n\n\n\n10/16/23\n\n\nWeek 4\n\n\nRandom variables and probability distributions\n\n\n\n\n10/23/23\n\n\nWeek 5\n\n\nVariability in estimates and Exam 1\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "weeks/week_01.html",
@@ -4023,5 +4023,40 @@
     "title": "Day 3 code: Data visualization",
     "section": "Find the variance and standard deviation of \\(X\\).",
     "text": "Find the variance and standard deviation of \\(X\\).\nStandard deviation: \\(SD(X)\\)\n\n# X & P(X) from above\n(X &lt;- 1:6)\n\n[1] 1 2 3 4 5 6\n\n(pX &lt;- rep(1/6, 6))\n\n[1] 0.1666667 0.1666667 0.1666667 0.1666667 0.1666667 0.1666667\n\n# first calculate the variance. V[X] = sum(Xi-mu)^2(P(X = xi))\n(dev &lt;- X-muX) # calc Xi-mu\n\n[1] -2.5 -1.5 -0.5  0.5  1.5  2.5\n\n(dev.sqr &lt;- dev^2) # calc (Xi-mu)^2\n\n[1] 6.25 2.25 0.25 0.25 2.25 6.25\n\n(dev.sqrP &lt;- dev.sqr*pX) # calc (Xi-mu)^2(P(X = xi))\n\n[1] 1.04166667 0.37500000 0.04166667 0.04166667 0.37500000 1.04166667\n\n(var &lt;- sum(dev.sqrP)) # sum(Xi-mu)^2(P(X = xi))\n\n[1] 2.916667\n\n(SD &lt;- sqrt(var)) # take sqrt to find sd\n\n[1] 1.707825"
+  },
+  {
+    "objectID": "weeks/week_05.html",
+    "href": "weeks/week_05.html",
+    "title": "Week 5",
+    "section": "",
+    "text": "Variability in estimates: Section 4.1\n\n\n\n\nhtml - coming soon!\npdf - coming soon!\nSlides with notes\n\n\n\n\nClass discussion Google doc link\n\nTBD"
+  },
+  {
+    "objectID": "weeks/week_05.html#day08",
+    "href": "weeks/week_05.html#day08",
+    "title": "Week 5",
+    "section": "",
+    "text": "Variability in estimates: Section 4.1\n\n\n\n\nhtml - coming soon!\npdf - coming soon!\nSlides with notes\n\n\n\n\nClass discussion Google doc link\n\nTBD"
+  },
+  {
+    "objectID": "weeks/week_05.html#exam-1-wednesday",
+    "href": "weeks/week_05.html#exam-1-wednesday",
+    "title": "Week 5",
+    "section": "Exam 1 (Wednesday)",
+    "text": "Exam 1 (Wednesday)\n\nMaterial will cover Days 1-6,\n\nwhich is approximately Chapters 1, 2, 3.1-3.2 from the textbook.\n\nThe exam will be in-class and handwritten. Bring a calculator.\nYou may bring one page of notes on an 8.5” x 11” sheet of paper.\n\nYou may use both sides.\nYou may type your notes.\nYou may not use screenshots of the notes or textbook\nYou will be turning in the page of notes with the exam, so please add your name to the sheet.\n\n\n\nPast exams\nThe linked to file includes questions from past BSTA 511 exams I wrote, which cover the same material as Exam 1 this quarter. (Requires Sakai login)"
+  },
+  {
+    "objectID": "weeks/week_05.html#homework",
+    "href": "weeks/week_05.html#homework",
+    "title": "Week 5",
+    "section": "Homework",
+    "text": "Homework\n\nHW 4 Coming soon! due on Sat, 10/28\n\nCovers Day 8"
+  },
+  {
+    "objectID": "weeks/week_05.html#recordings",
+    "href": "weeks/week_05.html#recordings",
+    "title": "Week 5",
+    "section": "Recordings",
+    "text": "Recordings\n\nPre-recorded lessons are on Echo Cloud (aka echo 360 or echo video).\n\nThese can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the Echo Cloud option in the left-side menu.\nThis will redirect you to an echo video page with a list of pre-recorded videos.\n\nIn-class recording links are on Sakai. Navigate to Course Materials -&gt; Schedule with links to in-class recordings. Note that the password to the recordings is at the top of the page."
   }
 ]
