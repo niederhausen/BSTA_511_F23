@@ -1131,7 +1131,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\nHW 2: BSTA 511-611 F23\n\n\n\n\n10/21/23\n\n\nHW 3: BSTA 511-611 F23\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\nHW 2: BSTA 511-611 F23\n\n\n\n\n10/21/23\n\n\nHW 3: BSTA 511-611 F23\n\n\n\n\n10/28/23\n\n\ndraft HW 4: BSTA 511-611 F23\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/Day02_bsta511.html#experiments-12",
@@ -3861,7 +3861,7 @@
     "href": "homework/HW_3_F23_bsta511.html",
     "title": "HW 3: BSTA 511-611 F23",
     "section": "",
-    "text": "Due 10/21/23\nDownload the .qmd file for this assignment from https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_3_F23_bsta511.qmd"
+    "text": "Updated 10/18/23: Moved questions on Day 7 material to HW 4.\nDue 10/21/23\nDownload the .qmd file for this assignment from https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_3_F23_bsta511.qmd"
   },
   {
     "objectID": "homework/HW_3_F23_bsta511.html#directions",
@@ -4058,5 +4058,75 @@
     "title": "Week 5",
     "section": "Recordings",
     "text": "Recordings\n\nPre-recorded lessons are on Echo Cloud (aka echo 360 or echo video).\n\nThese can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the Echo Cloud option in the left-side menu.\nThis will redirect you to an echo video page with a list of pre-recorded videos.\n\nIn-class recording links are on Sakai. Navigate to Course Materials -&gt; Schedule with links to in-class recordings. Note that the password to the recordings is at the top of the page."
+  },
+  {
+    "objectID": "homework/HW_4_F23_bsta511.html",
+    "href": "homework/HW_4_F23_bsta511.html",
+    "title": "draft HW 4: BSTA 511-611 F23",
+    "section": "",
+    "text": "DRAFT: Still need to add Day 8 material questions.\nDue 10/28/23\nDownload the .qmd file for this assignment from https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_3_F23_bsta511.qmd"
+  },
+  {
+    "objectID": "homework/HW_4_F23_bsta511.html#directions",
+    "href": "homework/HW_4_F23_bsta511.html#directions",
+    "title": "draft HW 4: BSTA 511-611 F23",
+    "section": "Directions",
+    "text": "Directions\n\n\n\n\n\n\nImportant\n\n\n\n\nThe non-R exercises (see sections Book exercises and Non-book exercise) may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.\n\nSome problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand.\n\nIf you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.\n\n\n\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
+  },
+  {
+    "objectID": "homework/HW_4_F23_bsta511.html#instructions-for-normal-probability-exercises",
+    "href": "homework/HW_4_F23_bsta511.html#instructions-for-normal-probability-exercises",
+    "title": "draft HW 4: BSTA 511-611 F23",
+    "section": "!!! Instructions for Normal probability exercises !!!",
+    "text": "!!! Instructions for Normal probability exercises !!!\n\n\n\n\n\n\nImportant\n\n\n\nAdditional Instructions - IMPORTANT!!!\n\nFor ALL normal distribution exercises:\n\nmake a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.\ncalculate probabilities using both\n\nz-table\nR"
+  },
+  {
+    "objectID": "homework/HW_4_F23_bsta511.html#area-under-the-curve-part-ii",
+    "href": "homework/HW_4_F23_bsta511.html#area-under-the-curve-part-ii",
+    "title": "draft HW 4: BSTA 511-611 F23",
+    "section": "3.20 Area under the curve, Part II",
+    "text": "3.20 Area under the curve, Part II"
+  },
+  {
+    "objectID": "homework/HW_4_F23_bsta511.html#triathlon-times",
+    "href": "homework/HW_4_F23_bsta511.html#triathlon-times",
+    "title": "draft HW 4: BSTA 511-611 F23",
+    "section": "3.22 Triathlon times",
+    "text": "3.22 Triathlon times"
+  },
+  {
+    "objectID": "homework/HW_4_F23_bsta511.html#arsenic-poisoning",
+    "href": "homework/HW_4_F23_bsta511.html#arsenic-poisoning",
+    "title": "draft HW 4: BSTA 511-611 F23",
+    "section": "3.28 Arsenic poisoning",
+    "text": "3.28 Arsenic poisoning"
+  },
+  {
+    "objectID": "homework/HW_4_F23_bsta511.html#find-the-sd",
+    "href": "homework/HW_4_F23_bsta511.html#find-the-sd",
+    "title": "draft HW 4: BSTA 511-611 F23",
+    "section": "3.30 Find the SD",
+    "text": "3.30 Find the SD"
+  },
+  {
+    "objectID": "homework/HW_4_F23_bsta511.html#chickenpox-part-iii",
+    "href": "homework/HW_4_F23_bsta511.html#chickenpox-part-iii",
+    "title": "draft HW 4: BSTA 511-611 F23",
+    "section": "3.32 Chickenpox, Part III",
+    "text": "3.32 Chickenpox, Part III"
+  },
+  {
+    "objectID": "homework/HW_4_F23_bsta511.html#stenographers-typos",
+    "href": "homework/HW_4_F23_bsta511.html#stenographers-typos",
+    "title": "draft HW 4: BSTA 511-611 F23",
+    "section": "3.38 Stenographer’s typos",
+    "text": "3.38 Stenographer’s typos"
+  },
+  {
+    "objectID": "homework/HW_4_F23_bsta511.html#osteosarcoma-in-nyc",
+    "href": "homework/HW_4_F23_bsta511.html#osteosarcoma-in-nyc",
+    "title": "draft HW 4: BSTA 511-611 F23",
+    "section": "3.40 Osteosarcoma in NYC",
+    "text": "3.40 Osteosarcoma in NYC"
   }
 ]

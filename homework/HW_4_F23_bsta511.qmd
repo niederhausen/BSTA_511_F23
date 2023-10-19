@@ -1,0 +1,96 @@
+---
+title: "draft HW 4: BSTA 511-611 F23"
+author: "Your name here - update this!!!!"
+date: "Due 10/28/23"
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    toc_float:
+      collapsed: false
+    number-sections: true
+    number-depth: 3
+    theme: lumen
+    self-contained: true
+    html-math-method: mathjax
+---
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+DRAFT: Still need to add Day 8 material questions.
+
+**Due 10/28/23**
+
+Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_3_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_3_F23_bsta511.qmd)
+
+
+## Directions {.unnumbered}
+
+:::{.callout-important}
+* The non-R exercises (see sections `Book exercises` and `Non-book exercise`) may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.
+    * _Some problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand._
+* If you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.
+:::
+
+* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
+* For each question, make sure to include all code and resulting output in the html file to support your answers. 
+
+:::{.callout-tip}
+It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
+:::
+
+
+
+# Book exercises {.unnumbered}
+
+## !!! Instructions for Normal probability exercises !!! {.unnumbered}
+
+:::{.callout-important}
+
+Additional Instructions - IMPORTANT!!!
+
+* For __ALL__ normal distribution exercises: 
+  * make a sketch of the normal distribution curve with the mean and 1 sd away from the mean clearly labeled, and the area representing probability of interest shaded in.
+  * calculate probabilities using **both**
+      * z-table
+      * R
+:::
+
+## 3.20 Area under the curve, Part II {.unnumbered}
+
+
+
+## 3.22 Triathlon times {.unnumbered}
+
+
+
+## 3.28 Arsenic poisoning {.unnumbered}
+
+
+
+## 3.30 Find the SD {.unnumbered}
+
+
+
+## 3.32 Chickenpox, Part III  {.unnumbered}
+
+
+
+## 3.38 Stenographer’s typos {.unnumbered}
+
+
+
+## 3.40 Osteosarcoma in NYC {.unnumbered}
+
+
+
+# Non-book exercise
+
+
+
+

@@ -22,6 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+Updated 10/18/23: Moved questions on Day 7 material to HW 4.
 
 **Due 10/21/23**
 
@@ -92,32 +93,6 @@ Additional Instructions - IMPORTANT!!!
       * z-table
       * R
 :::
-
-## 3.20 Area under the curve, Part II {.unnumbered}
-
-
-
-## 3.22 Triathlon times {.unnumbered}
-
-
-
-## 3.28 Arsenic poisoning {.unnumbered}
-
-
-
-## 3.30 Find the SD {.unnumbered}
-
-
-
-## 3.32 Chickenpox, Part III  {.unnumbered}
-
-
-
-## 3.38 Stenographer’s typos {.unnumbered}
-
-
-
-## 3.40 Osteosarcoma in NYC {.unnumbered}
 
 
 
