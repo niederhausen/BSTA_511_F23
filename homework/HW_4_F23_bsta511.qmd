@@ -32,6 +32,8 @@ Download the .qmd file for this assignment from [https://github.com/niederhausen
 :::{.callout-important}
 * The non-R exercises (see sections `Book exercises` and `Non-book exercise`) may be completed not using Quarto. I especially recommend writing out by hand the chapter 3 probability questions, whether on paper or a tablet.
     * _Some problems involve R code to calculate a probability, but the code is brief and you can write out the code and the answer by hand._
+* The R exercises are to be completed using Quarto.
+* If you complete part of the assignment not using Quarto, you will be uploading 3 files on Sakai for HW 4: qmd & html files for your R work, and a pdf with your written work. 
 * If you are completing the homework on paper, you can use a scanning app, such as Adobe Scan, to create a pdf of your assignment.
 :::
 
