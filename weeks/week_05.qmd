@@ -20,16 +20,22 @@ editor_options:
 
 ### Slides
 
-* [html](../slides/Day08_bsta511.qmd) - coming soon!
-* [pdf](../LaTeX_slides/Day08_bsta511.pdf) - coming soon!
-* Slides with [notes]()
+* [html](../slides/Day08_bsta511.qmd)
+* [pdf](https://drive.google.com/file/d/1JH2gdJ9IIyiYCGkziz4kJGWdVc-xCot1/view?usp=sharing)
+* Slides with [notes](https://drive.google.com/file/d/1JIc_UBW-B32FGhSJPU8aqnaoB6GcYfZO/view?usp=sharing)
+* [webpage](../slides_md/Day08_bsta511_md.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day08_bsta511_code.qmd), [html](../slides_code/Day08_bsta511_code.qmd)
 
 
 ### Class discussion
 
 [Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
 
-* TBD
+* Slide 21: match figures to distribution (Sampling high schoolers' weights)
+* Problems from Homework 4:
+    * R1: Youth weights (YRBSS)
+    * Book exercise: 4.2
+    * Non-book exercise: Ethan Allen
 
 
 ## Exam 1 (Wednesday)
@@ -50,8 +56,8 @@ The linked to file includes questions from [past BSTA 511 exams](https://sakai.o
 
 ## Homework
 
-* [HW 4 Coming soon!](../homework/HW_4_F23_bsta511.qmd) due on Sat, 10/28
-    * Covers Day 8
+* [HW 4](../homework/HW_4_F23_bsta511.qmd) due on Sat, 10/28
+    * Covers Days 7-8
 
 
 ## Recordings
