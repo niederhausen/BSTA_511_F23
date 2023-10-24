@@ -52,7 +52,8 @@ editor_options:
 
 ### Past exams
 
-The linked to file includes questions from [past BSTA 511 exams](https://sakai.ohsu.edu/access/content/group/BSTA-511-1-AA-F23/Exam_samples/Exam_1_samples_Ch1-Ch3.pdf) I wrote, which cover the same material as  Exam 1 this quarter. (Requires Sakai login)
+* The linked to file includes questions from [past BSTA 511 exams](https://sakai.ohsu.edu/access/content/group/BSTA-511-1-AA-F23/Exam_samples/Exam_1_samples_Ch1-Ch3.pdf) I wrote, which cover the same material as  Exam 1 this quarter. (Requires Sakai login)
+* [Answers](https://sakai.ohsu.edu/access/content/group/BSTA-511-1-AA-F23/Exam_samples/Exam_1_samples_Ch1-Ch3.2%20answers.pdf) to past BSTA 511 exams
 
 ## Homework
 
