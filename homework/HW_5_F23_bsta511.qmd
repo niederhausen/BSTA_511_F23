@@ -35,7 +35,7 @@ Download the .qmd file for this assignment from [https://github.com/niederhausen
 
 ### R & LaTeX code for probability distributions {.unnumbered}
 
-See the Qmd files with the code from class notes for LaTeX and R code.
+See the .qmd files with the code from class notes for LaTeX and R code.
 
 :::{.callout-tip}
 It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
