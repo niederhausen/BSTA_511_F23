@@ -139,7 +139,7 @@ __[Youth Risk Behavior Surveillance System](https://www.cdc.gov/healthyyouth/dat
 
 * Yearly survey conducted by the US Centers for Disease Control (CDC) 
 * "A set of surveys that track behaviors that can lead to poor health in students grades 9 through 12."[^1]
-* Dataset `yrbss` from `oibiostat` pacakge contains responses from _n_ = 13,572 participants in 2013 for a subset of the variables included in the complete survey data
+* Dataset `yrbss` from `oibiostat` pacakge contains responses from _n_ = 13,583 participants in 2013 for a subset of the variables included in the complete survey data
 
 [^1]: Youth Risk Behavior Surveillance System [https://www.cdc.gov/healthyyouth/data/yrbs/index.htm](https://www.cdc.gov/healthyyouth/data/yrbs/index.htm) (YRBSS)
 
@@ -728,7 +728,6 @@ gg_samp_dist_heights <- ggplot(data.frame(x = c(mu-4*sig, mu+4*sig)), aes(x = x)
 
 gg_samp_dist_heights   
 ```
-
 :::
 :::
 

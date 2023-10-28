@@ -1,0 +1,60 @@
+---
+title: "Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) and two-sample paired data mean (5.2)"
+subtitle: "BSTA 511/611"
+author: "Meike Niederhausen, PhD"
+institute: "OHSU-PSU School of Public Health"
+date: "11/1/2023"
+categories: ["Week 6"]
+format: 
+  revealjs:
+      incremental: false
+      scrollable: true
+      chalkboard: true
+      theme: [../sky_modified.scss]
+      width:  1100 #1200 # 1050 #default 1050; ipad 3:4, 1600
+      height: 825 #900 #800 #default 700; 788 for 3:4, 1200
+      slide-number: true
+      html-math-method: mathjax
+  # html:
+  #   link-external-newwindow: true
+  #   toc: true
+execute:
+  echo: true
+# editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: "setup" 
+#| include: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(janitor)
+library(rstatix)
+library(oibiostat) 
+library(knitr)
+library(moderndive) 
+library(gt)
+
+# terminal: for icons
+# quarto install extension quarto-ext/fontawesome
+
+# set ggplot theme for slides 
+theme_set(theme_bw(base_size = 22))
+# theme_update(text = element_text(size=16))  # set global text size for ggplots
+
+set.seed(456)
+```
+
+
+## Where are we?
+
+<br>
+<br>
+
+![](/img_slides/flowchart_511_v1.jpg){fig-align="center"}
+
+

@@ -1,0 +1,71 @@
+---
+title: "Week 6"
+description: "Random variables and probability distributions"
+date: "10/30/2023"
+date-modified: "today"
+categories: [""]
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+## Day09 
+
+* Confidence intervals for one mean (single-sample)
+* Student's t-distribution
+
+### Slides
+
+* [html](../slides/Day09_bsta511.qmd)
+* [pdf](../LaTeX_slides/Day09_bsta511.pdf)
+* Slides with [notes]()
+* [webpage](../slides_md/Day09_bsta511_md.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day09_bsta511_code.qmd), [html](../slides_code/Day09_bsta511_code.qmd)
+
+
+### Class discussion
+
+[Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
+
+* Slide 15: What percent CI was being simulated in this figure?
+* From HW 5
+    * coming soon!
+
+
+## Day10    
+
+* Hypothesis testing for one mean (single-sample)
+* Inference for two-sample paired data
+
+
+### Slides
+
+* [html](../slides/Day10_bsta511.qmd)
+* [pdf](../LaTeX_slides/Day10_bsta511.pdf)
+* Slides with [notes]()
+* [webpage](../slides_md/Day10_bsta511_md.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day10_bsta511_code.qmd), [html](../slides_code/Day10_bsta511_code.qmd)
+
+### Class discussion
+
+[Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
+
+* xxx
+
+## Homework
+
+* [HW 5](../homework/HW_5_F23_bsta511.qmd) due on Sat, 11/4
+    * Covers Days 9-10
+
+
+
+## Recordings
+
+* __Pre-recorded__ lessons are on [Echo Cloud](https://echo360.org/section/4a58d645-5753-4e4f-b962-f8825f59baba/home) (aka echo 360 or echo video).
+    * These can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the `Echo Cloud` option in the left-side menu. 
+    * This will redirect you to an echo video page with a list of pre-recorded videos.
+* __In-class__ recording links are on [Sakai](https://sakai.ohsu.edu/portal/site/BSTA-511-1-AA-F23/tool/1f70eae0-e36a-4052-9247-69c6917e6b73/). Navigate to _Course Materials_ -> _Schedule with links to in-class recordings_. Note that the password to the recordings is at the top of the page.  
