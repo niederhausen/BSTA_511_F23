@@ -233,10 +233,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#where-are-we" id="toc-where-are-we" class="nav-link active" data-scroll-target="#where-are-we">Where are we?</a></li>
-  <li><a href="#where-are-we-continuous-outcome-zoomed-in" id="toc-where-are-we-continuous-outcome-zoomed-in" class="nav-link" data-scroll-target="#where-are-we-continuous-outcome-zoomed-in">Where are we? Continuous outcome zoomed in</a></li>
-  <li><a href="#last-time---goals-for-today" id="toc-last-time---goals-for-today" class="nav-link" data-scroll-target="#last-time---goals-for-today">Last time -&gt; Goals for today</a></li>
+  <li><a href="#last-time---goals-for-today" id="toc-last-time---goals-for-today" class="nav-link active" data-scroll-target="#last-time---goals-for-today">Last time -&gt; Goals for today</a></li>
   <li><a href="#our-hypothetical-population-yrbss" id="toc-our-hypothetical-population-yrbss" class="nav-link" data-scroll-target="#our-hypothetical-population-yrbss">Our hypothetical population: YRBSS</a></li>
+  <li><a href="#where-are-we" id="toc-where-are-we" class="nav-link" data-scroll-target="#where-are-we">Where are we?</a></li>
+  <li><a href="#where-are-we-continuous-outcome-zoomed-in" id="toc-where-are-we-continuous-outcome-zoomed-in" class="nav-link" data-scroll-target="#where-are-we-continuous-outcome-zoomed-in">Where are we? Continuous outcome zoomed in</a></li>
+  <li><a href="#our-hypothetical-population-yrbss-1" id="toc-our-hypothetical-population-yrbss-1" class="nav-link" data-scroll-target="#our-hypothetical-population-yrbss-1">Our hypothetical population: YRBSS</a></li>
   <li><a href="#transform-height-weight-from-metric-to-to-standard" id="toc-transform-height-weight-from-metric-to-to-standard" class="nav-link" data-scroll-target="#transform-height-weight-from-metric-to-to-standard">Transform height &amp; weight from metric to to standard</a></li>
   <li><a href="#yrbss2-stats-for-height-in-feet" id="toc-yrbss2-stats-for-height-in-feet" class="nav-link" data-scroll-target="#yrbss2-stats-for-height-in-feet"><code>yrbss2</code>: stats for height in feet</a></li>
   <li><a href="#samples-of-size-n-30-from-yrbss2" id="toc-samples-of-size-n-30-from-yrbss2" class="nav-link" data-scroll-target="#samples-of-size-n-30-from-yrbss2">10,000 samples of size n = 30 from <code>yrbss2</code></a></li>
@@ -301,24 +302,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="where-are-we" class="level2">
-<h2 class="anchored" data-anchor-id="where-are-we">Where are we?</h2>
-<p><br> <br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img_slides/flowchart_511_continuous.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</section>
-<section id="where-are-we-continuous-outcome-zoomed-in" class="level2">
-<h2 class="anchored" data-anchor-id="where-are-we-continuous-outcome-zoomed-in">Where are we? Continuous outcome zoomed in</h2>
-<p><br> <br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img_slides/flowchart_only_continuous.jpg" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</section>
 <section id="last-time---goals-for-today" class="level2">
 <h2 class="anchored" data-anchor-id="last-time---goals-for-today">Last time -&gt; Goals for today</h2>
 <div class="columns">
@@ -394,20 +377,75 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
+<section id="where-are-we" class="level2">
+<h2 class="anchored" data-anchor-id="where-are-we">Where are we?</h2>
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img_slides/flowchart_511_continuous.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="where-are-we-continuous-outcome-zoomed-in" class="level2">
+<h2 class="anchored" data-anchor-id="where-are-we-continuous-outcome-zoomed-in">Where are we? Continuous outcome zoomed in</h2>
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img_slides/flowchart_only_continuous.jpg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="our-hypothetical-population-yrbss-1" class="level2">
+<h2 class="anchored" data-anchor-id="our-hypothetical-population-yrbss-1">Our hypothetical population: YRBSS</h2>
+<p><strong><a href="https://www.cdc.gov/healthyyouth/data/yrbs/index.htm">Youth Risk Behavior Surveillance System</a> (YRBSS)</strong></p>
+<ul>
+<li>Yearly survey conducted by the US Centers for Disease Control (CDC)</li>
+<li>“A set of surveys that track behaviors that can lead to poor health in students grades 9 through 12.”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li>Dataset <code>yrbss</code> from <code>oibiostat</code> pacakge contains responses from <em>n</em> = 13,583 participants in 2013 for a subset of the variables included in the complete survey data</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(oibiostat)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"yrbss"</span>)  <span class="co">#load the data</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ?yrbss</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(yrbss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 13583    13</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(yrbss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "age"                      "gender"                  
+ [3] "grade"                    "hispanic"                
+ [5] "race"                     "height"                  
+ [7] "weight"                   "helmet.12m"              
+ [9] "text.while.driving.30d"   "physically.active.7d"    
+[11] "hours.tv.per.school.day"  "strength.training.7d"    
+[13] "school.night.hours.sleep"</code></pre>
+</div>
+</div>
+</section>
 <section id="transform-height-weight-from-metric-to-to-standard" class="level2">
 <h2 class="anchored" data-anchor-id="transform-height-weight-from-metric-to-to-standard">Transform height &amp; weight from metric to to standard</h2>
 <p>Also, drop missing values and add a column of id values</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>yrbss2 <span class="ot">&lt;-</span> yrbss <span class="sc">%&gt;%</span>                 <span class="co"># save new dataset with new name</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(                           <span class="co"># add variables for </span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">height.ft =</span> <span class="fl">3.28084</span><span class="sc">*</span>height,     <span class="co">#     height in feet</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">weight.lb =</span> <span class="fl">2.20462</span><span class="sc">*</span>weight      <span class="co">#     weight in pounds</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(height.ft, weight.lb) <span class="sc">%&gt;%</span> <span class="co"># drop rows w/ missing height/weight values</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(.)) <span class="sc">%&gt;%</span>        <span class="co"># add id column</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(id, height.ft, weight.lb)  <span class="co"># restrict dataset to columns of interest</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(yrbss2)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>yrbss2 <span class="ot">&lt;-</span> yrbss <span class="sc">%&gt;%</span>                 <span class="co"># save new dataset with new name</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(                           <span class="co"># add variables for </span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">height.ft =</span> <span class="fl">3.28084</span><span class="sc">*</span>height,     <span class="co">#     height in feet</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">weight.lb =</span> <span class="fl">2.20462</span><span class="sc">*</span>weight      <span class="co">#     weight in pounds</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(height.ft, weight.lb) <span class="sc">%&gt;%</span> <span class="co"># drop rows w/ missing height/weight values</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(.)) <span class="sc">%&gt;%</span>        <span class="co"># add id column</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(id, height.ft, weight.lb)  <span class="co"># restrict dataset to columns of interest</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(yrbss2)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  id height.ft weight.lb
 1  1  5.675853  186.0038
@@ -417,12 +455,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 5  5  5.413386  289.9957
 6  6  6.167979  157.0130</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(yrbss2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(yrbss2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 12579     3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># number of rows deleted that had missing values for height and/or weight:</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(yrbss) <span class="sc">-</span> <span class="fu">nrow</span>(yrbss2) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># number of rows deleted that had missing values for height and/or weight:</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(yrbss) <span class="sc">-</span> <span class="fu">nrow</span>(yrbss2) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1004</code></pre>
 </div>
@@ -431,7 +469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="yrbss2-stats-for-height-in-feet" class="level2">
 <h2 class="anchored" data-anchor-id="yrbss2-stats-for-height-in-feet"><code>yrbss2</code>: stats for height in feet</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(yrbss2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(yrbss2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       id          height.ft       weight.lb     
  Min.   :    1   Min.   :4.167   Min.   : 66.01  
@@ -441,11 +479,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  3rd Qu.: 9434   3rd Qu.:5.840   3rd Qu.:167.99  
  Max.   :12579   Max.   :6.923   Max.   :399.01  </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>(mean_height.ft <span class="ot">&lt;-</span> <span class="fu">mean</span>(yrbss2<span class="sc">$</span>height.ft))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>(mean_height.ft <span class="ot">&lt;-</span> <span class="fu">mean</span>(yrbss2<span class="sc">$</span>height.ft))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5.548691</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>(sd_height.ft <span class="ot">&lt;-</span> <span class="fu">sd</span>(yrbss2<span class="sc">$</span>height.ft))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>(sd_height.ft <span class="ot">&lt;-</span> <span class="fu">sd</span>(yrbss2<span class="sc">$</span>height.ft))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.3434949</code></pre>
 </div>
@@ -458,11 +496,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Take 10,000 random samples of size<br>
 n = 30 from <code>yrbss2</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>samp_n30_rep10000 <span class="ot">&lt;-</span> yrbss2 <span class="sc">%&gt;%</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rep_sample_n</span>(<span class="at">size =</span> <span class="dv">30</span>, </span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">reps =</span> <span class="dv">10000</span>,</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>samp_n30_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>samp_n30_rep10000 <span class="ot">&lt;-</span> yrbss2 <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rep_sample_n</span>(<span class="at">size =</span> <span class="dv">30</span>, </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">reps =</span> <span class="dv">10000</span>,</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>samp_n30_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 300,000 × 4
 # Groups:   replicate [10,000]
@@ -484,13 +522,13 @@ n = 30 from <code>yrbss2</code>:</p>
 </div><div class="column" style="width:50;">
 <p>Calculate the mean for each of the 10,000 random samples:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>means_hght_samp_n30_rep10000 <span class="ot">&lt;-</span> </span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  samp_n30_rep10000 <span class="sc">%&gt;%</span> </span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(replicate) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_height =</span> </span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>            <span class="fu">mean</span>(height.ft))</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>means_hght_samp_n30_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>means_hght_samp_n30_rep10000 <span class="ot">&lt;-</span> </span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  samp_n30_rep10000 <span class="sc">%&gt;%</span> </span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(replicate) <span class="sc">%&gt;%</span> </span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_height =</span> </span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>            <span class="fu">mean</span>(height.ft))</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>means_hght_samp_n30_rep10000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10,000 × 2
    replicate mean_height
@@ -517,23 +555,23 @@ n = 30 from <code>yrbss2</code>:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  means_hght_samp_n30_rep10000, </span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_height)) <span class="sc">+</span> </span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulated </span><span class="sc">\n</span><span class="st"> sampling distribution"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  means_hght_samp_n30_rep10000, </span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_height)) <span class="sc">+</span> </span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulated </span><span class="sc">\n</span><span class="st"> sampling distribution"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="Day09_bsta511_md_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="480"></p>
+<p><img src="Day09_bsta511_md_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="480"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <p>CLT tells us that we can model the sampling distribution of mean heights using a normal distribution.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="Day09_bsta511_md_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="576"></p>
+<p><img src="Day09_bsta511_md_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 </div>
@@ -543,7 +581,7 @@ n = 30 from <code>yrbss2</code>:</p>
 <h2 class="anchored" data-anchor-id="given-barx-what-are-plausible-values-of-mu">Given <span class="math inline">\(\bar{x}\)</span>, what are plausible values of <span class="math inline">\(\mu\)</span>?</h2>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="Day09_bsta511_md_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="1152"></p>
+<p><img src="Day09_bsta511_md_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="1152"></p>
 </div>
 </div>
 </section>
@@ -575,11 +613,11 @@ n = 30 from <code>yrbss2</code>:</p>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(.<span class="dv">975</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(.<span class="dv">975</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.959964</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(.<span class="dv">995</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(.<span class="dv">995</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.575829</code></pre>
 </div>
@@ -745,19 +783,19 @@ when using <span class="math inline">\(s\)</span> instead of <span class="math i
 </ul>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">9</span>)  <span class="co"># df = n-1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">9</span>)  <span class="co"># df = n-1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.262157</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">49</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">49</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.009575</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">99</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">99</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.984217</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">999</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(.<span class="dv">975</span>, <span class="at">df=</span><span class="dv">999</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.962341</code></pre>
 </div>
@@ -839,6 +877,7 @@ when using <span class="math inline">\(s\)</span> instead of <span class="math i
 
 <ol>
 <li id="fn1"><p>Youth Risk Behavior Surveillance System <a href="https://www.cdc.gov/healthyyouth/data/yrbs/index.htm">https://www.cdc.gov/healthyyouth/data/yrbs/index.htm</a> (YRBSS)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Youth Risk Behavior Surveillance System <a href="https://www.cdc.gov/healthyyouth/data/yrbs/index.htm">https://www.cdc.gov/healthyyouth/data/yrbs/index.htm</a> (YRBSS)<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

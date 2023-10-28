@@ -49,21 +49,6 @@ set.seed(456)
 ```
 
 
-
-## Where are we?
-
-<br>
-<br>
-
-![](/img_slides/flowchart_511_continuous.png){fig-align="center"}
-
-## Where are we? Continuous outcome zoomed in
-
-<br>
-<br>
-
-![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
-
 ## Last time -> Goals for today
 
 ::: columns
@@ -95,6 +80,53 @@ What are __Confidence Intervals__?
 * Student's __t-distribution__
 :::
 :::
+
+
+## Our hypothetical population: YRBSS
+
+__[Youth Risk Behavior Surveillance System](https://www.cdc.gov/healthyyouth/data/yrbs/index.htm) (YRBSS)__
+
+* Yearly survey conducted by the US Centers for Disease Control (CDC) 
+* "A set of surveys that track behaviors that can lead to poor health in students grades 9 through 12."[^1]
+* Dataset `yrbss` from `oibiostat` pacakge contains responses from _n_ = 13,583 participants in 2013 for a subset of the variables included in the complete survey data
+
+[^1]: Youth Risk Behavior Surveillance System [https://www.cdc.gov/healthyyouth/data/yrbs/index.htm](https://www.cdc.gov/healthyyouth/data/yrbs/index.htm) (YRBSS)
+
+::: columns
+::: {.column width="50%"}
+```{r}
+library(oibiostat)
+data("yrbss")  #load the data
+# ?yrbss
+```
+:::
+::: {.column width="50%"}
+
+```{r}
+dim(yrbss)
+```
+:::
+:::
+```{r}
+names(yrbss)
+```
+
+
+
+## Where are we?
+
+<br>
+<br>
+
+![](/img_slides/flowchart_511_continuous.png){fig-align="center"}
+
+## Where are we? Continuous outcome zoomed in
+
+<br>
+<br>
+
+![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
+
 
 
 ## Our hypothetical population: YRBSS

@@ -48,22 +48,6 @@ theme_set(theme_bw(base_size = 22))
 set.seed(456)
 ```
 
-
-
-## Where are we?
-
-<br>
-<br>
-
-![](/img_slides/flowchart_511_continuous.png){fig-align="center"}
-
-## Where are we? Continuous outcome zoomed in
-
-<br>
-<br>
-
-![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
-
 ## Last time -> Goals for today
 
 ::: columns
@@ -126,6 +110,21 @@ dim(yrbss)
 names(yrbss)
 ```
 
+
+
+## Where are we?
+
+<br>
+<br>
+
+![](/img_slides/flowchart_511_continuous.png){fig-align="center"}
+
+## Where are we? Continuous outcome zoomed in
+
+<br>
+<br>
+
+![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
 
 ## Transform height & weight from metric to to standard
 

@@ -5806,8 +5806,8 @@
     "objectID": "slides_md/Day09_bsta511_md.html#last-time---goals-for-today",
     "href": "slides_md/Day09_bsta511_md.html#last-time---goals-for-today",
     "title": "Day 9: Confidence intervals (4.2)",
-    "section": "Last time -> Goals for today",
-    "text": "Last time -&gt; Goals for today\n\n\n\nDay 8: Section 4.1\n\nSampling from a population\n\npopulation parameters vs. point estimates\nsampling variation\n\n\n\n\nSampling distribution of a mean\nCentral Limit Theorem\n\n\n\n\n\n\nDay 9: Section 4.2\nWhat are Confidence Intervals?\n\nHow to calculate CI’s?\nHow to interpret & NOT interpret CI’s?\n\n\n\nWhat if we don’t know \\(\\sigma\\)?\nStudent’s t-distribution"
+    "section": "",
+    "text": "Sampling from a population\n\npopulation parameters vs. point estimates\nsampling variation\n\n\n\n\nSampling distribution of a mean\nCentral Limit Theorem\n\n\n\n\n\n\n\nWhat are Confidence Intervals?\n\nHow to calculate CI’s?\nHow to interpret & NOT interpret CI’s?\n\n\n\nWhat if we don’t know \\(\\sigma\\)?\nStudent’s t-distribution"
   },
   {
     "objectID": "slides_md/Day09_bsta511_md.html#our-hypothetical-population-yrbss",
@@ -5947,6 +5947,27 @@
     "href": "slides_md/Day09_bsta511_md.html#footnotes",
     "title": "Day 9: Confidence intervals (4.2)",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nYouth Risk Behavior Surveillance System https://www.cdc.gov/healthyyouth/data/yrbs/index.htm (YRBSS)↩︎"
+    "text": "Footnotes\n\n\nYouth Risk Behavior Surveillance System https://www.cdc.gov/healthyyouth/data/yrbs/index.htm (YRBSS)↩︎\nYouth Risk Behavior Surveillance System https://www.cdc.gov/healthyyouth/data/yrbs/index.htm (YRBSS)↩︎"
+  },
+  {
+    "objectID": "slides_md/Day09_bsta511_md.html",
+    "href": "slides_md/Day09_bsta511_md.html",
+    "title": "Day 9: Confidence intervals (4.2)",
+    "section": "",
+    "text": "Sampling from a population\n\npopulation parameters vs. point estimates\nsampling variation\n\n\n\n\nSampling distribution of a mean\nCentral Limit Theorem\n\n\n\n\n\n\n\nWhat are Confidence Intervals?\n\nHow to calculate CI’s?\nHow to interpret & NOT interpret CI’s?\n\n\n\nWhat if we don’t know \\(\\sigma\\)?\nStudent’s t-distribution"
+  },
+  {
+    "objectID": "slides_md/Day09_bsta511_md.html#where-are-we",
+    "href": "slides_md/Day09_bsta511_md.html#where-are-we",
+    "title": "Day 9: Confidence intervals (4.2)",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "slides_md/Day09_bsta511_md.html#our-hypothetical-population-yrbss-1",
+    "href": "slides_md/Day09_bsta511_md.html#our-hypothetical-population-yrbss-1",
+    "title": "Day 9: Confidence intervals (4.2)",
+    "section": "Our hypothetical population: YRBSS",
+    "text": "Our hypothetical population: YRBSS\nYouth Risk Behavior Surveillance System (YRBSS)\n\nYearly survey conducted by the US Centers for Disease Control (CDC)\n“A set of surveys that track behaviors that can lead to poor health in students grades 9 through 12.”2\nDataset yrbss from oibiostat pacakge contains responses from n = 13,583 participants in 2013 for a subset of the variables included in the complete survey data\n\n\n\n\nlibrary(oibiostat)\ndata(\"yrbss\")  #load the data\n# ?yrbss\n\n\n\ndim(yrbss)\n\n[1] 13583    13\n\n\n\n\n\nnames(yrbss)\n\n [1] \"age\"                      \"gender\"                  \n [3] \"grade\"                    \"hispanic\"                \n [5] \"race\"                     \"height\"                  \n [7] \"weight\"                   \"helmet.12m\"              \n [9] \"text.while.driving.30d\"   \"physically.active.7d\"    \n[11] \"hours.tv.per.school.day\"  \"strength.training.7d\"    \n[13] \"school.night.hours.sleep\""
   }
 ]
