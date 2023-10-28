@@ -21,7 +21,7 @@ editor_options:
 ### Slides
 
 * [html](../slides/Day09_bsta511.qmd)
-* [pdf](../LaTeX_slides/Day09_bsta511.pdf)
+* [pdf](https://drive.google.com/file/d/1JTvblZDbEDiS3loc1BeM7QJaxz7dgpQl/view?usp=sharing)
 * Slides with [notes]()
 * [webpage](../slides_md/Day09_bsta511_md.qmd)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day09_bsta511_code.qmd), [html](../slides_code/Day09_bsta511_code.qmd)
@@ -45,7 +45,7 @@ editor_options:
 ### Slides
 
 * [html](../slides/Day10_bsta511.qmd)
-* [pdf](../LaTeX_slides/Day10_bsta511.pdf)
+* [pdf]()
 * Slides with [notes]()
 * [webpage](../slides_md/Day10_bsta511_md.qmd)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day10_bsta511_code.qmd), [html](../slides_code/Day10_bsta511_code.qmd)
