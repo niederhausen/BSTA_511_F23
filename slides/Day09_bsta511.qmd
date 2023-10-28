@@ -81,6 +81,21 @@ What are __Confidence Intervals__?
 :::
 
 
+
+## Where are we?
+
+<br>
+<br>
+
+![](/img_slides/flowchart_511_continuous.png){fig-align="center"}
+
+## Where are we? Continuous outcome zoomed in
+
+<br>
+<br>
+
+![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
+
 ## Our hypothetical population: YRBSS
 
 __[Youth Risk Behavior Surveillance System](https://www.cdc.gov/healthyyouth/data/yrbs/index.htm) (YRBSS)__
@@ -110,21 +125,6 @@ dim(yrbss)
 names(yrbss)
 ```
 
-
-
-## Where are we?
-
-<br>
-<br>
-
-![](/img_slides/flowchart_511_continuous.png){fig-align="center"}
-
-## Where are we? Continuous outcome zoomed in
-
-<br>
-<br>
-
-![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
 
 ## Transform height & weight from metric to to standard
 
