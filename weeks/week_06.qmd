@@ -1,6 +1,6 @@
 ---
 title: "Week 6"
-description: "Random variables and probability distributions"
+description: "Confidence intervals and hypothesis tests for one mean"
 date: "10/30/2023"
 date-modified: "today"
 categories: [""]
