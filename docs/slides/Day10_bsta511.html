@@ -422,6 +422,7 @@ Meike Niederhausen, PhD
 <img data-src="../img_slides/flowchart_only_continuous.jpg" class="r-stretch quarto-figure-center"></section>
 <section id="goals-for-today-sections-4.3-5.1" class="slide level2">
 <h2>Goals for today (Sections 4.3 &amp; 5.1)</h2>
+<h3 id="hypothesis-testing-for-one-sample-mean-4.3-5.1">Hypothesis testing for one-sample mean (4.3, 5.1)</h3>
 <ul>
 <li><p>Introduce hypothesis testing using the case of analyzing a mean from one sample (group)</p></li>
 <li><p>Go through the steps of a hypothesis test:</p>
@@ -432,10 +433,21 @@ Meike Niederhausen, PhD
 <li>p-value</li>
 <li>conclusion</li>
 </ol></li>
-<li><p>Run a t-test in R</p></li>
+<li><p>Run a t-test in R</p>
+<ul>
+<li><code>tidy()</code> the test output using <code>broom</code> package</li>
+</ul></li>
 </ul>
+<h3 id="inference-for-two-sample-paired-data-mean-5.2">Inference for two-sample paired data mean (5.2)</h3>
+<ul>
+<li>Confidence intervals (CIs) and hypothesis testing for the mean of two-sample dependent/paired data</li>
+<li>Exploratory data analysis (EDA)</li>
+<li>Inference in R</li>
+</ul>
+<h3 id="one-sdided-cis">One-sdided CIs</h3>
+<h3 id="cis-vs.-hypothesis-tests-4.3.3">CIs vs.&nbsp;hypothesis tests (4.3.3)</h3>
 </section>
-<section id="is-98.6f-really-the-mean-healthy-body-temperature" class="slide level2">
+<section id="is-98.6f-really-the-mean-healthy-body-temperature" class="slide level2 smaller">
 <h2>Is 98.6°F really the mean “healthy” body temperature?</h2>
 <ul>
 <li><strong>Where did the 98.6°F value come from?</strong>
@@ -450,7 +462,13 @@ Meike Niederhausen, PhD
 <li>In January 2020, a group from Stanford published <em><a href="https://elifesciences.org/articles/49555">Decreasing human body temperature in the United States since the Industrial Revolution</a></em> in eLIFE.
 <ul>
 <li>“determined that mean body temperature in men and women, after adjusting for age, height, weight and, in some models date and time of day, has decreased monotonically by 0.03°C (0.05°F) per birth decade”</li>
+<li>September 2023 update: <em><a href="https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2809098">Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm</a></em> in JAMA Internal Medicine
+<ul>
+<li>Average is 36.64 °C (97.95 °F); “range of mean temperatures for the coolest to the warmest individuals was 36.24 °C to 36.89 °C” (97.23 to 98.40 °F); based 2008-2017 data</li>
+<li>“findings suggest that age, sex, height, weight, and time of day are factors that contribute to variations in individualized normal temperature ranges.”</li>
 </ul></li>
+</ul></li>
+<li>NYT article <a href="https://www.nytimes.com/2023/10/12/well/live/fever-normal-body-temperature.html?unlocked_article_code=1.6Uw.Caq_.XlPPcRKU84Wk&amp;smid=url-share">The Average Human Body Temperature Is Not 98.6 Degrees</a>, Oct 12, 2023, by Dana G. Smith</li>
 </ul>
 <p><strong><span style="color:darkorange">Question:</span> based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?</strong></p>
 </section>
