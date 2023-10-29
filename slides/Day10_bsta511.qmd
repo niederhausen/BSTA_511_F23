@@ -262,17 +262,12 @@ ggplot(data.frame(x = c(mu-4*std, mu+4*std)), aes(x = x)) +
 ```
 
 :::
-
 ::: {.column width="50%"}
-
 
 :::
 :::
 
 <!-- * Calculate a _test statistic_ and _p-value_  -->
-
-
-
 
 
 ## Case 2: we don't know the population sd $\sigma$ 
@@ -312,11 +307,7 @@ pt(tstat, df=n-1)
 :::
 
 
-
-
-
 ## Steps in a Hypothesis Test
-
 
 1. Set the __[level of significance]{style="color:darkorange"}__ $\alpha$
 
@@ -334,9 +325,7 @@ pt(tstat, df=n-1)
     1. Write a conclusion in the context of the problem
 
 
-
-
-## Step 2: Null & Alternative Hypotheses 
+## Step 2: Null & Alternative Hypotheses (1/2)
 
 In statistics, a __hypothesis__ is a statement about the value of an __unknown population parameter__.
 
@@ -346,14 +335,56 @@ A __[hypothesis test]{style="color:darkorange"}__ consists of a test between two
 1. a __[null]{style="color:darkorange"}__ hypothesis $H_0$ (pronounced “H-naught”) vs. 
 1. an __[alternative]{style="color:darkorange"}__ hypothesis $H_A$ (also denoted $H_1$)
 
+Example of hypotheses in words: 
 
 \begin{aligned}
 H_0 &: \text{The population mean body temperature is 98.6°F}\\
 \text{vs. } H_A &: \text{The population mean body temperature is not 98.6°F}
 \end{aligned}
 
-1. the null hypothesis $H_0$ is a claim that there is “no effect” or “no difference of interest.”
-1. the alternative hypothesis $H_A$ is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis $H_0$
+1. $H_0$ is a claim that there is “no effect” or “no difference of interest.”
+1. $H_A$ is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis $H_0$
+
+## Step 2: Null & Alternative Hypotheses (2/2)
+
+__[Notation for hypotheses:]{style="color:green"}__
+
+\begin{aligned}
+H_0 &: \mu = \mu_0\\
+\text{vs. } H_A&: \mu \neq, <, \textrm{or}, > \mu_0
+\end{aligned}
+
+We call $\mu_0$ the *null value*
+
+::: columns
+::: {.column width="40%"}
+$H_A: \mu \neq \mu_0$
+
+::: {style="font-size: 90%;"}
+* not choosing a priori whether we believe the population mean is greater or less than the null value $\mu_0$
+:::
+:::
+
+::: {.column width="30%"}
+$H_A: \mu < \mu_0$
+
+::: {style="font-size: 90%;"}
+* believe the population mean is **less** than the null value $\mu_0$
+:::
+:::
+
+::: {.column width="30%"}
+$H_A: \mu > \mu_0$
+
+::: {style="font-size: 90%;"}
+* believe the population mean is **greater** than the null value $\mu_0$
+:::
+:::
+:::
+
+* $H_A: \mu \neq \mu_0$ is the most common option, since it's the most conservative
+
+Example: 
 
 \begin{aligned}
 H_0 &: \mu = 98.6\\
@@ -361,49 +392,80 @@ H_0 &: \mu = 98.6\\
 \end{aligned}
 
 
-
-
-
-## Step 3: Test statistic (& its distribution)
+## Step 3: [Test statistic]{style="color:darkorange"} (& its distribution)
 ::: columns
 ::: {.column width="50%"}
-__[Case 1: know population sd $\sigma$]{style="color:darkorange"}__
+__[Case 1: know population sd $\sigma$]{style="color:purple"}__
 
 $$
 \text{test statistic} = z_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{\sigma}{\sqrt{n}}}
 $$
-* Statistical theory tells us that $z_{\bar{x}}$ follows a __Standard Normal distribution__ $N(0,1)$.
+
+* Statistical theory tells us that [$z_{\bar{x}}$]{style="color:purple"} follows a [__Standard Normal distribution__ $N(0,1)$]{style="color:purple"}
 :::
 
 ::: {.column width="50%"}
 
-__[Case 2: don't know population sd $\sigma$]{style="color:darkorange"}__
+__[Case 2: don't know population sd $\sigma$]{style="color:green"}__
 
 $$
 \text{test statistic} = t_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
 $$
 
-* Statistical theory tells us that $t_{\bar{x}}$ follows a __Student's t distribution__ with degrees of freedom (df) = $n-1$.
+* Statistical theory tells us that [$t_{\bar{x}}$]{style="color:green"} follows a [__Student's t distribution__ with degrees of freedom (df) = $n-1$]{style="color:green"}
 
 :::
 :::
 
+::: {style="font-size: 90%;"}
 $\bar{x}$ = sample mean, $\mu_0$ = hypothesized population mean from $H_0$,  
-$\sigma$ = _population_ standard deviation, $s$ = _sample_ standard deviation, $n$ = sample size
+$\sigma$ = _population_ standard deviation, $s$ = _sample_ standard deviation,  
+$n$ = sample size
+:::
 
-__[Assumptions]{style="color:darkorange"}__:
+__[Assumptions]{style="color:darkorange"}__: same as CLT
 
-* __Independent observations__ 
-    * The observations were collected independently.
-* __Approximately normal sample or big n__ 
-    * The distribution of the sample should be approximately normal 
-    * _or_ the sample size should be at least 30.
+* __Independent observations__: the observations were collected independently.
+* __Approximately normal sample or big n__: the distribution of the sample should be approximately normal, _or_ the sample size should be at least 30.
 
 
+## Step 3: Test statistic calculation
+
+Recall that $\bar{x} = 98.25$, $s=0.733$, and $n=130.$
+
+The test statistic is:
+
+$$t_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
+= \frac{98.25 - 98.6}{\frac{0.73}{\sqrt{130}}}
+= -5.45$$
+
+* Statistical theory tells us that $t_{\bar{x}}$ follows a __Student's t-distribution__ with $d.f. = n-1 = 129$.
+
+::: columns
+::: {.column width="75%"}
+```{r}
+#| fig.height: 4
+#| fig.width: 10
+#| echo: false
+ggplot(data = data.frame(x = c(-6, 6)), aes(x)) + 
+  stat_function(fun = dt, args = list(df = 129)) + 
+  ylab("") + 
+  xlab("t-dist with df = 129") +
+  scale_y_continuous(breaks = NULL) + 
+  geom_vline(xintercept = c(-5.45,5.45), 
+             color = "red")
+```
+
+:::
+::: {.column width="25%"}
+__Assumptions met?__
+:::
+:::
 
 ## Step 4: p-value
 
-The __[p-value]{style="color:darkorange"}__ is the __probability__ of obtaining a test statistic _just as extreme or more extreme_ than the observed test statistic assuming the null hypothesis $H_0$ is true. 
+The __[p-value]{style="color:darkorange"}__ is the [__probability__ of obtaining a test statistic _just as extreme or more extreme_ than the observed test statistic assuming the null hypothesis $H_0$ is true.]{style="color:darkblue"} 
+
 ::: columns
 ::: {.column width="50%"}
 * The $p$-value is a quantification of "surprise"
@@ -446,25 +508,16 @@ ggplot(data.frame(x = c(mu-4*std, mu+4*std)), aes(x = x)) +
 
 
 ## Step 4: p-value calculation 
-::: columns
-::: {.column width="50%"}
-First we need the __test statistic__:
 
-Recall that $\bar{x} = 98.25$, $s=0.733$, and $n=130.$
+Calculate the _p_-value using the __Student's t-distribution__ with $d.f. = n-1 = 129$:
 
-$$t_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
-= t_{\bar{x}} = \frac{98.25 - 98.6}{\frac{0.73}{\sqrt{130}}}
-= -5.45$$
+$$p-value=P(T \leq -5.45) + P(T \geq 5.45) = 2.410889 \times 10^{-07}$$
 
-* Statistical theory tells us that $t_{\bar{x}}$ follows a __student's t-distribution__ with $d.f. = n-1 = 129$.
-
-
-* __Assumptions met?__
-
-:::
-
-::: {.column width="50%"}
-
+```{r}
+# use pt() instead of pnorm()
+# need to specify df
+2*pt(-5.4548, df = 130-1, lower.tail = TRUE)
+```  
 
 ```{r}
 #| fig.height: 4
@@ -479,36 +532,49 @@ ggplot(data = data.frame(x = c(-6, 6)), aes(x)) +
              color = "red")
 ```
 
+## Step 4: p-value estimation using $t$-table
 
-Calculate the _p_-value using the t-distribution:
+* $t$-table only gives us *bounds* on the p-value
+* Recall from using the $t$-table for CIs, that the table gives us the cutoff values for varying tail probabilities (1-tail & 2-tail)
+* Find the row with the appropriate degrees of freedom
+    * Use next smallest df in table if actual df not shown
+    * I.e., for df = 129, use df = 100 in table
+* Figure out where the test statistic's value is in relation to the values in the columns, i.e. between which columns is the test statistic?
+* The header rows for those columns gives the lower & upper bounds for the p-value
+    * Choosing one-tail vs. two-tail test, depends on the alternative hypothesis $H_A$.
+    * For a 2-sided test ( $H_A: \mu \neq \mu_0$ ), use two-tails 
+    * For a 1-sided test ( $H_A: \mu < \textrm{or} > \mu_0$ ), use one-tail 
 
-$$p-value=P(t \leq -5.45) + P(t \geq 5.45)$$
-```{r}
-2*pt(-5.4548, df = 130-1, 
-     lower.tail = TRUE)
 
-```  
+## Using a $t$-table to estimate p-value
+
+::: columns
+::: {.column width="50%"}
+![](/img_slides/t-table_appendix_part1.png){fig-align="center"}
+:::
+::: {.column width="50%"}
+![](/img_slides/t-table_appendix_part2.png){fig-align="center"}
 :::
 :::
-
 
 
 
 ## Step 1: Significance Level $\alpha$
 
-* Before doing a hypothesis test, we set a cut-off for    how small the $p$-value should be in order to reject $H_0$.
-* We call this the __significance level__.
-* We use the Greek symbol alpha ( $\alpha$ ) to denote the significance level
-* Typical $\alpha$ values are 
+* __Before doing a hypothesis test__, we set a cut-off for how small the $p$-value should be in order to reject $H_0$.
+* We call this the __[significance level]{style="color:darkorange"}__, denoted by the Greek symbol [alpha ( $\alpha$ )]{style="color:darkorange"}
+* [Typical $\alpha$]{style="color:darkblue"} values are 
     * 0.05 - _most common by far!!_
     * 0.01 and 0.1
-    
-* When $p$-value < $\alpha$, we "__reject__ the null hypothesis $H_0$."
-* When $p$-value $\geq \alpha$, we "__fail to reject__ the null hypothesis $H_0$."
+* Decision rule:    
+    * When [$p$-value < $\alpha$]{style="color:green"}, we "__[reject]{style="color:green"}__ the null hypothesis [$H_0$]{style="color:green"}."
+    * When [$p$-value $\geq \alpha$]{style="color:purple"}, we "__[fail to reject]{style="color:purple"}__ the null hypothesis [$H_0$]{style="color:purple"}."
 
-* __[Important:]{style="color:darkred"}__ "failing to reject" $H_0$ is __not__ the same as "accepting" $H_0$! 
-    * By failing to reject $H_0$ we are just saying that we don't have sufficient evidence to support the alternative $H_A$.
-
+:::{.callout-important}
+* "Failing to reject" $H_0$ is __NOT__ the same as "accepting" $H_0$! 
+* By failing to reject $H_0$ we are just saying that we don't have sufficient evidence to support the alternative $H_A$.
+* _This does not imply that $H_0$ is true!!_
+:::
 
 
 
@@ -520,25 +586,28 @@ H_0 &: \mu = 98.6\\
 \text{vs. } H_A&: \mu \neq 98.6
 \end{aligned}
 
-* Recall the $p$-value = $2.41\cdot 10^{-7}$ 
+* Recall the $p$-value = $2.410889 \times 10^{-07}$ 
 * Use $\alpha$ = 0.05.
 * Do we reject or fail to reject $H_0$?
 
 __Conclusion statement__:
-* Basic: 
-    * There is sufficient evidence that the (population) mean body temperature is different from 98.6°F ( $p$-value < 0.001).
 
-* Better: 
-    * The average body temperature in the sample was 98.25°F (95% CI 98.12 to 98.38°F), and there is sufficient evidence that the (population) mean body temperature is different from 98.6°F ( $p$-value < 0.001).
+* Basic: ("stats class" conclusion)
+    * There is sufficient evidence that the (population) mean body temperature is discernibly different from 98.6°F ( $p$-value < 0.001).
+
+* Better: ("manuscript style" conclusion)
+    * The average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( $p$-value < 0.001).
 
 
+## `t.test`: base R's function for testing one mean 
 
+* Use the body temperature example with $H_A: \mu \neq 98.6$
+* The data are in a csv file called `BodyTemperatures.csv`
+* You need to tell R where the dataset is located!
 
-## `t.test`: R's built-in command for testing one mean 
-
-Using the body temperature example with $H_A: \mu \neq 98.6$
 
 ```{r}
+# read_csv() is a function from the readr package that is a part of the tidyverse
 BodyTemps <- read_csv("../data/BodyTemperatures.csv")
 
 (temps_ttest <- t.test(x = BodyTemps$Temperature,
@@ -546,7 +615,9 @@ BodyTemps <- read_csv("../data/BodyTemperatures.csv")
        mu = 98.6))
 ```
 
-Note that the test output also gives the 95% CI using the t-distribution.
+* Note that the test output also gives the 95% CI using the t-distribution.
+* 
+
 
 
 

@@ -243,21 +243,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#is-98.6f-really-the-mean-healthy-body-temperature" id="toc-is-98.6f-really-the-mean-healthy-body-temperature" class="nav-link" data-scroll-target="#is-98.6f-really-the-mean-healthy-body-temperature">Is 98.6°F really the mean “healthy” body temperature?</a>
   <ul class="collapse">
-  <li><a href="#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f" id="toc-question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f" class="nav-link" data-scroll-target="#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f">Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?</a></li>
-  <li><a href="#approach-1-create-a-95-ci-for-the-population-mean-body-temperature" id="toc-approach-1-create-a-95-ci-for-the-population-mean-body-temperature" class="nav-link" data-scroll-target="#approach-1-create-a-95-ci-for-the-population-mean-body-temperature">Approach 1: Create a 95% CI for the population mean body temperature</a></li>
-  <li><a href="#approach-2-hypothesis-test" id="toc-approach-2-hypothesis-test" class="nav-link" data-scroll-target="#approach-2-hypothesis-test">Approach 2: Hypothesis Test</a></li>
-  <li><a href="#recall-the-sampling-distribution-of-the-mean" id="toc-recall-the-sampling-distribution-of-the-mean" class="nav-link" data-scroll-target="#recall-the-sampling-distribution-of-the-mean">Recall the sampling distribution of the mean</a>
+  <li><a href="#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f" id="toc-question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f" class="nav-link" data-scroll-target="#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f">Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?</a>
   <ul class="collapse">
+  <li><a href="#approach-1-create-a-95-c-i-for-the-population-mean-body-temperature" id="toc-approach-1-create-a-95-c-i-for-the-population-mean-body-temperature" class="nav-link" data-scroll-target="#approach-1-create-a-95-c-i-for-the-population-mean-body-temperature">Approach 1: Create a <span style="color:purple">95% C I</span> for the population mean body temperature</a></li>
+  <li><a href="#approach-2-hypothesis-test" id="toc-approach-2-hypothesis-test" class="nav-link" data-scroll-target="#approach-2-hypothesis-test">Approach 2: <span style="color:green">Hypothesis Test</span></a></li>
+  <li><a href="#recall-the-sampling-distribution-of-the-mean" id="toc-recall-the-sampling-distribution-of-the-mean" class="nav-link" data-scroll-target="#recall-the-sampling-distribution-of-the-mean">Recall the sampling distribution of the mean</a></li>
   <li><a href="#case-1-suppose-we-know-the-population-sd-sigma" id="toc-case-1-suppose-we-know-the-population-sd-sigma" class="nav-link" data-scroll-target="#case-1-suppose-we-know-the-population-sd-sigma">Case 1: suppose we know the population sd <span class="math inline">\(\sigma\)</span></a></li>
   <li><a href="#case-2-we-dont-know-the-population-sd-sigma" id="toc-case-2-we-dont-know-the-population-sd-sigma" class="nav-link" data-scroll-target="#case-2-we-dont-know-the-population-sd-sigma">Case 2: we don’t know the population sd <span class="math inline">\(\sigma\)</span></a></li>
   </ul></li>
   </ul></li>
   <li><a href="#steps-in-a-hypothesis-test" id="toc-steps-in-a-hypothesis-test" class="nav-link" data-scroll-target="#steps-in-a-hypothesis-test">Steps in a Hypothesis Test</a>
   <ul class="collapse">
-  <li><a href="#step-2-null-alternative-hypotheses" id="toc-step-2-null-alternative-hypotheses" class="nav-link" data-scroll-target="#step-2-null-alternative-hypotheses">Step 2: Null &amp; Alternative Hypotheses</a></li>
-  <li><a href="#step-3-test-statistic-its-distribution" id="toc-step-3-test-statistic-its-distribution" class="nav-link" data-scroll-target="#step-3-test-statistic-its-distribution">Step 3: Test statistic (&amp; its distribution)</a></li>
+  <li><a href="#step-2-null-alternative-hypotheses" id="toc-step-2-null-alternative-hypotheses" class="nav-link" data-scroll-target="#step-2-null-alternative-hypotheses">Step 2: Null &amp; Alternative Hypotheses</a>
+  <ul class="collapse">
+  <li><a href="#notation-for-hypotheses" id="toc-notation-for-hypotheses" class="nav-link" data-scroll-target="#notation-for-hypotheses">Notation for hypotheses</a></li>
+  </ul></li>
+  <li><a href="#step-3-test-statistic-its-distribution" id="toc-step-3-test-statistic-its-distribution" class="nav-link" data-scroll-target="#step-3-test-statistic-its-distribution">Step 3: <span style="color:darkorange">Test statistic</span> (&amp; its distribution)</a></li>
+  <li><a href="#step-3-test-statistic-calculation" id="toc-step-3-test-statistic-calculation" class="nav-link" data-scroll-target="#step-3-test-statistic-calculation">Step 3: Test statistic calculation</a></li>
   <li><a href="#step-4-p-value" id="toc-step-4-p-value" class="nav-link" data-scroll-target="#step-4-p-value">Step 4: p-value</a></li>
   <li><a href="#step-4-p-value-calculation" id="toc-step-4-p-value-calculation" class="nav-link" data-scroll-target="#step-4-p-value-calculation">Step 4: p-value calculation</a></li>
+  <li><a href="#step-4-p-value-estimation-using-t-table" id="toc-step-4-p-value-estimation-using-t-table" class="nav-link" data-scroll-target="#step-4-p-value-estimation-using-t-table">Step 4: p-value estimation using <span class="math inline">\(t\)</span>-table</a></li>
   <li><a href="#step-1-significance-level-alpha" id="toc-step-1-significance-level-alpha" class="nav-link" data-scroll-target="#step-1-significance-level-alpha">Step 1: Significance Level <span class="math inline">\(\alpha\)</span></a></li>
   <li><a href="#step-5-conclusion-to-hypothesis-test" id="toc-step-5-conclusion-to-hypothesis-test" class="nav-link" data-scroll-target="#step-5-conclusion-to-hypothesis-test">Step 5: Conclusion to hypothesis test</a></li>
   </ul></li>
@@ -439,11 +444,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f">Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?</h2>
 <p>Two approaches to answer this question:</p>
 <ol type="1">
-<li>Create a <strong>confidence interval (CI)</strong> for the population mean <span class="math inline">\(\mu\)</span> and determine whether 98.6°F is inside the CI or not.
+<li>Create a <strong><span style="color:purple">confidence interval (CI)</span></strong> for the population mean <span class="math inline">\(\mu\)</span> and determine whether 98.6°F is inside the CI or not.
 <ul>
 <li>is 98.6°F a plausible value?</li>
 </ul></li>
-<li>Run a <strong>hypothesis test</strong> to see if there is evidence that the population mean <span class="math inline">\(\mu\)</span> is <em>significantly different</em> from 98.6°F or not.
+<li>Run a <strong><span style="color:green">hypothesis test</span></strong> to see if there is evidence that the population mean <span class="math inline">\(\mu\)</span> is <em>significantly different</em> from 98.6°F or not.
 <ul>
 <li><p>This does not give us a range of plausible values for the population mean <span class="math inline">\(\mu\)</span>.</p></li>
 <li><p>Instead, we calculate a <em>test statistic</em> and <em>p-value</em></p>
@@ -454,9 +459,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul></li>
 </ol>
-</section>
-<section id="approach-1-create-a-95-ci-for-the-population-mean-body-temperature" class="level2">
-<h2 class="anchored" data-anchor-id="approach-1-create-a-95-ci-for-the-population-mean-body-temperature">Approach 1: Create a 95% CI for the population mean body temperature</h2>
+<section id="approach-1-create-a-95-c-i-for-the-population-mean-body-temperature" class="level3">
+<h3 class="anchored" data-anchor-id="approach-1-create-a-95-c-i-for-the-population-mean-body-temperature">Approach 1: Create a <span style="color:purple">95% C I</span> for the population mean body temperature</h3>
 <ul>
 <li>Use data based on the results from the 1992 JAMA study
 <ul>
@@ -465,10 +469,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 <p><span class="math display">\[\bar{x} = 98.25,~s=0.733,~n=130\]</span> CI for <span class="math inline">\(\mu\)</span>:</p>
-<p><span class="math display">\[\bar{x} \pm t^*\cdot\frac{s}{\sqrt{n}}\\
-98.25 \pm 1.979\cdot\frac{0.733}{\sqrt{130}}\\
-98.25 \pm 0.127\\
-(98.123, 98.377)\]</span></p>
+<p><span class="math display">\[\begin{align}
+\bar{x} &amp;\pm t^*\cdot\frac{s}{\sqrt{n}}\\
+98.25 &amp;\pm 1.979\cdot\frac{0.733}{\sqrt{130}}\\
+98.25 &amp;\pm 0.127\\
+(98.123&amp;, 98.377)
+\end{align}\]</span></p>
 <p>Used <span class="math inline">\(t^*\)</span> = <code>qt(.975, df=129)</code></p>
 <p>Conclusion:<br>
 We are 95% that the (population) mean body temperature is between 98.123°F and 98.377°F.</p>
@@ -476,8 +482,8 @@ We are 95% that the (population) mean body temperature is between 98.123°F and 
 <li><em>How does the CI compare to 98.6°F?</em></li>
 </ul>
 </section>
-<section id="approach-2-hypothesis-test" class="level2">
-<h2 class="anchored" data-anchor-id="approach-2-hypothesis-test">Approach 2: Hypothesis Test</h2>
+<section id="approach-2-hypothesis-test" class="level3">
+<h3 class="anchored" data-anchor-id="approach-2-hypothesis-test">Approach 2: <span style="color:green">Hypothesis Test</span></h3>
 <p>From before:</p>
 <ul>
 <li>Run a <strong>hypothesis test</strong> to see if there is evidence that the population mean <span class="math inline">\(\mu\)</span> is <em>significantly different</em> from 98.6°F or not.
@@ -493,13 +499,13 @@ We are 95% that the (population) mean body temperature is between 98.123°F and 
 </ul>
 <p><strong>How do we calculate a <em>test statistic</em> and <em>p-value</em>?</strong></p>
 </section>
-<section id="recall-the-sampling-distribution-of-the-mean" class="level2">
-<h2 class="anchored" data-anchor-id="recall-the-sampling-distribution-of-the-mean">Recall the sampling distribution of the mean</h2>
-<p>From the <strong>Central Limit Theorem (CLT)</strong>, we know that</p>
+<section id="recall-the-sampling-distribution-of-the-mean" class="level3">
+<h3 class="anchored" data-anchor-id="recall-the-sampling-distribution-of-the-mean">Recall the sampling distribution of the mean</h3>
+<p>From the <strong><span style="color:darkorange">Central Limit Theorem (CLT)</span></strong>, we know that</p>
 <ul>
-<li>For <strong>“large” sample sizes</strong> ( <span class="math inline">\(n\geq 30\)</span> ),
+<li>For <strong><span style="color:cornflowerblue">“large” sample sizes</span></strong> ( <span class="math inline">\(n\geq 30\)</span> ),
 <ul>
-<li>the <strong>sampling distribution</strong> of the sample mean</li>
+<li>the <span style="color:green"><strong>sampling distribution</strong> of the sample mean</span></li>
 <li>can be approximated by a <strong>normal distribution</strong>,with
 <ul>
 <li><em>mean</em> equal to the <em>population mean</em> value <span class="math inline">\(\mu\)</span>, and</li>
@@ -509,20 +515,20 @@ We are 95% that the (population) mean body temperature is between 98.123°F and 
 </ul>
 <p><span class="math display">\[\bar{X}\sim N\Big(\mu_{\bar{X}} = \mu, \sigma_{\bar{X}}= \frac{\sigma}{\sqrt{n}}\Big)\]</span></p>
 <ul>
-<li>For <strong>small sample sizes</strong>, if the population is known to be normally distributed, then
+<li>For <strong><span style="color:cornflowerblue">small sample sizes</span></strong>, if the population is known to be normally distributed, then
 <ul>
-<li>the <strong>sampling distribution</strong> of the sample mean</li>
-<li>is a <strong>normal distribution</strong>,with
-<ul>
-<li><em>mean</em> equal to the <em>population mean</em> value <span class="math inline">\(\mu\)</span>, and</li>
-<li><em>standard deviation</em> <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span></li>
-</ul></li>
+<li>the same result holds</li>
 </ul></li>
 </ul>
+</section>
 <section id="case-1-suppose-we-know-the-population-sd-sigma" class="level3">
 <h3 class="anchored" data-anchor-id="case-1-suppose-we-know-the-population-sd-sigma">Case 1: suppose we know the population sd <span class="math inline">\(\sigma\)</span></h3>
 <ul>
-<li><span style="color:green">How likely we are to observe the sample mean <span class="math inline">\(\bar{x}\)</span> * or a more extreme sample mean * assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F?</span></li>
+<li><span style="color:green">How likely we are to observe the sample mean <span class="math inline">\(\bar{x}\)</span> ,</span>
+<ul>
+<li><span style="color:green">or a more extreme sample mean,</span></li>
+<li><span style="color:green">assuming that the population mean <span class="math inline">\(\mu\)</span> is 98.6°F?</span></li>
+</ul></li>
 <li>Use <span class="math inline">\(\bar{x} = 98.25\)</span>, <span class="math inline">\(\sigma=0.733\)</span>, and <span class="math inline">\(n=130\)</span></li>
 </ul>
 <div class="cell">
@@ -569,35 +575,78 @@ We are 95% that the (population) mean body temperature is between 98.123°F and 
 <li>a <strong><span style="color:darkorange">null</span></strong> hypothesis <span class="math inline">\(H_0\)</span> (pronounced “H-naught”) vs.&nbsp;</li>
 <li>an <strong><span style="color:darkorange">alternative</span></strong> hypothesis <span class="math inline">\(H_A\)</span> (also denoted <span class="math inline">\(H_1\)</span>)</li>
 </ol>
+<p>Example of hypotheses in words:</p>
 <span class="math display">\[\begin{aligned}
 H_0 &amp;: \text{The population mean body temperature is 98.6°F}\\
 \text{vs. } H_A &amp;: \text{The population mean body temperature is not 98.6°F}
 \end{aligned}\]</span>
 <ol type="1">
-<li>the null hypothesis <span class="math inline">\(H_0\)</span> is a claim that there is “no effect” or “no difference of interest.”</li>
-<li>the alternative hypothesis <span class="math inline">\(H_A\)</span> is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis <span class="math inline">\(H_0\)</span></li>
+<li><span class="math inline">\(H_0\)</span> is a claim that there is “no effect” or “no difference of interest.”</li>
+<li><span class="math inline">\(H_A\)</span> is the claim a researcher wants to establish or find evidence to support. It is viewed as a “challenger” hypothesis to the null hypothesis <span class="math inline">\(H_0\)</span></li>
 </ol>
+<section id="notation-for-hypotheses" class="level3">
+<h3 class="anchored" data-anchor-id="notation-for-hypotheses">Notation for hypotheses</h3>
+<span class="math display">\[\begin{aligned}
+H_0 &amp;: \mu = \mu_0\\
+\text{vs. } H_A&amp;: \mu \neq, &lt;, \textrm{or}, &gt; \mu_0
+\end{aligned}\]</span>
+<p>We call <span class="math inline">\(\mu_0\)</span> the <em>null value</em></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><span class="math inline">\(H_A: \mu \neq \mu_0\)</span></p>
+<div style="font-size: 90%;">
+<ul>
+<li>not choosing a priori whether we believe the population mean is greater or less than the null value <span class="math inline">\(\mu_0\)</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:30%;">
+<p><span class="math inline">\(H_A: \mu &lt; \mu_0\)</span></p>
+<div style="font-size: 90%;">
+<ul>
+<li>believe the population mean is <strong>less</strong> than the null value <span class="math inline">\(\mu_0\)</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:30%;">
+<p><span class="math inline">\(H_A: \mu &gt; \mu_0\)</span></p>
+<div style="font-size: 90%;">
+<ul>
+<li>believe the population mean is <strong>greater</strong> than the null value <span class="math inline">\(\mu_0\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+<ul>
+<li><span class="math inline">\(H_A: \mu \neq \mu_0\)</span> is the most common option, since it’s the most conservative</li>
+</ul>
+<p>Example:</p>
 <span class="math display">\[\begin{aligned}
 H_0 &amp;: \mu = 98.6\\
 \text{vs. } H_A&amp;: \mu \neq 98.6
 \end{aligned}\]</span>
 </section>
+</section>
 <section id="step-3-test-statistic-its-distribution" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-test-statistic-its-distribution">Step 3: Test statistic (&amp; its distribution)</h2>
-<p><strong><span style="color:darkorange">Case 1: know population sd <span class="math inline">\(\sigma\)</span></span></strong></p>
+<h2 class="anchored" data-anchor-id="step-3-test-statistic-its-distribution">Step 3: <span style="color:darkorange">Test statistic</span> (&amp; its distribution)</h2>
+<p><strong><span style="color:purple">Case 1: know population sd <span class="math inline">\(\sigma\)</span></span></strong></p>
 <p><span class="math display">\[
 \text{test statistic} = z_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{\sigma}{\sqrt{n}}}
-\]</span> * Statistical theory tells us that <span class="math inline">\(z_{\bar{x}}\)</span> follows a <strong>Standard Normal distribution</strong> <span class="math inline">\(N(0,1)\)</span>.</p>
-<p><strong><span style="color:darkorange">Case 2: don’t know population sd <span class="math inline">\(\sigma\)</span></span></strong></p>
+\]</span></p>
+<ul>
+<li>Statistical theory tells us that <span style="color:purple"><span class="math inline">\(z_{\bar{x}}\)</span></span> follows a <span style="color:purple"><strong>Standard Normal distribution</strong> <span class="math inline">\(N(0,1)\)</span></span></li>
+</ul>
+<p><strong><span style="color:green">Case 2: don’t know population sd <span class="math inline">\(\sigma\)</span></span></strong></p>
 <p><span class="math display">\[
 \text{test statistic} = t_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
 \]</span></p>
 <ul>
-<li>Statistical theory tells us that <span class="math inline">\(t_{\bar{x}}\)</span> follows a <strong>Student’s t distribution</strong> with degrees of freedom (df) = <span class="math inline">\(n-1\)</span>.</li>
+<li>Statistical theory tells us that <span style="color:green"><span class="math inline">\(t_{\bar{x}}\)</span></span> follows a <span style="color:green"><strong>Student’s t distribution</strong> with degrees of freedom (df) = <span class="math inline">\(n-1\)</span></span></li>
 </ul>
-<p><span class="math inline">\(\bar{x}\)</span> = sample mean, <span class="math inline">\(\mu_0\)</span> = hypothesized population mean from <span class="math inline">\(H_0\)</span>,<br>
-<span class="math inline">\(\sigma\)</span> = <em>population</em> standard deviation, <span class="math inline">\(s\)</span> = <em>sample</em> standard deviation, <span class="math inline">\(n\)</span> = sample size</p>
-<p><strong><span style="color:darkorange">Assumptions</span></strong>:</p>
+<p><span class="math inline">\(\bar{x}\)</span> = sample mean,<br>
+<span class="math inline">\(\mu_0\)</span> = hypothesized population mean from <span class="math inline">\(H_0\)</span>,<br>
+<span class="math inline">\(\sigma\)</span> = <em>population</em> standard deviation,<br>
+<span class="math inline">\(s\)</span> = <em>sample</em> standard deviation,<br>
+<span class="math inline">\(n\)</span> = sample size</p>
+<p><strong><span style="color:darkorange">Assumptions</span></strong>: same as CLT</p>
 <ul>
 <li><strong>Independent observations</strong>
 <ul>
@@ -610,9 +659,26 @@ H_0 &amp;: \mu = 98.6\\
 </ul></li>
 </ul>
 </section>
+<section id="step-3-test-statistic-calculation" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-test-statistic-calculation">Step 3: Test statistic calculation</h2>
+<p>Recall that <span class="math inline">\(\bar{x} = 98.25\)</span>, <span class="math inline">\(s=0.733\)</span>, and <span class="math inline">\(n=130.\)</span></p>
+<p>The test statistic is:</p>
+<p><span class="math display">\[t_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
+= \frac{98.25 - 98.6}{\frac{0.73}{\sqrt{130}}}
+= -5.45\]</span></p>
+<ul>
+<li>Statistical theory tells us that <span class="math inline">\(t_{\bar{x}}\)</span> follows a <strong>Student’s t-distribution</strong> with <span class="math inline">\(d.f. = n-1 = 129\)</span>.</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+<p><strong>Assumptions met?</strong></p>
+</section>
 <section id="step-4-p-value" class="level2">
 <h2 class="anchored" data-anchor-id="step-4-p-value">Step 4: p-value</h2>
-<p>The <strong><span style="color:darkorange">p-value</span></strong> is the <strong>probability</strong> of obtaining a test statistic <em>just as extreme or more extreme</em> than the observed test statistic assuming the null hypothesis <span class="math inline">\(H_0\)</span> is true.</p>
+<p>The <strong><span style="color:darkorange">p-value</span></strong> is the <span style="color:darkblue"><strong>probability</strong> of obtaining a test statistic <em>just as extreme or more extreme</em> than the observed test statistic assuming the null hypothesis <span class="math inline">\(H_0\)</span> is true.</span></p>
 <ul>
 <li>The <span class="math inline">\(p\)</span>-value is a quantification of “surprise”
 <ul>
@@ -623,73 +689,101 @@ H_0 &amp;: \mu = 98.6\\
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="576"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="576"></p>
 </div>
 </div>
 </section>
 <section id="step-4-p-value-calculation" class="level2">
 <h2 class="anchored" data-anchor-id="step-4-p-value-calculation">Step 4: p-value calculation</h2>
-<p>First we need the <strong>test statistic</strong>:</p>
-<p>Recall that <span class="math inline">\(\bar{x} = 98.25\)</span>, <span class="math inline">\(s=0.733\)</span>, and <span class="math inline">\(n=130.\)</span></p>
-<p><span class="math display">\[t_{\bar{x}} = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}}
-= t_{\bar{x}} = \frac{98.25 - 98.6}{\frac{0.73}{\sqrt{130}}}
-= -5.45\]</span></p>
-<ul>
-<li><p>Statistical theory tells us that <span class="math inline">\(t_{\bar{x}}\)</span> follows a <strong>student’s t-distribution</strong> with <span class="math inline">\(d.f. = n-1 = 129\)</span>.</p></li>
-<li><p><strong>Assumptions met?</strong></p></li>
-</ul>
+<p>Calculate the <em>p</em>-value using the <strong>Student’s t-distribution</strong> with <span class="math inline">\(d.f. = n-1 = 129\)</span>:</p>
+<p><span class="math display">\[p-value=P(T \leq -5.45) + P(T \geq 5.45) = 2.410889 \times 10^{-07}\]</span></p>
 <div class="cell">
-<div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="576"></p>
-</div>
-</div>
-<p>Calculate the <em>p</em>-value using the t-distribution:</p>
-<p><span class="math display">\[p-value=P(t \leq -5.45) + P(t \geq 5.45)\]</span></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pt</span>(<span class="sc">-</span><span class="fl">5.4548</span>, <span class="at">df =</span> <span class="dv">130-1</span>, </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use pt() instead of pnorm()</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># need to specify df</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pt</span>(<span class="sc">-</span><span class="fl">5.4548</span>, <span class="at">df =</span> <span class="dv">130-1</span>, <span class="at">lower.tail =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.410889e-07</code></pre>
 </div>
 </div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+</section>
+<section id="step-4-p-value-estimation-using-t-table" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-p-value-estimation-using-t-table">Step 4: p-value estimation using <span class="math inline">\(t\)</span>-table</h2>
+<ul>
+<li><span class="math inline">\(t\)</span>-table only gives us <em>bounds</em> on the p-value</li>
+<li>Recall from using the <span class="math inline">\(t\)</span>-table for CIs, that the table gives us the cutoff values for varying tail probabilities (1-tail &amp; 2-tail)</li>
+<li>Find the row with the appropriate degrees of freedom
+<ul>
+<li>Use next smallest df in table if actual df not shown</li>
+<li>I.e., for df = 129, use df = 100 in table</li>
+</ul></li>
+<li>Figure out where the test statistic’s value is in relation to the values in the columns, i.e.&nbsp;between which columns is the test statistic?</li>
+<li>The header rows for those columns gives the lower &amp; upper bounds for the p-value
+<ul>
+<li>Choosing one-tail vs.&nbsp;two-tail test, depends on the alternative hypothesis <span class="math inline">\(H_A\)</span>.</li>
+<li>For a 2-sided test ( <span class="math inline">\(H_A: \mu \neq \mu_0\)</span> ), use two-tails</li>
+<li>For a 1-sided test ( <span class="math inline">\(H_A: \mu &lt; \textrm{or} &gt; \mu_0\)</span> ), use one-tail</li>
+</ul></li>
+</ul>
 </section>
 <section id="step-1-significance-level-alpha" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-significance-level-alpha">Step 1: Significance Level <span class="math inline">\(\alpha\)</span></h2>
 <ul>
-<li><p>Before doing a hypothesis test, we set a cut-off for how small the <span class="math inline">\(p\)</span>-value should be in order to reject <span class="math inline">\(H_0\)</span>.</p></li>
-<li><p>We call this the <strong>significance level</strong>.</p></li>
-<li><p>We use the Greek symbol alpha ( <span class="math inline">\(\alpha\)</span> ) to denote the significance level</p></li>
-<li><p>Typical <span class="math inline">\(\alpha\)</span> values are</p>
+<li><strong>Before doing a hypothesis test</strong>, we set a cut-off for how small the <span class="math inline">\(p\)</span>-value should be in order to reject <span class="math inline">\(H_0\)</span>.</li>
+<li>We call this the <strong><span style="color:darkorange">significance level</span></strong>, denoted by the Greek symbol <span style="color:darkorange">alpha ( <span class="math inline">\(\alpha\)</span> )</span></li>
+<li><span style="color:darkblue">Typical <span class="math inline">\(\alpha\)</span></span> values are
 <ul>
 <li>0.05 - <em>most common by far!!</em></li>
 <li>0.01 and 0.1</li>
 </ul></li>
-<li><p>When <span class="math inline">\(p\)</span>-value &lt; <span class="math inline">\(\alpha\)</span>, we “<strong>reject</strong> the null hypothesis <span class="math inline">\(H_0\)</span>.”</p></li>
-<li><p>When <span class="math inline">\(p\)</span>-value <span class="math inline">\(\geq \alpha\)</span>, we “<strong>fail to reject</strong> the null hypothesis <span class="math inline">\(H_0\)</span>.”</p></li>
-<li><p><strong><span style="color:darkred">Important:</span></strong> “failing to reject” <span class="math inline">\(H_0\)</span> is <strong>not</strong> the same as “accepting” <span class="math inline">\(H_0\)</span>!</p>
+<li>Decision rule:
 <ul>
-<li>By failing to reject <span class="math inline">\(H_0\)</span> we are just saying that we don’t have sufficient evidence to support the alternative <span class="math inline">\(H_A\)</span>.</li>
+<li>When <span style="color:green"><span class="math inline">\(p\)</span>-value &lt; <span class="math inline">\(\alpha\)</span></span>, we “<strong><span style="color:green">reject</span></strong> the null hypothesis <span style="color:green"><span class="math inline">\(H_0\)</span></span>.”</li>
+<li>When <span style="color:purple"><span class="math inline">\(p\)</span>-value <span class="math inline">\(\geq \alpha\)</span></span>, we “<strong><span style="color:purple">fail to reject</span></strong> the null hypothesis <span style="color:purple"><span class="math inline">\(H_0\)</span></span>.”</li>
 </ul></li>
 </ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>“Failing to reject” <span class="math inline">\(H_0\)</span> is <strong>NOT</strong> the same as “accepting” <span class="math inline">\(H_0\)</span>!</li>
+<li>By failing to reject <span class="math inline">\(H_0\)</span> we are just saying that we don’t have sufficient evidence to support the alternative <span class="math inline">\(H_A\)</span>.</li>
+<li><em>This does not imply that <span class="math inline">\(H_0\)</span> is true!!</em></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="step-5-conclusion-to-hypothesis-test" class="level2">
 <h2 class="anchored" data-anchor-id="step-5-conclusion-to-hypothesis-test">Step 5: Conclusion to hypothesis test</h2>
-<p><span class="math display">\[H_0: \mu = 98.6\\
-\text{vs. } H_A: \mu \neq 98.6\]</span></p>
+<span class="math display">\[\begin{aligned}
+H_0 &amp;: \mu = 98.6\\
+\text{vs. } H_A&amp;: \mu \neq 98.6
+\end{aligned}\]</span>
 <ul>
-<li>Recall the <span class="math inline">\(p\)</span>-value = <span class="math inline">\(2.41\cdot 10^{-7}\)</span></li>
+<li>Recall the <span class="math inline">\(p\)</span>-value = <span class="math inline">\(2.410889 \times 10^{-07}\)</span></li>
 <li>Use <span class="math inline">\(\alpha\)</span> = 0.05.</li>
 <li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
 </ul>
 <p><strong>Conclusion statement</strong>:</p>
 <ul>
-<li>Basic:
+<li>Basic: (“stats class” conclusion)
 <ul>
-<li>There is sufficient evidence that the (population) mean body temperature is different from 98.6°F ( <span class="math inline">\(p\)</span>-value &lt; 0.001).</li>
+<li>There is sufficient evidence that the (population) mean body temperature is discernibly different from 98.6°F ( <span class="math inline">\(p\)</span>-value &lt; 0.001).</li>
 </ul></li>
-<li>Better:
+<li>Better: (“manuscript style” conclusion)
 <ul>
-<li>The average body temperature in the sample was 98.25°F (95% CI 98.12 to 98.38°F), and there is sufficient evidence that the (population) mean body temperature is different from 98.6°F ( <span class="math inline">\(p\)</span>-value &lt; 0.001).</li>
+<li>The average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( <span class="math inline">\(p\)</span>-value &lt; 0.001).</li>
 </ul></li>
 </ul>
 </section>
@@ -1940,24 +2034,24 @@ $ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169,
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>Before)) <span class="sc">+</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="480"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="480"></p>
 </div>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>Before)) <span class="sc">+</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-13-2.png" class="img-fluid" width="480"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-14-2.png" class="img-fluid" width="480"></p>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>After)) <span class="sc">+</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="480"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="480"></p>
 </div>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>After)) <span class="sc">+</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-14-2.png" class="img-fluid" width="480"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-15-2.png" class="img-fluid" width="480"></p>
 </div>
 </div>
 </section>
@@ -1989,7 +2083,7 @@ $ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169,
 <span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> ID, <span class="at">group =</span> ID)) <span class="sc">+</span> </span>
 <span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="480"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="480"></p>
 </div>
 </div>
 </section>
@@ -2524,24 +2618,24 @@ $ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169,
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>Before)) <span class="sc">+</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="480"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="480"></p>
 </div>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>After)) <span class="sc">+</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-18-2.png" class="img-fluid" width="480"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-19-2.png" class="img-fluid" width="480"></p>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>DiffChol)) <span class="sc">+</span> </span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="480"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="480"></p>
 </div>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>DiffChol)) <span class="sc">+</span> </span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-19-2.png" class="img-fluid" width="480"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-20-2.png" class="img-fluid" width="480"></p>
 </div>
 </div>
 </section>
@@ -3118,7 +3212,7 @@ t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
 <span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="sc">-</span>xbar, xbar), </span>
 <span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="480"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="480"></p>
 </div>
 </div>
 <div class="cell">
@@ -3131,7 +3225,7 @@ t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
 <span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="sc">-</span>tstat,tstat), </span>
 <span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="480"></p>
+<p><img src="Day10_bsta511_code_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="480"></p>
 </div>
 </div>
 <p>Calculate the <em>p</em>-value:</p>
