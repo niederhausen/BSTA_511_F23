@@ -858,21 +858,10 @@ H_0 &amp;: \mu = 98.6\\
 <section id="t.test-base-rs-function-for-testing-one-mean" class="slide level2">
 <h2><code>t.test</code>: base R’s function for testing one mean</h2>
 <ul>
-<li>Using the body temperature example with <span class="math inline">\(H_A: \mu \neq 98.6\)</span></li>
+<li>Use the body temperature example with <span class="math inline">\(H_A: \mu \neq 98.6\)</span></li>
+<li>The data are in a csv file called <code>BodyTemperatures.csv</code></li>
+<li>You need to tell R where the dataset is located!</li>
 </ul>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>You need to tell R where the dataset is located!</p>
-</div>
-</div>
-</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># read_csv() is a function from the readr package that is a part of the tidyverse</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>BodyTemps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/BodyTemperatures.csv"</span>)</span>
@@ -894,17 +883,17 @@ mean of x
  98.24923 </code></pre>
 </div>
 </div>
-<ul>
-<li>Note that the test output also gives the 95% CI using the t-distribution.</li>
-<li></li>
-</ul>
+<p>Note that the test output also gives the 95% CI using the t-distribution.</p>
 </section>
 <section id="tidy-the-t.test-output" class="slide level2">
-<h2><code>tidy</code> the <code>t.test</code> output</h2>
+<h2><code>tidy()</code> the <code>t.test</code> output</h2>
+<ul>
+<li>Use the <code>tidy()</code> function from the <code>broom</code> package for briefer output in table format that’s stored as a <code>tibble</code></li>
+<li>Combined with the <code>gt()</code> function from the <code>gt</code> package, we get a nice table</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># use tidy command from broom package for briefer output that's a tibble</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="mecfuynzio" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -1378,25 +1367,27 @@ mean of x
 </div>
 </div>
 <ul>
-<li>The <code>tidy()</code> output is a tibble, and so we can pull specific values from it:</li>
+<li>Since the <code>tidy()</code> output is a tibble, we can easily <code>pull()</code> specific values from it:</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
+<p>Using base R’s <code>$</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># base R</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">tidy</span>(temps_ttest)<span class="sc">$</span>p.value  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">tidy</span>(temps_ttest)<span class="sc">$</span>p.value  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.410632e-07</code></pre>
 </div>
 </div>
+<p>Advantage: quick and easy</p>
 </div><div class="column" style="width:50%;">
+<p>Or the <code>tidyverse</code> way: using <code>pull()</code> from <code>dplyr</code> package</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># or with tidyverse:</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(p.value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(p.value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.410632e-07</code></pre>
 </div>
 </div>
+<p>Advantage: can use together with piping (<code>%&gt;%</code>) other functions</p>
 </div>
 </div>
 </section>
@@ -1598,13 +1589,15 @@ mean of x
 <ul>
 <li>First, calculate changes (differences) in cholesterol levels
 <ul>
-<li>We usually do after - before if the data are longitudinal ::: columns ::: {.column width=“50%”} Calculate <strong>CI for the mean difference</strong> <span class="math inline">\(\delta\)</span>:</li>
+<li>We usually do after - before if the data are longitudinal</li>
 </ul></li>
 </ul></li>
 </ul>
-<p><span class="math display">\[\bar{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}\]</span></p>
-<p>:::</p>
+<div class="columns">
 <div class="column" style="width:50%;">
+<p>Calculate <strong>CI for the mean difference</strong> <span class="math inline">\(\delta\)</span>:</p>
+<p><span class="math display">\[\bar{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}\]</span></p>
+</div><div class="column" style="width:50%;">
 <p>Run a <strong>hypothesis test</strong></p>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -1620,7 +1613,7 @@ t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
 </div>
 </div>
 </div>
-<p>:::</p>
+</div>
 </section>
 <section id="eda-explore-the-cholesterol-data" class="slide level2">
 <h2>EDA: Explore the cholesterol data</h2>

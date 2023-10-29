@@ -11,6 +11,7 @@ format:
     toc: true
 execute:
   echo: true
+  freeze: auto  # re-render only when source changes
 # editor: visual
 editor_options: 
   chunk_output_type: console
@@ -503,7 +504,7 @@ __Conclusion statement__:
 Using the body temperature example with $H_A: \mu \neq 98.6$
 
 ```{r}
-BodyTemps <- read_csv("../data/BodyTemperatures.csv")
+BodyTemps <- read_csv("data/BodyTemperatures.csv")
 
 (temps_ttest <- t.test(x = BodyTemps$Temperature,
        # alternative = "two.sided",  # default
@@ -660,7 +661,7 @@ $$
   * Cholesterol levels were measured before and after the diet
 
 ```{r}
-chol <- read_csv("../data/chol213.csv")
+chol <- read_csv("data/chol213.csv")
 glimpse(chol)
 chol %>% get_summary_stats(type = "common") %>% gt()
 ```

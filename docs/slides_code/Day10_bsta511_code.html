@@ -792,7 +792,7 @@ H_0 &amp;: \mu = 98.6\\
 <h1><code>t.test</code>: R’s built-in command for testing one mean</h1>
 <p>Using the body temperature example with <span class="math inline">\(H_A: \mu \neq 98.6\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>BodyTemps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/BodyTemperatures.csv"</span>)</span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>BodyTemps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/BodyTemperatures.csv"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>(temps_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(<span class="at">x =</span> BodyTemps<span class="sc">$</span>Temperature,</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>       <span class="co"># alternative = "two.sided",  # default</span></span>
@@ -1533,7 +1533,7 @@ t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>chol <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/chol213.csv"</span>)</span>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>chol <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/chol213.csv"</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(chol)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 24

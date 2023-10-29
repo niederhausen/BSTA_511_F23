@@ -40,24 +40,48 @@ editor_options:
 
 ## Day10    
 
+### Part 1
+
 * Hypothesis testing for one mean (single-sample)
-* Inference for two-sample paired data
 * CIs vs. hypothesis tests
 
+### Part 2
+
+* Inference for two-sample paired data
 
 ### Slides
 
-* [html](../slides/Day10_bsta511.qmd)
+::: columns
+::: {.column width="50%"}
+
+Part 1
+
+* [html](../slides/Day10_part1_bsta511.qmd)
 * [pdf]()
 * Slides with [notes]()
-* [webpage](../slides_md/Day10_bsta511_md.qmd)
+* [webpage](../slides_md/Day10_part1_bsta511_md.qmd)
+
+:::
+::: {.column width="50%"}
+Part 2 (Class discussion)
+
+* [html](../slides/Day10_part2_bsta511.qmd)
+* [pdf]()
+* Slides with [notes]()
+* [webpage](../slides_md/Day10_part2_bsta511_md.qmd)
+:::
+:::
+
+#### Code file
+
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day10_bsta511_code.qmd), [html](../slides_code/Day10_bsta511_code.qmd)
+
 
 ### Class discussion
 
 [Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
 
-* TBD
+* Part 2 of Day 10
 
 ## Homework
 
