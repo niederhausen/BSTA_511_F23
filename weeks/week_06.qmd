@@ -42,6 +42,7 @@ editor_options:
 
 * Hypothesis testing for one mean (single-sample)
 * Inference for two-sample paired data
+* CIs vs. hypothesis tests
 
 
 ### Slides

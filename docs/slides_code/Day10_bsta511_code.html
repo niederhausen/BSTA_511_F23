@@ -234,7 +234,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#load-packages" id="toc-load-packages" class="nav-link active" data-scroll-target="#load-packages">Load packages</a></li>
-  <li><a href="#goals-for-today-sections-4.3-5.1" id="toc-goals-for-today-sections-4.3-5.1" class="nav-link" data-scroll-target="#goals-for-today-sections-4.3-5.1">Goals for today (Sections 4.3 &amp; 5.1)</a></li>
+  <li><a href="#goals-for-today-sections-4.3-5.1" id="toc-goals-for-today-sections-4.3-5.1" class="nav-link" data-scroll-target="#goals-for-today-sections-4.3-5.1">Goals for today (Sections 4.3 &amp; 5.1)</a>
+  <ul class="collapse">
+  <li><a href="#hypothesis-testing-for-one-sample-mean-4.3-5.1" id="toc-hypothesis-testing-for-one-sample-mean-4.3-5.1" class="nav-link" data-scroll-target="#hypothesis-testing-for-one-sample-mean-4.3-5.1">Hypothesis testing for one-sample mean (4.3, 5.1)</a></li>
+  <li><a href="#inference-for-two-sample-paired-data-mean-5.2" id="toc-inference-for-two-sample-paired-data-mean-5.2" class="nav-link" data-scroll-target="#inference-for-two-sample-paired-data-mean-5.2">Inference for two-sample paired data mean (5.2)</a></li>
+  <li><a href="#one-sided-cis" id="toc-one-sided-cis" class="nav-link" data-scroll-target="#one-sided-cis">One-sided CIs</a></li>
+  <li><a href="#cis-vs.-hypothesis-tests-4.3.3" id="toc-cis-vs.-hypothesis-tests-4.3.3" class="nav-link" data-scroll-target="#cis-vs.-hypothesis-tests-4.3.3">CIs vs.&nbsp;hypothesis tests (4.3.3)</a></li>
+  </ul></li>
   <li><a href="#is-98.6f-really-the-mean-healthy-body-temperature" id="toc-is-98.6f-really-the-mean-healthy-body-temperature" class="nav-link" data-scroll-target="#is-98.6f-really-the-mean-healthy-body-temperature">Is 98.6°F really the mean “healthy” body temperature?</a>
   <ul class="collapse">
   <li><a href="#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f" id="toc-question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f" class="nav-link" data-scroll-target="#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f">Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?</a></li>
@@ -375,11 +381,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="goals-for-today-sections-4.3-5.1" class="level1">
-<h1>Goals for today (Sections 4.3 &amp; 5.1)</h1>
+<section id="goals-for-today-sections-4.3-5.1" class="level2">
+<h2 class="anchored" data-anchor-id="goals-for-today-sections-4.3-5.1">Goals for today (Sections 4.3 &amp; 5.1)</h2>
+<section id="hypothesis-testing-for-one-sample-mean-4.3-5.1" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-testing-for-one-sample-mean-4.3-5.1">Hypothesis testing for one-sample mean (4.3, 5.1)</h3>
 <ul>
 <li><p>Introduce hypothesis testing using the case of analyzing a mean from one sample (group)</p></li>
-<li><p>Go through the steps of a hypothesis test:</p>
+<li><p>Steps of a hypothesis test:</p>
 <ol type="1">
 <li>level of significance</li>
 <li>null ( <span class="math inline">\(H_0\)</span> ) and alternative ( <span class="math inline">\(H_A\)</span> ) hypotheses</li>
@@ -387,8 +395,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>p-value</li>
 <li>conclusion</li>
 </ol></li>
-<li><p>Run a t-test in R</p></li>
+<li><p>Run a t-test in R, and <code>tidy()</code> the test output using <code>broom</code> package</p></li>
 </ul>
+</section>
+<section id="inference-for-two-sample-paired-data-mean-5.2" class="level3">
+<h3 class="anchored" data-anchor-id="inference-for-two-sample-paired-data-mean-5.2">Inference for two-sample paired data mean (5.2)</h3>
+<ul>
+<li>Confidence intervals (CIs) and hypothesis testing for the mean of two-sample dependent/paired data</li>
+</ul>
+</section>
+<section id="one-sided-cis" class="level3">
+<h3 class="anchored" data-anchor-id="one-sided-cis">One-sided CIs</h3>
+</section>
+<section id="cis-vs.-hypothesis-tests-4.3.3" class="level3">
+<h3 class="anchored" data-anchor-id="cis-vs.-hypothesis-tests-4.3.3">CIs vs.&nbsp;hypothesis tests (4.3.3)</h3>
+</section>
 </section>
 <section id="is-98.6f-really-the-mean-healthy-body-temperature" class="level1">
 <h1>Is 98.6°F really the mean “healthy” body temperature?</h1>
@@ -405,7 +426,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>In January 2020, a group from Stanford published <em><a href="https://elifesciences.org/articles/49555">Decreasing human body temperature in the United States since the Industrial Revolution</a></em> in eLIFE.
 <ul>
 <li>“determined that mean body temperature in men and women, after adjusting for age, height, weight and, in some models date and time of day, has decreased monotonically by 0.03°C (0.05°F) per birth decade”</li>
+<li>September 2023 update: <em><a href="https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2809098">Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm</a></em> in JAMA Internal Medicine
+<ul>
+<li>Average is 36.64 °C (97.95 °F); “range of mean temperatures for the coolest to the warmest individuals was 36.24 °C to 36.89 °C” (97.23 to 98.40 °F); based 2008-2017 data</li>
+<li>“findings suggest that age, sex, height, weight, and time of day are factors that contribute to variations in individualized normal temperature ranges.”</li>
 </ul></li>
+</ul></li>
+<li>NYT article <a href="../resources/NYT_What_Is_a_Fever_Why_Your_Body_Temperature_May_Be_Cooler_Than_98.6_Degrees.pdf">The Average Human Body Temperature Is Not 98.6 Degrees</a>, Oct 12, 2023, by Dana G. Smith</li>
 </ul>
 <p><strong><span style="color:darkorange">Question:</span> based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?</strong></p>
 <section id="question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f" class="level2">

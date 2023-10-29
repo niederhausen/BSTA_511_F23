@@ -73,23 +73,20 @@ set.seed(456)
 
 * Introduce hypothesis testing using the case of analyzing a mean from one sample (group)
 
-* Go through the steps of a hypothesis test:
+* Steps of a hypothesis test:
     1. level of significance
     1. null ( $H_0$ ) and alternative ( $H_A$ ) hypotheses
     1. test statistic
     1. p-value
     1. conclusion
 
-* Run a t-test in R
-    * `tidy()` the test output using `broom` package
+* Run a t-test in R, and `tidy()` the test output using `broom` package
 
 ### Inference for two-sample paired data mean (5.2)
 
 * Confidence intervals (CIs) and hypothesis testing for the mean of two-sample dependent/paired data
-* Exploratory data analysis (EDA)
-* Inference in R
 
-### One-sdided CIs
+<!-- ### One-sided CIs -->
 
 ### CIs vs. hypothesis tests (4.3.3)
 
@@ -109,9 +106,7 @@ set.seed(456)
         * Average is 36.64 °C (97.95 °F); "range of mean temperatures for the coolest to the warmest individuals was 36.24 °C to 36.89 °C" (97.23 to 98.40 °F); based 2008-2017 data
         * "findings suggest that age, sex, height, weight, and time of day are factors that contribute to variations in individualized normal temperature ranges."
 
-* NYT article [The Average Human Body Temperature Is Not 98.6 Degrees](https://www.nytimes.com/2023/10/12/well/live/fever-normal-body-temperature.html?unlocked_article_code=1.6Uw.Caq_.XlPPcRKU84Wk&smid=url-share), Oct 12, 2023, by Dana G. Smith
-
-
+* NYT article [The Average Human Body Temperature Is Not 98.6 Degrees](../resources/NYT_What_Is_a_Fever_Why_Your_Body_Temperature_May_Be_Cooler_Than_98.6_Degrees.pdf), Oct 12, 2023, by Dana G. Smith
 
 __[Question:]{style="color:darkorange"} based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?__
 
@@ -122,10 +117,10 @@ __[Question:]{style="color:darkorange"} based on the 1992 JAMA data, is there ev
 
 Two approaches to answer this question:
 
-1. Create a __confidence interval (CI)__ for the population mean $\mu$ and determine whether 98.6°F is inside the CI or not.
+1. Create a __[confidence interval (CI)]{style="color:purple"}__ for the population mean $\mu$ and determine whether 98.6°F is inside the CI or not.
     * is 98.6°F a plausible value?
 
-2. Run a __hypothesis test__ to see if there is evidence that the population mean $\mu$ is _significantly different_ from 98.6°F or not.
+2. Run a __[hypothesis test]{style="color:green"}__ to see if there is evidence that the population mean $\mu$ is _significantly different_ from 98.6°F or not.
     * This does not give us a range of plausible values for the population mean $\mu$.
     
     * Instead, we calculate a _test statistic_ and _p-value_ 
@@ -135,7 +130,7 @@ Two approaches to answer this question:
 
 
 
-## Approach 1: Create a 95% CI for the population mean body temperature
+## Approach 1: Create a [95% C I]{style="color:purple"} for the population mean body temperature
 
 * Use data based on the results from the 1992 JAMA study
     * The original dataset used in the JAMA article is not available
@@ -157,10 +152,12 @@ sd <- 0.733
 ```
 ::: columns
 ::: {.column width="50%"}
-$$\bar{x} \pm t^*\cdot\frac{s}{\sqrt{n}}\\
-98.25 \pm `r round(tstar,3)`\cdot\frac{0.733}{\sqrt{130}}\\
-98.25 \pm `r round(moe,3)`\\
-(`r round(LB, 3)`, `r round(UB, 3)`)$$
+\begin{align}
+\bar{x} &\pm t^*\cdot\frac{s}{\sqrt{n}}\\
+98.25 &\pm `r round(tstar,3)`\cdot\frac{0.733}{\sqrt{130}}\\
+98.25 &\pm `r round(moe,3)`\\
+(`r round(LB, 3)`&, `r round(UB, 3)`)
+\end{align}
 
 :::
 
@@ -176,7 +173,7 @@ We are 95% that the (population) mean body temperature is between `r round(LB, 3
 
 
 
-## Approach 2: Hypothesis Test 
+## Approach 2: [Hypothesis Test]{style="color:green"} 
 
 From before: 
 
@@ -195,29 +192,26 @@ __How do we calculate a _test statistic_ and _p-value_?__
 
 ## Recall the sampling distribution of the mean
 
-From the __Central Limit Theorem (CLT)__, we know that
+From the __[Central Limit Theorem (CLT)]{style="color:darkorange"}__, we know that
 
-* For **"large" sample sizes** ( $n\geq 30$ ),
-    * the __sampling distribution__ of the sample mean
+* For **["large" sample sizes]{style="color:cornflowerblue"}** ( $n\geq 30$ ),
+    * the [__sampling distribution__ of the sample mean]{style="color:green"}
     * can be approximated by a __normal distribution__,with 
       * _mean_ equal to the _population mean_ value $\mu$, and 
       * _standard deviation_ $\frac{\sigma}{\sqrt{n}}$
 
 $$\bar{X}\sim N\Big(\mu_{\bar{X}} = \mu, \sigma_{\bar{X}}= \frac{\sigma}{\sqrt{n}}\Big)$$
 
-* For **small sample sizes**, if the population is known to be normally distributed, then
-    * the __sampling distribution__ of the sample mean
-    * is a __normal distribution__,with 
-      * _mean_ equal to the _population mean_ value $\mu$, and 
-      * _standard deviation_ $\frac{\sigma}{\sqrt{n}}$
+* For **[small sample sizes]{style="color:cornflowerblue"}**, if the population is known to be normally distributed, then
+    * the same result holds
 
 
 
 ## Case 1: suppose we know the population sd $\sigma$
 
-* [How likely we are to observe the sample mean $\bar{x}$
-      * or a more extreme sample mean 
-      * assuming that the population mean $\mu$ is 98.6°F?]{style="color:green"}
+* [How likely we are to observe the sample mean $\bar{x}$ ,]{style="color:green"}
+    * [or a more extreme sample mean, ]{style="color:green"}
+    * [assuming that the population mean $\mu$ is 98.6°F?]{style="color:green"}
 * Use $\bar{x} = 98.25$, $\sigma=0.733$, and $n=130$
 
 ```{r}

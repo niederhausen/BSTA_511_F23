@@ -5240,7 +5240,7 @@
     "href": "slides/Day10_bsta511.html#goals-for-today-sections-4.3-5.1",
     "title": "DRAFT Day 10: Hypothesis testing for  one-sample mean (4.3, 5.1) &  two-sample paired data mean (5.2)",
     "section": "Goals for today (Sections 4.3 & 5.1)",
-    "text": "Goals for today (Sections 4.3 & 5.1)\nHypothesis testing for one-sample mean (4.3, 5.1)\n\nIntroduce hypothesis testing using the case of analyzing a mean from one sample (group)\nGo through the steps of a hypothesis test:\n\nlevel of significance\nnull ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\ntest statistic\np-value\nconclusion\n\nRun a t-test in R\n\ntidy() the test output using broom package\n\n\nInference for two-sample paired data mean (5.2)\n\nConfidence intervals (CIs) and hypothesis testing for the mean of two-sample dependent/paired data\nExploratory data analysis (EDA)\nInference in R\n\nOne-sdided CIs\nCIs vs. hypothesis tests (4.3.3)"
+    "text": "Goals for today (Sections 4.3 & 5.1)\nHypothesis testing for one-sample mean (4.3, 5.1)\n\nIntroduce hypothesis testing using the case of analyzing a mean from one sample (group)\nSteps of a hypothesis test:\n\nlevel of significance\nnull ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\ntest statistic\np-value\nconclusion\n\nRun a t-test in R, and tidy() the test output using broom package\n\nInference for two-sample paired data mean (5.2)\n\nConfidence intervals (CIs) and hypothesis testing for the mean of two-sample dependent/paired data\n\n\nCIs vs. hypothesis tests (4.3.3)"
   },
   {
     "objectID": "slides/Day10_bsta511.html#is-98.6f-really-the-mean-healthy-body-temperature",
@@ -5261,7 +5261,7 @@
     "href": "slides/Day10_bsta511.html#approach-1-create-a-95-ci-for-the-population-mean-body-temperature",
     "title": "DRAFT Day 10: Hypothesis testing for  one-sample mean (4.3, 5.1) &  two-sample paired data mean (5.2)",
     "section": "Approach 1: Create a 95% CI for the population mean body temperature",
-    "text": "Approach 1: Create a 95% CI for the population mean body temperature\n\nUse data based on the results from the 1992 JAMA study\n\nThe original dataset used in the JAMA article is not available\nHowever, Allen Shoemaker from Calvin College created a dataset with the same summary statistics as in the JAMA article, which we will use:\n\n\n\\[\\bar{x} = 98.25,~s=0.733,~n=130\\] CI for \\(\\mu\\):\n\n\n\\[\\bar{x} \\pm t^*\\cdot\\frac{s}{\\sqrt{n}}\\\\\n98.25 \\pm 1.979\\cdot\\frac{0.733}{\\sqrt{130}}\\\\\n98.25 \\pm 0.127\\\\\n(98.123, 98.377)\\]\n\nUsed \\(t^*\\) = qt(.975, df=129)\nConclusion:\nWe are 95% that the (population) mean body temperature is between 98.123°F and 98.377°F.\n\nHow does the CI compare to 98.6°F?"
+    "text": "Approach 1: Create a 95% CI for the population mean body temperature\n\nUse data based on the results from the 1992 JAMA study\n\nThe original dataset used in the JAMA article is not available\nHowever, Allen Shoemaker from Calvin College created a dataset with the same summary statistics as in the JAMA article, which we will use:\n\n\n\\[\\bar{x} = 98.25,~s=0.733,~n=130\\] CI for \\(\\mu\\):\n\n\n\\[\\begin{align}\n\\bar{x} &\\pm t^*\\cdot\\frac{s}{\\sqrt{n}}\\\\\n98.25 &\\pm 1.979\\cdot\\frac{0.733}{\\sqrt{130}}\\\\\n98.25 &\\pm 0.127\\\\\n(98.123&, 98.377)\n\\end{align}\\]\n\nUsed \\(t^*\\) = qt(.975, df=129)\nConclusion:\nWe are 95% that the (population) mean body temperature is between 98.123°F and 98.377°F.\n\nHow does the CI compare to 98.6°F?"
   },
   {
     "objectID": "slides/Day10_bsta511.html#approach-2-hypothesis-test",
@@ -5275,14 +5275,14 @@
     "href": "slides/Day10_bsta511.html#recall-the-sampling-distribution-of-the-mean",
     "title": "DRAFT Day 10: Hypothesis testing for  one-sample mean (4.3, 5.1) &  two-sample paired data mean (5.2)",
     "section": "Recall the sampling distribution of the mean",
-    "text": "Recall the sampling distribution of the mean\nFrom the Central Limit Theorem (CLT), we know that\n\nFor “large” sample sizes ( \\(n\\geq 30\\) ),\n\nthe sampling distribution of the sample mean\ncan be approximated by a normal distribution,with\n\nmean equal to the population mean value \\(\\mu\\), and\nstandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)\n\n\n\n\\[\\bar{X}\\sim N\\Big(\\mu_{\\bar{X}} = \\mu, \\sigma_{\\bar{X}}= \\frac{\\sigma}{\\sqrt{n}}\\Big)\\]\n\nFor small sample sizes, if the population is known to be normally distributed, then\n\nthe sampling distribution of the sample mean\nis a normal distribution,with\n\nmean equal to the population mean value \\(\\mu\\), and\nstandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)"
+    "text": "Recall the sampling distribution of the mean\nFrom the Central Limit Theorem (CLT), we know that\n\nFor “large” sample sizes ( \\(n\\geq 30\\) ),\n\nthe sampling distribution of the sample mean\ncan be approximated by a normal distribution,with\n\nmean equal to the population mean value \\(\\mu\\), and\nstandard deviation \\(\\frac{\\sigma}{\\sqrt{n}}\\)\n\n\n\n\\[\\bar{X}\\sim N\\Big(\\mu_{\\bar{X}} = \\mu, \\sigma_{\\bar{X}}= \\frac{\\sigma}{\\sqrt{n}}\\Big)\\]\n\nFor small sample sizes, if the population is known to be normally distributed, then\n\nthe same result holds"
   },
   {
     "objectID": "slides/Day10_bsta511.html#case-1-suppose-we-know-the-population-sd-sigma",
     "href": "slides/Day10_bsta511.html#case-1-suppose-we-know-the-population-sd-sigma",
     "title": "DRAFT Day 10: Hypothesis testing for  one-sample mean (4.3, 5.1) &  two-sample paired data mean (5.2)",
     "section": "Case 1: suppose we know the population sd \\(\\sigma\\)",
-    "text": "Case 1: suppose we know the population sd \\(\\sigma\\)\n\nHow likely we are to observe the sample mean \\(\\bar{x}\\) * or a more extreme sample mean * assuming that the population mean \\(\\mu\\) is 98.6°F?\nUse \\(\\bar{x} = 98.25\\), \\(\\sigma=0.733\\), and \\(n=130\\)"
+    "text": "Case 1: suppose we know the population sd \\(\\sigma\\)\n\nHow likely we are to observe the sample mean \\(\\bar{x}\\) ,\n\nor a more extreme sample mean,\nassuming that the population mean \\(\\mu\\) is 98.6°F?\n\nUse \\(\\bar{x} = 98.25\\), \\(\\sigma=0.733\\), and \\(n=130\\)"
   },
   {
     "objectID": "slides/Day10_bsta511.html#case-2-we-dont-know-the-population-sd-sigma",
@@ -5765,7 +5765,7 @@
     "href": "weeks/week_06.html#day10",
     "title": "Week 6",
     "section": "Day10",
-    "text": "Day10\n\nHypothesis testing for one mean (single-sample)\nInference for two-sample paired data\n\n\nSlides\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\n\n\n\nClass discussion\nClass discussion Google doc link\n\nTBD"
+    "text": "Day10\n\nHypothesis testing for one mean (single-sample)\nInference for two-sample paired data\nCIs vs. hypothesis tests\n\n\nSlides\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\n\n\n\nClass discussion\nClass discussion Google doc link\n\nTBD"
   },
   {
     "objectID": "weeks/week_06.html#homework",
@@ -6095,5 +6095,19 @@
     "title": "HW 5: BSTA 511-611 F23",
     "section": "5.22 DDT exposure",
     "text": "5.22 DDT exposure"
+  },
+  {
+    "objectID": "slides/Day10_bsta511.html#approach-1-create-a-95-c-i-for-the-population-mean-body-temperature",
+    "href": "slides/Day10_bsta511.html#approach-1-create-a-95-c-i-for-the-population-mean-body-temperature",
+    "title": "DRAFT Day 10: Hypothesis testing for  one-sample mean (4.3, 5.1) &  two-sample paired data mean (5.2)",
+    "section": "Approach 1: Create a 95% C I for the population mean body temperature",
+    "text": "Approach 1: Create a 95% C I for the population mean body temperature\n\nUse data based on the results from the 1992 JAMA study\n\nThe original dataset used in the JAMA article is not available\nHowever, Allen Shoemaker from Calvin College created a dataset with the same summary statistics as in the JAMA article, which we will use:\n\n\n\\[\\bar{x} = 98.25,~s=0.733,~n=130\\] CI for \\(\\mu\\):\n\n\n\\[\\begin{align}\n\\bar{x} &\\pm t^*\\cdot\\frac{s}{\\sqrt{n}}\\\\\n98.25 &\\pm 1.979\\cdot\\frac{0.733}{\\sqrt{130}}\\\\\n98.25 &\\pm 0.127\\\\\n(98.123&, 98.377)\n\\end{align}\\]\n\nUsed \\(t^*\\) = qt(.975, df=129)\nConclusion:\nWe are 95% that the (population) mean body temperature is between 98.123°F and 98.377°F.\n\nHow does the CI compare to 98.6°F?"
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#goals-for-today-sections-4.3-5.1",
+    "href": "slides_code/Day10_bsta511_code.html#goals-for-today-sections-4.3-5.1",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "Goals for today (Sections 4.3 & 5.1)",
+    "text": "Goals for today (Sections 4.3 & 5.1)\n\nHypothesis testing for one-sample mean (4.3, 5.1)\n\nIntroduce hypothesis testing using the case of analyzing a mean from one sample (group)\nSteps of a hypothesis test:\n\nlevel of significance\nnull ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\ntest statistic\np-value\nconclusion\n\nRun a t-test in R, and tidy() the test output using broom package\n\n\n\nInference for two-sample paired data mean (5.2)\n\nConfidence intervals (CIs) and hypothesis testing for the mean of two-sample dependent/paired data\n\n\n\nOne-sided CIs\n\n\nCIs vs. hypothesis tests (4.3.3)"
   }
 ]

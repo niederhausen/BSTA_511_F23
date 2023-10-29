@@ -47,18 +47,28 @@ set.seed(456)
   - seeing whether it has been checked off or not
 
 
-# Goals for today (Sections 4.3 & 5.1)
+## Goals for today (Sections 4.3 & 5.1)
+
+### Hypothesis testing for one-sample mean (4.3, 5.1) 
 
 * Introduce hypothesis testing using the case of analyzing a mean from one sample (group)
 
-* Go through the steps of a hypothesis test:
+* Steps of a hypothesis test:
     1. level of significance
     1. null ( $H_0$ ) and alternative ( $H_A$ ) hypotheses
     1. test statistic
     1. p-value
     1. conclusion
 
-* Run a t-test in R
+* Run a t-test in R, and `tidy()` the test output using `broom` package
+
+### Inference for two-sample paired data mean (5.2)
+
+* Confidence intervals (CIs) and hypothesis testing for the mean of two-sample dependent/paired data
+
+### One-sided CIs
+
+### CIs vs. hypothesis tests (4.3.3)
 
 
 
@@ -73,7 +83,11 @@ set.seed(456)
 
 * In January 2020, a group from Stanford published _[Decreasing human body temperature in the United States since the Industrial Revolution](https://elifesciences.org/articles/49555)_ in eLIFE.
     * "determined that mean body temperature in men and women, after adjusting for age, height, weight and, in some models date and time of day, has decreased monotonically by 0.03°C (0.05°F) per birth decade"
+    * September 2023 update: _[Defining Usual Oral Temperature Ranges in Outpatients Using an Unsupervised Learning Algorithm](https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2809098)_ in JAMA Internal Medicine
+        * Average is 36.64 °C (97.95 °F); "range of mean temperatures for the coolest to the warmest individuals was 36.24 °C to 36.89 °C" (97.23 to 98.40 °F); based 2008-2017 data
+        * "findings suggest that age, sex, height, weight, and time of day are factors that contribute to variations in individualized normal temperature ranges."
 
+* NYT article [The Average Human Body Temperature Is Not 98.6 Degrees](../resources/NYT_What_Is_a_Fever_Why_Your_Body_Temperature_May_Be_Cooler_Than_98.6_Degrees.pdf), Oct 12, 2023, by Dana G. Smith
 
 __[Question:]{style="color:darkorange"} based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?__
 
