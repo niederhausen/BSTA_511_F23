@@ -1,5 +1,5 @@
 ---
-title: "DRAFT: Day 10 Part 1: <br> Hypothesis testing for <br> mean from one-sample <br> (Sections 4.3, 5.1)"
+title: "Day 10 Part 1: <br> Hypothesis testing for <br> mean from one-sample <br> (Sections 4.3, 5.1)"
 subtitle: "BSTA 511/611"
 author: "Meike Niederhausen, PhD"
 institute: "OHSU-PSU School of Public Health"
@@ -135,7 +135,7 @@ Other bonuses include
 
 
 We will discuss how to use projects later in today's slides when loading a dataset.  
-See file [Projects in RStudio](../resources/Projects_in_R.qmd) for more information.
+See file [Projects in RStudio](../resources/Projects_in_R.html) for more information.
 
 :::
 :::
@@ -655,22 +655,100 @@ __Conclusion statement__:
 
 # Running a t-test in R
 
+* Working directory
 * Load a dataset - need to specify location of dataset
 * R projects
 * Run a t-test in R
 * `tidy()` the test output using `broom` package
 
+## Working directory
+
+* In order to load a dataset from a file, you need to tell R where the dataset is located
+* To do this you also need to know the location from which R is working, i.e. your __working directory__
+* You can figure out your working directory by running the `getwd()` function.
+
+```{r}
+getwd()
+```
+
+* Above is the working directory of this slides file
+    * _In this case, this is NOT the location of the actual qmd file though!_
+
+* To make it easier to juggle the working directory, the location of your qmd file, and the location of the data, 
+    * [I highly recommend using __R Projects__!]{style="color:darkred"}
+
+## R projects
+
+* I *highly, highly, HIGHLY* recommend using R Projects to organize your analyses and make it easier to load data files and also save output.
+* When you create an R Project on your computer, the Project is associated with the folder (directory) you created it in. 
+  * This folder becomes the "root" of your working directory, and RStudio's point of reference from where to load files from and to. 
+* I create separate Projects for every analysis project and every class I teach. 
+* You can run multiple sessions of RStudio by opening different Projects, and the environments (or working directory) of each are working independently of each other. 
+
+:::{.callout-note}
+* Although we are using Quarto files, 
+    * I will show how to set up and use a __"regular" R Project__
+    * instead of "Quarto Project"
+* Quarto Projects include extra features and thus complexity. Once you are used to how regular R Projects work, you can try out a Quarto Project. 
+:::
+
+## How to create an R Project
+
+* Demonstration in class recording
+* Posit's (RStudio's) directions for creating Projects
+  * [https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects)
+
+* See file [Projects in RStudio](../slides_code/Projects_in_R.html) for more information on R Projects.
+
+
+## Load the dataset
+
+* The data are in a csv file called `BodyTemperatures.csv`
+* You need to tell R where the dataset is located!
+* I recommend saving all datasets in a folder called data. 
+    * The code I will be providing you will be set up this way.
+
+* To make it easier to specify where the dataset is located, I recommend using the `here()` function from the `here` package: `here::here()`.
+
+```{r}
+# read_csv() is a function from the readr package that is a part of the tidyverse
+library(here)   # first install this package
+
+BodyTemps <- read_csv(here::here("data", "BodyTemperatures.csv"))
+#                     location: look in "data" folder
+#                               for the file "BodyTemperatures.csv"
+
+glimpse(BodyTemps)
+```
+
+## `here::here()`
+
+General use of `here::here()`
+
+`here::here("folder_name", "filename")`
+
+::: columns
+::: {.column width="50%"}
+Resources for `here::here()`:
+
+* [how to use the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/) (Jenny Richmond)
+* [Ode to the here package](https://github.com/jennybc/here_here) (Jenny Bryan)
+
+[Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) (Jenny Bryan)
+:::
+::: {.column width="50%"}
+![[Artwork by @allison_horst](https://allisonhorst.com/r-packages-functions)](/img_slides/horst_here.png){fig-align="center"}
+:::
+:::
+
 
 ## `t.test`: base R's function for testing one mean 
 
 * Use the body temperature example with $H_A: \mu \neq 98.6$
-* The data are in a csv file called `BodyTemperatures.csv`
-* You need to tell R where the dataset is located!
-
+* We called the dataset `BodyTemps` when we loaded it
 
 ```{r}
-# read_csv() is a function from the readr package that is a part of the tidyverse
-BodyTemps <- read_csv("data/BodyTemperatures.csv")
+glimpse(BodyTemps)
 
 (temps_ttest <- t.test(x = BodyTemps$Temperature,
        # alternative = "two.sided",  # default
