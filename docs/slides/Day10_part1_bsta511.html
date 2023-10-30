@@ -12,7 +12,7 @@
 
   <meta name="author" content="Meike Niederhausen, PhD">
   <meta name="dcterms.date" content="2023-11-01">
-  <title>BSTA 511/611 Fall 2023 - DRAFT: Day 10 Part 1:  Hypothesis testing for  mean from one-sample  (Sections 4.3, 5.1)</title>
+  <title>BSTA 511/611 Fall 2023 - Day 10 Part 1:  Hypothesis testing for  mean from one-sample  (Sections 4.3, 5.1)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -394,7 +394,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">DRAFT: Day 10 Part 1: <br> Hypothesis testing for <br> mean from one-sample <br> (Sections 4.3, 5.1)</h1>
+  <h1 class="title">Day 10 Part 1: <br> Hypothesis testing for <br> mean from one-sample <br> (Sections 4.3, 5.1)</h1>
   <p class="subtitle">BSTA 511/611</p>
 
 <div class="quarto-title-authors">
@@ -491,7 +491,7 @@ Meike Niederhausen, PhD
 </ul>
 <p><br></p>
 <p>We will discuss how to use projects later in today’s slides when loading a dataset.<br>
-See file <a href="../resources/Projects_in_R.qmd">Projects in RStudio</a> for more information.</p>
+See file <a href="../resources/Projects_in_R.html">Projects in RStudio</a> for more information.</p>
 </div>
 </div>
 </section>
@@ -918,26 +918,149 @@ H_0 &amp;: \mu = 98.6\\
 <section id="running-a-t-test-in-r" class="title-slide slide level1 center">
 <h1>Running a t-test in R</h1>
 <ul>
+<li>Working directory</li>
 <li>Load a dataset - need to specify location of dataset</li>
 <li>R projects</li>
 <li>Run a t-test in R</li>
 <li><code>tidy()</code> the test output using <code>broom</code> package</li>
 </ul>
 </section>
+<section id="working-directory" class="slide level2">
+<h2>Working directory</h2>
+<ul>
+<li>In order to load a dataset from a file, you need to tell R where the dataset is located</li>
+<li>To do this you also need to know the location from which R is working, i.e.&nbsp;your <strong>working directory</strong></li>
+<li>You can figure out your working directory by running the <code>getwd()</code> function.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "/Users/niederha/Library/CloudStorage/OneDrive-OregonHealth&amp;ScienceUniversity/teaching/BSTA 511/F23/0_webpage/BSTA_511_F23"</code></pre>
+</div>
+</div>
+<ul>
+<li>Above is the working directory of this slides file
+<ul>
+<li><em>In this case, this is NOT the location of the actual qmd file though!</em></li>
+</ul></li>
+<li>To make it easier to juggle the working directory, the location of your qmd file, and the location of the data,
+<ul>
+<li><span style="color:darkred">I highly recommend using <strong>R Projects</strong>!</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="r-projects" class="slide level2">
+<h2>R projects</h2>
+<ul>
+<li>I <em>highly, highly, HIGHLY</em> recommend using R Projects to organize your analyses and make it easier to load data files and also save output.</li>
+<li>When you create an R Project on your computer, the Project is associated with the folder (directory) you created it in.
+<ul>
+<li>This folder becomes the “root” of your working directory, and RStudio’s point of reference from where to load files from and to.</li>
+</ul></li>
+<li>I create separate Projects for every analysis project and every class I teach.</li>
+<li>You can run multiple sessions of RStudio by opening different Projects, and the environments (or working directory) of each are working independently of each other.</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Although we are using Quarto files,
+<ul>
+<li>I will show how to set up and use a <strong>“regular” R Project</strong></li>
+<li>instead of “Quarto Project”</li>
+</ul></li>
+<li>Quarto Projects include extra features and thus complexity. Once you are used to how regular R Projects work, you can try out a Quarto Project.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="how-to-create-an-r-project" class="slide level2">
+<h2>How to create an R Project</h2>
+<ul>
+<li>Demonstration in class recording</li>
+<li>Posit’s (RStudio’s) directions for creating Projects
+<ul>
+<li><a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects">https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects</a></li>
+</ul></li>
+<li>See file <a href="../slides_code/Projects_in_R.html">Projects in RStudio</a> for more information on R Projects.</li>
+</ul>
+</section>
+<section id="load-the-dataset" class="slide level2">
+<h2>Load the dataset</h2>
+<ul>
+<li>The data are in a csv file called <code>BodyTemperatures.csv</code></li>
+<li>You need to tell R where the dataset is located!</li>
+<li>I recommend saving all datasets in a folder called data.
+<ul>
+<li>The code I will be providing you will be set up this way.</li>
+</ul></li>
+<li>To make it easier to specify where the dataset is located, I recommend using the <code>here()</code> function from the <code>here</code> package: <code>here::here()</code>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># read_csv() is a function from the readr package that is a part of the tidyverse</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">library</span>(here)   <span class="co"># first install this package</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a>BodyTemps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"BodyTemperatures.csv"</span>))</span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co">#                     location: look in "data" folder</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="co">#                               for the file "BodyTemperatures.csv"</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="fu">glimpse</span>(BodyTemps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 130
+Columns: 3
+$ Temperature &lt;dbl&gt; 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 97.4…
+$ Gender      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…</code></pre>
+</div>
+</div>
+</section>
+<section id="herehere" class="slide level2">
+<h2><code>here::here()</code></h2>
+<p>General use of <code>here::here()</code></p>
+<p><code>here::here("folder_name", "filename")</code></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Resources for <code>here::here()</code>:</p>
+<ul>
+<li><a href="http://jenrichmond.rbind.io/post/how-to-use-the-here-package/">how to use the <code>here</code> package</a> (Jenny Richmond)</li>
+<li><a href="https://github.com/jennybc/here_here">Ode to the here package</a> (Jenny Bryan)</li>
+</ul>
+<p><a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-oriented workflow</a> (Jenny Bryan)</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/horst_here.png"></p>
+<figcaption><a href="https://allisonhorst.com/r-packages-functions">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="t.test-base-rs-function-for-testing-one-mean" class="slide level2">
 <h2><code>t.test</code>: base R’s function for testing one mean</h2>
 <ul>
 <li>Use the body temperature example with <span class="math inline">\(H_A: \mu \neq 98.6\)</span></li>
-<li>The data are in a csv file called <code>BodyTemperatures.csv</code></li>
-<li>You need to tell R where the dataset is located!</li>
+<li>We called the dataset <code>BodyTemps</code> when we loaded it</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># read_csv() is a function from the readr package that is a part of the tidyverse</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>BodyTemps <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/BodyTemperatures.csv"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a>(temps_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(<span class="at">x =</span> BodyTemps<span class="sc">$</span>Temperature,</span>
-<span id="cb3-5"><a href="#cb3-5"></a>       <span class="co"># alternative = "two.sided",  # default</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>       <span class="at">mu =</span> <span class="fl">98.6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">glimpse</span>(BodyTemps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 130
+Columns: 3
+$ Temperature &lt;dbl&gt; 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 97.4…
+$ Gender      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>(temps_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(<span class="at">x =</span> BodyTemps<span class="sc">$</span>Temperature,</span>
+<span id="cb9-2"><a href="#cb9-2"></a>       <span class="co"># alternative = "two.sided",  # default</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>       <span class="at">mu =</span> <span class="fl">98.6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     One Sample t-test
@@ -961,8 +1084,8 @@ mean of x
 <li>Combined with the <code>gt()</code> function from the <code>gt</code> package, we get a nice table</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="mecfuynzio" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -1442,7 +1565,7 @@ mean of x
 <div class="column" style="width:50%;">
 <p>Using base R’s <code>$</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">tidy</span>(temps_ttest)<span class="sc">$</span>p.value  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">tidy</span>(temps_ttest)<span class="sc">$</span>p.value  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.410632e-07</code></pre>
 </div>
@@ -1451,7 +1574,7 @@ mean of x
 </div><div class="column" style="width:50%;">
 <p>Or the <code>tidyverse</code> way: using <code>pull()</code> from <code>dplyr</code> package</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(p.value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">tidy</span>(temps_ttest) <span class="sc">%&gt;%</span> <span class="fu">pull</span>(p.value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.410632e-07</code></pre>
 </div>
