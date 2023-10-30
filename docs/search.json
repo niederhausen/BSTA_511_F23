@@ -5134,8 +5134,8 @@
     "objectID": "slides_code/Day10_bsta511_code.html#tidy-the-t.test-output",
     "href": "slides_code/Day10_bsta511_code.html#tidy-the-t.test-output",
     "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
-    "section": "tidy the t.test output",
-    "text": "tidy the t.test output\n\n# use tidy command from broom package for briefer output that's a tibble\ntidy(temps_ttest) %&gt;% \n  gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    98.24923\n-5.454823\n2.410632e-07\n129\n98.122\n98.37646\nOne Sample t-test\ntwo.sided\n  \n  \n  \n\n\n\n\n\nThe tidy() output is a tibble, and so we can pull specific values from it:\n\n\n# base R\ntidy(temps_ttest)$p.value  \n\n[1] 2.410632e-07\n\n\n\n# or with tidyverse:\ntidy(temps_ttest) %&gt;% pull(p.value)\n\n[1] 2.410632e-07"
+    "section": "tidy() the t.test output",
+    "text": "tidy() the t.test output\n\nUse the tidy() function from the broom package for briefer output in table format that’s stored as a tibble\nCombined with the gt() function from the gt package, we get a nice table\n\n\ntidy(temps_ttest) %&gt;% \n  gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    98.24923\n-5.454823\n2.410632e-07\n129\n98.122\n98.37646\nOne Sample t-test\ntwo.sided\n  \n  \n  \n\n\n\n\n\nSince the tidy() output is a tibble, we can easily pull() specific values from it:\n\n\n\nUsing base R’s $\n\ntidy(temps_ttest)$p.value  \n\n[1] 2.410632e-07\n\n\nAdvantage: quick and easy\n\nOr the tidyverse way: using pull() from dplyr package\n\ntidy(temps_ttest) %&gt;% pull(p.value)\n\n[1] 2.410632e-07\n\n\nAdvantage: can use together with piping (%&gt;%) other functions"
   },
   {
     "objectID": "slides_code/Day10_bsta511_code.html#steps-in-a-hypothesis-test-1",
@@ -6823,5 +6823,61 @@
     "title": "Day 10 Part 1:  Hypothesis testing for  mean from one-sample  (Sections 4.3, 5.1)",
     "section": "here::here()",
     "text": "here::here()\nGeneral use of here::here()\nhere::here(\"folder_name\", \"filename\")\n\n\nResources for here::here():\n\nhow to use the here package (Jenny Richmond)\nOde to the here package (Jenny Bryan)\n\nProject-oriented workflow (Jenny Bryan)\n\n\n\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#moritzs-tip-of-the-day-use-r-projects-to-organize-analyses",
+    "href": "slides_code/Day10_bsta511_code.html#moritzs-tip-of-the-day-use-r-projects-to-organize-analyses",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "MoRitz’s tip of the day: use R projects to organize analyses",
+    "text": "MoRitz’s tip of the day: use R projects to organize analyses\nMoRitz loves using R projects to\n\norganize analyses and\nmake it easier to load data files\nand also save output\n\nOther bonuses include\n\nmaking to it easier to collaborate with others,\nincluding yourself when accessing files from different computers.\n\n\nWe will discuss how to use projects later in today’s slides when loading a dataset.\nSee file Projects in RStudio for more information."
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#working-directory",
+    "href": "slides_code/Day10_bsta511_code.html#working-directory",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "Working directory",
+    "text": "Working directory\n\nIn order to load a dataset from a file, you need to tell R where the dataset is located\nTo do this you also need to know the location from which R is working, i.e. your working directory\nYou can figure out your working directory by running the getwd() function.\n\n\ngetwd()\n\n[1] \"/Users/niederha/Library/CloudStorage/OneDrive-OregonHealth&ScienceUniversity/teaching/BSTA 511/F23/0_webpage/BSTA_511_F23\"\n\n\n\nAbove is the working directory of this slides file\n\nIn this case, this is NOT the location of the actual qmd file though!\n\nTo make it easier to juggle the working directory, the location of your qmd file, and the location of the data,\n\nI highly recommend using R Projects!"
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#r-projects",
+    "href": "slides_code/Day10_bsta511_code.html#r-projects",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "R projects",
+    "text": "R projects\n\nI highly, highly, HIGHLY recommend using R Projects to organize your analyses and make it easier to load data files and also save output.\nWhen you create an R Project on your computer, the Project is associated with the folder (directory) you created it in.\n\nThis folder becomes the “root” of your working directory, and RStudio’s point of reference from where to load files from and to.\n\nI create separate Projects for every analysis project and every class I teach.\nYou can run multiple sessions of RStudio by opening different Projects, and the environments (or working directory) of each are working independently of each other.\n\n\n\n\n\n\n\nNote\n\n\n\n\nAlthough we are using Quarto files,\n\nI will show how to set up and use a “regular” R Project\ninstead of “Quarto Project”\n\nQuarto Projects include extra features and thus complexity. Once you are used to how regular R Projects work, you can try out a Quarto Project."
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#how-to-create-an-r-project",
+    "href": "slides_code/Day10_bsta511_code.html#how-to-create-an-r-project",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "How to create an R Project",
+    "text": "How to create an R Project\n\nDemonstration in class recording\nPosit’s (RStudio’s) directions for creating Projects\n\nhttps://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects\n\nSee file Projects in RStudio for more information on R Projects."
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#load-the-dataset",
+    "href": "slides_code/Day10_bsta511_code.html#load-the-dataset",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "Load the dataset",
+    "text": "Load the dataset\n\nThe data are in a csv file called BodyTemperatures.csv\nYou need to tell R where the dataset is located!\nI recommend saving all datasets in a folder called data.\n\nThe code I will be providing you will be set up this way.\n\nTo make it easier to specify where the dataset is located, I recommend using the here() function from the here package: here::here().\n\n\n# read_csv() is a function from the readr package that is a part of the tidyverse\nlibrary(here)   # first install this package\n\nBodyTemps &lt;- read_csv(here::here(\"data\", \"BodyTemperatures.csv\"))\n#                     location: look in \"data\" folder\n#                               for the file \"BodyTemperatures.csv\"\n\nglimpse(BodyTemps)\n\nRows: 130\nColumns: 3\n$ Temperature &lt;dbl&gt; 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 97.4…\n$ Gender      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…"
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#herehere",
+    "href": "slides_code/Day10_bsta511_code.html#herehere",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "here::here()",
+    "text": "here::here()\nGeneral use of here::here()\nhere::here(\"folder_name\", \"filename\")\n\n\nResources for here::here():\n\nhow to use the here package (Jenny Richmond)\nOde to the here package (Jenny Bryan)\n\nProject-oriented workflow (Jenny Bryan)\n\n\n\n\nArtwork by @allison_horst"
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#t.test-base-rs-function-for-testing-one-mean",
+    "href": "slides_code/Day10_bsta511_code.html#t.test-base-rs-function-for-testing-one-mean",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "t.test: base R’s function for testing one mean",
+    "text": "t.test: base R’s function for testing one mean\n\nUse the body temperature example with \\(H_A: \\mu \\neq 98.6\\)\nWe called the dataset BodyTemps when we loaded it\n\n\nglimpse(BodyTemps)\n\nRows: 130\nColumns: 3\n$ Temperature &lt;dbl&gt; 96.3, 96.7, 96.9, 97.0, 97.1, 97.1, 97.1, 97.2, 97.3, 97.4…\n$ Gender      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70, 75…\n\n(temps_ttest &lt;- t.test(x = BodyTemps$Temperature,\n       # alternative = \"two.sided\",  # default\n       mu = 98.6))\n\n\n    One Sample t-test\n\ndata:  BodyTemps$Temperature\nt = -5.4548, df = 129, p-value = 2.411e-07\nalternative hypothesis: true mean is not equal to 98.6\n95 percent confidence interval:\n 98.12200 98.37646\nsample estimates:\nmean of x \n 98.24923 \n\n\nNote that the test output also gives the 95% CI using the t-distribution."
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#whats-next",
+    "href": "slides_code/Day10_bsta511_code.html#whats-next",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "What’s next?",
+    "text": "What’s next?\nCI’s and hypothesis testing for different scenarios:\n\n\n\n\n\n\n\n\n\n\n\nDay\nSection\nPopulation parameter\nSymbol\nPoint estimate\nSymbol\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n\n\n11\n5.3\nDiff in pop means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n12\n8.2\nDiff in pop prop’s\n\\(p_1-p_2\\)\nDiff in sample prop’s\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
   }
 ]

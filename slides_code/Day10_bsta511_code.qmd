@@ -71,6 +71,26 @@ set.seed(456)
 
 ### CIs vs. hypothesis tests (4.3.3)
 
+## MoRitz's tip of the day: use [__R projects__]{style="color:darkorange"} to organize analyses
+
+
+MoRitz loves using R projects to 
+
+* organize analyses and 
+* make it easier to load data files 
+* and also save output
+
+Other bonuses include 
+
+* making to it easier to collaborate with others, 
+* including yourself when accessing files from different computers.
+
+<br>
+
+
+We will discuss how to use projects later in today's slides when loading a dataset.  
+See file [Projects in RStudio](../resources/Projects_in_R.html) for more information.
+
 
 
 # Is 98.6°F  really the mean "healthy" body temperature?
@@ -499,12 +519,102 @@ __Conclusion statement__:
 
 
 
-# `t.test`: R's built-in command for testing one mean 
+# Running a t-test in R
 
-Using the body temperature example with $H_A: \mu \neq 98.6$
+* Working directory
+* Load a dataset - need to specify location of dataset
+* R projects
+* Run a t-test in R
+* `tidy()` the test output using `broom` package
+
+## Working directory
+
+* In order to load a dataset from a file, you need to tell R where the dataset is located
+* To do this you also need to know the location from which R is working, i.e. your __working directory__
+* You can figure out your working directory by running the `getwd()` function.
 
 ```{r}
-BodyTemps <- read_csv("data/BodyTemperatures.csv")
+getwd()
+```
+
+* Above is the working directory of this slides file
+    * _In this case, this is NOT the location of the actual qmd file though!_
+
+* To make it easier to juggle the working directory, the location of your qmd file, and the location of the data, 
+    * [I highly recommend using __R Projects__!]{style="color:darkred"}
+
+## R projects
+
+* I *highly, highly, HIGHLY* recommend using R Projects to organize your analyses and make it easier to load data files and also save output.
+* When you create an R Project on your computer, the Project is associated with the folder (directory) you created it in. 
+  * This folder becomes the "root" of your working directory, and RStudio's point of reference from where to load files from and to. 
+* I create separate Projects for every analysis project and every class I teach. 
+* You can run multiple sessions of RStudio by opening different Projects, and the environments (or working directory) of each are working independently of each other. 
+
+:::{.callout-note}
+* Although we are using Quarto files, 
+    * I will show how to set up and use a __"regular" R Project__
+    * instead of "Quarto Project"
+* Quarto Projects include extra features and thus complexity. Once you are used to how regular R Projects work, you can try out a Quarto Project. 
+:::
+
+## How to create an R Project
+
+* Demonstration in class recording
+* Posit's (RStudio's) directions for creating Projects
+  * [https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects)
+
+* See file [Projects in RStudio](../slides_code/Projects_in_R.html) for more information on R Projects.
+
+
+## Load the dataset
+
+* The data are in a csv file called `BodyTemperatures.csv`
+* You need to tell R where the dataset is located!
+* I recommend saving all datasets in a folder called data. 
+    * The code I will be providing you will be set up this way.
+
+* To make it easier to specify where the dataset is located, I recommend using the `here()` function from the `here` package: `here::here()`.
+
+```{r}
+# read_csv() is a function from the readr package that is a part of the tidyverse
+library(here)   # first install this package
+
+BodyTemps <- read_csv(here::here("data", "BodyTemperatures.csv"))
+#                     location: look in "data" folder
+#                               for the file "BodyTemperatures.csv"
+
+glimpse(BodyTemps)
+```
+
+## `here::here()`
+
+General use of `here::here()`
+
+`here::here("folder_name", "filename")`
+
+::: columns
+::: {.column width="50%"}
+Resources for `here::here()`:
+
+* [how to use the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/) (Jenny Richmond)
+* [Ode to the here package](https://github.com/jennybc/here_here) (Jenny Bryan)
+
+[Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) (Jenny Bryan)
+:::
+::: {.column width="50%"}
+![[Artwork by @allison_horst](https://allisonhorst.com/r-packages-functions)](/img_slides/horst_here.png){fig-align="center"}
+:::
+:::
+
+
+## `t.test`: base R's function for testing one mean 
+
+* Use the body temperature example with $H_A: \mu \neq 98.6$
+* We called the dataset `BodyTemps` when we loaded it
+
+```{r}
+glimpse(BodyTemps)
 
 (temps_ttest <- t.test(x = BodyTemps$Temperature,
        # alternative = "two.sided",  # default
@@ -514,55 +624,59 @@ BodyTemps <- read_csv("data/BodyTemperatures.csv")
 Note that the test output also gives the 95% CI using the t-distribution.
 
 
+## `tidy()` the `t.test` output
 
-
-## `tidy` the `t.test` output
-
+* Use the `tidy()` function from the `broom` package for briefer output in table format that's stored as a `tibble`
+* Combined with the `gt()` function from the `gt` package, we get a nice table 
 
 ```{r}
-# use tidy command from broom package for briefer output that's a tibble
 tidy(temps_ttest) %>% 
   gt()
 ```
 
-* The `tidy()` output is a tibble, and so we can pull specific values from it:
+* Since the `tidy()` output is a tibble, we can easily `pull()` specific values from it:
 
+::: columns
+::: {.column width="50%"}
 
-
+Using base R's `$`
 ```{r}
-# base R
 tidy(temps_ttest)$p.value  
 ```
 
+Advantage: quick and easy
+:::
 
-
-
+::: {.column width="50%"}
+Or the `tidyverse` way: using `pull()` from `dplyr` package 
 ```{r}
-# or with tidyverse:
 tidy(temps_ttest) %>% pull(p.value)
 ```
 
+Advantage: can use together with piping (`%>%`) other functions
+:::
+:::
 
 
-
-# MoRitz's tip of the day
-
-Use R projects (.Rproj) to organize your code and data files.
-
-See [file on Sakai](https://sakai.ohsu.edu/access/content/group/BSTA-511-OL-AV-F22/miscellaneous/Projects_in_R.html) with more information.
-
-
-# What's next? 
+## What's next? 
 
 CI's and hypothesis testing for different scenarios:
 
-Section | Population parameter | Symbol | Point estimate | Symbol 
---------|--------|--------|--------|--------
-5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ 
-5.2 | Diff in paired pop means | $\delta$ | Diff in paired sample means | $\bar{x}_{diff}$ 
-5.3 | Diff in pop means | $\mu_1-\mu_2$ | Diff in sample means | $\bar{x}_1 - \bar{x}_2$ 
-8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$ 
-8.2 | Diff in pop prop's | $p_1-p_2$ | Diff in sample prop's | $\widehat{p}_1-\widehat{p}_2$
+
+| Day | Section |  Population parameter   |       Symbol        |       Point estimate       |            Symbol             |
+|:----:|:------:|:----------:|:--------:|:----------:|:-------:|
+| 10  |   5.1   |        Pop mean         |        $\mu$        |        Sample mean         |           $\bar{x}$           |
+| 10  |   5.2   | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff |         $\bar{x}_{d}$         |
+| 11  |   5.3   |    Diff in pop means    |    $\mu_1-\mu_2$    |    Diff in sample means    |    $\bar{x}_1 - \bar{x}_2$    |
+| 12  |   8.1   |     Pop proportion      |         $p$         |        Sample prop         |         $\widehat{p}$         |
+| 12  |   8.2   |   Diff in pop prop's    |      $p_1-p_2$      |   Diff in sample prop's    | $\widehat{p}_1-\widehat{p}_2$ |
+
+
+
+
+
+
+
 
 # Paired data
 
