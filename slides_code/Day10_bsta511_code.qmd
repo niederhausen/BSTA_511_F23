@@ -144,7 +144,7 @@ sd <- 0.733
 Used $t^*$ = `qt(.975, df=129)` 
 
 Conclusion:  
-We are 95% that the (population) mean body temperature is between `r round(LB, 3)`°F and `r round(UB, 3)`°F.
+We are 95% confident that the (population) mean body temperature is between `r round(LB, 3)`°F and `r round(UB, 3)`°F.
 
 * _How does the CI compare to 98.6°F?_
 
@@ -452,7 +452,7 @@ ggplot(data = data.frame(x = c(-6, 6)), aes(x)) +
 * Find the row with the appropriate degrees of freedom
     * Use next smallest df in table if actual df not shown
     * I.e., for df = 129, use df = 100 in table
-* Figure out where the test statistic's value is in relation to the values in the columns, i.e. between which columns is the test statistic?
+* Figure out where the test statistic's absolute value is in relation to the values in the columns, i.e. between which columns is the test statistic?
 * The header rows for those columns gives the lower & upper bounds for the p-value
     * Choosing one-tail vs. two-tail test, depends on the alternative hypothesis $H_A$.
     * For a 2-sided test ( $H_A: \mu \neq \mu_0$ ), use two-tails 
