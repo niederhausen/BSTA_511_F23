@@ -5765,7 +5765,7 @@
     "href": "weeks/week_06.html#day10",
     "title": "Week 6",
     "section": "Day10",
-    "text": "Day10\n\nPart 1\n\nHypothesis testing for one mean (single-sample)\nCIs vs. hypothesis tests\nR projects, here::here(), and loading data into R from a file\nRunning a t.test in R\n\n\n\nPart 2\n\nInference for two-sample paired data\n\n\n\nSlides\n\n\nPart 1\n\nhtml\npdf\nSlides with notes\nwebpage\n\n\nPart 2 (Class discussion)\n\nhtml\npdf\nSlides with notes\nwebpage\n\n\n\n\nCode file\n\nCode file: qmd, html\n\n\n\n\nClass discussion\nClass discussion Google doc link\n\nPart 2 of Day 10"
+    "text": "Day10\n\nPart 1\n\nHypothesis testing for one mean (single-sample)\nCIs vs. hypothesis tests\nR projects, here::here(), and loading data into R from a file\nRunning a t.test in R\n\n\n\nPart 2\n\nInference for two-sample paired data\n\n\n\nSlides\n\n\nPart 1\n\nhtml\npdf\nSlides with notes\nwebpage\n\n\nPart 2 (Class discussion)\n\nhtml\npdf\nSlides with notes\nwebpage\n\n\n\n\nCode file\n\nCode file: qmd, html\n\n\n\n\nDatasets\nAll datasets can be found on GitHub\n\nBodyTemperatures.csv\nchol213.csv\n\n\n\nClass discussion\nClass discussion Google doc link\n\nPart 2 of Day 10"
   },
   {
     "objectID": "weeks/week_06.html#homework",
