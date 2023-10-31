@@ -90,6 +90,7 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 [Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
 
 * Part 2 of Day 10
+* See specific questions in orange on (most) slides.
 
 ## Homework
 
