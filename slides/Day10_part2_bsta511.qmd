@@ -1,5 +1,5 @@
 ---
-title: "DRAFT: Day 10 Part 2: <br> Inference for mean difference from <br> two-sample dependent/paired data  (Section 5.2)"
+title: "Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data  (Section 5.2)"
 subtitle: "BSTA 511/611"
 author: "Meike Niederhausen, PhD"
 institute: "OHSU-PSU School of Public Health"
@@ -58,14 +58,14 @@ set.seed(456)
 <br>
 <br>
 
-![](/img_slides/flowchart_511_continuous.png){fig-align="center"}
+![](/img_slides/flowchart_511_continuous_5.2.png){fig-align="center"}
 
 ## Where are we? Continuous outcome zoomed in
 
 <br>
 <br>
 
-![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
+![](/img_slides/flowchart_only_continuous_5.2.jpg){fig-align="center"}
 
 
 ## Goals for today (Sections 4.3 & 5.1)
