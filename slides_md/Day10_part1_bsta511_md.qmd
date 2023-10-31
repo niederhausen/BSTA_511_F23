@@ -6,18 +6,18 @@ institute: "OHSU-PSU School of Public Health"
 date: "11/1/2023"
 categories: ["Week 6"]
 format: 
-  revealjs:
-      incremental: false
-      scrollable: true
-      chalkboard: true
-      theme: [../sky_modified.scss]
-      width:  1100 #1200 # 1050 #default 1050; ipad 3:4, 1600
-      height: 825 #900 #800 #default 700; 788 for 3:4, 1200
-      slide-number: true
-      html-math-method: mathjax
-  # html:
-  #   link-external-newwindow: true
-  #   toc: true
+  # revealjs:
+  #     incremental: false
+  #     scrollable: true
+  #     chalkboard: true
+  #     theme: [../sky_modified.scss]
+  #     width:  1100 #1200 # 1050 #default 1050; ipad 3:4, 1600
+  #     height: 825 #900 #800 #default 700; 788 for 3:4, 1200
+  #     slide-number: true
+  #     html-math-method: mathjax
+  html:
+    link-external-newwindow: true
+    toc: true
 execute:
   echo: true
   freeze: auto  # re-render only when source changes

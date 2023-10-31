@@ -59,9 +59,10 @@ editor_options:
 Part 1
 
 * [html](../slides/Day10_part1_bsta511.qmd)
-* [pdf]()
-* Slides with [notes]()
+* [pdf](https://drive.google.com/file/d/1JZRggNRHAWanOV_48OY4hFGBnCeQx_7O/view?usp=sharing)
+* Slides with [notes](https://drive.google.com/file/d/1JhV-qVNFXV6Lcfy1RUUTSju1EhsyTW3O/view?usp=sharing)
 * [webpage](../slides_md/Day10_part1_bsta511_md.qmd)
+* [Projects in RStudio](../resources/Projects_in_R.html)
 
 :::
 ::: {.column width="50%"}
