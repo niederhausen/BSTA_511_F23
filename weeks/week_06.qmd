@@ -71,7 +71,7 @@ Part 2 (Class discussion)
 
 * [html](../slides/Day10_part2_bsta511.qmd)
 * [pdf]()
-* Slides with [notes]()
+* No slides with notes
 * [webpage](../slides_md/Day10_part2_bsta511_md.qmd)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day10_part2_bsta511_code.qmd), [html](../slides_code/Day10_part2_bsta511_code.qmd)
 :::
