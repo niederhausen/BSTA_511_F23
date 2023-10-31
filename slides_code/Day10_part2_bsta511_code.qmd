@@ -1,5 +1,5 @@
 ---
-title: "DRAFT Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data  (Section 5.2)"
+title: "Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data  (Section 5.2)"
 subtitle: "BSTA 511/611"
 author: "Meike Niederhausen, PhD"
 institute: "OHSU-PSU School of Public Health"
@@ -590,24 +590,18 @@ $$(\bar{x} - t^*\cdot\frac{s}{\sqrt{n}},~\infty) \\
 * See Section 4.2.3 of the V&H book for more
 
 
-# Confidence Intervals vs. Hypothesis Testing
 
-* See also V&H Section 4.3.3
-
-
-
-# What's next? 
-
+# [Today]{style="color:green"} & [what's next?]{style="color:darkblue"}
 
 CI's and hypothesis tests for different scenarios:
 
-$$point~estimate \pm z^*(or~t^*)\cdot SE,~~~~~~~~test~stat = \frac{point~estimate-null~value}{SE}$$
+$$\text{point~estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test~stat} = \frac{\text{point~estimate}-\text{null~value}}{SE}$$
 
 Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
---------|--------|--------|--------|--------|--------|--------
-11-12 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$
-13 | 5.2 | Diff in paired <br> pop means | $\mu_d$ or $\delta$ | Diff in paired <br> sample means | $\bar{x}_{d}$  | $\frac{s_d}{\sqrt{n}}$
-14 | 5.3 | Diff in pop <br> means | $\mu_1-\mu_2$ | Diff in sample <br> means | $\bar{x}_1 - \bar{x}_2$  |
- | 8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$  |
- | 8.2 | Diff in pop <br> proportions | $p_1-p_2$ | Diff in sample <br> proportions | $\widehat{p}_1-\widehat{p}_2$ |
+--|--|--|--|--|--|--
+10 | 5.1 | [Pop mean]{style="color:green"} | [$\mu$]{style="color:green"} | [Sample mean]{style="color:green"} | [$\bar{x}$]{style="color:green"} | [$\frac{s}{\sqrt{n}}$]{style="color:red"}
+10 | 5.2 | [Pop mean of paired diff]{style="color:green"} | [$\mu_d$ or $\delta$]{style="color:green"} | [Sample mean of paired diff]{style="color:green"} | [$\bar{x}_{d}$]{style="color:green"}  | [**$\frac{s_d}{\sqrt{n}}$**]{style="color:red"}
+11 | 5.3 | [Diff in pop <br> means]{style="color:darkblue"} | [$\mu_1-\mu_2$]{style="color:darkblue"} | [Diff in sample <br> means]{style="color:darkblue"} | [$\bar{x}_1 - \bar{x}_2$]{style="color:darkblue"}  | [**???**]{style="color:red"}
+12 | 8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$  |
+12 | 8.2 | Diff in pop <br> proportions | $p_1-p_2$ | Diff in sample <br> proportions | $\widehat{p}_1-\widehat{p}_2$ |
 

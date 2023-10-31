@@ -9,7 +9,7 @@
 <meta name="author" content="Meike Niederhausen, PhD">
 <meta name="dcterms.date" content="2023-11-01">
 
-<title>BSTA 511/611 Fall 2023 - DRAFT Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)</title>
+<title>BSTA 511/611 Fall 2023 - Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -161,7 +161,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">DRAFT Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -281,8 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#r-what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels" id="toc-r-what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels" class="nav-link" data-scroll-target="#r-what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels">R: What if we wanted to test whether the diet <em>decreased</em> cholesterol levels?</a></li>
   </ul></li>
   <li><a href="#one-sided-confidence-intervals" id="toc-one-sided-confidence-intervals" class="nav-link" data-scroll-target="#one-sided-confidence-intervals">One-sided confidence intervals</a></li>
-  <li><a href="#confidence-intervals-vs.-hypothesis-testing" id="toc-confidence-intervals-vs.-hypothesis-testing" class="nav-link" data-scroll-target="#confidence-intervals-vs.-hypothesis-testing">Confidence Intervals vs.&nbsp;Hypothesis Testing</a></li>
-  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s next?</a></li>
+  <li><a href="#today-whats-next" id="toc-today-whats-next" class="nav-link" data-scroll-target="#today-whats-next"><span style="color:green">Today</span> &amp; <span style="color:darkblue">what’s next?</span></a></li>
   </ul>
 </nav>
     </div>
@@ -291,7 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">DRAFT Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)</h1>
+<h1 class="title">Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)</h1>
 <p class="subtitle lead">BSTA 511/611</p>
   <div class="quarto-categories">
     <div class="quarto-category">Week 6</div>
@@ -4893,16 +4892,10 @@ mean difference
 <li>See Section 4.2.3 of the V&amp;H book for more</li>
 </ul>
 </section>
-<section id="confidence-intervals-vs.-hypothesis-testing" class="level1">
-<h1>Confidence Intervals vs.&nbsp;Hypothesis Testing</h1>
-<ul>
-<li>See also V&amp;H Section 4.3.3</li>
-</ul>
-</section>
-<section id="whats-next" class="level1">
-<h1>What’s next?</h1>
+<section id="today-whats-next" class="level1">
+<h1><span style="color:green">Today</span> &amp; <span style="color:darkblue">what’s next?</span></h1>
 <p>CI’s and hypothesis tests for different scenarios:</p>
-<p><span class="math display">\[point~estimate \pm z^*(or~t^*)\cdot SE,~~~~~~~~test~stat = \frac{point~estimate-null~value}{SE}\]</span></p>
+<p><span class="math display">\[\text{point~estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test~stat} = \frac{\text{point~estimate}-\text{null~value}}{SE}\]</span></p>
 <table class="table">
 <colgroup>
 <col style="width: 14%">
@@ -4926,48 +4919,48 @@ mean difference
 </thead>
 <tbody>
 <tr class="odd">
-<td>11-12</td>
+<td>10</td>
 <td>5.1</td>
-<td>Pop mean</td>
-<td><span class="math inline">\(\mu\)</span></td>
-<td>Sample mean</td>
-<td><span class="math inline">\(\bar{x}\)</span></td>
-<td><span class="math inline">\(\frac{s}{\sqrt{n}}\)</span></td>
+<td><span style="color:green">Pop mean</span></td>
+<td><span style="color:green"><span class="math inline">\(\mu\)</span></span></td>
+<td><span style="color:green">Sample mean</span></td>
+<td><span style="color:green"><span class="math inline">\(\bar{x}\)</span></span></td>
+<td><span style="color:red"><span class="math inline">\(\frac{s}{\sqrt{n}}\)</span></span></td>
 </tr>
 <tr class="even">
-<td>13</td>
+<td>10</td>
 <td>5.2</td>
-<td>Diff in paired <br> pop means</td>
-<td><span class="math inline">\(\mu_d\)</span> or <span class="math inline">\(\delta\)</span></td>
-<td>Diff in paired <br> sample means</td>
-<td><span class="math inline">\(\bar{x}_{d}\)</span></td>
-<td><span class="math inline">\(\frac{s_d}{\sqrt{n}}\)</span></td>
+<td><span style="color:green">Pop mean of paired diff</span></td>
+<td><span style="color:green"><span class="math inline">\(\mu_d\)</span> or <span class="math inline">\(\delta\)</span></span></td>
+<td><span style="color:green">Sample mean of paired diff</span></td>
+<td><span style="color:green"><span class="math inline">\(\bar{x}_{d}\)</span></span></td>
+<td><span style="color:red"><strong><span class="math inline">\(\frac{s_d}{\sqrt{n}}\)</span></strong></span></td>
 </tr>
 <tr class="odd">
-<td>14</td>
+<td>11</td>
 <td>5.3</td>
-<td>Diff in pop <br> means</td>
-<td><span class="math inline">\(\mu_1-\mu_2\)</span></td>
-<td>Diff in sample <br> means</td>
-<td><span class="math inline">\(\bar{x}_1 - \bar{x}_2\)</span></td>
-<td></td>
+<td><span style="color:darkblue">Diff in pop <br> means</span></td>
+<td><span style="color:darkblue"><span class="math inline">\(\mu_1-\mu_2\)</span></span></td>
+<td><span style="color:darkblue">Diff in sample <br> means</span></td>
+<td><span style="color:darkblue"><span class="math inline">\(\bar{x}_1 - \bar{x}_2\)</span></span></td>
+<td><span style="color:red"><strong>???</strong></span></td>
 </tr>
 <tr class="even">
+<td>12</td>
 <td>8.1</td>
 <td>Pop proportion</td>
 <td><span class="math inline">\(p\)</span></td>
 <td>Sample prop</td>
 <td><span class="math inline">\(\widehat{p}\)</span></td>
 <td></td>
-<td></td>
 </tr>
 <tr class="odd">
+<td>12</td>
 <td>8.2</td>
 <td>Diff in pop <br> proportions</td>
 <td><span class="math inline">\(p_1-p_2\)</span></td>
 <td>Diff in sample <br> proportions</td>
 <td><span class="math inline">\(\widehat{p}_1-\widehat{p}_2\)</span></td>
-<td></td>
 <td></td>
 </tr>
 </tbody>
