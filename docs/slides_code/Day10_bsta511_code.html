@@ -286,9 +286,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#tidy-the-t.test-output" id="toc-tidy-the-t.test-output" class="nav-link" data-scroll-target="#tidy-the-t.test-output"><code>tidy()</code> the <code>t.test</code> output</a></li>
   <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s next?</a></li>
   </ul></li>
-  <li><a href="#paired-data" id="toc-paired-data" class="nav-link" data-scroll-target="#paired-data">Paired data</a></li>
-  <li><a href="#where-are-we" id="toc-where-are-we" class="nav-link" data-scroll-target="#where-are-we">Where are we?</a>
+  <li><a href="#day-10-part-2-inference-for-mean-difference-from-two-sample-dependentpaired-data-section-5.2" id="toc-day-10-part-2-inference-for-mean-difference-from-two-sample-dependentpaired-data-section-5.2" class="nav-link" data-scroll-target="#day-10-part-2-inference-for-mean-difference-from-two-sample-dependentpaired-data-section-5.2">Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)</a>
   <ul class="collapse">
+  <li><a href="#what-we-covered-in-day-10-part-1" id="toc-what-we-covered-in-day-10-part-1" class="nav-link" data-scroll-target="#what-we-covered-in-day-10-part-1">What we covered in Day 10 Part 1</a>
+  <ul class="collapse">
+  <li><a href="#hypothesis-testing-for-mean-from-one-sample-1" id="toc-hypothesis-testing-for-mean-from-one-sample-1" class="nav-link" data-scroll-target="#hypothesis-testing-for-mean-from-one-sample-1">(4.3, 5.1) Hypothesis testing for mean from one sample</a></li>
+  <li><a href="#confidence-intervals-cis-vs.-hypothesis-tests-1" id="toc-confidence-intervals-cis-vs.-hypothesis-tests-1" class="nav-link" data-scroll-target="#confidence-intervals-cis-vs.-hypothesis-tests-1">(4.3.3) Confidence intervals (CIs) vs.&nbsp;hypothesis tests</a></li>
+  </ul></li>
+  <li><a href="#goals-for-today-part-2---class-discussion" id="toc-goals-for-today-part-2---class-discussion" class="nav-link" data-scroll-target="#goals-for-today-part-2---class-discussion">Goals for today: Part 2 - Class discussion</a>
+  <ul class="collapse">
+  <li><a href="#inference-for-mean-difference-from-dependentpaired-2-samples-1" id="toc-inference-for-mean-difference-from-dependentpaired-2-samples-1" class="nav-link" data-scroll-target="#inference-for-mean-difference-from-dependentpaired-2-samples-1">(5.2) Inference for <strong>mean difference</strong> from dependent/paired 2 samples</a></li>
+  <li><a href="#one-sided-cis-1" id="toc-one-sided-cis-1" class="nav-link" data-scroll-target="#one-sided-cis-1">One-sided CIs</a></li>
+  <li><a href="#class-discussion-1" id="toc-class-discussion-1" class="nav-link" data-scroll-target="#class-discussion-1">Class discussion</a></li>
+  </ul></li>
+  <li><a href="#cis-and-hypothesis-tests-for-different-scenarios" id="toc-cis-and-hypothesis-tests-for-different-scenarios" class="nav-link" data-scroll-target="#cis-and-hypothesis-tests-for-different-scenarios">CI’s and hypothesis tests for different scenarios:</a></li>
   <li><a href="#steps-in-a-hypothesis-test-1" id="toc-steps-in-a-hypothesis-test-1" class="nav-link" data-scroll-target="#steps-in-a-hypothesis-test-1">Steps in a Hypothesis Test</a></li>
   </ul></li>
   <li><a href="#goals-for-today-section-5.2" id="toc-goals-for-today-section-5.2" class="nav-link" data-scroll-target="#goals-for-today-section-5.2">Goals for today (Section 5.2)</a>
@@ -1579,13 +1590,70 @@ mean of x
 </table>
 </section>
 </section>
-<section id="paired-data" class="level1">
-<h1>Paired data</h1>
+<section id="day-10-part-2-inference-for-mean-difference-from-two-sample-dependentpaired-data-section-5.2" class="level1">
+<h1>Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)</h1>
+<section id="what-we-covered-in-day-10-part-1" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-covered-in-day-10-part-1">What we covered in Day 10 Part 1</h2>
+<section id="hypothesis-testing-for-mean-from-one-sample-1" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-testing-for-mean-from-one-sample-1">(4.3, 5.1) Hypothesis testing for mean from one sample</h3>
+<ul>
+<li>Introduce hypothesis testing using the case of analyzing a mean from one sample (group)</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><span style="color:purple">Steps of a hypothesis test:</span>
+<ol type="1">
+<li>level of significance</li>
+<li>null ( <span class="math inline">\(H_0\)</span> ) and alternative ( <span class="math inline">\(H_A\)</span> ) hypotheses</li>
+<li>test statistic</li>
+<li>p-value</li>
+<li>conclusion</li>
+</ol></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><span style="color:green">Run a hypothesis test in R</span>
+<ul>
+<li>Load a dataset - need to specify location of dataset</li>
+<li>R projects</li>
+<li>Run a t-test in R</li>
+<li><code>tidy()</code> the test output using <code>broom</code> package</li>
+</ul></li>
+</ul>
+</div>
+</div>
 </section>
-<section id="where-are-we" class="level1">
-<h1>Where are we?</h1>
-<p>CI’s and hypothesis tests for different scenarios:</p>
-<p><span class="math display">\[point~estimate \pm z^*(or~t^*)\cdot SE,~~~~~~~~test~stat = \frac{point~estimate-null~value}{SE}\]</span></p>
+<section id="confidence-intervals-cis-vs.-hypothesis-tests-1" class="level3">
+<h3 class="anchored" data-anchor-id="confidence-intervals-cis-vs.-hypothesis-tests-1">(4.3.3) Confidence intervals (CIs) vs.&nbsp;hypothesis tests</h3>
+</section>
+</section>
+<section id="goals-for-today-part-2---class-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="goals-for-today-part-2---class-discussion">Goals for today: Part 2 - Class discussion</h2>
+<section id="inference-for-mean-difference-from-dependentpaired-2-samples-1" class="level3">
+<h3 class="anchored" data-anchor-id="inference-for-mean-difference-from-dependentpaired-2-samples-1">(5.2) Inference for <strong>mean difference</strong> from dependent/paired 2 samples</h3>
+<ul>
+<li>Inference: CIs and hypothesis testing</li>
+<li>Exploratory data analysis (EDA) to visualize data</li>
+<li>Run paired t-test in R</li>
+</ul>
+</section>
+<section id="one-sided-cis-1" class="level3">
+<h3 class="anchored" data-anchor-id="one-sided-cis-1">One-sided CIs</h3>
+</section>
+<section id="class-discussion-1" class="level3">
+<h3 class="anchored" data-anchor-id="class-discussion-1">Class discussion</h3>
+<ul>
+<li>Inference for the mean difference from dependent/paired data is a special case of the inference for the mean from just one sample, that was already covered.</li>
+<li>Thus this part will be used for class discussion to practice CIs and hypothesis testing for one mean and apply it in this new setting.</li>
+<li>In class I will briefly introduce this topic, explain how it is similar and different from what we already covered, and let you work through the slides and code.</li>
+</ul>
+</section>
+</section>
+<section id="cis-and-hypothesis-tests-for-different-scenarios" class="level2">
+<h2 class="anchored" data-anchor-id="cis-and-hypothesis-tests-for-different-scenarios">CI’s and hypothesis tests for different scenarios:</h2>
+<div style="font-size: 90%;">
+<p><span class="math display">\[\text{point~estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test~stat} = \frac{\text{point~estimate}-\text{null~value}}{SE}\]</span></p>
 <table class="table">
 <colgroup>
 <col style="width: 14%">
@@ -1609,7 +1677,7 @@ mean of x
 </thead>
 <tbody>
 <tr class="odd">
-<td>11-12</td>
+<td>10</td>
 <td>5.1</td>
 <td>Pop mean</td>
 <td><span class="math inline">\(\mu\)</span></td>
@@ -1618,16 +1686,16 @@ mean of x
 <td><span class="math inline">\(\frac{s}{\sqrt{n}}\)</span></td>
 </tr>
 <tr class="even">
-<td>13</td>
+<td>10</td>
 <td>5.2</td>
-<td>Diff in paired <br> pop means</td>
-<td><span class="math inline">\(\mu_d\)</span> or <span class="math inline">\(\delta\)</span></td>
-<td>Diff in paired <br> sample means</td>
-<td><span class="math inline">\(\bar{x}_{d}\)</span></td>
-<td></td>
+<td><span style="color:green">Pop mean of paired diff</span></td>
+<td><span style="color:green"><span class="math inline">\(\mu_d\)</span> or <span class="math inline">\(\delta\)</span></span></td>
+<td><span style="color:green">Sample mean of paired diff</span></td>
+<td><span style="color:green"><span class="math inline">\(\bar{x}_{d}\)</span></span></td>
+<td><span style="color:red"><strong>???</strong></span></td>
 </tr>
 <tr class="odd">
-<td>14</td>
+<td>11</td>
 <td>5.3</td>
 <td>Diff in pop <br> means</td>
 <td><span class="math inline">\(\mu_1-\mu_2\)</span></td>
@@ -1636,25 +1704,27 @@ mean of x
 <td></td>
 </tr>
 <tr class="even">
+<td>12</td>
 <td>8.1</td>
 <td>Pop proportion</td>
 <td><span class="math inline">\(p\)</span></td>
 <td>Sample prop</td>
 <td><span class="math inline">\(\widehat{p}\)</span></td>
 <td></td>
-<td></td>
 </tr>
 <tr class="odd">
+<td>12</td>
 <td>8.2</td>
 <td>Diff in pop <br> proportions</td>
 <td><span class="math inline">\(p_1-p_2\)</span></td>
 <td>Diff in sample <br> proportions</td>
 <td><span class="math inline">\(\widehat{p}_1-\widehat{p}_2\)</span></td>
 <td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
+</div>
+</section>
 <section id="steps-in-a-hypothesis-test-1" class="level2">
 <h2 class="anchored" data-anchor-id="steps-in-a-hypothesis-test-1">Steps in a Hypothesis Test</h2>
 <ol type="1">

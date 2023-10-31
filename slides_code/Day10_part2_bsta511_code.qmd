@@ -1,23 +1,14 @@
 ---
-title: "Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data  (Section 5.2)"
+title: "DRAFT Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data  (Section 5.2)"
 subtitle: "BSTA 511/611"
 author: "Meike Niederhausen, PhD"
 institute: "OHSU-PSU School of Public Health"
 date: "11/1/2023"
 categories: ["Week 6"]
 format: 
-  revealjs:
-      incremental: false
-      scrollable: true
-      chalkboard: true
-      theme: [../sky_modified.scss]
-      width:  1100 #1200 # 1050 #default 1050; ipad 3:4, 1600
-      height: 825 #900 #800 #default 700; 788 for 3:4, 1200
-      slide-number: true
-      html-math-method: mathjax
-  # html:
-  #   link-external-newwindow: true
-  #   toc: true
+  html:
+    link-external-newwindow: true
+    toc: true
 execute:
   echo: true
   freeze: auto  # re-render only when source changes
@@ -27,11 +18,17 @@ editor_options:
 ---
 
 ```{r}
-#| label: "setup" 
+#| label: "setup"
 #| include: false
-#| message: false
-#| warning: false
+knitr::opts_chunk$set(echo = TRUE, fig.height=3, fig.width=5, message = F)
+```
 
+## Load packages
+
+* Packages need to be loaded _every time_ you restart R or render an Qmd file
+
+```{r}
+# run these every time you open Rstudio
 library(tidyverse)    
 library(oibiostat)
 library(janitor)
@@ -42,31 +39,16 @@ library(moderndive)
 library(gt)
 library(broom) # NEW!!
 
-# terminal: for icons
-# quarto install extension quarto-ext/fontawesome
-
-# set ggplot theme for slides 
-theme_set(theme_bw(base_size = 22))
-# theme_update(text = element_text(size=16))  # set global text size for ggplots
-
 set.seed(456)
 ```
 
 
-## Where are we?
+- You can check whether a package has been loaded or not 
+  - by looking at the Packages tab and 
+  - seeing whether it has been checked off or not
 
-<br>
-<br>
 
-![](/img_slides/flowchart_511_continuous_5.2.png){fig-align="center"}
-
-## Where are we? Continuous outcome zoomed in
-
-<br>
-<br>
-
-![](/img_slides/flowchart_only_continuous_5.2.jpg){fig-align="center"}
-
+# Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data  (Section 5.2)
 
 ## What we covered in Day 10 Part 1 
 
@@ -147,60 +129,56 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
     1. Write a conclusion in the context of the problem
 
 
+# Goals for today (Section 5.2)
+
+* Statistical inference for paired data (2 samples)
+    1. What are paired data?  
+    1. EDA of data
+    1. Hypothesis test
+    1. Confidence Interval
+    1. Run test in R
+
+
 ## Examples of paired designs (two samples)
 
 * Enroll pairs of identical twins to study a disease
 * Enroll father & son pairs to study cholesterol levels
 * Studying pairs of eyes
 * Enroll people and collect data before & after an intervention (longitudinal data)
-* [Textbook example: Compare maximal speed of competitive swimmers wearing a wetsuit vs. wearing a regular swimsuit]{style="color:green"}
+* Book: Compare maximal speed of competitive swimmers wearing a wetsuit vs. wearing a regular swimsuit
 
 
-[*Come up with 2 more examples of paired study designs.*]{style="color:darkorange"}
-
-## Can a vegetarian diet change cholesterol levels?
+# Can a vegetarian diet change cholesterol levels?
 
 * __Scenario__:
   * 24 non-vegetarian people were enrolled in a study
   * They were instructed to adopt a vegetarian diet
   * Cholesterol levels were measured before and after the diet
-* __Question__: [Is there evidence to support that cholesterol levels changed after the vegetarian diet?]{style="color:purple"}
+* __Question__: Is there evidence to support that cholesterol levels changed after the vegetarian diet?
 * How to answer the question?
   * First, calculate changes (differences) in cholesterol levels
       * We usually do after - before if the data are longitudinal
 
-::: columns
-::: {.column width="50%"}
-Calculate __CI for the  
-mean difference__ $\delta$:
+
+Calculate __CI for the mean difference__ $\delta$:
 
 $$\bar{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}$$
 
-:::
-
-::: {.column width="50%"}
 Run a __hypothesis test__
 
-::: columns
-::: {.column width="40%"}
 Hypotheses
 
 $$H_0: \delta = \delta_0 \\
 H_A: \delta \neq \delta_0 \\
 (or~ <, >)$$
-:::
-::: {.column width="60%"}
+
+
 Test statistic
 
 $$
 t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
 $$
-:::
-:::
 
-:::
-:::
-  
 
 ## EDA: Explore the cholesterol data
 
@@ -216,43 +194,30 @@ chol %>% get_summary_stats(type = "common") %>% gt()
 ```
 
 
+### EDA: Cholesterol levels before and after vegetarian diet
 
 
-## EDA: Cholesterol levels before and after vegetarian diet
-::: columns
-::: {.column width="50%"}
-```{r}
-#| fig.width: 10
-#| fig.height: 3
+```{r }
 ggplot(chol, aes(x=Before)) +
   geom_density()
 ggplot(chol, aes(x=Before)) +
   geom_boxplot()
 ```
-:::
 
-::: {.column width="50%"}
-```{r}
-#| fig.width: 10
-#| fig.height: 3
+```{r }
 ggplot(chol, aes(x=After)) +
   geom_density()
 ggplot(chol, aes(x=After)) +
   geom_boxplot()
 ```
-:::
-:::
 
 
-
-## EDA: Spaghetti plot of cholesterol levels before & after diet
+### EDA: Spaghetti plot of cholesterol levels before & after diet
 
 * Visualize the individual before vs. after diet changes in cholesterol levels
 
 ```{r}
-#| fig.width: 10
-#| fig.height: 6
-#| echo: false
+#| fig.height: 4
 chol_long <- chol %>% 
   # need an ID column for the plot
   # make it factor so that coloring is not on continuous scale
@@ -276,67 +241,42 @@ ggplot(chol_long,
   geom_line(show.legend = FALSE)
 ```
 
-* See code file for how to wrangle the data and create the figure
+
+### EDA: Differences in cholesterol levels: After - Before diet
 
 
-
-## EDA: Differences in cholesterol levels: After - Before diet
-::: columns
-::: {.column width="40%"}
-```{r}
-#| fig.width: 10
-#| fig.height: 3
+```{r }
 chol <- chol %>% 
   mutate(DiffChol = After-Before) 
 head(chol, 12)
 
 ```
-:::
 
-::: {.column width="60%"}
-```{r}
-#| fig.width: 10
-#| fig.height: 3
+```{r }
 chol %>% 
   get_summary_stats(type = "common") %>% 
   gt()
 ```
-:::
-:::
 
 
+### EDA: Differences in cholesterol levels: After - Before diet
 
-## EDA: Differences in cholesterol levels: After - Before diet
-::: columns
-::: {.column width="50%"}
-```{r}
-#| fig.width: 10
-#| fig.height: 3
+```{r }
 ggplot(chol, aes(x=Before)) +
   geom_density()
 ggplot(chol, aes(x=After)) +
   geom_density()
 ```
-:::
 
-::: {.column width="50%"}
-```{r}
-#| fig.width: 10
-#| fig.height: 3
+```{r }
 ggplot(chol, aes(x=DiffChol)) + 
   geom_density()
 ggplot(chol, aes(x=DiffChol)) + 
   geom_boxplot()
 ```
-:::
-:::
 
 
-
-
-
-
-## Steps in a Hypothesis Test
+# Steps in a Hypothesis Test
 
 
 1. Set the __[level of significance]{style="color:darkorange"}__ $\alpha$
@@ -355,14 +295,11 @@ ggplot(chol, aes(x=DiffChol)) +
     1. Write a conclusion in the context of the problem
 
 
-
-
 ## Step 2: Null & Alternative Hypotheses 
 
 * __Question__: Is there evidence to support that cholesterol levels changed after the vegetarian diet?
 
-::: columns
-::: {.column width="50%"}
+
 Null and alternative hypotheses in __words__
 Include as much context as possible
 
@@ -371,21 +308,13 @@ Include as much context as possible
 * $H_0$: The population mean difference in cholesterol levels after a vegetarian diet is  
 
 * $H_A$: The population mean difference in cholesterol levels after a vegetarian diet is
-:::
 
-::: {.column width="50%"}
+
+
 Null and alternative hypotheses in __symbols__
 
 $$~~~~H_0: \delta =  \\
 H_A: \delta   \\$$
-:::
-:::
-
-
-
-
-
-
 
 
 ## Step 3: Test statistic 
@@ -393,22 +322,17 @@ H_A: \delta   \\$$
 ```{r}
 chol %>% select(DiffChol) %>% get_summary_stats(type = "common") %>% gt()
 ```
-::: columns
-::: {.column width="50%"}
 
 $$
 t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
 $$
+
 * Based on the value of the test statistic, do you think we are going to reject or fail to reject $H_0$?
 * What probability distribution does the test statistic have?
 * Are the __[assumptions]{style="color:darkorange"}__ for a paired t-test satisfied so that we can use the probability distribution to calculate the $p$-value??
 
-:::
-
-::: {.column width="50%"}
 
 ```{r}
-#| include: false
 n <- 24
 alpha <- 0.05
 mu <- 0
@@ -418,24 +342,16 @@ mu <- 0
 (se <- sd/sqrt(n))
 
 (tstat <- (xbar - mu)/se)
-1-pt(tstat, df=n-1)
-2*(1-pt(tstat, df=n-1))
 ```
-
-:::
-:::
 
 
 
 ## Step 4: p-value
 
 The __[p-value]{style="color:darkorange"}__ is the __probability__ of obtaining a test statistic _just as extreme or more extreme_ than the observed test statistic assuming the null hypothesis $H_0$ is true. 
-::: columns
-::: {.column width="50%"}
+
+
 ```{r}
-#| fig.width: 10
-#| fig.height: 4
-#| echo: false
 # specify upper and lower bounds of shaded region below
 mu <- 0
 std <- se
@@ -458,9 +374,6 @@ ggplot(data.frame(x = c(mu-6*std, mu+6*std)), aes(x = x)) +
 ```
 
 ```{r}
-#| fig.height: 3
-#| fig.width: 10
-#| echo: false
 ggplot(data = data.frame(x = c(-6, 6)), aes(x)) + 
   stat_function(fun = dt, args = list(df = n-1)) + 
   ylab("") + 
@@ -470,22 +383,14 @@ ggplot(data = data.frame(x = c(-6, 6)), aes(x)) +
   geom_vline(xintercept = c(-tstat,tstat), 
              color = "red")
 ```
-:::
-::: {.column width="50%"}
+
+
 Calculate the _p_-value:
 
 ```{r}
-#| include: false
-2*pt(-5.4548, df = 130-1, 
-     lower.tail = TRUE)
-
-(tstat <- (xbar - mu)/se)
-1-pt(tstat, df=n-1)
-(pv <- 2*(1-pt(tstat, df=n-1)))
-2*(pt(-tstat, df=n-1))
+(pv <- 2*(pt(tstat, df=n-1)))
 ```  
-:::
-:::
+
 
 ## Step 5: Conclusion to hypothesis test
 
@@ -506,9 +411,7 @@ __Conclusion statement__:
 
 
 
-
-
-## 95% CI for the mean difference in cholesterol levels
+# 95% CI for the mean difference in cholesterol levels
 
 ```{r}
 chol %>% select(DiffChol) %>% get_summary_stats(type = "common") %>% gt()
@@ -517,7 +420,6 @@ chol %>% select(DiffChol) %>% get_summary_stats(type = "common") %>% gt()
 CI for $\mu_d$ (or $\delta$):
 
 ```{r}
-#| include: false
 n <- 24
 alpha <- 0.05
 (p_area <- 1-alpha/2)
@@ -529,23 +431,21 @@ alpha <- 0.05
 (LB <- xbar - moe)
 (UB <- xbar + moe)
 ```
-::: columns
-::: {.column width="50%"}
+
+
 $$\bar{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}\\
 `r round(xbar,3)` \pm `r round(tstar,3)`\cdot\frac{`r round(sd,3)`}{\sqrt{`r n`}}\\
 `r round(xbar,3)` \pm `r round(tstar,3)`\cdot `r round(se,3)`\\
 `r round(xbar,3)` \pm `r round(moe,3)`\\
 (`r round(LB, 3)`, `r round(UB, 3)`)$$
 
-:::
-::: {.column width="50%"}
+
 Conclusion:  
 We are 95% that the (population) mean difference in cholesterol levels after a vegetarian diet is between `r round(LB, 3)` mg/dL and `r round(UB, 3)` mg/dL.
 
 * _Based on the CI, is there evidence the diet made a difference in cholesterol levels? Why or why not?_
-:::
-:::
 
+# R
 
 ## R option 1: Run a 1-sample `t.test` using the paired differences
 
@@ -570,29 +470,24 @@ t.test(x = chol$Before, y = chol$After, mu = 0, paired = TRUE)
 
 
 
-
 ## R option 3: Run a 2-sample `t.test` with `paired = TRUE` option, but using the long data and a "formula"
-::: columns
-::: {.column width="40%"}
+
+
 * Use the usual `t.test`
 * What's different is that 
     * instead of specifying the variables with `x=` and `y=`, 
     * we give a __formula__ of the form `y ~ x` using _just the variable names_,
     * and then specify the name of the dataset using `data =`
 * This method is often used in practice, and more similar to the coding style of running a regression model (BSTA 512 & 513)
-:::
 
-::: {.column width="60%"}
+
+
 ```{r}
 # using long data with columns Cholesterol & Time:
 t.test(Cholesterol ~ Time, 
        paired = TRUE, 
        data = chol_long)
 ```
-:::
-:::
-
-
 
 
 
@@ -610,9 +505,9 @@ t.test(Cholesterol ~ Time, paired = TRUE, data = chol_long) %>% tidy() %>% gt()
 
 
 
-## What if we wanted to test whether the diet _decreased_ cholesterol levels?
-::: columns
-::: {.column width="50%"}
+# What if we wanted to test whether the diet _decreased_ cholesterol levels?
+
+
 How are the steps different?
 
 1. Set the __[level of significance]{style="color:darkorange"}__ $\alpha$
@@ -625,14 +520,6 @@ How are the steps different?
 1. Calculate the __[p-value]{style="color:darkorange"}__ based on the observed test statistic and its sampling distribution
 
 1. Write a __[conclusion]{style="color:darkorange"}__ to the hypothesis test
-:::
-
-::: {.column width="50%"}
-
-:::
-:::
-
-
 
 
 ## R: What if we wanted to test whether the diet _decreased_ cholesterol levels?
@@ -644,18 +531,15 @@ t.test(x = chol$DiffChol, mu = 0, alternative = "less") %>% tidy() %>% gt()
 
 
 
-## One-sided confidence intervals
-::: columns
-::: {.column width="50%"}
+# One-sided confidence intervals
+
+
 Formula for a __2-sided__ (1- $\alpha$ )% __CI__:
 
 $$\bar{x} \pm t^*\cdot\frac{s}{\sqrt{n}}$$
 * $t^*$ = `qt(1-alpha/2, df = n-1)`
 * $\alpha$ is split over both tails of the distribution
 
-:::
-
-::: {.column width="50%"}
 
 A __one-sided__ (1- $\alpha$ )% __CI__ has all (1- $\alpha$ )% on just the left or the right tail of the distribution:
 
@@ -666,12 +550,15 @@ $$(\bar{x} - t^*\cdot\frac{s}{\sqrt{n}},~\infty) \\
 * $t^*$ = `qt(alpha, df = n-1)` for a 1-sided upper (1- $\alpha$ )% CI
 * A 1-sided CI gives estimates for a lower or upper bound of the population mean.
 * See Section 4.2.3 of the V&H book for more
-:::
-:::
+
+
+# Confidence Intervals vs. Hypothesis Testing
+
+* See also V&H Section 4.3.3
 
 
 
-## What's next? 
+# What's next? 
 
 
 CI's and hypothesis tests for different scenarios:
@@ -679,15 +566,10 @@ CI's and hypothesis tests for different scenarios:
 $$point~estimate \pm z^*(or~t^*)\cdot SE,~~~~~~~~test~stat = \frac{point~estimate-null~value}{SE}$$
 
 Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
---|--|--|--|--|--|--
+--------|--------|--------|--------|--------|--------|--------
 11-12 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$
 13 | 5.2 | Diff in paired <br> pop means | $\mu_d$ or $\delta$ | Diff in paired <br> sample means | $\bar{x}_{d}$  | $\frac{s_d}{\sqrt{n}}$
 14 | 5.3 | Diff in pop <br> means | $\mu_1-\mu_2$ | Diff in sample <br> means | $\bar{x}_1 - \bar{x}_2$  |
  | 8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$  |
  | 8.2 | Diff in pop <br> proportions | $p_1-p_2$ | Diff in sample <br> proportions | $\widehat{p}_1-\widehat{p}_2$ |
-
-
-
-
-
 
