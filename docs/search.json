@@ -5975,7 +5975,7 @@
     "href": "homework/HW_5_F23_bsta511.html",
     "title": "HW 5: BSTA 511-611 F23",
     "section": "",
-    "text": "Due 11/4/23\nDownload the .qmd file for this assignment from https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_4_F23_bsta511.qmd"
+    "text": "Due 11/4/23\nDownload the .qmd file for this assignment from https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_5_F23_bsta511.qmd"
   },
   {
     "objectID": "homework/HW_5_F23_bsta511.html#directions",
@@ -6864,7 +6864,7 @@
     "href": "slides_code/Day10_bsta511_code.html#herehere",
     "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
     "section": "here::here()",
-    "text": "here::here()\nGeneral use of here::here()\nhere::here(\"folder_name\", \"filename\")\n\n\nResources for here::here():\n\nhow to use the here package (Jenny Richmond)\nOde to the here package (Jenny Bryan)\n\nProject-oriented workflow (Jenny Bryan)\n\n\n\n\nArtwork by @allison_horst"
+    "text": "here::here()\nGeneral use of here::here()\nhere::here(\"folder_name\", \"filename\")\nResources for here::here():\n\nhow to use the here package (Jenny Richmond)\nOde to the here package (Jenny Bryan)\n\nProject-oriented workflow (Jenny Bryan)"
   },
   {
     "objectID": "slides_code/Day10_bsta511_code.html#t.test-base-rs-function-for-testing-one-mean",
@@ -7096,5 +7096,26 @@
     "title": "Day 10 Part 1: Hypothesis testing for mean from one-sample (Sections 4.3, 5.1)",
     "section": "What’s next?",
     "text": "What’s next?\nCI’s and hypothesis testing for different scenarios:\n\n\n\n\n\n\n\n\n\n\n\nDay\nSection\nPopulation parameter\nSymbol\nPoint estimate\nSymbol\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n\n\n11\n5.3\nDiff in pop means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n12\n8.2\nDiff in pop prop’s\n\\(p_1-p_2\\)\nDiff in sample prop’s\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#part-1",
+    "href": "slides_code/Day10_bsta511_code.html#part-1",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "Part 1",
+    "text": "Part 1\n\n(4.3, 5.1) Hypothesis testing for mean from one sample\n\nIntroduce hypothesis testing using the case of analyzing a mean from one sample (group)\n\n\n\n\nSteps of a hypothesis test:\n\nlevel of significance\nnull ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\ntest statistic\np-value\nconclusion\n\n\n\n\nRun a hypothesis test in R\n\nLoad a dataset - need to specify location of dataset\nR projects\nRun a t-test in R\ntidy() the test output using broom package\n\n\n\n\n\n\n(4.3.3) Confidence intervals (CIs) vs. hypothesis tests"
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#part-2---class-discussion",
+    "href": "slides_code/Day10_bsta511_code.html#part-2---class-discussion",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "Part 2 - Class discussion",
+    "text": "Part 2 - Class discussion\n\n(5.2) Inference for mean difference from dependent/paired 2 samples\n\nInference: CIs and hypothesis testing\nExploratory data analysis (EDA) to visualize data\nRun paired t-test in R\n\n\n\nOne-sided CIs\n\n\nClass discussion\n\nInference for the mean difference from dependent/paired data is a special case of the inference for the mean from just one sample, that was already covered.\nThus this part will be used for class discussion to practice CIs and hypothesis testing for one mean and apply it in this new setting.\nIn class I will briefly introduce this topic, explain how it is similar and different from what we already covered, and let you work through the slides and code."
+  },
+  {
+    "objectID": "slides_code/Day10_bsta511_code.html#confidence-intervals-vs.-hypothesis-testing",
+    "href": "slides_code/Day10_bsta511_code.html#confidence-intervals-vs.-hypothesis-testing",
+    "title": "DRAFT Day 10: Hypothesis testing for one-sample mean (4.3, 5.1) & two-sample paired data mean (5.2)",
+    "section": "Confidence Intervals vs. Hypothesis Testing",
+    "text": "Confidence Intervals vs. Hypothesis Testing\n\nSee also V&H Section 4.3.3"
   }
 ]

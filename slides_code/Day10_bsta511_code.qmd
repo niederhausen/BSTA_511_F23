@@ -48,28 +48,51 @@ set.seed(456)
   - seeing whether it has been checked off or not
 
 
-## Goals for today (Sections 4.3 & 5.1)
+# Goals for today
 
-### Hypothesis testing for one-sample mean (4.3, 5.1) 
+## Part 1 
+
+### (4.3, 5.1) Hypothesis testing for mean from one sample  
 
 * Introduce hypothesis testing using the case of analyzing a mean from one sample (group)
 
-* Steps of a hypothesis test:
+::: columns
+::: {.column width="50%"}
+* [Steps of a hypothesis test:]{style="color:purple"}
     1. level of significance
     1. null ( $H_0$ ) and alternative ( $H_A$ ) hypotheses
     1. test statistic
     1. p-value
     1. conclusion
+:::
+::: {.column width="50%"}
+* [Run a hypothesis test in R]{style="color:green"}
+    * Load a dataset - need to specify location of dataset
+    * R projects
+    * Run a t-test in R
+    * `tidy()` the test output using `broom` package
+:::
+:::
 
-* Run a t-test in R, and `tidy()` the test output using `broom` package
+### (4.3.3) Confidence intervals (CIs) vs. hypothesis tests 
 
-### Inference for two-sample paired data mean (5.2)
 
-* Confidence intervals (CIs) and hypothesis testing for the mean of two-sample dependent/paired data
+## Part 2 - Class discussion
+
+### (5.2) Inference for __mean difference__ from dependent/paired 2 samples  
+
+* Inference: CIs and hypothesis testing
+* Exploratory data analysis (EDA) to visualize data
+* Run paired t-test in R
 
 ### One-sided CIs
 
-### CIs vs. hypothesis tests (4.3.3)
+### Class discussion
+
+* Inference for the mean difference from dependent/paired data is a special case of the inference for the mean from just one sample, that was already covered.
+* Thus this part will be used for class discussion to practice CIs and hypothesis testing for one mean and apply it in this new setting.
+* In class I will briefly introduce this topic, explain how it is similar and different from what we already covered, and let you work through the slides and code. 
+
 
 ## MoRitz's tip of the day: use [__R projects__]{style="color:darkorange"} to organize analyses
 
@@ -517,7 +540,9 @@ __Conclusion statement__:
 * Better: ("manuscript style" conclusion)
     * The average body temperature in the sample was 98.25°F (95% CI 98.12, 98.38°F), which is discernibly different from 98.6°F ( $p$-value < 0.001).
 
+## Confidence Intervals vs. Hypothesis Testing
 
+* See also V&H Section 4.3.3
 
 # Running a t-test in R
 
@@ -593,19 +618,13 @@ General use of `here::here()`
 
 `here::here("folder_name", "filename")`
 
-::: columns
-::: {.column width="50%"}
 Resources for `here::here()`:
 
 * [how to use the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/) (Jenny Richmond)
 * [Ode to the here package](https://github.com/jennybc/here_here) (Jenny Bryan)
 
 [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/) (Jenny Bryan)
-:::
-::: {.column width="50%"}
-![[Artwork by @allison_horst](https://allisonhorst.com/r-packages-functions)](/img_slides/horst_here.png){fig-align="center"}
-:::
-:::
+
 
 
 ## `t.test`: base R's function for testing one mean 

@@ -234,14 +234,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#load-packages" id="toc-load-packages" class="nav-link active" data-scroll-target="#load-packages">Load packages</a></li>
-  <li><a href="#goals-for-today-sections-4.3-5.1" id="toc-goals-for-today-sections-4.3-5.1" class="nav-link" data-scroll-target="#goals-for-today-sections-4.3-5.1">Goals for today (Sections 4.3 &amp; 5.1)</a>
+  <li><a href="#goals-for-today" id="toc-goals-for-today" class="nav-link" data-scroll-target="#goals-for-today">Goals for today</a>
   <ul class="collapse">
-  <li><a href="#hypothesis-testing-for-one-sample-mean-4.3-5.1" id="toc-hypothesis-testing-for-one-sample-mean-4.3-5.1" class="nav-link" data-scroll-target="#hypothesis-testing-for-one-sample-mean-4.3-5.1">Hypothesis testing for one-sample mean (4.3, 5.1)</a></li>
-  <li><a href="#inference-for-two-sample-paired-data-mean-5.2" id="toc-inference-for-two-sample-paired-data-mean-5.2" class="nav-link" data-scroll-target="#inference-for-two-sample-paired-data-mean-5.2">Inference for two-sample paired data mean (5.2)</a></li>
+  <li><a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1">Part 1</a>
+  <ul class="collapse">
+  <li><a href="#hypothesis-testing-for-mean-from-one-sample" id="toc-hypothesis-testing-for-mean-from-one-sample" class="nav-link" data-scroll-target="#hypothesis-testing-for-mean-from-one-sample">(4.3, 5.1) Hypothesis testing for mean from one sample</a></li>
+  <li><a href="#confidence-intervals-cis-vs.-hypothesis-tests" id="toc-confidence-intervals-cis-vs.-hypothesis-tests" class="nav-link" data-scroll-target="#confidence-intervals-cis-vs.-hypothesis-tests">(4.3.3) Confidence intervals (CIs) vs.&nbsp;hypothesis tests</a></li>
+  </ul></li>
+  <li><a href="#part-2---class-discussion" id="toc-part-2---class-discussion" class="nav-link" data-scroll-target="#part-2---class-discussion">Part 2 - Class discussion</a>
+  <ul class="collapse">
+  <li><a href="#inference-for-mean-difference-from-dependentpaired-2-samples" id="toc-inference-for-mean-difference-from-dependentpaired-2-samples" class="nav-link" data-scroll-target="#inference-for-mean-difference-from-dependentpaired-2-samples">(5.2) Inference for <strong>mean difference</strong> from dependent/paired 2 samples</a></li>
   <li><a href="#one-sided-cis" id="toc-one-sided-cis" class="nav-link" data-scroll-target="#one-sided-cis">One-sided CIs</a></li>
-  <li><a href="#cis-vs.-hypothesis-tests-4.3.3" id="toc-cis-vs.-hypothesis-tests-4.3.3" class="nav-link" data-scroll-target="#cis-vs.-hypothesis-tests-4.3.3">CIs vs.&nbsp;hypothesis tests (4.3.3)</a></li>
+  <li><a href="#class-discussion" id="toc-class-discussion" class="nav-link" data-scroll-target="#class-discussion">Class discussion</a></li>
   </ul></li>
   <li><a href="#moritzs-tip-of-the-day-use-r-projects-to-organize-analyses" id="toc-moritzs-tip-of-the-day-use-r-projects-to-organize-analyses" class="nav-link" data-scroll-target="#moritzs-tip-of-the-day-use-r-projects-to-organize-analyses">MoRitz’s tip of the day: use <span style="color:darkorange"><strong>R projects</strong></span> to organize analyses</a></li>
+  </ul></li>
   <li><a href="#is-98.6f-really-the-mean-healthy-body-temperature" id="toc-is-98.6f-really-the-mean-healthy-body-temperature" class="nav-link" data-scroll-target="#is-98.6f-really-the-mean-healthy-body-temperature">Is 98.6°F really the mean “healthy” body temperature?</a>
   <ul class="collapse">
   <li><a href="#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f" id="toc-question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f" class="nav-link" data-scroll-target="#question-based-on-the-1992-jama-data-is-there-evidence-to-support-that-the-population-mean-body-temperature-is-different-from-98.6f">Question: based on the 1992 JAMA data, is there evidence to support that the population mean body temperature is different from 98.6°F?</a>
@@ -266,6 +273,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-4-p-value-estimation-using-t-table" id="toc-step-4-p-value-estimation-using-t-table" class="nav-link" data-scroll-target="#step-4-p-value-estimation-using-t-table">Step 4: p-value estimation using <span class="math inline">\(t\)</span>-table</a></li>
   <li><a href="#step-1-significance-level-alpha" id="toc-step-1-significance-level-alpha" class="nav-link" data-scroll-target="#step-1-significance-level-alpha">Step 1: Significance Level <span class="math inline">\(\alpha\)</span></a></li>
   <li><a href="#step-5-conclusion-to-hypothesis-test" id="toc-step-5-conclusion-to-hypothesis-test" class="nav-link" data-scroll-target="#step-5-conclusion-to-hypothesis-test">Step 5: Conclusion to hypothesis test</a></li>
+  <li><a href="#confidence-intervals-vs.-hypothesis-testing" id="toc-confidence-intervals-vs.-hypothesis-testing" class="nav-link" data-scroll-target="#confidence-intervals-vs.-hypothesis-testing">Confidence Intervals vs.&nbsp;Hypothesis Testing</a></li>
   </ul></li>
   <li><a href="#running-a-t-test-in-r" id="toc-running-a-t-test-in-r" class="nav-link" data-scroll-target="#running-a-t-test-in-r">Running a t-test in R</a>
   <ul class="collapse">
@@ -317,7 +325,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#r-what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels" id="toc-r-what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels" class="nav-link" data-scroll-target="#r-what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels">R: What if we wanted to test whether the diet <em>decreased</em> cholesterol levels?</a></li>
   </ul></li>
   <li><a href="#one-sided-confidence-intervals" id="toc-one-sided-confidence-intervals" class="nav-link" data-scroll-target="#one-sided-confidence-intervals">One-sided confidence intervals</a></li>
-  <li><a href="#confidence-intervals-vs.-hypothesis-testing" id="toc-confidence-intervals-vs.-hypothesis-testing" class="nav-link" data-scroll-target="#confidence-intervals-vs.-hypothesis-testing">Confidence Intervals vs.&nbsp;Hypothesis Testing</a></li>
+  <li><a href="#confidence-intervals-vs.-hypothesis-testing-1" id="toc-confidence-intervals-vs.-hypothesis-testing-1" class="nav-link" data-scroll-target="#confidence-intervals-vs.-hypothesis-testing-1">Confidence Intervals vs.&nbsp;Hypothesis Testing</a></li>
   <li><a href="#whats-next-1" id="toc-whats-next-1" class="nav-link" data-scroll-target="#whats-next-1">What’s next?</a></li>
   </ul>
 </nav>
@@ -392,13 +400,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="goals-for-today-sections-4.3-5.1" class="level2">
-<h2 class="anchored" data-anchor-id="goals-for-today-sections-4.3-5.1">Goals for today (Sections 4.3 &amp; 5.1)</h2>
-<section id="hypothesis-testing-for-one-sample-mean-4.3-5.1" class="level3">
-<h3 class="anchored" data-anchor-id="hypothesis-testing-for-one-sample-mean-4.3-5.1">Hypothesis testing for one-sample mean (4.3, 5.1)</h3>
+<section id="goals-for-today" class="level1">
+<h1>Goals for today</h1>
+<section id="part-1" class="level2">
+<h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
+<section id="hypothesis-testing-for-mean-from-one-sample" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-testing-for-mean-from-one-sample">(4.3, 5.1) Hypothesis testing for mean from one sample</h3>
 <ul>
-<li><p>Introduce hypothesis testing using the case of analyzing a mean from one sample (group)</p></li>
-<li><p>Steps of a hypothesis test:</p>
+<li>Introduce hypothesis testing using the case of analyzing a mean from one sample (group)</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><span style="color:purple">Steps of a hypothesis test:</span>
 <ol type="1">
 <li>level of significance</li>
 <li>null ( <span class="math inline">\(H_0\)</span> ) and alternative ( <span class="math inline">\(H_A\)</span> ) hypotheses</li>
@@ -406,20 +420,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>p-value</li>
 <li>conclusion</li>
 </ol></li>
-<li><p>Run a t-test in R, and <code>tidy()</code> the test output using <code>broom</code> package</p></li>
 </ul>
-</section>
-<section id="inference-for-two-sample-paired-data-mean-5.2" class="level3">
-<h3 class="anchored" data-anchor-id="inference-for-two-sample-paired-data-mean-5.2">Inference for two-sample paired data mean (5.2)</h3>
+</div><div class="column" style="width:50%;">
 <ul>
-<li>Confidence intervals (CIs) and hypothesis testing for the mean of two-sample dependent/paired data</li>
+<li><span style="color:green">Run a hypothesis test in R</span>
+<ul>
+<li>Load a dataset - need to specify location of dataset</li>
+<li>R projects</li>
+<li>Run a t-test in R</li>
+<li><code>tidy()</code> the test output using <code>broom</code> package</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="confidence-intervals-cis-vs.-hypothesis-tests" class="level3">
+<h3 class="anchored" data-anchor-id="confidence-intervals-cis-vs.-hypothesis-tests">(4.3.3) Confidence intervals (CIs) vs.&nbsp;hypothesis tests</h3>
+</section>
+</section>
+<section id="part-2---class-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="part-2---class-discussion">Part 2 - Class discussion</h2>
+<section id="inference-for-mean-difference-from-dependentpaired-2-samples" class="level3">
+<h3 class="anchored" data-anchor-id="inference-for-mean-difference-from-dependentpaired-2-samples">(5.2) Inference for <strong>mean difference</strong> from dependent/paired 2 samples</h3>
+<ul>
+<li>Inference: CIs and hypothesis testing</li>
+<li>Exploratory data analysis (EDA) to visualize data</li>
+<li>Run paired t-test in R</li>
 </ul>
 </section>
 <section id="one-sided-cis" class="level3">
 <h3 class="anchored" data-anchor-id="one-sided-cis">One-sided CIs</h3>
 </section>
-<section id="cis-vs.-hypothesis-tests-4.3.3" class="level3">
-<h3 class="anchored" data-anchor-id="cis-vs.-hypothesis-tests-4.3.3">CIs vs.&nbsp;hypothesis tests (4.3.3)</h3>
+<section id="class-discussion" class="level3">
+<h3 class="anchored" data-anchor-id="class-discussion">Class discussion</h3>
+<ul>
+<li>Inference for the mean difference from dependent/paired data is a special case of the inference for the mean from just one sample, that was already covered.</li>
+<li>Thus this part will be used for class discussion to practice CIs and hypothesis testing for one mean and apply it in this new setting.</li>
+<li>In class I will briefly introduce this topic, explain how it is similar and different from what we already covered, and let you work through the slides and code.</li>
+</ul>
 </section>
 </section>
 <section id="moritzs-tip-of-the-day-use-r-projects-to-organize-analyses" class="level2">
@@ -438,6 +476,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><br></p>
 <p>We will discuss how to use projects later in today’s slides when loading a dataset.<br>
 See file <a href="../resources/Projects_in_R.html">Projects in RStudio</a> for more information.</p>
+</section>
 </section>
 <section id="is-98.6f-really-the-mean-healthy-body-temperature" class="level1">
 <h1>Is 98.6°F really the mean “healthy” body temperature?</h1>
@@ -810,6 +849,12 @@ H_0 &amp;: \mu = 98.6\\
 </ul></li>
 </ul>
 </section>
+<section id="confidence-intervals-vs.-hypothesis-testing" class="level2">
+<h2 class="anchored" data-anchor-id="confidence-intervals-vs.-hypothesis-testing">Confidence Intervals vs.&nbsp;Hypothesis Testing</h2>
+<ul>
+<li>See also V&amp;H Section 4.3.3</li>
+</ul>
+</section>
 </section>
 <section id="running-a-t-test-in-r" class="level1">
 <h1>Running a t-test in R</h1>
@@ -920,23 +965,12 @@ $ HeartRate   &lt;dbl&gt; 70, 71, 74, 80, 73, 75, 82, 64, 69, 70, 68, 72, 78, 70
 <h2 class="anchored" data-anchor-id="herehere"><code>here::here()</code></h2>
 <p>General use of <code>here::here()</code></p>
 <p><code>here::here("folder_name", "filename")</code></p>
-<div class="columns">
-<div class="column" style="width:50%;">
 <p>Resources for <code>here::here()</code>:</p>
 <ul>
 <li><a href="http://jenrichmond.rbind.io/post/how-to-use-the-here-package/">how to use the <code>here</code> package</a> (Jenny Richmond)</li>
 <li><a href="https://github.com/jennybc/here_here">Ode to the here package</a> (Jenny Bryan)</li>
 </ul>
 <p><a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Project-oriented workflow</a> (Jenny Bryan)</p>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../img_slides/horst_here.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption"><a href="https://allisonhorst.com/r-packages-functions">Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span></a></figcaption>
-</figure>
-</div>
-</div>
-</div>
 </section>
 <section id="t.test-base-rs-function-for-testing-one-mean" class="level2">
 <h2 class="anchored" data-anchor-id="t.test-base-rs-function-for-testing-one-mean"><code>t.test</code>: base R’s function for testing one mean</h2>
@@ -5967,7 +6001,7 @@ mean difference
 <li>See Section 4.2.3 of the V&amp;H book for more</li>
 </ul>
 </section>
-<section id="confidence-intervals-vs.-hypothesis-testing" class="level1">
+<section id="confidence-intervals-vs.-hypothesis-testing-1" class="level1">
 <h1>Confidence Intervals vs.&nbsp;Hypothesis Testing</h1>
 <ul>
 <li>See also V&amp;H Section 4.3.3</li>

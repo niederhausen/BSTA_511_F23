@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **Due 11/4/23**
 
-Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_4_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_4_F23_bsta511.qmd)
+Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_5_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_5_F23_bsta511.qmd)
 
 
 ## Directions {.unnumbered}
