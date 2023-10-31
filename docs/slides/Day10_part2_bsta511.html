@@ -420,12 +420,16 @@ Meike Niederhausen, PhD
 <p><br> <br></p>
 
 <img data-src="../img_slides/flowchart_only_continuous_5.2.jpg" class="r-stretch quarto-figure-center"></section>
-<section id="goals-for-today-sections-4.3-5.1" class="slide level2">
-<h2>Goals for today (Sections 4.3 &amp; 5.1)</h2>
-<h3 id="hypothesis-testing-for-one-sample-mean-4.3-5.1">Hypothesis testing for one-sample mean (4.3, 5.1)</h3>
+<section id="what-we-covered-in-day-10-part-1" class="slide level2">
+<h2>What we covered in Day 10 Part 1</h2>
+<h3 id="hypothesis-testing-for-mean-from-one-sample">(4.3, 5.1) Hypothesis testing for mean from one sample</h3>
 <ul>
-<li><p>Introduce hypothesis testing using the case of analyzing a mean from one sample (group)</p></li>
-<li><p>Steps of a hypothesis test:</p>
+<li>Introduce hypothesis testing using the case of analyzing a mean from one sample (group)</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><span style="color:purple">Steps of a hypothesis test:</span>
 <ol type="1">
 <li>level of significance</li>
 <li>null ( <span class="math inline">\(H_0\)</span> ) and alternative ( <span class="math inline">\(H_A\)</span> ) hypotheses</li>
@@ -433,22 +437,41 @@ Meike Niederhausen, PhD
 <li>p-value</li>
 <li>conclusion</li>
 </ol></li>
-<li><p>Run a t-test in R, and <code>tidy()</code> the test output using <code>broom</code> package</p></li>
 </ul>
-<h3 id="inference-for-two-sample-paired-data-mean-5.2">Inference for two-sample paired data mean (5.2)</h3>
+</div><div class="column" style="width:50%;">
 <ul>
-<li>Confidence intervals (CIs) and hypothesis testing for the mean of two-sample dependent/paired data</li>
+<li><span style="color:green">Run a hypothesis test in R</span>
+<ul>
+<li>Load a dataset - need to specify location of dataset</li>
+<li>R projects</li>
+<li>Run a t-test in R</li>
+<li><code>tidy()</code> the test output using <code>broom</code> package</li>
+</ul></li>
 </ul>
-<!-- ### One-sided CIs -->
-<h3 id="cis-vs.-hypothesis-tests-4.3.3">CIs vs.&nbsp;hypothesis tests (4.3.3)</h3>
+</div>
+</div>
+<h3 id="confidence-intervals-cis-vs.-hypothesis-tests">(4.3.3) Confidence intervals (CIs) vs.&nbsp;hypothesis tests</h3>
 </section>
-<section id="paired-data" class="slide level2">
-<h2>Paired Data</h2>
+<section id="goals-for-today-part-2---class-discussion" class="slide level2">
+<h2>Goals for today: Part 2 - Class discussion</h2>
+<h3 id="inference-for-mean-difference-from-dependentpaired-2-samples">(5.2) Inference for <strong>mean difference</strong> from dependent/paired 2 samples</h3>
+<ul>
+<li>Inference: CIs and hypothesis testing</li>
+<li>Exploratory data analysis (EDA) to visualize data</li>
+<li>Run paired t-test in R</li>
+</ul>
+<h3 id="one-sided-cis">One-sided CIs</h3>
+<h3 id="class-discussion">Class discussion</h3>
+<ul>
+<li>Inference for the mean difference from dependent/paired data is a special case of the inference for the mean from just one sample, that was already covered.</li>
+<li>Thus this part will be used for class discussion to practice CIs and hypothesis testing for one mean and apply it in this new setting.</li>
+<li>In class I will briefly introduce this topic, explain how it is similar and different from what we already covered, and let you work through the slides and code.</li>
+</ul>
 </section>
-<section id="where-are-we-1" class="slide level2">
-<h2>Where are we?</h2>
-<p>CI’s and hypothesis tests for different scenarios:</p>
-<p><span class="math display">\[point~estimate \pm z^*(or~t^*)\cdot SE,~~~~~~~~test~stat = \frac{point~estimate-null~value}{SE}\]</span></p>
+<section id="cis-and-hypothesis-tests-for-different-scenarios" class="slide level2">
+<h2>CI’s and hypothesis tests for different scenarios:</h2>
+<div style="font-size: 90%;">
+<p><span class="math display">\[\text{point~estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test~stat} = \frac{\text{point~estimate}-\text{null~value}}{SE}\]</span></p>
 <table style="width:100%;">
 <colgroup>
 <col style="width: 14%">
@@ -472,7 +495,7 @@ Meike Niederhausen, PhD
 </thead>
 <tbody>
 <tr class="odd">
-<td>11-12</td>
+<td>10</td>
 <td>5.1</td>
 <td>Pop mean</td>
 <td><span class="math inline">\(\mu\)</span></td>
@@ -481,16 +504,16 @@ Meike Niederhausen, PhD
 <td><span class="math inline">\(\frac{s}{\sqrt{n}}\)</span></td>
 </tr>
 <tr class="even">
-<td>13</td>
+<td>10</td>
 <td>5.2</td>
-<td>Diff in paired <br> pop means</td>
-<td><span class="math inline">\(\mu_d\)</span> or <span class="math inline">\(\delta\)</span></td>
-<td>Diff in paired <br> sample means</td>
-<td><span class="math inline">\(\bar{x}_{d}\)</span></td>
-<td></td>
+<td><span style="color:green">Pop mean of paired diff</span></td>
+<td><span style="color:green"><span class="math inline">\(\mu_d\)</span> or <span class="math inline">\(\delta\)</span></span></td>
+<td><span style="color:green">Sample mean of paired diff</span></td>
+<td><span style="color:green"><span class="math inline">\(\bar{x}_{d}\)</span></span></td>
+<td><span style="color:red"><strong>???</strong></span></td>
 </tr>
 <tr class="odd">
-<td>14</td>
+<td>11</td>
 <td>5.3</td>
 <td>Diff in pop <br> means</td>
 <td><span class="math inline">\(\mu_1-\mu_2\)</span></td>
@@ -499,25 +522,26 @@ Meike Niederhausen, PhD
 <td></td>
 </tr>
 <tr class="even">
+<td>12</td>
 <td>8.1</td>
 <td>Pop proportion</td>
 <td><span class="math inline">\(p\)</span></td>
 <td>Sample prop</td>
 <td><span class="math inline">\(\widehat{p}\)</span></td>
 <td></td>
-<td></td>
 </tr>
 <tr class="odd">
+<td>12</td>
 <td>8.2</td>
 <td>Diff in pop <br> proportions</td>
 <td><span class="math inline">\(p_1-p_2\)</span></td>
 <td>Diff in sample <br> proportions</td>
 <td><span class="math inline">\(\widehat{p}_1-\widehat{p}_2\)</span></td>
 <td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="steps-in-a-hypothesis-test" class="slide level2">
 <h2>Steps in a Hypothesis Test</h2>
@@ -537,20 +561,6 @@ Meike Niederhausen, PhD
 <li>Write a conclusion in the context of the problem</li>
 </ol></li>
 </ol>
-</section>
-<section id="goals-for-today-section-5.2" class="slide level2">
-<h2>Goals for today (Section 5.2)</h2>
-<ul>
-<li>Statistical inference for paired data (2 samples)
-<ol type="1">
-<li>What are paired data?<br>
-</li>
-<li>EDA of data</li>
-<li>Hypothesis test</li>
-<li>Confidence Interval</li>
-<li>Run test in R</li>
-</ol></li>
-</ul>
 </section>
 <section id="examples-of-paired-designs-two-samples" class="slide level2">
 <h2>Examples of paired designs (two samples)</h2>

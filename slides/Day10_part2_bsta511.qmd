@@ -68,50 +68,64 @@ set.seed(456)
 ![](/img_slides/flowchart_only_continuous_5.2.jpg){fig-align="center"}
 
 
-## Goals for today (Sections 4.3 & 5.1)
+## What we covered in Day 10 Part 1 
 
-### Hypothesis testing for one-sample mean (4.3, 5.1) 
+### (4.3, 5.1) Hypothesis testing for mean from one sample  
 
 * Introduce hypothesis testing using the case of analyzing a mean from one sample (group)
 
-* Steps of a hypothesis test:
+::: columns
+::: {.column width="50%"}
+* [Steps of a hypothesis test:]{style="color:purple"}
     1. level of significance
     1. null ( $H_0$ ) and alternative ( $H_A$ ) hypotheses
     1. test statistic
     1. p-value
     1. conclusion
+:::
+::: {.column width="50%"}
+* [Run a hypothesis test in R]{style="color:green"}
+    * Load a dataset - need to specify location of dataset
+    * R projects
+    * Run a t-test in R
+    * `tidy()` the test output using `broom` package
+:::
+:::
 
-* Run a t-test in R, and `tidy()` the test output using `broom` package
-
-### Inference for two-sample paired data mean (5.2)
-
-* Confidence intervals (CIs) and hypothesis testing for the mean of two-sample dependent/paired data
-
-<!-- ### One-sided CIs -->
-
-### CIs vs. hypothesis tests (4.3.3)
-
-
-
-## Paired Data
+### (4.3.3) Confidence intervals (CIs) vs. hypothesis tests 
 
 
-## Where are we?
+## Goals for today: Part 2 - Class discussion
 
-CI's and hypothesis tests for different scenarios:
+### (5.2) Inference for __mean difference__ from dependent/paired 2 samples  
 
-$$point~estimate \pm z^*(or~t^*)\cdot SE,~~~~~~~~test~stat = \frac{point~estimate-null~value}{SE}$$
+* Inference: CIs and hypothesis testing
+* Exploratory data analysis (EDA) to visualize data
+* Run paired t-test in R
+
+### One-sided CIs
+
+### Class discussion
+
+* Inference for the mean difference from dependent/paired data is a special case of the inference for the mean from just one sample, that was already covered.
+* Thus this part will be used for class discussion to practice CIs and hypothesis testing for one mean and apply it in this new setting.
+* In class I will briefly introduce this topic, explain how it is similar and different from what we already covered, and let you work through the slides and code. 
+
+
+## CI's and hypothesis tests for different scenarios: 
+
+::: {style="font-size: 90%;"}
+$$\text{point~estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test~stat} = \frac{\text{point~estimate}-\text{null~value}}{SE}$$
 
 Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 --|--|--|--|--|--|--
-11-12 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$
-13 | 5.2 | Diff in paired <br> pop means | $\mu_d$ or $\delta$ | Diff in paired <br> sample means | $\bar{x}_{d}$  |
-14 | 5.3 | Diff in pop <br> means | $\mu_1-\mu_2$ | Diff in sample <br> means | $\bar{x}_1 - \bar{x}_2$  |
- | 8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$  |
- | 8.2 | Diff in pop <br> proportions | $p_1-p_2$ | Diff in sample <br> proportions | $\widehat{p}_1-\widehat{p}_2$ |
+10 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$
+10 | 5.2 | [Pop mean of paired diff]{style="color:green"} | [$\mu_d$ or $\delta$]{style="color:green"} | [Sample mean of paired diff]{style="color:green"} | [$\bar{x}_{d}$]{style="color:green"}  | [**???**]{style="color:red"}
+11 | 5.3 | Diff in pop <br> means | $\mu_1-\mu_2$ | Diff in sample <br> means | $\bar{x}_1 - \bar{x}_2$  |
+12 | 8.1 | Pop proportion | $p$ | Sample prop | $\widehat{p}$  |
+12 | 8.2 | Diff in pop <br> proportions | $p_1-p_2$ | Diff in sample <br> proportions | $\widehat{p}_1-\widehat{p}_2$ |
 
-
-
+:::
 
 
 ## Steps in a Hypothesis Test
@@ -133,20 +147,6 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
     1. Write a conclusion in the context of the problem
 
 
-
-
-
-## Goals for today (Section 5.2)
-
-* Statistical inference for paired data (2 samples)
-    1. What are paired data?  
-    1. EDA of data
-    1. Hypothesis test
-    1. Confidence Interval
-    1. Run test in R
-
-
-
 ## Examples of paired designs (two samples)
 
 * Enroll pairs of identical twins to study a disease
@@ -154,8 +154,6 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 * Studying pairs of eyes
 * Enroll people and collect data before & after an intervention (longitudinal data)
 * Book: Compare maximal speed of competitive swimmers wearing a wetsuit vs. wearing a regular swimsuit
-
-
 
 
 ## Can a vegetarian diet change cholesterol levels?
