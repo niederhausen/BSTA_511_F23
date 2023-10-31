@@ -250,10 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#cis-and-hypothesis-tests-for-different-scenarios" id="toc-cis-and-hypothesis-tests-for-different-scenarios" class="nav-link" data-scroll-target="#cis-and-hypothesis-tests-for-different-scenarios">CI’s and hypothesis tests for different scenarios:</a></li>
   <li><a href="#steps-in-a-hypothesis-test" id="toc-steps-in-a-hypothesis-test" class="nav-link" data-scroll-target="#steps-in-a-hypothesis-test">Steps in a Hypothesis Test</a></li>
   </ul></li>
-  <li><a href="#goals-for-today-section-5.2" id="toc-goals-for-today-section-5.2" class="nav-link" data-scroll-target="#goals-for-today-section-5.2">Goals for today (Section 5.2)</a>
-  <ul class="collapse">
   <li><a href="#examples-of-paired-designs-two-samples" id="toc-examples-of-paired-designs-two-samples" class="nav-link" data-scroll-target="#examples-of-paired-designs-two-samples">Examples of paired designs (two samples)</a></li>
-  </ul></li>
   <li><a href="#can-a-vegetarian-diet-change-cholesterol-levels" id="toc-can-a-vegetarian-diet-change-cholesterol-levels" class="nav-link" data-scroll-target="#can-a-vegetarian-diet-change-cholesterol-levels">Can a vegetarian diet change cholesterol levels?</a>
   <ul class="collapse">
   <li><a href="#eda-explore-the-cholesterol-data" id="toc-eda-explore-the-cholesterol-data" class="nav-link" data-scroll-target="#eda-explore-the-cholesterol-data">EDA: Explore the cholesterol data</a>
@@ -272,12 +269,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-5-conclusion-to-hypothesis-test" id="toc-step-5-conclusion-to-hypothesis-test" class="nav-link" data-scroll-target="#step-5-conclusion-to-hypothesis-test">Step 5: Conclusion to hypothesis test</a></li>
   </ul></li>
   <li><a href="#ci-for-the-mean-difference-in-cholesterol-levels" id="toc-ci-for-the-mean-difference-in-cholesterol-levels" class="nav-link" data-scroll-target="#ci-for-the-mean-difference-in-cholesterol-levels">95% CI for the mean difference in cholesterol levels</a></li>
-  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a>
+  <li><a href="#running-a-paired-t-test-in-r" id="toc-running-a-paired-t-test-in-r" class="nav-link" data-scroll-target="#running-a-paired-t-test-in-r">Running a paired t-test in R</a>
   <ul class="collapse">
   <li><a href="#r-option-1-run-a-1-sample-t.test-using-the-paired-differences" id="toc-r-option-1-run-a-1-sample-t.test-using-the-paired-differences" class="nav-link" data-scroll-target="#r-option-1-run-a-1-sample-t.test-using-the-paired-differences">R option 1: Run a 1-sample <code>t.test</code> using the paired differences</a></li>
   <li><a href="#r-option-2-run-a-2-sample-t.test-with-paired-true-option" id="toc-r-option-2-run-a-2-sample-t.test-with-paired-true-option" class="nav-link" data-scroll-target="#r-option-2-run-a-2-sample-t.test-with-paired-true-option">R option 2: Run a 2-sample <code>t.test</code> with <code>paired = TRUE</code> option</a></li>
   <li><a href="#r-option-3-run-a-2-sample-t.test-with-paired-true-option-but-using-the-long-data-and-a-formula" id="toc-r-option-3-run-a-2-sample-t.test-with-paired-true-option-but-using-the-long-data-and-a-formula" class="nav-link" data-scroll-target="#r-option-3-run-a-2-sample-t.test-with-paired-true-option-but-using-the-long-data-and-a-formula">R option 3: Run a 2-sample <code>t.test</code> with <code>paired = TRUE</code> option, but using the long data and a “formula”</a></li>
-  <li><a href="#tidy-the-t.test-output-compare-the-3-options" id="toc-tidy-the-t.test-output-compare-the-3-options" class="nav-link" data-scroll-target="#tidy-the-t.test-output-compare-the-3-options"><code>tidy</code> the <code>t.test</code> output &amp; compare the 3 options</a></li>
+  <li><a href="#compare-the-3-options" id="toc-compare-the-3-options" class="nav-link" data-scroll-target="#compare-the-3-options">Compare the 3 options</a></li>
   </ul></li>
   <li><a href="#what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels" id="toc-what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels" class="nav-link" data-scroll-target="#what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels">What if we wanted to test whether the diet <em>decreased</em> cholesterol levels?</a>
   <ul class="collapse">
@@ -514,29 +511,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </section>
 </section>
-<section id="goals-for-today-section-5.2" class="level1">
-<h1>Goals for today (Section 5.2)</h1>
-<ul>
-<li>Statistical inference for paired data (2 samples)
-<ol type="1">
-<li>What are paired data?<br>
-</li>
-<li>EDA of data</li>
-<li>Hypothesis test</li>
-<li>Confidence Interval</li>
-<li>Run test in R</li>
-</ol></li>
-</ul>
-<section id="examples-of-paired-designs-two-samples" class="level2">
-<h2 class="anchored" data-anchor-id="examples-of-paired-designs-two-samples">Examples of paired designs (two samples)</h2>
+<section id="examples-of-paired-designs-two-samples" class="level1">
+<h1>Examples of paired designs (two samples)</h1>
 <ul>
 <li>Enroll pairs of identical twins to study a disease</li>
 <li>Enroll father &amp; son pairs to study cholesterol levels</li>
 <li>Studying pairs of eyes</li>
 <li>Enroll people and collect data before &amp; after an intervention (longitudinal data)</li>
-<li>Book: Compare maximal speed of competitive swimmers wearing a wetsuit vs.&nbsp;wearing a regular swimsuit</li>
+<li><span style="color:green">Textbook example: Compare maximal speed of competitive swimmers wearing a wetsuit vs.&nbsp;wearing a regular swimsuit</span>
+<ul>
+<li>WIll use these data on homework</li>
+</ul></li>
 </ul>
-</section>
+<p><span style="color:darkorange"><em>Come up with 2 more examples of paired study designs.</em></span></p>
 </section>
 <section id="can-a-vegetarian-diet-change-cholesterol-levels" class="level1">
 <h1>Can a vegetarian diet change cholesterol levels?</h1>
@@ -547,7 +534,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>They were instructed to adopt a vegetarian diet</li>
 <li>Cholesterol levels were measured before and after the diet</li>
 </ul></li>
-<li><strong>Question</strong>: Is there evidence to support that cholesterol levels changed after the vegetarian diet?</li>
+<li><strong>Question</strong>: <span style="color:purple">Is there evidence to support that cholesterol levels changed after the vegetarian diet?</span></li>
 <li>How to answer the question?
 <ul>
 <li>First, calculate changes (differences) in cholesterol levels
@@ -560,9 +547,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><span class="math display">\[\bar{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}\]</span></p>
 <p>Run a <strong>hypothesis test</strong></p>
 <p>Hypotheses</p>
-<p><span class="math display">\[H_0: \delta = \delta_0 \\
-H_A: \delta \neq \delta_0 \\
-(or~ &lt;, &gt;)\]</span></p>
+<p><span class="math display">\[\begin{align}
+H_0:&amp; \delta = \delta_0 \\
+H_A:&amp; \delta \neq \delta_0 \\
+(or&amp;~ &lt;, &gt;)
+\end{align}\]</span></p>
 <p>Test statistic</p>
 <p><span class="math display">\[
 t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
@@ -578,7 +567,7 @@ t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>chol <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/chol213.csv"</span>)</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>chol <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"chol213.csv"</span>))</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(chol)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 24
@@ -586,7 +575,9 @@ Columns: 2
 $ Before &lt;dbl&gt; 195, 145, 205, 159, 244, 166, 250, 236, 192, 224, 238, 197, 169…
 $ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169, 182…</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>chol <span class="sc">%&gt;%</span> <span class="fu">get_summary_stats</span>(<span class="at">type =</span> <span class="st">"common"</span>) <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>chol <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">get_summary_stats</span>(<span class="at">type =</span> <span class="st">"common"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="mecfuynzio" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -1073,8 +1064,10 @@ $ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169,
 </div>
 </div>
 </div>
+<p><span style="color:darkorange"><em>Make sure you are able to load the data on your computer!</em></span></p>
 <section id="eda-cholesterol-levels-before-and-after-vegetarian-diet" class="level3">
 <h3 class="anchored" data-anchor-id="eda-cholesterol-levels-before-and-after-vegetarian-diet">EDA: Cholesterol levels before and after vegetarian diet</h3>
+<p><span style="color:darkorange"><em>Describe the distributions of the before &amp; after data.</em></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>Before)) <span class="sc">+</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1105,6 +1098,7 @@ $ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169,
 <ul>
 <li>Visualize the individual before vs.&nbsp;after diet changes in cholesterol levels</li>
 </ul>
+<p><span style="color:darkorange"><em>What does this figure tell us?</em></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>chol_long <span class="ot">&lt;-</span> chol <span class="sc">%&gt;%</span> </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># need an ID column for the plot</span></span>
@@ -1131,31 +1125,32 @@ $ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169,
 <p><img src="Day10_part2_bsta511_code_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="480"></p>
 </div>
 </div>
+<ul>
+<li><em>You will not be expected to create this figure yourself</em>.</li>
+</ul>
 </section>
 <section id="eda-differences-in-cholesterol-levels-after---before-diet" class="level3">
 <h3 class="anchored" data-anchor-id="eda-differences-in-cholesterol-levels-after---before-diet">EDA: Differences in cholesterol levels: After - Before diet</h3>
+<p><span style="color:darkorange"><em>What is this code doing?</em></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>chol <span class="ot">&lt;-</span> chol <span class="sc">%&gt;%</span> </span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">DiffChol =</span> After<span class="sc">-</span>Before) </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(chol, <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(chol, <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 12 × 3
-   Before After DiffChol
-    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
- 1    195   146      -49
- 2    145   155       10
- 3    205   178      -27
- 4    159   146      -13
- 5    244   208      -36
- 6    166   147      -19
- 7    250   202      -48
- 8    236   215      -21
- 9    192   184       -8
-10    224   208      -16
-11    238   206      -32
-12    197   169      -28</code></pre>
+<pre><code># A tibble: 8 × 3
+  Before After DiffChol
+   &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
+1    195   146      -49
+2    145   155       10
+3    205   178      -27
+4    159   146      -13
+5    244   208      -36
+6    166   147      -19
+7    250   202      -48
+8    236   215      -21</code></pre>
 </div>
 </div>
+<p><span style="color:darkorange"><em>Is the mean of DiffChol the same as the difference in means of After - Before? Should it be? Why or why not?</em></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>chol <span class="sc">%&gt;%</span> </span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">get_summary_stats</span>(<span class="at">type =</span> <span class="st">"common"</span>) <span class="sc">%&gt;%</span> </span>
@@ -1659,6 +1654,8 @@ $ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169,
 </section>
 <section id="eda-differences-in-cholesterol-levels-after---before-diet-1" class="level3">
 <h3 class="anchored" data-anchor-id="eda-differences-in-cholesterol-levels-after---before-diet-1">EDA: Differences in cholesterol levels: After - Before diet</h3>
+<p><span style="color:darkorange"><em>Compare and contrast the 3 distributions. Comment on shape, center, and spread.</em></span></p>
+<p><code>Before</code> &amp; <code>After</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>Before)) <span class="sc">+</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1671,6 +1668,7 @@ $ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169,
 <p><img src="Day10_part2_bsta511_code_files/figure-html/unnamed-chunk-9-2.png" class="img-fluid" width="480"></p>
 </div>
 </div>
+<p><code>DiffChol</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chol, <span class="fu">aes</span>(<span class="at">x=</span>DiffChol)) <span class="sc">+</span> </span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1712,10 +1710,11 @@ $ After  &lt;dbl&gt; 146, 155, 178, 146, 208, 147, 202, 215, 184, 208, 206, 169,
 <p>Null and alternative hypotheses in <strong>words</strong> Include as much context as possible</p>
 <p><br></p>
 <ul>
-<li><p><span class="math inline">\(H_0\)</span>: The population mean difference in cholesterol levels after a vegetarian diet is</p></li>
-<li><p><span class="math inline">\(H_A\)</span>: The population mean difference in cholesterol levels after a vegetarian diet is</p></li>
+<li><p><span class="math inline">\(H_0\)</span>: The population mean difference in cholesterol levels after a vegetarian diet is <span style="color:darkorange"><em>fill in</em></span></p></li>
+<li><p><span class="math inline">\(H_A\)</span>: The population mean difference in cholesterol levels after a vegetarian diet is <span style="color:darkorange"><em>fill in</em></span></p></li>
 </ul>
 <p>Null and alternative hypotheses in <strong>symbols</strong></p>
+<p><span style="color:darkorange"><em>fill in the missing parts of the hypotheses.</em></span></p>
 <p><span class="math display">\[~~~~H_0: \delta =  \\
 H_A: \delta   \\\]</span></p>
 </section>
@@ -2203,9 +2202,10 @@ H_A: \delta   \\\]</span></p>
 t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
 \]</span></p>
 <ul>
-<li>Based on the value of the test statistic, do you think we are going to reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
-<li>What probability distribution does the test statistic have?</li>
-<li>Are the <strong><span style="color:darkorange">assumptions</span></strong> for a paired t-test satisfied so that we can use the probability distribution to calculate the <span class="math inline">\(p\)</span>-value??</li>
+<li><span style="color:darkorange"><em>Calculate the test statistic.</em></span></li>
+<li><span style="color:darkorange">Based on the value of the test statistic, do you think we are going to reject or fail to reject <span class="math inline">\(H_0\)</span>?</span></li>
+<li><span style="color:darkorange">What probability distribution does the test statistic have?</span></li>
+<li><span style="color:darkorange">Are the <strong>assumptions</strong> for a paired t-test satisfied so that we can use the probability distribution to calculate the <span class="math inline">\(p\)</span>-value??</span></li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">24</span></span>
@@ -2273,7 +2273,7 @@ t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
 <p><img src="Day10_part2_bsta511_code_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="480"></p>
 </div>
 </div>
-<p>Calculate the <em>p</em>-value:</p>
+<p><span style="color:darkorange">Calculate the <em>p</em>-value and shade in the area representing the p-value:</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>(pv <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>(<span class="fu">pt</span>(tstat, <span class="at">df=</span>n<span class="dv">-1</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2283,12 +2283,14 @@ t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
 </section>
 <section id="step-5-conclusion-to-hypothesis-test" class="level2">
 <h2 class="anchored" data-anchor-id="step-5-conclusion-to-hypothesis-test">Step 5: Conclusion to hypothesis test</h2>
-<p><span class="math display">\[~~~~H_0: \delta = 0 \\
-H_A: \delta \neq 0  \\\]</span></p>
+<p><span class="math display">\[\begin{align}
+H_0:&amp; \delta = 0 \\
+H_A:&amp; \delta \neq 0 \\
+\end{align}\]</span></p>
 <ul>
 <li>Recall the <span class="math inline">\(p\)</span>-value = <span class="math inline">\(8.434775 \cdot 10 ^{-6}\)</span></li>
 <li>Use <span class="math inline">\(\alpha\)</span> = 0.05.</li>
-<li>Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</li>
+<li><span style="color:darkorange">Do we reject or fail to reject <span class="math inline">\(H_0\)</span>?</span></li>
 </ul>
 <p><strong>Conclusion statement</strong>:</p>
 <ul>
@@ -2820,19 +2822,21 @@ H_A: \delta \neq 0  \\\]</span></p>
 <pre><code>[1] -12.44522</code></pre>
 </div>
 </div>
-<p><span class="math display">\[\bar{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}\\
--19.542 \pm 2.069\cdot\frac{16.806}{\sqrt{24}}\\
--19.542 \pm 2.069\cdot 3.43\\
--19.542 \pm 7.096\\
-(-26.638, -12.445)\]</span></p>
+<p><span class="math display">\[\begin{align}
+\bar{x}_d &amp;\pm t^*\cdot\frac{s_d}{\sqrt{n}}\\
+-19.542 &amp;\pm 2.069\cdot\frac{16.806}{\sqrt{24}}\\
+-19.542 &amp;\pm 2.069\cdot 3.43\\
+-19.542 &amp;\pm 7.096\\
+(-26.638&amp;, -12.445)
+\end{align}\]</span></p>
 <p>Conclusion:<br>
 We are 95% that the (population) mean difference in cholesterol levels after a vegetarian diet is between -26.638 mg/dL and -12.445 mg/dL.</p>
 <ul>
-<li><em>Based on the CI, is there evidence the diet made a difference in cholesterol levels? Why or why not?</em></li>
+<li><span style="color:darkorange"><em>Based on the CI, is there evidence the diet made a difference in cholesterol levels? Why or why not?</em></span></li>
 </ul>
 </section>
-<section id="r" class="level1">
-<h1>R</h1>
+<section id="running-a-paired-t-test-in-r" class="level1">
+<h1>Running a paired t-test in R</h1>
 <section id="r-option-1-run-a-1-sample-t.test-using-the-paired-differences" class="level2">
 <h2 class="anchored" data-anchor-id="r-option-1-run-a-1-sample-t.test-using-the-paired-differences">R option 1: Run a 1-sample <code>t.test</code> using the paired differences</h2>
 <p><span class="math inline">\(H_A: \delta \neq 0\)</span></p>
@@ -2852,6 +2856,7 @@ mean of x
 -19.54167 </code></pre>
 </div>
 </div>
+<p><span style="color:darkorange"><em>Run the code without <code>mu = 0</code>. Do the results change? Why or why not?</em></span></p>
 </section>
 <section id="r-option-2-run-a-2-sample-t.test-with-paired-true-option" class="level2">
 <h2 class="anchored" data-anchor-id="r-option-2-run-a-2-sample-t.test-with-paired-true-option">R option 2: Run a 2-sample <code>t.test</code> with <code>paired = TRUE</code> option</h2>
@@ -2876,9 +2881,43 @@ mean difference
        19.54167 </code></pre>
 </div>
 </div>
+<p><span style="color:darkorange"><em>What is different in the output compared to option 1?</em></span></p>
 </section>
 <section id="r-option-3-run-a-2-sample-t.test-with-paired-true-option-but-using-the-long-data-and-a-formula" class="level2">
 <h2 class="anchored" data-anchor-id="r-option-3-run-a-2-sample-t.test-with-paired-true-option-but-using-the-long-data-and-a-formula">R option 3: Run a 2-sample <code>t.test</code> with <code>paired = TRUE</code> option, but using the long data and a “formula”</h2>
+<ul>
+<li>The data have to be in a <code>long</code> format for option 3, where each person has 2 rows: one for Before and one for After.
+<ul>
+<li>The long dataset <code>chol_long</code> was created for the slide “EDA: Spaghetti plot of cholesterol levels before &amp; after diet”.</li>
+<li>See the code to create it there.</li>
+</ul></li>
+<li><span style="color:darkorange"><em>What information is being stored in each of the columns?</em></span></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first 16 rows of long data:</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(chol_long, <span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 16 × 3
+   ID    Time   Cholesterol
+   &lt;fct&gt; &lt;fct&gt;        &lt;dbl&gt;
+ 1 1     Before         195
+ 2 1     After          146
+ 3 2     Before         145
+ 4 2     After          155
+ 5 3     Before         205
+ 6 3     After          178
+ 7 4     Before         159
+ 8 4     After          146
+ 9 5     Before         244
+10 5     After          208
+11 6     Before         166
+12 6     After          147
+13 7     Before         250
+14 7     After          202
+15 8     Before         236
+16 8     After          215</code></pre>
+</div>
+</div>
 <ul>
 <li>Use the usual <code>t.test</code></li>
 <li>What’s different is that
@@ -2890,10 +2929,11 @@ mean difference
 <li>This method is often used in practice, and more similar to the coding style of running a regression model (BSTA 512 &amp; 513)</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># using long data with columns Cholesterol &amp; Time:</span></span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Cholesterol <span class="sc">~</span> Time, </span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">paired =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">data =</span> chol_long)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># using long data </span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="co"># with columns Cholesterol &amp; Time</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Cholesterol <span class="sc">~</span> Time, </span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">paired =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">data =</span> chol_long)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Paired t-test
@@ -2908,12 +2948,20 @@ mean difference
        19.54167 </code></pre>
 </div>
 </div>
+<ul>
+<li><span style="color:darkorange"><em>What is different in the output compared to option 1?</em></span></li>
+<li><span style="color:darkorange"><em>Rerun the test using <code>Time ~ Cholesterol</code> (switch the variables). What do you get?</em></span></li>
+</ul>
 </section>
-<section id="tidy-the-t.test-output-compare-the-3-options" class="level2">
-<h2 class="anchored" data-anchor-id="tidy-the-t.test-output-compare-the-3-options"><code>tidy</code> the <code>t.test</code> output &amp; compare the 3 options</h2>
+<section id="compare-the-3-options" class="level2">
+<h2 class="anchored" data-anchor-id="compare-the-3-options">Compare the 3 options</h2>
+<ul>
+<li><span style="color:darkorange"><em>How is the code similar and different for the 3 options?</em></span></li>
+<li><span style="color:darkorange"><em>Given a dataset, how would you choose which of the 3 options to use?</em></span></li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># option 1</span></span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="co"># tidy from broom package</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># option 1</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="co"># tidy from broom package</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="fkcopadtpi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -3385,8 +3433,8 @@ mean difference
 </table>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># option 2</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>Before, <span class="at">y =</span> chol<span class="sc">$</span>After, <span class="at">mu =</span> <span class="dv">0</span>, <span class="at">paired =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># option 2</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>Before, <span class="at">y =</span> chol<span class="sc">$</span>After, <span class="at">mu =</span> <span class="dv">0</span>, <span class="at">paired =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="ybwppxvyco" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -3858,8 +3906,8 @@ mean difference
 </table>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># option 3</span></span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Cholesterol <span class="sc">~</span> Time, <span class="at">paired =</span> <span class="cn">TRUE</span>, <span class="at">data =</span> chol_long) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co"># option 3</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Cholesterol <span class="sc">~</span> Time, <span class="at">paired =</span> <span class="cn">TRUE</span>, <span class="at">data =</span> chol_long) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="zcwalwlqbq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
@@ -4336,7 +4384,7 @@ mean difference
 </section>
 <section id="what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels" class="level1">
 <h1>What if we wanted to test whether the diet <em>decreased</em> cholesterol levels?</h1>
-<p>How are the steps different?</p>
+<p><span style="color:darkorange">What changes in each of the steps?</span></p>
 <ol type="1">
 <li><p>Set the <strong><span style="color:darkorange">level of significance</span></strong> <span class="math inline">\(\alpha\)</span></p></li>
 <li><p>Specify the <strong><span style="color:darkorange">hypotheses</span></strong> <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_A\)</span></p>
@@ -4349,9 +4397,14 @@ mean difference
 </ol>
 <section id="r-what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels" class="level2">
 <h2 class="anchored" data-anchor-id="r-what-if-we-wanted-to-test-whether-the-diet-decreased-cholesterol-levels">R: What if we wanted to test whether the diet <em>decreased</em> cholesterol levels?</h2>
+<ul>
+<li><span style="color:darkorange"><em>Which of the 3 options to run a paired t-test in R is being used below?</em></span></li>
+<li><span style="color:darkorange"><em>How did the code change to account for testing a decrease in cholesterol levels?</em></span></li>
+<li><span style="color:darkorange"><em>Which values in the output changed compared to testing for a change in cholesterol levels? How did they change?</em></span></li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># alternative = c("two.sided", "less", "greater")</span></span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>, <span class="at">alternative =</span> <span class="st">"less"</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># alternative = c("two.sided", "less", "greater")</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> chol<span class="sc">$</span>DiffChol, <span class="at">mu =</span> <span class="dv">0</span>, <span class="at">alternative =</span> <span class="st">"less"</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div id="endsoyqvje" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">

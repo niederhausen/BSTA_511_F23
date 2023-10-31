@@ -129,23 +129,17 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
     1. Write a conclusion in the context of the problem
 
 
-# Goals for today (Section 5.2)
-
-* Statistical inference for paired data (2 samples)
-    1. What are paired data?  
-    1. EDA of data
-    1. Hypothesis test
-    1. Confidence Interval
-    1. Run test in R
-
-
-## Examples of paired designs (two samples)
+# Examples of paired designs (two samples)
 
 * Enroll pairs of identical twins to study a disease
 * Enroll father & son pairs to study cholesterol levels
 * Studying pairs of eyes
 * Enroll people and collect data before & after an intervention (longitudinal data)
-* Book: Compare maximal speed of competitive swimmers wearing a wetsuit vs. wearing a regular swimsuit
+* [Textbook example: Compare maximal speed of competitive swimmers wearing a wetsuit vs. wearing a regular swimsuit]{style="color:green"}
+    * WIll use these data on homework
+
+
+[*Come up with 2 more examples of paired study designs.*]{style="color:darkorange"}
 
 
 # Can a vegetarian diet change cholesterol levels?
@@ -154,7 +148,7 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
   * 24 non-vegetarian people were enrolled in a study
   * They were instructed to adopt a vegetarian diet
   * Cholesterol levels were measured before and after the diet
-* __Question__: Is there evidence to support that cholesterol levels changed after the vegetarian diet?
+* __Question__: [Is there evidence to support that cholesterol levels changed after the vegetarian diet?]{style="color:purple"}
 * How to answer the question?
   * First, calculate changes (differences) in cholesterol levels
       * We usually do after - before if the data are longitudinal
@@ -168,10 +162,11 @@ Run a __hypothesis test__
 
 Hypotheses
 
-$$H_0: \delta = \delta_0 \\
-H_A: \delta \neq \delta_0 \\
-(or~ <, >)$$
-
+\begin{align}
+H_0:& \delta = \delta_0 \\
+H_A:& \delta \neq \delta_0 \\
+(or&~ <, >)
+\end{align}
 
 Test statistic
 
@@ -188,14 +183,19 @@ $$
   * Cholesterol levels were measured before and after the diet
 
 ```{r}
-chol <- read_csv("data/chol213.csv")
+chol <- read_csv(here::here("data", "chol213.csv"))
 glimpse(chol)
-chol %>% get_summary_stats(type = "common") %>% gt()
+chol %>% 
+  get_summary_stats(type = "common") %>% 
+  gt()
 ```
 
+
+[*Make sure you are able to load the data on your computer!*]{style="color:darkorange"}
 
 ### EDA: Cholesterol levels before and after vegetarian diet
 
+[*Describe the distributions of the before & after data.*]{style="color:darkorange"}
 
 ```{r }
 ggplot(chol, aes(x=Before)) +
@@ -210,11 +210,14 @@ ggplot(chol, aes(x=After)) +
 ggplot(chol, aes(x=After)) +
   geom_boxplot()
 ```
+
 
 
 ### EDA: Spaghetti plot of cholesterol levels before & after diet
 
 * Visualize the individual before vs. after diet changes in cholesterol levels
+
+[*What does this figure tell us?*]{style="color:darkorange"}
 
 ```{r}
 #| fig.height: 4
@@ -241,16 +244,20 @@ ggplot(chol_long,
   geom_line(show.legend = FALSE)
 ```
 
+* *You will not be expected to create this figure yourself*.
 
 ### EDA: Differences in cholesterol levels: After - Before diet
 
+[*What is this code doing?*]{style="color:darkorange"}
 
 ```{r }
 chol <- chol %>% 
   mutate(DiffChol = After-Before) 
-head(chol, 12)
+head(chol, 8)
 
 ```
+
+[*Is the mean of DiffChol the same as the difference in means of After - Before? Should it be? Why or why not?*]{style="color:darkorange"}
 
 ```{r }
 chol %>% 
@@ -261,12 +268,18 @@ chol %>%
 
 ### EDA: Differences in cholesterol levels: After - Before diet
 
+[*Compare and contrast the 3 distributions. Comment on shape, center, and spread.*]{style="color:darkorange"}
+
+`Before` & `After`
+
 ```{r }
 ggplot(chol, aes(x=Before)) +
   geom_density()
 ggplot(chol, aes(x=After)) +
   geom_density()
 ```
+
+`DiffChol`
 
 ```{r }
 ggplot(chol, aes(x=DiffChol)) + 
@@ -305,13 +318,14 @@ Include as much context as possible
 
 <br>
 
-* $H_0$: The population mean difference in cholesterol levels after a vegetarian diet is  
+* $H_0$: The population mean difference in cholesterol levels after a vegetarian diet is  [*fill in*]{style="color:darkorange"}
 
-* $H_A$: The population mean difference in cholesterol levels after a vegetarian diet is
-
+* $H_A$: The population mean difference in cholesterol levels after a vegetarian diet is [*fill in*]{style="color:darkorange"}
 
 
 Null and alternative hypotheses in __symbols__
+
+[*fill in the missing parts of the hypotheses.*]{style="color:darkorange"}
 
 $$~~~~H_0: \delta =  \\
 H_A: \delta   \\$$
@@ -327,9 +341,10 @@ $$
 t_{\bar{x}_d} = \frac{\bar{x}_d - \delta_0}{\frac{s_d}{\sqrt{n}}}
 $$
 
-* Based on the value of the test statistic, do you think we are going to reject or fail to reject $H_0$?
-* What probability distribution does the test statistic have?
-* Are the __[assumptions]{style="color:darkorange"}__ for a paired t-test satisfied so that we can use the probability distribution to calculate the $p$-value??
+* [*Calculate the test statistic.*]{style="color:darkorange"}
+* [Based on the value of the test statistic, do you think we are going to reject or fail to reject $H_0$?]{style="color:darkorange"}
+* [What probability distribution does the test statistic have?]{style="color:darkorange"}
+* [Are the __assumptions__ for a paired t-test satisfied so that we can use the probability distribution to calculate the $p$-value??]{style="color:darkorange"}
 
 
 ```{r}
@@ -385,7 +400,7 @@ ggplot(data = data.frame(x = c(-6, 6)), aes(x)) +
 ```
 
 
-Calculate the _p_-value:
+[Calculate the _p_-value and shade in the area representing the p-value:]{style="color:darkorange"}
 
 ```{r}
 (pv <- 2*(pt(tstat, df=n-1)))
@@ -394,12 +409,14 @@ Calculate the _p_-value:
 
 ## Step 5: Conclusion to hypothesis test
 
-$$~~~~H_0: \delta = 0 \\
-H_A: \delta \neq 0  \\$$
+\begin{align}
+H_0:& \delta = 0 \\
+H_A:& \delta \neq 0 \\
+\end{align}
 
 * Recall the $p$-value = $8.434775 \cdot 10 ^{-6}$
 * Use $\alpha$ = 0.05.
-* Do we reject or fail to reject $H_0$?
+* [Do we reject or fail to reject $H_0$?]{style="color:darkorange"}
 
 __Conclusion statement__:
 
@@ -433,19 +450,21 @@ alpha <- 0.05
 ```
 
 
-$$\bar{x}_d \pm t^*\cdot\frac{s_d}{\sqrt{n}}\\
-`r round(xbar,3)` \pm `r round(tstar,3)`\cdot\frac{`r round(sd,3)`}{\sqrt{`r n`}}\\
-`r round(xbar,3)` \pm `r round(tstar,3)`\cdot `r round(se,3)`\\
-`r round(xbar,3)` \pm `r round(moe,3)`\\
-(`r round(LB, 3)`, `r round(UB, 3)`)$$
+\begin{align}
+\bar{x}_d &\pm t^*\cdot\frac{s_d}{\sqrt{n}}\\
+`r round(xbar,3)` &\pm `r round(tstar,3)`\cdot\frac{`r round(sd,3)`}{\sqrt{`r n`}}\\
+`r round(xbar,3)` &\pm `r round(tstar,3)`\cdot `r round(se,3)`\\
+`r round(xbar,3)` &\pm `r round(moe,3)`\\
+(`r round(LB, 3)`&, `r round(UB, 3)`)
+\end{align}
 
 
 Conclusion:  
 We are 95% that the (population) mean difference in cholesterol levels after a vegetarian diet is between `r round(LB, 3)` mg/dL and `r round(UB, 3)` mg/dL.
 
-* _Based on the CI, is there evidence the diet made a difference in cholesterol levels? Why or why not?_
+* [_Based on the CI, is there evidence the diet made a difference in cholesterol levels? Why or why not?_]{style="color:darkorange"}
 
-# R
+# Running a paired t-test in R
 
 ## R option 1: Run a 1-sample `t.test` using the paired differences
 
@@ -455,6 +474,7 @@ $H_A: \delta \neq 0$
 t.test(x = chol$DiffChol, mu = 0)
 ```
 
+[*Run the code without `mu = 0`. Do the results change? Why or why not?*]{style="color:darkorange"}
 
 
 ## R option 2: Run a 2-sample `t.test` with `paired = TRUE` option
@@ -468,10 +488,21 @@ $H_A: \delta \neq 0$
 t.test(x = chol$Before, y = chol$After, mu = 0, paired = TRUE)
 ```
 
+[*What is different in the output compared to option 1?*]{style="color:darkorange"}
 
 
 ## R option 3: Run a 2-sample `t.test` with `paired = TRUE` option, but using the long data and a "formula"
 
+* The data have to be in a `long` format for option 3, where each person has 2 rows: one for Before and one for After.
+    * The long dataset `chol_long` was created for the slide "EDA: Spaghetti plot of cholesterol levels before & after diet". 
+    * See the code to create it there.
+* [*What information is being stored in each of the columns?*]{style="color:darkorange"}
+
+
+```{r}
+# first 16 rows of long data:
+head(chol_long, 16)
+```
 
 * Use the usual `t.test`
 * What's different is that 
@@ -480,19 +511,22 @@ t.test(x = chol$Before, y = chol$After, mu = 0, paired = TRUE)
     * and then specify the name of the dataset using `data =`
 * This method is often used in practice, and more similar to the coding style of running a regression model (BSTA 512 & 513)
 
-
-
 ```{r}
-# using long data with columns Cholesterol & Time:
+# using long data 
+# with columns Cholesterol & Time
 t.test(Cholesterol ~ Time, 
        paired = TRUE, 
        data = chol_long)
 ```
 
+* [*What is different in the output compared to option 1?*]{style="color:darkorange"}
+* [*Rerun the test using `Time ~ Cholesterol` (switch the variables). What do you get?*]{style="color:darkorange"}
 
 
-## `tidy` the `t.test` output & compare the 3 options
+## Compare the 3 options
 
+* [*How is the code similar and different for the 3 options?*]{style="color:darkorange"}
+* [*Given a dataset, how would you choose which of the 3 options to use?*]{style="color:darkorange"}
 
 ```{r}
 # option 1
@@ -508,7 +542,7 @@ t.test(Cholesterol ~ Time, paired = TRUE, data = chol_long) %>% tidy() %>% gt()
 # What if we wanted to test whether the diet _decreased_ cholesterol levels?
 
 
-How are the steps different?
+[What changes in each of the steps?]{style="color:darkorange"}
 
 1. Set the __[level of significance]{style="color:darkorange"}__ $\alpha$
 
@@ -523,6 +557,10 @@ How are the steps different?
 
 
 ## R: What if we wanted to test whether the diet _decreased_ cholesterol levels?
+
+* [*Which of the 3 options to run a paired t-test in R is being used below?*]{style="color:darkorange"}
+* [*How did the code change to account for testing a decrease in cholesterol levels?*]{style="color:darkorange"}
+* [*Which values in the output changed compared to testing for a change in cholesterol levels? How did they change?*]{style="color:darkorange"}
 
 ```{r}
 # alternative = c("two.sided", "less", "greater")
