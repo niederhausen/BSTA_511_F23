@@ -37,8 +37,9 @@ library(knitr)
 library(gtsummary)
 library(moderndive)
 library(gt)
-library(broom) # NEW!!
-library(here) # NEW!!
+library(broom) # new-ish
+library(here) # new-ish
+library(pwr) # NEW!!
 
 ```
 
@@ -568,11 +569,7 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 12 | 8.2 | [Diff in pop <br> proportions]{style="color:darkblue"} | [$p_1-p_2$]{style="color:darkblue"} | [Diff in sample <br> proportions]{style="color:darkblue"} | [$\widehat{p}_1-\widehat{p}_2$]{style="color:darkblue"} | [**???**]{style="color:red"}
 
 
-# POWER
-
-
-
-# Goals for today 
+# Power and sample size calculations
 
 * Critical values & rejection region
 
@@ -584,9 +581,9 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 
 <hr>
 
-* Material is from 
-    * __4.3.4__ Decision errors
-    * __5.4__ Power calculations for a difference of means
+* Materials are from 
+    * __Section 4.3.4__ Decision errors
+    * __Section 5.4__ Power calculations for a difference of means
     * plus notes
 
 
@@ -660,8 +657,7 @@ ggplot(NULL, aes(c(-3,3))) +
 
 ## Rejection region
 
-.pull-left-60[
-* If a test statistic is greater in absolute value than the critical value, we reject $H_0$
+* If the absolute value of the test statistic is greater than the critical value, we reject $H_0$
     * In this case the test statistic is in the __rejection region__.
     * Otherwise it's in the nonrejection region.
 
@@ -669,7 +665,7 @@ ggplot(NULL, aes(c(-3,3))) +
 
 
 
-# Hypothesis Testing "Errors" 
+## Hypothesis Testing "Errors" 
 
 Type I and Type II Errors - Making Mistakes in the Justice System
 
@@ -678,17 +674,13 @@ http://www.intuitor.com/statistics/T1T2Errors.html
 
 ## Type I & II Errors
 
-
-* $\alpha$ = probability of making a __Type I error__
+* [$\alpha$]{style="color:violet"} = probability of making a [__Type I error__]{style="color:violet"}
     * This is the significance level (usually 0.05)
-    * Should be set before a study starts
-* $\beta$ = probability of making a __Type II error__
+    * Set before study starts
+* [$\beta$]{style="color:green"} = probability of making a [__Type II error__]{style="color:green"}
 * Ideally we want
     * small Type I & II errors and
     * big power
-
-
-
 
 ```{r}
 #| fig.width: 6
@@ -716,25 +708,25 @@ ggplot(NULL, aes(c(-3,7))) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
 
+Applet for visualizing Type I & II errors and power: <https://rpsychologist.com/d3/NHST/>
 
-Applet for visualizing Type I & II errors and power: https://rpsychologist.com/d3/NHST/
 
 ## Relationship between Type I & II errors 
-
 
 * __Type I vs. Type II error__
     * Decreasing P(Type I error) leads to 
         * increasing P(Type II error)
     * We typically keep P(Type I error) = $\alpha$ set to 0.05
         
-Try out the applet at https://rpsychologist.com/d3/NHST/
-
+Try out the applet at <https://rpsychologist.com/d3/NHST/>
 
 
 ## Relationship between Type II errors and power
 
+<center>__Power__ = P(correctly rejecting the null hypothesis)</center>
 
-* __Power__ = P(correctly rejecting the null hypothesis)
+<br>
+
 * Also called the
     * true positive rate,
     * probability of detection, or 
@@ -745,9 +737,9 @@ Try out the applet at https://rpsychologist.com/d3/NHST/
 
     * Power = 1 - P(Type II error) = 1 - $\beta$
 
-    * Thus as P(Type II error) decreases, the power increases
+    * Thus as $\beta$ = P(Type II error) decreases, the power increases
 
-    * P(Type II error) = $\beta$ decreases as the mean of the alternative population gets further away from the mean of the null population (effect size gets bigger).
+    * P(Type II error) decreases as the mean of the alternative population gets further away from the mean of the null population (effect size gets bigger).
 
     * Typically want at least 80% power; 90% power is good
 
@@ -755,10 +747,8 @@ Try out the applet at https://rpsychologist.com/d3/NHST/
 
 # Example calculating the power
 
-.pull-left-40[
 * Suppose the mean of the null population is 0 ( $H_0: \mu=0$ ) with standard error 1
 * Find the power of a 2-sided test if the actual $\mu=3$, assuming the SE doesn't change.
-
 
 ```{r}
 #| fig.width: 6
@@ -789,15 +779,12 @@ ggplot(NULL, aes(c(-3,7))) +
 
 * Power = $P($Reject $H_0$ when alternative pop is $N(3,1))$
 * When $\alpha$ = 0.05, we reject $H_0$ when the test statistic z is at least 1.96
-* Thus we need to calculate 
 
-$$P(X \ge 1.96) + P(X \le -1.96)$$ 
-
-when $X\sim N(3,1)$
+* Thus for $X\sim N(3,1)$ we need to calculate $P(X \le -1.96) + P(X \ge 1.96)$ :
 
 ```{r}
-pnorm(1.96, mean=3, sd=1, lower.tail=FALSE) +
-  pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)
+# left tail + right tail:
+pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) + pnorm(1.96, mean=3, sd=1, lower.tail=FALSE)
 ```
 
 The left tail probability `pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)` is essentially 0 in this case.

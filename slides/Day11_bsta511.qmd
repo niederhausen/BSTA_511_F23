@@ -40,8 +40,9 @@ library(knitr)
 library(gtsummary)
 library(moderndive)
 library(gt)
-library(broom) # NEW!!
-library(here) # NEW!!
+library(broom) # new-ish
+library(here) # new-ish
+library(pwr) # NEW!!
 
 # terminal: for icons
 # quarto install extension quarto-ext/fontawesome
@@ -969,7 +970,6 @@ Applet for visualizing Type I & II errors and power:
 
 ## Relationship between Type I & II errors 
 
-
 * __Type I vs. Type II error__
     * Decreasing P(Type I error) leads to 
         * increasing P(Type II error)
@@ -1085,13 +1085,10 @@ The left tail probability `pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)` is essen
 :::
 
 
-
- 
-
 ## Software for power and sample size calculations 
 
 * R package `pwr` for basic statistical tests
-    * https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html
+    * <https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html>
 
 ::: columns
 ::: {.column width="40%"}
