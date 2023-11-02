@@ -668,6 +668,57 @@ pt(3.3942, df = 17.89012, lower.tail = FALSE)
 
 # XXX
 
+## Pooled standard deviation estimate {.smaller}
+
+* Sometimes we have reasons to believe that the population SD's from the two groups are equal, such as when randomizing participants to two groups
+
+::: columns
+::: {.column width="60%"}
+* In this case we can use a __pooled SD__:
+
+$$s_{pooled}^2 = \frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}$$
+:::
+
+::: {.column width="40%"}
+* $n_1$, $n_2$ are the sample sizes, and
+* $s_1$, $s_2$ are the sample standard deviations 
+* of the two groups 
+:::
+:::
+
+* We use the pooled SD instead of $s_1^2$ and $s_2^2$ when calculating the standard error 
+
+$$SE = \sqrt{\frac{s_{pooled}^2}{n_1} + \frac{s_{pooled}^2}{n_2}}= s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
+
+::: columns
+::: {.column width="50%"}
+
+__Test statistic__ with pooled SD:
+
+$$t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 -0}{s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$$
+
+:::
+
+::: {.column width="50%"}
+__CI__  with pooled SD:
+
+$$(\bar{x}_1 - \bar{x}_2) \pm t^{\star} \cdot s_{pooled} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
+:::
+:::
+
+* The $t$ distribution degrees of freedom are now:
+
+$$df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.$$
+
+
+```{r}
+#| echo: false
+#| eval: false
+(sp <- (2.214^2 + 2.394^2)/2)
+sqrt(sp)
+```
+
+
 ## Pooled standard deviation estimate
 
 ::: {style="font-size: 90%;"}
@@ -683,32 +734,40 @@ $$s_{pooled}^2 = \frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}$$
 :::
 :::
 
+::: {.column width="50%"}
 ::: {style="font-size: 80%;"}
 where $n_1$ and $n_2$ are the sample sizes, and $s_1$ and $s_2$ are the sample standard deviations of the two groups 
+:::
+:::
 :::
 
 ::: {style="font-size: 90%;"}
 * We use the pooled SD instead of $s_1^2$ and $s_2^2$ when calculating the standard error 
 
 $$SE = \sqrt{\frac{s_{pooled}^2}{n_1} + \frac{s_{pooled}^2}{n_2}}= s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
-:::
-:::
 
+
+::: columns
 ::: {.column width="50%"}
-::: {style="font-size: 90%;"}
+
 __Test statistic__ with pooled SD:
 
 $$t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 -0}{s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$$
 
+:::
+
+::: {.column width="50%"}
 __CI__  with pooled SD:
 
 $$(\bar{x}_1 - \bar{x}_2) \pm t^{\star} \cdot s_{pooled} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
+:::
+:::
+
 * The $t$ distribution degrees of freedom are now:
 $$df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.$$
 
 :::
-:::
-:::
+
 
 ```{r}
 #| echo: false

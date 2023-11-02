@@ -3307,7 +3307,49 @@ $ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242</code>
 </div>
 </div>
 </section>
-<section id="pooled-standard-deviation-estimate" class="slide level2">
+<section>
+<section id="xxx" class="title-slide slide level1 center">
+<h1>XXX</h1>
+
+</section>
+<section id="pooled-standard-deviation-estimate" class="slide level2 smaller">
+<h2>Pooled standard deviation estimate</h2>
+<ul>
+<li>Sometimes we have reasons to believe that the population SD’s from the two groups are equal, such as when randomizing participants to two groups</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>In this case we can use a <strong>pooled SD</strong>:</li>
+</ul>
+<p><span class="math display">\[s_{pooled}^2 = \frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}\]</span></p>
+</div><div class="column" style="width:40%;">
+<ul>
+<li><span class="math inline">\(n_1\)</span>, <span class="math inline">\(n_2\)</span> are the sample sizes, and</li>
+<li><span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2\)</span> are the sample standard deviations</li>
+<li>of the two groups</li>
+</ul>
+</div>
+</div>
+<ul>
+<li>We use the pooled SD instead of <span class="math inline">\(s_1^2\)</span> and <span class="math inline">\(s_2^2\)</span> when calculating the standard error</li>
+</ul>
+<p><span class="math display">\[SE = \sqrt{\frac{s_{pooled}^2}{n_1} + \frac{s_{pooled}^2}{n_2}}= s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}\]</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Test statistic</strong> with pooled SD:</p>
+<p><span class="math display">\[t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 -0}{s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}\]</span></p>
+</div><div class="column" style="width:50%;">
+<p><strong>CI</strong> with pooled SD:</p>
+<p><span class="math display">\[(\bar{x}_1 - \bar{x}_2) \pm t^{\star} \cdot s_{pooled} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}\]</span></p>
+</div>
+</div>
+<ul>
+<li>The <span class="math inline">\(t\)</span> distribution degrees of freedom are now:</li>
+</ul>
+<p><span class="math display">\[df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.\]</span></p>
+</section>
+<section id="pooled-standard-deviation-estimate-1" class="slide level2">
 <h2>Pooled standard deviation estimate</h2>
 <div style="font-size: 90%;">
 <ul>
@@ -3322,24 +3364,30 @@ $ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242</code>
 </ul>
 <p><span class="math display">\[s_{pooled}^2 = \frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}\]</span></p>
 </div>
-</div><div style="font-size: 80%;">
+</div><div class="column" style="width:50%;">
+<div style="font-size: 80%;">
 <p>where <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> are the sample sizes, and <span class="math inline">\(s_1\)</span> and <span class="math inline">\(s_2\)</span> are the sample standard deviations of the two groups</p>
-</div><div style="font-size: 90%;">
+</div>
+</div>
+</div>
+<div style="font-size: 90%;">
 <ul>
 <li>We use the pooled SD instead of <span class="math inline">\(s_1^2\)</span> and <span class="math inline">\(s_2^2\)</span> when calculating the standard error</li>
 </ul>
 <p><span class="math display">\[SE = \sqrt{\frac{s_{pooled}^2}{n_1} + \frac{s_{pooled}^2}{n_2}}= s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}\]</span></p>
-</div>
-</div>
+<div class="columns">
 <div class="column" style="width:50%;">
-<div style="font-size: 90%;">
 <p><strong>Test statistic</strong> with pooled SD:</p>
 <p><span class="math display">\[t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 -0}{s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}\]</span></p>
+</div><div class="column" style="width:50%;">
 <p><strong>CI</strong> with pooled SD:</p>
-<p><span class="math display">\[(\bar{x}_1 - \bar{x}_2) \pm t^{\star} \cdot s_{pooled} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}\]</span> * The <span class="math inline">\(t\)</span> distribution degrees of freedom are now: <span class="math display">\[df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.\]</span></p>
+<p><span class="math display">\[(\bar{x}_1 - \bar{x}_2) \pm t^{\star} \cdot s_{pooled} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}\]</span></p>
 </div>
 </div>
-<p>:::</p>
+<ul>
+<li>The <span class="math inline">\(t\)</span> distribution degrees of freedom are now: <span class="math display">\[df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.\]</span></li>
+</ul>
+</div>
 </section>
 <section id="r-2-sample-t-test-with-pooled-sd" class="slide level2">
 <h2>R: 2-sample t-test with pooled SD</h2>
@@ -4380,7 +4428,7 @@ $ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242</code>
 </tbody>
 </table>
 </div>
-</section>
+</section></section>
 <section>
 <section id="power" class="title-slide slide level1 center">
 <h1>Power</h1>
@@ -4522,7 +4570,7 @@ html output
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
+<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -4601,7 +4649,7 @@ html output
 </div><div class="column" style="width:60%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
+<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
 </div>
 </div>
 <p>Applet for visualizing Type I &amp; II errors and power: https://rpsychologist.com/d3/NHST/</p>
@@ -4675,7 +4723,7 @@ From the applet at https://rpsychologist.com/d3/NHST/ ::: columns ::: {.column w
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
+<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
@@ -4790,7 +4838,7 @@ From the applet at https://rpsychologist.com/d3/NHST/ ::: columns ::: {.column w
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">plot</span>(p.out)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
+<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -4825,7 +4873,7 @@ From the applet at https://rpsychologist.com/d3/NHST/ ::: columns ::: {.column w
 <div class="cell">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">plot</span>(p.power)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-29-1.png" width="960"></p>
+<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -4916,7 +4964,7 @@ From the applet at https://rpsychologist.com/d3/NHST/ ::: columns ::: {.column w
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">plot</span>(t.n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
+<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -4951,7 +4999,7 @@ From the applet at https://rpsychologist.com/d3/NHST/ ::: columns ::: {.column w
 <div class="cell">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">plot</span>(t.power)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
+<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -4988,7 +5036,7 @@ NOTE: n is number in *each* group</code></pre>
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">plot</span>(t2.n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-37-1.png" width="960" class="r-stretch"><p>::: :::</p>
+<img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"><p>::: :::</p>
 </section>
 <section id="software-sample-size-for-two-means-test" class="slide level2">
 <h2>Software: sample size for two means test</h2>
@@ -5020,7 +5068,7 @@ NOTE: n is number in *each* group</code></pre>
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">plot</span>(t2.power)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-39-1.png" width="960" class="r-stretch"><p>::: :::</p>
+<img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch"><p>::: :::</p>
 </section>
 <section id="more-software-for-power-and-sample-size-calculations-pass" class="slide level2">
 <h2>More software for power and sample size calculations: PASS</h2>
