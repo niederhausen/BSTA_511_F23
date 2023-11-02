@@ -11,7 +11,7 @@
     "href": "weeks.html",
     "title": "Weekly Pages",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n9/25/23\n\n\nWeek 1\n\n\nIntro to R & RStudio\n\n\n\n\n10/2/23\n\n\nWeek 2\n\n\nData collection & EDA\n\n\n\n\n10/9/23\n\n\nWeek 3\n\n\nProbability\n\n\n\n\n10/16/23\n\n\nWeek 4\n\n\nRandom variables and probability distributions\n\n\n\n\n10/23/23\n\n\nWeek 5\n\n\nVariability in estimates and Exam 1\n\n\n\n\n10/30/23\n\n\nWeek 6\n\n\nConfidence intervals and hypothesis tests for one mean\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n9/25/23\n\n\nWeek 1\n\n\nIntro to R & RStudio\n\n\n\n\n10/2/23\n\n\nWeek 2\n\n\nData collection & EDA\n\n\n\n\n10/9/23\n\n\nWeek 3\n\n\nProbability\n\n\n\n\n10/16/23\n\n\nWeek 4\n\n\nRandom variables and probability distributions\n\n\n\n\n10/23/23\n\n\nWeek 5\n\n\nVariability in estimates and Exam 1\n\n\n\n\n10/30/23\n\n\nWeek 6\n\n\nConfidence intervals and hypothesis tests for one mean\n\n\n\n\n11/6/23\n\n\nWeek 7\n\n\nInference for difference in means, one proportion, and difference in proportions, and power\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "weeks/week_01.html",
@@ -340,7 +340,7 @@
     "href": "class_slides.html",
     "title": "Class Slides",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n10/9/23\n\n\nDay 4: Probability Part 1\n\n\nWeek 3\n\n\n\n\n10/11/23\n\n\nDay 5: Probability Part 2 - Bayes’ Rule\n\n\nWeek 3\n\n\n\n\n10/16/23\n\n\nDay 6: Random variables and Binomial distribution\n\n\nWeek 4\n\n\n\n\n10/18/23\n\n\nDay 7: Normal and Poisson distributions\n\n\nWeek 4\n\n\n\n\n10/23/23\n\n\nDay 8: Variability in estimates\n\n\nWeek 5\n\n\n\n\n10/30/23\n\n\nDay 9: Confidence intervals (4.2)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 1: Hypothesis testing for mean from one-sample (Sections 4.3, 5.1)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)\n\n\nWeek 6\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n10/9/23\n\n\nDay 4: Probability Part 1\n\n\nWeek 3\n\n\n\n\n10/11/23\n\n\nDay 5: Probability Part 2 - Bayes’ Rule\n\n\nWeek 3\n\n\n\n\n10/16/23\n\n\nDay 6: Random variables and Binomial distribution\n\n\nWeek 4\n\n\n\n\n10/18/23\n\n\nDay 7: Normal and Poisson distributions\n\n\nWeek 4\n\n\n\n\n10/23/23\n\n\nDay 8: Variability in estimates\n\n\nWeek 5\n\n\n\n\n10/30/23\n\n\nDay 9: Confidence intervals (4.2)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 1: Hypothesis testing for mean from one-sample (Sections 4.3, 5.1)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)\n\n\nWeek 6\n\n\n\n\n11/6/23\n\n\nDRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)\n\n\nWeek 7\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides_md/Day01_bsta511_md.html",
@@ -7137,7 +7137,7 @@
     "href": "slides/Day10_part2_bsta511.html#cis-and-hypothesis-tests-for-different-scenarios",
     "title": "Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)",
     "section": "CI’s and hypothesis tests for different scenarios:",
-    "text": "CI’s and hypothesis tests for different scenarios:\n\n\\[\\text{point~estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test~stat} = \\frac{\\text{point~estimate}-\\text{null~value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n???\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
+    "text": "CI’s and hypothesis tests for different scenarios:\n\n\\[\\text{point estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n???\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
   },
   {
     "objectID": "slides_code/Day10_bsta511_code.html#what-we-covered-in-day-10-part-1",
@@ -7501,7 +7501,7 @@
     "href": "slides_code/Day10_part2_bsta511_code.html#cis-and-hypothesis-tests-for-different-scenarios",
     "title": "Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)",
     "section": "CI’s and hypothesis tests for different scenarios:",
-    "text": "CI’s and hypothesis tests for different scenarios:\n\n\\[\\text{point~estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test~stat} = \\frac{\\text{point~estimate}-\\text{null~value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n???\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
+    "text": "CI’s and hypothesis tests for different scenarios:\n\n\\[\\text{point estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n???\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
   },
   {
     "objectID": "slides_code/Day10_part2_bsta511_code.html#steps-in-a-hypothesis-test-1",
@@ -7634,7 +7634,7 @@
     "href": "slides/Day10_part2_bsta511.html#today-whats-next",
     "title": "Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)",
     "section": "Today & what’s next?",
-    "text": "Today & what’s next?\n\nCI’s and hypothesis tests for different scenarios:\n\\[\\text{point~estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test~stat} = \\frac{\\text{point~estimate}-\\text{null~value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n\\(\\frac{s_d}{\\sqrt{n}}\\)\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n???\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
+    "text": "Today & what’s next?\n\nCI’s and hypothesis tests for different scenarios:\n\\[\\text{point estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n\\(\\frac{s_d}{\\sqrt{n}}\\)\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n???\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
   },
   {
     "objectID": "slides_code/Day10_part2_bsta511_code.html#today-whats-next",
@@ -7838,5 +7838,551 @@
     "title": "Day 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)",
     "section": "Today & what’s next?",
     "text": "Today & what’s next?\n\nCI’s and hypothesis tests for different scenarios:\n\\[\\text{point~estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test~stat} = \\frac{\\text{point~estimate}-\\text{null~value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n\\(\\frac{s_d}{\\sqrt{n}}\\)\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n???\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
+  },
+  {
+    "objectID": "weeks/week_07.html",
+    "href": "weeks/week_07.html",
+    "title": "Week 7",
+    "section": "",
+    "text": "Confidence intervals for one mean (single-sample)\nStudent’s t-distribution\n\n\n\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nClass discussion Google doc link"
+  },
+  {
+    "objectID": "weeks/week_07.html#day11",
+    "href": "weeks/week_07.html#day11",
+    "title": "Week 7",
+    "section": "",
+    "text": "Confidence intervals for one mean (single-sample)\nStudent’s t-distribution\n\n\n\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nClass discussion Google doc link"
+  },
+  {
+    "objectID": "weeks/week_07.html#day12",
+    "href": "weeks/week_07.html#day12",
+    "title": "Week 7",
+    "section": "Day12",
+    "text": "Day12\n\nPart 1\n\nHypothesis testing for one mean (single-sample)\nCIs vs. hypothesis tests\nR projects, here::here(), and loading data into R from a file\nRunning a t.test in R\n\n\n\nSlides\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\nProjects in RStudio\n\n\n\nDatasets\nAll datasets can be found on GitHub\n\nBodyTemperatures.csv\nchol213.csv\n\n\n\nClass discussion\nClass discussion Google doc link"
+  },
+  {
+    "objectID": "weeks/week_07.html#homework",
+    "href": "weeks/week_07.html#homework",
+    "title": "Week 7",
+    "section": "Homework",
+    "text": "Homework\n\nHW 6 due on Sat, 11/11\n\nCovers Days 11-12"
+  },
+  {
+    "objectID": "weeks/week_07.html#recordings",
+    "href": "weeks/week_07.html#recordings",
+    "title": "Week 7",
+    "section": "Recordings",
+    "text": "Recordings\n\nPre-recorded lessons are on Echo Cloud (aka echo 360 or echo video).\n\nThese can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the Echo Cloud option in the left-side menu.\nThis will redirect you to an echo video page with a list of pre-recorded videos.\n\nIn-class recording links are on Sakai. Navigate to Course Materials -&gt; Schedule with links to in-class recordings. Note that the password to the recordings is at the top of the page."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#moritzs-tip-of-the-day-code-folding",
+    "href": "slides/Day11_bsta511.html#moritzs-tip-of-the-day-code-folding",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "MoRitz’s tip of the day: Code folding!",
+    "text": "MoRitz’s tip of the day: Code folding!\n\n\n\n\n\n\n\nNote the Code and Hide boxes on the right side of the html output.\nWith code folding we can hide or show the code in the html output by clicking on the buttons in the html file."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#where-are-we",
+    "href": "slides/Day11_bsta511.html#where-are-we",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#where-are-we-continuous-outcome-zoomed-in",
+    "href": "slides/Day11_bsta511.html#where-are-we-continuous-outcome-zoomed-in",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Where are we? Continuous outcome zoomed in",
+    "text": "Where are we? Continuous outcome zoomed in"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#where-are-we-1",
+    "href": "slides/Day11_bsta511.html#where-are-we-1",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Where are we?",
+    "text": "Where are we?\n\nCI’s and hypothesis tests for different scenarios:\n\\[\\text{point estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n\\(\\frac{s_d}{\\sqrt{n}}\\)\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n???\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#goals-for-today-section-5.3",
+    "href": "slides/Day11_bsta511.html#goals-for-today-section-5.3",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Goals for today (Section 5.3)",
+    "text": "Goals for today (Section 5.3)\n\nStatistical inference for difference in means from 2 independent samples\n\nWhat are \\(H_0\\) and \\(H_a\\)?\nWhat is the SE for \\(\\bar{x}_1 - \\bar{x}_2\\)?\nHypothesis test\nConfidence Interval\nRun test in R - using long vs. wide data\nSatterthwaite’s df\nPooled SD"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#examples-of-designs-with-two-independent-samples",
+    "href": "slides/Day11_bsta511.html#examples-of-designs-with-two-independent-samples",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Examples of designs with two independent samples",
+    "text": "Examples of designs with two independent samples\n\nAny study where participants are randomized to a control and treatment group\nStudy where create two groups based on whether they were exposed or not to some condition (can be observational)\nBook: “Does treatment using embryonic stem cells (ESCs) help improve heart function following a heart attack?”\nBook: “Is there evidence that newborns from mothers who smoke have a different average birth weight than newborns from mothers who do not smoke?”\nThe key is that the data from the two groups are independent of each other."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#steps-in-a-hypothesis-test",
+    "href": "slides/Day11_bsta511.html#steps-in-a-hypothesis-test",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Steps in a Hypothesis Test",
+    "text": "Steps in a Hypothesis Test\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic.\nCalculate the p-value based on the observed test statistic and its sampling distribution\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#does-caffeine-increase-finger-tapsmin-on-average",
+    "href": "slides/Day11_bsta511.html#does-caffeine-increase-finger-tapsmin-on-average",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Does caffeine increase finger taps/min (on average)?",
+    "text": "Does caffeine increase finger taps/min (on average)?\nStudy Design:\n\n\n20 male college students students were trained to tap their fingers at a rapid rate.\nEach then drank 2 cups of coffee (double-blind)\n\nControl group: decaf\nCaffeine group: ~ 200 mg caffeine\n\nAfter 2 hours, students were tested.\nTaps/minute recorded\n\n\n\nHand, David J.; Daly, Fergus; McConway, K.; Lunn, D. and Ostrowski, E. (1993). A handbook of small data sets. London, U.K.: Chapman and Hall.\n\n\n\nLoad the data from the csv file CaffeineTaps.csv\nThe code below is for when the data file is in a folder called data that is in your R project folder (your working directory)\n\n\n\nCaffTaps &lt;- read_csv(here::here(\"data\", \"CaffeineTaps.csv\"))\n\nglimpse(CaffTaps)\n\nRows: 20\nColumns: 2\n$ Taps  &lt;dbl&gt; 246, 248, 250, 252, 248, 250, 246, 248, 245, 250, 242, 245, 244,…\n$ Group &lt;chr&gt; \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caf…"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#eda-explore-the-finger-taps-data",
+    "href": "slides/Day11_bsta511.html#eda-explore-the-finger-taps-data",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "EDA: Explore the finger taps data",
+    "text": "EDA: Explore the finger taps data\n\n\nDotplot of taps/minute stratified by group\n\nggplot(CaffTaps, aes(x=Taps)) +\n  geom_dotplot() +\n  facet_wrap(vars(Group), ncol=1)\n\n\n\n\n\nSummary statistics stratified by group\n\n# get_summary_stats() from rstatix package\nsumstats &lt;- CaffTaps %&gt;% \n  group_by(Group) %&gt;% \n  get_summary_stats(type = \"mean_sd\") \nsumstats %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      Group\n      variable\n      n\n      mean\n      sd\n    \n  \n  \n    Caffeine\nTaps\n10\n248.3\n2.214\n    NoCaffeine\nTaps\n10\n244.8\n2.394\n  \n  \n  \n\n\n\ndiff(sumstats$mean)\n\n[1] -3.5"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#step-2-null-alternative-hypotheses",
+    "href": "slides/Day11_bsta511.html#step-2-null-alternative-hypotheses",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Step 2: Null & Alternative Hypotheses",
+    "text": "Step 2: Null & Alternative Hypotheses\n\nQuestion: Is there evidence to support that drinking caffeine increases the number of finger taps/min?\n\n\n\nNull and alternative hypotheses in words\nInclude as much context as possible\n\n\n\\(H_0\\): The population difference in mean finger taps/min between the caffeine and control groups is …\n\\(H_A\\): The population difference in mean finger taps/min between the caffeine and control groups is …\n\n\nNull and alternative hypotheses in symbols\n\\[\\begin{align}\nH_0:& \\mu_{caff} - \\mu_{ctrl} = \\\\\nH_A:& \\mu_{caff} - \\mu_{ctrl} \\\\\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#step-3-test-statistic-part-1",
+    "href": "slides/Day11_bsta511.html#step-3-test-statistic-part-1",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Step 3: Test statistic (part 1)",
+    "text": "Step 3: Test statistic (part 1)\nRecall that in general the test statistic has the form:\n\\[\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\] Thus, for a two sample independent means test, we have:\n\\[\\text{test statistic} = \\frac{\\bar{x}_1 - \\bar{x}_2 - 0}{SE_{\\bar{x}_1 - \\bar{x}_2}}\\]\n\nWhat is the formula for \\(SE_{\\bar{x}_1 - \\bar{x}_2}\\)?\nWhat is the probability distribution of the test statistic?\nWhat assumptions need to be satisfied?"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#what-distribution-does-barx_1---barx_2-have",
+    "href": "slides/Day11_bsta511.html#what-distribution-does-barx_1---barx_2-have",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "What distribution does \\(\\bar{X}_1 - \\bar{X}_2\\) have?",
+    "text": "What distribution does \\(\\bar{X}_1 - \\bar{X}_2\\) have?\n\n\nLet \\(\\bar{X}_1\\) and \\(\\bar{X}_2\\) be the means of random samples from two independent groups, with parameters:\n\n\n\nGroup 1\nGroup 2\n\n\n\n\n\nsample size\n\\(n_1\\)\n\\(n_2\\)\n\n\npop mean\n\\(\\mu_1\\)\n\\(\\mu_2\\)\n\n\npop sd\n\\(\\sigma_1\\)\n\\(\\sigma_2\\)\n\n\n\n\nSome theoretical statistics:\n\nIf \\(\\bar{X}_1\\) and \\(\\bar{X}_2\\) are independent normal r.v.’s, then \\(\\bar{X}_1 - \\bar{X}_2\\) is also normal\nWhat is the mean of \\(\\bar{X}_1 - \\bar{X}_2\\)?\n\n\\[E[\\bar{X}_1 - \\bar{X}_2] = E[\\bar{X}_1] - E[\\bar{X}_2] = \\mu_1-\\mu_2\\]\n\nWhat is the standard deviation of \\(\\bar{X}_1 - \\bar{X}_2\\)?\n\n\\[Var(\\bar{X}_1 - \\bar{X}_2) = Var(\\bar{X}_1) + Var(\\bar{X}_2) = \\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2} \\\\\nSD(\\bar{X}_1 - \\bar{X}_2) = \\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}\\]"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#step-3-test-statistic-part-2",
+    "href": "slides/Day11_bsta511.html#step-3-test-statistic-part-2",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Step 3: Test statistic (part 2)",
+    "text": "Step 3: Test statistic (part 2)\n\n\n\\[\n\\text{test statistic} = t_{\\bar{x}_1 - \\bar{x}_2} = \\frac{\\bar{x}_1 - \\bar{x}_2 - 0}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}\n\\]\n\n\n\\(\\bar{x}_1, \\bar{x}_2\\) are the sample means\n\\(\\mu_0=0\\) is the mean value specified in \\(H_0\\)\n\\(s_1, s_2\\) are the sample SD’s\n\\(n_1, n_2\\) are the sample sizes\n\n\n\n\nStatistical theory tells us that \\(t_{\\bar{x}_1 - \\bar{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )\n\n\nAssumptions:\n\nIndependent observations & samples\n\nThe observations were collected independently.\nIn particular, the observations from the two groups were not paired in any meaningful way.\n\nApproximately normal samples or big n’s\n\nThe distributions of the samples should be approximately normal\nor both their sample sizes should be at least 30."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#step-3-test-statistic-part-3",
+    "href": "slides/Day11_bsta511.html#step-3-test-statistic-part-3",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Step 3: Test statistic (part 3)",
+    "text": "Step 3: Test statistic (part 3)\n\n\n\n\n\n\n\n\n  \n    \n    \n      Group\n      variable\n      n\n      mean\n      sd\n    \n  \n  \n    Caffeine\nTaps\n10\n248.3\n2.214\n    NoCaffeine\nTaps\n10\n244.8\n2.394\n  \n  \n  \n\n\n\n\n\\[\n\\text{test statistic} = t_{\\bar{x}_1 - \\bar{x}_2} = \\frac{\\bar{x}_1 - \\bar{x}_2 - 0}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}\n\\]\n\n\n\n\n\n\n\n\n\nBased on the value of the test statistic, do you think we are going to reject or fail to reject \\(H_0\\)?"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#step-3b-assumptions-satisfied",
+    "href": "slides/Day11_bsta511.html#step-3b-assumptions-satisfied",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Step “3b”: Assumptions satisfied?",
+    "text": "Step “3b”: Assumptions satisfied?\n\n\nAssumptions:\n\nIndependent observations & samples\n\nThe observations were collected independently.\nIn particular, the observations from the two groups were not paired in any meaningful way.\n\nApproximately normal samples or big n’s\n\nThe distributions of the samples should be approximately normal\nor both their sample sizes should be at least 30."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#step-4-p-value",
+    "href": "slides/Day11_bsta511.html#step-4-p-value",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Step 4: p-value",
+    "text": "Step 4: p-value\nThe p-value is the probability of obtaining a test statistic just as extreme or more extreme than the observed test statistic assuming the null hypothesis \\(H_0\\) is true. ::: columns ::: {.column width=“50%”}\n\n\n\n\n\n\n\n\n\n\n:::\n\nCalculate the p-value:\n\n:::"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#step-5-conclusion-to-hypothesis-test",
+    "href": "slides/Day11_bsta511.html#step-5-conclusion-to-hypothesis-test",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Step 5: Conclusion to hypothesis test",
+    "text": "Step 5: Conclusion to hypothesis test\n\\[\\begin{align}\nH_0:& \\mu_{caff} - \\mu_{ctrl} = \\\\\nH_A:& \\mu_{caff} - \\mu_{ctrl} \\\\\n\\end{align}\\]\n\nRecall the \\(p\\)-value = 0.00397\nUse \\(\\alpha\\) = 0.05.\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement:\n\nStats class conclusion\n\nThere is sufficient evidence that the (population) difference in mean finger taps/min with vs. without caffeine is greater than 0 ( \\(p\\)-value = 0.004).\n\nMore realistic manuscript conclusion:\n\nThe mean finger taps/min were 244.8 (SD = 2.4) and 248.3 (SD = 2.2) for the control and caffeine groups, and the increase of 3.5 taps/min was statistically significant ( \\(p\\)-value = 0.004)."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#ci-for-the-mean-difference-in-cholesterol-levels",
+    "href": "slides/Day11_bsta511.html#ci-for-the-mean-difference-in-cholesterol-levels",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "95% CI for the mean difference in cholesterol levels",
+    "text": "95% CI for the mean difference in cholesterol levels\n\n\n\n\n\n\n  \n    \n    \n      Group\n      variable\n      n\n      mean\n      sd\n    \n  \n  \n    Caffeine\nTaps\n10\n248.3\n2.214\n    NoCaffeine\nTaps\n10\n244.8\n2.394\n  \n  \n  \n\n\n\n\n\n\nCI for \\(\\mu_{caff} - \\mu_{ctrl}\\):\n\\[\\bar{x}_{caff} - \\bar{x}_{ctrl} \\pm t^* \\cdot \\sqrt{\\frac{s_{caff}^2}{n_{caff}}+\\frac{s_{ctrl}^2}{n_{ctrl}}}\\]\n\nInterpretation:\nWe are 95% confident that the (population) difference in mean finger taps/min between the caffeine and control groups is between 1.167 mg/dL and 5.833 mg/dL.\n\nBased on the CI, is there evidence that drinking caffeine made a difference in finger taps/min? Why or why not?"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#r-2-sample-t-test-with-long-data",
+    "href": "slides/Day11_bsta511.html#r-2-sample-t-test-with-long-data",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "R: 2-sample t-test (with long data)",
+    "text": "R: 2-sample t-test (with long data)\n\nThe CaffTaps data are in a long format, meaning that\n\nall of the outcome values are in one column and\nanother column indicates which group the values are from\n\nThis is a common format for data from multiple samples, especially if the sample sizes are different.\n\n\n\n(Taps_2ttest &lt;- t.test(formula = Taps ~ Group, alternative = \"greater\", data = CaffTaps))\n\n\n    Welch Two Sample t-test\n\ndata:  Taps by Group\nt = 3.3942, df = 17.89, p-value = 0.001628\nalternative hypothesis: true difference in means between group Caffeine and group NoCaffeine is greater than 0\n95 percent confidence interval:\n 1.711272      Inf\nsample estimates:\n  mean in group Caffeine mean in group NoCaffeine \n                   248.3                    244.8"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#tidy-the-t.test-output",
+    "href": "slides/Day11_bsta511.html#tidy-the-t.test-output",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "tidy the t.test output",
+    "text": "tidy the t.test output\n\n# use tidy command from broom package for briefer output that's a tibble\ntidy(Taps_2ttest) %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001627703\n17.89012\n1.711272\nInf\nWelch Two Sample t-test\ngreater\n  \n  \n  \n\n\n\n\n\nPull the p-value:\n\n\ntidy(Taps_2ttest)$p.value  # we can pull specific values from the tidy output\n\n[1] 0.001627703"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#r-2-sample-t-test-with-wide-data",
+    "href": "slides/Day11_bsta511.html#r-2-sample-t-test-with-wide-data",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "R: 2-sample t-test (with wide data)",
+    "text": "R: 2-sample t-test (with wide data)\n\n\n# make CaffTaps data wide: pivot_wider needs an ID column so that it \n# knows how to \"match\" values from the Caffeine and NoCaffeine groups\nCaffTaps_wide &lt;- CaffTaps %&gt;% \n  mutate(id = rep(1:10, 2)) %&gt;% #  \"fake\" IDs for pivot_wider step\n  pivot_wider(names_from = \"Group\",\n              values_from = \"Taps\")\nglimpse(CaffTaps_wide)\n\nRows: 10\nColumns: 3\n$ id         &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\n$ Caffeine   &lt;dbl&gt; 246, 248, 250, 252, 248, 250, 246, 248, 245, 250\n$ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242\n\nt.test(x = CaffTaps_wide$Caffeine, y = CaffTaps_wide$NoCaffeine, alternative = \"greater\") %&gt;% \n  tidy() %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001627703\n17.89012\n1.711272\nInf\nWelch Two Sample t-test\ngreater"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#why-are-the-dfs-in-the-r-output-different",
+    "href": "slides/Day11_bsta511.html#why-are-the-dfs-in-the-r-output-different",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Why are the df’s in the R output different?",
+    "text": "Why are the df’s in the R output different?\nFrom many slides ago:\n\nStatistical theory tells us that \\(t_{\\bar{x}_1 - \\bar{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )\n\n\nThe actual degrees of freedom are calculated using Satterthwaite’s method:\n\\[\\nu = \\frac{[ (s_1^2/n_1) + (s_2^2/n_2) ]^2}\n{(s_1^2/n_1)^2/(n_1 - 1) + (s_2^2/n_2)^2/(n_2-1) }\n= \\frac{ [ SE_1^2 + SE_2^2 ]^2}{ SE_1^4/df_1 + SE_2^4/df_2 }\\]\n\nVerify the p-value in the R output using \\(\\nu\\) = 17.89012:\n\npt(3.3942, df = 17.89012, lower.tail = FALSE)\n\n[1] 0.001627588"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#pooled-standard-deviation-estimate",
+    "href": "slides/Day11_bsta511.html#pooled-standard-deviation-estimate",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Pooled standard deviation estimate",
+    "text": "Pooled standard deviation estimate\n\nSometimes we have reasons to believe that the population SD’s from the two groups are equal, such as when randomizing participants to two groups\n\n\n\n\nIn this case we can use a pooled SD:\n\n\\[s_{pooled}^2 = \\frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}\\]\nwhere \\(n_1\\) and \\(n_2\\) are the sample sizes, and \\(s_1\\) and \\(s_2\\) are the sample standard deviations of the two groups\n\nWe use the pooled SD instead of \\(s_1^2\\) and \\(s_2^2\\) when calculating the standard error\n\n\\[SE = \\sqrt{\\frac{s_{pooled}^2}{n_1} + \\frac{s_{pooled}^2}{n_2}}= s_{pooled}\\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}\\]\n\nTest statistic with pooled SD:\n\\[t_{\\bar{x}_1 - \\bar{x}_2} = \\frac{\\bar{x}_1 - \\bar{x}_2 -0}{s_{pooled}\\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}}\\]\nCI with pooled SD:\n\\[(\\bar{x}_1 - \\bar{x}_2) \\pm t^{\\star} \\cdot s_{pooled} \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}\\] * The \\(t\\) distribution degrees of freedom are now: \\[df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.\\]"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#r-2-sample-t-test-with-pooled-sd",
+    "href": "slides/Day11_bsta511.html#r-2-sample-t-test-with-pooled-sd",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "R: 2-sample t-test with pooled SD",
+    "text": "R: 2-sample t-test with pooled SD\n\n# t-test with pooled SD\nt.test(formula = Taps ~ Group, alternative = \"greater\", \n       var.equal = TRUE,  # pooled SD \n       data = CaffTaps) %&gt;% tidy() %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001616497\n18\n1.711867\nInf\nTwo Sample t-test\ngreater\n  \n  \n  \n\n\n\n# t-test without pooled SD\nt.test(formula = Taps ~ Group, alternative = \"greater\", \n       var.equal = FALSE,  # default, NOT pooled SD \n       data = CaffTaps) %&gt;% tidy() %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001627703\n17.89012\n1.711272\nInf\nWelch Two Sample t-test\ngreater\n  \n  \n  \n\n\n\n\nSimilar output in this case - why??"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#whats-next",
+    "href": "slides/Day11_bsta511.html#whats-next",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "What’s next?",
+    "text": "What’s next?\n\nCI’s and hypothesis tests for different scenarios:\n\\[\\text{point estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n10\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n10\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n\\(\\frac{s_d}{\\sqrt{n}}\\)\n\n\n11\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n\\(\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}\\) or pooled\n\n\n12\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\widehat{p}\\)\n???\n\n\n12\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\widehat{p}_1-\\widehat{p}_2\\)\n???"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#moritzs-tip-of-the-day",
+    "href": "slides/Day11_bsta511.html#moritzs-tip-of-the-day",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "MoRitz’s tip of the day",
+    "text": "MoRitz’s tip of the day\nAdd tabbed sections to your html file using {.tabset}.\n\n\n\n\n\n\nhtml output"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#where-are-we-2",
+    "href": "slides/Day11_bsta511.html#where-are-we-2",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Where are we?",
+    "text": "Where are we?\nWe’ve covered statistical inference (CI’s & hypothesis testing) for the scenarios listed below\n\\[\\text{point estimate} \\pm z^*(or~t^*)\\cdot SE,~~\\text{test stat} = \\frac{\\text{point estimate}-\\text{null value}}{SE}\\]\n\n\n\n\n\n\n\n\n\n\n\n\nDay\nBook\nPopulation  parameter\nSymbol\nPoint estimate\nSymbol\nSE\n\n\n\n\n11-12\n5.1\nPop mean\n\\(\\mu\\)\nSample mean\n\\(\\bar{x}\\)\n\\(\\frac{s}{\\sqrt{n}}\\)\n\n\n13\n5.2\nPop mean of paired diff\n\\(\\mu_d\\) or \\(\\delta\\)\nSample mean of paired diff\n\\(\\bar{x}_{d}\\)\n\\(\\frac{s_d}{\\sqrt{n}}\\)\n\n\n14\n5.3\nDiff in pop  means\n\\(\\mu_1-\\mu_2\\)\nDiff in sample  means\n\\(\\bar{x}_1 - \\bar{x}_2\\)\n\\(\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}\\) or pooled\n\n\n15\n8.1\nPop proportion\n\\(p\\)\nSample prop\n\\(\\hat{p}\\)\n\\(\\sqrt{\\frac{p(1-p)}{n}}\\)\n\n\n15\n8.2\nDiff in pop  proportions\n\\(p_1-p_2\\)\nDiff in sample  proportions\n\\(\\hat{p}_1-\\hat{p}_2\\)\n\\(\\sqrt{\\frac{p_1\\cdot(1-p_1)}{n_1} + \\frac{p_2\\cdot(1-p_2)}{n_2}}\\)"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#goals-for-today",
+    "href": "slides/Day11_bsta511.html#goals-for-today",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Goals for today",
+    "text": "Goals for today\n\nCritical values & rejection region\nType I & II errors\nPower\nHow to calculate sample size needed for a study?\n\n\n\nMaterial is from\n\n4.3.4 Decision errors\n5.4 Power calculations for a difference of means\nplus notes"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#steps-in-a-hypothesis-test-1",
+    "href": "slides/Day11_bsta511.html#steps-in-a-hypothesis-test-1",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Steps in a Hypothesis Test",
+    "text": "Steps in a Hypothesis Test\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic.\nCalculate the p-value based on the observed test statistic and its sampling distribution\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#critical-values",
+    "href": "slides/Day11_bsta511.html#critical-values",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Critical values",
+    "text": "Critical values\n\n\n\nCritical values are the cutoff values that determine whether a test statistic is statistically significant or not.\n\n\n\n\n\n\n\n\nIf a test statistic is greater in absolute value than the critical value, we reject \\(H_0\\)\nCritical values are determined by\n\nthe significance level \\(\\alpha\\),\nwhether a test is 1- or 2-sided, &\nthe probability distribution being used to calculate the p-value (such as normal or t-distribution).\n\nThe critical values in the figure should look very familiar!\n\nWhere have we used these before?\n\nHow can we calculate the critical values using R?"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#rejection-region",
+    "href": "slides/Day11_bsta511.html#rejection-region",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Rejection region",
+    "text": "Rejection region\n\n\n\nIf a test statistic is greater in absolute value than the critical value, we reject \\(H_0\\)\n\nIn this case the test statistic is in the rejection region.\nOtherwise it’s in the nonrejection region.\n\n\n\n\n\nStats & Geospatial Analysis\n\n\n\n\nWhat do rejection regions look like for 1-sided tests?"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#justice-system-analogy",
+    "href": "slides/Day11_bsta511.html#justice-system-analogy",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Justice system analogy",
+    "text": "Justice system analogy\n\nType I and Type II Errors - Making Mistakes in the Justice System"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#type-i-ii-errors",
+    "href": "slides/Day11_bsta511.html#type-i-ii-errors",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Type I & II Errors",
+    "text": "Type I & II Errors\n\n\n\n\n\n\n\n\n\\(\\alpha\\) = probability of making a Type I error\n\nThis is the significance level (usually 0.05)\nShould be set before a study starts\n\n\\(\\beta\\) = probability of making a Type II error\nIdeally we want\n\nsmall Type I & II errors and\nbig power\n\n\n\n\n\n\n\n\nApplet for visualizing Type I & II errors and power: https://rpsychologist.com/d3/NHST/"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#relationship-between-type-i-ii-errors",
+    "href": "slides/Day11_bsta511.html#relationship-between-type-i-ii-errors",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Relationship between Type I & II errors",
+    "text": "Relationship between Type I & II errors\n\nType I vs. Type II error\n\nDecreasing P(Type I error) leads to\n\nincreasing P(Type II error)\n\nWe typically keep P(Type I error) = \\(\\alpha\\) set to 0.05\n\n\nFrom the applet at https://rpsychologist.com/d3/NHST/ ::: columns ::: {.column width=“50%”}\n\n[](img_slides/power_applet_screenshot_alpha05.png” width=“100%” height=“100%”&gt;\n\n:::\n\n\n\n\n\n\n\n:::"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#relationship-between-type-ii-errors-and-power",
+    "href": "slides/Day11_bsta511.html#relationship-between-type-ii-errors-and-power",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Relationship between Type II errors and power",
+    "text": "Relationship between Type II errors and power\n\n\n\nPower = P(correctly rejecting the null hypothesis)\nAlso called the\n\ntrue positive rate,\nprobability of detection, or\nthe sensitivity of a test\n\n\n\n\n\n\n\n\n\nPower vs. Type II error\n\nPower = 1 - P(Type II error) = 1 - \\(\\beta\\)\nThus as P(Type II error) decreases, the power increases\nP(Type II error) = \\(\\beta\\) decreases as the mean of the alternative population gets further away from the mean of the null population (effect size gets bigger).\nTypically want at least 80% power; 90% power is good"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#example-calculating-the-power",
+    "href": "slides/Day11_bsta511.html#example-calculating-the-power",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Example calculating the power",
+    "text": "Example calculating the power\n\n\n\nSuppose the mean of the null population is 0 ( \\(H_0: \\mu=0\\) ) with standard error 1\nFind the power of a 2-sided test if the actual \\(\\mu=3\\), assuming the SE doesn’t change.\n\n\n\n\n\n\n\n\nPower = \\(P(\\)Reject \\(H_0\\) when alternative pop is \\(N(3,1))\\)\nWhen \\(\\alpha\\) = 0.05, we reject \\(H_0\\) when the test statistic z is at least 1.96\nThus we need to calculate\n\n\\[P(X \\ge 1.96) + P(X \\le -1.96)\\]\nwhen \\(X\\sim N(3,1)\\)\n\npnorm(1.96, mean=3, sd=1, lower.tail=FALSE) +\n  pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)\n\n[1] 0.8508304\n\n\nThe left tail probability pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) is essentially 0 in this case."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#sample-size-calculation-for-testing-one-proportion",
+    "href": "slides/Day11_bsta511.html#sample-size-calculation-for-testing-one-proportion",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Sample size calculation for testing one proportion",
+    "text": "Sample size calculation for testing one proportion\n\nRecall in our sports betting example that the null \\(p_0=0.36\\) and the observed proportion was 0.35.\nThe p-value from the hypothesis test was not significant.\nHow big would the sample size \\(n\\) need to be in order for the p-value to be significant?\n\n\n\nCalculate \\(n\\) when given \\(\\alpha\\), power ( \\(1-\\beta\\) ), “true” alternative proportion \\(p\\), and null \\(p_0\\):\n\\[n=p(1-p)\\left(\\frac{z_{1-\\alpha/2}+z_{1-\\beta}}{p-p_0}\\right)^2\\]\n\n\np &lt;- 0.35\np0 &lt;- 0.36\nalpha &lt;- 0.05\nbeta &lt;- 0.20  #power=1-beta; want &gt;=80% power\nn &lt;- p*(1-p)*((qnorm(1-alpha/2)+qnorm(1-beta))/\n                (p-p0))^2\nceiling(n) \n\n[1] 17857\n\n\n\n\nWe would need a sample size of at least 17857!"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#power-calculation-for-testing-one-proportion",
+    "href": "slides/Day11_bsta511.html#power-calculation-for-testing-one-proportion",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Power calculation for testing one proportion",
+    "text": "Power calculation for testing one proportion\nConversely, we can calculate how much power we had in our example given the sample size of 269.\n\nCalculate power given \\(\\alpha\\), \\(n\\), “true” alternative proportion \\(p\\), and null \\(p_0\\)\n\nwhere \\(\\Phi\\) is the probability for a standard normal distribution\n\n\n\\[1-\\beta=\n            \\Phi\\left(z-z_{1-\\alpha/2}\\right)+\\Phi\\left(-z-z_{1-\\alpha/2}\\right)\n            \\quad ,\\quad z=\\frac{p-p_0}{\\sqrt{\\frac{p(1-p)}{n}}}\\]\n\n\n\np &lt;- 0.35; p0 &lt;- 0.36\nalpha &lt;- 0.05\nn &lt;- 269\nz=(p-p0)/sqrt(p*(1-p)/n)\nPower=pnorm(z-qnorm(1-alpha/2))+\n  pnorm(-z-qnorm(1-alpha/2))\nPower\n\n[1] 0.06365242\n\n\n\nIf the population proportion is 0.35 instead of 0.36, we only have a 6.4% chance of correctly rejecting \\(H_0\\) when the sample size is 269."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#software-for-power-and-sample-size-calculations",
+    "href": "slides/Day11_bsta511.html#software-for-power-and-sample-size-calculations",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Software for power and sample size calculations",
+    "text": "Software for power and sample size calculations\n\nR package pwr for basic statistical tests\n\nhttps://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html\n\n\n\n\n\nlibrary(pwr)\n# sample size for one proportion test\np.out &lt;- pwr.p.test(\n  h = ES.h(p1 = 0.36, p2 = 0.35),\n  sig.level = 0.05, \n  power = 0.80, \n  alternative = \"two.sided\")\np.out\n\n\n     proportion power calculation for binomial distribution (arcsine transformation) \n\n              h = 0.02089854\n              n = 17971.09\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\n\n\n\nplot(p.out)"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#software-power-for-one-proportion-test",
+    "href": "slides/Day11_bsta511.html#software-power-for-one-proportion-test",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Software: power for one proportion test",
+    "text": "Software: power for one proportion test\nLeave out the parameter that you want to solve for ::: columns ::: {.column width=“40%”}\n\n# library(pwr)\n# power for one proportion test\np.power &lt;- pwr.p.test(\n  h = ES.h(p1 = 0.36, p2 = 0.35),\n  sig.level = 0.05, \n  # power = 0.80, \n  n = 269,\n  alternative = \"two.sided\")\np.power\n\n\n     proportion power calculation for binomial distribution (arcsine transformation) \n\n              h = 0.02089854\n              n = 269\n      sig.level = 0.05\n          power = 0.06356445\n    alternative = two.sided\n\n\n:::\n\n\nplot(p.power)\n\n\n\n\n\n:::"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#sample-size-calculation-for-testing-one-mean",
+    "href": "slides/Day11_bsta511.html#sample-size-calculation-for-testing-one-mean",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Sample size calculation for testing one mean",
+    "text": "Sample size calculation for testing one mean\n\nRecall in our body temperature example that the null \\(\\mu_0=98.6\\) and \\(\\bar{x}= 98.25\\).\nThe p-value from the hypothesis test was highly significant.\nHow big does the sample size \\(n\\) need to be for the p-value to be just barely significant?\n\n\n\nCalculate \\(n\\) when given \\(\\alpha\\), power ( \\(1-\\beta\\) ), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\), assuming the test statistic is normal (instead of t-distribution):\n\\[n=\\left(s\\frac{z_{1-\\alpha/2}+z_{1-\\beta}}{\\mu-\\mu_0}\\right)^2\\]\n\n\nmu=98.25\nmu0=98.6\nsd=0.73\nalpha=0.05\nbeta=0.20\nn=(sd*(qnorm(1-alpha/2)+qnorm(1-beta))/(mu-mu0))^2\nceiling(n)\n\n[1] 35\n\n\n\n\nWe would only need a sample size of 35! However, this is an under-estimate since we used the normal instead of t-distribution."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#power-calculation-for-testing-one-mean",
+    "href": "slides/Day11_bsta511.html#power-calculation-for-testing-one-mean",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Power calculation for testing one mean",
+    "text": "Power calculation for testing one mean\nConversely, we can calculate how much power we had in our example given the sample size of 130.\n\nCalculate power given \\(\\alpha\\), \\(n\\), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\), assuming the test statistic is normal (instead of t-distribution)\n\nwhere \\(\\Phi\\) is the probability for a standard normal distribution\n\n\n\\[1-\\beta=\n        \\Phi\\left(z-z_{1-\\alpha/2}\\right)+\\Phi\\left(-z-z_{1-\\alpha/2}\\right)\n        \\quad ,\\quad z=\\frac{\\mu-\\mu_0}{s/\\sqrt{n}}\\]\n\n\n\nmu=98.25; mu0=98.6; sd=0.73; alpha=0.05; n=130\nz=(mu-mu0)/sd*sqrt(n)\nPower=pnorm(z-qnorm(1-alpha/2))+\n  pnorm(-z-qnorm(1-alpha/2))\nPower\n\n[1] 0.9997731\n\n\n\nIf the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting \\(H_0\\) when the sample size is 130."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#software-for-power-and-sample-size-calculations-1",
+    "href": "slides/Day11_bsta511.html#software-for-power-and-sample-size-calculations-1",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Software for power and sample size calculations",
+    "text": "Software for power and sample size calculations\n\n\n\n# sample size for one mean test\nt.n &lt;- power.t.test(  # base R power function\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  power = 0.80, \n  type = \"one.sample\")\nt.n\n\n\n     One-sample t test power calculation \n\n              n = 36.11207\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\n\n\n\nplot(t.n)"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#software-sample-size-for-one-mean-test",
+    "href": "slides/Day11_bsta511.html#software-sample-size-for-one-mean-test",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Software: sample size for one mean test",
+    "text": "Software: sample size for one mean test\nLeave out the parameter that you want to solve for ::: columns ::: {.column width=“40%”}\n\n# power for one mean test\nt.power &lt;- power.t.test(\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  # power = 0.80, \n  n = 130,\n  type = \"one.sample\")\nt.power\n\n\n     One-sample t test power calculation \n\n              n = 130\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.9997354\n    alternative = two.sided\n\n\n:::\n\n\nplot(t.power)\n\n\n\n\n\n:::"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#testing-difference-of-two-independent-means",
+    "href": "slides/Day11_bsta511.html#testing-difference-of-two-independent-means",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Testing difference of two independent means",
+    "text": "Testing difference of two independent means\n\nSee section 5.4 of text for formulas ::: columns ::: {.column width=“40%”}\n\n\nt2.n &lt;- power.t.test(\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  power = 0.80, \n  type = \"two.sample\") \nt2.n\n\n\n     Two-sample t test power calculation \n\n              n = 69.26206\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n::: ::: {.column width=“60%”}\n\nplot(t2.n)\n\n\n::: :::"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#software-sample-size-for-two-means-test",
+    "href": "slides/Day11_bsta511.html#software-sample-size-for-two-means-test",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Software: sample size for two means test",
+    "text": "Software: sample size for two means test\nLeave out the parameter that you want to solve for ::: columns ::: {.column width=“40%”}\n\nt2.power &lt;- power.t.test(\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  # power = 0.80, \n  n = 130,\n  type = \"two.sample\") \nt2.power\n\n\n     Two-sample t test power calculation \n\n              n = 130\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.9706928\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n::: ::: {.column width=“60%”}\n\nplot(t2.power)\n\n\n::: :::"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#more-software-for-power-and-sample-size-calculations-pass",
+    "href": "slides/Day11_bsta511.html#more-software-for-power-and-sample-size-calculations-pass",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "More software for power and sample size calculations: PASS",
+    "text": "More software for power and sample size calculations: PASS\n\nPASS is a very powerful (& expensive) software that does power and sample size calculations for many advanced statistical modeling techniques.\n\nEven if you don’t have access to PASS, their documentation is very good and free online.\nDocumentation includes formulas and references.\nPASS documentation for one proportion tests, which includes more advanced formulas.\nPASS documentation for one mean tests\n\n\nhttps://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/PASS/One-Sample_T-Tests.pdf"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#what-information-do-we-need-for-a-power-or-sample-size-calculation",
+    "href": "slides/Day11_bsta511.html#what-information-do-we-need-for-a-power-or-sample-size-calculation",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "What information do we need for a power (or sample size) calculation?",
+    "text": "What information do we need for a power (or sample size) calculation?\n\n\nThere are 4 pieces of information:\n\nLevel of significance \\(\\alpha\\)\n\nUsually fixed to 0.05\n\nPower\n\nIdeally at least 0.80\n\nSample size\nEffect size (expected change)\n\nGiven any 3 pieces of information, we can solve for the 4th.\n\n\npower.t.test(\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  # power = 0.80, \n  n=130,\n  type = \"one.sample\")\n\n\n     One-sample t test power calculation \n\n              n = 130\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.9997354\n    alternative = two.sided"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#octri-berd-power-sample-size-presentations",
+    "href": "slides/Day11_bsta511.html#octri-berd-power-sample-size-presentations",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "OCTRI-BERD power & sample size presentations",
+    "text": "OCTRI-BERD power & sample size presentations\n\nPower and Sample Size 101\n\nPresented by Meike Niederhausen; Feb 4, 2021\nSlides: http://bit.ly/PSS-101\nRecording\n\nPower and Sample Size for Clinical Trials: An Introduction\n\nPresented by Yiyi Chen; Feb 18, 2021\nSlides: http://bit.ly/PSS-ClinicalTrials\nRecording\n\nPlanning a Study with Power and Sample Size Considerations in Mind\n\nPresented by David Yanez; May 29, 2019\nSlides\nRecording"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#does-caffeine-increase-finger-tapsmin-on-average-1",
+    "href": "slides/Day11_bsta511.html#does-caffeine-increase-finger-tapsmin-on-average-1",
+    "title": "Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Does caffeine increase finger taps/min (on average)?",
+    "text": "Does caffeine increase finger taps/min (on average)?\n\n\nStudy Desgin:\n\n20 male college students students were trained to tap their fingers at a rapid rate.\nEach then drank 2 cups of coffee (double-blind)\n\nControl group: decaf\nCaffeine group: ~ 200 mg caffeine\n\nAfter 2 hours, students were tested.\nTaps/minute recorded\n\n\nHand, David J.; Daly, Fergus; McConway, K.; Lunn, D. and Ostrowski, E. (1993). A handbook of small data sets. London, U.K.: Chapman and Hall.\n\n\n\nLoad the data from the csv file CaffeineTaps.csv\nThe code below is for when the data file is in a folder called data that is in your R project folder (your working directory)\n\n\nCaffTaps &lt;- read_csv(\n  here::here(\"data\", \n             \"CaffeineTaps.csv\"))\n\nglimpse(CaffTaps)\n\nRows: 20\nColumns: 2\n$ Taps  &lt;dbl&gt; 246, 248, 250, 252, 248, 250, 246, 248, 245, 250, 242, 245, 244,…\n$ Group &lt;chr&gt; \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caffeine\", \"Caf…"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html",
+    "href": "slides_code/Day11_bsta511_code.html",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "",
+    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) # NEW!!\nlibrary(here) # NEW!!\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#load-packages",
+    "href": "slides_code/Day11_bsta511_code.html#load-packages",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "",
+    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) # NEW!!\nlibrary(here) # NEW!!\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#goals-for-today-section-5.3",
+    "href": "slides_code/Day11_bsta511_code.html#goals-for-today-section-5.3",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Goals for today (Section 5.3)",
+    "text": "Goals for today (Section 5.3)\n\nStatistical inference for difference in means from 2 independent samples\n\nWhat are \\(H_0\\) and \\(H_a\\)?\nWhat is the SE for \\(\\bar{x}_1 - \\bar{x}_2\\)?\nHypothesis test\nConfidence Interval\nRun test in R - using long vs. wide data\nSatterthwaite’s df\nPooled SD"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#examples-of-designs-with-two-independent-samples",
+    "href": "slides_code/Day11_bsta511_code.html#examples-of-designs-with-two-independent-samples",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Examples of designs with two independent samples",
+    "text": "Examples of designs with two independent samples\n\nAny study where participants are randomized to a control and treatment group\nStudy where create two groups based on whether they were exposed or not to some condition (can be observational)\nBook: “Does treatment using embryonic stem cells (ESCs) help improve heart function following a heart attack?”\nBook: “Is there evidence that newborns from mothers who smoke have a different average birth weight than newborns from mothers who do not smoke?”\nThe key is that the data from the two groups are independent of each other."
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#steps-in-a-hypothesis-test",
+    "href": "slides_code/Day11_bsta511_code.html#steps-in-a-hypothesis-test",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Steps in a Hypothesis Test",
+    "text": "Steps in a Hypothesis Test\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic.\nCalculate the p-value based on the observed test statistic and its sampling distribution\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#eda-explore-the-finger-taps-data",
+    "href": "slides_code/Day11_bsta511_code.html#eda-explore-the-finger-taps-data",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "EDA: Explore the finger taps data",
+    "text": "EDA: Explore the finger taps data\nDotplot of taps/minute stratified by group\n\nggplot(CaffTaps, aes(x=Taps)) +\n  geom_dotplot() +\n  facet_wrap(vars(Group), ncol=1)\n\n\n\n\nSummary statistics stratified by group\n\n# get_summary_stats() from rstatix package\nsumstats &lt;- CaffTaps %&gt;% \n  group_by(Group) %&gt;% \n  get_summary_stats(type = \"mean_sd\") \nsumstats %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      Group\n      variable\n      n\n      mean\n      sd\n    \n  \n  \n    Caffeine\nTaps\n10\n248.3\n2.214\n    NoCaffeine\nTaps\n10\n244.8\n2.394\n  \n  \n  \n\n\n\ndiff(sumstats$mean)\n\n[1] -3.5"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#what-distribution-does-barx_1---barx_2-have",
+    "href": "slides_code/Day11_bsta511_code.html#what-distribution-does-barx_1---barx_2-have",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "What distribution does \\(\\bar{X}_1 - \\bar{X}_2\\) have?",
+    "text": "What distribution does \\(\\bar{X}_1 - \\bar{X}_2\\) have?\nLet \\(\\bar{X}_1\\) and \\(\\bar{X}_2\\) be the means of random samples from two independent groups, with parameters:\n\n\n\nGroup 1\nGroup 2\n\n\n\n\n\nsample size\n\\(n_1\\)\n\\(n_2\\)\n\n\npop mean\n\\(\\mu_1\\)\n\\(\\mu_2\\)\n\n\npop sd\n\\(\\sigma_1\\)\n\\(\\sigma_2\\)\n\n\n\nSome theoretical statistics:\n\nIf \\(\\bar{X}_1\\) and \\(\\bar{X}_2\\) are independent normal r.v.’s, then \\(\\bar{X}_1 - \\bar{X}_2\\) is also normal\nWhat is the mean of \\(\\bar{X}_1 - \\bar{X}_2\\)?\n\n\\[E[\\bar{X}_1 - \\bar{X}_2] = E[\\bar{X}_1] - E[\\bar{X}_2] = \\mu_1-\\mu_2\\]\n\nWhat is the standard deviation of \\(\\bar{X}_1 - \\bar{X}_2\\)?\n\n\\[Var(\\bar{X}_1 - \\bar{X}_2) = Var(\\bar{X}_1) + Var(\\bar{X}_2) = \\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2} \\\\\nSD(\\bar{X}_1 - \\bar{X}_2) = \\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}\\]"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#step-3-test-statistic-part-2",
+    "href": "slides_code/Day11_bsta511_code.html#step-3-test-statistic-part-2",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Step 3: Test statistic (part 2)",
+    "text": "Step 3: Test statistic (part 2)\n\\[\n\\text{test statistic} = t_{\\bar{x}_1 - \\bar{x}_2} = \\frac{\\bar{x}_1 - \\bar{x}_2 - 0}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}\n\\]\n\n\\(\\bar{x}_1, \\bar{x}_2\\) are the sample means\n\\(\\mu_0=0\\) is the mean value specified in \\(H_0\\)\n\\(s_1, s_2\\) are the sample SD’s\n\\(n_1, n_2\\) are the sample sizes\nStatistical theory tells us that \\(t_{\\bar{x}_1 - \\bar{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )\n\n\nAssumptions:\n\nIndependent observations & samples\n\nThe observations were collected independently.\nIn particular, the observations from the two groups were not paired in any meaningful way.\n\nApproximately normal samples or big n’s\n\nThe distributions of the samples should be approximately normal\nor both their sample sizes should be at least 30."
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#step-3-test-statistic-part-3",
+    "href": "slides_code/Day11_bsta511_code.html#step-3-test-statistic-part-3",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Step 3: Test statistic (part 3)",
+    "text": "Step 3: Test statistic (part 3)\n\n\n\n\n\n\n  \n    \n    \n      Group\n      variable\n      n\n      mean\n      sd\n    \n  \n  \n    Caffeine\nTaps\n10\n248.3\n2.214\n    NoCaffeine\nTaps\n10\n244.8\n2.394\n  \n  \n  \n\n\n\n\n\\[\n\\text{test statistic} = t_{\\bar{x}_1 - \\bar{x}_2} = \\frac{\\bar{x}_1 - \\bar{x}_2 - 0}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}\n\\]\n\nBased on the value of the test statistic, do you think we are going to reject or fail to reject \\(H_0\\)?"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#step-3b-assumptions-satisfied",
+    "href": "slides_code/Day11_bsta511_code.html#step-3b-assumptions-satisfied",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Step “3b”: Assumptions satisfied?",
+    "text": "Step “3b”: Assumptions satisfied?\nAssumptions:\n\nIndependent observations & samples\n\nThe observations were collected independently.\nIn particular, the observations from the two groups were not paired in any meaningful way.\n\nApproximately normal samples or big n’s\n\nThe distributions of the samples should be approximately normal\nor both their sample sizes should be at least 30.\n\n\n\nggplot(CaffTaps, aes(x=Taps)) +\n  geom_dotplot() +\n  facet_wrap(vars(Group), ncol=1)\n\n\n\n\nThe p-value is the probability of obtaining a test statistic just as extreme or more extreme than the observed test statistic assuming the null hypothesis \\(H_0\\) is true.\n\n# specify upper and lower bounds of shaded region below\nmu &lt;- 0\nstd &lt;- se\n\n# The following figure is only an approximation of the \n# sampling distribution since I used a normal instead\n# of t-distribution to make it.\n\nggplot(data.frame(x = c(mu-5*std, mu+5*std)), aes(x = x)) + \n  stat_function(fun = dnorm, \n                args = list(mean = mu, sd = std)) + \n  scale_y_continuous(breaks = NULL) +\n  scale_x_continuous(breaks=c(mu, mu - 1*(1:5), mu + 1*(1:5))) +\n  theme(axis.text.x=element_text(angle = -30, hjust = 0)) +\n  labs(y = \"\", \n       x = \"difference in means\",\n       title = \"Sampling distribution of difference in means\") +\n  geom_vline(xintercept = c(diff_x), \n             color = \"red\")\n\n\n\n\n\nggplot(data = data.frame(x = c(-5, 5)), aes(x)) + \n  stat_function(fun = dt, args = list(df = min(n1 -1, n2-1))) + \n  ylab(\"\") + \n  xlab(\"t-dist with df = 9\") +\n  scale_y_continuous(breaks = NULL) + \n  scale_x_continuous(breaks=c(mu, mu - (1:5), mu + (1:5))) +\n  geom_vline(xintercept = c(tstat), \n             color = \"red\")\n\n\n\n\nCalculate the p-value:"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#r-2-sample-t-test-with-long-data",
+    "href": "slides_code/Day11_bsta511_code.html#r-2-sample-t-test-with-long-data",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "R: 2-sample t-test (with long data)",
+    "text": "R: 2-sample t-test (with long data)\n\nThe CaffTaps data are in a long format, meaning that\n\nall of the outcome values are in one column and\nanother column indicates which group the values are from\n\nThis is a common format for data from multiple samples, especially if the sample sizes are different.\n\n\n(Taps_2ttest &lt;- t.test(formula = Taps ~ Group, alternative = \"greater\", data = CaffTaps))\n\n\n    Welch Two Sample t-test\n\ndata:  Taps by Group\nt = 3.3942, df = 17.89, p-value = 0.001628\nalternative hypothesis: true difference in means between group Caffeine and group NoCaffeine is greater than 0\n95 percent confidence interval:\n 1.711272      Inf\nsample estimates:\n  mean in group Caffeine mean in group NoCaffeine \n                   248.3                    244.8 \n\n\n\ntidy the t.test output\n\n# use tidy command from broom package for briefer output that's a tibble\ntidy(Taps_2ttest) %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001627703\n17.89012\n1.711272\nInf\nWelch Two Sample t-test\ngreater\n  \n  \n  \n\n\n\n\n\nPull the p-value:\n\n\ntidy(Taps_2ttest)$p.value  # we can pull specific values from the tidy output\n\n[1] 0.001627703"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#r-2-sample-t-test-with-wide-data",
+    "href": "slides_code/Day11_bsta511_code.html#r-2-sample-t-test-with-wide-data",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "R: 2-sample t-test (with wide data)",
+    "text": "R: 2-sample t-test (with wide data)\n\n# make CaffTaps data wide: pivot_wider needs an ID column so that it \n# knows how to \"match\" values from the Caffeine and NoCaffeine groups\nCaffTaps_wide &lt;- CaffTaps %&gt;% \n  mutate(id = rep(1:10, 2)) %&gt;% #  \"fake\" IDs for pivot_wider step\n  pivot_wider(names_from = \"Group\",\n              values_from = \"Taps\")\nglimpse(CaffTaps_wide)\n\nRows: 10\nColumns: 3\n$ id         &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\n$ Caffeine   &lt;dbl&gt; 246, 248, 250, 252, 248, 250, 246, 248, 245, 250\n$ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242\n\nt.test(x = CaffTaps_wide$Caffeine, y = CaffTaps_wide$NoCaffeine, alternative = \"greater\") %&gt;% \n  tidy() %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001627703\n17.89012\n1.711272\nInf\nWelch Two Sample t-test\ngreater"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#why-are-the-dfs-in-the-r-output-different",
+    "href": "slides_code/Day11_bsta511_code.html#why-are-the-dfs-in-the-r-output-different",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Why are the df’s in the R output different?",
+    "text": "Why are the df’s in the R output different?\nFrom many slides ago:\n\nStatistical theory tells us that \\(t_{\\bar{x}_1 - \\bar{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )\n\n\nThe actual degrees of freedom are calculated using Satterthwaite’s method:\n\\[\\nu = \\frac{[ (s_1^2/n_1) + (s_2^2/n_2) ]^2}\n{(s_1^2/n_1)^2/(n_1 - 1) + (s_2^2/n_2)^2/(n_2-1) }\n= \\frac{ [ SE_1^2 + SE_2^2 ]^2}{ SE_1^4/df_1 + SE_2^4/df_2 }\\]\n\nVerify the p-value in the R output using \\(\\nu\\) = 17.89012:\n\npt(3.3942, df = 17.89012, lower.tail = FALSE)\n\n[1] 0.001627588"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#r-2-sample-t-test-with-pooled-sd",
+    "href": "slides_code/Day11_bsta511_code.html#r-2-sample-t-test-with-pooled-sd",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "R: 2-sample t-test with pooled SD",
+    "text": "R: 2-sample t-test with pooled SD\n\n# t-test with pooled SD\nt.test(formula = Taps ~ Group, alternative = \"greater\", \n       var.equal = TRUE,  # pooled SD \n       data = CaffTaps) %&gt;% tidy() %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001616497\n18\n1.711867\nInf\nTwo Sample t-test\ngreater\n  \n  \n  \n\n\n\n# t-test without pooled SD\nt.test(formula = Taps ~ Group, alternative = \"greater\", \n       var.equal = FALSE,  # default, NOT pooled SD \n       data = CaffTaps) %&gt;% tidy() %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001627703\n17.89012\n1.711272\nInf\nWelch Two Sample t-test\ngreater\n  \n  \n  \n\n\n\n\nSimilar output in this case - why??"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#steps-in-a-hypothesis-test-1",
+    "href": "slides_code/Day11_bsta511_code.html#steps-in-a-hypothesis-test-1",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Steps in a Hypothesis Test",
+    "text": "Steps in a Hypothesis Test\n\nSet the level of significance \\(\\alpha\\)\nSpecify the null ( \\(H_0\\) ) and alternative ( \\(H_A\\) ) hypotheses\n\nIn symbols\nIn words\nAlternative: one- or two-sided?\n\nCalculate the test statistic.\nCalculate the p-value based on the observed test statistic and its sampling distribution\nWrite a conclusion to the hypothesis test\n\nDo we reject or fail to reject \\(H_0\\)?\nWrite a conclusion in the context of the problem"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#rejection-region",
+    "href": "slides_code/Day11_bsta511_code.html#rejection-region",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Rejection region",
+    "text": "Rejection region\n.pull-left-60[ * If a test statistic is greater in absolute value than the critical value, we reject \\(H_0\\) * In this case the test statistic is in the rejection region. * Otherwise it’s in the nonrejection region.\n\nWhat do rejection regions look like for 2-sided vs. 1-sided tests?"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#type-i-ii-errors",
+    "href": "slides_code/Day11_bsta511_code.html#type-i-ii-errors",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Type I & II Errors",
+    "text": "Type I & II Errors\n\n\\(\\alpha\\) = probability of making a Type I error\n\nThis is the significance level (usually 0.05)\nShould be set before a study starts\n\n\\(\\beta\\) = probability of making a Type II error\nIdeally we want\n\nsmall Type I & II errors and\nbig power\n\n\n\n\n\n\n\nApplet for visualizing Type I & II errors and power: https://rpsychologist.com/d3/NHST/"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#relationship-between-type-i-ii-errors",
+    "href": "slides_code/Day11_bsta511_code.html#relationship-between-type-i-ii-errors",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Relationship between Type I & II errors",
+    "text": "Relationship between Type I & II errors\n\nType I vs. Type II error\n\nDecreasing P(Type I error) leads to\n\nincreasing P(Type II error)\n\nWe typically keep P(Type I error) = \\(\\alpha\\) set to 0.05\n\n\nTry out the applet at https://rpsychologist.com/d3/NHST/"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#relationship-between-type-ii-errors-and-power",
+    "href": "slides_code/Day11_bsta511_code.html#relationship-between-type-ii-errors-and-power",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Relationship between Type II errors and power",
+    "text": "Relationship between Type II errors and power\n\nPower = P(correctly rejecting the null hypothesis)\nAlso called the\n\ntrue positive rate,\nprobability of detection, or\nthe sensitivity of a test\n\nPower vs. Type II error\n\nPower = 1 - P(Type II error) = 1 - \\(\\beta\\)\nThus as P(Type II error) decreases, the power increases\nP(Type II error) = \\(\\beta\\) decreases as the mean of the alternative population gets further away from the mean of the null population (effect size gets bigger).\nTypically want at least 80% power; 90% power is good"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#software-for-power-and-sample-size-calculations",
+    "href": "slides_code/Day11_bsta511_code.html#software-for-power-and-sample-size-calculations",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Software for power and sample size calculations",
+    "text": "Software for power and sample size calculations\n\nR package pwr for basic statistical tests\n\nhttps://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html\n\n\n\nlibrary(pwr)\n# sample size for one proportion test\np.out &lt;- pwr.p.test(\n  h = ES.h(p1 = 0.36, p2 = 0.35),\n  sig.level = 0.05, \n  power = 0.80, \n  alternative = \"two.sided\")\np.out\n\n\n     proportion power calculation for binomial distribution (arcsine transformation) \n\n              h = 0.02089854\n              n = 17971.09\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\n\n\nplot(p.out)\n\n\n\n\n\nPower for one proportion test\nLeave out the parameter that you want to solve for\n\n# library(pwr)\n# power for one proportion test\np.power &lt;- pwr.p.test(\n  h = ES.h(p1 = 0.36, p2 = 0.35),\n  sig.level = 0.05, \n  # power = 0.80, \n  n = 269,\n  alternative = \"two.sided\")\np.power\n\n\n     proportion power calculation for binomial distribution (arcsine transformation) \n\n              h = 0.02089854\n              n = 269\n      sig.level = 0.05\n          power = 0.06356445\n    alternative = two.sided\n\n\n\nplot(p.power)"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#power-calculation-for-testing-one-mean",
+    "href": "slides_code/Day11_bsta511_code.html#power-calculation-for-testing-one-mean",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Power calculation for testing one mean",
+    "text": "Power calculation for testing one mean\nConversely, we can calculate how much power we had in our example given the sample size of 130.\n\nCalculate power given \\(\\alpha\\), \\(n\\), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\), assuming the test statistic is normal (instead of t-distribution)\n\nwhere \\(\\Phi\\) is the probability for a standard normal distribution\n\n\n\\[1-\\beta=\n        \\Phi\\left(z-z_{1-\\alpha/2}\\right)+\\Phi\\left(-z-z_{1-\\alpha/2}\\right)\n        \\quad ,\\quad z=\\frac{\\mu-\\mu_0}{s/\\sqrt{n}}\\]\n\nmu=98.25; mu0=98.6; sd=0.73; alpha=0.05; n=130\nz=(mu-mu0)/sd*sqrt(n)\nPower=pnorm(z-qnorm(1-alpha/2))+\n  pnorm(-z-qnorm(1-alpha/2))\nPower\n\n[1] 0.9997731\n\n\nIf the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting \\(H_0\\) when the sample size is 130.\nWe would say this was over powered."
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#software-for-power-and-sample-size-calculations-1",
+    "href": "slides_code/Day11_bsta511_code.html#software-for-power-and-sample-size-calculations-1",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Software for power and sample size calculations",
+    "text": "Software for power and sample size calculations\n\n# sample size for one mean test\nt.n &lt;- power.t.test(  # base R power function\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  power = 0.80, \n  type = \"one.sample\")\nt.n\n\n\n     One-sample t test power calculation \n\n              n = 36.11207\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\n\n\nplot(t.n)\n\n\n\n\n\nSample size for one mean test\nLeave out the parameter that you want to solve for\n\n# sample size for one proportion test\nt.power &lt;- power.t.test(\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  # power = 0.80, \n  n = 130,\n  type = \"one.sample\")\nt.power\n\n\n     One-sample t test power calculation \n\n              n = 130\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.9997354\n    alternative = two.sided\n\n\n\nplot(t.power)"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#software-sample-size-for-two-means-test",
+    "href": "slides_code/Day11_bsta511_code.html#software-sample-size-for-two-means-test",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Software: sample size for two means test",
+    "text": "Software: sample size for two means test\nLeave out the parameter that you want to solve for\n\nt2.power &lt;- power.t.test(\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  # power = 0.80, \n  n = 130,\n  type = \"two.sample\")\nt2.power\n\n\n     Two-sample t test power calculation \n\n              n = 130\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.9706928\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n\nplot(t2.power)"
   }
 ]

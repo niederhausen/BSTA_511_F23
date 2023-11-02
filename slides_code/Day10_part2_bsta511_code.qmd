@@ -97,7 +97,7 @@ set.seed(456)
 ## CI's and hypothesis tests for different scenarios: 
 
 ::: {style="font-size: 90%;"}
-$$\text{point~estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test~stat} = \frac{\text{point~estimate}-\text{null~value}}{SE}$$
+$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
 
 Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 --|--|--|--|--|--|--
@@ -595,7 +595,7 @@ $$(\bar{x} - t^*\cdot\frac{s}{\sqrt{n}},~\infty) \\
 
 CI's and hypothesis tests for different scenarios:
 
-$$\text{point~estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test~stat} = \frac{\text{point~estimate}-\text{null~value}}{SE}$$
+$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
 
 Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 --|--|--|--|--|--|--

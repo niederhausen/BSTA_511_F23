@@ -115,7 +115,7 @@ set.seed(456)
 ## CI's and hypothesis tests for different scenarios: 
 
 ::: {style="font-size: 90%;"}
-$$\text{point~estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test~stat} = \frac{\text{point~estimate}-\text{null~value}}{SE}$$
+$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
 
 Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 --|--|--|--|--|--|--
@@ -129,7 +129,6 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 
 
 ## Steps in a Hypothesis Test
-
 
 1. Set the __[level of significance]{style="color:darkorange"}__ $\alpha$
 
@@ -732,7 +731,7 @@ A __one-sided__ (1- $\alpha$ )% __CI__ has all (1- $\alpha$ )% on just the left 
 ::: {style="font-size: 90%;"}
 CI's and hypothesis tests for different scenarios:
 
-$$\text{point~estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test~stat} = \frac{\text{point~estimate}-\text{null~value}}{SE}$$
+$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
 
 Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 --|--|--|--|--|--|--
