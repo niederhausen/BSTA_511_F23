@@ -511,8 +511,11 @@ pt(3.3942, df = 17.89012, lower.tail = FALSE)
 * In this case we can use a __pooled SD__:
 
 $$s_{pooled}^2 = \frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}$$
+where 
 
-where $n_1$ and $n_2$ are the sample sizes, and $s_1$ and $s_2$ are the sample standard deviations of the two groups 
+* $n_1$, $n_2$ are the sample sizes, and
+* $s_1$, $s_2$ are the sample standard deviations 
+* of the two groups
 
 * We use the pooled SD instead of $s_1^2$ and $s_2^2$ when calculating the standard error 
 
@@ -800,62 +803,6 @@ pnorm(1.96, mean=3, sd=1, lower.tail=FALSE) +
 The left tail probability `pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)` is essentially 0 in this case.
 
 
-# Sample size calculation for testing one proportion
-
-* Recall in our sports betting example that the null $p_0=0.36$ and the observed proportion was 0.35. 
-* The _p_-value from the hypothesis test was not significant.
-* How big would the sample size $n$ need to be in order for the _p_-value to be significant?
-
-
-
-Calculate $n$ when given $\alpha$, power ( $1-\beta$ ), "true" alternative proportion $p$, and null $p_0$:
-
-$$n=p(1-p)\left(\frac{z_{1-\alpha/2}+z_{1-\beta}}{p-p_0}\right)^2$$
-
-```{r}
-p <- 0.35
-p0 <- 0.36
-alpha <- 0.05
-beta <- 0.20  #power=1-beta; want >=80% power
-n <- p*(1-p)*((qnorm(1-alpha/2)+qnorm(1-beta))/
-                (p-p0))^2
-ceiling(n) 
-```
-
-_We would need a sample size of at least 17857!_
-
-
-### Power calculation for testing one proportion
-
-Conversely, we can calculate how much power we had in our example given the sample size of 269.
-
-
-* Calculate power given $\alpha$, $n$, "true" alternative proportion $p$, and null $p_0$
-    * where $\Phi$ is the probability for a standard normal distribution 
-
-$$1-\beta=
-			\Phi\left(z-z_{1-\alpha/2}\right)+\Phi\left(-z-z_{1-\alpha/2}\right)
-			\quad ,\quad z=\frac{p-p_0}{\sqrt{\frac{p(1-p)}{n}}}$$
-
-
-
-```{r}
-p <- 0.35; p0 <- 0.36
-alpha <- 0.05
-n <- 269
-z=(p-p0)/sqrt(p*(1-p)/n)
-Power=pnorm(z-qnorm(1-alpha/2))+
-  pnorm(-z-qnorm(1-alpha/2))
-Power
-```
-
-If the population proportion is 0.35 instead of 0.36, we only have a 6.4% chance of correctly rejecting $H_0$ when the sample size is 269.
-
-
-
-
- 
-
 ## Software for power and sample size calculations 
 
 * R package `pwr` for basic statistical tests
@@ -879,29 +826,6 @@ p.out
 #| fig.width: 6
 #| fig.height: 3
 plot(p.out)
-```
-
-### Power for one proportion test
-
-Leave out the parameter that you want to solve for
-
-```{r}
-# library(pwr)
-# power for one proportion test
-p.power <- pwr.p.test(
-  h = ES.h(p1 = 0.36, p2 = 0.35),
-  sig.level = 0.05, 
-  # power = 0.80, 
-  n = 269,
-  alternative = "two.sided")
-p.power
-```
-
-
-```{r}
-#| fig.width: 6
-#| fig.height: 3
-plot(p.power)
 ```
 
 

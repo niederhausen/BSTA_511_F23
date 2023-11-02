@@ -53,12 +53,30 @@ theme_set(theme_bw(base_size = 22))
 set.seed(456)
 ```
 
+## MoRitz's tip of the day
+
+Add tabbed sections to your html file using `{.tabset}`.
+
+
+::: columns
+::: {.column width="50%"}
+
+<img src="img/screenshot_tabset_code.png" width="100%" height="100%">
+
+:::
+
+::: {.column width="50%"}
+
+html output
+<img src="img/screenshot_tabset_html.png" width="100%" height="100%">
+:::
+:::
 
 ## MoRitz's tip of the day: Code folding!
 ::: columns
 ::: {.column width="50%"}
 
-<center><img src="img/code_folding_yaml_511.png" width="100%" height="100%"></center>
+<img src="img/code_folding_yaml_511.png" width="100%" height="100%">
 
 :::
 
@@ -66,7 +84,7 @@ set.seed(456)
 * Note the `Code` and `Hide` boxes on the right side of the html output.
 * With code folding we can hide or show the code in the html output by clicking on the buttons in the html file.
 
-<center><img src="img/code_folding_html_511.png" width="100%" height="100%"></center>
+<img src="img/code_folding_html_511.png" width="100%" height="100%">
 :::
 :::
 
@@ -104,12 +122,9 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 :::
 
 
+## Goals for today 
 
-
-
-
-
-## Goals for today (Section 5.3)
+### 2-sample t-test (Section 5.3)
 
 * Statistical inference for difference in means from 2 independent samples
     1. What are $H_0$ and $H_a$?
@@ -126,9 +141,12 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
     
     1. Pooled SD
 
+### Power and sample size (4.3.4, 5.4, plus notes)
 
-
-
+* Critical values & rejection region
+* Type I & II errors
+* Power
+* How to calculate sample size needed for a study?
 
 
 ## Examples of designs with two independent samples
@@ -666,7 +684,6 @@ Verify the _p_-value in the R output using $\nu$ = 17.89012:
 pt(3.3942, df = 17.89012, lower.tail = FALSE)
 ``` 
 
-# XXX
 
 ## Pooled standard deviation estimate {.smaller}
 
@@ -719,78 +736,25 @@ sqrt(sp)
 ```
 
 
-## Pooled standard deviation estimate
-
-::: {style="font-size: 90%;"}
-* Sometimes we have reasons to believe that the population SD's from the two groups are equal, such as when randomizing participants to two groups
-:::
-
-::: columns
-::: {.column width="50%"}
-::: {style="font-size: 90%;"}
-* In this case we can use a __pooled SD__:
-
-$$s_{pooled}^2 = \frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}$$
-:::
-:::
-
-::: {.column width="50%"}
-::: {style="font-size: 80%;"}
-where $n_1$ and $n_2$ are the sample sizes, and $s_1$ and $s_2$ are the sample standard deviations of the two groups 
-:::
-:::
-:::
-
-::: {style="font-size: 90%;"}
-* We use the pooled SD instead of $s_1^2$ and $s_2^2$ when calculating the standard error 
-
-$$SE = \sqrt{\frac{s_{pooled}^2}{n_1} + \frac{s_{pooled}^2}{n_2}}= s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
-
-
-::: columns
-::: {.column width="50%"}
-
-__Test statistic__ with pooled SD:
-
-$$t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 -0}{s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$$
-
-:::
-
-::: {.column width="50%"}
-__CI__  with pooled SD:
-
-$$(\bar{x}_1 - \bar{x}_2) \pm t^{\star} \cdot s_{pooled} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
-:::
-:::
-
-* The $t$ distribution degrees of freedom are now:
-$$df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.$$
-
-:::
-
-
-```{r}
-#| echo: false
-#| eval: false
-(sp <- (2.214^2 + 2.394^2)/2)
-sqrt(sp)
-```
-
-
-
 
 ## R: 2-sample t-test with pooled SD 
 
 ```{r}
 # t-test with pooled SD
-t.test(formula = Taps ~ Group, alternative = "greater", 
+t.test(formula = Taps ~ Group, 
+       alternative = "greater", 
        var.equal = TRUE,  # pooled SD 
-       data = CaffTaps) %>% tidy() %>% gt()
+       data = CaffTaps) %>% 
+  tidy() %>% 
+  gt()
 
 # t-test without pooled SD
-t.test(formula = Taps ~ Group, alternative = "greater", 
+t.test(formula = Taps ~ Group, 
+       alternative = "greater", 
        var.equal = FALSE,  # default, NOT pooled SD 
-       data = CaffTaps) %>% tidy() %>% gt()
+       data = CaffTaps) %>% 
+  tidy() %>% 
+  gt()
 ```
 
 Similar output in this case - why??
@@ -816,48 +780,7 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 :::
 
 
-# Power
-
-## MoRitz's tip of the day
-
-Add tabbed sections to your html file using `{.tabset}`.
-
-
-::: columns
-::: {.column width="50%"}
-
-<center><img src="img/screenshot_tabset_code.png" width="100%" height="100%"></center>
-
-:::
-
-::: {.column width="50%"}
-
-html output
-<center><img src="img/screenshot_tabset_html.png" width="100%" height="100%"></center>
-:::
-:::
-
-
-## Where are we?
-
-We've covered statistical inference (CI's & hypothesis testing) for the scenarios listed below
-
-$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
-
-Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE 
---|--|--|--|--|--|--
-11-12 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$ 
-13 | 5.2 | Pop mean of<br> paired diff | $\mu_d$ or $\delta$ | Sample mean of<br> paired diff | $\bar{x}_{d}$  | $\frac{s_d}{\sqrt{n}}$ 
-14 | 5.3 | Diff in pop <br> means | $\mu_1-\mu_2$ | Diff in sample <br> means | $\bar{x}_1 - \bar{x}_2$  | $\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ or pooled
-15 | 8.1 | Pop proportion | $p$ | Sample prop | $\hat{p}$  | $\sqrt{\frac{p(1-p)}{n}}$
-15 | 8.2 | Diff in pop <br> proportions | $p_1-p_2$ | Diff in sample <br> proportions | $\hat{p}_1-\hat{p}_2$ | $\sqrt{\frac{p_1\cdot(1-p_1)}{n_1} + \frac{p_2\cdot(1-p_2)}{n_2}}$
-
-
-
-
-
-
-## Goals for today 
+# Power and sample size calculations
 
 * Critical values & rejection region
 
@@ -869,9 +792,9 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 
 <hr>
 
-* Material is from 
-    * __4.3.4__ Decision errors
-    * __5.4__ Power calculations for a difference of means
+* Materials are from 
+    * __Section 4.3.4__ Decision errors
+    * __Section 5.4__ Power calculations for a difference of means
     * plus notes
 
 
@@ -894,9 +817,14 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 
 
 ## Critical values 
-::: columns
-::: {.column width="50%"}
+
+::: {style="font-size: 90%;"}
+
 * __Critical values__ are the cutoff values that determine whether a test statistic is statistically significant or not.
+* If a test statistic is greater in absolute value than the critical value, we reject $H_0$
+
+::: columns
+::: {.column width="49%"}
 
 ```{r}
 #| fig.width: 10
@@ -929,34 +857,36 @@ ggplot(NULL, aes(c(-3,3))) +
 ```
 :::
 
+::: {.column width="2%"}
+:::
 
-::: {.column width="50%"}
-
-* If a test statistic is greater in absolute value than the critical value, we reject $H_0$
+::: {.column width="49%"}
 
 * Critical values are determined by 
     * the significance level $\alpha$, 
     * whether a test is 1- or 2-sided, &
     * the probability distribution being used to calculate the p-value (such as normal or t-distribution).
-
 * The critical values in the figure should look very familiar! 
     * Where have we used these before?
 
+:::
+:::
+<br>
+
 * How can we calculate the critical values using R?
-
 :::
-:::
-
 
 
 ## Rejection region
-::: columns
-::: {.column width="60%"}
-* If a test statistic is greater in absolute value than the critical value, we reject $H_0$
+
+* If the absolute value of the test statistic is greater than the critical value, we reject $H_0$
     * In this case the test statistic is in the __rejection region__.
     * Otherwise it's in the nonrejection region.
 
-![[Stats & Geospatial Analysis](https://www.geo.fu-berlin.de/en/v/soga/Basics-of-statistics/Hypothesis-Tests/Introduction-to-Hypothesis-Testing/Critical-Value-and-the-p-Value-Approach/index.html)](img_slides/RejectionRegion.png){fig-align="center"}
+::: columns
+::: {.column width="60%"}
+
+![[Stats & Geospatial Analysis](https://www.geo.fu-berlin.de/en/v/soga/Basics-of-statistics/Hypothesis-Tests/Introduction-to-Hypothesis-Testing/Critical-Value-and-the-p-Value-Approach/index.html)](/img_slides/RejectionRegion.png){fig-align="center"}
 
 :::
 ::: {.column width="40%"}
@@ -969,27 +899,34 @@ ggplot(NULL, aes(c(-3,3))) +
 
 # Hypothesis Testing "Errors" 
 
-![[StatisticsSolutions](https://www.statisticssolutions.com/to-err-is-human-what-are-type-i-and-ii-errors/)](img_slides/rachnovblog-768x310.jpg){fig-align="center"}
+![[StatisticsSolutions](https://www.statisticssolutions.com/to-err-is-human-what-are-type-i-and-ii-errors/)](/img_slides/rachnovblog-768x310.jpg){fig-align="center"}
 
 
 ## Justice system analogy 
 
-![[Type I and Type II Errors - Making Mistakes in the Justice System](http://www.intuitor.com/statistics/T1T2Errors.html)](img_slides/intuitor_charts.png){fig-align="center"}
+<br><br>
+
+![[Type I and Type II Errors - Making Mistakes in the Justice System](http://www.intuitor.com/statistics/T1T2Errors.html)](/img_slides/intuitor_charts.png){fig-align="center"}
 
 
 ## Type I & II Errors
+
 ::: columns
 ::: {.column width="40%"}
 
-![](img_slides/type-i-and-type-ii-errors_chart.png){fig-align="center"}
+![](/img_slides/type-i-and-type-ii-errors_chart.png){fig-align="center"}
 
-* $\alpha$ = probability of making a __Type I error__
+::: {style="font-size: 90%;"}
+
+* [$\alpha$]{style="color:violet"} = probability of making a [__Type I error__]{style="color:violet"}
     * This is the significance level (usually 0.05)
-    * Should be set before a study starts
-* $\beta$ = probability of making a __Type II error__
+    * Set before study starts
+* [$\beta$]{style="color:green"} = probability of making a [__Type II error__]{style="color:green"}
 * Ideally we want
     * small Type I & II errors and
     * big power
+
+::: 
 :::
 
 ::: {.column width="60%"}
@@ -1020,8 +957,12 @@ ggplot(NULL, aes(c(-3,7))) +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 ```
 
+::: {style="font-size: 90%;"}
+Applet for visualizing Type I & II errors and power: 
+<https://rpsychologist.com/d3/NHST/>
 
-Applet for visualizing Type I & II errors and power: https://rpsychologist.com/d3/NHST/
+:::
+
 :::
 :::
 
@@ -1034,44 +975,50 @@ Applet for visualizing Type I & II errors and power: https://rpsychologist.com/d
         * increasing P(Type II error)
     * We typically keep P(Type I error) = $\alpha$ set to 0.05
         
-From the applet at https://rpsychologist.com/d3/NHST/
+From the applet at <https://rpsychologist.com/d3/NHST/>
+
 ::: columns
 ::: {.column width="50%"}
-<center>
-![](img_slides/power_applet_screenshot_alpha05.png" width="100%" height="100%">
-</center>
+
+![](/img_slides/power_applet_screenshot_alpha05.png){fig-align="center"}
+
 :::
 
 ::: {.column width="50%"}
 
-![](img_slides/power_applet_screenshot_alpha01.png){fig-align="center"}
+![](/img_slides/power_applet_screenshot_alpha01.png){fig-align="center"}
 :::
 :::
 
 
 ## Relationship between Type II errors and power
 
+<center>__Power__ = P(correctly rejecting the null hypothesis)</center>
+
+<br>
+
 ::: columns
-::: {.column width="50%"}
-* __Power__ = P(correctly rejecting the null hypothesis)
-* Also called the
+::: {.column width="49%"}
+
+* Power is also called the
     * true positive rate,
     * probability of detection, or 
     * the _sensitivity_ of a test
     
-![](img_slides/power_applet_screenshot_alpha05.png){fig-align="center"}
+![](/img_slides/power_applet_screenshot_alpha05.png){fig-align="center"}
 
 :::
-
-::: {.column width="50%"}
+::: {.column width="2%"}
+:::
+::: {.column width="49%"}
 
 * __Power vs. Type II error__
 
     * Power = 1 - P(Type II error) = 1 - $\beta$
 
-    * Thus as P(Type II error) decreases, the power increases
+    * Thus as $\beta$ = P(Type II error) decreases, the power increases
 
-    * P(Type II error) = $\beta$ decreases as the mean of the alternative population gets further away from the mean of the null population (effect size gets bigger).
+    * P(Type II error) decreases as the mean of the alternative population shits further away from the mean of the null population (effect size gets bigger).
 
     * Typically want at least 80% power; 90% power is good
 :::
@@ -1080,11 +1027,15 @@ From the applet at https://rpsychologist.com/d3/NHST/
 
 
 ## Example calculating the power
-::: columns
-::: {.column width="40%"}
+
+::: {style="font-size: 90%;"}
+
 * Suppose the mean of the null population is 0 ( $H_0: \mu=0$ ) with standard error 1
 * Find the power of a 2-sided test if the actual $\mu=3$, assuming the SE doesn't change.
 
+
+::: columns
+::: {.column width="50%"}
 
 ```{r}
 #| fig.width: 10
@@ -1113,85 +1064,27 @@ ggplot(NULL, aes(c(-3,7))) +
 ```
 :::
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 * Power = $P($Reject $H_0$ when alternative pop is $N(3,1))$
 * When $\alpha$ = 0.05, we reject $H_0$ when the test statistic z is at least 1.96
-* Thus we need to calculate 
 
-$$P(X \ge 1.96) + P(X \le -1.96)$$ 
+:::
+:::
 
-when $X\sim N(3,1)$
+* Thus for $X\sim N(3,1)$ we need to calculate $P(X \le -1.96) + P(X \ge 1.96)$ :
 
 ```{r}
-pnorm(1.96, mean=3, sd=1, lower.tail=FALSE) +
-  pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)
+# left tail + right tail:
+pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) + pnorm(1.96, mean=3, sd=1, lower.tail=FALSE)
 ```
 
+:::
+
+::: {style="font-size: 80%;"}
 The left tail probability `pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)` is essentially 0 in this case.
-
-:::
 :::
 
 
-## Sample size calculation for testing one proportion
-
-* Recall in our sports betting example that the null $p_0=0.36$ and the observed proportion was 0.35. 
-* The _p_-value from the hypothesis test was not significant.
-* How big would the sample size $n$ need to be in order for the _p_-value to be significant?
-
-::: columns
-::: {.column width="40%"}
-Calculate $n$ when given $\alpha$, power ( $1-\beta$ ), "true" alternative proportion $p$, and null $p_0$:
-
-$$n=p(1-p)\left(\frac{z_{1-\alpha/2}+z_{1-\beta}}{p-p_0}\right)^2$$
-:::
-
-::: {.column width="60%"}
-```{r}
-p <- 0.35
-p0 <- 0.36
-alpha <- 0.05
-beta <- 0.20  #power=1-beta; want >=80% power
-n <- p*(1-p)*((qnorm(1-alpha/2)+qnorm(1-beta))/
-                (p-p0))^2
-ceiling(n) 
-```
-:::
-:::
-
-_We would need a sample size of at least 17857!_
-
-
-
-## Power calculation for testing one proportion
-
-Conversely, we can calculate how much power we had in our example given the sample size of 269.
-
-
-* Calculate power given $\alpha$, $n$, "true" alternative proportion $p$, and null $p_0$
-    * where $\Phi$ is the probability for a standard normal distribution 
-
-$$1-\beta=
-			\Phi\left(z-z_{1-\alpha/2}\right)+\Phi\left(-z-z_{1-\alpha/2}\right)
-			\quad ,\quad z=\frac{p-p_0}{\sqrt{\frac{p(1-p)}{n}}}$$
-
-::: columns
-::: {.column width="60%"}
-```{r}
-p <- 0.35; p0 <- 0.36
-alpha <- 0.05
-n <- 269
-z=(p-p0)/sqrt(p*(1-p)/n)
-Power=pnorm(z-qnorm(1-alpha/2))+
-  pnorm(-z-qnorm(1-alpha/2))
-Power
-```
-:::
-
-::: {.column width="40%"}
-If the population proportion is 0.35 instead of 0.36, we only have a 6.4% chance of correctly rejecting $H_0$ when the sample size is 269.
-:::
-:::
 
  
 
@@ -1226,35 +1119,6 @@ plot(p.out)
 :::
 
 
-
-## Software: power for one proportion test
-
-Leave out the parameter that you want to solve for
-::: columns
-::: {.column width="40%"}
-
-```{r}
-# library(pwr)
-# power for one proportion test
-p.power <- pwr.p.test(
-  h = ES.h(p1 = 0.36, p2 = 0.35),
-  sig.level = 0.05, 
-  # power = 0.80, 
-  n = 269,
-  alternative = "two.sided")
-p.power
-```
-
-:::
-
-::: {.column width="60%"}
-```{r}
-#| fig.width: 10
-#| fig.height: 5
-plot(p.power)
-```
-:::
-:::
 
 ## Sample size calculation for testing one mean
 

@@ -7879,7 +7879,7 @@
     "href": "slides/Day11_bsta511.html#moritzs-tip-of-the-day-code-folding",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "MoRitz’s tip of the day: Code folding!",
-    "text": "MoRitz’s tip of the day: Code folding!\n\n\n\n\n\n\n\nNote the Code and Hide boxes on the right side of the html output.\nWith code folding we can hide or show the code in the html output by clicking on the buttons in the html file."
+    "text": "MoRitz’s tip of the day: Code folding!\n\n\n\n\n\nNote the Code and Hide boxes on the right side of the html output.\nWith code folding we can hide or show the code in the html output by clicking on the buttons in the html file."
   },
   {
     "objectID": "slides/Day11_bsta511.html#where-are-we",
@@ -8040,7 +8040,7 @@
     "href": "slides/Day11_bsta511.html#r-2-sample-t-test-with-pooled-sd",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "R: 2-sample t-test with pooled SD",
-    "text": "R: 2-sample t-test with pooled SD\n\n# t-test with pooled SD\nt.test(formula = Taps ~ Group, alternative = \"greater\", \n       var.equal = TRUE,  # pooled SD \n       data = CaffTaps) %&gt;% tidy() %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001616497\n18\n1.711867\nInf\nTwo Sample t-test\ngreater\n  \n  \n  \n\n\n\n# t-test without pooled SD\nt.test(formula = Taps ~ Group, alternative = \"greater\", \n       var.equal = FALSE,  # default, NOT pooled SD \n       data = CaffTaps) %&gt;% tidy() %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001627703\n17.89012\n1.711272\nInf\nWelch Two Sample t-test\ngreater\n  \n  \n  \n\n\n\n\nSimilar output in this case - why??"
+    "text": "R: 2-sample t-test with pooled SD\n\n# t-test with pooled SD\nt.test(formula = Taps ~ Group, \n       alternative = \"greater\", \n       var.equal = TRUE,  # pooled SD \n       data = CaffTaps) %&gt;% \n  tidy() %&gt;% \n  gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001616497\n18\n1.711867\nInf\nTwo Sample t-test\ngreater\n  \n  \n  \n\n\n\n# t-test without pooled SD\nt.test(formula = Taps ~ Group, \n       alternative = \"greater\", \n       var.equal = FALSE,  # default, NOT pooled SD \n       data = CaffTaps) %&gt;% \n  tidy() %&gt;% \n  gt()\n\n\n\n\n\n  \n    \n    \n      estimate\n      estimate1\n      estimate2\n      statistic\n      p.value\n      parameter\n      conf.low\n      conf.high\n      method\n      alternative\n    \n  \n  \n    3.5\n248.3\n244.8\n3.394168\n0.001627703\n17.89012\n1.711272\nInf\nWelch Two Sample t-test\ngreater\n  \n  \n  \n\n\n\n\nSimilar output in this case - why??"
   },
   {
     "objectID": "slides/Day11_bsta511.html#whats-next",
@@ -8054,7 +8054,7 @@
     "href": "slides/Day11_bsta511.html#moritzs-tip-of-the-day",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "MoRitz’s tip of the day",
-    "text": "MoRitz’s tip of the day\nAdd tabbed sections to your html file using {.tabset}.\n\n\n\n\n\n\nhtml output"
+    "text": "MoRitz’s tip of the day\nAdd tabbed sections to your html file using {.tabset}.\n\n\n\n\nhtml output"
   },
   {
     "objectID": "slides/Day11_bsta511.html#where-are-we-2",
@@ -8068,7 +8068,7 @@
     "href": "slides/Day11_bsta511.html#goals-for-today",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Goals for today",
-    "text": "Goals for today\n\nCritical values & rejection region\nType I & II errors\nPower\nHow to calculate sample size needed for a study?\n\n\n\nMaterial is from\n\n4.3.4 Decision errors\n5.4 Power calculations for a difference of means\nplus notes"
+    "text": "Goals for today\n2-sample t-test (Section 5.3)\n\nStatistical inference for difference in means from 2 independent samples\n\nWhat are \\(H_0\\) and \\(H_a\\)?\nWhat is the SE for \\(\\bar{x}_1 - \\bar{x}_2\\)?\nHypothesis test\nConfidence Interval\nRun test in R - using long vs. wide data\nSatterthwaite’s df\nPooled SD\n\n\nPower and sample size (4.3.4, 5.4, plus notes)\n\nCritical values & rejection region\nType I & II errors\nPower\nHow to calculate sample size needed for a study?"
   },
   {
     "objectID": "slides/Day11_bsta511.html#steps-in-a-hypothesis-test-1",
@@ -8082,49 +8082,49 @@
     "href": "slides/Day11_bsta511.html#critical-values",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Critical values",
-    "text": "Critical values\n\n\n\nCritical values are the cutoff values that determine whether a test statistic is statistically significant or not.\n\n\n\n\n\n\n\n\nIf a test statistic is greater in absolute value than the critical value, we reject \\(H_0\\)\nCritical values are determined by\n\nthe significance level \\(\\alpha\\),\nwhether a test is 1- or 2-sided, &\nthe probability distribution being used to calculate the p-value (such as normal or t-distribution).\n\nThe critical values in the figure should look very familiar!\n\nWhere have we used these before?\n\nHow can we calculate the critical values using R?"
+    "text": "Critical values\n\n\nCritical values are the cutoff values that determine whether a test statistic is statistically significant or not.\nIf a test statistic is greater in absolute value than the critical value, we reject \\(H_0\\)\n\n\n\n\n\n\n\n\n\n\n\n\nCritical values are determined by\n\nthe significance level \\(\\alpha\\),\nwhether a test is 1- or 2-sided, &\nthe probability distribution being used to calculate the p-value (such as normal or t-distribution).\n\nThe critical values in the figure should look very familiar!\n\nWhere have we used these before?\n\n\n\n\n\n\nHow can we calculate the critical values using R?"
   },
   {
     "objectID": "slides/Day11_bsta511.html#rejection-region",
     "href": "slides/Day11_bsta511.html#rejection-region",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Rejection region",
-    "text": "Rejection region\n\n\n\nIf a test statistic is greater in absolute value than the critical value, we reject \\(H_0\\)\n\nIn this case the test statistic is in the rejection region.\nOtherwise it’s in the nonrejection region.\n\n\n\n\n\nStats & Geospatial Analysis\n\n\n\n\nWhat do rejection regions look like for 1-sided tests?"
+    "text": "Rejection region\n\nIf the absolute value of the test statistic is greater than the critical value, we reject \\(H_0\\)\n\nIn this case the test statistic is in the rejection region.\nOtherwise it’s in the nonrejection region.\n\n\n\n\n\n\n\nStats & Geospatial Analysis\n\n\n\n\nWhat do rejection regions look like for 1-sided tests?"
   },
   {
     "objectID": "slides/Day11_bsta511.html#justice-system-analogy",
     "href": "slides/Day11_bsta511.html#justice-system-analogy",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Justice system analogy",
-    "text": "Justice system analogy\n\nType I and Type II Errors - Making Mistakes in the Justice System"
+    "text": "Justice system analogy\n\n\nType I and Type II Errors - Making Mistakes in the Justice System"
   },
   {
     "objectID": "slides/Day11_bsta511.html#type-i-ii-errors",
     "href": "slides/Day11_bsta511.html#type-i-ii-errors",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Type I & II Errors",
-    "text": "Type I & II Errors\n\n\n\n\n\n\n\n\n\\(\\alpha\\) = probability of making a Type I error\n\nThis is the significance level (usually 0.05)\nShould be set before a study starts\n\n\\(\\beta\\) = probability of making a Type II error\nIdeally we want\n\nsmall Type I & II errors and\nbig power\n\n\n\n\n\n\n\n\nApplet for visualizing Type I & II errors and power: https://rpsychologist.com/d3/NHST/"
+    "text": "Type I & II Errors\n\n\n\n\n\n\n\n\n\n\\(\\alpha\\) = probability of making a Type I error\n\nThis is the significance level (usually 0.05)\nSet before study starts\n\n\\(\\beta\\) = probability of making a Type II error\nIdeally we want\n\nsmall Type I & II errors and\nbig power\n\n\n\n\n\n\n\n\n\n\nApplet for visualizing Type I & II errors and power: https://rpsychologist.com/d3/NHST/"
   },
   {
     "objectID": "slides/Day11_bsta511.html#relationship-between-type-i-ii-errors",
     "href": "slides/Day11_bsta511.html#relationship-between-type-i-ii-errors",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Relationship between Type I & II errors",
-    "text": "Relationship between Type I & II errors\n\nType I vs. Type II error\n\nDecreasing P(Type I error) leads to\n\nincreasing P(Type II error)\n\nWe typically keep P(Type I error) = \\(\\alpha\\) set to 0.05\n\n\nFrom the applet at https://rpsychologist.com/d3/NHST/ ::: columns ::: {.column width=“50%”}\n\n[](img_slides/power_applet_screenshot_alpha05.png” width=“100%” height=“100%”&gt;\n\n:::\n\n\n\n\n\n\n\n:::"
+    "text": "Relationship between Type I & II errors\n\nType I vs. Type II error\n\nDecreasing P(Type I error) leads to\n\nincreasing P(Type II error)\n\nWe typically keep P(Type I error) = \\(\\alpha\\) set to 0.05\n\n\nFrom the applet at https://rpsychologist.com/d3/NHST/"
   },
   {
     "objectID": "slides/Day11_bsta511.html#relationship-between-type-ii-errors-and-power",
     "href": "slides/Day11_bsta511.html#relationship-between-type-ii-errors-and-power",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Relationship between Type II errors and power",
-    "text": "Relationship between Type II errors and power\n\n\n\nPower = P(correctly rejecting the null hypothesis)\nAlso called the\n\ntrue positive rate,\nprobability of detection, or\nthe sensitivity of a test\n\n\n\n\n\n\n\n\n\nPower vs. Type II error\n\nPower = 1 - P(Type II error) = 1 - \\(\\beta\\)\nThus as P(Type II error) decreases, the power increases\nP(Type II error) = \\(\\beta\\) decreases as the mean of the alternative population gets further away from the mean of the null population (effect size gets bigger).\nTypically want at least 80% power; 90% power is good"
+    "text": "Relationship between Type II errors and power\n\nPower = P(correctly rejecting the null hypothesis)\n\n\n\n\n\nPower is also called the\n\ntrue positive rate,\nprobability of detection, or\nthe sensitivity of a test\n\n\n\n\n\n\n\n\n\n\n\nPower vs. Type II error\n\nPower = 1 - P(Type II error) = 1 - \\(\\beta\\)\nThus as \\(\\beta\\) = P(Type II error) decreases, the power increases\nP(Type II error) decreases as the mean of the alternative population shits further away from the mean of the null population (effect size gets bigger).\nTypically want at least 80% power; 90% power is good"
   },
   {
     "objectID": "slides/Day11_bsta511.html#example-calculating-the-power",
     "href": "slides/Day11_bsta511.html#example-calculating-the-power",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Example calculating the power",
-    "text": "Example calculating the power\n\n\n\nSuppose the mean of the null population is 0 ( \\(H_0: \\mu=0\\) ) with standard error 1\nFind the power of a 2-sided test if the actual \\(\\mu=3\\), assuming the SE doesn’t change.\n\n\n\n\n\n\n\n\nPower = \\(P(\\)Reject \\(H_0\\) when alternative pop is \\(N(3,1))\\)\nWhen \\(\\alpha\\) = 0.05, we reject \\(H_0\\) when the test statistic z is at least 1.96\nThus we need to calculate\n\n\\[P(X \\ge 1.96) + P(X \\le -1.96)\\]\nwhen \\(X\\sim N(3,1)\\)\n\npnorm(1.96, mean=3, sd=1, lower.tail=FALSE) +\n  pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)\n\n[1] 0.8508304\n\n\nThe left tail probability pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) is essentially 0 in this case."
+    "text": "Example calculating the power\n\n\nSuppose the mean of the null population is 0 ( \\(H_0: \\mu=0\\) ) with standard error 1\nFind the power of a 2-sided test if the actual \\(\\mu=3\\), assuming the SE doesn’t change.\n\n\n\n\n\n\n\n\n\n\nPower = \\(P(\\)Reject \\(H_0\\) when alternative pop is \\(N(3,1))\\)\nWhen \\(\\alpha\\) = 0.05, we reject \\(H_0\\) when the test statistic z is at least 1.96\n\n\n\n\nThus for \\(X\\sim N(3,1)\\) we need to calculate \\(P(X \\le -1.96) + P(X \\ge 1.96)\\) :\n\n\n# left tail + right tail:\npnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) + pnorm(1.96, mean=3, sd=1, lower.tail=FALSE)\n\n[1] 0.8508304\n\n\n\n\nThe left tail probability pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) is essentially 0 in this case."
   },
   {
     "objectID": "slides/Day11_bsta511.html#sample-size-calculation-for-testing-one-proportion",
@@ -8398,5 +8398,12 @@
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Pooled standard deviation estimate",
     "text": "Pooled standard deviation estimate\n\n\nSometimes we have reasons to believe that the population SD’s from the two groups are equal, such as when randomizing participants to two groups\n\n\n\n\n\n\nIn this case we can use a pooled SD:\n\n\\[s_{pooled}^2 = \\frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}\\]\n\n\n\nwhere \\(n_1\\) and \\(n_2\\) are the sample sizes, and \\(s_1\\) and \\(s_2\\) are the sample standard deviations of the two groups\n\n\n\n\n\nWe use the pooled SD instead of \\(s_1^2\\) and \\(s_2^2\\) when calculating the standard error\n\n\\[SE = \\sqrt{\\frac{s_{pooled}^2}{n_1} + \\frac{s_{pooled}^2}{n_2}}= s_{pooled}\\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}\\]\n\n\nTest statistic with pooled SD:\n\\[t_{\\bar{x}_1 - \\bar{x}_2} = \\frac{\\bar{x}_1 - \\bar{x}_2 -0}{s_{pooled}\\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}}\\]\n\nCI with pooled SD:\n\\[(\\bar{x}_1 - \\bar{x}_2) \\pm t^{\\star} \\cdot s_{pooled} \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}\\]\n\n\n\nThe \\(t\\) distribution degrees of freedom are now: \\[df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.\\]"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#critical-values--orinigal",
+    "href": "slides/Day11_bsta511.html#critical-values--orinigal",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Critical values -orinigal",
+    "text": "Critical values -orinigal\n\n\n\n\nCritical values are the cutoff values that determine whether a test statistic is statistically significant or not.\n\n\n\n\n\n\n\n\n\n\nIf a test statistic is greater in absolute value than the critical value, we reject \\(H_0\\)\nCritical values are determined by\n\nthe significance level \\(\\alpha\\),\nwhether a test is 1- or 2-sided, &\nthe probability distribution being used to calculate the p-value (such as normal or t-distribution).\n\nThe critical values in the figure should look very familiar!\n\nWhere have we used these before?\n\nHow can we calculate the critical values using R?"
   }
 ]
