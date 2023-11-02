@@ -275,18 +275,20 @@ $$\text{test statistic} = \frac{\bar{x}_1 - \bar{x}_2 - 0}{SE_{\bar{x}_1 - \bar{
 
 ## What distribution does $\bar{X}_1 - \bar{X}_2$ have?
 ::: columns
-::: {.column width="40%"}
-Let $\bar{X}_1$ and $\bar{X}_2$ be the means of random samples from two independent groups, with parameters:
-
- | Group 1 | Group 2 | 
---|--|--|
-sample size | $n_1$| $n_2$ |
-pop mean | $\mu_1$| $\mu_2$ |
-pop sd | $\sigma_1$| $\sigma_2$ |
+::: {.column width="50%"}
+Let $\bar{X}_1$ and $\bar{X}_2$ be the means of random samples from two independent groups, with parameters shown in table:
 :::
 
-::: {.column width="60%"}
+::: {.column width="50%"}
+|             | Group 1    | Group 2    |
+|-------------|------------|------------|
+| sample size | $n_1$      | $n_2$      |
+| pop mean    | $\mu_1$    | $\mu_2$    |
+| pop sd      | $\sigma_1$ | $\sigma_2$ |
+:::
+:::
 
+::: {style="font-size: 90%;"}
 Some theoretical statistics:
 
 * If $\bar{X}_1$ and $\bar{X}_2$ are independent normal r.v.'s, then $\bar{X}_1 - \bar{X}_2$ is also normal
@@ -296,19 +298,21 @@ $$E[\bar{X}_1 - \bar{X}_2] = E[\bar{X}_1] - E[\bar{X}_2] = \mu_1-\mu_2$$
 
 * What is the standard deviation of $\bar{X}_1 - \bar{X}_2$?
 
-$$Var(\bar{X}_1 - \bar{X}_2) = Var(\bar{X}_1) + Var(\bar{X}_2) = \frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2} \\
-SD(\bar{X}_1 - \bar{X}_2) = \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}$$
-:::
-:::
+\begin{align}
+Var(\bar{X}_1 - \bar{X}_2) &= Var(\bar{X}_1) + Var(\bar{X}_2) = \frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2} \\
+SD(\bar{X}_1 - \bar{X}_2) &= \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}
+\end{align}
 
-
+:::
 
 
 ## Step 3: Test statistic (part 2)
+
+::: {style="font-size: 90%;"}
 ::: columns
 ::: {.column width="50%"}
 $$
-\text{test statistic} = t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 - 0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
+t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 - 0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
 $$
 
 :::
@@ -335,7 +339,7 @@ __Assumptions__:
 * __Approximately normal samples or big n's__ 
     * The distributions of the samples should be approximately normal 
     * _or_ _both_ their sample sizes should be at least 30.
-
+:::
 
 
 
@@ -387,10 +391,6 @@ pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE)
 
 <br>
 
-<br>
-
-<br>
-
 <hr>
 
 Based on the value of the test statistic, do you think we are going to reject or fail to reject $H_0$?
@@ -428,6 +428,7 @@ ggplot(CaffTaps, aes(x=Taps)) +
 ## Step 4: p-value
 
 The __[p-value]{style="color:darkorange"}__ is the __probability__ of obtaining a test statistic _just as extreme or more extreme_ than the observed test statistic assuming the null hypothesis $H_0$ is true. 
+
 ::: columns
 ::: {.column width="50%"}
 ```{r}
@@ -509,8 +510,8 @@ pt(tstat, df=min(n1 -1, n2-1), lower.tail = FALSE)
 ## Step 5: Conclusion to hypothesis test
 
 \begin{align}
-H_0:& \mu_{caff} - \mu_{ctrl} = \\
-H_A:& \mu_{caff} - \mu_{ctrl} \\
+H_0:& \mu_{caff} - \mu_{ctrl} = 0\\
+H_A:& \mu_{caff} - \mu_{ctrl} > 0\\
 \end{align}
 
 * Recall the $p$-value = 0.00397
@@ -523,10 +524,7 @@ __Conclusion statement__:
     * There is sufficient evidence that the (population) difference in mean finger taps/min with vs. without caffeine is greater than 0 ( $p$-value = 0.004).
 
 * More realistic manuscript conclusion: 
-    * The mean finger taps/min were 244.8 (SD = 2.4) and 248.3 (SD = 2.2) for the control and caffeine groups, and the increase of 3.5 taps/min was statistically significant ( $p$-value = 0.004).
-
-
-
+    * The mean finger taps/min were 244.8 (SD = 2.4) and 248.3 (SD = 2.2) for the control and caffeine groups, and the increase of 3.5 taps/min was statistically discrenible ( $p$-value = 0.004).
 
 
 ## 95% CI for the mean difference in cholesterol levels
@@ -575,13 +573,20 @@ $$\bar{x}_{caff} - \bar{x}_{ctrl} \pm t^* \cdot \sqrt{\frac{s_{caff}^2}{n_{caff}
 :::
 
 ::: {.column width="50%"}
+
+:::
+:::
+
+<br>
+<br>
+<br>
+
+::: {style="font-size: 90%;"}
 __Interpretation__:  
 We are 95% confident that the (population) difference in mean finger taps/min between the caffeine and control groups is between `r round(LB, 3)` mg/dL and `r round(UB, 3)` mg/dL.
 
 * _Based on the CI, is there evidence that drinking caffeine made a difference in finger taps/min? Why or why not?_
 :::
-:::
-
 
 
 
@@ -595,7 +600,9 @@ We are 95% confident that the (population) difference in mean finger taps/min be
 <!-- Using the caffeine induced finger tapping example with $H_A: \mu_{caff} - \mu_{ctrl} > 0$: -->
 
 ```{r}
-(Taps_2ttest <- t.test(formula = Taps ~ Group, alternative = "greater", data = CaffTaps))
+(Taps_2ttest <- t.test(formula = Taps ~ Group, 
+                       alternative = "greater", 
+                       data = CaffTaps))
 ```
 
 <!-- * The test output gives the 1-sided 95% CI since we ran a 1-sided test -->
@@ -617,8 +624,6 @@ tidy(Taps_2ttest)$p.value  # we can pull specific values from the tidy output
 ```
 
 
-
-
 ## R: 2-sample t-test (with wide data)
 
 <!-- Using the caffeine induced finger tapping example with $H_A: \mu_{caff} - \mu_{ctrl} > 0$: -->
@@ -630,6 +635,7 @@ CaffTaps_wide <- CaffTaps %>%
   mutate(id = rep(1:10, 2)) %>% #  "fake" IDs for pivot_wider step
   pivot_wider(names_from = "Group",
               values_from = "Taps")
+
 glimpse(CaffTaps_wide)
 
 t.test(x = CaffTaps_wide$Caffeine, y = CaffTaps_wide$NoCaffeine, alternative = "greater") %>% 
@@ -660,26 +666,36 @@ Verify the _p_-value in the R output using $\nu$ = 17.89012:
 pt(3.3942, df = 17.89012, lower.tail = FALSE)
 ``` 
 
-
+# XXX
 
 ## Pooled standard deviation estimate
 
+::: {style="font-size: 90%;"}
 * Sometimes we have reasons to believe that the population SD's from the two groups are equal, such as when randomizing participants to two groups
+:::
 
 ::: columns
 ::: {.column width="50%"}
+::: {style="font-size: 90%;"}
 * In this case we can use a __pooled SD__:
 
 $$s_{pooled}^2 = \frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}$$
+:::
+:::
 
+::: {style="font-size: 80%;"}
 where $n_1$ and $n_2$ are the sample sizes, and $s_1$ and $s_2$ are the sample standard deviations of the two groups 
+:::
 
+::: {style="font-size: 90%;"}
 * We use the pooled SD instead of $s_1^2$ and $s_2^2$ when calculating the standard error 
 
 $$SE = \sqrt{\frac{s_{pooled}^2}{n_1} + \frac{s_{pooled}^2}{n_2}}= s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}$$
 :::
+:::
 
 ::: {.column width="50%"}
+::: {style="font-size: 90%;"}
 __Test statistic__ with pooled SD:
 
 $$t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 -0}{s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$$
@@ -690,6 +706,7 @@ $$(\bar{x}_1 - \bar{x}_2) \pm t^{\star} \cdot s_{pooled} \sqrt{\frac{1}{n_1} + \
 * The $t$ distribution degrees of freedom are now:
 $$df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.$$
 
+:::
 :::
 :::
 

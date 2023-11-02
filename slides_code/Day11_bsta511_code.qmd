@@ -214,11 +214,11 @@ $$\text{test statistic} = \frac{\bar{x}_1 - \bar{x}_2 - 0}{SE_{\bar{x}_1 - \bar{
 
 Let $\bar{X}_1$ and $\bar{X}_2$ be the means of random samples from two independent groups, with parameters:
 
- | Group 1 | Group 2 | 
---------|--------|--------|
-sample size | $n_1$| $n_2$ |
-pop mean | $\mu_1$| $\mu_2$ |
-pop sd | $\sigma_1$| $\sigma_2$ |
+|             | Group 1    | Group 2    |
+|-------------|------------|------------|
+| sample size | $n_1$      | $n_2$      |
+| pop mean    | $\mu_1$    | $\mu_2$    |
+| pop sd      | $\sigma_1$ | $\sigma_2$ |
 
 
 Some theoretical statistics:
@@ -239,7 +239,7 @@ SD(\bar{X}_1 - \bar{X}_2) = \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}
 
 
 $$
-\text{test statistic} = t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 - 0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
+t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 - 0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
 $$
 
 * $\bar{x}_1, \bar{x}_2$ are the sample means
@@ -368,8 +368,8 @@ Calculate the _p_-value:
 # Step 5: Conclusion to hypothesis test
 
 \begin{align}
-H_0:& \mu_{caff} - \mu_{ctrl} = \\
-H_A:& \mu_{caff} - \mu_{ctrl} \\
+H_0:& \mu_{caff} - \mu_{ctrl} = 0\\
+H_A:& \mu_{caff} - \mu_{ctrl} > 0\\
 \end{align}
 
 * Recall the $p$-value = 0.00397

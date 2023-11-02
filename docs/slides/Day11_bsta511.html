@@ -1130,14 +1130,15 @@ H_A:&amp; \mu_{caff} - \mu_{ctrl} \\
 <section id="what-distribution-does-barx_1---barx_2-have" class="slide level2">
 <h2>What distribution does <span class="math inline">\(\bar{X}_1 - \bar{X}_2\)</span> have?</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
-<p>Let <span class="math inline">\(\bar{X}_1\)</span> and <span class="math inline">\(\bar{X}_2\)</span> be the means of random samples from two independent groups, with parameters:</p>
+<div class="column" style="width:50%;">
+<p>Let <span class="math inline">\(\bar{X}_1\)</span> and <span class="math inline">\(\bar{X}_2\)</span> be the means of random samples from two independent groups, with parameters shown in table:</p>
+</div><div class="column" style="width:50%;">
 <table>
 <thead>
 <tr class="header">
+<th></th>
 <th>Group 1</th>
 <th>Group 2</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
@@ -1158,7 +1159,9 @@ H_A:&amp; \mu_{caff} - \mu_{ctrl} \\
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:60%;">
+</div>
+</div>
+<div style="font-size: 90%;">
 <p>Some theoretical statistics:</p>
 <ul>
 <li>If <span class="math inline">\(\bar{X}_1\)</span> and <span class="math inline">\(\bar{X}_2\)</span> are independent normal r.v.’s, then <span class="math inline">\(\bar{X}_1 - \bar{X}_2\)</span> is also normal</li>
@@ -1168,17 +1171,19 @@ H_A:&amp; \mu_{caff} - \mu_{ctrl} \\
 <ul>
 <li>What is the standard deviation of <span class="math inline">\(\bar{X}_1 - \bar{X}_2\)</span>?</li>
 </ul>
-<p><span class="math display">\[Var(\bar{X}_1 - \bar{X}_2) = Var(\bar{X}_1) + Var(\bar{X}_2) = \frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2} \\
-SD(\bar{X}_1 - \bar{X}_2) = \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}\]</span></p>
-</div>
+<p><span class="math display">\[\begin{align}
+Var(\bar{X}_1 - \bar{X}_2) &amp;= Var(\bar{X}_1) + Var(\bar{X}_2) = \frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2} \\
+SD(\bar{X}_1 - \bar{X}_2) &amp;= \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}
+\end{align}\]</span></p>
 </div>
 </section>
 <section id="step-3-test-statistic-part-2" class="slide level2">
 <h2>Step 3: Test statistic (part 2)</h2>
+<div style="font-size: 90%;">
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span class="math display">\[
-\text{test statistic} = t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 - 0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
+t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 - 0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
 \]</span></p>
 </div><div class="column" style="width:50%;">
 <ul>
@@ -1209,6 +1214,7 @@ SD(\bar{X}_1 - \bar{X}_2) = \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}
 <li><em>or</em> <em>both</em> their sample sizes should be at least 30.</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="step-3-test-statistic-part-3" class="slide level2">
 <h2>Step 3: Test statistic (part 3)</h2>
@@ -1695,8 +1701,6 @@ SD(\bar{X}_1 - \bar{X}_2) = \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}
 </div>
 <p><br></p>
 <p><br></p>
-<p><br></p>
-<p><br></p>
 <hr>
 <p>Based on the value of the test statistic, do you think we are going to reject or fail to reject <span class="math inline">\(H_0\)</span>?</p>
 </section>
@@ -1728,7 +1732,9 @@ SD(\bar{X}_1 - \bar{X}_2) = \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}
 </section>
 <section id="step-4-p-value" class="slide level2">
 <h2>Step 4: p-value</h2>
-<p>The <strong><span style="color:darkorange">p-value</span></strong> is the <strong>probability</strong> of obtaining a test statistic <em>just as extreme or more extreme</em> than the observed test statistic assuming the null hypothesis <span class="math inline">\(H_0\)</span> is true. ::: columns ::: {.column width=“50%”}</p>
+<p>The <strong><span style="color:darkorange">p-value</span></strong> is the <strong>probability</strong> of obtaining a test statistic <em>just as extreme or more extreme</em> than the observed test statistic assuming the null hypothesis <span class="math inline">\(H_0\)</span> is true.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
 <p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
@@ -1739,17 +1745,16 @@ SD(\bar{X}_1 - \bar{X}_2) = \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}
 <p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
 </div>
 </div>
-<p>:::</p>
-<div class="column" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <p>Calculate the <em>p</em>-value:</p>
 </div>
-<p>:::</p>
+</div>
 </section>
 <section id="step-5-conclusion-to-hypothesis-test" class="slide level2">
 <h2>Step 5: Conclusion to hypothesis test</h2>
 <p><span class="math display">\[\begin{align}
-H_0:&amp; \mu_{caff} - \mu_{ctrl} = \\
-H_A:&amp; \mu_{caff} - \mu_{ctrl} \\
+H_0:&amp; \mu_{caff} - \mu_{ctrl} = 0\\
+H_A:&amp; \mu_{caff} - \mu_{ctrl} &gt; 0\\
 \end{align}\]</span></p>
 <ul>
 <li>Recall the <span class="math inline">\(p\)</span>-value = 0.00397</li>
@@ -1764,7 +1769,7 @@ H_A:&amp; \mu_{caff} - \mu_{ctrl} \\
 </ul></li>
 <li>More realistic manuscript conclusion:
 <ul>
-<li>The mean finger taps/min were 244.8 (SD = 2.4) and 248.3 (SD = 2.2) for the control and caffeine groups, and the increase of 3.5 taps/min was statistically significant ( <span class="math inline">\(p\)</span>-value = 0.004).</li>
+<li>The mean finger taps/min were 244.8 (SD = 2.4) and 248.3 (SD = 2.2) for the control and caffeine groups, and the increase of 3.5 taps/min was statistically discrenible ( <span class="math inline">\(p\)</span>-value = 0.004).</li>
 </ul></li>
 </ul>
 </section>
@@ -2247,12 +2252,16 @@ H_A:&amp; \mu_{caff} - \mu_{ctrl} \\
 <p>CI for <span class="math inline">\(\mu_{caff} - \mu_{ctrl}\)</span>:</p>
 <p><span class="math display">\[\bar{x}_{caff} - \bar{x}_{ctrl} \pm t^* \cdot \sqrt{\frac{s_{caff}^2}{n_{caff}}+\frac{s_{ctrl}^2}{n_{ctrl}}}\]</span></p>
 </div><div class="column" style="width:50%;">
+
+</div>
+</div>
+<p><br> <br> <br></p>
+<div style="font-size: 90%;">
 <p><strong>Interpretation</strong>:<br>
 We are 95% confident that the (population) difference in mean finger taps/min between the caffeine and control groups is between 1.167 mg/dL and 5.833 mg/dL.</p>
 <ul>
 <li><em>Based on the CI, is there evidence that drinking caffeine made a difference in finger taps/min? Why or why not?</em></li>
 </ul>
-</div>
 </div>
 </section>
 <section id="r-2-sample-t-test-with-long-data" class="slide level2">
@@ -2267,7 +2276,9 @@ We are 95% confident that the (population) difference in mean finger taps/min be
 </ul>
 <!-- Using the caffeine induced finger tapping example with $H_A: \mu_{caff} - \mu_{ctrl} > 0$: -->
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>(Taps_2ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(<span class="at">formula =</span> Taps <span class="sc">~</span> Group, <span class="at">alternative =</span> <span class="st">"greater"</span>, <span class="at">data =</span> CaffTaps))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>(Taps_2ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(<span class="at">formula =</span> Taps <span class="sc">~</span> Group, </span>
+<span id="cb7-2"><a href="#cb7-2"></a>                       <span class="at">alternative =</span> <span class="st">"greater"</span>, </span>
+<span id="cb7-3"><a href="#cb7-3"></a>                       <span class="at">data =</span> CaffTaps))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Welch Two Sample t-test
@@ -2785,7 +2796,8 @@ sample estimates:
 <span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">%&gt;%</span> <span class="co">#  "fake" IDs for pivot_wider step</span></span>
 <span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> <span class="st">"Group"</span>,</span>
 <span id="cb12-6"><a href="#cb12-6"></a>              <span class="at">values_from =</span> <span class="st">"Taps"</span>)</span>
-<span id="cb12-7"><a href="#cb12-7"></a><span class="fu">glimpse</span>(CaffTaps_wide)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-7"><a href="#cb12-7"></a></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="fu">glimpse</span>(CaffTaps_wide)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 10
 Columns: 3
@@ -3297,27 +3309,37 @@ $ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242</code>
 </section>
 <section id="pooled-standard-deviation-estimate" class="slide level2">
 <h2>Pooled standard deviation estimate</h2>
+<div style="font-size: 90%;">
 <ul>
 <li>Sometimes we have reasons to believe that the population SD’s from the two groups are equal, such as when randomizing participants to two groups</li>
 </ul>
+</div>
 <div class="columns">
 <div class="column" style="width:50%;">
+<div style="font-size: 90%;">
 <ul>
 <li>In this case we can use a <strong>pooled SD</strong>:</li>
 </ul>
 <p><span class="math display">\[s_{pooled}^2 = \frac{s_1^2 (n_1-1) + s_2^2 (n_2-1)}{n_1 + n_2 - 2}\]</span></p>
+</div>
+</div><div style="font-size: 80%;">
 <p>where <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> are the sample sizes, and <span class="math inline">\(s_1\)</span> and <span class="math inline">\(s_2\)</span> are the sample standard deviations of the two groups</p>
+</div><div style="font-size: 90%;">
 <ul>
 <li>We use the pooled SD instead of <span class="math inline">\(s_1^2\)</span> and <span class="math inline">\(s_2^2\)</span> when calculating the standard error</li>
 </ul>
 <p><span class="math display">\[SE = \sqrt{\frac{s_{pooled}^2}{n_1} + \frac{s_{pooled}^2}{n_2}}= s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}\]</span></p>
-</div><div class="column" style="width:50%;">
+</div>
+</div>
+<div class="column" style="width:50%;">
+<div style="font-size: 90%;">
 <p><strong>Test statistic</strong> with pooled SD:</p>
 <p><span class="math display">\[t_{\bar{x}_1 - \bar{x}_2} = \frac{\bar{x}_1 - \bar{x}_2 -0}{s_{pooled}\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}\]</span></p>
 <p><strong>CI</strong> with pooled SD:</p>
 <p><span class="math display">\[(\bar{x}_1 - \bar{x}_2) \pm t^{\star} \cdot s_{pooled} \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}\]</span> * The <span class="math inline">\(t\)</span> distribution degrees of freedom are now: <span class="math display">\[df = (n_1 - 1) + (n_2 - 1) = n_1 + n_2 - 2.\]</span></p>
 </div>
 </div>
+<p>:::</p>
 </section>
 <section id="r-2-sample-t-test-with-pooled-sd" class="slide level2">
 <h2>R: 2-sample t-test with pooled SD</h2>
