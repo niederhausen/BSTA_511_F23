@@ -4633,12 +4633,10 @@ $ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242</code>
 <ul>
 <li>Power = <span class="math inline">\(P(\)</span>Reject <span class="math inline">\(H_0\)</span> when alternative pop is <span class="math inline">\(N(3,1))\)</span></li>
 <li>When <span class="math inline">\(\alpha\)</span> = 0.05, we reject <span class="math inline">\(H_0\)</span> when the test statistic z is at least 1.96</li>
-</ul>
-</div>
-</div>
-<ul>
 <li>Thus for <span class="math inline">\(X\sim N(3,1)\)</span> we need to calculate <span class="math inline">\(P(X \le -1.96) + P(X \ge 1.96)\)</span> :</li>
 </ul>
+</div>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># left tail + right tail:</span></span>
 <span id="cb19-2"><a href="#cb19-2"></a><span class="fu">pnorm</span>(<span class="sc">-</span><span class="fl">1.96</span>, <span class="at">mean=</span><span class="dv">3</span>, <span class="at">sd=</span><span class="dv">1</span>, <span class="at">lower.tail=</span><span class="cn">TRUE</span>) <span class="sc">+</span> <span class="fu">pnorm</span>(<span class="fl">1.96</span>, <span class="at">mean=</span><span class="dv">3</span>, <span class="at">sd=</span><span class="dv">1</span>, <span class="at">lower.tail=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4647,119 +4645,109 @@ $ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242</code>
 </div>
 </div>
 </div>
-<div style="font-size: 80%;">
+<div style="font-size: 70%;">
 <p>The left tail probability <code>pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)</code> is essentially 0 in this case.</p>
 </div>
-</section>
-<section id="software-for-power-and-sample-size-calculations" class="slide level2">
-<h2>Software for power and sample size calculations</h2>
+<div style="font-size: 90%;">
 <ul>
-<li>R package <code>pwr</code> for basic statistical tests
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html" class="uri">https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html</a></li>
-</ul></li>
+<li>Note that this power calculation specified the value of the SE instead of the standard deviation and sample size <span class="math inline">\(n\)</span> individually.</li>
 </ul>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">library</span>(pwr)</span>
-<span id="cb21-2"><a href="#cb21-2"></a><span class="co"># sample size for one proportion test</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a>p.out <span class="ot">&lt;-</span> <span class="fu">pwr.p.test</span>(</span>
-<span id="cb21-4"><a href="#cb21-4"></a>  <span class="at">h =</span> <span class="fu">ES.h</span>(<span class="at">p1 =</span> <span class="fl">0.36</span>, <span class="at">p2 =</span> <span class="fl">0.35</span>),</span>
-<span id="cb21-5"><a href="#cb21-5"></a>  <span class="at">sig.level =</span> <span class="fl">0.05</span>, </span>
-<span id="cb21-6"><a href="#cb21-6"></a>  <span class="at">power =</span> <span class="fl">0.80</span>, </span>
-<span id="cb21-7"><a href="#cb21-7"></a>  <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span>
-<span id="cb21-8"><a href="#cb21-8"></a>p.out</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-     proportion power calculation for binomial distribution (arcsine transformation) 
-
-              h = 0.02089854
-              n = 17971.09
-      sig.level = 0.05
-          power = 0.8
-    alternative = two.sided</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:60%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">plot</span>(p.out)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-25-1.png" width="960"></p>
-</div>
-</div>
-</div>
 </div>
 </section>
 <section id="sample-size-calculation-for-testing-one-mean" class="slide level2">
-<h2>Sample size calculation for testing one mean</h2>
+<h2><strong>Sample size</strong> calculation for testing one mean</h2>
+<div style="font-size: 90%;">
 <ul>
-<li>Recall in our body temperature example that the null <span class="math inline">\(\mu_0=98.6\)</span> and <span class="math inline">\(\bar{x}= 98.25\)</span>.</li>
-<li>The <em>p</em>-value from the hypothesis test was highly significant.</li>
-<li>How big does the sample size <span class="math inline">\(n\)</span> need to be for the <em>p</em>-value to be <em>just barely</em> significant?</li>
+<li>Recall in our body temperature example that <span class="math inline">\(\mu_0=98.6\)</span> °F and <span class="math inline">\(\bar{x}= 98.25\)</span> °F.
+<ul>
+<li>The <em>p</em>-value from the hypothesis test was highly significant (very small).</li>
+<li>What would the sample size <span class="math inline">\(n\)</span> need to be for 80% power?</li>
+</ul></li>
+<li><span style="color:green"><strong>Calculate <span class="math inline">\(n\)</span></strong></span>,
+<ul>
+<li>given <span class="math inline">\(\alpha\)</span>, power ( <span class="math inline">\(1-\beta\)</span> ), “true” alternative mean <span class="math inline">\(\mu\)</span>, and null <span class="math inline">\(\mu_0\)</span>,</li>
+<li><em>assuming</em> the test statistic is normal (instead of t-distribution):</li>
+</ul></li>
 </ul>
 <div class="columns">
-<div class="column" style="width:40%;">
-<p>Calculate <span class="math inline">\(n\)</span> when given <span class="math inline">\(\alpha\)</span>, power ( <span class="math inline">\(1-\beta\)</span> ), “true” alternative mean <span class="math inline">\(\mu\)</span>, and null <span class="math inline">\(\mu_0\)</span>, <em>assuming</em> the test statistic is normal (instead of t-distribution):</p>
+<div class="column" style="width:30%;">
 <p><span class="math display">\[n=\left(s\frac{z_{1-\alpha/2}+z_{1-\beta}}{\mu-\mu_0}\right)^2\]</span></p>
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:70%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>mu<span class="ot">=</span><span class="fl">98.25</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a>mu0<span class="ot">=</span><span class="fl">98.6</span></span>
-<span id="cb24-3"><a href="#cb24-3"></a>sd<span class="ot">=</span><span class="fl">0.73</span></span>
-<span id="cb24-4"><a href="#cb24-4"></a>alpha<span class="ot">=</span><span class="fl">0.05</span></span>
-<span id="cb24-5"><a href="#cb24-5"></a>beta<span class="ot">=</span><span class="fl">0.20</span></span>
-<span id="cb24-6"><a href="#cb24-6"></a>n<span class="ot">=</span>(sd<span class="sc">*</span>(<span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>alpha<span class="sc">/</span><span class="dv">2</span>)<span class="sc">+</span><span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>beta))<span class="sc">/</span>(mu<span class="sc">-</span>mu0))<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb24-7"><a href="#cb24-7"></a><span class="fu">ceiling</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>mu <span class="ot">&lt;-</span> <span class="fl">98.25</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>mu0 <span class="ot">&lt;-</span> <span class="fl">98.6</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a>sd <span class="ot">&lt;-</span> <span class="fl">0.73</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb21-5"><a href="#cb21-5"></a>beta <span class="ot">&lt;-</span> <span class="fl">0.20</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a>n <span class="ot">&lt;-</span> (sd<span class="sc">*</span>(<span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>alpha<span class="sc">/</span><span class="dv">2</span>) <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>beta)) <span class="sc">/</span> (mu<span class="sc">-</span>mu0))<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb21-7"><a href="#cb21-7"></a>n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 34.14423</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">ceiling</span>(n)  <span class="co"># always round UP to the next highest integer </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 35</code></pre>
 </div>
 </div>
 </div>
 </div>
-<p><em>We would only need a sample size of 35!</em> However, this is an under-estimate since we used the normal instead of t-distribution.</p>
+<p><em>We would only need a sample size of 35 for 80% power!</em><br>
+However, this is an under-estimate since we used the normal instead of t-distribution.</p>
+</div>
+<div style="font-size: 70%;">
+<p>See <a href="http://powerandsamplesize.com/Calculators/Test-1-Mean/1-Sample-Equality" class="uri">http://powerandsamplesize.com/Calculators/Test-1-Mean/1-Sample-Equality</a>.</p>
+</div>
 </section>
 <section id="power-calculation-for-testing-one-mean" class="slide level2">
-<h2>Power calculation for testing one mean</h2>
-<p>Conversely, we can calculate how much power we had in our example given the sample size of 130.</p>
+<h2><strong>Power</strong> calculation for testing one mean</h2>
+<div style="font-size: 90%;">
+<p>Conversely, we can calculate how much power we had in our body temperature one-sample test, given the sample size of 130.</p>
 <ul>
-<li>Calculate power given <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(n\)</span>, “true” alternative mean <span class="math inline">\(\mu\)</span>, and null <span class="math inline">\(\mu_0\)</span>, <em>assuming</em> the test statistic is normal (instead of t-distribution)
+<li><span style="color:green"><strong>Calculate power</strong></span>,
 <ul>
-<li>where <span class="math inline">\(\Phi\)</span> is the probability for a standard normal distribution</li>
+<li>given <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(n\)</span>, “true” alternative mean <span class="math inline">\(\mu\)</span>, and null <span class="math inline">\(\mu_0\)</span>,</li>
+<li><em>assuming</em> the test statistic is normal (instead of t-distribution)</li>
 </ul></li>
 </ul>
 <p><span class="math display">\[1-\beta=
         \Phi\left(z-z_{1-\alpha/2}\right)+\Phi\left(-z-z_{1-\alpha/2}\right)
-        \quad ,\quad z=\frac{\mu-\mu_0}{s/\sqrt{n}}\]</span></p>
-<div class="columns">
-<div class="column" style="width:60%;">
+        \quad ,\quad \text{where } z=\frac{\mu-\mu_0}{s/\sqrt{n}}\]</span></p>
+<p><span class="math inline">\(\Phi\)</span> is the probability for a standard normal distribution</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>mu<span class="ot">=</span><span class="fl">98.25</span>; mu0<span class="ot">=</span><span class="fl">98.6</span>; sd<span class="ot">=</span><span class="fl">0.73</span>; alpha<span class="ot">=</span><span class="fl">0.05</span>; n<span class="ot">=</span><span class="dv">130</span></span>
-<span id="cb26-2"><a href="#cb26-2"></a>z<span class="ot">=</span>(mu<span class="sc">-</span>mu0)<span class="sc">/</span>sd<span class="sc">*</span><span class="fu">sqrt</span>(n)</span>
-<span id="cb26-3"><a href="#cb26-3"></a>Power<span class="ot">=</span><span class="fu">pnorm</span>(z<span class="sc">-</span><span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>alpha<span class="sc">/</span><span class="dv">2</span>))<span class="sc">+</span></span>
-<span id="cb26-4"><a href="#cb26-4"></a>  <span class="fu">pnorm</span>(<span class="sc">-</span>z<span class="sc">-</span><span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>alpha<span class="sc">/</span><span class="dv">2</span>))</span>
-<span id="cb26-5"><a href="#cb26-5"></a>Power</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>mu <span class="ot">&lt;-</span> <span class="fl">98.25</span>; mu0 <span class="ot">&lt;-</span> <span class="fl">98.6</span>; sd <span class="ot">&lt;-</span> <span class="fl">0.73</span>; alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span>; n <span class="ot">&lt;-</span> <span class="dv">130</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a>(z <span class="ot">&lt;-</span> (mu<span class="sc">-</span>mu0) <span class="sc">/</span> (sd<span class="sc">/</span><span class="fu">sqrt</span>(n)) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -5.466595</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>Power <span class="ot">&lt;-</span> <span class="fu">pnorm</span>(z<span class="sc">-</span><span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>alpha<span class="sc">/</span><span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">pnorm</span>(<span class="sc">-</span>z<span class="sc">-</span><span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>alpha<span class="sc">/</span><span class="dv">2</span>))</span>
+<span id="cb27-2"><a href="#cb27-2"></a>Power</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9997731</code></pre>
 </div>
 </div>
-</div><div class="column" style="width:40%;">
 <p>If the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting <span class="math inline">\(H_0\)</span> when the sample size is 130.</p>
 </div>
-</div>
 </section>
-<section id="software-for-power-and-sample-size-calculations-1" class="slide level2">
-<h2>Software for power and sample size calculations</h2>
+<section id="software-sample-size-for-one-mean-test" class="slide level2">
+<h2>Software: <strong>sample size</strong> for one mean test</h2>
+<ul>
+<li><code>power.t.test()</code> is from base R
+<ul>
+<li><code>delta</code> is <span class="math inline">\(\mu-\mu_0\)</span></li>
+</ul></li>
+</ul>
+<p>Specify all parameters <em>except for</em> the sample size:</p>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="co"># sample size for one mean test</span></span>
-<span id="cb28-2"><a href="#cb28-2"></a>t.n <span class="ot">&lt;-</span> <span class="fu">power.t.test</span>(  <span class="co"># base R power function</span></span>
-<span id="cb28-3"><a href="#cb28-3"></a>  <span class="at">delta =</span> <span class="fl">98.6-98.25</span>, <span class="at">sd=</span><span class="fl">0.73</span>,</span>
-<span id="cb28-4"><a href="#cb28-4"></a>    <span class="at">sig.level =</span> <span class="fl">0.05</span>, </span>
-<span id="cb28-5"><a href="#cb28-5"></a>  <span class="at">power =</span> <span class="fl">0.80</span>, </span>
-<span id="cb28-6"><a href="#cb28-6"></a>  <span class="at">type =</span> <span class="st">"one.sample"</span>)</span>
-<span id="cb28-7"><a href="#cb28-7"></a>t.n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>t.n <span class="ot">&lt;-</span> <span class="fu">power.t.test</span>(</span>
+<span id="cb29-2"><a href="#cb29-2"></a>  <span class="at">delta =</span> <span class="fl">98.6-98.25</span>, </span>
+<span id="cb29-3"><a href="#cb29-3"></a>  <span class="at">sd=</span><span class="fl">0.73</span>,</span>
+<span id="cb29-4"><a href="#cb29-4"></a>  <span class="at">sig.level =</span> <span class="fl">0.05</span>, </span>
+<span id="cb29-5"><a href="#cb29-5"></a>  <span class="at">power =</span> <span class="fl">0.80</span>, </span>
+<span id="cb29-6"><a href="#cb29-6"></a>  <span class="at">type =</span> <span class="st">"one.sample"</span>)</span>
+<span id="cb29-7"><a href="#cb29-7"></a></span>
+<span id="cb29-8"><a href="#cb29-8"></a>t.n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
      One-sample t test power calculation 
@@ -4774,26 +4762,35 @@ $ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242</code>
 </div>
 </div><div class="column" style="width:60%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">plot</span>(t.n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">plot</span>(t.n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-29-1.png" width="960"></p>
+<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="software-sample-size-for-one-mean-test" class="slide level2">
-<h2>Software: sample size for one mean test</h2>
-<p>Leave out the parameter that you want to solve for ::: columns ::: {.column width=“40%”}</p>
+<section id="software-power-for-one-mean-test" class="slide level2">
+<h2>Software: <strong>power</strong> for one mean test</h2>
+<ul>
+<li><code>power.t.test()</code> is from base R
+<ul>
+<li><code>delta</code> is <span class="math inline">\(\mu-\mu_0\)</span></li>
+</ul></li>
+</ul>
+<p>Specify all parameters <em>except for</em> the power:</p>
+<div class="columns">
+<div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># power for one mean test</span></span>
-<span id="cb31-2"><a href="#cb31-2"></a>t.power <span class="ot">&lt;-</span> <span class="fu">power.t.test</span>(</span>
-<span id="cb31-3"><a href="#cb31-3"></a>  <span class="at">delta =</span> <span class="fl">98.6-98.25</span>, <span class="at">sd=</span><span class="fl">0.73</span>,</span>
-<span id="cb31-4"><a href="#cb31-4"></a>    <span class="at">sig.level =</span> <span class="fl">0.05</span>, </span>
-<span id="cb31-5"><a href="#cb31-5"></a>  <span class="co"># power = 0.80, </span></span>
-<span id="cb31-6"><a href="#cb31-6"></a>  <span class="at">n =</span> <span class="dv">130</span>,</span>
-<span id="cb31-7"><a href="#cb31-7"></a>  <span class="at">type =</span> <span class="st">"one.sample"</span>)</span>
-<span id="cb31-8"><a href="#cb31-8"></a>t.power</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>t.power <span class="ot">&lt;-</span> <span class="fu">power.t.test</span>(</span>
+<span id="cb32-2"><a href="#cb32-2"></a>  <span class="at">delta =</span> <span class="fl">98.6-98.25</span>, </span>
+<span id="cb32-3"><a href="#cb32-3"></a>  <span class="at">sd=</span><span class="fl">0.73</span>,</span>
+<span id="cb32-4"><a href="#cb32-4"></a>  <span class="at">sig.level =</span> <span class="fl">0.05</span>, </span>
+<span id="cb32-5"><a href="#cb32-5"></a>  <span class="co"># power = 0.80, </span></span>
+<span id="cb32-6"><a href="#cb32-6"></a>  <span class="at">n =</span> <span class="dv">130</span>,</span>
+<span id="cb32-7"><a href="#cb32-7"></a>  <span class="at">type =</span> <span class="st">"one.sample"</span>)</span>
+<span id="cb32-8"><a href="#cb32-8"></a></span>
+<span id="cb32-9"><a href="#cb32-9"></a>t.power</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
      One-sample t test power calculation 
@@ -4806,36 +4803,46 @@ $ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242</code>
     alternative = two.sided</code></pre>
 </div>
 </div>
-<p>:::</p>
-<div class="column" style="width:60%;">
+</div><div class="column" style="width:60%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">plot</span>(t.power)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">plot</span>(t.power)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-31-1.png" width="960"></p>
+<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-29-1.png" width="960"></p>
 </div>
 </div>
 </div>
-<p>:::</p>
+</div>
 </section>
-<section id="testing-difference-of-two-independent-means" class="slide level2">
-<h2>Testing difference of two independent means</h2>
+<section id="two-sample-t-test-sample-size" class="slide level2">
+<h2>Two-sample t-test: <strong>sample size</strong></h2>
+<p>See section 5.4.4 of text for two-sample t-test sample size and power formulas using the normal distribution.</p>
 <ul>
-<li>See section 5.4 of text for formulas ::: columns ::: {.column width=“40%”}</li>
+<li>Suppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups.</li>
+<li>Use base R’s <code>power.t.test</code>, with
+<ul>
+<li><code>delta</code> the difference in means between the two groups that one would want to be able to detect as being significant,</li>
+<li><code>sd</code> is assumed to be the same in both groups</li>
+</ul></li>
 </ul>
+<p>Specify all parameters <em>except for</em> the sample size:</p>
+<div class="columns">
+<div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>t2.n <span class="ot">&lt;-</span> <span class="fu">power.t.test</span>(</span>
-<span id="cb34-2"><a href="#cb34-2"></a>  <span class="at">delta =</span> <span class="fl">98.6-98.25</span>, <span class="at">sd=</span><span class="fl">0.73</span>,</span>
-<span id="cb34-3"><a href="#cb34-3"></a>    <span class="at">sig.level =</span> <span class="fl">0.05</span>, </span>
-<span id="cb34-4"><a href="#cb34-4"></a>  <span class="at">power =</span> <span class="fl">0.80</span>, </span>
-<span id="cb34-5"><a href="#cb34-5"></a>  <span class="at">type =</span> <span class="st">"two.sample"</span>) </span>
-<span id="cb34-6"><a href="#cb34-6"></a>t2.n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>t2.n <span class="ot">&lt;-</span> <span class="fu">power.t.test</span>(</span>
+<span id="cb35-2"><a href="#cb35-2"></a>  <span class="at">delta =</span> <span class="dv">2</span>, </span>
+<span id="cb35-3"><a href="#cb35-3"></a>  <span class="at">sd=</span><span class="fl">2.3</span>,</span>
+<span id="cb35-4"><a href="#cb35-4"></a>  <span class="at">sig.level =</span> <span class="fl">0.05</span>, </span>
+<span id="cb35-5"><a href="#cb35-5"></a>  <span class="at">power =</span> <span class="fl">0.80</span>, </span>
+<span id="cb35-6"><a href="#cb35-6"></a>  <span class="at">type =</span> <span class="st">"two.sample"</span>) </span>
+<span id="cb35-7"><a href="#cb35-7"></a></span>
+<span id="cb35-8"><a href="#cb35-8"></a>t2.n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
      Two-sample t test power calculation 
 
-              n = 69.26206
-          delta = 0.35
-             sd = 0.73
+              n = 21.7637
+          delta = 2
+             sd = 2.3
       sig.level = 0.05
           power = 0.8
     alternative = two.sided
@@ -4843,24 +4850,27 @@ $ NoCaffeine &lt;dbl&gt; 242, 245, 244, 248, 247, 248, 242, 244, 246, 242</code>
 NOTE: n is number in *each* group</code></pre>
 </div>
 </div>
-<p>::: ::: {.column width=“60%”}</p>
+</div><div class="column" style="width:60%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">plot</span>(t2.n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">plot</span>(t2.n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-31-1.png" width="960"></p>
 </div>
-<img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"><p>::: :::</p>
+</div>
+</div>
+</div>
 </section>
-<section id="software-sample-size-for-two-means-test" class="slide level2">
-<h2>Software: sample size for two means test</h2>
+<section id="two-sample-t-test-power" class="slide level2">
+<h2>Two-sample t-test: <strong>power</strong></h2>
 <p>Leave out the parameter that you want to solve for ::: columns ::: {.column width=“40%”}</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>t2.power <span class="ot">&lt;-</span> <span class="fu">power.t.test</span>(</span>
-<span id="cb37-2"><a href="#cb37-2"></a>  <span class="at">delta =</span> <span class="fl">98.6-98.25</span>, <span class="at">sd=</span><span class="fl">0.73</span>,</span>
-<span id="cb37-3"><a href="#cb37-3"></a>    <span class="at">sig.level =</span> <span class="fl">0.05</span>, </span>
-<span id="cb37-4"><a href="#cb37-4"></a>  <span class="co"># power = 0.80, </span></span>
-<span id="cb37-5"><a href="#cb37-5"></a>  <span class="at">n =</span> <span class="dv">130</span>,</span>
-<span id="cb37-6"><a href="#cb37-6"></a>  <span class="at">type =</span> <span class="st">"two.sample"</span>) </span>
-<span id="cb37-7"><a href="#cb37-7"></a>t2.power</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>t2.power <span class="ot">&lt;-</span> <span class="fu">power.t.test</span>(</span>
+<span id="cb38-2"><a href="#cb38-2"></a>  <span class="at">delta =</span> <span class="fl">98.6-98.25</span>, <span class="at">sd=</span><span class="fl">0.73</span>,</span>
+<span id="cb38-3"><a href="#cb38-3"></a>    <span class="at">sig.level =</span> <span class="fl">0.05</span>, </span>
+<span id="cb38-4"><a href="#cb38-4"></a>  <span class="co"># power = 0.80, </span></span>
+<span id="cb38-5"><a href="#cb38-5"></a>  <span class="at">n =</span> <span class="dv">130</span>,</span>
+<span id="cb38-6"><a href="#cb38-6"></a>  <span class="at">type =</span> <span class="st">"two.sample"</span>) </span>
+<span id="cb38-7"><a href="#cb38-7"></a>t2.power</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
      Two-sample t test power calculation 
@@ -4877,10 +4887,10 @@ NOTE: n is number in *each* group</code></pre>
 </div>
 <p>::: ::: {.column width=“60%”}</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">plot</span>(t2.power)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">plot</span>(t2.power)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"><p>::: :::</p>
+<img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"><p>::: :::</p>
 </section>
 <section id="more-software-for-power-and-sample-size-calculations-pass" class="slide level2">
 <h2>More software for power and sample size calculations: PASS</h2>
@@ -4915,12 +4925,12 @@ NOTE: n is number in *each* group</code></pre>
 <p>Given any 3 pieces of information, we can solve for the 4th.</p>
 </div><div class="column" style="width:60%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">power.t.test</span>(</span>
-<span id="cb40-2"><a href="#cb40-2"></a>  <span class="at">delta =</span> <span class="fl">98.6-98.25</span>, <span class="at">sd=</span><span class="fl">0.73</span>,</span>
-<span id="cb40-3"><a href="#cb40-3"></a>    <span class="at">sig.level =</span> <span class="fl">0.05</span>, </span>
-<span id="cb40-4"><a href="#cb40-4"></a>  <span class="co"># power = 0.80, </span></span>
-<span id="cb40-5"><a href="#cb40-5"></a>  <span class="at">n=</span><span class="dv">130</span>,</span>
-<span id="cb40-6"><a href="#cb40-6"></a>  <span class="at">type =</span> <span class="st">"one.sample"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">power.t.test</span>(</span>
+<span id="cb41-2"><a href="#cb41-2"></a>  <span class="at">delta =</span> <span class="fl">98.6-98.25</span>, <span class="at">sd=</span><span class="fl">0.73</span>,</span>
+<span id="cb41-3"><a href="#cb41-3"></a>    <span class="at">sig.level =</span> <span class="fl">0.05</span>, </span>
+<span id="cb41-4"><a href="#cb41-4"></a>  <span class="co"># power = 0.80, </span></span>
+<span id="cb41-5"><a href="#cb41-5"></a>  <span class="at">n=</span><span class="dv">130</span>,</span>
+<span id="cb41-6"><a href="#cb41-6"></a>  <span class="at">type =</span> <span class="st">"one.sample"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
      One-sample t test power calculation 

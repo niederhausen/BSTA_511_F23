@@ -8124,7 +8124,7 @@
     "href": "slides/Day11_bsta511.html#example-calculating-the-power",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Example calculating the power",
-    "text": "Example calculating the power\n\n\nSuppose the mean of the null population is 0 ( \\(H_0: \\mu=0\\) ) with standard error 1\nFind the power of a 2-sided test if the actual \\(\\mu=3\\), assuming the SE doesn’t change.\n\n\n\n\n\n\n\n\n\n\nPower = \\(P(\\)Reject \\(H_0\\) when alternative pop is \\(N(3,1))\\)\nWhen \\(\\alpha\\) = 0.05, we reject \\(H_0\\) when the test statistic z is at least 1.96\n\n\n\n\nThus for \\(X\\sim N(3,1)\\) we need to calculate \\(P(X \\le -1.96) + P(X \\ge 1.96)\\) :\n\n\n# left tail + right tail:\npnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) + pnorm(1.96, mean=3, sd=1, lower.tail=FALSE)\n\n[1] 0.8508304\n\n\n\n\nThe left tail probability pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) is essentially 0 in this case."
+    "text": "Example calculating the power\n\n\nSuppose the mean of the null population is 0 ( \\(H_0: \\mu=0\\) ) with standard error 1\nFind the power of a 2-sided test if the actual \\(\\mu=3\\), assuming the SE doesn’t change.\n\n\n\n\n\n\n\n\n\n\nPower = \\(P(\\)Reject \\(H_0\\) when alternative pop is \\(N(3,1))\\)\nWhen \\(\\alpha\\) = 0.05, we reject \\(H_0\\) when the test statistic z is at least 1.96\nThus for \\(X\\sim N(3,1)\\) we need to calculate \\(P(X \\le -1.96) + P(X \\ge 1.96)\\) :\n\n\n\n\n# left tail + right tail:\npnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) + pnorm(1.96, mean=3, sd=1, lower.tail=FALSE)\n\n[1] 0.8508304\n\n\n\n\nThe left tail probability pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) is essentially 0 in this case.\n\n\n\nNote that this power calculation specified the value of the SE instead of the standard deviation and sample size \\(n\\) individually."
   },
   {
     "objectID": "slides/Day11_bsta511.html#sample-size-calculation-for-testing-one-proportion",
@@ -8145,7 +8145,7 @@
     "href": "slides/Day11_bsta511.html#software-for-power-and-sample-size-calculations",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Software for power and sample size calculations",
-    "text": "Software for power and sample size calculations\n\nR package pwr for basic statistical tests\n\nhttps://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html\n\n\n\n\n\nlibrary(pwr)\n# sample size for one proportion test\np.out &lt;- pwr.p.test(\n  h = ES.h(p1 = 0.36, p2 = 0.35),\n  sig.level = 0.05, \n  power = 0.80, \n  alternative = \"two.sided\")\np.out\n\n\n     proportion power calculation for binomial distribution (arcsine transformation) \n\n              h = 0.02089854\n              n = 17971.09\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\n\n\n\nplot(p.out)"
+    "text": "Software for power and sample size calculations\n\npower.t.test() is from base R\n\nSample size calculation: specify all parameters except for the sample size.\n\n\n\n# sample size for \n# one mean test\n\nt.n &lt;- power.t.test(\n  delta = 98.6-98.25, \n  sd=0.73,\n  sig.level = 0.05, \n  power = 0.80, \n  type = \"one.sample\")\n\nt.n\n\n\n     One-sample t test power calculation \n\n              n = 36.11207\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\n\n\n\nplot(t.n)"
   },
   {
     "objectID": "slides/Day11_bsta511.html#software-power-for-one-proportion-test",
@@ -8159,14 +8159,14 @@
     "href": "slides/Day11_bsta511.html#sample-size-calculation-for-testing-one-mean",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Sample size calculation for testing one mean",
-    "text": "Sample size calculation for testing one mean\n\nRecall in our body temperature example that the null \\(\\mu_0=98.6\\) and \\(\\bar{x}= 98.25\\).\nThe p-value from the hypothesis test was highly significant.\nHow big does the sample size \\(n\\) need to be for the p-value to be just barely significant?\n\n\n\nCalculate \\(n\\) when given \\(\\alpha\\), power ( \\(1-\\beta\\) ), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\), assuming the test statistic is normal (instead of t-distribution):\n\\[n=\\left(s\\frac{z_{1-\\alpha/2}+z_{1-\\beta}}{\\mu-\\mu_0}\\right)^2\\]\n\n\nmu=98.25\nmu0=98.6\nsd=0.73\nalpha=0.05\nbeta=0.20\nn=(sd*(qnorm(1-alpha/2)+qnorm(1-beta))/(mu-mu0))^2\nceiling(n)\n\n[1] 35\n\n\n\n\nWe would only need a sample size of 35! However, this is an under-estimate since we used the normal instead of t-distribution."
+    "text": "Sample size calculation for testing one mean\n\n\nRecall in our body temperature example that \\(\\mu_0=98.6\\) °F and \\(\\bar{x}= 98.25\\) °F.\n\nThe p-value from the hypothesis test was highly significant (very small).\nWhat would the sample size \\(n\\) need to be for 80% power?\n\nCalculate \\(n\\),\n\ngiven \\(\\alpha\\), power ( \\(1-\\beta\\) ), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\),\nassuming the test statistic is normal (instead of t-distribution):\n\n\n\n\n\\[n=\\left(s\\frac{z_{1-\\alpha/2}+z_{1-\\beta}}{\\mu-\\mu_0}\\right)^2\\]\n\n\nmu &lt;- 98.25\nmu0 &lt;- 98.6\nsd &lt;- 0.73\nalpha &lt;- 0.05\nbeta &lt;- 0.20\nn &lt;- (sd*(qnorm(1-alpha/2) + qnorm(1-beta)) / (mu-mu0))^2\nn\n\n[1] 34.14423\n\nceiling(n)  # always round UP to the next highest integer \n\n[1] 35\n\n\n\n\nWe would only need a sample size of 35 for 80% power!\nHowever, this is an under-estimate since we used the normal instead of t-distribution.\n\n\nSee http://powerandsamplesize.com/Calculators/Test-1-Mean/1-Sample-Equality."
   },
   {
     "objectID": "slides/Day11_bsta511.html#power-calculation-for-testing-one-mean",
     "href": "slides/Day11_bsta511.html#power-calculation-for-testing-one-mean",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Power calculation for testing one mean",
-    "text": "Power calculation for testing one mean\nConversely, we can calculate how much power we had in our example given the sample size of 130.\n\nCalculate power given \\(\\alpha\\), \\(n\\), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\), assuming the test statistic is normal (instead of t-distribution)\n\nwhere \\(\\Phi\\) is the probability for a standard normal distribution\n\n\n\\[1-\\beta=\n        \\Phi\\left(z-z_{1-\\alpha/2}\\right)+\\Phi\\left(-z-z_{1-\\alpha/2}\\right)\n        \\quad ,\\quad z=\\frac{\\mu-\\mu_0}{s/\\sqrt{n}}\\]\n\n\n\nmu=98.25; mu0=98.6; sd=0.73; alpha=0.05; n=130\nz=(mu-mu0)/sd*sqrt(n)\nPower=pnorm(z-qnorm(1-alpha/2))+\n  pnorm(-z-qnorm(1-alpha/2))\nPower\n\n[1] 0.9997731\n\n\n\nIf the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting \\(H_0\\) when the sample size is 130."
+    "text": "Power calculation for testing one mean\n\nConversely, we can calculate how much power we had in our body temperature one-sample test, given the sample size of 130.\n\nCalculate power,\n\ngiven \\(\\alpha\\), \\(n\\), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\),\nassuming the test statistic is normal (instead of t-distribution)\n\n\n\\[1-\\beta=\n        \\Phi\\left(z-z_{1-\\alpha/2}\\right)+\\Phi\\left(-z-z_{1-\\alpha/2}\\right)\n        \\quad ,\\quad \\text{where } z=\\frac{\\mu-\\mu_0}{s/\\sqrt{n}}\\]\n\\(\\Phi\\) is the probability for a standard normal distribution\n\nmu &lt;- 98.25; mu0 &lt;- 98.6; sd &lt;- 0.73; alpha &lt;- 0.05; n &lt;- 130\n(z &lt;- (mu-mu0) / (sd/sqrt(n)) )\n\n[1] -5.466595\n\nPower &lt;- pnorm(z-qnorm(1-alpha/2)) + pnorm(-z-qnorm(1-alpha/2))\nPower\n\n[1] 0.9997731\n\n\nIf the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting \\(H_0\\) when the sample size is 130."
   },
   {
     "objectID": "slides/Day11_bsta511.html#software-for-power-and-sample-size-calculations-1",
@@ -8180,14 +8180,14 @@
     "href": "slides/Day11_bsta511.html#software-sample-size-for-one-mean-test",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Software: sample size for one mean test",
-    "text": "Software: sample size for one mean test\nLeave out the parameter that you want to solve for ::: columns ::: {.column width=“40%”}\n\n# power for one mean test\nt.power &lt;- power.t.test(\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  # power = 0.80, \n  n = 130,\n  type = \"one.sample\")\nt.power\n\n\n     One-sample t test power calculation \n\n              n = 130\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.9997354\n    alternative = two.sided\n\n\n:::\n\n\nplot(t.power)\n\n\n\n\n\n:::"
+    "text": "Software: sample size for one mean test\n\npower.t.test() is from base R\n\ndelta is \\(\\mu-\\mu_0\\)\n\n\nSpecify all parameters except for the sample size:\n\n\n\nt.n &lt;- power.t.test(\n  delta = 98.6-98.25, \n  sd=0.73,\n  sig.level = 0.05, \n  power = 0.80, \n  type = \"one.sample\")\n\nt.n\n\n\n     One-sample t test power calculation \n\n              n = 36.11207\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\n\n\n\nplot(t.n)"
   },
   {
     "objectID": "slides/Day11_bsta511.html#testing-difference-of-two-independent-means",
     "href": "slides/Day11_bsta511.html#testing-difference-of-two-independent-means",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Testing difference of two independent means",
-    "text": "Testing difference of two independent means\n\nSee section 5.4 of text for formulas ::: columns ::: {.column width=“40%”}\n\n\nt2.n &lt;- power.t.test(\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  power = 0.80, \n  type = \"two.sample\") \nt2.n\n\n\n     Two-sample t test power calculation \n\n              n = 69.26206\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n::: ::: {.column width=“60%”}\n\nplot(t2.n)\n\n\n::: :::"
+    "text": "Testing difference of two independent means\n\nSee section 5.4 of text for formulas\n\n\n\n\nt2.n &lt;- power.t.test(\n  delta = 98.6-98.25, \n  sd=0.73,\n  sig.level = 0.05, \n  power = 0.80, \n  type = \"two.sample\") \nt2.n\n\n\n     Two-sample t test power calculation \n\n              n = 69.26206\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n\n\nplot(t2.n)"
   },
   {
     "objectID": "slides/Day11_bsta511.html#software-sample-size-for-two-means-test",
@@ -8229,14 +8229,14 @@
     "href": "slides_code/Day11_bsta511_code.html",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "",
-    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) # NEW!!\nlibrary(here) # NEW!!\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
+    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) # new-ish\nlibrary(here) # new-ish\nlibrary(pwr) # NEW!!\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
   },
   {
     "objectID": "slides_code/Day11_bsta511_code.html#load-packages",
     "href": "slides_code/Day11_bsta511_code.html#load-packages",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "",
-    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) # NEW!!\nlibrary(here) # NEW!!\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
+    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) # new-ish\nlibrary(here) # new-ish\nlibrary(pwr) # NEW!!\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
   },
   {
     "objectID": "slides_code/Day11_bsta511_code.html#goals-for-today-section-5.3",
@@ -8271,14 +8271,14 @@
     "href": "slides_code/Day11_bsta511_code.html#what-distribution-does-barx_1---barx_2-have",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "What distribution does \\(\\bar{X}_1 - \\bar{X}_2\\) have?",
-    "text": "What distribution does \\(\\bar{X}_1 - \\bar{X}_2\\) have?\nLet \\(\\bar{X}_1\\) and \\(\\bar{X}_2\\) be the means of random samples from two independent groups, with parameters:\n\n\n\nGroup 1\nGroup 2\n\n\n\n\n\nsample size\n\\(n_1\\)\n\\(n_2\\)\n\n\npop mean\n\\(\\mu_1\\)\n\\(\\mu_2\\)\n\n\npop sd\n\\(\\sigma_1\\)\n\\(\\sigma_2\\)\n\n\n\nSome theoretical statistics:\n\nIf \\(\\bar{X}_1\\) and \\(\\bar{X}_2\\) are independent normal r.v.’s, then \\(\\bar{X}_1 - \\bar{X}_2\\) is also normal\nWhat is the mean of \\(\\bar{X}_1 - \\bar{X}_2\\)?\n\n\\[E[\\bar{X}_1 - \\bar{X}_2] = E[\\bar{X}_1] - E[\\bar{X}_2] = \\mu_1-\\mu_2\\]\n\nWhat is the standard deviation of \\(\\bar{X}_1 - \\bar{X}_2\\)?\n\n\\[Var(\\bar{X}_1 - \\bar{X}_2) = Var(\\bar{X}_1) + Var(\\bar{X}_2) = \\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2} \\\\\nSD(\\bar{X}_1 - \\bar{X}_2) = \\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}\\]"
+    "text": "What distribution does \\(\\bar{X}_1 - \\bar{X}_2\\) have?\nLet \\(\\bar{X}_1\\) and \\(\\bar{X}_2\\) be the means of random samples from two independent groups, with parameters:\n\n\n\n\nGroup 1\nGroup 2\n\n\n\n\nsample size\n\\(n_1\\)\n\\(n_2\\)\n\n\npop mean\n\\(\\mu_1\\)\n\\(\\mu_2\\)\n\n\npop sd\n\\(\\sigma_1\\)\n\\(\\sigma_2\\)\n\n\n\nSome theoretical statistics:\n\nIf \\(\\bar{X}_1\\) and \\(\\bar{X}_2\\) are independent normal r.v.’s, then \\(\\bar{X}_1 - \\bar{X}_2\\) is also normal\nWhat is the mean of \\(\\bar{X}_1 - \\bar{X}_2\\)?\n\n\\[E[\\bar{X}_1 - \\bar{X}_2] = E[\\bar{X}_1] - E[\\bar{X}_2] = \\mu_1-\\mu_2\\]\n\nWhat is the standard deviation of \\(\\bar{X}_1 - \\bar{X}_2\\)?\n\n\\[Var(\\bar{X}_1 - \\bar{X}_2) = Var(\\bar{X}_1) + Var(\\bar{X}_2) = \\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2} \\\\\nSD(\\bar{X}_1 - \\bar{X}_2) = \\sqrt{\\frac{\\sigma_1^2}{n_1}+\\frac{\\sigma_2^2}{n_2}}\\]"
   },
   {
     "objectID": "slides_code/Day11_bsta511_code.html#step-3-test-statistic-part-2",
     "href": "slides_code/Day11_bsta511_code.html#step-3-test-statistic-part-2",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Step 3: Test statistic (part 2)",
-    "text": "Step 3: Test statistic (part 2)\n\\[\n\\text{test statistic} = t_{\\bar{x}_1 - \\bar{x}_2} = \\frac{\\bar{x}_1 - \\bar{x}_2 - 0}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}\n\\]\n\n\\(\\bar{x}_1, \\bar{x}_2\\) are the sample means\n\\(\\mu_0=0\\) is the mean value specified in \\(H_0\\)\n\\(s_1, s_2\\) are the sample SD’s\n\\(n_1, n_2\\) are the sample sizes\nStatistical theory tells us that \\(t_{\\bar{x}_1 - \\bar{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )\n\n\nAssumptions:\n\nIndependent observations & samples\n\nThe observations were collected independently.\nIn particular, the observations from the two groups were not paired in any meaningful way.\n\nApproximately normal samples or big n’s\n\nThe distributions of the samples should be approximately normal\nor both their sample sizes should be at least 30."
+    "text": "Step 3: Test statistic (part 2)\n\\[\nt_{\\bar{x}_1 - \\bar{x}_2} = \\frac{\\bar{x}_1 - \\bar{x}_2 - 0}{\\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}}\n\\]\n\n\\(\\bar{x}_1, \\bar{x}_2\\) are the sample means\n\\(\\mu_0=0\\) is the mean value specified in \\(H_0\\)\n\\(s_1, s_2\\) are the sample SD’s\n\\(n_1, n_2\\) are the sample sizes\nStatistical theory tells us that \\(t_{\\bar{x}_1 - \\bar{x}_2}\\) follows a student’s t-distribution with\n\n\\(df \\approx\\) smaller of \\(n_1-1\\) and \\(n_2-1\\)\nthis is a conservative estimate (smaller than actual \\(df\\) )\n\n\nAssumptions:\n\nIndependent observations & samples\n\nThe observations were collected independently.\nIn particular, the observations from the two groups were not paired in any meaningful way.\n\nApproximately normal samples or big n’s\n\nThe distributions of the samples should be approximately normal\nor both their sample sizes should be at least 30."
   },
   {
     "objectID": "slides_code/Day11_bsta511_code.html#step-3-test-statistic-part-3",
@@ -8334,14 +8334,14 @@
     "href": "slides_code/Day11_bsta511_code.html#rejection-region",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Rejection region",
-    "text": "Rejection region\n.pull-left-60[ * If a test statistic is greater in absolute value than the critical value, we reject \\(H_0\\) * In this case the test statistic is in the rejection region. * Otherwise it’s in the nonrejection region.\n\nWhat do rejection regions look like for 2-sided vs. 1-sided tests?"
+    "text": "Rejection region\n\nIf the absolute value of the test statistic is greater than the critical value, we reject \\(H_0\\)\n\nIn this case the test statistic is in the rejection region.\nOtherwise it’s in the nonrejection region.\n\nWhat do rejection regions look like for 2-sided vs. 1-sided tests?"
   },
   {
     "objectID": "slides_code/Day11_bsta511_code.html#type-i-ii-errors",
     "href": "slides_code/Day11_bsta511_code.html#type-i-ii-errors",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Type I & II Errors",
-    "text": "Type I & II Errors\n\n\\(\\alpha\\) = probability of making a Type I error\n\nThis is the significance level (usually 0.05)\nShould be set before a study starts\n\n\\(\\beta\\) = probability of making a Type II error\nIdeally we want\n\nsmall Type I & II errors and\nbig power\n\n\n\n\n\n\n\nApplet for visualizing Type I & II errors and power: https://rpsychologist.com/d3/NHST/"
+    "text": "Type I & II Errors\n\n\\(\\alpha\\) = probability of making a Type I error\n\nThis is the significance level (usually 0.05)\nSet before study starts\n\n\\(\\beta\\) = probability of making a Type II error\nIdeally we want\n\nsmall Type I & II errors and\nbig power\n\n\n\n\n\n\n\nApplet for visualizing Type I & II errors and power: https://rpsychologist.com/d3/NHST/"
   },
   {
     "objectID": "slides_code/Day11_bsta511_code.html#relationship-between-type-i-ii-errors",
@@ -8355,14 +8355,14 @@
     "href": "slides_code/Day11_bsta511_code.html#relationship-between-type-ii-errors-and-power",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Relationship between Type II errors and power",
-    "text": "Relationship between Type II errors and power\n\nPower = P(correctly rejecting the null hypothesis)\nAlso called the\n\ntrue positive rate,\nprobability of detection, or\nthe sensitivity of a test\n\nPower vs. Type II error\n\nPower = 1 - P(Type II error) = 1 - \\(\\beta\\)\nThus as P(Type II error) decreases, the power increases\nP(Type II error) = \\(\\beta\\) decreases as the mean of the alternative population gets further away from the mean of the null population (effect size gets bigger).\nTypically want at least 80% power; 90% power is good"
+    "text": "Relationship between Type II errors and power\n\nPower = P(correctly rejecting the null hypothesis)\n\n\n\nAlso called the\n\ntrue positive rate,\nprobability of detection, or\nthe sensitivity of a test\n\nPower vs. Type II error\n\nPower = 1 - P(Type II error) = 1 - \\(\\beta\\)\nThus as \\(\\beta\\) = P(Type II error) decreases, the power increases\nP(Type II error) decreases as the mean of the alternative population gets further away from the mean of the null population (effect size gets bigger).\nTypically want at least 80% power; 90% power is good"
   },
   {
     "objectID": "slides_code/Day11_bsta511_code.html#software-for-power-and-sample-size-calculations",
     "href": "slides_code/Day11_bsta511_code.html#software-for-power-and-sample-size-calculations",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Software for power and sample size calculations",
-    "text": "Software for power and sample size calculations\n\nR package pwr for basic statistical tests\n\nhttps://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html\n\n\n\nlibrary(pwr)\n# sample size for one proportion test\np.out &lt;- pwr.p.test(\n  h = ES.h(p1 = 0.36, p2 = 0.35),\n  sig.level = 0.05, \n  power = 0.80, \n  alternative = \"two.sided\")\np.out\n\n\n     proportion power calculation for binomial distribution (arcsine transformation) \n\n              h = 0.02089854\n              n = 17971.09\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\n\n\nplot(p.out)\n\n\n\n\n\nPower for one proportion test\nLeave out the parameter that you want to solve for\n\n# library(pwr)\n# power for one proportion test\np.power &lt;- pwr.p.test(\n  h = ES.h(p1 = 0.36, p2 = 0.35),\n  sig.level = 0.05, \n  # power = 0.80, \n  n = 269,\n  alternative = \"two.sided\")\np.power\n\n\n     proportion power calculation for binomial distribution (arcsine transformation) \n\n              h = 0.02089854\n              n = 269\n      sig.level = 0.05\n          power = 0.06356445\n    alternative = two.sided\n\n\n\nplot(p.power)"
+    "text": "Software for power and sample size calculations\n\n# sample size for one mean test\nt.n &lt;- power.t.test(  # base R power function\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  power = 0.80, \n  type = \"one.sample\")\nt.n\n\n\n     One-sample t test power calculation \n\n              n = 36.11207\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\n\n\nplot(t.n)\n\n\n\n\n\nSample size for one mean test\nLeave out the parameter that you want to solve for\n\n# sample size for one proportion test\nt.power &lt;- power.t.test(\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  # power = 0.80, \n  n = 130,\n  type = \"one.sample\")\nt.power\n\n\n     One-sample t test power calculation \n\n              n = 130\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.9997354\n    alternative = two.sided\n\n\n\nplot(t.power)"
   },
   {
     "objectID": "slides_code/Day11_bsta511_code.html#power-calculation-for-testing-one-mean",
@@ -8405,5 +8405,33 @@
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Critical values -orinigal",
     "text": "Critical values -orinigal\n\n\n\n\nCritical values are the cutoff values that determine whether a test statistic is statistically significant or not.\n\n\n\n\n\n\n\n\n\n\nIf a test statistic is greater in absolute value than the critical value, we reject \\(H_0\\)\nCritical values are determined by\n\nthe significance level \\(\\alpha\\),\nwhether a test is 1- or 2-sided, &\nthe probability distribution being used to calculate the p-value (such as normal or t-distribution).\n\nThe critical values in the figure should look very familiar!\n\nWhere have we used these before?\n\nHow can we calculate the critical values using R?"
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#hypothesis-testing-errors",
+    "href": "slides_code/Day11_bsta511_code.html#hypothesis-testing-errors",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Hypothesis Testing “Errors”",
+    "text": "Hypothesis Testing “Errors”\nType I and Type II Errors - Making Mistakes in the Justice System\nhttp://www.intuitor.com/statistics/T1T2Errors.html"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#software-power-for-one-mean-test",
+    "href": "slides/Day11_bsta511.html#software-power-for-one-mean-test",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Software: power for one mean test",
+    "text": "Software: power for one mean test\n\npower.t.test() is from base R\n\ndelta is \\(\\mu-\\mu_0\\)\n\n\nSpecify all parameters except for the power:\n\n\n\nt.power &lt;- power.t.test(\n  delta = 98.6-98.25, \n  sd=0.73,\n  sig.level = 0.05, \n  # power = 0.80, \n  n = 130,\n  type = \"one.sample\")\n\nt.power\n\n\n     One-sample t test power calculation \n\n              n = 130\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.9997354\n    alternative = two.sided\n\n\n\n\nplot(t.power)"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#two-sample-t-test-sample-size",
+    "href": "slides/Day11_bsta511.html#two-sample-t-test-sample-size",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Two-sample t-test: sample size",
+    "text": "Two-sample t-test: sample size\nSee section 5.4.4 of text for two-sample t-test sample size and power formulas using the normal distribution.\n\nSuppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups.\nUse base R’s power.t.test, with\n\ndelta the difference in means between the two groups that one would want to be able to detect as being significant,\nsd is assumed to be the same in both groups\n\n\nSpecify all parameters except for the sample size:\n\n\n\nt2.n &lt;- power.t.test(\n  delta = 2, \n  sd=2.3,\n  sig.level = 0.05, \n  power = 0.80, \n  type = \"two.sample\") \n\nt2.n\n\n\n     Two-sample t test power calculation \n\n              n = 21.7637\n          delta = 2\n             sd = 2.3\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n\n\nplot(t2.n)"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#two-sample-t-test-power",
+    "href": "slides/Day11_bsta511.html#two-sample-t-test-power",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Two-sample t-test: power",
+    "text": "Two-sample t-test: power\nLeave out the parameter that you want to solve for ::: columns ::: {.column width=“40%”}\n\nt2.power &lt;- power.t.test(\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  # power = 0.80, \n  n = 130,\n  type = \"two.sample\") \nt2.power\n\n\n     Two-sample t test power calculation \n\n              n = 130\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.9706928\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n::: ::: {.column width=“60%”}\n\nplot(t2.power)\n\n\n::: :::"
   }
 ]

@@ -1067,11 +1067,10 @@ ggplot(NULL, aes(c(-3,7))) +
 ::: {.column width="50%"}
 * Power = $P($Reject $H_0$ when alternative pop is $N(3,1))$
 * When $\alpha$ = 0.05, we reject $H_0$ when the test statistic z is at least 1.96
-
-:::
-:::
-
 * Thus for $X\sim N(3,1)$ we need to calculate $P(X \le -1.96) + P(X \ge 1.96)$ :
+:::
+:::
+
 
 ```{r}
 # left tail + right tail:
@@ -1080,115 +1079,101 @@ pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE) + pnorm(1.96, mean=3, sd=1, lower.ta
 
 :::
 
-::: {style="font-size: 80%;"}
+::: {style="font-size: 70%;"}
 The left tail probability `pnorm(-1.96, mean=3, sd=1, lower.tail=TRUE)` is essentially 0 in this case.
 :::
 
+::: {style="font-size: 90%;"}
+* Note that this power calculation specified the value of the SE instead of the standard deviation and sample size $n$ individually.
+:::
 
-## Software for power and sample size calculations 
 
-* R package `pwr` for basic statistical tests
-    * <https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html>
+## __Sample size__ calculation for testing one mean
+
+::: {style="font-size: 90%;"}
+
+* Recall in our body temperature example that $\mu_0=98.6$ °F and $\bar{x}= 98.25$ °F. 
+    * The _p_-value from the hypothesis test was highly significant (very small).
+    * What would the sample size $n$ need to be for 80% power?
+
+* [__Calculate $n$__]{style="color:green"}, 
+    * given $\alpha$, power ( $1-\beta$ ), "true" alternative mean $\mu$, and null $\mu_0$, 
+    * _assuming_ the test statistic is normal (instead of t-distribution):
 
 ::: columns
-::: {.column width="40%"}
-
-```{r}
-library(pwr)
-# sample size for one proportion test
-p.out <- pwr.p.test(
-  h = ES.h(p1 = 0.36, p2 = 0.35),
-  sig.level = 0.05, 
-  power = 0.80, 
-  alternative = "two.sided")
-p.out
-```
-
-:::
-
-::: {.column width="60%"}
-```{r}
-#| fig.width: 10
-#| fig.height: 5
-plot(p.out)
-```
-:::
-:::
-
-
-
-## Sample size calculation for testing one mean
-
-* Recall in our body temperature example that the null $\mu_0=98.6$ and $\bar{x}= 98.25$. 
-* The _p_-value from the hypothesis test was highly significant.
-* How big does the sample size $n$ need to be for the _p_-value to be _just barely_ significant?
-
-::: columns
-::: {.column width="40%"}
-Calculate $n$ when given $\alpha$, power ( $1-\beta$ ), "true" alternative mean $\mu$, and null $\mu_0$, _assuming_ the test statistic is normal (instead of t-distribution):
+::: {.column width="30%"}
 
 $$n=\left(s\frac{z_{1-\alpha/2}+z_{1-\beta}}{\mu-\mu_0}\right)^2$$
 :::
 
-::: {.column width="60%"}
+::: {.column width="70%"}
 ```{r}
-mu=98.25
-mu0=98.6
-sd=0.73
-alpha=0.05
-beta=0.20
-n=(sd*(qnorm(1-alpha/2)+qnorm(1-beta))/(mu-mu0))^2
-ceiling(n)
+mu <- 98.25
+mu0 <- 98.6
+sd <- 0.73
+alpha <- 0.05
+beta <- 0.20
+n <- (sd*(qnorm(1-alpha/2) + qnorm(1-beta)) / (mu-mu0))^2
+n
+ceiling(n)  # always round UP to the next highest integer 
 ```
 :::
 :::
 
-_We would only need a sample size of 35!_ However, this is an under-estimate since we used the normal instead of t-distribution.
+_We would only need a sample size of 35 for 80% power!_  
+However, this is an under-estimate since we used the normal instead of t-distribution.
+:::
+
+::: {style="font-size: 70%;"}
+See <http://powerandsamplesize.com/Calculators/Test-1-Mean/1-Sample-Equality>.
+:::
 
 
+## __Power__ calculation for testing one mean
 
-## Power calculation for testing one mean
+::: {style="font-size: 90%;"}
+Conversely, we can calculate how much power we had in our body temperature one-sample test, given the sample size of 130.
 
-Conversely, we can calculate how much power we had in our example given the sample size of 130.
-
-* Calculate power given $\alpha$, $n$, "true" alternative mean $\mu$, and null $\mu_0$, _assuming_ the test statistic is normal (instead of t-distribution)
-    * where $\Phi$ is the probability for a standard normal distribution 
+* [__Calculate power__]{style="color:green"}, 
+    * given $\alpha$, $n$, "true" alternative mean $\mu$, and null $\mu_0$, 
+    * _assuming_ the test statistic is normal (instead of t-distribution)
 
 $$1-\beta=
 		\Phi\left(z-z_{1-\alpha/2}\right)+\Phi\left(-z-z_{1-\alpha/2}\right)
-		\quad ,\quad z=\frac{\mu-\mu_0}{s/\sqrt{n}}$$
+		\quad ,\quad \text{where } z=\frac{\mu-\mu_0}{s/\sqrt{n}}$$
 
-::: columns
-::: {.column width="60%"}
+$\Phi$ is the probability for a standard normal distribution 
+
 ```{r}
-mu=98.25; mu0=98.6; sd=0.73; alpha=0.05; n=130
-z=(mu-mu0)/sd*sqrt(n)
-Power=pnorm(z-qnorm(1-alpha/2))+
-  pnorm(-z-qnorm(1-alpha/2))
+mu <- 98.25; mu0 <- 98.6; sd <- 0.73; alpha <- 0.05; n <- 130
+(z <- (mu-mu0) / (sd/sqrt(n)) )
+
+Power <- pnorm(z-qnorm(1-alpha/2)) + pnorm(-z-qnorm(1-alpha/2))
 Power
 ```
-:::
 
-::: {.column width="40%"}
 If the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting $H_0$ when the sample size is 130.  
+
 :::
-:::
 
+## Software: __sample size__ for one mean test
 
- 
+* `power.t.test()` is from base R
+    * `delta` is $\mu-\mu_0$ 
 
-## Software for power and sample size calculations 
+Specify all parameters _except for_ the sample size:
 
 ::: columns
 ::: {.column width="40%"}
 
 ```{r}
-# sample size for one mean test
-t.n <- power.t.test(  # base R power function
-  delta = 98.6-98.25, sd=0.73,
-    sig.level = 0.05, 
+t.n <- power.t.test(
+  delta = 98.6-98.25, 
+  sd=0.73,
+  sig.level = 0.05, 
   power = 0.80, 
   type = "one.sample")
+
 t.n
 ```
 
@@ -1197,27 +1182,32 @@ t.n
 ::: {.column width="60%"}
 ```{r}
 #| fig.width: 10
-#| fig.height: 5
+#| fig.height: 6
 plot(t.n)
 ```
 :::
 :::
 
 
-## Software: sample size for one mean test
+## Software: __power__ for one mean test
 
-Leave out the parameter that you want to solve for
+* `power.t.test()` is from base R
+    * `delta` is $\mu-\mu_0$ 
+
+Specify all parameters _except for_ the power:
+
 ::: columns
 ::: {.column width="40%"}
 
 ```{r}
-# power for one mean test
 t.power <- power.t.test(
-  delta = 98.6-98.25, sd=0.73,
-    sig.level = 0.05, 
+  delta = 98.6-98.25, 
+  sd=0.73,
+  sig.level = 0.05, 
   # power = 0.80, 
   n = 130,
   type = "one.sample")
+
 t.power
 ```
 
@@ -1226,40 +1216,51 @@ t.power
 ::: {.column width="60%"}
 ```{r}
 #| fig.width: 10
-#| fig.height: 5
+#| fig.height: 6
 plot(t.power)
 ```
 :::
 :::
  
 
-## Testing difference of two independent means
+## Two-sample t-test: __sample size__
 
-* See section 5.4 of text for formulas
+See section 5.4.4 of text for two-sample t-test sample size and power formulas using the normal distribution. 
+
+* Suppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups. 
+* Use base R's `power.t.test`, with 
+    * `delta` the difference in means between the two groups that one would want to be able to detect as being significant,
+    * `sd` is assumed to be the same in both groups
+
+Specify all parameters _except for_ the sample size:
+
 ::: columns
 ::: {.column width="40%"}
 
 ```{r}
 t2.n <- power.t.test(
-  delta = 98.6-98.25, sd=0.73,
-    sig.level = 0.05, 
+  delta = 2, 
+  sd = 2.3,
+  sig.level = 0.05, 
   power = 0.80, 
   type = "two.sample") 
+
 t2.n
 ```
 
 :::
+
 ::: {.column width="60%"}
 ```{r}
 #| fig.width: 10
-#| fig.height: 5
+#| fig.height: 6
 plot(t2.n)
 ```
 :::
 :::
 
 
-## Software: sample size for two means test
+## Two-sample t-test: __power__
 
 Leave out the parameter that you want to solve for
 ::: columns
@@ -1267,11 +1268,13 @@ Leave out the parameter that you want to solve for
 
 ```{r}
 t2.power <- power.t.test(
-  delta = 98.6-98.25, sd=0.73,
-    sig.level = 0.05, 
+  delta = 2, 
+  sd = 2.3,
+  sig.level = 0.05, 
   # power = 0.80, 
-  n = 130,
+  n = 22,
   type = "two.sample") 
+
 t2.power
 ```
 
