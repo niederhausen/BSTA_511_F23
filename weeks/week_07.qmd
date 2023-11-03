@@ -15,51 +15,50 @@ editor_options:
 
 ## Day11 
 
-* Confidence intervals for one mean (single-sample)
-* Student's t-distribution
+* Inference for difference in means from two independent sample (2-sample t-test)
+* Power and sample size calcualtions
 
 ### Slides
 
 * [html](../slides/Day11_bsta511.qmd)
-* [pdf](https://drive.google.com/file/d/1JTvblZDbEDiS3loc1BeM7QJaxz7dgpQl/view?usp=sharing)
-* Slides with [notes](https://drive.google.com/file/d/1JVa-L-Er4vKVEy0q_NbDvR8kYqzL14ww/view?usp=sharing)
-* [webpage](../slides_md/Day11_bsta511_md.qmd)
+
+<!-- * [pdf]() -->
+<!-- * Slides with [notes]() -->
+<!-- * [webpage](../slides_md/Day11_bsta511_md.qmd) -->
+
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day11_bsta511_code.qmd), [html](../slides_code/Day11_bsta511_code.qmd)
+
+### Datasets
+
+All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F23/tree/main/data)
+
+* [CaffeineTaps.csv](/data/CaffeineTaps.csv)
 
 
 ### Class discussion
 
 [Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
 
-* 
+* TBD
 
 
 ## Day12    
 
-### Part 1
-
-* Hypothesis testing for one mean (single-sample)
-* CIs vs. hypothesis tests
-* R projects, `here::here()`, and loading data into R from a file
-* Running a `t.test` in R 
-
+* Inference for proportions
+    * CIs vs. hypothesis tests
+    * One proportion from one sample
+    * Difference in proportions from two independent samples
 
 ### Slides
 
-* [html](../slides/Day12_part1_bsta511.qmd)
-* [pdf](https://drive.google.com/file/d/1JZRggNRHAWanOV_48OY4hFGBnCeQx_7O/view?usp=sharing)
-* Slides with [notes](https://drive.google.com/file/d/1JhV-qVNFXV6Lcfy1RUUTSju1EhsyTW3O/view?usp=sharing)
-* [webpage](../slides_md/Day12_part1_bsta511_md.qmd)
-* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day12_part1_bsta511_code.qmd), [html](../slides_code/Day12_part1_bsta511_code.qmd)
-* [Projects in RStudio](../resources/Projects_in_R.html)
+<!-- * [html](../slides/Day12_part1_bsta511.qmd) -->
+<!-- * [pdf]() -->
+<!-- * Slides with [notes]() -->
+<!-- * [webpage](../slides_md/Day12_part1_bsta511_md.qmd) -->
+<!-- * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day12_part1_bsta511_code.qmd), [html](../slides_code/Day12_part1_bsta511_code.qmd) -->
 
 
-### Datasets
 
-All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F23/tree/main/data)
-
-* [BodyTemperatures.csv](/data/BodyTemperatures.csv)
-* [chol213.csv](/data/chol213.csv)
 
 ### Class discussion
 

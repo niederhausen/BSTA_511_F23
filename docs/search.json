@@ -7844,21 +7844,21 @@
     "href": "weeks/week_07.html",
     "title": "Week 7",
     "section": "",
-    "text": "Confidence intervals for one mean (single-sample)\nStudent’s t-distribution\n\n\n\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nClass discussion Google doc link"
+    "text": "Inference for difference in means from two independent sample (2-sample t-test)\nPower and sample size calcualtions\n\n\n\n\nhtml\n\n\n\n\n\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nCaffeineTaps.csv\n\n\n\n\nClass discussion Google doc link\n\nTBD"
   },
   {
     "objectID": "weeks/week_07.html#day11",
     "href": "weeks/week_07.html#day11",
     "title": "Week 7",
     "section": "",
-    "text": "Confidence intervals for one mean (single-sample)\nStudent’s t-distribution\n\n\n\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nClass discussion Google doc link"
+    "text": "Inference for difference in means from two independent sample (2-sample t-test)\nPower and sample size calcualtions\n\n\n\n\nhtml\n\n\n\n\n\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nCaffeineTaps.csv\n\n\n\n\nClass discussion Google doc link\n\nTBD"
   },
   {
     "objectID": "weeks/week_07.html#day12",
     "href": "weeks/week_07.html#day12",
     "title": "Week 7",
     "section": "Day12",
-    "text": "Day12\n\nPart 1\n\nHypothesis testing for one mean (single-sample)\nCIs vs. hypothesis tests\nR projects, here::here(), and loading data into R from a file\nRunning a t.test in R\n\n\n\nSlides\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\nProjects in RStudio\n\n\n\nDatasets\nAll datasets can be found on GitHub\n\nBodyTemperatures.csv\nchol213.csv\n\n\n\nClass discussion\nClass discussion Google doc link"
+    "text": "Day12\n\nInference for proportions\n\nCIs vs. hypothesis tests\nOne proportion from one sample\nDifference in proportions from two independent samples\n\n\n\nSlides\n\n\n\n\n\n\n\nClass discussion\nClass discussion Google doc link"
   },
   {
     "objectID": "weeks/week_07.html#homework",
@@ -8054,7 +8054,7 @@
     "href": "slides/Day11_bsta511.html#moritzs-tip-of-the-day",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "MoRitz’s tip of the day",
-    "text": "MoRitz’s tip of the day\nAdd tabbed sections to your html file using {.tabset}.\n\n\n\n\nhtml output"
+    "text": "MoRitz’s tip of the day\nAdd tabbed sections to your html file using tabset.\n\nFirst tabSecond tabRead up on tabsets\n\n\n\nYou can make subsections appear as different tabs in your html file.\nThis is the first tab.\nIt was created by adding ::: panel-tabset right above the subsection ### First tab (see the code file).\nLook up to the right of where it says “First tab,” and you will see a second tab with the creative name “Second tab.”\nIf you are viewing the html output of this file, you can click on the different tabs to see what’s in them.\nTo stop new tabs from being created, close off the original ::: panel-tabset command with ::: at the end.\n\nIn the source code file, you will see the ::: at the end of the ### Read up on tabsets tab.\n\n\n\n\n\nWelcome to the second tab!\n\n\n\n\n\n\n\n\n\nYou can read up more about creating tabs at\n\nhttps://quarto.org/docs/interactive/layout.html#tabset-panel\n\n\n\nIf you are reading the source code file, the next line contains :::, which closes the tabsets."
   },
   {
     "objectID": "slides/Day11_bsta511.html#where-are-we-2",
@@ -8369,7 +8369,7 @@
     "href": "slides_code/Day11_bsta511_code.html#power-calculation-for-testing-one-mean",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Power calculation for testing one mean",
-    "text": "Power calculation for testing one mean\nConversely, we can calculate how much power we had in our example given the sample size of 130.\n\nCalculate power given \\(\\alpha\\), \\(n\\), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\), assuming the test statistic is normal (instead of t-distribution)\n\nwhere \\(\\Phi\\) is the probability for a standard normal distribution\n\n\n\\[1-\\beta=\n        \\Phi\\left(z-z_{1-\\alpha/2}\\right)+\\Phi\\left(-z-z_{1-\\alpha/2}\\right)\n        \\quad ,\\quad z=\\frac{\\mu-\\mu_0}{s/\\sqrt{n}}\\]\n\nmu=98.25; mu0=98.6; sd=0.73; alpha=0.05; n=130\nz=(mu-mu0)/sd*sqrt(n)\nPower=pnorm(z-qnorm(1-alpha/2))+\n  pnorm(-z-qnorm(1-alpha/2))\nPower\n\n[1] 0.9997731\n\n\nIf the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting \\(H_0\\) when the sample size is 130.\nWe would say this was over powered."
+    "text": "Power calculation for testing one mean\nConversely, we can calculate how much power we had in our example given the sample size of 130.\n\nCalculate power given \\(\\alpha\\), \\(n\\), “true” alternative mean \\(\\mu\\), and null \\(\\mu_0\\), assuming the test statistic is normal (instead of t-distribution)\n\nwhere \\(\\Phi\\) is the probability for a standard normal distribution\n\n\n\\[1-\\beta=\n        \\Phi\\left(z-z_{1-\\alpha/2}\\right)+\\Phi\\left(-z-z_{1-\\alpha/2}\\right)\n        \\quad ,\\quad z=\\frac{\\mu-\\mu_0}{s/\\sqrt{n}}\\]\n\nmu &lt;- 98.25; mu0 &lt;- 98.6; sd &lt;- 0.73; alpha &lt;- 0.05; n &lt;- 130\n(z &lt;- (mu-mu0) / (sd/sqrt(n)) )\n\n[1] -5.466595\n\nPower &lt;- pnorm(z-qnorm(1-alpha/2)) + pnorm(-z-qnorm(1-alpha/2))\nPower\n\n[1] 0.9997731\n\n\nIf the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting \\(H_0\\) when the sample size is 130.\nWe would say this was over powered."
   },
   {
     "objectID": "slides_code/Day11_bsta511_code.html#software-for-power-and-sample-size-calculations-1",
@@ -8425,13 +8425,48 @@
     "href": "slides/Day11_bsta511.html#two-sample-t-test-sample-size",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Two-sample t-test: sample size",
-    "text": "Two-sample t-test: sample size\nSee section 5.4.4 of text for two-sample t-test sample size and power formulas using the normal distribution.\n\nSuppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups.\nUse base R’s power.t.test, with\n\ndelta the difference in means between the two groups that one would want to be able to detect as being significant,\nsd is assumed to be the same in both groups\n\n\nSpecify all parameters except for the sample size:\n\n\n\nt2.n &lt;- power.t.test(\n  delta = 2, \n  sd=2.3,\n  sig.level = 0.05, \n  power = 0.80, \n  type = \"two.sample\") \n\nt2.n\n\n\n     Two-sample t test power calculation \n\n              n = 21.7637\n          delta = 2\n             sd = 2.3\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n\n\nplot(t2.n)"
+    "text": "Two-sample t-test: sample size\nSee section 5.4.4 of text for two-sample t-test sample size and power formulas using the normal distribution.\n\nSuppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups.\nUse base R’s power.t.test, with\n\ndelta the difference in means between the two groups that one would want to be able to detect as being significant,\nsd is assumed to be the same in both groups\n\n\nSpecify all parameters except for the sample size:\n\n\n\nt2.n &lt;- power.t.test(\n  delta = 2, \n  sd = 2.3,\n  sig.level = 0.05, \n  power = 0.80, \n  type = \"two.sample\") \n\nt2.n\n\n\n     Two-sample t test power calculation \n\n              n = 21.7637\n          delta = 2\n             sd = 2.3\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n\n\nplot(t2.n)"
   },
   {
     "objectID": "slides/Day11_bsta511.html#two-sample-t-test-power",
     "href": "slides/Day11_bsta511.html#two-sample-t-test-power",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Two-sample t-test: power",
-    "text": "Two-sample t-test: power\nLeave out the parameter that you want to solve for ::: columns ::: {.column width=“40%”}\n\nt2.power &lt;- power.t.test(\n  delta = 98.6-98.25, sd=0.73,\n    sig.level = 0.05, \n  # power = 0.80, \n  n = 130,\n  type = \"two.sample\") \nt2.power\n\n\n     Two-sample t test power calculation \n\n              n = 130\n          delta = 0.35\n             sd = 0.73\n      sig.level = 0.05\n          power = 0.9706928\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n::: ::: {.column width=“60%”}\n\nplot(t2.power)\n\n\n::: :::"
+    "text": "Two-sample t-test: power\nLeave out the parameter that you want to solve for ::: columns ::: {.column width=“40%”}\n\nt2.power &lt;- power.t.test(\n  delta = 2, \n  sd = 2.3,\n  sig.level = 0.05, \n  # power = 0.80, \n  n = 22,\n  type = \"two.sample\") \n\nt2.power\n\n\n     Two-sample t test power calculation \n\n              n = 22\n          delta = 2\n             sd = 2.3\n      sig.level = 0.05\n          power = 0.804428\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n::: ::: {.column width=“60%”}\n\nplot(t2.power)\n\n\n::: :::"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#example-tab",
+    "href": "slides/Day11_bsta511.html#example-tab",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Example tab",
+    "text": "Example tab\n\nYou can make subsections appear as different tabs in your html file.\nThis is the first tab.\nIt was created by adding {.tabset} to the end of the section header before where the tabs begin (see the code file).\nLook up to the right of where it says “Example tab,” and you will see a second tab with the creative name “Another tab.”"
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#another-tab",
+    "href": "slides/Day11_bsta511.html#another-tab",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Another tab",
+    "text": "Another tab\n\nThis is the second tab\nTo end the tabset, start a new section header at the upper level the tabset was created at (first level in this example).\nIf the new section header is empty (as below in the code file, # {-}), then the next subsection continues with the same numbering where the tabs left off at."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html#read-up-on-tabsets-1",
+    "href": "slides/Day11_bsta511.html#read-up-on-tabsets-1",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "Read up on tabsets",
+    "text": "Read up on tabsets\n\nYou can read up more about creating tabs at\n\nhttps://bookdown.org/yihui/rmarkdown-cookbook/html-tabs.html\nor https://bookdown.org/yihui/rmarkdown/html-document.html#tabbed-sections/."
+  },
+  {
+    "objectID": "slides_code/Day11_bsta511_code.html#moritzs-tip-of-the-day",
+    "href": "slides_code/Day11_bsta511_code.html#moritzs-tip-of-the-day",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "MoRitz’s tip of the day",
+    "text": "MoRitz’s tip of the day\nAdd tabbed sections to your html file using tabset.\n\nFirst tabSecond tabRead up on tabsets\n\n\n\nYou can make subsections appear as different tabs in your html file.\nThis is the first tab.\nIt was created by adding ::: panel-tabset right above the subsection ### First tab (see the code file).\nLook up to the right of where it says “First tab,” and you will see a second tab with the creative name “Second tab.”\nIf you are viewing the html output of this file, you can click on the different tabs to see what’s in them.\nTo stop new tabs from being created, close off the original ::: panel-tabset command with ::: at the end.\n\nIn the code file, you will see the ::: at the end of the ### Read up on tabsets tab.\n\n\n\n\n\nWelcome to the second tab!\n\n\n\n\n\n\n\n\n\nYou can read up more about creating tabs at\n\nhttps://quarto.org/docs/interactive/layout.html#tabset-panel\n\n\n\nIf you are reading the source code file, the next line contains :::, which closes the tabsets."
+  },
+  {
+    "objectID": "slides/Day11_bsta511.html",
+    "href": "slides/Day11_bsta511.html",
+    "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
+    "section": "",
+    "text": "Add tabbed sections to your html file using tabset.\n\nFirst tabSecond tabRead up on tabsets\n\n\n\nYou can make subsections appear as different tabs in your html file.\nThis is the first tab.\nIt was created by adding ::: panel-tabset right above the subsection ### First tab (see the code file).\nLook up to the right of where it says “First tab,” and you will see a second tab with the creative name “Second tab.”\nIf you are viewing the html output of this file, you can click on the different tabs to see what’s in them.\nTo stop new tabs from being created, close off the original ::: panel-tabset command with ::: at the end.\n\nIn the code file, you will see the ::: at the end of the ### Read up on tabsets tab.\n\n\n\n\n\nWelcome to the second tab!\n\n\n\n\n\n\n\n\n\nYou can read up more about creating tabs at\n\nhttps://quarto.org/docs/interactive/layout.html#tabset-panel\n\n\n\nIf you are reading the code file, the next line contains :::, which closes the tabsets."
   }
 ]

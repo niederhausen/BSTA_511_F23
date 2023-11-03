@@ -50,11 +50,40 @@ library(pwr) # NEW!!
 
 
 
+## MoRitz's tip of the day
+
+Add tabbed sections to your html file using `tabset`.
+
+::: panel-tabset
+
+### First tab
+
+* You can make subsections appear as different tabs in your html file.
+* This is the first tab.
+* It was created by adding `::: panel-tabset` right above the subsection `### First tab` ([see the code file]{style="color:green"}). 
+* Look up to the right of where it says "First tab," and you will see a second tab with the creative name "Second tab."
+* If you are viewing the html output of this file, you can click on the different tabs to see what's in them.
+* To stop new tabs from being created, close off the original `::: panel-tabset` command with `:::` at the end.
+    * In the code file, you will see the `:::` at the end of the `### Read up on tabsets` tab.
 
 
-# MoRitz's tip of the day: Code folding!
+### Second tab
 
-See the new option `code_folding: show` in the yaml above (in the .Rmd file).
+* Welcome to the second tab! 
+
+![](/img_slides/mimi_normal_IMG_4244.png){fig-align="center"}
+
+### Read up on tabsets
+
+* You can read up more about creating tabs at
+  * <https://quarto.org/docs/interactive/layout.html#tabset-panel>
+
+```{=html}
+<iframe width="800" height="300" src="https://quarto.org/docs/interactive/layout.html#tabset-panel" title="Webpage example"></iframe>
+```
+
+If you are reading the source code file, the next line contains `:::`, which closes the tabsets. 
+:::
 
 
 # Where are we?
