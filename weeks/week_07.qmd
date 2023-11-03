@@ -16,17 +16,26 @@ editor_options:
 ## Day11 
 
 * Inference for difference in means from two independent sample (2-sample t-test)
-* Power and sample size calcualtions
+* Power and sample size calculations
 
 ### Slides
 
-* [html](../slides/Day11_bsta511.qmd)
+* [html](../slides/Day11_bsta511.qmd) 
+    * Draft version
+        * Slides 1-26 on two-sample inference for difference in means are done
+            * Videos (parts 1 & 2) are posted
+        * Slides 27-45 on power and sample size still need some tweaking, but the material is mainly there. 
+            * Video (part 3) will be posted early Saturday
+* [pdf](https://drive.google.com/file/d/1JurHC3FjbKZ-k5TkDHr9qh7VryCwi3SY/view?usp=sharing)
+    * Draft version (see html for details)
+* Slides with [notes](https://drive.google.com/file/d/1cOxfjLuZ5NwU-_zxzQHnJxz0ZCryuCSC/view?usp=sharing)
+    * Draft: currently only includes two-sample inference (video parts 1 & 2)
 
-<!-- * [pdf]() -->
-<!-- * Slides with [notes]() -->
 <!-- * [webpage](../slides_md/Day11_bsta511_md.qmd) -->
 
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day11_bsta511_code.qmd), [html](../slides_code/Day11_bsta511_code.qmd)
+    * Draft version (see html for details)
+
 
 ### Datasets
 
@@ -39,7 +48,7 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 
 [Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
 
-* TBD
+* TBD - will be posted early Saturday morning
 
 
 ## Day12    
@@ -49,7 +58,7 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
     * One proportion from one sample
     * Difference in proportions from two independent samples
 
-### Slides
+### Slides - coming soon!
 
 <!-- * [html](../slides/Day12_part1_bsta511.qmd) -->
 <!-- * [pdf]() -->
@@ -69,6 +78,7 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 ## Homework
 
 * [HW 6](../homework/HW_6_F23_bsta511.qmd) due on Sat, 11/11
+    * Coming soon!
     * Covers Days 11-12
 
 

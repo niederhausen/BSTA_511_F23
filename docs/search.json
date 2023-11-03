@@ -7844,28 +7844,28 @@
     "href": "weeks/week_07.html",
     "title": "Week 7",
     "section": "",
-    "text": "Inference for difference in means from two independent sample (2-sample t-test)\nPower and sample size calcualtions\n\n\n\n\nhtml\n\n\n\n\n\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nCaffeineTaps.csv\n\n\n\n\nClass discussion Google doc link\n\nTBD"
+    "text": "Inference for difference in means from two independent sample (2-sample t-test)\nPower and sample size calculations\n\n\n\n\nhtml\n\nDraft version\n\nSlides 1-26 on two-sample inference for difference in means are done\n\nVideos (parts 1 & 2) are posted\n\nSlides 27-45 on power and sample size still need some tweaking, but the material is mainly there.\n\nVideo (part 3) will be posted early Saturday\n\n\n\npdf\n\nDraft version (see html for details)\n\nSlides with notes\n\nDraft: currently only includes two-sample inference (video parts 1 & 2)\n\n\n\n\nCode file: qmd, html\n\nDraft version (see html for details)\n\n\n\n\n\nAll datasets can be found on GitHub\n\nCaffeineTaps.csv\n\n\n\n\nClass discussion Google doc link\n\nTBD - will be posted early Saturday morning"
   },
   {
     "objectID": "weeks/week_07.html#day11",
     "href": "weeks/week_07.html#day11",
     "title": "Week 7",
     "section": "",
-    "text": "Inference for difference in means from two independent sample (2-sample t-test)\nPower and sample size calcualtions\n\n\n\n\nhtml\n\n\n\n\n\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nCaffeineTaps.csv\n\n\n\n\nClass discussion Google doc link\n\nTBD"
+    "text": "Inference for difference in means from two independent sample (2-sample t-test)\nPower and sample size calculations\n\n\n\n\nhtml\n\nDraft version\n\nSlides 1-26 on two-sample inference for difference in means are done\n\nVideos (parts 1 & 2) are posted\n\nSlides 27-45 on power and sample size still need some tweaking, but the material is mainly there.\n\nVideo (part 3) will be posted early Saturday\n\n\n\npdf\n\nDraft version (see html for details)\n\nSlides with notes\n\nDraft: currently only includes two-sample inference (video parts 1 & 2)\n\n\n\n\nCode file: qmd, html\n\nDraft version (see html for details)\n\n\n\n\n\nAll datasets can be found on GitHub\n\nCaffeineTaps.csv\n\n\n\n\nClass discussion Google doc link\n\nTBD - will be posted early Saturday morning"
   },
   {
     "objectID": "weeks/week_07.html#day12",
     "href": "weeks/week_07.html#day12",
     "title": "Week 7",
     "section": "Day12",
-    "text": "Day12\n\nInference for proportions\n\nCIs vs. hypothesis tests\nOne proportion from one sample\nDifference in proportions from two independent samples\n\n\n\nSlides\n\n\n\n\n\n\n\nClass discussion\nClass discussion Google doc link"
+    "text": "Day12\n\nInference for proportions\n\nCIs vs. hypothesis tests\nOne proportion from one sample\nDifference in proportions from two independent samples\n\n\n\nSlides - coming soon!\n\n\n\n\n\n\n\nClass discussion\nClass discussion Google doc link"
   },
   {
     "objectID": "weeks/week_07.html#homework",
     "href": "weeks/week_07.html#homework",
     "title": "Week 7",
     "section": "Homework",
-    "text": "Homework\n\nHW 6 due on Sat, 11/11\n\nCovers Days 11-12"
+    "text": "Homework\n\nHW 6 due on Sat, 11/11\n\nComing soon!\nCovers Days 11-12"
   },
   {
     "objectID": "weeks/week_07.html#recordings",
@@ -8432,7 +8432,7 @@
     "href": "slides/Day11_bsta511.html#two-sample-t-test-power",
     "title": "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)",
     "section": "Two-sample t-test: power",
-    "text": "Two-sample t-test: power\nLeave out the parameter that you want to solve for ::: columns ::: {.column width=“40%”}\n\nt2.power &lt;- power.t.test(\n  delta = 2, \n  sd = 2.3,\n  sig.level = 0.05, \n  # power = 0.80, \n  n = 22,\n  type = \"two.sample\") \n\nt2.power\n\n\n     Two-sample t test power calculation \n\n              n = 22\n          delta = 2\n             sd = 2.3\n      sig.level = 0.05\n          power = 0.804428\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n::: ::: {.column width=“60%”}\n\nplot(t2.power)\n\n\n::: :::"
+    "text": "Two-sample t-test: power\nLeave out the parameter that you want to solve for\n\n\n\nt2.power &lt;- power.t.test(\n  delta = 2, \n  sd = 2.3,\n  sig.level = 0.05, \n  # power = 0.80, \n  n = 22,\n  type = \"two.sample\") \n\nt2.power\n\n\n     Two-sample t test power calculation \n\n              n = 22\n          delta = 2\n             sd = 2.3\n      sig.level = 0.05\n          power = 0.804428\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\n\n\nplot(t2.power)"
   },
   {
     "objectID": "slides/Day11_bsta511.html#example-tab",

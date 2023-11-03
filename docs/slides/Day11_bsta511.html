@@ -4879,7 +4879,9 @@ NOTE: n is number in *each* group</code></pre>
 </section>
 <section id="two-sample-t-test-power" class="slide level2">
 <h2>Two-sample t-test: <strong>power</strong></h2>
-<p>Leave out the parameter that you want to solve for ::: columns ::: {.column width=“40%”}</p>
+<p>Leave out the parameter that you want to solve for</p>
+<div class="columns">
+<div class="column" style="width:40%;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>t2.power <span class="ot">&lt;-</span> <span class="fu">power.t.test</span>(</span>
 <span id="cb38-2"><a href="#cb38-2"></a>  <span class="at">delta =</span> <span class="dv">2</span>, </span>
@@ -4904,12 +4906,15 @@ NOTE: n is number in *each* group</code></pre>
 NOTE: n is number in *each* group</code></pre>
 </div>
 </div>
-<p>::: ::: {.column width=“60%”}</p>
+</div><div class="column" style="width:60%;">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">plot</span>(t2.power)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<div class="cell-output-display">
+<p><img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
 </div>
-<img data-src="Day11_bsta511_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"><p>::: :::</p>
+</div>
+</div>
+</div>
 </section>
 <section id="more-software-for-power-and-sample-size-calculations-pass" class="slide level2">
 <h2>More software for power and sample size calculations: PASS</h2>

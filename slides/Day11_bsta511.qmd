@@ -1264,6 +1264,7 @@ plot(t2.n)
 ## Two-sample t-test: __power__
 
 Leave out the parameter that you want to solve for
+
 ::: columns
 ::: {.column width="40%"}
 
