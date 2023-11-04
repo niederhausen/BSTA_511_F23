@@ -21,14 +21,11 @@ editor_options:
 ### Slides
 
 * [html](../slides/Day11_bsta511.qmd) 
-    * Final version of slides posted 
-    * Video parts 1 & 2 posted; part 3 on power will be posted Saturday aftenroon
-* [pdf](https://drive.google.com/file/d/1JxY80AIWcVMPf9TTsNwGK9msGzLVaSvy/view?usp=sharing) - Final version
+    * final version & all videos posted
+* [pdf](https://drive.google.com/file/d/1JxY80AIWcVMPf9TTsNwGK9msGzLVaSvy/view?usp=sharing)
 * Slides with [notes](https://drive.google.com/file/d/1cOxfjLuZ5NwU-_zxzQHnJxz0ZCryuCSC/view?usp=sharing)
-    * Draft: currently only includes two-sample inference (video parts 1 & 2)
-
-<!-- * [webpage](../slides_md/Day11_bsta511_md.qmd) -->
-
+    * No extra notes for part 3
+* [webpage](../slides_md/Day11_bsta511_md.qmd)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day11_bsta511_code.qmd), [html](../slides_code/Day11_bsta511_code.qmd)
 
 
