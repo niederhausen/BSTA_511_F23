@@ -1,5 +1,5 @@
 ---
-title: "DRAFT: Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)"
+title: "Day 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)"
 subtitle: "BSTA 511/611"
 author: "Meike Niederhausen, PhD"
 institute: "OHSU-PSU School of Public Health"
@@ -800,23 +800,6 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
     * plus notes
 
 
-## Steps in a Hypothesis Test
-
-1. Set the __[level of significance]{style="color:darkorange"}__ $\alpha$
-
-1. Specify the __[null]{style="color:darkorange"}__ ( $H_0$ ) and __[alternative]{style="color:darkorange"}__ ( $H_A$ ) __[hypotheses]{style="color:darkorange"}__
-    1. In symbols
-    1. In words
-    1. Alternative: one- or two-sided?
-
-1. Calculate the __[test statistic]{style="color:darkorange"}__. 
-
-1. Calculate the __[p-value]{style="color:darkorange"}__ based on the observed test statistic and its sampling distribution
-
-1. Write a __[conclusion]{style="color:darkorange"}__ to the hypothesis test
-    1. Do we reject or fail to reject $H_0$?
-    1. Write a conclusion in the context of the problem
-
 
 ## Critical values 
 
@@ -1027,7 +1010,7 @@ From the applet at <https://rpsychologist.com/d3/NHST/>
 
 
 
-## Example calculating the power
+## Example calculating power
 
 ::: {style="font-size: 90%;"}
 
@@ -1068,7 +1051,7 @@ ggplot(NULL, aes(c(-3,7))) +
 ::: {.column width="50%"}
 * Power = $P($Reject $H_0$ when alternative pop is $N(3,1))$
 * When $\alpha$ = 0.05, we reject $H_0$ when the test statistic z is at least 1.96
-* Thus for $X\sim N(3,1)$ we need to calculate $P(X \le -1.96) + P(X \ge 1.96)$ :
+* Thus for $X\sim N(3,1)$ we need to calculate $P(X \le -1.96) + P(X \ge 1.96)$:
 :::
 :::
 
@@ -1157,10 +1140,67 @@ If the population mean is 98.2 instead of 98.6, we have a 99.98% chance of corre
 
 :::
 
-## Software: __sample size__ for one mean test
 
-* `power.t.test()` is from base R
-    * `delta` is $\mu-\mu_0$ 
+## R package `pwr` for power analyses
+
+::: {style="font-size: 90%;"}
+
+* Use `pwr.t.test` for both one- and two-sample t-tests.  
+* Specify all parameters _except for_ the one being solved for.
+
+`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
+`type = c("two.sample", "one.sample", "paired"),`  
+`alternative = c("two.sided", "less", "greater"))`
+
+`d` is __Cohen's d__ effect size: small = 0.2, medium = 0.5, large = 0.8
+
+::: columns
+::: {.column width="49%"}
+One-sample test (or paired t-test):
+:::
+::: {.column width="2%"}
+:::
+::: {.column width="49%"}
+
+$$d = \frac{\mu-\mu_0}{s}$$ 
+
+:::
+:::
+
+::: columns
+::: {.column width="49%"}
+Two-sample test (independent):
+:::
+::: {.column width="2%"}
+:::
+::: {.column width="49%"}
+
+$$d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$$
+
+:::
+:::
+
+:::
+
+::: {style="font-size: 80%;"}
+* $\bar{x}_1 - \bar{x}_2$ is the difference in means between the two groups that one would want to be able to detect as being significant,
+* $s_{pooled}$ is the pooled SD between the two groups - often assume have same sd in each group
+
+
+* R package `pwr` for basic statistical tests
+    * <https://cran.r-project.org/web/packages/pwr/vignettes/pwr-vignette.html>
+:::
+
+
+## `pwr`: __sample size__ for one mean test 
+
+::: {style="font-size: 80%;"}
+`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
+`type = c("two.sample", "one.sample", "paired"),` 
+`alternative = c("two.sided", "less", "greater"))`
+:::
+
+* `d` is __Cohen's d__ effect size: $d = \frac{\mu-\mu_0}{s}$ 
 
 Specify all parameters _except for_ the sample size:
 
@@ -1168,9 +1208,9 @@ Specify all parameters _except for_ the sample size:
 ::: {.column width="40%"}
 
 ```{r}
-t.n <- power.t.test(
-  delta = 98.6-98.25, 
-  sd=0.73,
+library(pwr)
+t.n <- pwr.t.test(
+  d = (98.6-98.25)/0.73, 
   sig.level = 0.05, 
   power = 0.80, 
   type = "one.sample")
@@ -1182,18 +1222,23 @@ t.n
 
 ::: {.column width="60%"}
 ```{r}
-#| fig.width: 10
-#| fig.height: 6
+#| fig.width: 8
+#| fig.height: 5
 plot(t.n)
 ```
 :::
 :::
 
 
-## Software: __power__ for one mean test
+## `pwr`: __power__ for one mean test 
 
-* `power.t.test()` is from base R
-    * `delta` is $\mu-\mu_0$ 
+::: {style="font-size: 80%;"}
+`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
+`type = c("two.sample", "one.sample", "paired"),` 
+`alternative = c("two.sided", "less", "greater"))`
+:::
+
+* `d` is __Cohen's d__ effect size: $d = \frac{\mu-\mu_0}{s}$ 
 
 Specify all parameters _except for_ the power:
 
@@ -1201,9 +1246,8 @@ Specify all parameters _except for_ the power:
 ::: {.column width="40%"}
 
 ```{r}
-t.power <- power.t.test(
-  delta = 98.6-98.25, 
-  sd=0.73,
+t.power <- pwr.t.test(
+  d = (98.6-98.25)/0.73, 
   sig.level = 0.05, 
   # power = 0.80, 
   n = 130,
@@ -1224,24 +1268,31 @@ plot(t.power)
 :::
  
 
-## Two-sample t-test: __sample size__
+## `pwr`: Two-sample t-test: __sample size__
 
-See section 5.4.4 of text for two-sample t-test sample size and power formulas using the normal distribution. 
+::: {style="font-size: 70%;"}
+`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
+`type = c("two.sample", "one.sample", "paired"),` 
+`alternative = c("two.sided", "less", "greater"))`
+:::
 
-* Suppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups. 
-* Use base R's `power.t.test`, with 
-    * `delta` the difference in means between the two groups that one would want to be able to detect as being significant,
-    * `sd` is assumed to be the same in both groups
+::: {style="font-size: 85%;"}
+
+* `d` is __Cohen's d__ effect size: $d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$
+
+__Example__: Suppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups. Assume the SD in both groups is 2.3. 
 
 Specify all parameters _except for_ the sample size:
+:::
+
+::: {style="font-size: 90%;"}
 
 ::: columns
 ::: {.column width="40%"}
 
 ```{r}
-t2.n <- power.t.test(
-  delta = 2, 
-  sd = 2.3,
+t2.n <- pwr.t.test(
+  d = 2/2.3, 
   sig.level = 0.05, 
   power = 0.80, 
   type = "two.sample") 
@@ -1254,24 +1305,39 @@ t2.n
 ::: {.column width="60%"}
 ```{r}
 #| fig.width: 10
-#| fig.height: 6
+#| fig.height: 5
 plot(t2.n)
 ```
 :::
 :::
 
+:::
 
-## Two-sample t-test: __power__
+## `pwr`: Two-sample t-test: __power__
 
-Leave out the parameter that you want to solve for
+::: {style="font-size: 70%;"}
+`pwr.t.test(n = NULL, d = NULL, sig.level = 0.05, power = NULL,`   
+`type = c("two.sample", "one.sample", "paired"),` 
+`alternative = c("two.sided", "less", "greater"))`
+:::
+
+::: {style="font-size: 85%;"}
+
+* `d` is __Cohen's d__ effect size: $d = \frac{\bar{x}_1 - \bar{x}_2}{s_{pooled}}$
+
+__Example__: Suppose the data collected for the caffeine taps study were pilot day for a larger study. Investigators want to know what sample size they would need to detect a 2 point difference between the two groups. Assume the SD in both groups is 2.3. 
+
+Specify all parameters _except for_ the power:
+:::
+
+::: {style="font-size: 90%;"}
 
 ::: columns
 ::: {.column width="40%"}
 
 ```{r}
-t2.power <- power.t.test(
-  delta = 2, 
-  sd = 2.3,
+t2.power <- pwr.t.test(
+  d = 2/2.3, 
   sig.level = 0.05, 
   # power = 0.80, 
   n = 22,
@@ -1281,6 +1347,7 @@ t2.power
 ```
 
 :::
+
 ::: {.column width="60%"}
 ```{r}
 #| fig.width: 10
@@ -1290,17 +1357,7 @@ plot(t2.power)
 :::
 :::
 
-
-## More software for power and sample size calculations: PASS 
-
-* PASS is a very powerful (& expensive) software that does power and sample size calculations for many advanced statistical modeling techniques.
-    * Even if you don't have access to PASS, their [documentation](https://www.ncss.com/software/pass/pass-documentation/) is very good and free online.
-    * Documentation includes formulas and references.
-    * PASS documentation for [one proportion tests](https://www.ncss.com/software/pass/pass-documentation/#Proportions), which includes more advanced formulas.
-    * PASS documentation for [one mean tests](https://www.ncss.com/software/pass/pass-documentation/#Means)
-
-
-https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/PASS/One-Sample_T-Tests.pdf
+:::
 
 ## What information do we need for a power (or sample size) calculation?
 
@@ -1320,9 +1377,9 @@ Given any 3 pieces of information, we can solve for the 4th.
 
 ::: {.column width="60%"}
 ```{r}
-power.t.test(
-  delta = 98.6-98.25, sd=0.73,
-    sig.level = 0.05, 
+pwr.t.test(
+  d = (98.6-98.25)/0.73,
+  sig.level = 0.05, 
   # power = 0.80, 
   n=130,
   type = "one.sample")
@@ -1331,22 +1388,40 @@ power.t.test(
 :::
 
 
+## More software for power and sample size calculations: PASS 
+
+* PASS is a very powerful (& expensive) software that does power and sample size calculations for many advanced statistical modeling techniques.
+    * Even if you don't have access to PASS, their [documentation](https://www.ncss.com/software/pass/pass-documentation/) is very good and free online.
+    * Documentation includes formulas and references.
+    * PASS documentation for powering [means](https://www.ncss.com/software/pass/pass-documentation/#Means)
+        * One mean, paired means, two independent means
+
+* One-sample t-test documentation:
+<https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/PASS/One-Sample_T-Tests.pdf>
+
+
 ## OCTRI-BERD power & sample size presentations
 
+::: {style="font-size: 90%;"}
 
 * __Power and Sample Size 101__
-  * Presented by Meike Niederhausen; Feb 4, 2021
-  * Slides: http://bit.ly/PSS-101
-  * [Recording](https://echo360.org/lesson/604d5c35-465d-415e-b62f-f57f9c2d5780/classroom)
+  * Presented by Meike Niederhausen; April 13, 2023
+  * Slides: <http://bit.ly/PSS101-BERD-April2023>
+  * [Recording](https://echo360.org/media/10f37fa6-7196-4525-bd64-6b9fcca60ac0/public)
 
 * __Power and Sample Size for Clinical Trials: An Introduction__
   * Presented by Yiyi Chen; Feb 18, 2021
   * Slides: http://bit.ly/PSS-ClinicalTrials
   * [Recording](https://echo360.org/lesson/9a21deb8-258d-4305-bdc9-7effdc35e719/classroom)
 
-
 * __Planning a Study with Power and Sample Size Considerations in Mind__
   * Presented by David Yanez; May 29, 2019
   * [Slides](https://www.ohsu.edu/sites/default/files/2019-12/PowerAndSampleSize_29MAY2019.pdf)
   * [Recording](https://echo360.org/lesson/44c9a3e9-b8ec-4042-84d8-4758cc779a1f/classroom)
 
+* __Power and Sample Size Simulations in R__
+  * Presented by Robin Baudier; Sept 21, 2023
+  * [Slides](https://www.slideshare.net/ssuser84c78e/octri-pss-simulations-in-r-seminarpdf)
+  * [Recording](https://echo360.org/media/12e6e603-13f9-4b50-bf76-787185acdfce/public)
+
+:::

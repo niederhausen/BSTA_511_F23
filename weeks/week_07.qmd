@@ -21,20 +21,15 @@ editor_options:
 ### Slides
 
 * [html](../slides/Day11_bsta511.qmd) 
-    * Draft version
-        * Slides 1-26 on two-sample inference for difference in means are done
-            * Videos (parts 1 & 2) are posted
-        * Slides 27-45 on power and sample size still need some tweaking, but the material is mainly there. 
-            * Video (part 3) will be posted early Saturday
-* [pdf](https://drive.google.com/file/d/1JurHC3FjbKZ-k5TkDHr9qh7VryCwi3SY/view?usp=sharing)
-    * Draft version (see html for details)
+    * Final version of slides posted 
+    * Video parts 1 & 2 posted; part 3 on power will be posted Saturday aftenroon
+* [pdf](https://drive.google.com/file/d/1JxY80AIWcVMPf9TTsNwGK9msGzLVaSvy/view?usp=sharing) - Final version
 * Slides with [notes](https://drive.google.com/file/d/1cOxfjLuZ5NwU-_zxzQHnJxz0ZCryuCSC/view?usp=sharing)
     * Draft: currently only includes two-sample inference (video parts 1 & 2)
 
 <!-- * [webpage](../slides_md/Day11_bsta511_md.qmd) -->
 
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day11_bsta511_code.qmd), [html](../slides_code/Day11_bsta511_code.qmd)
-    * Draft version (see html for details)
 
 
 ### Datasets
