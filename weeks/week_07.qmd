@@ -18,6 +18,11 @@ editor_options:
 * Inference for difference in means from two independent sample (2-sample t-test)
 * Power and sample size calculations
 
+:::{.callout-note}
+Day 11 is the last day of new material for Exam 2, which will cover the material from Days 7-11.
+:::
+
+
 ### Slides
 
 * [html](../slides/Day11_bsta511.qmd) 
@@ -40,7 +45,12 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 
 [Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
 
-* TBD - will be posted early Saturday morning
+_Questions are all from HW 6_
+
+* Book 5.26 a-b (HW includes part (c) as well)
+* R1: DDS expenditures by ethnicity
+* PSS1: Power & sample size T/F questions
+* PSS2: Power & sample size calculations
 
 
 ## Day12    
@@ -70,7 +80,6 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 ## Homework
 
 * [HW 6](../homework/HW_6_F23_bsta511.qmd) due on Sat, 11/11
-    * Coming soon!
     * Covers Days 11-12
 
 
