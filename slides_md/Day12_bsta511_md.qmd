@@ -561,7 +561,7 @@ n*(1-ph)
 <br>
 
 * Each $\hat{p}$ can be approximated by a normal distribution, for "big enough" $n$
-* Since the difference of independent normal random variables is also independent, it follows that for "big enough" $n_1$ and $n_2$ 
+* Since the difference of independent normal random variables is also normal, it follows that for "big enough" $n_1$ and $n_2$ 
 
 $$\hat{p}_1 - \hat{p}_2 \sim N \Big(\mu_{\hat{p}_1 - \hat{p}_2} = p_1 - p_2, ~~
 \sigma_{\hat{p}_1 - \hat{p}_2} =
@@ -940,7 +940,7 @@ We are 95% confident that the difference in (population) proportions of young ma
 
 <br>
 
-2. The number of successes and expected failures is at least 10 _for each group_.
+2. The number of successes and failures is at least 10 _for each group_.
     * $n_1\hat{p}_1 \ge 10, \ \ n_1(1-\hat{p}_1) \ge 10$
     * $n_2\hat{p}_2 \ge 10, \ \ n_2(1-\hat{p}_2) \ge 10$
 
