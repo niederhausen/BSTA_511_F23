@@ -66,7 +66,7 @@ _Questions are all from HW 6_
 * [pdf](https://drive.google.com/file/d/1JzVBZQMGhakUXcncpbVNKjrUu0bHG6vS/view?usp=sharing)
 * Currently part 1 only - Slides with [notes](https://drive.google.com/file/d/1K1Fiil_kxFZczRvTM9I8R5A7VjNzO5C9/view?usp=sharing)
 * [webpage](../slides_md/Day12_bsta511_md.qmd)
-* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day12_part1_bsta511_code.qmd), [html](../slides_code/Day12_bsta511_code.qmd) 
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day12_bsta511_code.qmd), [html](../slides_code/Day12_bsta511_code.qmd) 
 
 
 
