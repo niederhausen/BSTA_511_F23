@@ -1,5 +1,5 @@
 ---
-title: "DRAFT: Day 12: Inference for a single proportion or difference of two (independent) proportions (Sections 8.1-8.2)"
+title: "Day 12: Inference for a single proportion or difference of two (independent) proportions (Sections 8.1-8.2)"
 subtitle: "BSTA 511/611"
 author: "Meike Niederhausen, PhD"
 institute: "OHSU-PSU School of Public Health"
@@ -53,7 +53,37 @@ theme_set(theme_bw(base_size = 22))
 
 ```
 
-## MoRitz's tip of the day
+## MoRitz's tip of the day: [code folding]{style="color:darkorange"}
+
+::: {style="font-size: 90%;"}
+::: columns
+
+::: {.column width="45%"}
+
+* With code folding we can hide or show the code in the html output by clicking on the `Code` buttons in the html file.
+* Note the `</> Code` button on the top right of the html output.
+
+![](/img_slides/code_folding_html_chunk_show_quarto_511.png){fig-align="center" width=60%}
+![](/img_slides/code_folding_html_chunk_hide_quarto_511.png){fig-align="center" width=60%}
+
+:::
+
+
+::: {.column width="55%"}
+![](/img_slides/code_folding_yaml_quarto_511.png){fig-align="center"}
+
+
+![](/img_slides/code_folding_html_header_quarto_511.png){fig-align="center"}
+
+:::
+:::
+
+:::
+
+::: {style="font-size: 70%;"}
+See more information at <https://quarto.org/docs/output-formats/html-code.html#folding-code>
+
+:::
 
 
 ## Where are we? 
@@ -1470,3 +1500,23 @@ plot(p2.n2)
 ```
 :::
 :::
+
+
+
+## Where are we?
+
+::: {style="font-size: 85%;"}
+CI's and hypothesis tests for different scenarios:
+
+$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
+
+Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
+--|--|--|--|--|--|--
+10 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$
+10 | 5.2 | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff | $\bar{x}_{d}$  | **$\frac{s_d}{\sqrt{n}}$**
+11 | 5.3 | [Diff in pop <br> means]{style="color:black"} | [$\mu_1-\mu_2$]{style="color:black"} | [Diff in sample <br> means]{style="color:black"} | [$\bar{x}_1 - \bar{x}_2$]{style="color:black"}  | [**$\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ or pooled**]{style="color:black"}
+12 | 8.1 | [Pop proportion]{style="color:green"} | [$p$]{style="color:green"} | [Sample prop]{style="color:green"} | [$\widehat{p}$]{style="color:green"}  | [$\sqrt{\frac{p(1-p)}{n}}$]{style="color:red"}
+12 | 8.2 | [Diff in pop <br> proportions]{style="color:green"} | [$p_1-p_2$]{style="color:green"} | [Diff in sample <br> proportions]{style="color:green"} | [$\widehat{p}_1-\widehat{p}_2$]{style="color:green"} | [$\sqrt{\frac{p_1\cdot(1-p_1)}{n_1} + \frac{p_2\cdot(1-p_2)}{n_2}}$]{style="color:red"}
+
+:::
+

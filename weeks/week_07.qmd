@@ -60,15 +60,13 @@ _Questions are all from HW 6_
     * One proportion from one sample
     * Difference in proportions from two independent samples
 
-### Slides - coming soon!
+### Slides
 
-* (draft) [html](../slides/Day12_part1_bsta511.qmd) 
-
-<!-- * [pdf]() -->
-<!-- * Slides with [notes]() -->
-<!-- * [webpage](../slides_md/Day12_part1_bsta511_md.qmd) -->
-
-* (draft) Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day12_part1_bsta511_code.qmd), [html](../slides_code/Day12_part1_bsta511_code.qmd) 
+* [html](../slides/Day12_bsta511.qmd) 
+* [pdf](https://drive.google.com/file/d/1JzVBZQMGhakUXcncpbVNKjrUu0bHG6vS/view?usp=sharing)
+* Coming soon - Slides with [notes]()
+* [webpage](../slides_md/Day12_bsta511_md.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day12_part1_bsta511_code.qmd), [html](../slides_code/Day12_bsta511_code.qmd) 
 
 
 
