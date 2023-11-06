@@ -86,13 +86,6 @@ See more information at <https://quarto.org/docs/output-formats/html-code.html#f
 :::
 
 
-## Where are we? 
-
-<br>
-<br>
-
-![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
-
 
 ## Where are we?
 
