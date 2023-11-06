@@ -251,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ci-for-population-proportion" id="toc-ci-for-population-proportion" class="nav-link" data-scroll-target="#ci-for-population-proportion">95% CI for population proportion</a></li>
   <li><a href="#conditions-for-one-proportion-test-vs.-ci" id="toc-conditions-for-one-proportion-test-vs.-ci" class="nav-link" data-scroll-target="#conditions-for-one-proportion-test-vs.-ci">Conditions for one proportion: test vs.&nbsp;CI</a></li>
   </ul></li>
-  <li><a href="#two-independent-proportions-inference" id="toc-two-independent-proportions-inference" class="nav-link" data-scroll-target="#two-independent-proportions-inference">Two (independent) proportions inference</a>
+  <li><a href="#inference-for-difference-of-two-independent-proportions-hatp_1-hatp_2" id="toc-inference-for-difference-of-two-independent-proportions-hatp_1-hatp_2" class="nav-link" data-scroll-target="#inference-for-difference-of-two-independent-proportions-hatp_1-hatp_2">Inference for difference of two independent proportions <span class="math inline">\(\hat{p}_1-\hat{p}_2\)</span></a>
   <ul class="collapse">
   <li><a href="#sampling-distribution-of-hatp_1-hatp_2" id="toc-sampling-distribution-of-hatp_1-hatp_2" class="nav-link" data-scroll-target="#sampling-distribution-of-hatp_1-hatp_2">Sampling distribution of <span class="math inline">\(\hat{p}_1-\hat{p}_2\)</span></a></li>
   <li><a href="#step-3-test-statistic-12" id="toc-step-3-test-statistic-12" class="nav-link" data-scroll-target="#step-3-test-statistic-12">Step 3: Test statistic (1/2)</a></li>
@@ -262,8 +262,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ci-for-population-difference-in-proportions" id="toc-ci-for-population-difference-in-proportions" class="nav-link" data-scroll-target="#ci-for-population-difference-in-proportions">95% CI for population difference in proportions</a></li>
   <li><a href="#conditions-for-difference-in-proportions-test-vs.-ci" id="toc-conditions-for-difference-in-proportions-test-vs.-ci" class="nav-link" data-scroll-target="#conditions-for-difference-in-proportions-test-vs.-ci">Conditions for difference in proportions: test vs.&nbsp;CI</a></li>
   </ul></li>
-  <li><a href="#r-1-sample-proportion-test-13" id="toc-r-1-sample-proportion-test-13" class="nav-link" data-scroll-target="#r-1-sample-proportion-test-13">R: 1-sample proportion test (1/3)</a>
+  <li><a href="#and-2-sample-proportions-tests-in-r" id="toc-and-2-sample-proportions-tests-in-r" class="nav-link" data-scroll-target="#and-2-sample-proportions-tests-in-r">1- and 2-sample proportions tests in R</a>
   <ul class="collapse">
+  <li><a href="#r-1-sample-proportion-test-13" id="toc-r-1-sample-proportion-test-13" class="nav-link" data-scroll-target="#r-1-sample-proportion-test-13">R: 1-sample proportion test (1/3)</a></li>
   <li><a href="#r-1-sample-proportion-test-23" id="toc-r-1-sample-proportion-test-23" class="nav-link" data-scroll-target="#r-1-sample-proportion-test-23">R: 1-sample proportion test (2/3)</a></li>
   <li><a href="#r-1-sample-proportion-test-with-vs.-without-cc-33" id="toc-r-1-sample-proportion-test-with-vs.-without-cc-33" class="nav-link" data-scroll-target="#r-1-sample-proportion-test-with-vs.-without-cc-33">R: 1-sample proportion test: with vs.&nbsp;without CC (3/3)</a></li>
   </ul></li>
@@ -346,9 +347,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="where-are-we" class="level1">
-<h1>Where are we?</h1>
-<p><span class="math display">\[point~estimate \pm z^*(or~t^*)\cdot SE,~~~~~~~~test~stat = \frac{point~estimate-null~value}{SE}\]</span></p>
+<section id="where-are-we" class="level2">
+<h2 class="anchored" data-anchor-id="where-are-we">Where are we?</h2>
+<p>CI’s and hypothesis tests for different scenarios:</p>
+<p><span class="math display">\[\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}\]</span></p>
 <table class="table">
 <colgroup>
 <col style="width: 14%">
@@ -372,55 +374,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td>11-12</td>
+<td>10</td>
 <td>5.1</td>
 <td>Pop mean</td>
-<td><span class="math inline">\(p\)</span></td>
+<td><span class="math inline">\(\mu\)</span></td>
 <td>Sample mean</td>
 <td><span class="math inline">\(\bar{x}\)</span></td>
 <td><span class="math inline">\(\frac{s}{\sqrt{n}}\)</span></td>
 </tr>
 <tr class="even">
-<td>13</td>
+<td>10</td>
 <td>5.2</td>
-<td>Diff in paired <br> pop means</td>
-<td><span class="math inline">\(p_d\)</span> or <span class="math inline">\(\delta\)</span></td>
-<td>Diff in paired <br> sample means</td>
+<td>Pop mean of paired diff</td>
+<td><span class="math inline">\(\mu_d\)</span> or <span class="math inline">\(\delta\)</span></td>
+<td>Sample mean of paired diff</td>
 <td><span class="math inline">\(\bar{x}_{d}\)</span></td>
-<td><span class="math inline">\(\frac{s_d}{\sqrt{n}}\)</span></td>
+<td><strong><span class="math inline">\(\frac{s_d}{\sqrt{n}}\)</span></strong></td>
 </tr>
 <tr class="odd">
-<td>14</td>
+<td>11</td>
 <td>5.3</td>
-<td>Diff in pop <br> means</td>
-<td><span class="math inline">\(p_1-p_2\)</span></td>
-<td>Diff in sample <br> means</td>
-<td><span class="math inline">\(\bar{x}_1 - \bar{x}_2\)</span></td>
-<td><span class="math inline">\(\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\)</span> or pooled</td>
+<td><span style="color:black">Diff in pop <br> means</span></td>
+<td><span style="color:black"><span class="math inline">\(\mu_1-\mu_2\)</span></span></td>
+<td><span style="color:black">Diff in sample <br> means</span></td>
+<td><span style="color:black"><span class="math inline">\(\bar{x}_1 - \bar{x}_2\)</span></span></td>
+<td><span style="color:black"><strong><span class="math inline">\(\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\)</span> or pooled</strong></span></td>
 </tr>
 <tr class="even">
-<td><span style="color:darkorange">15</span></td>
-<td><span style="color:darkorange">8.1</span></td>
-<td><span style="color:darkorange">Pop proportion</span></td>
-<td><span class="math inline">\(p\)</span></td>
-<td><span style="color:darkorange">Sample prop</span></td>
-<td><span class="math inline">\(\hat{p}\)</span></td>
-<td></td>
+<td>12</td>
+<td>8.1</td>
+<td><span style="color:green">Pop proportion</span></td>
+<td><span style="color:green"><span class="math inline">\(p\)</span></span></td>
+<td><span style="color:green">Sample prop</span></td>
+<td><span style="color:green"><span class="math inline">\(\widehat{p}\)</span></span></td>
+<td><span style="color:red"><strong>???</strong></span></td>
 </tr>
 <tr class="odd">
-<td><span style="color:darkorange">15</span></td>
-<td><span style="color:darkorange">8.2</span></td>
-<td><span style="color:darkorange">Diff in pop <br> proportions</span></td>
-<td><span class="math inline">\(p_1-p_2\)</span></td>
-<td><span style="color:darkorange">Diff in sample <br> proportions</span></td>
-<td><span class="math inline">\(\hat{p}_1-\hat{p}_2\)</span></td>
-<td></td>
+<td>12</td>
+<td>8.2</td>
+<td><span style="color:green">Diff in pop <br> proportions</span></td>
+<td><span style="color:green"><span class="math inline">\(p_1-p_2\)</span></span></td>
+<td><span style="color:green">Diff in sample <br> proportions</span></td>
+<td><span style="color:green"><span class="math inline">\(\widehat{p}_1-\widehat{p}_2\)</span></span></td>
+<td><span style="color:red"><strong>???</strong></span></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="goals-for-today-sections-8.1-8.2" class="level1">
-<h1>Goals for today (Sections 8.1-8.2)</h1>
+<section id="goals-for-today-sections-8.1-8.2" class="level2">
+<h2 class="anchored" data-anchor-id="goals-for-today-sections-8.1-8.2">Goals for today (Sections 8.1-8.2)</h2>
 <ul>
 <li>Statistical inference for a single proportion or the difference of two (independent) proportions
 <ol type="1">
@@ -430,7 +432,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Hypothesis test</p></li>
 <li><p>Confidence Interval</p></li>
 <li><p>How are the SE’s different for a hypothesis test &amp; CI?</p></li>
-<li><p>Run test in R</p></li>
+<li><p>How to run proportions tests in R</p></li>
+<li><p>Power &amp; sample size for proportions tests (extra material)</p></li>
 </ol></li>
 </ul>
 </section>
@@ -449,8 +452,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>There were 214 men in the sample of noncollege young males (36% participated in sports betting in the previous year).</li>
 <li>Compare the difference in proportions between the college and noncollege young males.
 <ul>
-<li>CI</li>
-<li>Hypothesis test</li>
+<li>CI &amp; Hypothesis test</li>
 </ul></li>
 </ul>
 <p>Barnes GM, Welte JW, Hoffman JH, Tidwell MC. <a href="https://www.tandfonline.com/doi/full/10.1080/07448480903540499?journalCode=vach20">Comparisons of gambling and alcohol use among college students and noncollege young people in the United States</a>. J Am Coll Health. 2010 Mar-Apr;58(5):443-52. doi: 10.1080/07448480903540499. PMID: 20304756; PMCID: PMC4104810.</p>
@@ -482,15 +484,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><span class="math inline">\(H_0\)</span>: The population proportion of young male college students that participated in sports betting in the previous year is 0.36.</p></li>
 <li><p><span class="math inline">\(H_A\)</span>: The population proportion of young male college students that participated in sports betting in the previous year is not 0.36.</p></li>
 </ul>
-<p><span class="math display">\[~~~~H_0: p = 0.36\\
-H_A: p \neq 0.36\]</span></p>
+<p><span class="math display">\[\begin{align}
+H_0:&amp; p = 0.36\\
+H_A:&amp; p \neq 0.36\\
+\end{align}\]</span></p>
 <p><strong>Two samples test</strong></p>
 <ul>
 <li><p><span class="math inline">\(H_0\)</span>: The difference in population proportions of young male college and noncollege students that participated in sports betting in the previous year is 0.</p></li>
 <li><p><span class="math inline">\(H_A\)</span>: The difference in population proportions of young male college and noncollege students that participated in sports betting in the previous year is not 0.</p></li>
 </ul>
-<p><span class="math display">\[~~~~H_0: p_{coll} - p_{noncoll} = 0\\
-H_A: p_{coll} - p_{noncoll} \neq 0\]</span></p>
+<p><span class="math display">\[\begin{align}
+H_0:&amp; p_{coll} - p_{noncoll} = 0\\
+H_A:&amp; p_{coll} - p_{noncoll} \neq 0\\
+\end{align}\]</span></p>
 </section>
 <section id="one-proportion-inference" class="level1">
 <h1>One proportion inference</h1>
@@ -498,33 +504,57 @@ H_A: p_{coll} - p_{noncoll} \neq 0\]</span></p>
 <h2 class="anchored" data-anchor-id="sampling-distribution-of-hatp">Sampling distribution of <span class="math inline">\(\hat{p}\)</span></h2>
 <ul>
 <li><span class="math inline">\(\hat{p}=\frac{X}{n}\)</span> where <span class="math inline">\(X\)</span> is the number of “successes” and <span class="math inline">\(n\)</span> is the sample size.</li>
-<li>Thus, <span class="math inline">\(X \sim Bin(n,p)\)</span>, where <span class="math inline">\(p\)</span> is the population proportion.</li>
+<li><span class="math inline">\(X \sim Bin(n,p)\)</span>, where <span class="math inline">\(p\)</span> is the population proportion.</li>
 <li>For <span class="math inline">\(n\)</span> “big enough”, the normal distribution can be used to approximate a binomial distribution:</li>
 </ul>
-<p><span class="math display">\[Bin(n,p) \rightarrow N\Big(\mu = np, \sigma = \sqrt{np(1-p)} \Big)\]</span> * Since <span class="math inline">\(\hat{p}=\frac{X}{n}\)</span> is a linear transformation of <span class="math inline">\(X\)</span>, we have for large n:</p>
+<p><span class="math display">\[Bin(n,p) \rightarrow N\Big(\mu = np, \sigma = \sqrt{np(1-p)} \Big)\]</span></p>
+<ul>
+<li>Since <span class="math inline">\(\hat{p}=\frac{X}{n}\)</span> is a linear transformation of <span class="math inline">\(X\)</span>, we have for large n:</li>
+</ul>
 <p><span class="math display">\[\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)\]</span></p>
 <ul>
-<li>How we apply this result to CI’s and test statistics is different!!!</li>
+<li><span style="color:purple"><em>How we apply this result to CI’s and test statistics is different!!!</em></span></li>
 </ul>
 </section>
 <section id="step-3-test-statistic" class="level2">
 <h2 class="anchored" data-anchor-id="step-3-test-statistic">Step 3: Test statistic</h2>
-<p>Sampling distribution of <span class="math inline">\(\hat{p}\)</span> <span class="math display">\[\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)\]</span> If we assume <span class="math inline">\(H_0: p=p_0\)</span> is true, then</p>
-<p><span class="math display">\[\hat{p} \sim N\Big(
+<p>Sampling distribution of <span class="math inline">\(\hat{p}\)</span> if we assume <span class="math inline">\(H_0: p=p_0\)</span> is true:</p>
+<p><span class="math display">\[\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)
+\sim N\Big(
 \mu_{\hat{p}}=p_0, \sigma_{\hat{p}}=\sqrt{\frac{p_0\cdot(1-p_0)}{n}}
 \Big)\]</span></p>
-<p>General test statistic:</p>
+<p>Test statistic for a one sample proportion test:</p>
 <p><span class="math display">\[
-\text{test statistic} = \frac{point~estimate - null~value}{SE}
-\]</span></p>
-<p>For a one sample proportion test:</p>
-<p><span class="math display">\[
-\text{test statistic} = z_{\hat{p}} = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}}
+\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}
+= z_{\hat{p}} = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}}
 \]</span></p>
 <hr>
 <p><strong>Example:</strong> A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.<br>
-What is the test statistic when testing <span class="math inline">\(H_0: p=0.36\)</span> vs.&nbsp; <span class="math inline">\(H_A: p \neq 0.36\)</span>?</p>
-<p><span class="math display">\[z_{\hat{p}} = \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}}\]</span></p>
+<br> What is the test statistic when testing <span class="math inline">\(H_0: p=0.36\)</span> vs.&nbsp; <span class="math inline">\(H_A: p \neq 0.36\)</span>?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>p0 <span class="ot">&lt;-</span> <span class="fl">0.36</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">269</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>n<span class="sc">*</span>.<span class="dv">35</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 94.15</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>(ph <span class="ot">&lt;-</span> <span class="dv">94</span><span class="sc">/</span>n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3494424</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>(SEp <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(p0<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p0)<span class="sc">/</span>n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.02926612</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>(zp <span class="ot">&lt;-</span> (ph<span class="sc">-</span>p0)<span class="sc">/</span>SEp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.3607455</code></pre>
+</div>
+</div>
+<p><span class="math display">\[\begin{align}
+z_{\hat{p}} &amp;= \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}} \\
+&amp; -0.3607455
+\end{align}\]</span></p>
 </section>
 <section id="step-3b-conditions-satisfied" class="level2">
 <h2 class="anchored" data-anchor-id="step-3b-conditions-satisfied">Step “3b”: Conditions satisfied?</h2>
@@ -539,9 +569,10 @@ What is the test statistic when testing <span class="math inline">\(H_0: p=0.36\
 <li><span class="math inline">\(n_1 p_0 \ge 10, \ \ n_1(1-p_0)\ge 10\)</span></li>
 </ul></li>
 </ol>
+<hr>
 <p><strong>Example:</strong> A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.<br>
-Testing <span class="math inline">\(H_0: p=0.36\)</span> vs.&nbsp;<span class="math inline">\(H_A: p \neq 0.36\)</span>.<br>
-Are the conditions satisfied?</p>
+<br> Testing <span class="math inline">\(H_0: p=0.36\)</span> vs.&nbsp;<span class="math inline">\(H_A: p \neq 0.36\)</span>.<br>
+<br> Are the conditions satisfied?</p>
 </section>
 <section id="step-4-p-value" class="level2">
 <h2 class="anchored" data-anchor-id="step-4-p-value">Step 4: p-value</h2>
@@ -557,11 +588,14 @@ Are the conditions satisfied?</p>
 </div>
 </div>
 <p>Calculate the <em>p</em>-value:</p>
-<p><span class="math display">\[2 \cdot P(\hat{p}&lt;0.35) \\
-= 2 \cdot P\Big(Z_{\hat{p}} &lt; \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}}\Big)\\
-=2 \cdot P(Z_{\hat{p}} &lt; -0.3607455)\]</span></p>
+<p><span class="math display">\[\begin{align}
+2 &amp;\cdot P(\hat{p}&lt;0.35) \\
+&amp;= 2 \cdot P\Big(Z_{\hat{p}} &lt; \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}}\Big)\\
+&amp;=2 \cdot P(Z_{\hat{p}} &lt; -0.3607455)\\
+&amp;= 0.7182897
+\end{align}\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="fl">0.3607455</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="fl">0.3607455</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7182897</code></pre>
 </div>
@@ -569,8 +603,10 @@ Are the conditions satisfied?</p>
 </section>
 <section id="step-5-conclusion-to-hypothesis-test" class="level2">
 <h2 class="anchored" data-anchor-id="step-5-conclusion-to-hypothesis-test">Step 5: Conclusion to hypothesis test</h2>
-<p><span class="math display">\[~~~~H_0: p = 0.36\\
-H_A: p \neq 0.36\]</span></p>
+<p><span class="math display">\[\begin{align}
+H_0:&amp; p = 0.36\\
+H_A:&amp; p \neq 0.36\\
+\end{align}\]</span></p>
 <ul>
 <li>Recall the <span class="math inline">\(p\)</span>-value = 0.7182897</li>
 <li>Use <span class="math inline">\(\alpha\)</span> = 0.05.</li>
@@ -592,18 +628,24 @@ H_A: p \neq 0.36\]</span></p>
 <h2 class="anchored" data-anchor-id="ci-for-population-proportion">95% CI for population proportion</h2>
 <p>What to use for SE in CI formula?</p>
 <p><span class="math display">\[\hat{p} \pm z^* \cdot SE_{\hat{p}}\]</span></p>
-<p>Sampling distribution of <span class="math inline">\(\hat{p}\)</span> <span class="math display">\[\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)\]</span></p>
+<p>Sampling distribution of <span class="math inline">\(\hat{p}\)</span>:</p>
+<p><span class="math display">\[\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)\]</span></p>
+<p>Problem: We don’t know what <span class="math inline">\(p\)</span> is - it’s what we’re estimating with the CI.<br>
+Solution: <span style="color:purple">approximate <span class="math inline">\(p\)</span> with <span class="math inline">\(\hat{p}\)</span></span>:</p>
+<p><span class="math display">\[SE_{\hat{p}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</span></p>
 <hr>
 <p><strong>Example:</strong> A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.<br>
 Find the 95% CI for the population proportion.</p>
-<p><span class="math display">\[94/269 \pm 1.96 \cdot SE_{\hat{p}}\\
-SE_{\hat{p}} = \sqrt{\frac{(94/269)(1-94/269)}{269}}\]</span></p>
+<p><span class="math display">\[\begin{align}
+94/269 &amp;\pm 1.96 \cdot SE_{\hat{p}}\\
+SE_{\hat{p}} &amp;= \sqrt{\frac{(94/269)(1-94/269)}{269}}
+\end{align}\]</span></p>
 <p><strong>Interpretation</strong>:<br>
 We are 95% confident that the (population) proportion of young male college students that participated in sports betting in the previous year is in (0.29, 0.41).</p>
 </section>
 <section id="conditions-for-one-proportion-test-vs.-ci" class="level2">
 <h2 class="anchored" data-anchor-id="conditions-for-one-proportion-test-vs.-ci">Conditions for one proportion: test vs.&nbsp;CI</h2>
-<p><strong>Hypothesis test conditions</strong></p>
+<p><span style="color:green"><strong>Hypothesis test conditions</strong></span></p>
 <ol type="1">
 <li><em>Independent observations</em>
 <ul>
@@ -612,7 +654,7 @@ We are 95% confident that the (population) proportion of young male college stud
 <li>The number of <strong>expected</strong> successes and <strong>expected</strong> failures is at least 10.</li>
 </ol>
 <p><span class="math display">\[n_1 p_0 \ge 10, \ \ n_1(1-p_0)\ge 10\]</span></p>
-<p><strong>Confidence interval conditions</strong></p>
+<p><span style="color:purple"><strong>Confidence interval conditions</strong></span></p>
 <ol type="1">
 <li><em>Independent observations</em>
 <ul>
@@ -623,22 +665,30 @@ We are 95% confident that the (population) proportion of young male college stud
 <p><span class="math display">\[n_1\hat{p}_1 \ge 10, \ \ n_1(1-\hat{p}_1)\ge 10\]</span></p>
 </section>
 </section>
-<section id="two-independent-proportions-inference" class="level1">
-<h1>Two (independent) proportions inference</h1>
+<section id="inference-for-difference-of-two-independent-proportions-hatp_1-hatp_2" class="level1">
+<h1>Inference for difference of two independent proportions <span class="math inline">\(\hat{p}_1-\hat{p}_2\)</span></h1>
 <section id="sampling-distribution-of-hatp_1-hatp_2" class="level2">
 <h2 class="anchored" data-anchor-id="sampling-distribution-of-hatp_1-hatp_2">Sampling distribution of <span class="math inline">\(\hat{p}_1-\hat{p}_2\)</span></h2>
 <ul>
-<li><span class="math inline">\(\hat{p}_1=\frac{X_1}{n_1}\)</span> and <span class="math inline">\(\hat{p}_2=\frac{X_2}{n_2}\)</span>, where <span class="math inline">\(X_1\)</span> &amp; <span class="math inline">\(X_2\)</span> are the number of “successes” and <span class="math inline">\(n_1\)</span> &amp; <span class="math inline">\(n_2\)</span> are the sample sizes of the 1st &amp; 2nd samples, with population proportions <span class="math inline">\(p_1\)</span> &amp; <span class="math inline">\(p_2\)</span>, respectively.</li>
-<li>On the previous slide we saw that <span class="math inline">\(\hat{p}\)</span> can be approximated by a normal distribution.</li>
-<li>Since the difference of independent normal random variables is also independent, it follows that for <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> “big enough”</li>
+<li><span class="math inline">\(\hat{p}_1=\frac{X_1}{n_1}\)</span> and <span class="math inline">\(\hat{p}_2=\frac{X_2}{n_2}\)</span>,
+<ul>
+<li><span class="math inline">\(X_1\)</span> &amp; <span class="math inline">\(X_2\)</span> are the number of “successes”</li>
+<li><span class="math inline">\(n_1\)</span> &amp; <span class="math inline">\(n_2\)</span> are the sample sizes of the 1st &amp; 2nd samples</li>
+</ul></li>
+</ul>
+<p><br></p>
+<ul>
+<li>Each <span class="math inline">\(\hat{p}\)</span> can be approximated by a normal distribution, for “big enough” <span class="math inline">\(n\)</span></li>
+<li>Since the difference of independent normal random variables is also independent, it follows that for “big enough” <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span></li>
 </ul>
 <p><span class="math display">\[\hat{p}_1 - \hat{p}_2 \sim N \Big(\mu_{\hat{p}_1 - \hat{p}_2} = p_1 - p_2, ~~
 \sigma_{\hat{p}_1 - \hat{p}_2} =
 \sqrt{
 \frac{p_1\cdot(1-p_1)}{n_1} + \frac{p_2\cdot(1-p_2)}{n_2}}
 \Big)\]</span></p>
+<p>where <span class="math inline">\(p_1\)</span> &amp; <span class="math inline">\(p_2\)</span> are the population proportions, respectively.</p>
 <ul>
-<li>How we apply this result to CI’s and test statistics is different!!!</li>
+<li><span style="color:purple"><em>How we apply this result to CI’s and test statistics is different!!!</em></span></li>
 </ul>
 </section>
 <section id="step-3-test-statistic-12" class="level2">
@@ -648,23 +698,26 @@ We are 95% confident that the (population) proportion of young male college stud
 \sqrt{
 \frac{p_1\cdot(1-p_1)}{n_1} + \frac{p_2\cdot(1-p_2)}{n_2}}
 \Big)\]</span></p>
-<p>If we assume <span class="math inline">\(H_0: p_1=p_2\)</span> is true, then we “pool” the proportions of the two samples to calculate the SE:</p>
-<p><span class="math display">\[pooled~proportion = \hat{p} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}\]</span></p>
+<p>Since we assume <span class="math inline">\(H_0: p_1 - p_2 = 0\)</span> is true, we “pool” the proportions of the two samples to calculate the SE:</p>
+<p><span class="math display">\[\text{pooled proportion} = \hat{p}_{pool} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}\]</span></p>
 <p>Test statistic:</p>
 <p><span class="math display">\[
-\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}\cdot(1-\hat{p})}{n_1} + \frac{\hat{p}\cdot(1-\hat{p})}{n_2}}}
+\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_1} + \frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_2}}}
 \]</span></p>
 </section>
 <section id="step-3-test-statistic-22" class="level2">
 <h2 class="anchored" data-anchor-id="step-3-test-statistic-22">Step 3: Test statistic (2/2)</h2>
-<span class="math display">\[
-\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}\cdot(1-\hat{p})}{n_1} + \frac{\hat{p}\cdot(1-\hat{p})}{n_2}}}
-\]</span> <span class="math display">\[pooled~proportion = \hat{p} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}\]</span>
+<p><span class="math display">\[
+\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_1} + \frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_2}}}
+\]</span></p>
+<p><span class="math display">\[\text{pooled proportion} = \hat{p}_{pool} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}\]</span></p>
 <hr>
 <p><strong>Example:</strong> A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had.<br>
 What is the test statistic when testing <span class="math inline">\(H_0: p_{coll} - p_{noncoll} = 0\)</span> vs.&nbsp; <span class="math inline">\(H_A: p_{coll} - p_{noncoll} \neq 0\)</span>?</p>
-<p><span class="math display">\[z_{\hat{p}_1 - \hat{p}_2} = \frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\\
-=-0.2367497\]</span></p>
+<p><span class="math display">\[\begin{align}
+z_{\hat{p}_1 - \hat{p}_2} &amp;= \frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\\
+&amp;=-0.2367497
+\end{align}\]</span></p>
 </section>
 <section id="step-3b-conditions-satisfied-1" class="level2">
 <h2 class="anchored" data-anchor-id="step-3b-conditions-satisfied-1">Step “3b”: Conditions satisfied?</h2>
@@ -677,8 +730,8 @@ What is the test statistic when testing <span class="math inline">\(H_0: p_{coll
 </ul></li>
 <li>The number of expected successes and expected failures is at least 10 <em>for each group</em> - using the pooled proportion:
 <ul>
-<li><span class="math inline">\(n_1\hat{p} \ge 10, \ \ n_1(1-\hat{p}) \ge 10\)</span></li>
-<li><span class="math inline">\(n_2\hat{p} \ge 10, \ \ n_2(1-\hat{p}) \ge 10\)</span></li>
+<li><span class="math inline">\(n_1\hat{p}_{pool} \ge 10, \ \ n_1(1-\hat{p}_{pool}) \ge 10\)</span></li>
+<li><span class="math inline">\(n_2\hat{p}_{pool} \ge 10, \ \ n_2(1-\hat{p}_{pool}) \ge 10\)</span></li>
 </ul></li>
 </ul>
 <p><strong>Example:</strong> A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had.<br>
@@ -699,12 +752,14 @@ Are the conditions satisfied?</p>
 </div>
 </div>
 <p>Calculate the <em>p</em>-value:</p>
-<p><span class="math display">\[2 \cdot P(\hat{p}_1 - \hat{p}_2&lt;0.35-0.36) \\
-= 2 \cdot P\Big(Z_{\hat{p}_1 - \hat{p}_2} &lt; \\
-\frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\Big)\\
-=2 \cdot P(Z_{\hat{p}} &lt; -0.2367497)\]</span></p>
+<p><span class="math display">\[\begin{align}
+2 &amp;\cdot P(\hat{p}_1 - \hat{p}_2&lt;0.35-0.36) \\
+&amp;= 2 \cdot P\Big(Z_{\hat{p}_1 - \hat{p}_2} &lt; \\
+&amp;\frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\Big)\\
+&amp;=2 \cdot P(Z_{\hat{p}} &lt; -0.2367497)
+\end{align}\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="fl">0.2367497</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="fl">0.2367497</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.812851</code></pre>
 </div>
@@ -712,8 +767,10 @@ Are the conditions satisfied?</p>
 </section>
 <section id="step-5-conclusion-to-hypothesis-test-1" class="level2">
 <h2 class="anchored" data-anchor-id="step-5-conclusion-to-hypothesis-test-1">Step 5: Conclusion to hypothesis test</h2>
-<p><span class="math display">\[~~~~H_0: p_{coll} - p_{noncoll} = 0\\
-H_A: p_{coll} - p_{noncoll} \neq 0\]</span></p>
+<p><span class="math display">\[\begin{align}
+H_0:&amp; p_{coll} - p_{noncoll} = 0\\
+H_A:&amp; p_{coll} - p_{noncoll} \neq 0\\
+\end{align}\]</span></p>
 <ul>
 <li>Recall the <span class="math inline">\(p\)</span>-value = 0.812851</li>
 <li>Use <span class="math inline">\(\alpha\)</span> = 0.05.</li>
@@ -735,42 +792,49 @@ H_A: p_{coll} - p_{noncoll} \neq 0\]</span></p>
 <h2 class="anchored" data-anchor-id="ci-for-population-difference-in-proportions">95% CI for population difference in proportions</h2>
 <p>What to use for SE in CI formula?</p>
 <p><span class="math display">\[\hat{p}_1 - \hat{p}_2 \pm z^* \cdot SE_{\hat{p}_1 - \hat{p}_2}\]</span></p>
-<p>SE in sampling distribution of <span class="math inline">\(\hat{p}_1 - \hat{p}_2\)</span> <span class="math display">\[\sigma_{\hat{p}_1 - \hat{p}_2} =
+<p>SE in sampling distribution of <span class="math inline">\(\hat{p}_1 - \hat{p}_2\)</span></p>
+<p><span class="math display">\[\sigma_{\hat{p}_1 - \hat{p}_2} =
 \sqrt{
 \frac{p_1\cdot(1-p_1)}{n_1} + \frac{p_2\cdot(1-p_2)}{n_2}} \]</span></p>
+<p>Problem: We don’t know what <span class="math inline">\(p\)</span> is - it’s what we’re estimating with the CI.<br>
+Solution: <span style="color:purple">approximate <span class="math inline">\(p_1\)</span>, <span class="math inline">\(p_2\)</span> with <span class="math inline">\(\hat{p}_1\)</span>, <span class="math inline">\(\hat{p}_2\)</span></span>:</p>
+<p><span class="math display">\[SE_{\hat{p}_1 - \hat{p}_2} = \sqrt{
+\frac{\hat{p}_1\cdot(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2\cdot(1-\hat{p}_2)}{n_2}}\]</span></p>
 <hr>
 <p><strong>Example:</strong> A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had. Find the 95% CI for the difference in population proportions.</p>
 <p><span class="math display">\[\frac{94}{269} - \frac{77}{214} \pm 1.96 \cdot SE_{\hat{p}_1 - \hat{p}_2}\]</span></p>
-<p><span class="math display">\[SE_{\hat{p}_1 - \hat{p}_2}=\\
-\sqrt{
+<p><span class="math display">\[\begin{align}
+&amp; SE_{\hat{p}_1 - \hat{p}_2}=\\
+&amp; \sqrt{
 \frac{94/269 \cdot (1-94/269)}{269} +
-\frac{77/214 \cdot (1-77/214)}{214}}\]</span></p>
+\frac{77/214 \cdot (1-77/214)}{214}}
+\end{align}\]</span></p>
 <p><strong>Interpretation</strong>:<br>
 We are 95% confident that the difference in (population) proportions of young male college and noncollege students that participated in sports betting in the previous year is in (-0.127, 0.106).</p>
 </section>
 <section id="conditions-for-difference-in-proportions-test-vs.-ci" class="level2">
 <h2 class="anchored" data-anchor-id="conditions-for-difference-in-proportions-test-vs.-ci">Conditions for difference in proportions: test vs.&nbsp;CI</h2>
-<p><strong>Hypothesis test conditions</strong></p>
+<p><span style="color:green"><strong>Hypothesis test conditions</strong></span></p>
 <ol type="1">
 <li><em>Independent observations &amp; samples</em>
 <ul>
 <li>The observations were collected independently.</li>
 <li>In particular, observations from the two groups weren’t paired in any meaningful way.</li>
 </ul></li>
-<li>The number of expected successes and expected failures is at least 10 <em>for each group</em> - using the pooled proportion:
+<li>The number of <strong>expected</strong> successes and <strong>expected</strong> failures is at least 10 <em>for each group</em> - using the pooled proportion:
 <ul>
-<li><span class="math inline">\(n_1\hat{p} \ge 10, \ \ n_1(1-\hat{p}) \ge 10\)</span></li>
-<li><span class="math inline">\(n_2\hat{p} \ge 10, \ \ n_2(1-\hat{p}) \ge 10\)</span></li>
+<li><span class="math inline">\(n_1\hat{p}_{pool} \ge 10, \ \ n_1(1-\hat{p}_{pool}) \ge 10\)</span></li>
+<li><span class="math inline">\(n_2\hat{p}_{pool} \ge 10, \ \ n_2(1-\hat{p}_{pool}) \ge 10\)</span></li>
 </ul></li>
 </ol>
-<p><strong>Confidence interval conditions</strong></p>
+<p><span style="color:purple"><strong>Confidence interval conditions</strong></span></p>
 <ol type="1">
 <li><em>Independent observations &amp; samples</em>
 <ul>
 <li>The observations were collected independently.</li>
 <li>In particular, observations from the two groups weren’t paired in any meaningful way.</li>
 </ul></li>
-<li>The number of expected successes and expected failures is at least 10 <em>for each group</em>.
+<li>The number of successes and expected failures is at least 10 <em>for each group</em>.
 <ul>
 <li><span class="math inline">\(n_1\hat{p}_1 \ge 10, \ \ n_1(1-\hat{p}_1) \ge 10\)</span></li>
 <li><span class="math inline">\(n_2\hat{p}_2 \ge 10, \ \ n_2(1-\hat{p}_2) \ge 10\)</span></li>
@@ -778,21 +842,32 @@ We are 95% confident that the difference in (population) proportions of young ma
 </ol>
 </section>
 </section>
-<section id="r-1-sample-proportion-test-13" class="level1">
-<h1>R: 1-sample proportion test (1/3)</h1>
-<p>We first need a dataset based on the results:</p>
+<section id="and-2-sample-proportions-tests-in-r" class="level1">
+<h1>1- and 2-sample proportions tests in R</h1>
+<ul>
+<li><code>prop.test</code></li>
+<li>Need a dataset to use <code>prop.test</code>
+<ul>
+<li>Create dataset based on the summary stats if do not have one</li>
+</ul></li>
+<li>Input of <code>prop.test</code> is a <code>table()</code> of the dataset</li>
+<li>Continuity correction</li>
+</ul>
+<section id="r-1-sample-proportion-test-13" class="level2">
+<h2 class="anchored" data-anchor-id="r-1-sample-proportion-test-13">R: 1-sample proportion test (1/3)</h2>
+<p>Create a dataset based on the results:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>.<span class="dv">35</span><span class="sc">*</span><span class="dv">269</span> <span class="co"># number of "successes"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>.<span class="dv">35</span><span class="sc">*</span><span class="dv">269</span> <span class="co"># number of "successes"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 94.15</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># round this value</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>SportsBet1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Coll =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Bet"</span>, <span class="dv">94</span>), </span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>              <span class="fu">rep</span>(<span class="st">"NotBet"</span>,<span class="dv">269-94</span>))</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(SportsBet1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># round this value</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>SportsBet1 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Coll =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"Bet"</span>, <span class="dv">94</span>), </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>           <span class="fu">rep</span>(<span class="st">"NotBet"</span>,<span class="dv">269-94</span>))</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(SportsBet1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 269
 Columns: 1
@@ -800,7 +875,7 @@ $ Coll &lt;chr&gt; "Bet", "Bet", "Bet", "Bet", "Bet", "Bet", "Bet", "Bet", "Bet"
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>SportsBet1 <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(Coll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>SportsBet1 <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(Coll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Coll   n   percent
     Bet  94 0.3494424
@@ -809,21 +884,22 @@ $ Coll &lt;chr&gt; "Bet", "Bet", "Bet", "Bet", "Bet", "Bet", "Bet", "Bet", "Bet"
 </div>
 <p>R code for proportions test requires input as a base R <code>table</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(SportsBet1<span class="sc">$</span>Coll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(SportsBet1<span class="sc">$</span>Coll)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
    Bet NotBet 
     94    175 </code></pre>
 </div>
 </div>
+</section>
 <section id="r-1-sample-proportion-test-23" class="level2">
 <h2 class="anchored" data-anchor-id="r-1-sample-proportion-test-23">R: 1-sample proportion test (2/3)</h2>
 <p><code>prop.test</code> requires the input x to be a table</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet1<span class="sc">$</span>Coll),</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">p =</span> <span class="fl">0.36</span>,</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">correct =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet1<span class="sc">$</span>Coll),</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">p =</span> <span class="fl">0.36</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">correct =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     1-sample proportions test without continuity correction
@@ -843,27 +919,27 @@ sample estimates:
 <h2 class="anchored" data-anchor-id="r-1-sample-proportion-test-with-vs.-without-cc-33">R: 1-sample proportion test: with vs.&nbsp;without CC (3/3)</h2>
 <p>Apply a continuity correction (CC) to the p-value calculation.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet1<span class="sc">$</span>Coll), <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">p =</span> <span class="fl">0.36</span>, <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet1<span class="sc">$</span>Coll), <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">p =</span> <span class="fl">0.36</span>, <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="mzjcizplkz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mzjcizplkz table {
+<div id="hifdayyrjh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hifdayyrjh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mzjcizplkz thead, #mzjcizplkz tbody, #mzjcizplkz tfoot, #mzjcizplkz tr, #mzjcizplkz td, #mzjcizplkz th {
+#hifdayyrjh thead, #hifdayyrjh tbody, #hifdayyrjh tfoot, #hifdayyrjh tr, #hifdayyrjh td, #hifdayyrjh th {
   border-style: none;
 }
 
-#mzjcizplkz p {
+#hifdayyrjh p {
   margin: 0;
   padding: 0;
 }
 
-#mzjcizplkz .gt_table {
+#hifdayyrjh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -889,12 +965,12 @@ sample estimates:
   border-left-color: #D3D3D3;
 }
 
-#mzjcizplkz .gt_caption {
+#hifdayyrjh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mzjcizplkz .gt_title {
+#hifdayyrjh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -906,7 +982,7 @@ sample estimates:
   border-bottom-width: 0;
 }
 
-#mzjcizplkz .gt_subtitle {
+#hifdayyrjh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -918,7 +994,7 @@ sample estimates:
   border-top-width: 0;
 }
 
-#mzjcizplkz .gt_heading {
+#hifdayyrjh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -930,13 +1006,13 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#mzjcizplkz .gt_bottom_border {
+#hifdayyrjh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mzjcizplkz .gt_col_headings {
+#hifdayyrjh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -951,7 +1027,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#mzjcizplkz .gt_col_heading {
+#hifdayyrjh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -971,7 +1047,7 @@ sample estimates:
   overflow-x: hidden;
 }
 
-#mzjcizplkz .gt_column_spanner_outer {
+#hifdayyrjh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -983,15 +1059,15 @@ sample estimates:
   padding-right: 4px;
 }
 
-#mzjcizplkz .gt_column_spanner_outer:first-child {
+#hifdayyrjh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mzjcizplkz .gt_column_spanner_outer:last-child {
+#hifdayyrjh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mzjcizplkz .gt_column_spanner {
+#hifdayyrjh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1003,11 +1079,11 @@ sample estimates:
   width: 100%;
 }
 
-#mzjcizplkz .gt_spanner_row {
+#hifdayyrjh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mzjcizplkz .gt_group_heading {
+#hifdayyrjh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1033,7 +1109,7 @@ sample estimates:
   text-align: left;
 }
 
-#mzjcizplkz .gt_empty_group_heading {
+#hifdayyrjh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1048,15 +1124,15 @@ sample estimates:
   vertical-align: middle;
 }
 
-#mzjcizplkz .gt_from_md > :first-child {
+#hifdayyrjh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mzjcizplkz .gt_from_md > :last-child {
+#hifdayyrjh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mzjcizplkz .gt_row {
+#hifdayyrjh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1075,7 +1151,7 @@ sample estimates:
   overflow-x: hidden;
 }
 
-#mzjcizplkz .gt_stub {
+#hifdayyrjh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1088,7 +1164,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#mzjcizplkz .gt_stub_row_group {
+#hifdayyrjh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1102,15 +1178,15 @@ sample estimates:
   vertical-align: top;
 }
 
-#mzjcizplkz .gt_row_group_first td {
+#hifdayyrjh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mzjcizplkz .gt_row_group_first th {
+#hifdayyrjh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mzjcizplkz .gt_summary_row {
+#hifdayyrjh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1120,16 +1196,16 @@ sample estimates:
   padding-right: 5px;
 }
 
-#mzjcizplkz .gt_first_summary_row {
+#hifdayyrjh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mzjcizplkz .gt_first_summary_row.thick {
+#hifdayyrjh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mzjcizplkz .gt_last_summary_row {
+#hifdayyrjh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1139,7 +1215,7 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#mzjcizplkz .gt_grand_summary_row {
+#hifdayyrjh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1149,7 +1225,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#mzjcizplkz .gt_first_grand_summary_row {
+#hifdayyrjh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1159,7 +1235,7 @@ sample estimates:
   border-top-color: #D3D3D3;
 }
 
-#mzjcizplkz .gt_last_grand_summary_row_top {
+#hifdayyrjh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1169,11 +1245,11 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#mzjcizplkz .gt_striped {
+#hifdayyrjh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mzjcizplkz .gt_table_body {
+#hifdayyrjh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1182,7 +1258,7 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#mzjcizplkz .gt_footnotes {
+#hifdayyrjh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1196,7 +1272,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#mzjcizplkz .gt_footnote {
+#hifdayyrjh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1205,7 +1281,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#mzjcizplkz .gt_sourcenotes {
+#hifdayyrjh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1219,7 +1295,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#mzjcizplkz .gt_sourcenote {
+#hifdayyrjh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1227,63 +1303,63 @@ sample estimates:
   padding-right: 5px;
 }
 
-#mzjcizplkz .gt_left {
+#hifdayyrjh .gt_left {
   text-align: left;
 }
 
-#mzjcizplkz .gt_center {
+#hifdayyrjh .gt_center {
   text-align: center;
 }
 
-#mzjcizplkz .gt_right {
+#hifdayyrjh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mzjcizplkz .gt_font_normal {
+#hifdayyrjh .gt_font_normal {
   font-weight: normal;
 }
 
-#mzjcizplkz .gt_font_bold {
+#hifdayyrjh .gt_font_bold {
   font-weight: bold;
 }
 
-#mzjcizplkz .gt_font_italic {
+#hifdayyrjh .gt_font_italic {
   font-style: italic;
 }
 
-#mzjcizplkz .gt_super {
+#hifdayyrjh .gt_super {
   font-size: 65%;
 }
 
-#mzjcizplkz .gt_footnote_marks {
+#hifdayyrjh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mzjcizplkz .gt_asterisk {
+#hifdayyrjh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mzjcizplkz .gt_indent_1 {
+#hifdayyrjh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mzjcizplkz .gt_indent_2 {
+#hifdayyrjh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mzjcizplkz .gt_indent_3 {
+#hifdayyrjh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mzjcizplkz .gt_indent_4 {
+#hifdayyrjh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mzjcizplkz .gt_indent_5 {
+#hifdayyrjh .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1316,27 +1392,27 @@ sample estimates:
 </table>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet1<span class="sc">$</span>Coll), <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">p =</span> <span class="fl">0.36</span>, <span class="at">correct =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet1<span class="sc">$</span>Coll), <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">p =</span> <span class="fl">0.36</span>, <span class="at">correct =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="qopayuieeo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qopayuieeo table {
+<div id="ixfjajxibv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ixfjajxibv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qopayuieeo thead, #qopayuieeo tbody, #qopayuieeo tfoot, #qopayuieeo tr, #qopayuieeo td, #qopayuieeo th {
+#ixfjajxibv thead, #ixfjajxibv tbody, #ixfjajxibv tfoot, #ixfjajxibv tr, #ixfjajxibv td, #ixfjajxibv th {
   border-style: none;
 }
 
-#qopayuieeo p {
+#ixfjajxibv p {
   margin: 0;
   padding: 0;
 }
 
-#qopayuieeo .gt_table {
+#ixfjajxibv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1362,12 +1438,12 @@ sample estimates:
   border-left-color: #D3D3D3;
 }
 
-#qopayuieeo .gt_caption {
+#ixfjajxibv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qopayuieeo .gt_title {
+#ixfjajxibv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1379,7 +1455,7 @@ sample estimates:
   border-bottom-width: 0;
 }
 
-#qopayuieeo .gt_subtitle {
+#ixfjajxibv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1391,7 +1467,7 @@ sample estimates:
   border-top-width: 0;
 }
 
-#qopayuieeo .gt_heading {
+#ixfjajxibv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1403,13 +1479,13 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#qopayuieeo .gt_bottom_border {
+#ixfjajxibv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qopayuieeo .gt_col_headings {
+#ixfjajxibv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1424,7 +1500,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#qopayuieeo .gt_col_heading {
+#ixfjajxibv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1444,7 +1520,7 @@ sample estimates:
   overflow-x: hidden;
 }
 
-#qopayuieeo .gt_column_spanner_outer {
+#ixfjajxibv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1456,15 +1532,15 @@ sample estimates:
   padding-right: 4px;
 }
 
-#qopayuieeo .gt_column_spanner_outer:first-child {
+#ixfjajxibv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qopayuieeo .gt_column_spanner_outer:last-child {
+#ixfjajxibv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qopayuieeo .gt_column_spanner {
+#ixfjajxibv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1476,11 +1552,11 @@ sample estimates:
   width: 100%;
 }
 
-#qopayuieeo .gt_spanner_row {
+#ixfjajxibv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qopayuieeo .gt_group_heading {
+#ixfjajxibv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1506,7 +1582,7 @@ sample estimates:
   text-align: left;
 }
 
-#qopayuieeo .gt_empty_group_heading {
+#ixfjajxibv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1521,15 +1597,15 @@ sample estimates:
   vertical-align: middle;
 }
 
-#qopayuieeo .gt_from_md > :first-child {
+#ixfjajxibv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qopayuieeo .gt_from_md > :last-child {
+#ixfjajxibv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qopayuieeo .gt_row {
+#ixfjajxibv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1548,7 +1624,7 @@ sample estimates:
   overflow-x: hidden;
 }
 
-#qopayuieeo .gt_stub {
+#ixfjajxibv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1561,7 +1637,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#qopayuieeo .gt_stub_row_group {
+#ixfjajxibv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1575,15 +1651,15 @@ sample estimates:
   vertical-align: top;
 }
 
-#qopayuieeo .gt_row_group_first td {
+#ixfjajxibv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qopayuieeo .gt_row_group_first th {
+#ixfjajxibv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qopayuieeo .gt_summary_row {
+#ixfjajxibv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1593,16 +1669,16 @@ sample estimates:
   padding-right: 5px;
 }
 
-#qopayuieeo .gt_first_summary_row {
+#ixfjajxibv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qopayuieeo .gt_first_summary_row.thick {
+#ixfjajxibv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qopayuieeo .gt_last_summary_row {
+#ixfjajxibv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1612,7 +1688,7 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#qopayuieeo .gt_grand_summary_row {
+#ixfjajxibv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1622,7 +1698,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#qopayuieeo .gt_first_grand_summary_row {
+#ixfjajxibv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1632,7 +1708,7 @@ sample estimates:
   border-top-color: #D3D3D3;
 }
 
-#qopayuieeo .gt_last_grand_summary_row_top {
+#ixfjajxibv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1642,11 +1718,11 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#qopayuieeo .gt_striped {
+#ixfjajxibv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qopayuieeo .gt_table_body {
+#ixfjajxibv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1655,7 +1731,7 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#qopayuieeo .gt_footnotes {
+#ixfjajxibv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1669,7 +1745,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#qopayuieeo .gt_footnote {
+#ixfjajxibv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1678,7 +1754,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#qopayuieeo .gt_sourcenotes {
+#ixfjajxibv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1692,7 +1768,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#qopayuieeo .gt_sourcenote {
+#ixfjajxibv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1700,63 +1776,63 @@ sample estimates:
   padding-right: 5px;
 }
 
-#qopayuieeo .gt_left {
+#ixfjajxibv .gt_left {
   text-align: left;
 }
 
-#qopayuieeo .gt_center {
+#ixfjajxibv .gt_center {
   text-align: center;
 }
 
-#qopayuieeo .gt_right {
+#ixfjajxibv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qopayuieeo .gt_font_normal {
+#ixfjajxibv .gt_font_normal {
   font-weight: normal;
 }
 
-#qopayuieeo .gt_font_bold {
+#ixfjajxibv .gt_font_bold {
   font-weight: bold;
 }
 
-#qopayuieeo .gt_font_italic {
+#ixfjajxibv .gt_font_italic {
   font-style: italic;
 }
 
-#qopayuieeo .gt_super {
+#ixfjajxibv .gt_super {
   font-size: 65%;
 }
 
-#qopayuieeo .gt_footnote_marks {
+#ixfjajxibv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qopayuieeo .gt_asterisk {
+#ixfjajxibv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qopayuieeo .gt_indent_1 {
+#ixfjajxibv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qopayuieeo .gt_indent_2 {
+#ixfjajxibv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qopayuieeo .gt_indent_3 {
+#ixfjajxibv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qopayuieeo .gt_indent_4 {
+#ixfjajxibv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qopayuieeo .gt_indent_5 {
+#ixfjajxibv .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1797,23 +1873,23 @@ sample estimates:
 <h1>R: 2-samples proportions test (1/3)</h1>
 <p>We first need a dataset based on the results:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>.<span class="dv">35</span><span class="sc">*</span><span class="dv">269</span> <span class="co"># number of "successes"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>.<span class="dv">35</span><span class="sc">*</span><span class="dv">269</span> <span class="co"># number of "successes"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 94.15</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>.<span class="dv">36</span><span class="sc">*</span><span class="dv">214</span> <span class="co"># round these value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>.<span class="dv">36</span><span class="sc">*</span><span class="dv">214</span> <span class="co"># round these value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 77.04</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>SportsBet2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Group =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"College"</span>, <span class="dv">269</span>), </span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>         <span class="fu">rep</span>(<span class="st">"NonCollege"</span>, <span class="dv">214</span>)),</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Bet =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"yes"</span>, <span class="dv">94</span>), </span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>          <span class="fu">rep</span>(<span class="st">"no"</span>, <span class="dv">269-94</span>),</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>          <span class="fu">rep</span>(<span class="st">"yes"</span>, <span class="dv">77</span>), </span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>          <span class="fu">rep</span>(<span class="st">"no"</span>, <span class="dv">214-77</span>))</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(SportsBet2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>SportsBet2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Group =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"College"</span>, <span class="dv">269</span>), </span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>         <span class="fu">rep</span>(<span class="st">"NonCollege"</span>, <span class="dv">214</span>)),</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Bet =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"yes"</span>, <span class="dv">94</span>), </span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>          <span class="fu">rep</span>(<span class="st">"no"</span>, <span class="dv">269-94</span>),</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>          <span class="fu">rep</span>(<span class="st">"yes"</span>, <span class="dv">77</span>), </span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>          <span class="fu">rep</span>(<span class="st">"no"</span>, <span class="dv">214-77</span>))</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(SportsBet2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 483
 Columns: 2
@@ -1822,7 +1898,7 @@ $ Bet   &lt;chr&gt; "yes", "yes", "yes", "yes", "yes", "yes", "yes", "yes", "yes
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>SportsBet2 <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(Group, Bet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>SportsBet2 <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(Group, Bet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      Group  no yes
     College 175  94
@@ -1831,7 +1907,7 @@ $ Bet   &lt;chr&gt; "yes", "yes", "yes", "yes", "yes", "yes", "yes", "yes", "yes
 </div>
 <p>R code for proportions test requires input as a base R <code>table</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(SportsBet2<span class="sc">$</span>Group, SportsBet2<span class="sc">$</span>Bet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(SportsBet2<span class="sc">$</span>Group, SportsBet2<span class="sc">$</span>Bet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            
               no yes
@@ -1843,9 +1919,9 @@ $ Bet   &lt;chr&gt; "yes", "yes", "yes", "yes", "yes", "yes", "yes", "yes", "yes
 <h2 class="anchored" data-anchor-id="r-2-samples-proportions-test-23">R: 2-samples proportions test (2/3)</h2>
 <p><code>prop.test</code> requires the input x to be a table</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet2<span class="sc">$</span>Group, SportsBet2<span class="sc">$</span>Bet),</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">correct =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet2<span class="sc">$</span>Group, SportsBet2<span class="sc">$</span>Bet),</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">correct =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     2-sample test for equality of proportions without continuity correction
@@ -1865,27 +1941,27 @@ sample estimates:
 <h2 class="anchored" data-anchor-id="r-2-samples-proportions-test-with-vs.-without-cc-33">R: 2-samples proportions test: with vs.&nbsp;without CC (3/3)</h2>
 <p>Apply a continuity correction (CC) to the p-value calculation.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet2<span class="sc">$</span>Group, SportsBet2<span class="sc">$</span>Bet), <span class="at">alternative =</span> <span class="st">"two.sided"</span>, </span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet2<span class="sc">$</span>Group, SportsBet2<span class="sc">$</span>Bet), <span class="at">alternative =</span> <span class="st">"two.sided"</span>, </span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="wdojgotmqn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wdojgotmqn table {
+<div id="eaoqenprms" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#eaoqenprms table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wdojgotmqn thead, #wdojgotmqn tbody, #wdojgotmqn tfoot, #wdojgotmqn tr, #wdojgotmqn td, #wdojgotmqn th {
+#eaoqenprms thead, #eaoqenprms tbody, #eaoqenprms tfoot, #eaoqenprms tr, #eaoqenprms td, #eaoqenprms th {
   border-style: none;
 }
 
-#wdojgotmqn p {
+#eaoqenprms p {
   margin: 0;
   padding: 0;
 }
 
-#wdojgotmqn .gt_table {
+#eaoqenprms .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1911,12 +1987,12 @@ sample estimates:
   border-left-color: #D3D3D3;
 }
 
-#wdojgotmqn .gt_caption {
+#eaoqenprms .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wdojgotmqn .gt_title {
+#eaoqenprms .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1928,7 +2004,7 @@ sample estimates:
   border-bottom-width: 0;
 }
 
-#wdojgotmqn .gt_subtitle {
+#eaoqenprms .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1940,7 +2016,7 @@ sample estimates:
   border-top-width: 0;
 }
 
-#wdojgotmqn .gt_heading {
+#eaoqenprms .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1952,13 +2028,13 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#wdojgotmqn .gt_bottom_border {
+#eaoqenprms .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wdojgotmqn .gt_col_headings {
+#eaoqenprms .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1973,7 +2049,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#wdojgotmqn .gt_col_heading {
+#eaoqenprms .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1993,7 +2069,7 @@ sample estimates:
   overflow-x: hidden;
 }
 
-#wdojgotmqn .gt_column_spanner_outer {
+#eaoqenprms .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2005,15 +2081,15 @@ sample estimates:
   padding-right: 4px;
 }
 
-#wdojgotmqn .gt_column_spanner_outer:first-child {
+#eaoqenprms .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wdojgotmqn .gt_column_spanner_outer:last-child {
+#eaoqenprms .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wdojgotmqn .gt_column_spanner {
+#eaoqenprms .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2025,11 +2101,11 @@ sample estimates:
   width: 100%;
 }
 
-#wdojgotmqn .gt_spanner_row {
+#eaoqenprms .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wdojgotmqn .gt_group_heading {
+#eaoqenprms .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2055,7 +2131,7 @@ sample estimates:
   text-align: left;
 }
 
-#wdojgotmqn .gt_empty_group_heading {
+#eaoqenprms .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2070,15 +2146,15 @@ sample estimates:
   vertical-align: middle;
 }
 
-#wdojgotmqn .gt_from_md > :first-child {
+#eaoqenprms .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wdojgotmqn .gt_from_md > :last-child {
+#eaoqenprms .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wdojgotmqn .gt_row {
+#eaoqenprms .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2097,7 +2173,7 @@ sample estimates:
   overflow-x: hidden;
 }
 
-#wdojgotmqn .gt_stub {
+#eaoqenprms .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2110,7 +2186,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#wdojgotmqn .gt_stub_row_group {
+#eaoqenprms .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2124,15 +2200,15 @@ sample estimates:
   vertical-align: top;
 }
 
-#wdojgotmqn .gt_row_group_first td {
+#eaoqenprms .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wdojgotmqn .gt_row_group_first th {
+#eaoqenprms .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wdojgotmqn .gt_summary_row {
+#eaoqenprms .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2142,16 +2218,16 @@ sample estimates:
   padding-right: 5px;
 }
 
-#wdojgotmqn .gt_first_summary_row {
+#eaoqenprms .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wdojgotmqn .gt_first_summary_row.thick {
+#eaoqenprms .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wdojgotmqn .gt_last_summary_row {
+#eaoqenprms .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2161,7 +2237,7 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#wdojgotmqn .gt_grand_summary_row {
+#eaoqenprms .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2171,7 +2247,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#wdojgotmqn .gt_first_grand_summary_row {
+#eaoqenprms .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2181,7 +2257,7 @@ sample estimates:
   border-top-color: #D3D3D3;
 }
 
-#wdojgotmqn .gt_last_grand_summary_row_top {
+#eaoqenprms .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2191,11 +2267,11 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#wdojgotmqn .gt_striped {
+#eaoqenprms .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wdojgotmqn .gt_table_body {
+#eaoqenprms .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2204,7 +2280,7 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#wdojgotmqn .gt_footnotes {
+#eaoqenprms .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2218,7 +2294,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#wdojgotmqn .gt_footnote {
+#eaoqenprms .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2227,7 +2303,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#wdojgotmqn .gt_sourcenotes {
+#eaoqenprms .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2241,7 +2317,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#wdojgotmqn .gt_sourcenote {
+#eaoqenprms .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2249,63 +2325,63 @@ sample estimates:
   padding-right: 5px;
 }
 
-#wdojgotmqn .gt_left {
+#eaoqenprms .gt_left {
   text-align: left;
 }
 
-#wdojgotmqn .gt_center {
+#eaoqenprms .gt_center {
   text-align: center;
 }
 
-#wdojgotmqn .gt_right {
+#eaoqenprms .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wdojgotmqn .gt_font_normal {
+#eaoqenprms .gt_font_normal {
   font-weight: normal;
 }
 
-#wdojgotmqn .gt_font_bold {
+#eaoqenprms .gt_font_bold {
   font-weight: bold;
 }
 
-#wdojgotmqn .gt_font_italic {
+#eaoqenprms .gt_font_italic {
   font-style: italic;
 }
 
-#wdojgotmqn .gt_super {
+#eaoqenprms .gt_super {
   font-size: 65%;
 }
 
-#wdojgotmqn .gt_footnote_marks {
+#eaoqenprms .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wdojgotmqn .gt_asterisk {
+#eaoqenprms .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wdojgotmqn .gt_indent_1 {
+#eaoqenprms .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wdojgotmqn .gt_indent_2 {
+#eaoqenprms .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wdojgotmqn .gt_indent_3 {
+#eaoqenprms .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wdojgotmqn .gt_indent_4 {
+#eaoqenprms .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wdojgotmqn .gt_indent_5 {
+#eaoqenprms .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2340,27 +2416,27 @@ sample estimates:
 </table>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet2<span class="sc">$</span>Group, SportsBet2<span class="sc">$</span>Bet), <span class="at">alternative =</span> <span class="st">"two.sided"</span>, </span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">correct =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="at">x =</span> <span class="fu">table</span>(SportsBet2<span class="sc">$</span>Group, SportsBet2<span class="sc">$</span>Bet), <span class="at">alternative =</span> <span class="st">"two.sided"</span>, </span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">correct =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() <span class="sc">%&gt;%</span> <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="yzphsurvzj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#yzphsurvzj table {
+<div id="dkazhxjsgy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dkazhxjsgy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#yzphsurvzj thead, #yzphsurvzj tbody, #yzphsurvzj tfoot, #yzphsurvzj tr, #yzphsurvzj td, #yzphsurvzj th {
+#dkazhxjsgy thead, #dkazhxjsgy tbody, #dkazhxjsgy tfoot, #dkazhxjsgy tr, #dkazhxjsgy td, #dkazhxjsgy th {
   border-style: none;
 }
 
-#yzphsurvzj p {
+#dkazhxjsgy p {
   margin: 0;
   padding: 0;
 }
 
-#yzphsurvzj .gt_table {
+#dkazhxjsgy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2386,12 +2462,12 @@ sample estimates:
   border-left-color: #D3D3D3;
 }
 
-#yzphsurvzj .gt_caption {
+#dkazhxjsgy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#yzphsurvzj .gt_title {
+#dkazhxjsgy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2403,7 +2479,7 @@ sample estimates:
   border-bottom-width: 0;
 }
 
-#yzphsurvzj .gt_subtitle {
+#dkazhxjsgy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2415,7 +2491,7 @@ sample estimates:
   border-top-width: 0;
 }
 
-#yzphsurvzj .gt_heading {
+#dkazhxjsgy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2427,13 +2503,13 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#yzphsurvzj .gt_bottom_border {
+#dkazhxjsgy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#yzphsurvzj .gt_col_headings {
+#dkazhxjsgy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2448,7 +2524,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#yzphsurvzj .gt_col_heading {
+#dkazhxjsgy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2468,7 +2544,7 @@ sample estimates:
   overflow-x: hidden;
 }
 
-#yzphsurvzj .gt_column_spanner_outer {
+#dkazhxjsgy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2480,15 +2556,15 @@ sample estimates:
   padding-right: 4px;
 }
 
-#yzphsurvzj .gt_column_spanner_outer:first-child {
+#dkazhxjsgy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#yzphsurvzj .gt_column_spanner_outer:last-child {
+#dkazhxjsgy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#yzphsurvzj .gt_column_spanner {
+#dkazhxjsgy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2500,11 +2576,11 @@ sample estimates:
   width: 100%;
 }
 
-#yzphsurvzj .gt_spanner_row {
+#dkazhxjsgy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#yzphsurvzj .gt_group_heading {
+#dkazhxjsgy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2530,7 +2606,7 @@ sample estimates:
   text-align: left;
 }
 
-#yzphsurvzj .gt_empty_group_heading {
+#dkazhxjsgy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2545,15 +2621,15 @@ sample estimates:
   vertical-align: middle;
 }
 
-#yzphsurvzj .gt_from_md > :first-child {
+#dkazhxjsgy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#yzphsurvzj .gt_from_md > :last-child {
+#dkazhxjsgy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#yzphsurvzj .gt_row {
+#dkazhxjsgy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2572,7 +2648,7 @@ sample estimates:
   overflow-x: hidden;
 }
 
-#yzphsurvzj .gt_stub {
+#dkazhxjsgy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2585,7 +2661,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#yzphsurvzj .gt_stub_row_group {
+#dkazhxjsgy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2599,15 +2675,15 @@ sample estimates:
   vertical-align: top;
 }
 
-#yzphsurvzj .gt_row_group_first td {
+#dkazhxjsgy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#yzphsurvzj .gt_row_group_first th {
+#dkazhxjsgy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#yzphsurvzj .gt_summary_row {
+#dkazhxjsgy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2617,16 +2693,16 @@ sample estimates:
   padding-right: 5px;
 }
 
-#yzphsurvzj .gt_first_summary_row {
+#dkazhxjsgy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#yzphsurvzj .gt_first_summary_row.thick {
+#dkazhxjsgy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#yzphsurvzj .gt_last_summary_row {
+#dkazhxjsgy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2636,7 +2712,7 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#yzphsurvzj .gt_grand_summary_row {
+#dkazhxjsgy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2646,7 +2722,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#yzphsurvzj .gt_first_grand_summary_row {
+#dkazhxjsgy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2656,7 +2732,7 @@ sample estimates:
   border-top-color: #D3D3D3;
 }
 
-#yzphsurvzj .gt_last_grand_summary_row_top {
+#dkazhxjsgy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2666,11 +2742,11 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#yzphsurvzj .gt_striped {
+#dkazhxjsgy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#yzphsurvzj .gt_table_body {
+#dkazhxjsgy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2679,7 +2755,7 @@ sample estimates:
   border-bottom-color: #D3D3D3;
 }
 
-#yzphsurvzj .gt_footnotes {
+#dkazhxjsgy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2693,7 +2769,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#yzphsurvzj .gt_footnote {
+#dkazhxjsgy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2702,7 +2778,7 @@ sample estimates:
   padding-right: 5px;
 }
 
-#yzphsurvzj .gt_sourcenotes {
+#dkazhxjsgy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2716,7 +2792,7 @@ sample estimates:
   border-right-color: #D3D3D3;
 }
 
-#yzphsurvzj .gt_sourcenote {
+#dkazhxjsgy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2724,63 +2800,63 @@ sample estimates:
   padding-right: 5px;
 }
 
-#yzphsurvzj .gt_left {
+#dkazhxjsgy .gt_left {
   text-align: left;
 }
 
-#yzphsurvzj .gt_center {
+#dkazhxjsgy .gt_center {
   text-align: center;
 }
 
-#yzphsurvzj .gt_right {
+#dkazhxjsgy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#yzphsurvzj .gt_font_normal {
+#dkazhxjsgy .gt_font_normal {
   font-weight: normal;
 }
 
-#yzphsurvzj .gt_font_bold {
+#dkazhxjsgy .gt_font_bold {
   font-weight: bold;
 }
 
-#yzphsurvzj .gt_font_italic {
+#dkazhxjsgy .gt_font_italic {
   font-style: italic;
 }
 
-#yzphsurvzj .gt_super {
+#dkazhxjsgy .gt_super {
   font-size: 65%;
 }
 
-#yzphsurvzj .gt_footnote_marks {
+#dkazhxjsgy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#yzphsurvzj .gt_asterisk {
+#dkazhxjsgy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#yzphsurvzj .gt_indent_1 {
+#dkazhxjsgy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#yzphsurvzj .gt_indent_2 {
+#dkazhxjsgy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#yzphsurvzj .gt_indent_3 {
+#dkazhxjsgy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#yzphsurvzj .gt_indent_4 {
+#dkazhxjsgy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#yzphsurvzj .gt_indent_5 {
+#dkazhxjsgy .gt_indent_5 {
   text-indent: 25px;
 }
 </style>

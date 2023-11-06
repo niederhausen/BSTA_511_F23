@@ -848,8 +848,7 @@ $$1-\beta=
 mu <- 98.25; mu0 <- 98.6; sd <- 0.73; alpha <- 0.05; n <- 130
 (z <- (mu-mu0) / (sd/sqrt(n)) )
 
-Power <- pnorm(z-qnorm(1-alpha/2)) + pnorm(-z-qnorm(1-alpha/2))
-Power
+(Power <- pnorm(z-qnorm(1-alpha/2)) + pnorm(-z-qnorm(1-alpha/2)))
 ```
 
 If the population mean is 98.2 instead of 98.6, we have a 99.98% chance of correctly rejecting $H_0$ when the sample size is 130.  

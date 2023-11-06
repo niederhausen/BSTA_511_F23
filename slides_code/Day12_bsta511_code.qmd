@@ -49,24 +49,24 @@ library(pwr) # new-ish
   - seeing whether it has been checked off or not
 
 
-# Where are we?
+## Where are we?
 
-$$point~estimate \pm z^*(or~t^*)\cdot SE,~~~~~~~~test~stat = \frac{point~estimate-null~value}{SE}$$
+CI's and hypothesis tests for different scenarios:
 
-Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE 
---------|--------|--------|--------|--------|--------|--------
-11-12 | 5.1 | Pop mean | $p$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$ 
-13 | 5.2 | Diff in paired <br> pop means | $p_d$ or $\delta$ | Diff in paired <br> sample means | $\bar{x}_{d}$  | $\frac{s_d}{\sqrt{n}}$ 
-14 | 5.3 | Diff in pop <br> means | $p_1-p_2$ | Diff in sample <br> means | $\bar{x}_1 - \bar{x}_2$  | $\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ or pooled
-<span style="color:darkorange">15</span> | <span style="color:darkorange">8.1</span> | <span style="color:darkorange">Pop proportion</span> | $p$ | <span style="color:darkorange">Sample prop</span> | $\hat{p}$  | 
-<span style="color:darkorange">15</span> | <span style="color:darkorange">8.2</span> | <span style="color:darkorange">Diff in pop <br> proportions</span> | $p_1-p_2$ | <span style="color:darkorange">Diff in sample <br> proportions</span> | $\hat{p}_1-\hat{p}_2$ | 
+$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
 
-
-
-
+Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
+--|--|--|--|--|--|--
+10 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$
+10 | 5.2 | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff | $\bar{x}_{d}$  | **$\frac{s_d}{\sqrt{n}}$**
+11 | 5.3 | [Diff in pop <br> means]{style="color:black"} | [$\mu_1-\mu_2$]{style="color:black"} | [Diff in sample <br> means]{style="color:black"} | [$\bar{x}_1 - \bar{x}_2$]{style="color:black"}  | [**$\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ or pooled**]{style="color:black"}
+12 | 8.1 | [Pop proportion]{style="color:green"} | [$p$]{style="color:green"} | [Sample prop]{style="color:green"} | [$\widehat{p}$]{style="color:green"}  | [**???**]{style="color:red"}
+12 | 8.2 | [Diff in pop <br> proportions]{style="color:green"} | [$p_1-p_2$]{style="color:green"} | [Diff in sample <br> proportions]{style="color:green"} | [$\widehat{p}_1-\widehat{p}_2$]{style="color:green"} | [**???**]{style="color:red"}
 
 
-# Goals for today (Sections 8.1-8.2)
+
+
+## Goals for today (Sections 8.1-8.2)
 
 * Statistical inference for a single proportion or the difference of two (independent) proportions
     1. Sampling distribution for a proportion or difference in proportions
@@ -81,8 +81,9 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
     
     1. How are the SE's different for a hypothesis test & CI?
     
-    1. Run test in R
-
+    1. How to run proportions tests in R
+    
+    1. Power & sample size for proportions tests (extra material)
 
 
 # Motivating example
@@ -97,8 +98,7 @@ __Two proportions__
 
 * There were 214 men in the sample of noncollege young males (36% participated in sports betting in the previous year).
 * Compare the difference in proportions between the college and noncollege young males.
-    * CI
-    * Hypothesis test
+    * CI & Hypothesis test
 
 
 Barnes GM, Welte JW, Hoffman JH, Tidwell MC. [Comparisons of gambling and alcohol use among college students and noncollege young people in the United States](https://www.tandfonline.com/doi/full/10.1080/07448480903540499?journalCode=vach20). J Am Coll Health. 2010 Mar-Apr;58(5):443-52. doi: 10.1080/07448480903540499. PMID: 20304756; PMCID: PMC4104810.
@@ -135,9 +135,10 @@ __One sample test__
 
 * $H_A$: The population proportion of young male college students that participated in sports betting in the previous year is not 0.36.
 
-$$~~~~H_0: p = 0.36\\
-H_A: p \neq 0.36$$
-
+\begin{align}
+H_0:& p = 0.36\\
+H_A:& p \neq 0.36\\
+\end{align}
 
 
 __Two samples test__
@@ -146,9 +147,10 @@ __Two samples test__
 
 * $H_A$: The difference in population proportions of young male college and noncollege students that participated in sports betting in the previous year is not 0.
 
-$$~~~~H_0: p_{coll} - p_{noncoll} = 0\\
-H_A: p_{coll} - p_{noncoll} \neq 0$$
-
+\begin{align}
+H_0:& p_{coll} - p_{noncoll} = 0\\
+H_A:& p_{coll} - p_{noncoll} \neq 0\\
+\end{align}
 
 
 # One proportion inference
@@ -156,59 +158,45 @@ H_A: p_{coll} - p_{noncoll} \neq 0$$
 ## Sampling distribution of $\hat{p}$ 
 
 * $\hat{p}=\frac{X}{n}$ where $X$ is the number of "successes" and $n$ is the sample size.
-* Thus, $X \sim Bin(n,p)$, where $p$ is the population proportion.
+* $X \sim Bin(n,p)$, where $p$ is the population proportion.
 * For $n$ "big enough", the normal distribution can be used to approximate a binomial distribution:
 
 $$Bin(n,p) \rightarrow N\Big(\mu = np, \sigma = \sqrt{np(1-p)} \Big)$$
+
 * Since $\hat{p}=\frac{X}{n}$ is a linear transformation of $X$, we have for large n: 
 
 $$\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)$$
 
-* How we apply this result to CI's and test statistics is different!!!
-
+* [*How we apply this result to CI's and test statistics is different!!!*]{style="color:purple"}
 
 
 
 ## Step 3: Test statistic 
 
+Sampling distribution of $\hat{p}$ if we assume $H_0: p=p_0$ is true:
 
-Sampling distribution of $\hat{p}$
-$$\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)$$
-If we assume $H_0: p=p_0$ is true, then  
-
-$$\hat{p} \sim N\Big(
+$$\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big) 
+\sim N\Big(
 \mu_{\hat{p}}=p_0, \sigma_{\hat{p}}=\sqrt{\frac{p_0\cdot(1-p_0)}{n}}
 \Big)$$
 
 
-
-
-
-General test statistic:
+Test statistic for a one sample proportion test:
 
 $$
-\text{test statistic} = \frac{point~estimate - null~value}{SE}
+\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}
+= z_{\hat{p}} = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}}
 $$
-
-For a one sample proportion test:
-
-$$
-\text{test statistic} = z_{\hat{p}} = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}}
-$$
-
 
 <hr>
 
-
 __Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.   
+<br>
 What is the test statistic when testing $H_0: p=0.36$ vs. 
 $H_A: p \neq 0.36$? 
 
 
-
-
 ```{r}
-#| include: false
 p0 <- 0.36
 n <- 269
 n*.35
@@ -218,15 +206,14 @@ n*.35
 (zp <- (ph-p0)/SEp)
 ```
 
-$$z_{\hat{p}} = \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}}$$
-
-
-
+\begin{align}
+z_{\hat{p}} &= \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}} \\
+& `r zp`
+\end{align}
 
 
 
 ## Step "3b": Conditions satisfied?
-
 
 __Conditions__:
 
@@ -236,14 +223,13 @@ __Conditions__:
 1. The number of __expected successes and expected failures is at least 10__.
     * $n_1 p_0 \ge 10, \ \ n_1(1-p_0)\ge 10$
 
+<hr>
 
-
-
-
-__Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.   
+__Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.  
+<br>
 Testing $H_0: p=0.36$ vs. $H_A: p \neq 0.36$.  
+<br>
 Are the conditions satisfied?
-
 
 
 
@@ -292,16 +278,15 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
 ```
 
 
-
-
-
-
 Calculate the _p_-value:
 
+\begin{align}
+2 &\cdot P(\hat{p}<0.35) \\
+&= 2 \cdot P\Big(Z_{\hat{p}} < \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}}\Big)\\
+&=2 \cdot P(Z_{\hat{p}} < -0.3607455)\\
+&= `r 2*pnorm(-0.3607455)`
+\end{align}
 
-$$2 \cdot P(\hat{p}<0.35) \\
-= 2 \cdot P\Big(Z_{\hat{p}} < \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}}\Big)\\
-=2 \cdot P(Z_{\hat{p}} < -0.3607455)$$
 ```{r}
 2*pnorm(-0.3607455)
 ```
@@ -310,8 +295,10 @@ $$2 \cdot P(\hat{p}<0.35) \\
 
 ## Step 5: Conclusion to hypothesis test
 
-$$~~~~H_0: p = 0.36\\
-H_A: p \neq 0.36$$
+\begin{align}
+H_0:& p = 0.36\\
+H_A:& p \neq 0.36\\
+\end{align}
 
 * Recall the $p$-value = 0.7182897
 * Use $\alpha$ = 0.05.
@@ -333,31 +320,33 @@ What to use for SE in CI formula?
 
 $$\hat{p} \pm z^* \cdot SE_{\hat{p}}$$
 
-Sampling distribution of $\hat{p}$
+Sampling distribution of $\hat{p}$:
+
 $$\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)$$
 
+Problem: We don't know what $p$ is - it's what we're estimating with the CI.  
+Solution: [approximate $p$ with $\hat{p}$]{style="color:purple"}:
 
+$$SE_{\hat{p}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
 
 <hr>
-
 
 __Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.   
 Find the 95% CI for the population proportion. 
 
-
-$$94/269 \pm 1.96 \cdot SE_{\hat{p}}\\
-SE_{\hat{p}} = \sqrt{\frac{(94/269)(1-94/269)}{269}}$$
-
+\begin{align}
+94/269 &\pm 1.96 \cdot SE_{\hat{p}}\\
+SE_{\hat{p}} &= \sqrt{\frac{(94/269)(1-94/269)}{269}}
+\end{align}
 
 __Interpretation__:  
 We are 95% confident that the (population) proportion of young male college students that participated in sports betting in the previous year is in (0.29, 0.41).
 
 
-
 ## Conditions for one proportion: test vs. CI
 
 
-__Hypothesis test conditions__
+[__Hypothesis test conditions__]{style="color:green"}
 
 1. _Independent observations_ 
     * The observations were collected independently.
@@ -368,7 +357,7 @@ $$n_1 p_0 \ge 10, \ \ n_1(1-p_0)\ge 10$$
 
 
 
-__Confidence interval conditions__
+[__Confidence interval conditions__]{style="color:purple"}
 
 1. _Independent observations_ 
     * The observations were collected independently.
@@ -378,14 +367,19 @@ __Confidence interval conditions__
 $$n_1\hat{p}_1 \ge 10, \ \ n_1(1-\hat{p}_1)\ge 10$$
 
 
-# Two (independent) proportions inference
+# Inference for difference of two independent proportions $\hat{p}_1-\hat{p}_2$
 
 
 ## Sampling distribution of $\hat{p}_1-\hat{p}_2$ 
 
-* $\hat{p}_1=\frac{X_1}{n_1}$ and $\hat{p}_2=\frac{X_2}{n_2}$, where $X_1$ & $X_2$ are the number of "successes" and $n_1$ & $n_2$ are the sample sizes of the 1st & 2nd samples, with population proportions $p_1$ & $p_2$, respectively.
-* On the previous slide we saw that $\hat{p}$ can be approximated by a normal distribution.
-* Since the difference of independent normal random variables is also independent, it follows that for $n_1$ and $n_2$ "big enough"
+* $\hat{p}_1=\frac{X_1}{n_1}$ and $\hat{p}_2=\frac{X_2}{n_2}$, 
+    * $X_1$ & $X_2$ are the number of "successes"
+    * $n_1$ & $n_2$ are the sample sizes of the 1st & 2nd samples 
+
+<br>
+
+* Each $\hat{p}$ can be approximated by a normal distribution, for "big enough" $n$
+* Since the difference of independent normal random variables is also independent, it follows that for "big enough" $n_1$ and $n_2$ 
 
 $$\hat{p}_1 - \hat{p}_2 \sim N \Big(\mu_{\hat{p}_1 - \hat{p}_2} = p_1 - p_2, ~~
 \sigma_{\hat{p}_1 - \hat{p}_2} =
@@ -393,7 +387,9 @@ $$\hat{p}_1 - \hat{p}_2 \sim N \Big(\mu_{\hat{p}_1 - \hat{p}_2} = p_1 - p_2, ~~
 \frac{p_1\cdot(1-p_1)}{n_1} + \frac{p_2\cdot(1-p_2)}{n_2}} 
 \Big)$$
 
-* How we apply this result to CI's and test statistics is different!!!
+where $p_1$ & $p_2$ are the population proportions, respectively.
+
+* [*How we apply this result to CI's and test statistics is different!!!*]{style="color:purple"}
 
 
 
@@ -406,41 +402,37 @@ $$\hat{p}_1 - \hat{p}_2 \sim N \Big(\mu_{\hat{p}_1 - \hat{p}_2} = p_1 - p_2, ~~
 \frac{p_1\cdot(1-p_1)}{n_1} + \frac{p_2\cdot(1-p_2)}{n_2}} 
 \Big)$$
 
-If we assume $H_0: p_1=p_2$ is true, then we "pool" the proportions of the two samples to calculate the SE:
+Since we assume $H_0: p_1 - p_2 = 0$ is true, we "pool" the proportions of the two samples to calculate the SE:
 
-$$pooled~proportion = \hat{p} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}$$ 
+$$\text{pooled proportion} = \hat{p}_{pool} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}$$ 
 
 
 Test statistic:
 
 $$
-\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}\cdot(1-\hat{p})}{n_1} + \frac{\hat{p}\cdot(1-\hat{p})}{n_2}}}
+\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_1} + \frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_2}}}
 $$
-
-
 
 
 ## Step 3: Test statistic (2/2)
 
 
 $$
-\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}\cdot(1-\hat{p})}{n_1} + \frac{\hat{p}\cdot(1-\hat{p})}{n_2}}}
+\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_1} + \frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_2}}}
 $$
-$$pooled~proportion = \hat{p} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}$$ 
+
+$$\text{pooled proportion} = \hat{p}_{pool} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}$$ 
+
 <hr>
-
-
 
 __Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had.  
 What is the test statistic when testing $H_0: p_{coll} - p_{noncoll} = 0$ vs. 
 $H_A: p_{coll} - p_{noncoll} \neq 0$? 
 
-
-
-$$z_{\hat{p}_1 - \hat{p}_2} = \frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\\
-=-0.2367497$$
-
-
+\begin{align}
+z_{\hat{p}_1 - \hat{p}_2} &= \frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\\
+&=-0.2367497
+\end{align}
 
 
 ## Step "3b": Conditions satisfied?
@@ -453,8 +445,8 @@ __Conditions__:
     * In particular, observations from the two groups weren't paired in any meaningful way.
 
 * The number of expected successes and expected failures is at least 10 _for each group_ - using the pooled proportion:
-    * $n_1\hat{p} \ge 10, \ \ n_1(1-\hat{p}) \ge 10$
-    * $n_2\hat{p} \ge 10, \ \ n_2(1-\hat{p}) \ge 10$
+    * $n_1\hat{p}_{pool} \ge 10, \ \ n_1(1-\hat{p}_{pool}) \ge 10$
+    * $n_2\hat{p}_{pool} \ge 10, \ \ n_2(1-\hat{p}_{pool}) \ge 10$
 
 
 
@@ -511,10 +503,12 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
 
 Calculate the _p_-value:
 
-$$2 \cdot P(\hat{p}_1 - \hat{p}_2<0.35-0.36) \\
-= 2 \cdot P\Big(Z_{\hat{p}_1 - \hat{p}_2} < \\
-\frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\Big)\\
-=2 \cdot P(Z_{\hat{p}} < -0.2367497)$$
+\begin{align}
+2 &\cdot P(\hat{p}_1 - \hat{p}_2<0.35-0.36) \\
+&= 2 \cdot P\Big(Z_{\hat{p}_1 - \hat{p}_2} < \\
+&\frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\Big)\\
+&=2 \cdot P(Z_{\hat{p}} < -0.2367497)
+\end{align}
 ```{r}
 2*pnorm(-0.2367497)
 ```
@@ -524,8 +518,10 @@ $$2 \cdot P(\hat{p}_1 - \hat{p}_2<0.35-0.36) \\
 
 ## Step 5: Conclusion to hypothesis test
 
-$$~~~~H_0: p_{coll} - p_{noncoll} = 0\\
-H_A: p_{coll} - p_{noncoll} \neq 0$$
+\begin{align}
+H_0:& p_{coll} - p_{noncoll} = 0\\
+H_A:& p_{coll} - p_{noncoll} \neq 0\\
+\end{align}
 
 * Recall the $p$-value = 0.812851
 * Use $\alpha$ = 0.05.
@@ -543,86 +539,89 @@ __Conclusion statement__:
 
 ## 95% CI for population difference in proportions
 
-
-
 What to use for SE in CI formula?
 
 $$\hat{p}_1 - \hat{p}_2 \pm z^* \cdot SE_{\hat{p}_1 - \hat{p}_2}$$
 
-
-
 SE in sampling distribution of $\hat{p}_1 - \hat{p}_2$
+
 $$\sigma_{\hat{p}_1 - \hat{p}_2} =
 \sqrt{
 \frac{p_1\cdot(1-p_1)}{n_1} + \frac{p_2\cdot(1-p_2)}{n_2}} $$
 
+Problem: We don't know what $p$ is - it's what we're estimating with the CI.  
+Solution: [approximate $p_1$, $p_2$ with $\hat{p}_1$, $\hat{p}_2$]{style="color:purple"}:
 
+$$SE_{\hat{p}_1 - \hat{p}_2} = \sqrt{
+\frac{\hat{p}_1\cdot(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2\cdot(1-\hat{p}_2)}{n_2}}$$
 
 <hr>
-
 
 __Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had.
 Find the 95% CI for the difference in population proportions. 
 
 $$\frac{94}{269} - \frac{77}{214} \pm 1.96 \cdot SE_{\hat{p}_1 - \hat{p}_2}$$
 
-
-$$SE_{\hat{p}_1 - \hat{p}_2}=\\
-\sqrt{
+\begin{align}
+& SE_{\hat{p}_1 - \hat{p}_2}=\\
+& \sqrt{
 \frac{94/269 \cdot (1-94/269)}{269} + 
-\frac{77/214 \cdot (1-77/214)}{214}}$$
-
-
-
+\frac{77/214 \cdot (1-77/214)}{214}}
+\end{align}
 
 __Interpretation__:  
 We are 95% confident that the difference in (population) proportions of young male college and noncollege students that participated in sports betting in the previous year is in (-0.127, 0.106).
 
 
 
-
 ## Conditions for difference in proportions: test vs. CI
 
 
-__Hypothesis test conditions__
+[__Hypothesis test conditions__]{style="color:green"}
 
 1. _Independent observations & samples_
     * The observations were collected independently. 
     * In particular, observations from the two groups weren't paired in any meaningful way.
 
-1. The number of expected successes and expected failures is at least 10 _for each group_ - using the pooled proportion:
-    * $n_1\hat{p} \ge 10, \ \ n_1(1-\hat{p}) \ge 10$
-    * $n_2\hat{p} \ge 10, \ \ n_2(1-\hat{p}) \ge 10$
 
+2. The number of __expected__ successes and __expected__ failures is at least 10 _for each group_ - using the pooled proportion:
+    * $n_1\hat{p}_{pool} \ge 10, \ \ n_1(1-\hat{p}_{pool}) \ge 10$
+    * $n_2\hat{p}_{pool} \ge 10, \ \ n_2(1-\hat{p}_{pool}) \ge 10$
 
-
-
-__Confidence interval conditions__
+[__Confidence interval conditions__]{style="color:purple"}
 
 1. _Independent observations & samples_
     * The observations were collected independently. 
     * In particular, observations from the two groups weren't paired in any meaningful way.
 
-1. The number of expected successes and expected failures is at least 10 _for each group_.
+2. The number of successes and expected failures is at least 10 _for each group_.
     * $n_1\hat{p}_1 \ge 10, \ \ n_1(1-\hat{p}_1) \ge 10$
     * $n_2\hat{p}_2 \ge 10, \ \ n_2(1-\hat{p}_2) \ge 10$
 
 
-# R: 1-sample proportion test (1/3)
+
+# 1- and 2-sample proportions tests in R
+
+* `prop.test`
+* Need a dataset to use `prop.test`
+    * Create dataset based on the summary stats if do not have one
+* Input of `prop.test` is a `table()` of the dataset
+* Continuity correction
 
 
-We first need a dataset based on the results:
+## R: 1-sample proportion test (1/3)
+
+Create a dataset based on the results:
 ```{r}
 .35*269 # number of "successes"
 # round this value
 
 SportsBet1 <- tibble(
   Coll = c(rep("Bet", 94), 
-              rep("NotBet",269-94))
+           rep("NotBet",269-94))
   )
 glimpse(SportsBet1)
 ```
-
 
 
 ```{r}
@@ -635,10 +634,6 @@ table(SportsBet1$Coll)
 ```
 
 
-
-
-
-
 ## R: 1-sample proportion test (2/3)
 
 `prop.test` requires the input x to be a table
@@ -649,7 +644,6 @@ prop.test(x = table(SportsBet1$Coll),
        p = 0.36,
        correct = FALSE)
 ```
-
 
 
 
@@ -666,7 +660,6 @@ prop.test(x = table(SportsBet1$Coll), alternative = "two.sided",
 ```
 
 Differences are small when sample sizes are large.
-
 
 
 

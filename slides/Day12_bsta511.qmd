@@ -53,22 +53,33 @@ theme_set(theme_bw(base_size = 22))
 
 ```
 
+## MoRitz's tip of the day
+
+
+## Where are we? 
+
+<br>
+<br>
+
+![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
 
 
 ## Where are we?
 
-$$point~estimate \pm z^*(or~t^*)\cdot SE,~~~~~~~~test~stat = \frac{point~estimate-null~value}{SE}$$
+::: {style="font-size: 90%;"}
+CI's and hypothesis tests for different scenarios:
 
-Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE 
+$$\text{point estimate} \pm z^*(or~t^*)\cdot SE,~~\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}$$
+
+Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
 --|--|--|--|--|--|--
-11-12 | 5.1 | Pop mean | $p$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$ 
-13 | 5.2 | Diff in paired <br> pop means | $p_d$ or $\delta$ | Diff in paired <br> sample means | $\bar{x}_{d}$  | $\frac{s_d}{\sqrt{n}}$ 
-14 | 5.3 | Diff in pop <br> means | $p_1-p_2$ | Diff in sample <br> means | $\bar{x}_1 - \bar{x}_2$  | $\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ or pooled
-<span style="color:darkorange">15</span> | <span style="color:darkorange">8.1</span> | <span style="color:darkorange">Pop proportion</span> | $p$ | <span style="color:darkorange">Sample prop</span> | $\hat{p}$  | 
-<span style="color:darkorange">15</span> | <span style="color:darkorange">8.2</span> | <span style="color:darkorange">Diff in pop <br> proportions</span> | $p_1-p_2$ | <span style="color:darkorange">Diff in sample <br> proportions</span> | $\hat{p}_1-\hat{p}_2$ | 
+10 | 5.1 | Pop mean | $\mu$ | Sample mean | $\bar{x}$ | $\frac{s}{\sqrt{n}}$
+10 | 5.2 | Pop mean of paired diff | $\mu_d$ or $\delta$ | Sample mean of paired diff | $\bar{x}_{d}$  | **$\frac{s_d}{\sqrt{n}}$**
+11 | 5.3 | [Diff in pop <br> means]{style="color:black"} | [$\mu_1-\mu_2$]{style="color:black"} | [Diff in sample <br> means]{style="color:black"} | [$\bar{x}_1 - \bar{x}_2$]{style="color:black"}  | [**$\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ or pooled**]{style="color:black"}
+12 | 8.1 | [Pop proportion]{style="color:green"} | [$p$]{style="color:green"} | [Sample prop]{style="color:green"} | [$\widehat{p}$]{style="color:green"}  | [**???**]{style="color:red"}
+12 | 8.2 | [Diff in pop <br> proportions]{style="color:green"} | [$p_1-p_2$]{style="color:green"} | [Diff in sample <br> proportions]{style="color:green"} | [$\widehat{p}_1-\widehat{p}_2$]{style="color:green"} | [**???**]{style="color:red"}
 
-
-
+:::
 
 
 
@@ -87,11 +98,15 @@ Day | Book | Population <br> parameter | Symbol | Point estimate | Symbol | SE
     
     1. How are the SE's different for a hypothesis test & CI?
     
-    1. Run test in R
+    1. How to run proportions tests in R
+    
+    1. Power & sample size for proportions tests (extra material)
 
 
 
 ## Motivating example
+
+::: {style="font-size: 90%;"}
 
 __One proportion__
 
@@ -103,12 +118,14 @@ __Two proportions__
 
 * There were 214 men in the sample of noncollege young males (36% participated in sports betting in the previous year).
 * Compare the difference in proportions between the college and noncollege young males.
-    * CI
-    * Hypothesis test
+    * CI & Hypothesis test
 
+:::
 
+::: {style="font-size: 75%;"}
 Barnes GM, Welte JW, Hoffman JH, Tidwell MC. [Comparisons of gambling and alcohol use among college students and noncollege young people in the United States](https://www.tandfonline.com/doi/full/10.1080/07448480903540499?journalCode=vach20). J Am Coll Health. 2010 Mar-Apr;58(5):443-52. doi: 10.1080/07448480903540499. PMID: 20304756; PMCID: PMC4104810.
 
+:::
 
 
 ## Steps in a Hypothesis Test
@@ -131,85 +148,90 @@ Barnes GM, Welte JW, Hoffman JH, Tidwell MC. [Comparisons of gambling and alcoho
 
 ## Step 2: Null & Alternative Hypotheses 
 
+::: {style="font-size: 90%;"}
 Null and alternative hypotheses in __words__ and in __symbols__.
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="49%"}
 __One sample test__
 
 * $H_0$: The population proportion of young male college students that participated in sports betting in the previous year is 0.36.
 
 * $H_A$: The population proportion of young male college students that participated in sports betting in the previous year is not 0.36.
 
-$$~~~~H_0: p = 0.36\\
-H_A: p \neq 0.36$$
+\begin{align}
+H_0:& p = 0.36\\
+H_A:& p \neq 0.36\\
+\end{align}
+
 :::
 
-::: {.column width="50%"}
+::: {.column width="2%"}
+:::
+
+::: {.column width="49%"}
 __Two samples test__
 
 * $H_0$: The difference in population proportions of young male college and noncollege students that participated in sports betting in the previous year is 0.
 
 * $H_A$: The difference in population proportions of young male college and noncollege students that participated in sports betting in the previous year is not 0.
 
-$$~~~~H_0: p_{coll} - p_{noncoll} = 0\\
-H_A: p_{coll} - p_{noncoll} \neq 0$$
+\begin{align}
+H_0:& p_{coll} - p_{noncoll} = 0\\
+H_A:& p_{coll} - p_{noncoll} \neq 0\\
+\end{align}
 
 :::
+:::
 
+:::
 
 
 ## Sampling distribution of $\hat{p}$ 
 
 * $\hat{p}=\frac{X}{n}$ where $X$ is the number of "successes" and $n$ is the sample size.
-* Thus, $X \sim Bin(n,p)$, where $p$ is the population proportion.
+* $X \sim Bin(n,p)$, where $p$ is the population proportion.
 * For $n$ "big enough", the normal distribution can be used to approximate a binomial distribution:
 
 $$Bin(n,p) \rightarrow N\Big(\mu = np, \sigma = \sqrt{np(1-p)} \Big)$$
+
 * Since $\hat{p}=\frac{X}{n}$ is a linear transformation of $X$, we have for large n: 
 
 $$\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)$$
 
-* How we apply this result to CI's and test statistics is different!!!
-
+* [*How we apply this result to CI's and test statistics is different!!!*]{style="color:purple"}
 
 
 
 ## Step 3: Test statistic 
 
-::: columns
-::: {.column width="50%"}
-Sampling distribution of $\hat{p}$
-$$\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)$$
-If we assume $H_0: p=p_0$ is true, then  
+::: {style="font-size: 85%;"}
 
-$$\hat{p} \sim N\Big(
+Sampling distribution of $\hat{p}$ if we assume $H_0: p=p_0$ is true:
+
+$$\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big) 
+\sim N\Big(
 \mu_{\hat{p}}=p_0, \sigma_{\hat{p}}=\sqrt{\frac{p_0\cdot(1-p_0)}{n}}
 \Big)$$
-:::
-
-::: {.column width="50%"}
 
 
-General test statistic:
+Test statistic for a one sample proportion test:
 
 $$
-\text{test statistic} = \frac{point~estimate - null~value}{SE}
+\text{test stat} = \frac{\text{point estimate}-\text{null value}}{SE}
+= z_{\hat{p}} = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}}
 $$
 
-For a one sample proportion test:
-
-$$
-\text{test statistic} = z_{\hat{p}} = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0\cdot(1-p_0)}{n}}}
-$$
-:::
 :::
 
 <hr>
 
+::: {style="font-size: 90%;"}
+
 ::: columns
 ::: {.column width="50%"}
 __Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.   
+<br>
 What is the test statistic when testing $H_0: p=0.36$ vs. 
 $H_A: p \neq 0.36$? 
 :::
@@ -220,39 +242,40 @@ $H_A: p \neq 0.36$?
 #| include: false
 p0 <- 0.36
 n <- 269
-n*.35
+n*.35 # ~94
 (ph <- 94/n)
 
 (SEp <- sqrt(p0*(1-p0)/n))
 (zp <- (ph-p0)/SEp)
 ```
 
-$$z_{\hat{p}} = \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}}$$
+\begin{align}
+z_{\hat{p}} &= \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}} \\
+& `r zp`
+\end{align}
 
 :::
 :::
 
-
+:::
 
 
 ## Step "3b": Conditions satisfied?
 
-::: columns
-::: {.column width="50%"}
 __Conditions__:
 
-1. _Independent observations_ 
+1. Independent observations?
     * The observations were collected independently.
 
 1. The number of __expected successes and expected failures is at least 10__.
     * $n_1 p_0 \ge 10, \ \ n_1(1-p_0)\ge 10$
 
-:::
+<hr>
 
-::: {.column width="50%"}
-
-__Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.   
+__Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.  
+<br>
 Testing $H_0: p=0.36$ vs. $H_A: p \neq 0.36$.  
+<br>
 Are the conditions satisfied?
 
 
@@ -265,8 +288,7 @@ n <- 269
 n*p0
 n*(1-p0)
 ```
-:::
-:::
+
 
 
 ## Step 4: p-value
@@ -314,7 +336,6 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
              color = "red")
 ```
 
-
 :::
 
 ::: {.column width="50%"}
@@ -334,9 +355,13 @@ pnorm(zp)
 2*pnorm(zp)
 ```
 
-$$2 \cdot P(\hat{p}<0.35) \\
-= 2 \cdot P\Big(Z_{\hat{p}} < \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}}\Big)\\
-=2 \cdot P(Z_{\hat{p}} < -0.3607455)$$
+\begin{align}
+2 &\cdot P(\hat{p}<0.35) \\
+&= 2 \cdot P\Big(Z_{\hat{p}} < \frac{94/269 - 0.36}{\sqrt{\frac{0.36\cdot(1-0.36)}{269}}}\Big)\\
+&=2 \cdot P(Z_{\hat{p}} < -0.3607455)\\
+&= `r 2*pnorm(-0.3607455)`
+\end{align}
+
 ```{r}
 2*pnorm(-0.3607455)
 ```
@@ -345,12 +370,12 @@ $$2 \cdot P(\hat{p}<0.35) \\
 :::
 
 
-
-
 ## Step 5: Conclusion to hypothesis test
 
-$$~~~~H_0: p = 0.36\\
-H_A: p \neq 0.36$$
+\begin{align}
+H_0:& p = 0.36\\
+H_A:& p \neq 0.36\\
+\end{align}
 
 * Recall the $p$-value = 0.7182897
 * Use $\alpha$ = 0.05.
@@ -365,27 +390,47 @@ __Conclusion statement__:
     * In a sample of 269 male college students, 35% had participated in sports betting in the previous year, which is not different from 36% ( $p$-value = 0.72).
 
 
-
-
-
 ## 95% CI for population proportion
+
+::: {style="font-size: 80%;"}
 
 ::: columns
 ::: {.column width="50%"}
 What to use for SE in CI formula?
-
+:::
+::: {.column width="50%"}
 $$\hat{p} \pm z^* \cdot SE_{\hat{p}}$$
 :::
+:::
 
+::: columns
 ::: {.column width="50%"}
-Sampling distribution of $\hat{p}$
+Sampling distribution of $\hat{p}$:
+:::
+::: {.column width="50%"}
 $$\hat{p} \sim N\Big(\mu_{\hat{p}} = p, \sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} \Big)$$
 
 :::
 :::
 
+::: columns
+::: {.column width="50%"}
+Problem: We don't know what $p$ is - it's what we're estimating with the CI.  
+Solution: [approximate $p$ with $\hat{p}$]{style="color:purple"}:
+
+:::
+::: {.column width="50%"}
+
+$$SE_{\hat{p}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
+
+:::
+:::
+
+:::
+
 <hr>
 
+::: {style="font-size: 85%;"}
 ::: columns
 ::: {.column width="50%"}
 __Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.   
@@ -413,41 +458,51 @@ alpha <- 0.05
 (UB <- ph + moe)
 ```
 
-$$94/269 \pm 1.96 \cdot SE_{\hat{p}}\\
-SE_{\hat{p}} = \sqrt{\frac{(94/269)(1-94/269)}{269}}$$
+\begin{align}
+94/269 &\pm 1.96 \cdot SE_{\hat{p}}\\
+SE_{\hat{p}} &= \sqrt{\frac{(94/269)(1-94/269)}{269}}\\
+(`r round(LB, 4)` &, `r round(UB, 4)`)
+\end{align}
 
 :::
 :::
-
-
 
 __Interpretation__:  
 We are 95% confident that the (population) proportion of young male college students that participated in sports betting in the previous year is in (0.29, 0.41).
 
+:::
 
+## Conditions for one proportion: __test vs. CI__
 
-## Conditions for one proportion: test vs. CI
+::: {style="font-size: 90%;"}
 
 ::: columns
-::: {.column width="50%"}
-__Hypothesis test conditions__
+::: {.column width="48%"}
+[__Hypothesis test conditions__]{style="color:green"}
 
 1. _Independent observations_ 
     * The observations were collected independently.
 
-1. The number of __expected__ successes and __expected__ failures is at least 10.
+<br>
+
+2. The number of __expected__ successes and __expected__ failures is at least 10.
 
 $$n_1 p_0 \ge 10, \ \ n_1(1-p_0)\ge 10$$
 :::
 
-::: {.column width="50%"}
+::: {.column width="2%"}
+:::
 
-__Confidence interval conditions__
+::: {.column width="48%"}
+
+[__Confidence interval conditions__]{style="color:purple"}
 
 1. _Independent observations_ 
     * The observations were collected independently.
 
-1. The number of successes and failures is at least 10:
+<br>
+
+2. The number of successes and failures is at least 10:
 
 $$n_1\hat{p}_1 \ge 10, \ \ n_1(1-\hat{p}_1)\ge 10$$
 
@@ -468,14 +523,22 @@ n*(1-ph)
 ```
 
 
+:::
 
-
+# Inference for difference of two independent proportions <br> $\hat{p}_1-\hat{p}_2$
 
 ## Sampling distribution of $\hat{p}_1-\hat{p}_2$ 
 
-* $\hat{p}_1=\frac{X_1}{n_1}$ and $\hat{p}_2=\frac{X_2}{n_2}$, where $X_1$ & $X_2$ are the number of "successes" and $n_1$ & $n_2$ are the sample sizes of the 1st & 2nd samples, with population proportions $p_1$ & $p_2$, respectively.
-* On the previous slide we saw that $\hat{p}$ can be approximated by a normal distribution.
-* Since the difference of independent normal random variables is also independent, it follows that for $n_1$ and $n_2$ "big enough"
+::: {style="font-size: 90%;"}
+
+* $\hat{p}_1=\frac{X_1}{n_1}$ and $\hat{p}_2=\frac{X_2}{n_2}$, 
+    * $X_1$ & $X_2$ are the number of "successes"
+    * $n_1$ & $n_2$ are the sample sizes of the 1st & 2nd samples 
+
+<br>
+
+* Each $\hat{p}$ can be approximated by a normal distribution, for "big enough" $n$
+* Since the difference of independent normal random variables is also independent, it follows that for "big enough" $n_1$ and $n_2$ 
 
 $$\hat{p}_1 - \hat{p}_2 \sim N \Big(\mu_{\hat{p}_1 - \hat{p}_2} = p_1 - p_2, ~~
 \sigma_{\hat{p}_1 - \hat{p}_2} =
@@ -483,11 +546,15 @@ $$\hat{p}_1 - \hat{p}_2 \sim N \Big(\mu_{\hat{p}_1 - \hat{p}_2} = p_1 - p_2, ~~
 \frac{p_1\cdot(1-p_1)}{n_1} + \frac{p_2\cdot(1-p_2)}{n_2}} 
 \Big)$$
 
-* How we apply this result to CI's and test statistics is different!!!
+where $p_1$ & $p_2$ are the population proportions, respectively.
 
+* [*How we apply this result to CI's and test statistics is different!!!*]{style="color:purple"}
 
+:::
 
 ## Step 3: Test statistic (1/2)
+
+::: {style="font-size: 90%;"}
 
 Sampling distribution of $\hat{p}_1 - \hat{p}_2$:
 $$\hat{p}_1 - \hat{p}_2 \sim N \Big(\mu_{\hat{p}_1 - \hat{p}_2} = p_1 - p_2, ~~
@@ -496,39 +563,39 @@ $$\hat{p}_1 - \hat{p}_2 \sim N \Big(\mu_{\hat{p}_1 - \hat{p}_2} = p_1 - p_2, ~~
 \frac{p_1\cdot(1-p_1)}{n_1} + \frac{p_2\cdot(1-p_2)}{n_2}} 
 \Big)$$
 
-If we assume $H_0: p_1=p_2$ is true, then we "pool" the proportions of the two samples to calculate the SE:
+Since we assume $H_0: p_1 - p_2 = 0$ is true, we "pool" the proportions of the two samples to calculate the SE:
 
-$$pooled~proportion = \hat{p} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}$$ 
+$$\text{pooled proportion} = \hat{p}_{pool} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}$$ 
 
 
 Test statistic:
 
 $$
-\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}\cdot(1-\hat{p})}{n_1} + \frac{\hat{p}\cdot(1-\hat{p})}{n_2}}}
+\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_1} + \frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_2}}}
 $$
 
-
-
+:::
 
 
 ## Step 3: Test statistic (2/2)
 
+::: {style="font-size: 85%;"}
 
 $$
-\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}\cdot(1-\hat{p})}{n_1} + \frac{\hat{p}\cdot(1-\hat{p})}{n_2}}}
+\text{test statistic} = z_{\hat{p}_1 - \hat{p}_2} = \frac{\hat{p}_1 - \hat{p}_2 - 0}{\sqrt{\frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_1} + \frac{\hat{p}_{pool}\cdot(1-\hat{p}_{pool})}{n_2}}}
 $$
-$$pooled~proportion = \hat{p} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}$$ 
+
+$$\text{pooled proportion} = \hat{p}_{pool} = \dfrac{\text{total number of successes} }{ \text{total number of cases}} = \frac{x_1+x_2}{n_1+n_2}$$ 
+
+:::
+
 <hr>
 
-::: columns
-::: {.column width="50%"}
+::: {style="font-size: 90%;"}
 
 __Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had.  
 What is the test statistic when testing $H_0: p_{coll} - p_{noncoll} = 0$ vs. 
 $H_A: p_{coll} - p_{noncoll} \neq 0$? 
-:::
-
-::: {.column width="50%"}
 
 ```{r}
 #| include: false
@@ -546,19 +613,18 @@ n2 <- 214
 (zpool <- (p1-p2)/SEpool)
 ```
 
-$$z_{\hat{p}_1 - \hat{p}_2} = \frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\\
-=-0.2367497$$
+\begin{align}
+z_{\hat{p}_1 - \hat{p}_2} &= \frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\\
+&=-0.2367497
+\end{align}
 
 :::
-:::
-
-
 
 
 ## Step "3b": Conditions satisfied?
 
-::: columns
-::: {.column width="50%"}
+::: {style="font-size: 90%;"}
+
 __Conditions__:
 
 * _Independent observations & samples_
@@ -566,16 +632,14 @@ __Conditions__:
     * In particular, observations from the two groups weren't paired in any meaningful way.
 
 * The number of expected successes and expected failures is at least 10 _for each group_ - using the pooled proportion:
-    * $n_1\hat{p} \ge 10, \ \ n_1(1-\hat{p}) \ge 10$
-    * $n_2\hat{p} \ge 10, \ \ n_2(1-\hat{p}) \ge 10$
+    * $n_1\hat{p}_{pool} \ge 10, \ \ n_1(1-\hat{p}_{pool}) \ge 10$
+    * $n_2\hat{p}_{pool} \ge 10, \ \ n_2(1-\hat{p}_{pool}) \ge 10$
 
-:::
-
-::: {.column width="50%"}
 
 __Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had.   
 Testing $H_0: p_{coll} - p_{noncoll} = 0$ vs. 
 $H_A: p_{coll} - p_{noncoll} \neq 0$? .  
+<br>
 Are the conditions satisfied?
 
 
@@ -600,10 +664,11 @@ n2*(1-ppool)
 ```
 
 :::
-:::
 
 
 ## Step 4: p-value
+
+::: {style="font-size: 90%;"}
 
 The __[p-value]{style="color:darkorange"}__ is the __probability__ of obtaining a test statistic _just as extreme or more extreme_ than the observed test statistic assuming the null hypothesis $H_0$ is true. 
 
@@ -673,22 +738,35 @@ pnorm(zpool)
 2*pnorm(zpool)
 ```
 
-$$2 \cdot P(\hat{p}_1 - \hat{p}_2<0.35-0.36) \\
-= 2 \cdot P\Big(Z_{\hat{p}_1 - \hat{p}_2} < \\
-\frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\Big)\\
-=2 \cdot P(Z_{\hat{p}} < -0.2367497)$$
+
+\begin{align}
+2 &\cdot P(\hat{p}_1 - \hat{p}_2<0.35-0.36) \\
+= 2 &\cdot P\Big(Z_{\hat{p}_1 - \hat{p}_2} < \\
+&\frac{94/269 - 77/214-0}{\sqrt{0.354\cdot(1-0.354)(\frac{1}{269}+\frac{1}{214})}}\Big)\\
+=2 &\cdot P(Z_{\hat{p}} < -0.2367497) \\
+= & `r 2*pnorm(-0.2367497)`
+\end{align}
+
+:::
+:::
+
+:::
+
 ```{r}
 2*pnorm(-0.2367497)
 ```
 
-:::
-:::
+
 
 
 ## Step 5: Conclusion to hypothesis test
 
-$$~~~~H_0: p_{coll} - p_{noncoll} = 0\\
-H_A: p_{coll} - p_{noncoll} \neq 0$$
+::: {style="font-size: 90%;"}
+
+\begin{align}
+H_0:& p_{coll} - p_{noncoll} = 0\\
+H_A:& p_{coll} - p_{noncoll} \neq 0\\
+\end{align}
 
 * Recall the $p$-value = 0.812851
 * Use $\alpha$ = 0.05.
@@ -702,21 +780,28 @@ __Conclusion statement__:
 * More realistic manuscript conclusion: 
     * 35% of young male college students (n=269) and 36% of noncollege young males (n=214) participated in sports betting in the previous year ( $p$-value = 0.81).
 
-
+:::
 
 
 
 ## 95% CI for population difference in proportions
 
+::: {style="font-size: 80%;"}
+
 ::: columns
 ::: {.column width="50%"}
 What to use for SE in CI formula?
-
+:::
+::: {.column width="50%"}
 $$\hat{p}_1 - \hat{p}_2 \pm z^* \cdot SE_{\hat{p}_1 - \hat{p}_2}$$
 :::
+:::
 
+::: columns
 ::: {.column width="50%"}
 SE in sampling distribution of $\hat{p}_1 - \hat{p}_2$
+:::
+::: {.column width="50%"}
 $$\sigma_{\hat{p}_1 - \hat{p}_2} =
 \sqrt{
 \frac{p_1\cdot(1-p_1)}{n_1} + \frac{p_2\cdot(1-p_2)}{n_2}} $$
@@ -724,16 +809,36 @@ $$\sigma_{\hat{p}_1 - \hat{p}_2} =
 :::
 :::
 
-<hr>
-
 ::: columns
 ::: {.column width="50%"}
-__Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had.
-Find the 95% CI for the difference in population proportions. 
+Problem: We don't know what $p$ is - it's what we're estimating with the CI.  
+Solution: [approximate $p_1$, $p_2$ with $\hat{p}_1$, $\hat{p}_2$]{style="color:purple"}:
+
+:::
+::: {.column width="50%"}
+
+$$SE_{\hat{p}_1 - \hat{p}_2} = \sqrt{
+\frac{\hat{p}_1\cdot(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2\cdot(1-\hat{p}_2)}{n_2}}$$
+
+:::
+:::
 
 :::
 
-::: {.column width="50%"}
+<hr>
+
+::: columns
+::: {.column width="45%"}
+
+::: {style="font-size: 80%;"}
+__Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had.
+Find the 95% CI for the difference in population proportions. 
+:::
+
+:::
+
+::: {.column width="55%"}
+
 
 ```{r}
 #| include: false
@@ -757,48 +862,62 @@ alpha <- 0.05
 (UB <- p1-p2 + moe)
 ```
 
+::: {style="font-size: 70%;"}
+
 $$\frac{94}{269} - \frac{77}{214} \pm 1.96 \cdot SE_{\hat{p}_1 - \hat{p}_2}$$
 
-
-$$SE_{\hat{p}_1 - \hat{p}_2}=\\
-\sqrt{
+\begin{align}
+& SE_{\hat{p}_1 - \hat{p}_2}=\\
+& \sqrt{
 \frac{94/269 \cdot (1-94/269)}{269} + 
-\frac{77/214 \cdot (1-77/214)}{214}}$$
+\frac{77/214 \cdot (1-77/214)}{214}}
+\end{align}
+
+:::
 
 :::
 :::
 
-
+::: {style="font-size: 80%;"}
 __Interpretation__:  
 We are 95% confident that the difference in (population) proportions of young male college and noncollege students that participated in sports betting in the previous year is in (-0.127, 0.106).
 
-
+:::
 
 
 ## Conditions for difference in proportions: test vs. CI
 
+::: {style="font-size: 90%;"}
+
 ::: columns
-::: {.column width="50%"}
-__Hypothesis test conditions__
+::: {.column width="48%"}
+[__Hypothesis test conditions__]{style="color:green"}
 
 1. _Independent observations & samples_
     * The observations were collected independently. 
     * In particular, observations from the two groups weren't paired in any meaningful way.
 
-1. The number of expected successes and expected failures is at least 10 _for each group_ - using the pooled proportion:
-    * $n_1\hat{p} \ge 10, \ \ n_1(1-\hat{p}) \ge 10$
-    * $n_2\hat{p} \ge 10, \ \ n_2(1-\hat{p}) \ge 10$
+<br>
+
+2. The number of __expected__ successes and __expected__ failures is at least 10 _for each group_ - using the pooled proportion:
+    * $n_1\hat{p}_{pool} \ge 10, \ \ n_1(1-\hat{p}_{pool}) \ge 10$
+    * $n_2\hat{p}_{pool} \ge 10, \ \ n_2(1-\hat{p}_{pool}) \ge 10$
 :::
 
-::: {.column width="50%"}
+::: {.column width="2%"}
+:::
 
-__Confidence interval conditions__
+::: {.column width="48%"}
+
+[__Confidence interval conditions__]{style="color:purple"}
 
 1. _Independent observations & samples_
     * The observations were collected independently. 
     * In particular, observations from the two groups weren't paired in any meaningful way.
 
-1. The number of expected successes and expected failures is at least 10 _for each group_.
+<br>
+
+2. The number of successes and expected failures is at least 10 _for each group_.
     * $n_1\hat{p}_1 \ge 10, \ \ n_1(1-\hat{p}_1) \ge 10$
     * $n_2\hat{p}_2 \ge 10, \ \ n_2(1-\hat{p}_2) \ge 10$
 
@@ -818,31 +937,76 @@ n*ph
 n*(1-ph)
 ```
 
+:::
 
+# R: 1- and 2-sample proportions tests
 
+`prop.test(x, n, p = NULL,`  
+&nbsp; &nbsp; &nbsp;     `alternative = c("two.sided", "less", "greater"),`   
+&nbsp; &nbsp; &nbsp;     `conf.level = 0.95,`  
+&nbsp; &nbsp; &nbsp;     `correct = TRUE)`
 
+* 2 options for data input 
+    1. Summary counts
+        * `x` = vector with counts of "successes" 
+        * `n` = vector with sample size in each group
+    2. Dataset
+        * `x = table()` of dataset
+        * Need to create a dataset based on the summary stats if do not already have one
+* Continuity correction
 
-## R: 1-sample proportion test (1/3)
+# R: 1-sample proportion test
 
+"1-prop z-test"
+
+## Summary stats input for 1-sample proportion test
+
+::: {style="font-size: 90%;"}
+__Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year.   
+Test $H_0: p=0.36$ vs. $H_A: p \neq 0.36$? 
+
+```{r}
+.35*269 # number of "successes"; round this value
+
+prop.test(x = 94, n = 269,              # x = # successes & n = sample size
+          p = 0.36,                     # null value p0
+          alternative = "two.sided",    # 2-sided alternative
+          correct = FALSE)              # no continuity correction
+```
+
+Can `tidy()` test output:
+```{r}
+prop.test(x = 94, n = 269, p = 0.36, alternative = "two.sided", correct = FALSE) %>% 
+  tidy() %>% gt()
+```
+
+:::
+
+## Dataset input for 1-sample proportion test (1/2)
 ::: columns
 ::: {.column width="50%"}
-We first need a dataset based on the results:
+Since we don't have a dataset, we first need to create a dataset based on the results:
+
+>"out of 269 male college students, 35% had participated in sports betting in the previous year"
+
 ```{r}
-.35*269 # number of "successes"
-# round this value
+.35*269 # number of "successes"; round this value
 
 SportsBet1 <- tibble(
-  Coll = c(rep("Bet", 94), 
-              rep("NotBet",269-94))
+  Coll = c(rep("Bet", 94),
+           rep("NotBet",269-94))
   )
-glimpse(SportsBet1)
 ```
 :::
 
 ::: {.column width="50%"}
 ```{r}
+glimpse(SportsBet1)
+
 SportsBet1 %>% tabyl(Coll)
 ```
+
+<br>
 
 R code for proportions test requires input as a base R `table`:
 ```{r}
@@ -853,46 +1017,103 @@ table(SportsBet1$Coll)
 :::
 
 
-## R: 1-sample proportion test (2/3)
+## Dataset input for 1-sample proportion test (2/2)
 
-`prop.test` requires the input x to be a table
+::: {style="font-size: 90%;"}
+* When using a dataset, `prop.test` requires the input `x` to be a table
+* Note that we do not also specify `n` since the table already includes all needed information.
 
 ```{r}
-prop.test(x = table(SportsBet1$Coll),
-       alternative = "two.sided",
-       p = 0.36,
-       correct = FALSE)
+prop.test(x = table(SportsBet1$Coll),   # table() of data
+          p = 0.36,                     # null value p0
+          alternative = "two.sided",    # 2-sided alternative
+          correct = FALSE)              # no continuity correction
+
+
 ```
 
-
-
-
-## R: 1-sample proportion test: with vs. without CC (3/3)
-
-Apply a continuity correction (CC) to the p-value calculation.
+Compare output with summary stats method:
 
 ```{r}
-prop.test(x = table(SportsBet1$Coll), alternative = "two.sided",
-       p = 0.36, correct = FALSE) %>% tidy() %>% gt()
+prop.test(x = 94, n = 269,              # x = # successes & n = sample size
+          p = 0.36,                     # null value p0
+          alternative = "two.sided",    # 2-sided alternative
+          correct = FALSE)  %>%         # no continuity correction
+  tidy() %>% gt()
+```
 
-prop.test(x = table(SportsBet1$Coll), alternative = "two.sided",
-       p = 0.36, correct = TRUE) %>% tidy() %>% gt()
+:::
+
+## Continuity correction: 1-prop z-test with vs. without CC
+
+::: {style="font-size: 90%;"}
+* Recall that when we approximated the 
+* binomial distribution with a normal distribution to calculate a probability, 
+* that we included a continuity correction (CC) 
+* to account for approximating a discrete distribution with a continuous distribution.
+
+```{r}
+prop.test(x = 94, n = 269, p = 0.36, alternative = "two.sided", 
+          correct = FALSE) %>% 
+  tidy() %>% gt()
+```
+
+<br>
+
+```{r}
+prop.test(x = 94, n = 269, p = 0.36, alternative = "two.sided", 
+          correct = TRUE) %>% 
+  tidy() %>% gt()
 ```
 
 Differences are small when sample sizes are large.
 
+:::
+
+# R: 2-samples proportion test
+
+"2-prop z-test"
 
 
+## Summary stats input for 2-samples proportion test
 
-## R: 2-samples proportions test (1/3)
+::: {style="font-size: 80%;"}
+__Example:__ A 2010 study found that out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had. Test $H_0: p_{coll} - p_{noncoll} = 0$ vs. $H_A: p_{coll} - p_{noncoll} \neq 0$.  
+:::
+
+::: {style="font-size: 85%;"}
+
+```{r}
+# round the number of successes:
+.35*269 # number of "successes" in college students
+.36*214 # number of "successes" in noncollege students
+
+NmbrBet <- c(94, 77)                    # vector for # of successes in each group
+TotalNmbr <- c(269, 214)                # vector for sample size in each group
+
+prop.test(x = NmbrBet,                  # x is # of successes in each group 
+          n = TotalNmbr,                # n is sample size in each group
+          alternative = "two.sided",    # 2-sided alternative
+          correct = FALSE)              # no continuity correction
+```
+
+:::
+
+
+## Dataset input for 2-samples proportion test (1/2)
 
 ::: columns
 ::: {.column width="50%"}
-We first need a dataset based on the results:
+::: {style="font-size: 85%;"}
+Since we don't have a dataset, we first need to create a dataset based on the results:
+
+>"out of 269 male college students, 35% had participated in sports betting in the previous year, and out of 214 noncollege young males 36% had"
+:::
 
 ```{r}
-.35*269 # number of "successes"
-.36*214 # round these value
+# round the number of successes:
+.35*269 # college students
+.36*214 # noncollege students
 
 SportsBet2 <- tibble(
   Group = c(rep("College", 269), 
@@ -902,29 +1123,33 @@ SportsBet2 <- tibble(
           rep("yes", 77), 
           rep("no", 214-77))
 )
-glimpse(SportsBet2)
 ```
 :::
 
 ::: {.column width="50%"}
 ```{r}
+glimpse(SportsBet2)
+
 SportsBet2 %>% tabyl(Group, Bet)
 ```
 
+<br>
+
 R code for proportions test requires input as a base R `table`:
 ```{r}
-table(SportsBet2$Group, SportsBet2$Bet)
+table(SportsBet2$Group, 
+      SportsBet2$Bet)
 ```
 
 :::
 :::
 
 
+## Dataset input for 2-samples proportion test (2/2)
 
-
-## R: 2-samples proportions test (2/3)
-
-`prop.test` requires the input x to be a table
+::: {style="font-size: 90%;"}
+* When using a dataset, `prop.test` requires the input `x` to be a table
+* Note that we do not also specify `n` since the table already includes all needed information.
 
 ```{r}
 prop.test(x = table(SportsBet2$Group, SportsBet2$Bet),
@@ -932,23 +1157,316 @@ prop.test(x = table(SportsBet2$Group, SportsBet2$Bet),
        correct = FALSE)
 ```
 
-
-
-
-## R: 2-samples proportions test: with vs. without CC (3/3)
-
-Apply a continuity correction (CC) to the p-value calculation.
+Compare output with summary stats method:
 
 ```{r}
-prop.test(x = table(SportsBet2$Group, SportsBet2$Bet), alternative = "two.sided", 
-          correct = FALSE) %>% tidy() %>% gt()
+prop.test(x = NmbrBet,                  # x is # of successes in each group 
+          n = TotalNmbr,                # n is sample size in each group
+          alternative = "two.sided",    # 2-sided alternative
+          correct = FALSE) %>%          # no continuity correction
+  tidy() %>% gt()
+```
 
-prop.test(x = table(SportsBet2$Group, SportsBet2$Bet), alternative = "two.sided", 
+:::
+
+
+## Continuity correction: 2-prop z-test with vs. without CC
+
+::: {style="font-size: 90%;"}
+* Recall that when we approximated the 
+* binomial distribution with a normal distribution to calculate a probability, 
+* that we included a continuity correction (CC) 
+* to account for approximating a discrete distribution with a continuous distribution.
+
+```{r}
+prop.test(x = NmbrBet, n = TotalNmbr, alternative = "two.sided", 
+          correct = FALSE) %>% tidy() %>% gt()
+```
+
+<br>
+
+```{r}
+prop.test(x = NmbrBet, n = TotalNmbr, alternative = "two.sided", 
           correct = TRUE) %>% tidy() %>% gt()
 ```
 
 Differences are small when sample sizes are large.
 
+:::
 
-# Power & sample size for testing proportions
 
+# Power & sample size <br> for testing proportions
+
+
+## __Sample size__ calculation for testing one proportion
+
+::: {style="font-size: 90%;"}
+* Recall in our sports betting example that the null $p_0=0.36$ and the observed proportion was $\hat{p}=0.35$. 
+    * The _p_-value from the hypothesis test was not significant.
+    * How big would the sample size $n$ need to be in order for the _p_-value to be significant?
+
+* [__Calculate $n$__]{style="color:green"} 
+    * given $\alpha$, power ( $1-\beta$ ), "true" alternative proportion $p$, and null $p_0$:
+
+::: columns
+::: {.column width="40%"}
+
+$$n=p(1-p)\left(\frac{z_{1-\alpha/2}+z_{1-\beta}}{p-p_0}\right)^2$$
+:::
+
+::: {.column width="60%"}
+```{r}
+p <- 0.35
+p0 <- 0.36
+alpha <- 0.05
+beta <- 0.20  #power=1-beta; want >=80% power
+n <- p*(1-p)*((qnorm(1-alpha/2) + qnorm(1-beta)) /
+                (p-p0))^2
+n
+ceiling(n) 
+```
+:::
+:::
+
+_We would need a sample size of at least 17,857!_
+
+:::
+
+## __Power__ calculation for testing one proportion
+
+::: {style="font-size: 90%;"}
+Conversely, we can calculate how much power we had in our example given the sample size of 269.
+
+* [__Calculate power__]{style="color:green"}, 
+    * given $\alpha$, $n$, "true" alternative proportion $p$, and null $p_0$
+    
+$$1-\beta=
+			\Phi\left(z-z_{1-\alpha/2}\right)+\Phi\left(-z-z_{1-\alpha/2}\right)
+			\quad ,\quad \text{where } z=\frac{p-p_0}{\sqrt{\frac{p(1-p)}{n}}}$$
+
+$\Phi$ is the probability for a standard normal distribution 
+
+```{r}
+p <- 0.35; p0 <- 0.36; alpha <- 0.05; n <- 269
+(z <- (p-p0)/sqrt(p*(1-p)/n))
+
+(Power <- pnorm(z - qnorm(1-alpha/2)) +  pnorm(-z - qnorm(1-alpha/2)))
+```
+
+If the population proportion is 0.35 instead of 0.36, we only have a 6.4% chance of correctly rejecting $H_0$ when the sample size is 269.
+
+:::
+
+## R package `pwr` for power analyses
+
+::: {style="font-size: 80%;"}
+
+* Specify all parameters _except for_ the one being solved for.
+
+* One proportion
+
+`pwr.p.test(h = NULL, n = NULL, sig.level = 0.05, power = NULL,`
+&nbsp; &nbsp; &nbsp;    `alternative = c("two.sided","less","greater"))`
+
+* Two proportions (same sample sizes)
+
+`pwr.2p.test(h = NULL, n = NULL, sig.level = 0.05, power = NULL,` 
+&nbsp; &nbsp; &nbsp;    `alternative = c("two.sided","less","greater"))`
+
+* Two proportions (different sample sizes)
+
+`pwr.2p2n.test(h = NULL, n1 = NULL, n2 = NULL, sig.level = 0.05, power = NULL,`
+&nbsp; &nbsp; &nbsp;    `alternative = c("two.sided", "less","greater"))`
+
+:::
+<hr>
+
+::: {style="font-size: 90%;"}
+$h$ is the effect size, and calculated using an arcsine transformation: 
+
+$$h = \text{ES.h(p1, p2)} = 2\arcsin(\sqrt{p_1})-2\arcsin(\sqrt{p_2})$$
+
+:::
+::: {style="font-size: 80%;"}
+See PASS documentation for 
+
+* [testing 1 proportion using effect size](https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/PASS/Tests_for_One_Proportion_using_Effect_Size.pdf) vs. [other ways of powering a test of 1 proportion](https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/PASS/Tests_for_One_Proportion.pdf)
+* [testing 2 proportions using effect size](https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/PASS/Tests_for_Two_Proportions_using_Effect_Size.pdf) vs. [other ways of powering a test of 2 proportions](https://www.ncss.com/wp-content/themes/ncss/pdf/Procedures/PASS/Tests_for_Two_Proportions.pdf).
+
+:::
+
+
+
+## `pwr`: __sample size__ for one proportion test
+
+::: {style="font-size: 80%;"}
+`pwr.p.test(h = NULL, n = NULL, sig.level = 0.05, power = NULL,`
+&nbsp; &nbsp; &nbsp;    `alternative = c("two.sided","less","greater"))`
+:::
+
+::: {style="font-size: 90%;"}
+* $h$ is the effect size: `h = ES.h(p1, p2)`
+    * `p1` and `p2` are the two proportions being tested
+    * one of them is the null proportion $p_0$, and the other is the alternative proportion
+
+Specify all parameters _except for_ the sample size:
+:::
+
+::: columns
+::: {.column width="45%"}
+::: {style="font-size: 95%;"}
+```{r}
+library(pwr)
+
+p.n <- pwr.p.test(
+  h = ES.h(p1 = 0.36, p2 = 0.35),
+  sig.level = 0.05, 
+  power = 0.80, 
+  alternative = "two.sided")
+p.n
+```
+:::
+:::
+
+::: {.column width="55%"}
+```{r}
+#| fig.width: 10
+#| fig.height: 5
+plot(p.n)
+```
+:::
+:::
+
+
+
+
+## `pwr`: __power__ for one proportion test
+
+::: {style="font-size: 80%;"}
+`pwr.p.test(h = NULL, n = NULL, sig.level = 0.05, power = NULL,`
+&nbsp; &nbsp; &nbsp;    `alternative = c("two.sided","less","greater"))`
+:::
+
+::: {style="font-size: 90%;"}
+* $h$ is the effect size: `h = ES.h(p1, p2)`
+    * `p1` and `p2` are the two proportions being tested
+    * one of them is the null proportion $p_0$, and the other is the alternative proportion
+
+Specify all parameters _except for_ the power:
+:::
+
+::: columns
+::: {.column width="45%"}
+::: {style="font-size: 95%;"}
+```{r}
+library(pwr)
+
+p.power <- pwr.p.test(
+  h = ES.h(p1 = 0.36, p2 = 0.35),
+  sig.level = 0.05, 
+  # power = 0.80, 
+  n = 269,
+  alternative = "two.sided")
+p.power
+```
+:::
+:::
+
+::: {.column width="55%"}
+```{r}
+#| fig.width: 10
+#| fig.height: 5
+plot(p.power)
+```
+:::
+:::
+
+## `pwr`: __sample size__ for two proportions test
+
+::: {style="font-size: 80%;"}
+* Two proportions (same sample sizes)
+
+`pwr.2p.test(h = NULL, n = NULL, sig.level = 0.05, power = NULL,` 
+&nbsp; &nbsp; &nbsp;    `alternative = c("two.sided","less","greater"))`
+
+:::
+
+::: {style="font-size: 85%;"}
+* $h$ is the effect size: `h = ES.h(p1, p2)`;  `p1` and `p2` are the two proportions being tested
+
+Specify all parameters _except for_ the sample size:
+:::
+
+::: columns
+::: {.column width="45%"}
+::: {style="font-size: 95%;"}
+```{r}
+p2.n <- pwr.2p.test(
+  h = ES.h(p1 = 0.36, p2 = 0.35),
+  sig.level = 0.05, 
+  power = 0.80, 
+  alternative = "two.sided")
+p2.n
+```
+:::
+:::
+
+::: {.column width="55%"}
+::: {style="font-size: 95%;"}
+Note: $n$ in output is the __number per sample__!
+:::
+
+```{r}
+#| fig.width: 10
+#| fig.height: 5
+plot(p2.n)
+```
+:::
+:::
+
+
+
+
+## `pwr`: __power__ for two proportions test
+
+::: {style="font-size: 80%;"}
+* Two proportions (different sample sizes)
+
+`pwr.2p2n.test(h = NULL, n1 = NULL, n2 = NULL, sig.level = 0.05, power = NULL,`
+&nbsp; &nbsp; &nbsp;    `alternative = c("two.sided", "less","greater"))`
+:::
+
+::: {style="font-size: 85%;"}
+* $h$ is the effect size: `h = ES.h(p1, p2)`;  `p1` and `p2` are the two proportions being tested
+
+Specify all parameters _except for_ the power:
+:::
+
+::: columns
+::: {.column width="45%"}
+::: {style="font-size: 95%;"}
+```{r}
+p2.n2 <- pwr.2p2n.test(
+  h = ES.h(p1 = 0.36, p2 = 0.35),
+  n1 = 214,
+  n2 = 269,
+  sig.level = 0.05, 
+  # power = 0.80, 
+  alternative = "two.sided")
+p2.n2
+```
+:::
+:::
+
+::: {.column width="55%"}
+::: {style="font-size: 95%;"}
+Note: $n$ in output is the __number per sample__!
+:::
+
+```{r}
+#| fig.width: 10
+#| fig.height: 5
+plot(p2.n2)
+```
+:::
+:::
