@@ -21,6 +21,7 @@ format:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+*Updated 11/6/23: moved Day 12 questions to HW 7*
 
 **Due 11/11/23**
 
@@ -43,6 +44,18 @@ It is a good idea to try rendering your document from time to time as you go alo
 :::
 
 
+### Hypothesis test & CI instructions{.unnumbered}
+
+:::{.callout-important}
+
+* For book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes. 
+
+* Do not forget to include a discussion on whether you think the test (or CI) assumptions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test (or CI) as instructed.
+
+:::
+
+
+
 # Book exercises {.unnumbered}
 
 
@@ -52,76 +65,6 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 ## 5.34 Placebos without deception {.unnumbered}
 
-
-
-## 8.2 Young Americans, Part I {.unnumbered}
-
-
-
-## 8.8 Legalization of marijuana, Part I {.unnumbered}
-
-<font color="green">Additional instructions:
-
-* (b): In addition to calculating the CI using the formula, create a dataset in R and compute the CI using the appropriate R statistical test. 
-* Add parts (e) & (f) as instructed below.</font>
-
-### (a) {.unnumbered}
-
-
-
-### (b) {.unnumbered}
-
-
-
-### (c) {.unnumbered}
-
-
-
-### (d) {.unnumbered}
-
-
-
-### (e) {.unnumbered}
-
-__<font color="green">Test whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Do the test using both the formulas and running it in R (without a continuity correction).</font>__
-
-
-### (f) {.unnumbered}
-
-__<font color="green">Are the results from CI and hypothesis test consistent? Why or why not?</font>__
-
-
-## 8.10 Legalize Marijuana, Part II {.unnumbered} 
-
-
- 
-
-## 8.14 2010 Healthcare Law {.unnumbered}
-
-
-
-## 8.24 Prenatal vitamins and Autism {.unnumbered}
-
-<font color="green">Additional instructions:
-
-* (b): In addition to calculating the hypothesis test using the formula, create a dataset in R and run the test using the appropriate R statistical test. 
-* Add part (d) as instructed below.</font>
-
-### (a) {.unnumbered}
-
-### (b) {.unnumbered}
-
-### (c) {.unnumbered}
-
-### (d) {.unnumbered}
-
-__<font color="green">Calculate and interpret the 95% confidence interval for the difference in proportions using the formula. Is it consistent with CI from the R output of the hypothesis test? </font>__
-
-
-
-
-
-## 8.26 An apple a day keeps the doctor away {.unnumbered}
 
 
 # PSS

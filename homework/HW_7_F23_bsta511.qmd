@@ -1,0 +1,154 @@
+---
+title: "DRAFT - HW 7: BSTA 511-611 F23"
+author: "Your name here - update this!!!!"
+date: "Due 11/18/23"
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    toc_float:
+      collapsed: false
+    number-sections: true
+    number-depth: 3
+    theme: lumen
+    self-contained: true
+    html-math-method: mathjax
+---
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+**Due 11/18/23**
+
+Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_7_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_7_F23_bsta511.qmd)
+
+
+## Directions {.unnumbered}
+
+* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
+* For each question, make sure to include all code and resulting output in the html file to support your answers. 
+
+
+### R & LaTeX code {.unnumbered}
+
+* See the .qmd files with the code from class notes for LaTeX and R code.
+* The LaTeX code will make it easier to show your work in computations.
+
+:::{.callout-tip}
+It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
+:::
+
+
+# Book exercises {.unnumbered}
+
+
+## 8.2 Young Americans, Part I {.unnumbered}
+
+
+
+## 8.8 Legalization of marijuana, Part I {.unnumbered}
+
+<font color="green">Additional instructions:
+
+* (b): Calculate the CI both using the formula and using the appropriate R statistical test. 
+* Add parts (e) & (f) as instructed below.</font>
+
+### (a) {.unnumbered}
+
+
+
+### (b) {.unnumbered}
+
+
+
+### (c) {.unnumbered}
+
+
+
+### (d) {.unnumbered}
+
+
+
+### (e) {.unnumbered}
+
+__<font color="green">Test whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Do the test using both the formulas and running it in R (without a continuity correction).</font>__
+
+
+### (f) {.unnumbered}
+
+__<font color="green">Are the results from CI and hypothesis test consistent? Why or why not?</font>__
+
+
+## 8.10 Legalize Marijuana, Part II {.unnumbered} 
+
+
+ 
+
+## 8.14 2010 Healthcare Law {.unnumbered}
+
+
+
+## 8.24 Prenatal vitamins and Autism {.unnumbered}
+
+<font color="green">Additional instructions:
+
+* (b): Do the hypothesis test both using the formula and using the appropriate R statistical test.
+* Add part (d) as instructed below.</font>
+
+### (a) {.unnumbered}
+
+
+### (b) {.unnumbered}
+
+
+### (c) {.unnumbered}
+
+
+### (d) {.unnumbered}
+
+__<font color="green">Calculate and interpret the 95% confidence interval for the difference in proportions using the formula. Is it consistent with CI from the R output of the hypothesis test? </font>__
+
+
+
+
+
+## 8.26 An apple a day keeps the doctor away {.unnumbered}
+
+
+# PSS
+
+## PSS1: Legalize Marijuana, Part III. 
+
+### Power
+
+__<font color="green">In exercise 8.8 (e), we tested whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?</font>__ 
+
+
+
+
+### Sample size
+
+__<font color="green">For the same test, what sample size would be needed for 80% power? How about 90% power?</font>__ 
+
+
+
+
+### Effect size
+__<font color="green">If we increase the sample size, and keep the power and significance level the same, does the effect size increase or decrease? Why? </font>__ 
+
+
+
+
+
+# R exercises 
+
+## Load all the packages you need below here. 
+
+
+
+
+

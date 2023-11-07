@@ -49,7 +49,7 @@ _Questions are all from HW 6_
 
 * Book 5.26 a-b (HW includes part (c) as well)
 * R1: DDS expenditures by ethnicity
-* PSS1: Power & sample size T/F questions
+* PSS1: Book 4.22 - Power & sample size T/F questions
 * PSS2: Power & sample size calculations
 
 
@@ -74,12 +74,19 @@ _Questions are all from HW 6_
 
 [Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
 
-* tbd
+_Questions are all from [HW 7](../homework/HW_7_F23_bsta511.qmd)_
+
+* Book 8.2, 8.14, 8.24 (plus extra (d))
+* PSS1: Legalize Marijuana, Part III
+
 
 ## Homework
 
 * [HW 6](../homework/HW_6_F23_bsta511.qmd) due on Sat, 11/11
-    * Covers Days 11-12
+    * Covers Day 11
+    * *Updated 11/6/23: moved Day 12 questions to HW 7*
+    * For book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes. 
+    * Do not forget to include a discussion on whether you think the test (or CI) assumptions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test (or CI) as instructed.
 
 
 
