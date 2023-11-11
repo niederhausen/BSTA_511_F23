@@ -10112,7 +10112,7 @@
     "href": "slides/Day13_bsta511.html#another-option-simulate-p-value",
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
     "section": "Another option: simulate p-value",
-    "text": "Another option: simulate p-value\nFrom the help file:\n\nSimulation is done by random sampling from the set of all contingency tables with given marginals, and\n\nworks only if the marginals are strictly positive.\n\nContinuity correction is never used, and the statistic is quoted without it.\nNote that this is not the usual sampling situation assumed for the chi-squared test but rather that for Fisher’s exact test.\n\n\nchisq.test(DepPA100_table, simulate.p.value = TRUE) \n\n\n    Pearson's Chi-squared test with simulated p-value (based on 2000\n    replicates)\n\ndata:  DepPA100_table\nX-squared = 2.2195, df = NA, p-value = 0.4003"
+    "text": "Another option: simulate p-value\nFrom the help file:\n\nSimulation is done by random sampling from the set of all contingency tables with given marginals, and\n\nworks only if the marginals are strictly positive.\n\nContinuity correction is never used, and the statistic is quoted without it.\nNote that this is not the usual sampling situation assumed for the chi-squared test but rather that for Fisher’s exact test.\n\n\nchisq.test(DepPA100_table, simulate.p.value = TRUE) \n\n\n    Pearson's Chi-squared test with simulated p-value (based on 2000\n    replicates)\n\ndata:  DepPA100_table\nX-squared = 2.2195, df = NA, p-value = 0.3548"
   },
   {
     "objectID": "slides/Day13_bsta511.html#chi2-test-vs.-testing-differences-in-proportions-12",
@@ -10133,7 +10133,7 @@
     "href": "slides/Day13_bsta511.html#test-of-homogeneity",
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
     "section": "Test of Homogeneity",
-    "text": "Test of Homogeneity\n\nRunning the sports betting example as a chi-squared test is actually an example of a test of homogeneity\nIn a test of homogeneity, proportions can be compared between many groups\n\n\\[\\begin{align}\nH_0:&~ p_1 = p_2 = p_2 = \\ldots = p_n\\\\\nH_A:&~ p_i \\neq p_j \\textrm{for at least one pair of } i, j\n\\end{align}\\]\n\nIt’s an extension of a two proportions test.\nThe test statistic & p-value are calculated the same was as a chi-squared test of association (independence)\nWhen we fix the margins (whether row or columns) of one of the “variables”\n\nthe chi-squared test is called a Test of Homogeneity"
+    "text": "Test of Homogeneity\n\nRunning the sports betting example as a chi-squared test is actually an example of a test of homogeneity\nIn a test of homogeneity, proportions can be compared between many groups\n\n\\[\\begin{align}\nH_0:&~ p_1 = p_2 = p_2 = \\ldots = p_n\\\\\nH_A:&~ p_i \\neq p_j \\textrm{for at least one pair of } i, j\n\\end{align}\\]\n\nIt’s an extension of a two proportions test.\nThe test statistic & p-value are calculated the same was as a chi-squared test of association (independence)\nWhen we fix the margins (whether row or columns) of one of the “variables” (such as in a cohort or case-control study)\n\nthe chi-squared test is called a Test of Homogeneity"
   },
   {
     "objectID": "slides/Day13_bsta511.html#moritzs-tip-of-the-day",
@@ -10147,7 +10147,7 @@
     "href": "slides/Day13_bsta511.html#where-are-we",
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
     "section": "Where are we?",
-    "text": "Where are we?\n\nWe’ve covered inference for\n\ncontinuous outcomes:\n\nmean for one group\nmean difference of two paired groups\ndifference in means of two independent groups\n\nbinary outcomes:\n\nproportion for one group\ndifference in proportions of two independent groups\nBSTA 513:\n\ninference for paired proportions (Mc Nemar’s test)\n\n\n\n\n\n\nWhat if we want to\n\ncompare more than two groups?\nor have categorical outcome that has more than 2 levels?"
+    "text": "Where are we?"
   },
   {
     "objectID": "slides/Day13_bsta511.html#goals-for-today-sections-8.3-8.4",
@@ -10379,5 +10379,54 @@
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
     "section": "Technical conditions",
     "text": "Technical conditions\n\nIndependence\n\nEach case (person) that contributes a count to the table must be independent of all the other cases in the table\n\nIn particular, observational units cannot be represented in more than one cell.\nFor example, someone cannot choose both “Several” and “Most” for depression status. They have to choose exactly one option for each variable.\n\n\n\n\n\n\n\nSample size\n\nIn order for the distribution of the test statistic to be appropriately modeled by a chi-squared distribution we need\n2 \\(\\times\\) 2 table:\n\nexpected counts are at least 10 for each cell\n\nlarger tables:\n\nno more than 1/5 of the expected counts are less than 5, and\nall expected counts are greater than 1"
+  },
+  {
+    "objectID": "slides/Day13_bsta511.html#where-are-we-continuous-outcome-zoomed-in",
+    "href": "slides/Day13_bsta511.html#where-are-we-continuous-outcome-zoomed-in",
+    "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
+    "section": "Where are we? Continuous outcome zoomed in",
+    "text": "Where are we? Continuous outcome zoomed in"
+  },
+  {
+    "objectID": "slides/Day13_bsta511.html#where-are-we-categorical-outcome-zoomed-in",
+    "href": "slides/Day13_bsta511.html#where-are-we-categorical-outcome-zoomed-in",
+    "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
+    "section": "Where are we? Categorical outcome zoomed in",
+    "text": "Where are we? Categorical outcome zoomed in"
+  },
+  {
+    "objectID": "slides/Day13_bsta511.html#where-are-we-categorical-outcome-zoomed-in-1",
+    "href": "slides/Day13_bsta511.html#where-are-we-categorical-outcome-zoomed-in-1",
+    "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
+    "section": "Where are we? Categorical outcome zoomed in",
+    "text": "Where are we? Categorical outcome zoomed in"
+  },
+  {
+    "objectID": "slides/Day13_bsta511.html#chi-squared-tests-of-independence-vs.-homogeneity-vs.-goodness-of-fit",
+    "href": "slides/Day13_bsta511.html#chi-squared-tests-of-independence-vs.-homogeneity-vs.-goodness-of-fit",
+    "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
+    "section": "Chi-squared Tests of Independence vs. Homogeneity vs. Goodness-of-fit",
+    "text": "Chi-squared Tests of Independence vs. Homogeneity vs. Goodness-of-fit\n\n\nSee YouTube video from TileStats for a good explanation of how these three tests are different: https://www.youtube.com/watch?v=TyD-_1JUhxw\nUCLA’s INSPIRE website has a good summary too: http://inspire.stat.ucla.edu/unit_13/"
+  },
+  {
+    "objectID": "slides/Day13_bsta511.html#where-are-we-1",
+    "href": "slides/Day13_bsta511.html#where-are-we-1",
+    "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "slides/Day13_bsta511.html#whats-next",
+    "href": "slides/Day13_bsta511.html#whats-next",
+    "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
+    "section": "What’s next?",
+    "text": "What’s next?"
+  },
+  {
+    "objectID": "slides/Day13_bsta511.html#overview-of-tests-with-categorical-outcome",
+    "href": "slides/Day13_bsta511.html#overview-of-tests-with-categorical-outcome",
+    "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
+    "section": "Overview of tests with categorical outcome",
+    "text": "Overview of tests with categorical outcome"
   }
 ]

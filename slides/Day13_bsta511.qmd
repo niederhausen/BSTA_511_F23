@@ -76,25 +76,17 @@ ggplot(NULL, aes(c(0,4))) +  # no dataset, create axes for x from 0 to 4
 
 ## Where are we?
 
-* We've covered inference for
-    * continuous outcomes: 
-        * mean for one group
-        * mean difference of two paired groups
-        * difference in means of two independent groups
-    * binary outcomes:
-        * proportion for one group
-        * difference in proportions of two independent groups
-        * BSTA 513: 
-            * inference for paired proportions (Mc Nemar's test)
+<br>
+<br>
 
-<hr>
+![](/img_slides/flowchart_511_continuous_categorical.png){fig-align="center"}
 
-* What if we want to 
-    * compare more than two groups?
-    * or have categorical outcome that has more than 2 levels?
+## Where are we? Categorical outcome zoomed in
 
+<br>
+<br>
 
-
+![](/img_slides/flowchart_only_categorical.png){fig-align="center"}
 
 
 
@@ -697,7 +689,29 @@ H_A:&~ p_i \neq p_j \textrm{for at least one pair of } i, j
 
 * The test statistic & p-value are calculated the same was as a chi-squared test of association (independence)
 
-* When we fix the margins (whether row or columns) of one of the "variables"
+* When we fix the margins (whether row or columns) of one of the "variables" (such as in a cohort or case-control study)
     * the chi-squared test is called a __Test of Homogeneity__
 
 
+## Overview of tests with categorical outcome
+
+<br>
+<br>
+
+![](/img_slides/flowchart_only_categorical.png){fig-align="center"}
+
+
+## Chi-squared Tests of Independence vs. Homogeneity vs. Goodness-of-fit
+
+![](/img_slides/chisq_tests_different_types_TileStats.png){fig-align="center"}
+
+* See YouTube video from TileStats for a good explanation of how these three tests are different: <https://www.youtube.com/watch?v=TyD-_1JUhxw>
+* UCLA's INSPIRE website has a good summary too: <http://inspire.stat.ucla.edu/unit_13/>
+
+
+## What's next?
+
+<br>
+<br>
+
+![](/img_slides/flowchart_511_continuous_categorical.png){fig-align="center"}

@@ -429,35 +429,14 @@ Meike Niederhausen, PhD
 <img data-src="Day13_bsta511_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
 <section id="where-are-we" class="slide level2">
 <h2>Where are we?</h2>
-<ul>
-<li>We’ve covered inference for
-<ul>
-<li>continuous outcomes:
-<ul>
-<li>mean for one group</li>
-<li>mean difference of two paired groups</li>
-<li>difference in means of two independent groups</li>
-</ul></li>
-<li>binary outcomes:
-<ul>
-<li>proportion for one group</li>
-<li>difference in proportions of two independent groups</li>
-<li>BSTA 513:
-<ul>
-<li>inference for paired proportions (Mc Nemar’s test)</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-<hr>
-<ul>
-<li>What if we want to
-<ul>
-<li>compare more than two groups?</li>
-<li>or have categorical outcome that has more than 2 levels?</li>
-</ul></li>
-</ul>
-</section>
+<p><br> <br></p>
+
+<img data-src="../img_slides/flowchart_511_continuous_categorical.png" class="r-stretch quarto-figure-center"></section>
+<section id="where-are-we-categorical-outcome-zoomed-in" class="slide level2">
+<h2>Where are we? Categorical outcome zoomed in</h2>
+<p><br> <br></p>
+
+<img data-src="../img_slides/flowchart_only_categorical.png" class="r-stretch quarto-figure-center"></section>
 <section id="goals-for-today-sections-8.3-8.4" class="slide level2">
 <h2>Goals for today (Sections 8.3-8.4)</h2>
 <ul>
@@ -1116,7 +1095,7 @@ alternative hypothesis: two.sided</code></pre>
     replicates)
 
 data:  DepPA100_table
-X-squared = 2.2195, df = NA, p-value = 0.4003</code></pre>
+X-squared = 2.2195, df = NA, p-value = 0.3548</code></pre>
 </div>
 </div>
 </section></section>
@@ -1186,13 +1165,31 @@ H_A:&amp;~ p_i \neq p_j \textrm{for at least one pair of } i, j
 <ul>
 <li><p>It’s an extension of a two proportions test.</p></li>
 <li><p>The test statistic &amp; p-value are calculated the same was as a chi-squared test of association (independence)</p></li>
-<li><p>When we fix the margins (whether row or columns) of one of the “variables”</p>
+<li><p>When we fix the margins (whether row or columns) of one of the “variables” (such as in a cohort or case-control study)</p>
 <ul>
 <li>the chi-squared test is called a <strong>Test of Homogeneity</strong></li>
 </ul></li>
 </ul>
+</section>
+<section id="overview-of-tests-with-categorical-outcome" class="slide level2">
+<h2>Overview of tests with categorical outcome</h2>
+<p><br> <br></p>
 
-<div class="footer footer-default">
+<img data-src="../img_slides/flowchart_only_categorical.png" class="r-stretch quarto-figure-center"></section>
+<section id="chi-squared-tests-of-independence-vs.-homogeneity-vs.-goodness-of-fit" class="slide level2">
+<h2>Chi-squared Tests of Independence vs.&nbsp;Homogeneity vs.&nbsp;Goodness-of-fit</h2>
+
+<img data-src="../img_slides/chisq_tests_different_types_TileStats.png" class="r-stretch quarto-figure-center"><ul>
+<li>See YouTube video from TileStats for a good explanation of how these three tests are different: <a href="https://www.youtube.com/watch?v=TyD-_1JUhxw" class="uri">https://www.youtube.com/watch?v=TyD-_1JUhxw</a></li>
+<li>UCLA’s INSPIRE website has a good summary too: <a href="http://inspire.stat.ucla.edu/unit_13/" class="uri">http://inspire.stat.ucla.edu/unit_13/</a></li>
+</ul>
+</section>
+<section id="whats-next" class="slide level2">
+<h2>What’s next?</h2>
+<p><br> <br></p>
+
+
+<img data-src="../img_slides/flowchart_511_continuous_categorical.png" class="r-stretch quarto-figure-center"><div class="footer footer-default">
 
 </div>
 </section></section>

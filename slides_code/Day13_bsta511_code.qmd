@@ -651,7 +651,7 @@ H_A:&~ p_i \neq p_j \textrm{for at least one pair of } i, j
 
 * The test statistic & p-value are calculated the same was as a chi-squared test of association (independence)
 
-* When we fix the margins (whether row or columns) of one of the "variables"
+* When we fix the margins (whether row or columns) of one of the "variables" (such as in a cohort study)
     * the chi-squared test is called a __Test of Homogeneity__
 
 
