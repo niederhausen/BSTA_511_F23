@@ -436,24 +436,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="is-there-an-association-between-depression-and-being-physically-active" class="level2">
 <h2 class="anchored" data-anchor-id="is-there-an-association-between-depression-and-being-physically-active">Is there an association between depression and being physically active?</h2>
 <ul>
-<li>I sampled data from the NHANES R package:
+<li>Data sampled from the NHANES R package:
 <ul>
 <li>American National Health and Nutrition Examination Surveys</li>
-<li>Data collected 2009-2012 by US National Center for Health Statistics (NCHS)</li>
-<li><code>NHANES</code> dataset: 10,000 rows, resampled from NHANESraw to undo oversampling effects
+<li>Collected 2009-2012 by US National Center for Health Statistics (NCHS)</li>
+<li><code>NHANES</code> dataset: 10,000 rows, resampled from <code>NHANESraw</code> to undo oversampling effects
 <ul>
-<li>Treat it as a simple random sample from the US population (for educational purposes)</li>
+<li>Treat it as a simple random sample from the US population (for pedagogical purposes)</li>
 </ul></li>
 </ul></li>
-<li><strong>Depressed</strong>
+<li><strong><code>Depressed</code></strong>
 <ul>
-<li>Self-reported number of days where participant felt down, depressed or hopeless.</li>
-<li>One of None, Several, Majority (more than half the days), or AlmostAll.</li>
+<li>Self-reported <em>number of days where participant felt down, depressed or hopeless</em>.</li>
+<li>One of None, Several, or Most (more than half the days).</li>
 <li>Reported for participants aged 18 years or older.</li>
 </ul></li>
-<li><strong>PhysActive</strong>
+<li><strong><code>PhysActive</code></strong>
 <ul>
-<li>Participant does moderate or vigorous-intensity sports, fitness or recreational activities (Yes or No).</li>
+<li><em>Participant does moderate or vigorous-intensity sports, fitness or recreational activities</em> (Yes or No).</li>
 <li>Reported for participants 12 years or older.</li>
 </ul></li>
 </ul>
@@ -1098,7 +1098,7 @@ alternative hypothesis: two.sided</code></pre>
     replicates)
 
 data:  DepPA100_table
-X-squared = 2.2195, df = NA, p-value = 0.3888</code></pre>
+X-squared = 2.2195, df = NA, p-value = 0.3978</code></pre>
 </div>
 </div>
 </section>
@@ -1180,7 +1180,7 @@ H_A:&amp;~ p_i \neq p_j \textrm{for at least one pair of } i, j
 <ul>
 <li><p>It’s an extension of a two proportions test.</p></li>
 <li><p>The test statistic &amp; p-value are calculated the same was as a chi-squared test of association (independence)</p></li>
-<li><p>When we fix the margins (whether row or columns) of one of the “variables”</p>
+<li><p>When we fix the margins (whether row or columns) of one of the “variables” (such as in a cohort study)</p>
 <ul>
 <li>the chi-squared test is called a <strong>Test of Homogeneity</strong></li>
 </ul></li>
@@ -1624,20 +1624,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb68-137"><a href="#cb68-137" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-138"><a href="#cb68-138" aria-hidden="true" tabindex="-1"></a><span class="fu">## Is there an association between depression and being physically active?</span></span>
 <span id="cb68-139"><a href="#cb68-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-140"><a href="#cb68-140" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>I sampled data from the NHANES R package:</span>
+<span id="cb68-140"><a href="#cb68-140" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Data sampled from the NHANES R package:</span>
 <span id="cb68-141"><a href="#cb68-141" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>American National Health and Nutrition Examination Surveys</span>
-<span id="cb68-142"><a href="#cb68-142" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>Data collected 2009-2012 by US National Center for Health Statistics (NCHS) </span>
-<span id="cb68-143"><a href="#cb68-143" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span><span class="in">`NHANES`</span> dataset: 10,000 rows, resampled from NHANESraw to undo oversampling effects </span>
-<span id="cb68-144"><a href="#cb68-144" aria-hidden="true" tabindex="-1"></a><span class="ss">        * </span>Treat it as a simple random sample from the US population (for educational purposes)</span>
+<span id="cb68-142"><a href="#cb68-142" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>Collected 2009-2012 by US National Center for Health Statistics (NCHS) </span>
+<span id="cb68-143"><a href="#cb68-143" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span><span class="in">`NHANES`</span> dataset: 10,000 rows, resampled from <span class="in">`NHANESraw`</span> to undo oversampling effects </span>
+<span id="cb68-144"><a href="#cb68-144" aria-hidden="true" tabindex="-1"></a><span class="ss">        * </span>Treat it as a simple random sample from the US population (for pedagogical purposes)</span>
 <span id="cb68-145"><a href="#cb68-145" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-146"><a href="#cb68-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-147"><a href="#cb68-147" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Depressed__</span>
-<span id="cb68-148"><a href="#cb68-148" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>Self-reported number of days where participant felt down, depressed or hopeless. </span>
-<span id="cb68-149"><a href="#cb68-149" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>One of None, Several, Majority (more than half the days), or AlmostAll.</span>
+<span id="cb68-147"><a href="#cb68-147" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__`Depressed`__</span>
+<span id="cb68-148"><a href="#cb68-148" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>Self-reported _number of days where participant felt down, depressed or hopeless_. </span>
+<span id="cb68-149"><a href="#cb68-149" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>One of None, Several, or Most (more than half the days).</span>
 <span id="cb68-150"><a href="#cb68-150" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>Reported for participants aged 18 years or older. </span>
 <span id="cb68-151"><a href="#cb68-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-152"><a href="#cb68-152" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__PhysActive__</span>
-<span id="cb68-153"><a href="#cb68-153" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>Participant does moderate or vigorous-intensity sports, fitness or recreational activities (Yes or No). </span>
+<span id="cb68-152"><a href="#cb68-152" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__`PhysActive`__</span>
+<span id="cb68-153"><a href="#cb68-153" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>_Participant does moderate or vigorous-intensity sports, fitness or recreational activities_ (Yes or No). </span>
 <span id="cb68-154"><a href="#cb68-154" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>Reported for participants 12 years or older.</span>
 <span id="cb68-155"><a href="#cb68-155" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-156"><a href="#cb68-156" aria-hidden="true" tabindex="-1"></a></span>
@@ -1942,219 +1942,212 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb68-475"><a href="#cb68-475" aria-hidden="true" tabindex="-1"></a><span class="co"># if have &gt;2 columns in the dataset, </span></span>
 <span id="cb68-476"><a href="#cb68-476" aria-hidden="true" tabindex="-1"></a><span class="co"># we need to specify which columns to table</span></span>
 <span id="cb68-477"><a href="#cb68-477" aria-hidden="true" tabindex="-1"></a>(ChisqTest_DepPA <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(<span class="fu">table</span>(DepPA<span class="sc">$</span>Depression, DepPA<span class="sc">$</span>PA)))</span>
-<span id="cb68-478"><a href="#cb68-478" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-479"><a href="#cb68-479" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-478"><a href="#cb68-478" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-479"><a href="#cb68-479" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-480"><a href="#cb68-480" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-481"><a href="#cb68-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-484"><a href="#cb68-484" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-485"><a href="#cb68-485" aria-hidden="true" tabindex="-1"></a><span class="co"># `tidy()` the output (from `broom` package):</span></span>
-<span id="cb68-486"><a href="#cb68-486" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(ChisqTest_DepPA)</span>
-<span id="cb68-487"><a href="#cb68-487" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(ChisqTest_DepPA)<span class="sc">$</span>p.value</span>
-<span id="cb68-488"><a href="#cb68-488" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-489"><a href="#cb68-489" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(DepPA) <span class="sc">%&gt;%</span> </span>
-<span id="cb68-490"><a href="#cb68-490" aria-hidden="true" tabindex="-1"></a>  <span class="fu">chisq.test</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb68-491"><a href="#cb68-491" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>() </span>
-<span id="cb68-492"><a href="#cb68-492" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-483"><a href="#cb68-483" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-484"><a href="#cb68-484" aria-hidden="true" tabindex="-1"></a><span class="co"># `tidy()` the output (from `broom` package):</span></span>
+<span id="cb68-485"><a href="#cb68-485" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(ChisqTest_DepPA)</span>
+<span id="cb68-486"><a href="#cb68-486" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(ChisqTest_DepPA)<span class="sc">$</span>p.value</span>
+<span id="cb68-487"><a href="#cb68-487" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-488"><a href="#cb68-488" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(DepPA) <span class="sc">%&gt;%</span> </span>
+<span id="cb68-489"><a href="#cb68-489" aria-hidden="true" tabindex="-1"></a>  <span class="fu">chisq.test</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb68-490"><a href="#cb68-490" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>() </span>
+<span id="cb68-491"><a href="#cb68-491" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-492"><a href="#cb68-492" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-493"><a href="#cb68-493" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-494"><a href="#cb68-494" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-495"><a href="#cb68-495" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-496"><a href="#cb68-496" aria-hidden="true" tabindex="-1"></a><span class="fu">## Observed &amp; expected counts in R</span></span>
-<span id="cb68-497"><a href="#cb68-497" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-498"><a href="#cb68-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-499"><a href="#cb68-499" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-500"><a href="#cb68-500" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-501"><a href="#cb68-501" aria-hidden="true" tabindex="-1"></a>You can see what the __observed__ and __expected__ counts are from the saved chi-squared test results:</span>
-<span id="cb68-504"><a href="#cb68-504" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-505"><a href="#cb68-505" aria-hidden="true" tabindex="-1"></a>ChisqTest_DepPA<span class="sc">$</span>observed</span>
-<span id="cb68-506"><a href="#cb68-506" aria-hidden="true" tabindex="-1"></a>ChisqTest_DepPA<span class="sc">$</span>expected</span>
-<span id="cb68-507"><a href="#cb68-507" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb68-508"><a href="#cb68-508" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-495"><a href="#cb68-495" aria-hidden="true" tabindex="-1"></a><span class="fu">## Observed &amp; expected counts in R</span></span>
+<span id="cb68-496"><a href="#cb68-496" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-497"><a href="#cb68-497" aria-hidden="true" tabindex="-1"></a>You can see what the __observed__ and __expected__ counts are from the saved chi-squared test results:</span>
+<span id="cb68-500"><a href="#cb68-500" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-501"><a href="#cb68-501" aria-hidden="true" tabindex="-1"></a>ChisqTest_DepPA<span class="sc">$</span>observed</span>
+<span id="cb68-502"><a href="#cb68-502" aria-hidden="true" tabindex="-1"></a>ChisqTest_DepPA<span class="sc">$</span>expected</span>
+<span id="cb68-503"><a href="#cb68-503" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-504"><a href="#cb68-504" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-505"><a href="#cb68-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-506"><a href="#cb68-506" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Why is it important to look at the expected counts?</span>
+<span id="cb68-507"><a href="#cb68-507" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-508"><a href="#cb68-508" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What are we looking for in the expected counts?</span>
 <span id="cb68-509"><a href="#cb68-509" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-510"><a href="#cb68-510" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Why is it important to look at the expected counts?</span>
+<span id="cb68-510"><a href="#cb68-510" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-511"><a href="#cb68-511" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-512"><a href="#cb68-512" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What are we looking for in the expected counts?</span>
+<span id="cb68-512"><a href="#cb68-512" aria-hidden="true" tabindex="-1"></a><span class="fu">## $\chi^2$ test in R with 2-way table (1/2)</span></span>
 <span id="cb68-513"><a href="#cb68-513" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-514"><a href="#cb68-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-514"><a href="#cb68-514" aria-hidden="true" tabindex="-1"></a>Create a base R table of the results:</span>
 <span id="cb68-515"><a href="#cb68-515" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-516"><a href="#cb68-516" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-517"><a href="#cb68-517" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-518"><a href="#cb68-518" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-519"><a href="#cb68-519" aria-hidden="true" tabindex="-1"></a><span class="fu">## $\chi^2$ test in R with 2-way table (1/2)</span></span>
-<span id="cb68-520"><a href="#cb68-520" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-521"><a href="#cb68-521" aria-hidden="true" tabindex="-1"></a>Create a base R table of the results:</span>
-<span id="cb68-522"><a href="#cb68-522" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-525"><a href="#cb68-525" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-526"><a href="#cb68-526" aria-hidden="true" tabindex="-1"></a>(DepPA_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">199</span>, <span class="dv">26</span>, <span class="dv">1</span>, <span class="dv">115</span>, <span class="dv">32</span>, <span class="dv">27</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T))</span>
-<span id="cb68-527"><a href="#cb68-527" aria-hidden="true" tabindex="-1"></a><span class="fu">dimnames</span>(DepPA_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"PA"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),   <span class="co"># row names</span></span>
-<span id="cb68-528"><a href="#cb68-528" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Depression"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"None"</span>, <span class="st">"Several"</span>, <span class="st">"Most"</span>))  <span class="co"># column names</span></span>
-<span id="cb68-529"><a href="#cb68-529" aria-hidden="true" tabindex="-1"></a>DepPA_table</span>
-<span id="cb68-530"><a href="#cb68-530" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb68-531"><a href="#cb68-531" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-532"><a href="#cb68-532" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-533"><a href="#cb68-533" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-534"><a href="#cb68-534" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-535"><a href="#cb68-535" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-536"><a href="#cb68-536" aria-hidden="true" tabindex="-1"></a><span class="fu">## $\chi^2$ test in R with 2-way table (2/2)</span></span>
+<span id="cb68-518"><a href="#cb68-518" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-519"><a href="#cb68-519" aria-hidden="true" tabindex="-1"></a>(DepPA_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">199</span>, <span class="dv">26</span>, <span class="dv">1</span>, <span class="dv">115</span>, <span class="dv">32</span>, <span class="dv">27</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T))</span>
+<span id="cb68-520"><a href="#cb68-520" aria-hidden="true" tabindex="-1"></a><span class="fu">dimnames</span>(DepPA_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"PA"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),   <span class="co"># row names</span></span>
+<span id="cb68-521"><a href="#cb68-521" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Depression"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"None"</span>, <span class="st">"Several"</span>, <span class="st">"Most"</span>))  <span class="co"># column names</span></span>
+<span id="cb68-522"><a href="#cb68-522" aria-hidden="true" tabindex="-1"></a>DepPA_table</span>
+<span id="cb68-523"><a href="#cb68-523" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-524"><a href="#cb68-524" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-525"><a href="#cb68-525" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-526"><a href="#cb68-526" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-527"><a href="#cb68-527" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-528"><a href="#cb68-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-529"><a href="#cb68-529" aria-hidden="true" tabindex="-1"></a><span class="fu">## $\chi^2$ test in R with 2-way table (2/2)</span></span>
+<span id="cb68-530"><a href="#cb68-530" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-533"><a href="#cb68-533" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-534"><a href="#cb68-534" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA_table) </span>
+<span id="cb68-535"><a href="#cb68-535" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA_table)<span class="sc">$</span>expected</span>
+<span id="cb68-536"><a href="#cb68-536" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb68-537"><a href="#cb68-537" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-540"><a href="#cb68-540" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-541"><a href="#cb68-541" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA_table) </span>
-<span id="cb68-542"><a href="#cb68-542" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA_table)<span class="sc">$</span>expected</span>
-<span id="cb68-543"><a href="#cb68-543" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb68-544"><a href="#cb68-544" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-538"><a href="#cb68-538" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-539"><a href="#cb68-539" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-540"><a href="#cb68-540" aria-hidden="true" tabindex="-1"></a><span class="fu">## Continuity correction</span></span>
+<span id="cb68-541"><a href="#cb68-541" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-542"><a href="#cb68-542" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Just like the proportions test, $\chi^2$ tests have the option of including a continuity correction</span>
+<span id="cb68-543"><a href="#cb68-543" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The __default includes a continuity correction__</span>
+<span id="cb68-544"><a href="#cb68-544" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>Output below is without a CC - it looks the same for this example </span>
 <span id="cb68-545"><a href="#cb68-545" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-546"><a href="#cb68-546" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-547"><a href="#cb68-547" aria-hidden="true" tabindex="-1"></a><span class="fu">## Continuity correction</span></span>
-<span id="cb68-548"><a href="#cb68-548" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-549"><a href="#cb68-549" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Just like the proportions test, $\chi^2$ tests have the option of including a continuity correction</span>
-<span id="cb68-550"><a href="#cb68-550" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The __default includes a continuity correction__</span>
-<span id="cb68-551"><a href="#cb68-551" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>Output below is without a CC - it looks the same for this example </span>
+<span id="cb68-548"><a href="#cb68-548" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-549"><a href="#cb68-549" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA_table, <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>()</span>
+<span id="cb68-550"><a href="#cb68-550" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-551"><a href="#cb68-551" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-552"><a href="#cb68-552" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-555"><a href="#cb68-555" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-556"><a href="#cb68-556" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA_table, <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>()</span>
-<span id="cb68-557"><a href="#cb68-557" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-553"><a href="#cb68-553" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-554"><a href="#cb68-554" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-555"><a href="#cb68-555" aria-hidden="true" tabindex="-1"></a><span class="fu"># Fischer's Exact Test</span></span>
+<span id="cb68-556"><a href="#cb68-556" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-557"><a href="#cb68-557" aria-hidden="true" tabindex="-1"></a>Use this if sample size too small</span>
 <span id="cb68-558"><a href="#cb68-558" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-559"><a href="#cb68-559" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-560"><a href="#cb68-560" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-561"><a href="#cb68-561" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-562"><a href="#cb68-562" aria-hidden="true" tabindex="-1"></a><span class="fu"># Fischer's Exact Test</span></span>
-<span id="cb68-563"><a href="#cb68-563" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-564"><a href="#cb68-564" aria-hidden="true" tabindex="-1"></a>Use this if sample size too small</span>
-<span id="cb68-565"><a href="#cb68-565" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-561"><a href="#cb68-561" aria-hidden="true" tabindex="-1"></a><span class="fu">## Example with small sample sizes </span></span>
+<span id="cb68-562"><a href="#cb68-562" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-563"><a href="#cb68-563" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Suppose that instead of taking a random sample of 400 adults (from the NHANES data), a study takes a random sample of 100 such that</span>
+<span id="cb68-564"><a href="#cb68-564" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>50 people that are physically active and </span>
+<span id="cb68-565"><a href="#cb68-565" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>50 people that are not physically active </span>
 <span id="cb68-566"><a href="#cb68-566" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-567"><a href="#cb68-567" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-568"><a href="#cb68-568" aria-hidden="true" tabindex="-1"></a><span class="fu">## Example with small sample sizes </span></span>
-<span id="cb68-569"><a href="#cb68-569" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-570"><a href="#cb68-570" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Suppose that instead of taking a random sample of 400 adults (from the NHANES data), a study takes a random sample of 100 such that</span>
-<span id="cb68-571"><a href="#cb68-571" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>50 people that are physically active and </span>
-<span id="cb68-572"><a href="#cb68-572" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>50 people that are not physically active </span>
-<span id="cb68-573"><a href="#cb68-573" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-576"><a href="#cb68-576" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-577"><a href="#cb68-577" aria-hidden="true" tabindex="-1"></a>(DepPA100_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">43</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">40</span>, <span class="dv">4</span>, <span class="dv">6</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T))</span>
-<span id="cb68-578"><a href="#cb68-578" aria-hidden="true" tabindex="-1"></a><span class="fu">dimnames</span>(DepPA100_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"PA"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),   <span class="co"># row names</span></span>
-<span id="cb68-579"><a href="#cb68-579" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Depression"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"None"</span>, <span class="st">"Several"</span>, <span class="st">"Most"</span>))  <span class="co"># column names</span></span>
-<span id="cb68-580"><a href="#cb68-580" aria-hidden="true" tabindex="-1"></a>DepPA100_table</span>
-<span id="cb68-581"><a href="#cb68-581" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-582"><a href="#cb68-582" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb68-583"><a href="#cb68-583" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-584"><a href="#cb68-584" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-585"><a href="#cb68-585" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chi-squared test warning (1/2)</span></span>
+<span id="cb68-569"><a href="#cb68-569" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-570"><a href="#cb68-570" aria-hidden="true" tabindex="-1"></a>(DepPA100_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">43</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">40</span>, <span class="dv">4</span>, <span class="dv">6</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T))</span>
+<span id="cb68-571"><a href="#cb68-571" aria-hidden="true" tabindex="-1"></a><span class="fu">dimnames</span>(DepPA100_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"PA"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),   <span class="co"># row names</span></span>
+<span id="cb68-572"><a href="#cb68-572" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Depression"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"None"</span>, <span class="st">"Several"</span>, <span class="st">"Most"</span>))  <span class="co"># column names</span></span>
+<span id="cb68-573"><a href="#cb68-573" aria-hidden="true" tabindex="-1"></a>DepPA100_table</span>
+<span id="cb68-574"><a href="#cb68-574" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-575"><a href="#cb68-575" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-576"><a href="#cb68-576" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-577"><a href="#cb68-577" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-578"><a href="#cb68-578" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chi-squared test warning (1/2)</span></span>
+<span id="cb68-579"><a href="#cb68-579" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-582"><a href="#cb68-582" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-583"><a href="#cb68-583" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: true</span></span>
+<span id="cb68-584"><a href="#cb68-584" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA100_table) </span>
+<span id="cb68-585"><a href="#cb68-585" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb68-586"><a href="#cb68-586" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-589"><a href="#cb68-589" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-590"><a href="#cb68-590" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: true</span></span>
-<span id="cb68-591"><a href="#cb68-591" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA100_table) </span>
-<span id="cb68-592"><a href="#cb68-592" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb68-593"><a href="#cb68-593" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-594"><a href="#cb68-594" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-595"><a href="#cb68-595" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-596"><a href="#cb68-596" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chi-squared test warning (2/2)</span></span>
+<span id="cb68-587"><a href="#cb68-587" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-588"><a href="#cb68-588" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-589"><a href="#cb68-589" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chi-squared test warning (2/2)</span></span>
+<span id="cb68-590"><a href="#cb68-590" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-593"><a href="#cb68-593" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-594"><a href="#cb68-594" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: true</span></span>
+<span id="cb68-595"><a href="#cb68-595" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA100_table)<span class="sc">$</span>expected</span>
+<span id="cb68-596"><a href="#cb68-596" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb68-597"><a href="#cb68-597" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-600"><a href="#cb68-600" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-601"><a href="#cb68-601" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: true</span></span>
-<span id="cb68-602"><a href="#cb68-602" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA100_table)<span class="sc">$</span>expected</span>
-<span id="cb68-603"><a href="#cb68-603" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-598"><a href="#cb68-598" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Recall the __sample size__ condition</span>
+<span id="cb68-599"><a href="#cb68-599" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>In order for the test statistic to be modeled by a chi-squared distribution we need</span>
+<span id="cb68-600"><a href="#cb68-600" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__[ 2 $\times$ 2 table:]{style="color:darkorange"} expected counts are at least 10 for each cell__</span>
+<span id="cb68-601"><a href="#cb68-601" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__[larger tables:   ]{style="color:darkorange"}__</span>
+<span id="cb68-602"><a href="#cb68-602" aria-hidden="true" tabindex="-1"></a><span class="ss">        * </span>__no more than 1/5 of the expected counts are less than 5__, and </span>
+<span id="cb68-603"><a href="#cb68-603" aria-hidden="true" tabindex="-1"></a><span class="ss">        * </span>__all expected counts are greater than 1__</span>
 <span id="cb68-604"><a href="#cb68-604" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-605"><a href="#cb68-605" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Recall the __sample size__ condition</span>
-<span id="cb68-606"><a href="#cb68-606" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>In order for the test statistic to be modeled by a chi-squared distribution we need</span>
-<span id="cb68-607"><a href="#cb68-607" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__[ 2 $\times$ 2 table:]{style="color:darkorange"} expected counts are at least 10 for each cell__</span>
-<span id="cb68-608"><a href="#cb68-608" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__[larger tables:   ]{style="color:darkorange"}__</span>
-<span id="cb68-609"><a href="#cb68-609" aria-hidden="true" tabindex="-1"></a><span class="ss">        * </span>__no more than 1/5 of the expected counts are less than 5__, and </span>
-<span id="cb68-610"><a href="#cb68-610" aria-hidden="true" tabindex="-1"></a><span class="ss">        * </span>__all expected counts are greater than 1__</span>
-<span id="cb68-611"><a href="#cb68-611" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-612"><a href="#cb68-612" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-605"><a href="#cb68-605" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-606"><a href="#cb68-606" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-607"><a href="#cb68-607" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fisher's Exact Test</span></span>
+<span id="cb68-608"><a href="#cb68-608" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-609"><a href="#cb68-609" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Called an exact test since it </span>
+<span id="cb68-610"><a href="#cb68-610" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>calculates an exact p-value probability </span>
+<span id="cb68-611"><a href="#cb68-611" aria-hidden="true" tabindex="-1"></a><span class="ss">        * </span>instead of using an asymptotic approximation, such as the normal, t, or chi-squared distributions</span>
+<span id="cb68-612"><a href="#cb68-612" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>For 2x2 tables the p-value is calculated using the hypergeometric probability distribution (see book for details)  </span>
 <span id="cb68-613"><a href="#cb68-613" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-614"><a href="#cb68-614" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fisher's Exact Test</span></span>
-<span id="cb68-615"><a href="#cb68-615" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-616"><a href="#cb68-616" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Called an exact test since it </span>
-<span id="cb68-617"><a href="#cb68-617" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>calculates an exact p-value probability </span>
-<span id="cb68-618"><a href="#cb68-618" aria-hidden="true" tabindex="-1"></a><span class="ss">        * </span>instead of using an asymptotic approximation, such as the normal, t, or chi-squared distributions</span>
-<span id="cb68-619"><a href="#cb68-619" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>For 2x2 tables the p-value is calculated using the hypergeometric probability distribution (see book for details)  </span>
+<span id="cb68-614"><a href="#cb68-614" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-617"><a href="#cb68-617" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-618"><a href="#cb68-618" aria-hidden="true" tabindex="-1"></a><span class="fu">fisher.test</span>(DepPA100_table)</span>
+<span id="cb68-619"><a href="#cb68-619" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb68-620"><a href="#cb68-620" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-621"><a href="#cb68-621" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-624"><a href="#cb68-624" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-625"><a href="#cb68-625" aria-hidden="true" tabindex="-1"></a><span class="fu">fisher.test</span>(DepPA100_table)</span>
-<span id="cb68-626"><a href="#cb68-626" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-621"><a href="#cb68-621" aria-hidden="true" tabindex="-1"></a>Note: no test statistic &amp; a two-sided test</span>
+<span id="cb68-622"><a href="#cb68-622" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-623"><a href="#cb68-623" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-624"><a href="#cb68-624" aria-hidden="true" tabindex="-1"></a><span class="fu">## Another option: simulate p-value</span></span>
+<span id="cb68-625"><a href="#cb68-625" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-626"><a href="#cb68-626" aria-hidden="true" tabindex="-1"></a>From the help file: </span>
 <span id="cb68-627"><a href="#cb68-627" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-628"><a href="#cb68-628" aria-hidden="true" tabindex="-1"></a>Note: no test statistic &amp; a two-sided test</span>
-<span id="cb68-629"><a href="#cb68-629" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-630"><a href="#cb68-630" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-631"><a href="#cb68-631" aria-hidden="true" tabindex="-1"></a><span class="fu">## Another option: simulate p-value</span></span>
+<span id="cb68-628"><a href="#cb68-628" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Simulation is done by random sampling from the set of all contingency tables with given marginals, and </span>
+<span id="cb68-629"><a href="#cb68-629" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>works only if the marginals are strictly positive. </span>
+<span id="cb68-630"><a href="#cb68-630" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Continuity correction is never used, and the statistic is quoted without it. </span>
+<span id="cb68-631"><a href="#cb68-631" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Note that this is not the usual sampling situation assumed for the chi-squared test but rather that for Fisher's exact test.</span>
 <span id="cb68-632"><a href="#cb68-632" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-633"><a href="#cb68-633" aria-hidden="true" tabindex="-1"></a>From the help file: </span>
-<span id="cb68-634"><a href="#cb68-634" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-635"><a href="#cb68-635" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Simulation is done by random sampling from the set of all contingency tables with given marginals, and </span>
-<span id="cb68-636"><a href="#cb68-636" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>works only if the marginals are strictly positive. </span>
-<span id="cb68-637"><a href="#cb68-637" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Continuity correction is never used, and the statistic is quoted without it. </span>
-<span id="cb68-638"><a href="#cb68-638" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Note that this is not the usual sampling situation assumed for the chi-squared test but rather that for Fisher's exact test.</span>
+<span id="cb68-635"><a href="#cb68-635" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-636"><a href="#cb68-636" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA100_table, <span class="at">simulate.p.value =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb68-637"><a href="#cb68-637" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-638"><a href="#cb68-638" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-639"><a href="#cb68-639" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-642"><a href="#cb68-642" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-643"><a href="#cb68-643" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(DepPA100_table, <span class="at">simulate.p.value =</span> <span class="cn">TRUE</span>) </span>
-<span id="cb68-644"><a href="#cb68-644" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-640"><a href="#cb68-640" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-641"><a href="#cb68-641" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-642"><a href="#cb68-642" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-643"><a href="#cb68-643" aria-hidden="true" tabindex="-1"></a><span class="fu"># $\chi^2$ test vs. testing proportions</span></span>
+<span id="cb68-644"><a href="#cb68-644" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-645"><a href="#cb68-645" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-646"><a href="#cb68-646" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-647"><a href="#cb68-647" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-648"><a href="#cb68-648" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-648"><a href="#cb68-648" aria-hidden="true" tabindex="-1"></a><span class="fu">## $\chi^2$ test vs. testing differences in proportions (1/2)</span></span>
 <span id="cb68-649"><a href="#cb68-649" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-650"><a href="#cb68-650" aria-hidden="true" tabindex="-1"></a><span class="fu"># $\chi^2$ test vs. testing proportions</span></span>
+<span id="cb68-650"><a href="#cb68-650" aria-hidden="true" tabindex="-1"></a>If there are only 2 levels in both of the categorical variables being tested, then the _p_-value from the $\chi^2$ test is equal to the _p_-value from the differences in proportions test.</span>
 <span id="cb68-651"><a href="#cb68-651" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-652"><a href="#cb68-652" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-652"><a href="#cb68-652" aria-hidden="true" tabindex="-1"></a>__Example:__ On Day 15 we tested whether the proportion who had participated in sports betting was the same for college and noncollege young adults:</span>
 <span id="cb68-653"><a href="#cb68-653" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-654"><a href="#cb68-654" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-655"><a href="#cb68-655" aria-hidden="true" tabindex="-1"></a><span class="fu">## $\chi^2$ test vs. testing differences in proportions (1/2)</span></span>
-<span id="cb68-656"><a href="#cb68-656" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-657"><a href="#cb68-657" aria-hidden="true" tabindex="-1"></a>If there are only 2 levels in both of the categorical variables being tested, then the _p_-value from the $\chi^2$ test is equal to the _p_-value from the differences in proportions test.</span>
+<span id="cb68-654"><a href="#cb68-654" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb68-655"><a href="#cb68-655" aria-hidden="true" tabindex="-1"></a>H_0:&amp; ~p_{coll} - p_{noncoll} = 0<span class="sc">\\</span></span>
+<span id="cb68-656"><a href="#cb68-656" aria-hidden="true" tabindex="-1"></a>H_A:&amp; ~p_{coll} - p_{noncoll} \neq 0</span>
+<span id="cb68-657"><a href="#cb68-657" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
 <span id="cb68-658"><a href="#cb68-658" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-659"><a href="#cb68-659" aria-hidden="true" tabindex="-1"></a>__Example:__ On Day 15 we tested whether the proportion who had participated in sports betting was the same for college and noncollege young adults:</span>
-<span id="cb68-660"><a href="#cb68-660" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-661"><a href="#cb68-661" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
-<span id="cb68-662"><a href="#cb68-662" aria-hidden="true" tabindex="-1"></a>H_0:&amp; ~p_{coll} - p_{noncoll} = 0<span class="sc">\\</span></span>
-<span id="cb68-663"><a href="#cb68-663" aria-hidden="true" tabindex="-1"></a>H_A:&amp; ~p_{coll} - p_{noncoll} \neq 0</span>
-<span id="cb68-664"><a href="#cb68-664" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
-<span id="cb68-665"><a href="#cb68-665" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-666"><a href="#cb68-666" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-669"><a href="#cb68-669" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-670"><a href="#cb68-670" aria-hidden="true" tabindex="-1"></a>SportsBet_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">175</span>, <span class="dv">94</span>, <span class="dv">137</span>, <span class="dv">77</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> T)</span>
-<span id="cb68-671"><a href="#cb68-671" aria-hidden="true" tabindex="-1"></a><span class="fu">dimnames</span>(SportsBet_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"Group"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"College"</span>, <span class="st">"NonCollege"</span>),   <span class="co"># row names</span></span>
-<span id="cb68-672"><a href="#cb68-672" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Bet"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No"</span>, <span class="st">"Yes"</span>))  <span class="co"># column names</span></span>
-<span id="cb68-673"><a href="#cb68-673" aria-hidden="true" tabindex="-1"></a>SportsBet_table</span>
-<span id="cb68-674"><a href="#cb68-674" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb68-675"><a href="#cb68-675" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-676"><a href="#cb68-676" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-677"><a href="#cb68-677" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-678"><a href="#cb68-678" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-679"><a href="#cb68-679" aria-hidden="true" tabindex="-1"></a><span class="fu">## $\chi^2$ test vs. testing differences in proportions (2/2)</span></span>
-<span id="cb68-680"><a href="#cb68-680" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-683"><a href="#cb68-683" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb68-684"><a href="#cb68-684" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(SportsBet_table) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>()</span>
-<span id="cb68-685"><a href="#cb68-685" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(SportsBet_table) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() </span>
-<span id="cb68-686"><a href="#cb68-686" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fl">0.0199</span>)</span>
-<span id="cb68-687"><a href="#cb68-687" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(z, <span class="at">lower.tail=</span>F)<span class="co"># p-value</span></span>
-<span id="cb68-688"><a href="#cb68-688" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-659"><a href="#cb68-659" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-662"><a href="#cb68-662" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-663"><a href="#cb68-663" aria-hidden="true" tabindex="-1"></a>SportsBet_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">175</span>, <span class="dv">94</span>, <span class="dv">137</span>, <span class="dv">77</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> T)</span>
+<span id="cb68-664"><a href="#cb68-664" aria-hidden="true" tabindex="-1"></a><span class="fu">dimnames</span>(SportsBet_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"Group"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"College"</span>, <span class="st">"NonCollege"</span>),   <span class="co"># row names</span></span>
+<span id="cb68-665"><a href="#cb68-665" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"Bet"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No"</span>, <span class="st">"Yes"</span>))  <span class="co"># column names</span></span>
+<span id="cb68-666"><a href="#cb68-666" aria-hidden="true" tabindex="-1"></a>SportsBet_table</span>
+<span id="cb68-667"><a href="#cb68-667" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-668"><a href="#cb68-668" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-669"><a href="#cb68-669" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-670"><a href="#cb68-670" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-671"><a href="#cb68-671" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-672"><a href="#cb68-672" aria-hidden="true" tabindex="-1"></a><span class="fu">## $\chi^2$ test vs. testing differences in proportions (2/2)</span></span>
+<span id="cb68-673"><a href="#cb68-673" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-676"><a href="#cb68-676" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb68-677"><a href="#cb68-677" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(SportsBet_table) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>()</span>
+<span id="cb68-678"><a href="#cb68-678" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(SportsBet_table) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() </span>
+<span id="cb68-679"><a href="#cb68-679" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fl">0.0199</span>)</span>
+<span id="cb68-680"><a href="#cb68-680" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(z, <span class="at">lower.tail=</span>F)<span class="co"># p-value</span></span>
+<span id="cb68-681"><a href="#cb68-681" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb68-682"><a href="#cb68-682" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-683"><a href="#cb68-683" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Same test statistic (both shown as $\chi^2$) and _p_-value!</span>
+<span id="cb68-684"><a href="#cb68-684" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>This is because $Z^2 \sim \chi_{df=1}^2$, if $Z\sim N(0,1)$.</span>
+<span id="cb68-685"><a href="#cb68-685" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-686"><a href="#cb68-686" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-687"><a href="#cb68-687" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-688"><a href="#cb68-688" aria-hidden="true" tabindex="-1"></a><span class="fu">## Test of Homogeneity</span></span>
 <span id="cb68-689"><a href="#cb68-689" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-690"><a href="#cb68-690" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Same test statistic (both shown as $\chi^2$) and _p_-value!</span>
-<span id="cb68-691"><a href="#cb68-691" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>This is because $Z^2 \sim \chi_{df=1}^2$, if $Z\sim N(0,1)$.</span>
-<span id="cb68-692"><a href="#cb68-692" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-690"><a href="#cb68-690" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Running the sports betting example as a chi-squared test is actually an example of a __test of homogeneity__</span>
+<span id="cb68-691"><a href="#cb68-691" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-692"><a href="#cb68-692" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>In a test of homogeneity, proportions can be compared between many groups</span>
 <span id="cb68-693"><a href="#cb68-693" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-694"><a href="#cb68-694" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-695"><a href="#cb68-695" aria-hidden="true" tabindex="-1"></a><span class="fu">## Test of Homogeneity</span></span>
-<span id="cb68-696"><a href="#cb68-696" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-697"><a href="#cb68-697" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Running the sports betting example as a chi-squared test is actually an example of a __test of homogeneity__</span>
+<span id="cb68-694"><a href="#cb68-694" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
+<span id="cb68-695"><a href="#cb68-695" aria-hidden="true" tabindex="-1"></a>H_0:&amp;~ p_1 = p_2 = p_2 = \ldots = p_n<span class="sc">\\</span></span>
+<span id="cb68-696"><a href="#cb68-696" aria-hidden="true" tabindex="-1"></a>H_A:&amp;~ p_i \neq p_j \textrm{for at least one pair of } i, j</span>
+<span id="cb68-697"><a href="#cb68-697" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
 <span id="cb68-698"><a href="#cb68-698" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-699"><a href="#cb68-699" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>In a test of homogeneity, proportions can be compared between many groups</span>
-<span id="cb68-700"><a href="#cb68-700" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-701"><a href="#cb68-701" aria-hidden="true" tabindex="-1"></a>\begin{align}</span>
-<span id="cb68-702"><a href="#cb68-702" aria-hidden="true" tabindex="-1"></a>H_0:&amp;~ p_1 = p_2 = p_2 = \ldots = p_n<span class="sc">\\</span></span>
-<span id="cb68-703"><a href="#cb68-703" aria-hidden="true" tabindex="-1"></a>H_A:&amp;~ p_i \neq p_j \textrm{for at least one pair of } i, j</span>
-<span id="cb68-704"><a href="#cb68-704" aria-hidden="true" tabindex="-1"></a>\end{align}</span>
-<span id="cb68-705"><a href="#cb68-705" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-699"><a href="#cb68-699" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-700"><a href="#cb68-700" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>It's an extension of a two proportions test.</span>
+<span id="cb68-701"><a href="#cb68-701" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-702"><a href="#cb68-702" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The test statistic &amp; p-value are calculated the same was as a chi-squared test of association (independence)</span>
+<span id="cb68-703"><a href="#cb68-703" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-704"><a href="#cb68-704" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>When we fix the margins (whether row or columns) of one of the "variables" (such as in a cohort study)</span>
+<span id="cb68-705"><a href="#cb68-705" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>the chi-squared test is called a __Test of Homogeneity__</span>
 <span id="cb68-706"><a href="#cb68-706" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-707"><a href="#cb68-707" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>It's an extension of a two proportions test.</span>
-<span id="cb68-708"><a href="#cb68-708" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-709"><a href="#cb68-709" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The test statistic &amp; p-value are calculated the same was as a chi-squared test of association (independence)</span>
-<span id="cb68-710"><a href="#cb68-710" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-711"><a href="#cb68-711" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>When we fix the margins (whether row or columns) of one of the "variables"</span>
-<span id="cb68-712"><a href="#cb68-712" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>the chi-squared test is called a __Test of Homogeneity__</span>
-<span id="cb68-713"><a href="#cb68-713" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-714"><a href="#cb68-714" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-707"><a href="#cb68-707" aria-hidden="true" tabindex="-1"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

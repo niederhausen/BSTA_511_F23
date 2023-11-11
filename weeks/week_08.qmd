@@ -22,17 +22,19 @@ editor_options:
 
 ### Slides
 
-<!-- * [html](../slides/Day13_bsta511.qmd)  -->
+* (Draft) [html](../slides/Day13_bsta511.qmd)
+
 <!-- * [pdf]() -->
 <!-- * [webpage](../slides_md/Day13_bsta511_md.qmd) -->
-<!-- * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day13_bsta511_code.qmd), [html](../slides_code/Day13_bsta511_code.qmd) -->
+
+* (Draft) Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day13_bsta511_code.qmd), [html](../slides_code/Day13_bsta511_code.qmd)
 
 
-<!-- ### Datasets -->
+### Datasets
 
-<!-- All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F23/tree/main/data) -->
+All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F23/tree/main/data)
 
-<!-- * [CaffeineTaps.csv](/data/CaffeineTaps.csv) -->
+* No datasets for this class
 
 
 ### Class discussion

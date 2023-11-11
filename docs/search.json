@@ -9916,14 +9916,14 @@
     "href": "weeks/week_08.html",
     "title": "Week 8",
     "section": "",
-    "text": "Chi-squared tests of association and homogeneity\nFisher’s exact test\nSections 8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass discussion Google doc link\n\ntbd"
+    "text": "Chi-squared tests of association and homogeneity\nFisher’s exact test\nSections 8.3-8.4\n\n\n\n\n(Draft) html\n\n\n\n\n(Draft) Code file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nNo datasets for this class\n\n\n\n\nClass discussion Google doc link\n\ntbd"
   },
   {
     "objectID": "weeks/week_08.html#day-13",
     "href": "weeks/week_08.html#day-13",
     "title": "Week 8",
     "section": "",
-    "text": "Chi-squared tests of association and homogeneity\nFisher’s exact test\nSections 8.3-8.4\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass discussion Google doc link\n\ntbd"
+    "text": "Chi-squared tests of association and homogeneity\nFisher’s exact test\nSections 8.3-8.4\n\n\n\n\n(Draft) html\n\n\n\n\n(Draft) Code file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nNo datasets for this class\n\n\n\n\nClass discussion Google doc link\n\ntbd"
   },
   {
     "objectID": "weeks/week_08.html#exam-2-wednesday",
@@ -9986,7 +9986,7 @@
     "href": "slides/Day13_bsta511.html#hypotheses-for-a-chi-squared-test-of-association-independence",
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
     "section": "Hypotheses for a Chi-squared test of association (independence)",
-    "text": "Hypotheses for a Chi-squared test of association (independence)\n\n\nGeneric wording:\nTest of “association” wording\n\n\\(H_0\\): There is no association between the two variables\n\\(H_A\\): There is an association between the two variables\n\nTest of “independence” wording\n\n\\(H_0\\): The variables are independent\n\\(H_A\\): The variables are not independent\n\n\n\n\nFor our example:\nTest of “association” wording\n\n\\(H_0\\): There is no association between depression and physical activity\n\\(H_A\\): There is an association between depression and physical activity\n\nTest of “independence” wording\n\n\\(H_0\\): The variables depression and physical activity are independent\n\\(H_A\\): The variables depression and physical activity are not independent\n\n\n\n\n\n\nNo symbols\n\n\nFor chi-squared test hypotheses we do not have versions using “symbols” like we do with tests of means or proportions."
+    "text": "Hypotheses for a Chi-squared test of association (independence)\n\n\nGeneric wording:\nTest of “association” wording\n\n\\(H_0\\): There is no association between the two variables\n\\(H_A\\): There is an association between the two variables\n\nTest of “independence” wording\n\n\\(H_0\\): The variables are independent\n\\(H_A\\): The variables are not independent\n\n\n\n\nFor our example:\nTest of “association” wording\n\n\\(H_0\\): There is no association between depression and physical activity\n\\(H_A\\): There is an association between depression and physical activity\n\nTest of “independence” wording\n\n\\(H_0\\): The variables depression and physical activity are independent\n\\(H_A\\): The variables depression and physical activity are not independent\n\n\n\n\n\n\n\n\n\nNo symbols\n\n\n\nFor chi-squared test hypotheses we do not have versions using “symbols” like we do with tests of means or proportions."
   },
   {
     "objectID": "slides/Day13_bsta511.html#data-from-nhanes",
@@ -10035,7 +10035,7 @@
     "href": "slides/Day13_bsta511.html#conclusion",
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
     "section": "Conclusion",
-    "text": "Conclusion\nRecall the hypotheses to our \\(\\chi^2\\) test:\n\n\\(H_0\\): There is no association between depression and being physically activity\n\\(H_A\\): There is an association between depression and being physically activity\n\n\n\n\n\n\n\n\n\nConclusion:\nBased a random sample of 400 US adults from 2009-2012, there is sufficient evidence that there is an association between depression and being physically activity (p-value &lt; 0.001).\n\n\n\n\n\n\n\n\nWarning\n\n\nIf we fail to reject, we DO NOT have evidence of no association."
+    "text": "Conclusion\nRecall the hypotheses to our \\(\\chi^2\\) test:\n\n\\(H_0\\): There is no association between depression and being physically activity\n\\(H_A\\): There is an association between depression and being physically activity\n\n\n\n\n\n\n\n\n\nConclusion:\nBased a random sample of 400 US adults from 2009-2012, there is sufficient evidence that there is an association between depression and being physically activity (p-value &lt; 0.001).\n\n\n\n\n\n\n\n\nWarning\n\n\n\nIf we fail to reject, we DO NOT have evidence of no association."
   },
   {
     "objectID": "slides/Day13_bsta511.html#technical-assumptions",
@@ -10112,7 +10112,7 @@
     "href": "slides/Day13_bsta511.html#another-option-simulate-p-value",
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
     "section": "Another option: simulate p-value",
-    "text": "Another option: simulate p-value\nFrom the help file:\n\nSimulation is done by random sampling from the set of all contingency tables with given marginals, and\n\nworks only if the marginals are strictly positive.\n\nContinuity correction is never used, and the statistic is quoted without it.\nNote that this is not the usual sampling situation assumed for the chi-squared test but rather that for Fisher’s exact test.\n\n\nchisq.test(DepPA100_table, simulate.p.value = TRUE) \n\n\n    Pearson's Chi-squared test with simulated p-value (based on 2000\n    replicates)\n\ndata:  DepPA100_table\nX-squared = 2.2195, df = NA, p-value = 0.3548"
+    "text": "Another option: simulate p-value\nFrom the help file:\n\nSimulation is done by random sampling from the set of all contingency tables with given marginals, and\n\nworks only if the marginals are strictly positive.\n\nContinuity correction is never used, and the statistic is quoted without it.\nNote that this is not the usual sampling situation assumed for the chi-squared test but rather that for Fisher’s exact test.\n\n\nchisq.test(DepPA100_table, simulate.p.value = TRUE) \n\n\n    Pearson's Chi-squared test with simulated p-value (based on 2000\n    replicates)\n\ndata:  DepPA100_table\nX-squared = 2.2195, df = NA, p-value = 0.3913"
   },
   {
     "objectID": "slides/Day13_bsta511.html#chi2-test-vs.-testing-differences-in-proportions-12",
@@ -10139,8 +10139,8 @@
     "objectID": "slides/Day13_bsta511.html#moritzs-tip-of-the-day",
     "href": "slides/Day13_bsta511.html#moritzs-tip-of-the-day",
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
-    "section": "MoRitz’s tip of the day",
-    "text": "MoRitz’s tip of the day\nAdd text to a plot using annotate():\n\nggplot(NULL, aes(c(0,4))) +  # no dataset, create axes for x from 0 to 4\n  geom_area(stat = \"function\", fun = dchisq, args = list(df=2), \n            fill = \"blue\", xlim = c(0, 1.0414)) +\n  geom_area(stat = \"function\", fun = dchisq, args = list(df=2),\n            fill = \"violet\", xlim = c(1.0414, 4)) +\n  geom_vline(xintercept = 1.0414) +  # vertical line at x = 1.0414\n  annotate(\"text\", x = 1.1, y = .4, # add text at specified (x,y) coordinate\n           label = \"chi-squared = 1.0414\", hjust=0, size=6) + \n  annotate(\"text\", x = 1.3, y = .1, \n           label = \"p-value = 0.59\", hjust=0, size=6)"
+    "section": "",
+    "text": "Add text to a plot using annotate():\n\nggplot(NULL, aes(c(0,4))) +  # no dataset, create axes for x from 0 to 4\n  geom_area(stat = \"function\", fun = dchisq, args = list(df=2), \n            fill = \"blue\", xlim = c(0, 1.0414)) +\n  geom_area(stat = \"function\", fun = dchisq, args = list(df=2),\n            fill = \"violet\", xlim = c(1.0414, 4)) +\n  geom_vline(xintercept = 1.0414) +  # vertical line at x = 1.0414\n  annotate(\"text\", x = 1.1, y = .4, # add text at specified (x,y) coordinate\n           label = \"chi-squared = 1.0414\", hjust=0, size=6) + \n  annotate(\"text\", x = 1.3, y = .1, \n           label = \"p-value = 0.59\", hjust=0, size=6)"
   },
   {
     "objectID": "slides/Day13_bsta511.html#where-are-we",
@@ -10189,7 +10189,7 @@
     "href": "slides_code/Day13_bsta511_code.html#is-there-an-association-between-depression-and-being-physically-active",
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
     "section": "Is there an association between depression and being physically active?",
-    "text": "Is there an association between depression and being physically active?\n\nI sampled data from the NHANES R package:\n\nAmerican National Health and Nutrition Examination Surveys\nData collected 2009-2012 by US National Center for Health Statistics (NCHS)\nNHANES dataset: 10,000 rows, resampled from NHANESraw to undo oversampling effects\n\nTreat it as a simple random sample from the US population (for educational purposes)\n\n\nDepressed\n\nSelf-reported number of days where participant felt down, depressed or hopeless.\nOne of None, Several, Majority (more than half the days), or AlmostAll.\nReported for participants aged 18 years or older.\n\nPhysActive\n\nParticipant does moderate or vigorous-intensity sports, fitness or recreational activities (Yes or No).\nReported for participants 12 years or older."
+    "text": "Is there an association between depression and being physically active?\n\nData sampled from the NHANES R package:\n\nAmerican National Health and Nutrition Examination Surveys\nCollected 2009-2012 by US National Center for Health Statistics (NCHS)\nNHANES dataset: 10,000 rows, resampled from NHANESraw to undo oversampling effects\n\nTreat it as a simple random sample from the US population (for pedagogical purposes)\n\n\nDepressed\n\nSelf-reported number of days where participant felt down, depressed or hopeless.\nOne of None, Several, or Most (more than half the days).\nReported for participants aged 18 years or older.\n\nPhysActive\n\nParticipant does moderate or vigorous-intensity sports, fitness or recreational activities (Yes or No).\nReported for participants 12 years or older."
   },
   {
     "objectID": "slides_code/Day13_bsta511_code.html#hypotheses-for-a-chi-squared-test-of-association-independence",
@@ -10329,7 +10329,7 @@
     "href": "slides_code/Day13_bsta511_code.html#another-option-simulate-p-value",
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
     "section": "Another option: simulate p-value",
-    "text": "Another option: simulate p-value\nFrom the help file:\n\nSimulation is done by random sampling from the set of all contingency tables with given marginals, and\n\nworks only if the marginals are strictly positive.\n\nContinuity correction is never used, and the statistic is quoted without it.\nNote that this is not the usual sampling situation assumed for the chi-squared test but rather that for Fisher’s exact test.\n\n\n\nCode\nchisq.test(DepPA100_table, simulate.p.value = TRUE) \n\n\n\n    Pearson's Chi-squared test with simulated p-value (based on 2000\n    replicates)\n\ndata:  DepPA100_table\nX-squared = 2.2195, df = NA, p-value = 0.3888"
+    "text": "Another option: simulate p-value\nFrom the help file:\n\nSimulation is done by random sampling from the set of all contingency tables with given marginals, and\n\nworks only if the marginals are strictly positive.\n\nContinuity correction is never used, and the statistic is quoted without it.\nNote that this is not the usual sampling situation assumed for the chi-squared test but rather that for Fisher’s exact test.\n\n\n\nCode\nchisq.test(DepPA100_table, simulate.p.value = TRUE) \n\n\n\n    Pearson's Chi-squared test with simulated p-value (based on 2000\n    replicates)\n\ndata:  DepPA100_table\nX-squared = 2.2195, df = NA, p-value = 0.3978"
   },
   {
     "objectID": "slides_code/Day13_bsta511_code.html#chi2-test-vs.-testing-differences-in-proportions-12",
@@ -10350,7 +10350,7 @@
     "href": "slides_code/Day13_bsta511_code.html#test-of-homogeneity",
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
     "section": "Test of Homogeneity",
-    "text": "Test of Homogeneity\n\nRunning the sports betting example as a chi-squared test is actually an example of a test of homogeneity\nIn a test of homogeneity, proportions can be compared between many groups\n\n\\[\\begin{align}\nH_0:&~ p_1 = p_2 = p_2 = \\ldots = p_n\\\\\nH_A:&~ p_i \\neq p_j \\textrm{for at least one pair of } i, j\n\\end{align}\\]\n\nIt’s an extension of a two proportions test.\nThe test statistic & p-value are calculated the same was as a chi-squared test of association (independence)\nWhen we fix the margins (whether row or columns) of one of the “variables”\n\nthe chi-squared test is called a Test of Homogeneity"
+    "text": "Test of Homogeneity\n\nRunning the sports betting example as a chi-squared test is actually an example of a test of homogeneity\nIn a test of homogeneity, proportions can be compared between many groups\n\n\\[\\begin{align}\nH_0:&~ p_1 = p_2 = p_2 = \\ldots = p_n\\\\\nH_A:&~ p_i \\neq p_j \\textrm{for at least one pair of } i, j\n\\end{align}\\]\n\nIt’s an extension of a two proportions test.\nThe test statistic & p-value are calculated the same was as a chi-squared test of association (independence)\nWhen we fix the margins (whether row or columns) of one of the “variables” (such as in a cohort study)\n\nthe chi-squared test is called a Test of Homogeneity"
   },
   {
     "objectID": "slides/Day13_bsta511.html",
@@ -10406,7 +10406,7 @@
     "href": "slides/Day13_bsta511.html#chi-squared-tests-of-independence-vs.-homogeneity-vs.-goodness-of-fit",
     "title": "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)",
     "section": "Chi-squared Tests of Independence vs. Homogeneity vs. Goodness-of-fit",
-    "text": "Chi-squared Tests of Independence vs. Homogeneity vs. Goodness-of-fit\n\n\nSee YouTube video from TileStats for a good explanation of how these three tests are different: https://www.youtube.com/watch?v=TyD-_1JUhxw\nUCLA’s INSPIRE website has a good summary too: http://inspire.stat.ucla.edu/unit_13/"
+    "text": "Chi-squared Tests of Independence vs. Homogeneity vs. Goodness-of-fit\n\n\n\n\n\n\nSee YouTube video from TileStats for a good explanation of how these three tests are different: https://www.youtube.com/watch?v=TyD-_1JUhxw\nUCLA’s INSPIRE website has a good summary too: http://inspire.stat.ucla.edu/unit_13/"
   },
   {
     "objectID": "slides/Day13_bsta511.html#where-are-we-1",
