@@ -463,9 +463,9 @@ Meike Niederhausen, PhD
 <ul>
 <li>Statistical inference for <strong>categorical data</strong> when either are
 <ul>
-<li>comparing <strong>more than two groups</strong> or</li>
-<li>have categorical outcomes that have <strong>more than 2 levels</strong> or</li>
-<li>both</li>
+<li>comparing <strong>more than two groups</strong>,</li>
+<li>or have categorical outcomes that have <strong>more than 2 levels</strong>,</li>
+<li>or both</li>
 </ul></li>
 <li>Chi-squared tests of association (independence)
 <ul>
@@ -473,7 +473,7 @@ Meike Niederhausen, PhD
 <li>test statistic</li>
 <li>Chi-squared distribution</li>
 <li>p-value</li>
-<li>technical assumptions (conditions)</li>
+<li>technical conditions (assumptions)</li>
 <li>conclusion</li>
 <li>R: <code>chisq.test()</code></li>
 </ul></li>
@@ -492,24 +492,24 @@ Meike Niederhausen, PhD
 <section id="is-there-an-association-between-depression-and-being-physically-active" class="slide level2">
 <h2>Is there an association between depression and being physically active?</h2>
 <ul>
-<li>I sampled data from the NHANES R package:
+<li>Data sampled from the NHANES R package:
 <ul>
 <li>American National Health and Nutrition Examination Surveys</li>
-<li>Data collected 2009-2012 by US National Center for Health Statistics (NCHS)</li>
-<li><code>NHANES</code> dataset: 10,000 rows, resampled from NHANESraw to undo oversampling effects
+<li>Collected 2009-2012 by US National Center for Health Statistics (NCHS)</li>
+<li><code>NHANES</code> dataset: 10,000 rows, resampled from <code>NHANESraw</code> to undo oversampling effects
 <ul>
-<li>Treat it as a simple random sample from the US population (for educational purposes)</li>
+<li>Treat it as a simple random sample from the US population (for pedagogical purposes)</li>
 </ul></li>
 </ul></li>
-<li><strong>Depressed</strong>
+<li><strong><code>Depressed</code></strong>
 <ul>
-<li>Self-reported number of days where participant felt down, depressed or hopeless.</li>
-<li>One of None, Several, Majority (more than half the days), or AlmostAll.</li>
+<li>Self-reported <em>number of days where participant felt down, depressed or hopeless</em>.</li>
+<li>One of None, Several, or Most (more than half the days).</li>
 <li>Reported for participants aged 18 years or older.</li>
 </ul></li>
-<li><strong>PhysActive</strong>
+<li><strong><code>PhysActive</code></strong>
 <ul>
-<li>Participant does moderate or vigorous-intensity sports, fitness or recreational activities (Yes or No).</li>
+<li><em>Participant does moderate or vigorous-intensity sports, fitness or recreational activities</em> (Yes or No).</li>
 <li>Reported for participants 12 years or older.</li>
 </ul></li>
 </ul>
@@ -517,7 +517,7 @@ Meike Niederhausen, PhD
 <section id="hypotheses-for-a-chi-squared-test-of-association-independence" class="slide level2">
 <h2>Hypotheses for a Chi-squared test of association (independence)</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:48.5%;">
 <p><strong>Generic wording:</strong></p>
 <p>Test of “<strong>association</strong>” wording</p>
 <ul>
@@ -529,7 +529,9 @@ Meike Niederhausen, PhD
 <li><p><span class="math inline">\(H_0\)</span>: The variables are independent</p></li>
 <li><p><span class="math inline">\(H_A\)</span>: The variables are not independent</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:48.5%;">
 <p><strong>For our example:</strong></p>
 <p>Test of “<strong>association</strong>” wording</p>
 <ul>
@@ -543,8 +545,18 @@ Meike Niederhausen, PhD
 </ul>
 </div>
 </div>
+<div class="callout callout-warning no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>No symbols</strong></p>
+</div>
+<div class="callout-content">
+<p>For chi-squared test hypotheses we do not have versions using “symbols” like we do with tests of means or proportions.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="data-from-nhanes" class="slide level2">
+<section id="data-from-nhanes" class="slide level2 nostretch">
 <h2>Data from NHANES</h2>
 <ul>
 <li>Results below are from
@@ -553,37 +565,51 @@ Meike Niederhausen, PhD
 <li>with data for both the depression <code>Depressed</code> and physically active (<code>PhysActive</code>) variables.</li>
 </ul></li>
 </ul>
-
-<img data-src="../img_slides/ChiSq_Table_Obs_DepressionPA.png" class="r-stretch quarto-figure-center"><ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../img_slides/ChiSq_Table_Obs_DepressionPA.png" style="width:70.0%"></p>
+</figure>
+</div>
+<ul>
 <li>What does it mean for the variables to be independent?</li>
 </ul>
 </section>
 <section id="h_0-variables-are-independent" class="slide level2">
 <h2><span class="math inline">\(H_0\)</span>: Variables are Independent</h2>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:48.5%;">
 <ul>
 <li>Recall from Chapter 2, that events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent if and only if</li>
 </ul>
 <p><span class="math display">\[P(A~and~B)=P(A)P(B)\]</span></p>
 <ul>
-<li>If depression and being physically active are independent variables, then <em>theoretically</em> this condition needs to hold for every combination of levels, i.e.</li>
+<li>If depression and being physically active are independent variables, then <em>theoretically</em> this condition needs to hold for <em>every combination of levels</em>, i.e.</li>
 </ul>
-<p><span class="math display">\[P(None~and~Yes)=P(None)P(Yes)\\
-P(None~and~No)=P(None)P(No)\\
-P(Several~and~Yes)=P(Several)P(Yes)\\
-P(Several~and~No)=P(Several)P(No)\\
-P(Most~and~Yes)=P(Most)P(Yes)\\
-P(Most~and~No)=P(Most)P(No)\]</span></p>
-</div><div class="column" style="width:40%;">
+<div style="font-size: 90%;">
+<p><span class="math display">\[\begin{align}
+P(None~and~Yes) &amp;= P(None)P(Yes)\\
+P(None~and~No) &amp;= P(None)P(No)\\
+P(Several~and~Yes) &amp;= P(Several)P(Yes)\\
+P(Several~and~No) &amp;= P(Several)P(No)\\
+P(Most~and~Yes) &amp;= P(Most)P(Yes)\\
+P(Most~and~No) &amp;= P(Most)P(No)
+\end{align}\]</span></p>
+</div>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:38.5%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../img_slides/ChiSq_Table_Obs_DepressionPA.png"></p>
 </figure>
 </div>
-<p><span class="math display">\[P(None~and~Yes)=\frac{314}{400}\cdot\frac{226}{400}\\
-...\\
-P(Most~and~No)=\frac{28}{400}\cdot\frac{174}{400}\]</span></p>
+<div style="font-size: 90%;">
+<p><span class="math display">\[\begin{align}
+P(None~and~Yes) &amp;= \frac{314}{400}\cdot\frac{226}{400}\\
+&amp; ...\\
+P(Most~and~No) &amp;= \frac{28}{400}\cdot\frac{174}{400}
+\end{align}\]</span></p>
+</div>
 <p>With these probabilities, for each cell of the table we calculate the <strong>expected</strong> counts for each cell under the <span class="math inline">\(H_0\)</span> hypothesis that the variables are independent</p>
 </div>
 </div>
@@ -599,11 +625,14 @@ P(Most~and~No)=\frac{28}{400}\cdot\frac{174}{400}\]</span></p>
 </ul></li>
 </ul>
 <p>Expected count of Yes &amp; None:</p>
-<p><span class="math display">\[400 \cdot P(None~and~Yes)\\
-=400 \cdot P(None)P(Yes)\\
-=400 \cdot\frac{314}{400}\cdot\frac{226}{400}\\
-=\frac{314\cdot 226}{400} = 177.41\\
-=\frac{column~total\cdot row~total}{table~total}\]</span></p>
+<p><span class="math display">\[\begin{align}
+400 \cdot &amp; P(None~and~Yes)\\
+&amp;= 400 \cdot P(None)P(Yes)\\
+&amp;= 400 \cdot\frac{314}{400}\cdot\frac{226}{400}\\
+&amp;= \frac{314\cdot 226}{400} \\
+&amp;=  177.41\\
+&amp;= \frac{\text{column total}\cdot \text{row total}}{\text{table total}}
+\end{align}\]</span></p>
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -611,7 +640,7 @@ P(Most~and~No)=\frac{28}{400}\cdot\frac{174}{400}\]</span></p>
 </figure>
 </div>
 <ul>
-<li>If depression and being physically active are independent variables
+<li>If depression and being physically active are <strong>independent</strong> variables
 <ul>
 <li>(as assumed by <span class="math inline">\(H_0\)</span>),</li>
 </ul></li>
@@ -632,6 +661,7 @@ P(Most~and~No)=\frac{28}{400}\cdot\frac{174}{400}\]</span></p>
 <p><img data-src="../img_slides/ChiSq_Table_Obs_DepressionPA.png"></p>
 </figure>
 </div>
+<p><br></p>
 <p>Expected count for cell <span class="math inline">\(i,j\)</span> :</p>
 </div><div class="column" style="width:60%;">
 <ul>
@@ -649,10 +679,13 @@ P(Most~and~No)=\frac{28}{400}\cdot\frac{174}{400}\]</span></p>
 <section id="the-chi2-test-statistic" class="slide level2">
 <h2>The <span class="math inline">\(\chi^2\)</span> test statistic</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:45%;">
 <p>Test statistic for a test of association (independence):</p>
-<p><span class="math display">\[\chi^2 = \sum_{\textrm{all cells}} \frac{(\textrm{observed} - \text{expected})^2}{\text{expected}}\]</span> * When the variables are independent, the observed and expected counts should be close to each other</p>
-</div><div class="column" style="width:60%;">
+<p><span class="math display">\[\chi^2 = \sum_{\textrm{all cells}} \frac{(\textrm{observed} - \text{expected})^2}{\text{expected}}\]</span></p>
+<ul>
+<li>When the variables are independent, the observed and expected counts should be close to each other</li>
+</ul>
+</div><div class="column" style="width:55%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../img_slides/ChiSq_Table_Expected_brief_DepressionPA.png"></p>
@@ -661,8 +694,14 @@ P(Most~and~No)=\frac{28}{400}\cdot\frac{174}{400}\]</span></p>
 </div>
 </div>
 <hr>
-<p><span class="math display">\[\chi^2 =  \sum\frac{(O-E)^2}{E} = \frac{(199-177.41)^2}{177.41} + \frac{(26-32.77)^2}{32.77} + \ldots + \frac{(27-12.18)^2}{12.18} =  41.2\]</span></p>
-<p>Is this big? Big enough to reject <span class="math inline">\(H_0\)</span>?</p>
+<div style="font-size: 90%;">
+<p><span class="math display">\[\begin{align}
+\chi^2 &amp;=  \sum\frac{(O-E)^2}{E} \\
+&amp;= \frac{(199-177.41)^2}{177.41} + \frac{(26-32.77)^2}{32.77} + \ldots + \frac{(27-12.18)^2}{12.18} \\
+&amp;=  41.2
+\end{align}\]</span></p>
+</div>
+<p>Is this value big? Big enough to reject <span class="math inline">\(H_0\)</span>?</p>
 </section>
 <section id="the-chi2-distribution-calculating-the-p-value" class="slide level2">
 <h2>The <span class="math inline">\(\chi^2\)</span> distribution &amp; calculating the <em>p</em>-value</h2>
@@ -672,7 +711,7 @@ P(Most~and~No)=\frac{28}{400}\cdot\frac{174}{400}\]</span></p>
 <ul>
 <li>It’s skewed right for smaller df,
 <ul>
-<li>gets more symmetirc for larger df</li>
+<li>gets more symmetric for larger df</li>
 </ul></li>
 <li><strong><span style="color:green">df = (# rows-1) x (# columns-1)</span></strong></li>
 </ul>
@@ -683,7 +722,7 @@ P(Most~and~No)=\frac{28}{400}\cdot\frac{174}{400}\]</span></p>
 </div>
 </div><div class="column" style="width:40%;">
 <ul>
-<li>The <strong>p-value</strong> is always the <strong>area to the right</strong> of the test statistic for a <span class="math inline">\(\chi^2\)</span> test.</li>
+<li>The <strong><span style="color:darkorange">p-value</span></strong> is always the <strong><span style="color:darkorange">area to the right</span></strong> of the test statistic for a <span class="math inline">\(\chi^2\)</span> test.</li>
 <li>We can use the <code>pchisq</code> function in R to calculate the probability of being at least as big as the <span class="math inline">\(\chi^2\)</span> test statistic:</li>
 </ul>
 <div class="cell">
@@ -698,54 +737,70 @@ P(Most~and~No)=\frac{28}{400}\cdot\frac{174}{400}\]</span></p>
 </div>
 </div>
 </section>
-<section id="conclusion" class="slide level2">
+<section id="conclusion" class="slide level2 nostretch">
 <h2>Conclusion</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
 <p>Recall the hypotheses to our <span class="math inline">\(\chi^2\)</span> test:</p>
 <ul>
 <li><p><span class="math inline">\(H_0\)</span>: There is <strong>no association</strong> between depression and being physically activity</p></li>
-<li><p><span class="math inline">\(H_A\)</span>: There is an association between depression and being physically activity</p></li>
+<li><p><span class="math inline">\(H_A\)</span>: There is <strong>an association</strong> between depression and being physically activity</p></li>
 </ul>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="Day13_bsta511_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+<p><img data-src="Day13_bsta511_files/figure-revealjs/unnamed-chunk-4-1.png" width="768"></p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><strong>Conclusion:</strong></p>
-<p>There is sufficient evidence that there is an association between depression and being physically activity (<em>p</em>-value &lt; 0.001).</p>
+<p>Based a random sample of 400 US adults from 2009-2012, there is sufficient evidence that there is an association between depression and being physically activity (<em>p</em>-value &lt; 0.001).</p>
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>If we fail to reject, we DO NOT have evidence of no association.</p>
+</div>
 </div>
 </div>
 </section>
-<section id="technical-assumptions" class="slide level2">
-<h2>Technical assumptions</h2>
+<section id="technical-conditions" class="slide level2">
+<h2>Technical conditions</h2>
 <ul>
 <li><strong>Independence</strong>
 <ul>
 <li>Each case (person) that contributes a count to the table must be independent of all the other cases in the table
 <ul>
-<li>In particular, cases cannot be in two categories</li>
+<li>In particular, observational units cannot be represented in more than one cell.</li>
 <li>For example, someone cannot choose both “Several” and “Most” for depression status. They have to choose exactly one option for each variable.</li>
 </ul></li>
 </ul></li>
 </ul>
 <hr>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:65%;">
 <ul>
 <li><strong>Sample size</strong>
 <ul>
-<li>In order for the test statistic to be modeled by a chi-squared distribution we need</li>
-<li><strong><span style="color:darkorange"> 2 <span class="math inline">\(\times\)</span> 2 table:</span> expected counts are at least 10 for each cell</strong></li>
-<li><strong><span style="color:darkorange">larger tables: </span></strong>
+<li>In order for the distribution of the test statistic to be appropriately modeled by a chi-squared distribution we need</li>
+<li><strong><span style="color:darkorange">2 <span class="math inline">\(\times\)</span> 2 table:</span></strong>
+<ul>
+<li><strong>expected counts are at least 10 for each cell</strong></li>
+</ul></li>
+<li><strong><span style="color:darkorange">larger tables:</span></strong>
 <ul>
 <li><strong>no more than 1/5 of the expected counts are less than 5</strong>, and</li>
 <li><strong>all expected counts are greater than 1</strong></li>
 </ul></li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:35%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../img_slides/ChiSq_Table_Expected_brief_DepressionPA.png"></p>
@@ -792,32 +847,53 @@ P(Most~and~No)=\frac{28}{400}\cdot\frac{174}{400}\]</span></p>
        None 115 199
     Several  32  26</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># base R:</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">table</span>(DepPA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          PA
+Depression  No Yes
+   Most     27   1
+   None    115 199
+   Several  32  26</code></pre>
+</div>
 </div>
 </div>
 </div>
 </section>
 <section id="chi2-test-in-r-using-dataset" class="slide level2">
 <h2><span class="math inline">\(\chi^2\)</span> test in R using dataset</h2>
+<p>If only have 2 columns in the dataset:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>(ChisqTest_DepPA <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(DepPA<span class="sc">$</span>PA, DepPA<span class="sc">$</span>Depression))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>(ChisqTest_DepPA <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(<span class="fu">table</span>(DepPA)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's Chi-squared test
 
-data:  DepPA$PA and DepPA$Depression
+data:  table(DepPA)
 X-squared = 41.171, df = 2, p-value = 1.148e-09</code></pre>
 </div>
 </div>
+<p>If have &gt;2 columns in the dataset, we need to specify which columns to table:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># `tidy()` the output (from `broom` package):</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">tidy</span>(ChisqTest_DepPA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>(ChisqTest_DepPA <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(<span class="fu">table</span>(DepPA<span class="sc">$</span>Depression, DepPA<span class="sc">$</span>PA)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  table(DepPA$Depression, DepPA$PA)
+X-squared = 41.171, df = 2, p-value = 1.148e-09</code></pre>
+</div>
+</div>
+<p><code>tidy()</code> the output (from <code>broom</code> package):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">tidy</span>(ChisqTest_DepPA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 4
   statistic       p.value parameter method                    
       &lt;dbl&gt;         &lt;dbl&gt;     &lt;int&gt; &lt;chr&gt;                     
 1      41.2 0.00000000115         2 Pearson's Chi-squared test</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">tidy</span>(ChisqTest_DepPA)<span class="sc">$</span>p.value</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">tidy</span>(ChisqTest_DepPA)<span class="sc">$</span>p.value</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.147897e-09</code></pre>
 </div>
@@ -826,25 +902,27 @@ X-squared = 41.171, df = 2, p-value = 1.148e-09</code></pre>
 <section id="observed-expected-counts-in-r" class="slide level2">
 <h2>Observed &amp; expected counts in R</h2>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:50%;">
 <p>You can see what the <strong>observed</strong> and <strong>expected</strong> counts are from the saved chi-squared test results:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>ChisqTest_DepPA<span class="sc">$</span>observed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>ChisqTest_DepPA<span class="sc">$</span>observed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        DepPA$Depression
-DepPA$PA Most None Several
-     No    27  115      32
-     Yes    1  199      26</code></pre>
+<pre><code>         
+           No Yes
+  Most     27   1
+  None    115 199
+  Several  32  26</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>ChisqTest_DepPA<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>ChisqTest_DepPA<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        DepPA$Depression
-DepPA$PA  Most   None Several
-     No  12.18 136.59   25.23
-     Yes 15.82 177.41   32.77</code></pre>
+<pre><code>         
+              No    Yes
+  Most     12.18  15.82
+  None    136.59 177.41
+  Several  25.23  32.77</code></pre>
 </div>
 </div>
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../img_slides/ChiSq_Table_Expected_brief_DepressionPA.png"></p>
@@ -861,15 +939,15 @@ DepPA$PA  Most   None Several
 <h2><span class="math inline">\(\chi^2\)</span> test in R with 2-way table (1/2)</h2>
 <p>Create a base R table of the results:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>(DepPA_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">199</span>, <span class="dv">26</span>, <span class="dv">1</span>, <span class="dv">115</span>, <span class="dv">32</span>, <span class="dv">27</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>(DepPA_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">199</span>, <span class="dv">26</span>, <span class="dv">1</span>, <span class="dv">115</span>, <span class="dv">32</span>, <span class="dv">27</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]  199   26    1
 [2,]  115   32   27</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">dimnames</span>(DepPA_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"PA"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),   <span class="co"># row names</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a>                              <span class="st">"Depression"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"None"</span>, <span class="st">"Several"</span>, <span class="st">"Most"</span>))  <span class="co"># column names</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a>DepPA_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">dimnames</span>(DepPA_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"PA"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),   <span class="co"># row names</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>                              <span class="st">"Depression"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"None"</span>, <span class="st">"Several"</span>, <span class="st">"Most"</span>))  <span class="co"># column names</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a>DepPA_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Depression
 PA    None Several Most
@@ -881,7 +959,7 @@ PA    None Several Most
 <section id="chi2-test-in-r-with-2-way-table-22" class="slide level2">
 <h2><span class="math inline">\(\chi^2\)</span> test in R with 2-way table (2/2)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">chisq.test</span>(DepPA_table) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">chisq.test</span>(DepPA_table) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's Chi-squared test
@@ -889,7 +967,7 @@ PA    None Several Most
 data:  DepPA_table
 X-squared = 41.171, df = 2, p-value = 1.148e-09</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">chisq.test</span>(DepPA_table)<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">chisq.test</span>(DepPA_table)<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Depression
 PA      None Several  Most
@@ -908,7 +986,7 @@ PA      None Several  Most
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">chisq.test</span>(DepPA_table, <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">chisq.test</span>(DepPA_table, <span class="at">correct =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 4
   statistic       p.value parameter method                    
@@ -932,15 +1010,15 @@ PA      None Several  Most
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>(DepPA100_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">43</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">40</span>, <span class="dv">4</span>, <span class="dv">6</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>(DepPA100_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">43</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">40</span>, <span class="dv">4</span>, <span class="dv">6</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]   43    5    2
 [2,]   40    4    6</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">dimnames</span>(DepPA100_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"PA"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),   <span class="co"># row names</span></span>
-<span id="cb29-2"><a href="#cb29-2"></a>                              <span class="st">"Depression"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"None"</span>, <span class="st">"Several"</span>, <span class="st">"Most"</span>))  <span class="co"># column names</span></span>
-<span id="cb29-3"><a href="#cb29-3"></a>DepPA100_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">dimnames</span>(DepPA100_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"PA"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),   <span class="co"># row names</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a>                              <span class="st">"Depression"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"None"</span>, <span class="st">"Several"</span>, <span class="st">"Most"</span>))  <span class="co"># column names</span></span>
+<span id="cb33-3"><a href="#cb33-3"></a>DepPA100_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Depression
 PA    None Several Most
@@ -952,7 +1030,7 @@ PA    None Several Most
 <section id="chi-squared-test-warning-12" class="slide level2">
 <h2>Chi-squared test warning (1/2)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">chisq.test</span>(DepPA100_table) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">chisq.test</span>(DepPA100_table) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in stats::chisq.test(x, y, ...): Chi-squared approximation may be
 incorrect</code></pre>
@@ -969,7 +1047,7 @@ X-squared = 2.2195, df = 2, p-value = 0.3296</code></pre>
 <section id="chi-squared-test-warning-22" class="slide level2">
 <h2>Chi-squared test warning (2/2)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">chisq.test</span>(DepPA100_table)<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">chisq.test</span>(DepPA100_table)<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in stats::chisq.test(x, y, ...): Chi-squared approximation may be
 incorrect</code></pre>
@@ -985,8 +1063,8 @@ PA    None Several Most
 <li>Recall the <strong>sample size</strong> condition
 <ul>
 <li>In order for the test statistic to be modeled by a chi-squared distribution we need</li>
-<li><strong><span style="color:darkorange"> 2 <span class="math inline">\(\times\)</span> 2 table:</span> expected counts are at least 10 for each cell</strong></li>
-<li><strong><span style="color:darkorange">larger tables: </span></strong>
+<li><strong><span style="color:darkorange">2 <span class="math inline">\(\times\)</span> 2 table:</span> expected counts are at least 10 for each cell</strong></li>
+<li><strong><span style="color:darkorange">larger tables:</span></strong>
 <ul>
 <li><strong>no more than 1/5 of the expected counts are less than 5</strong>, and</li>
 <li><strong>all expected counts are greater than 1</strong></li>
@@ -1007,7 +1085,7 @@ PA    None Several Most
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">fisher.test</span>(DepPA100_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">fisher.test</span>(DepPA100_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Fisher's Exact Test for Count Data
@@ -1031,14 +1109,14 @@ alternative hypothesis: two.sided</code></pre>
 <li>Note that this is not the usual sampling situation assumed for the chi-squared test but rather that for Fisher’s exact test.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">chisq.test</span>(DepPA100_table, <span class="at">simulate.p.value =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">chisq.test</span>(DepPA100_table, <span class="at">simulate.p.value =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's Chi-squared test with simulated p-value (based on 2000
     replicates)
 
 data:  DepPA100_table
-X-squared = 2.2195, df = NA, p-value = 0.3973</code></pre>
+X-squared = 2.2195, df = NA, p-value = 0.4003</code></pre>
 </div>
 </div>
 </section></section>
@@ -1051,13 +1129,15 @@ X-squared = 2.2195, df = NA, p-value = 0.3973</code></pre>
 <h2><span class="math inline">\(\chi^2\)</span> test vs.&nbsp;testing differences in proportions (1/2)</h2>
 <p>If there are only 2 levels in both of the categorical variables being tested, then the <em>p</em>-value from the <span class="math inline">\(\chi^2\)</span> test is equal to the <em>p</em>-value from the differences in proportions test.</p>
 <p><strong>Example:</strong> On Day 15 we tested whether the proportion who had participated in sports betting was the same for college and noncollege young adults:</p>
-<p><span class="math display">\[~~~~H_0: p_{coll} - p_{noncoll} = 0\\
-H_A: p_{coll} - p_{noncoll} \neq 0\]</span></p>
+<p><span class="math display">\[\begin{align}
+H_0:&amp; ~p_{coll} - p_{noncoll} = 0\\
+H_A:&amp; ~p_{coll} - p_{noncoll} \neq 0
+\end{align}\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>SportsBet_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">175</span>, <span class="dv">94</span>, <span class="dv">137</span>, <span class="dv">77</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> T)</span>
-<span id="cb41-2"><a href="#cb41-2"></a><span class="fu">dimnames</span>(SportsBet_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"Group"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"College"</span>, <span class="st">"NonCollege"</span>),   <span class="co"># row names</span></span>
-<span id="cb41-3"><a href="#cb41-3"></a>                              <span class="st">"Bet"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No"</span>, <span class="st">"Yes"</span>))  <span class="co"># column names</span></span>
-<span id="cb41-4"><a href="#cb41-4"></a>SportsBet_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>SportsBet_table <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">175</span>, <span class="dv">94</span>, <span class="dv">137</span>, <span class="dv">77</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> T)</span>
+<span id="cb45-2"><a href="#cb45-2"></a><span class="fu">dimnames</span>(SportsBet_table) <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"Group"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"College"</span>, <span class="st">"NonCollege"</span>),   <span class="co"># row names</span></span>
+<span id="cb45-3"><a href="#cb45-3"></a>                              <span class="st">"Bet"</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"No"</span>, <span class="st">"Yes"</span>))  <span class="co"># column names</span></span>
+<span id="cb45-4"><a href="#cb45-4"></a>SportsBet_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            Bet
 Group         No Yes
@@ -1069,14 +1149,14 @@ Group         No Yes
 <section id="chi2-test-vs.-testing-differences-in-proportions-22" class="slide level2">
 <h2><span class="math inline">\(\chi^2\)</span> test vs.&nbsp;testing differences in proportions (2/2)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">chisq.test</span>(SportsBet_table) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">chisq.test</span>(SportsBet_table) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 4
   statistic p.value parameter method                                            
       &lt;dbl&gt;   &lt;dbl&gt;     &lt;int&gt; &lt;chr&gt;                                             
 1    0.0199   0.888         1 Pearson's Chi-squared test with Yates' continuity…</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">prop.test</span>(SportsBet_table) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="fu">prop.test</span>(SportsBet_table) <span class="sc">%&gt;%</span> <span class="fu">tidy</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 9
   estimate1 estimate2 statistic p.value parameter conf.low conf.high method     
@@ -1084,8 +1164,8 @@ Group         No Yes
 1     0.651     0.640    0.0199   0.888         1  -0.0797     0.100 2-sample t…
 # ℹ 1 more variable: alternative &lt;chr&gt;</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>z <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fl">0.0199</span>)</span>
-<span id="cb47-2"><a href="#cb47-2"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(z, <span class="at">lower.tail=</span>F)<span class="co"># p-value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>z <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fl">0.0199</span>)</span>
+<span id="cb51-2"><a href="#cb51-2"></a><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(z, <span class="at">lower.tail=</span>F)<span class="co"># p-value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.8878167</code></pre>
 </div>
@@ -1099,8 +1179,10 @@ Group         No Yes
 <li><p>Running the sports betting example as a chi-squared test is actually an example of a <strong>test of homogeneity</strong></p></li>
 <li><p>In a test of homogeneity, proportions can be compared between many groups</p></li>
 </ul>
-<p><span class="math display">\[~~~~H_0: p_1 = p_2 = p_2 = \ldots = p_n\\
-H_A: p_i \neq p_j \textrm{for at least one pair of } i, j\]</span></p>
+<p><span class="math display">\[\begin{align}
+H_0:&amp;~ p_1 = p_2 = p_2 = \ldots = p_n\\
+H_A:&amp;~ p_i \neq p_j \textrm{for at least one pair of } i, j
+\end{align}\]</span></p>
 <ul>
 <li><p>It’s an extension of a two proportions test.</p></li>
 <li><p>The test statistic &amp; p-value are calculated the same was as a chi-squared test of association (independence)</p></li>

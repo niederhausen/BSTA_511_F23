@@ -74,8 +74,6 @@ ggplot(NULL, aes(c(0,4))) +  # no dataset, create axes for x from 0 to 4
 ```
 
 
-
-
 ## Where are we?
 
 * We've covered inference for
@@ -104,16 +102,16 @@ ggplot(NULL, aes(c(0,4))) +  # no dataset, create axes for x from 0 to 4
 
 
 * Statistical inference for __categorical data__ when either are 
-    * comparing __more than two groups__ or
-    * have categorical outcomes that have __more than 2 levels__ or
-    * both
+    * comparing __more than two groups__, 
+    * or have categorical outcomes that have __more than 2 levels__, 
+    * or both
 
 * Chi-squared tests of association (independence)
     * Hypotheses
     * test statistic
     * Chi-squared distribution
     * p-value
-    * technical assumptions (conditions)
+    * technical conditions (assumptions)
     * conclusion
     * R: `chisq.test()`
 
@@ -131,20 +129,20 @@ Testing the association (independence) between two categorical variables
 
 ## Is there an association between depression and being physically active?
 
-* I sampled data from the NHANES R package:
+* Data sampled from the NHANES R package:
     * American National Health and Nutrition Examination Surveys
-    * Data collected 2009-2012 by US National Center for Health Statistics (NCHS) 
-    * `NHANES` dataset: 10,000 rows, resampled from NHANESraw to undo oversampling effects 
-        * Treat it as a simple random sample from the US population (for educational purposes)
+    * Collected 2009-2012 by US National Center for Health Statistics (NCHS) 
+    * `NHANES` dataset: 10,000 rows, resampled from `NHANESraw` to undo oversampling effects 
+        * Treat it as a simple random sample from the US population (for pedagogical purposes)
 
 
-* __Depressed__
-    * Self-reported number of days where participant felt down, depressed or hopeless. 
-    * One of None, Several, Majority (more than half the days), or AlmostAll.
+* __`Depressed`__
+    * Self-reported _number of days where participant felt down, depressed or hopeless_. 
+    * One of None, Several, or Most (more than half the days).
     * Reported for participants aged 18 years or older. 
 
-* __PhysActive__
-    * Participant does moderate or vigorous-intensity sports, fitness or recreational activities (Yes or No). 
+* __`PhysActive`__
+    * _Participant does moderate or vigorous-intensity sports, fitness or recreational activities_ (Yes or No). 
     * Reported for participants 12 years or older.
 
 
@@ -156,7 +154,7 @@ Testing the association (independence) between two categorical variables
 ## Hypotheses for a Chi-squared test of association (independence)
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="48.5%"}
 __Generic wording:__
 
 Test of "__association__" wording
@@ -172,8 +170,9 @@ Test of "__independence__" wording
 - $H_A$:  The variables are not independent
 
 :::
-
-::: {.column width="50%"}
+::: {.column width="3%"}
+:::
+::: {.column width="48.5%"}
 
 __For our example:__
 
@@ -192,49 +191,65 @@ Test of "__independence__" wording
 :::
 :::
 
+::: {.callout-warning icon=false} 
+## No symbols 
+For chi-squared test hypotheses we do not have versions using "symbols" like we do with tests of means or proportions. 
+:::
 
 
-## Data from NHANES
+## Data from NHANES {.nostretch}
 
 * Results below are from 
     * a random sample of 400 adults (≥ 18 yrs old) 
     * with data for both the depression `Depressed` and physically active (`PhysActive`) variables.
 
-![](/img_slides/ChiSq_Table_Obs_DepressionPA.png){fig-align="center"}
+![](/img_slides/ChiSq_Table_Obs_DepressionPA.png){fig-align="center" width=70%}
 
 * What does it mean for the variables to be independent?
-
 
 
 
 ## $H_0$: Variables are Independent
 
 ::: columns
-::: {.column width="60%"}
+::: {.column width="48.5%"}
 * Recall from Chapter 2, that events $A$ and $B$ are independent if and only if
 
 $$P(A~and~B)=P(A)P(B)$$
 
-* If depression and being physically active are independent variables, then _theoretically_ this condition needs to hold for every combination of levels, i.e.
+* If depression and being physically active are independent variables, then _theoretically_ this condition needs to hold for _every combination of levels_, i.e.
 
-$$P(None~and~Yes)=P(None)P(Yes)\\
-P(None~and~No)=P(None)P(No)\\
-P(Several~and~Yes)=P(Several)P(Yes)\\
-P(Several~and~No)=P(Several)P(No)\\
-P(Most~and~Yes)=P(Most)P(Yes)\\
-P(Most~and~No)=P(Most)P(No)$$
+::: {style="font-size: 90%;"}
+
+\begin{align}
+P(None~and~Yes) &= P(None)P(Yes)\\
+P(None~and~No) &= P(None)P(No)\\
+P(Several~and~Yes) &= P(Several)P(Yes)\\
+P(Several~and~No) &= P(Several)P(No)\\
+P(Most~and~Yes) &= P(Most)P(Yes)\\
+P(Most~and~No) &= P(Most)P(No)
+\end{align}
+
 :::
 
-::: {.column width="40%"}
+:::
+::: {.column width="2%"}
+:::
+::: {.column width="38.5%"}
 ![](/img_slides/ChiSq_Table_Obs_DepressionPA.png){fig-align="center"}
 
-$$P(None~and~Yes)=\frac{314}{400}\cdot\frac{226}{400}\\
-...\\
-P(Most~and~No)=\frac{28}{400}\cdot\frac{174}{400}$$
+::: {style="font-size: 90%;"}
+
+\begin{align}
+P(None~and~Yes) &= \frac{314}{400}\cdot\frac{226}{400}\\
+ & ...\\
+P(Most~and~No) &= \frac{28}{400}\cdot\frac{174}{400}
+\end{align}
+
+:::
 
 With these probabilities, for each cell of the table
 we calculate the __expected__ counts for each cell under the $H_0$ hypothesis that the variables are independent
-
 :::
 :::
 
@@ -248,22 +263,23 @@ we calculate the __expected__ counts for each cell under the $H_0$ hypothesis th
 
 Expected count of Yes & None:
 
-$$400 \cdot P(None~and~Yes)\\
-=400 \cdot P(None)P(Yes)\\
-=400 \cdot\frac{314}{400}\cdot\frac{226}{400}\\
-=\frac{314\cdot 226}{400} = 177.41\\
-=\frac{column~total\cdot row~total}{table~total}$$
+\begin{align}
+400 \cdot & P(None~and~Yes)\\
+ &= 400 \cdot P(None)P(Yes)\\
+ &= 400 \cdot\frac{314}{400}\cdot\frac{226}{400}\\
+ &= \frac{314\cdot 226}{400} \\
+ &=  177.41\\
+ &= \frac{\text{column total}\cdot \text{row total}}{\text{table total}}
+\end{align}
 
 :::
 
 ::: {.column width="40%"}
 ![](/img_slides/ChiSq_Table_Obs_DepressionPA.png){fig-align="center"}
 
-
-* If depression and being physically active are independent variables 
+* If depression and being physically active are __independent__ variables 
   * (as assumed by $H_0$), 
 * then the __observed counts should be close to the expected counts__ for each cell of the table
-
 
 :::
 :::
@@ -276,6 +292,8 @@ $$400 \cdot P(None~and~Yes)\\
 * The __observed__ counts are the counts in the 2-way table summarizing the data
 
 ![](/img_slides/ChiSq_Table_Obs_DepressionPA.png){fig-align="center"}
+
+<br>
 
 Expected count for cell $i,j$ :
 :::
@@ -294,25 +312,33 @@ $$\textrm{Expected Count}_{\textrm{row } i,\textrm{ col }j}=\frac{(\textrm{row}~
 ## The $\chi^2$ test statistic
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="45%"}
 Test statistic for a test of association (independence):
 
 $$\chi^2 = \sum_{\textrm{all cells}} \frac{(\textrm{observed} - \text{expected})^2}{\text{expected}}$$
+
 * When the variables are independent, the observed and expected counts should be close to each other
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="55%"}
 ![](/img_slides/ChiSq_Table_Expected_brief_DepressionPA.png){fig-align="center"}
 :::
 :::
 
 <hr>
 
-$$\chi^2 =  \sum\frac{(O-E)^2}{E} = \frac{(199-177.41)^2}{177.41} + \frac{(26-32.77)^2}{32.77} + \ldots + \frac{(27-12.18)^2}{12.18} =  41.2$$
+::: {style="font-size: 90%;"}
 
-Is this big? Big enough to reject $H_0$?
+\begin{align}
+\chi^2 &=  \sum\frac{(O-E)^2}{E} \\
+&= \frac{(199-177.41)^2}{177.41} + \frac{(26-32.77)^2}{32.77} + \ldots + \frac{(27-12.18)^2}{12.18} \\
+&=  41.2
+\end{align}
 
+:::
+
+Is this value big? Big enough to reject $H_0$?
 
 
 ## The $\chi^2$ distribution & calculating the _p_-value
@@ -322,14 +348,14 @@ Is this big? Big enough to reject $H_0$?
 The $\chi^2$ distribution shape depends on its degrees of freedom
 
 * It's skewed right for smaller df,
-    * gets more symmetirc for larger df
-* __<span style="color:green">df = (# rows-1) x (# columns-1)</span>__
+    * gets more symmetric for larger df
+* __[df = (# rows-1) x (# columns-1)]{style="color:green"}__
 
 ![](/img_slides/chisq_density.png){fig-align="center"}
 :::
 
 ::: {.column width="40%"}
-* The __p-value__ is always the __area to the right__ of the test statistic for a $\chi^2$ test.
+* The __[p-value]{style="color:darkorange"}__ is always the __[area to the right]{style="color:darkorange"}__ of the test statistic for a $\chi^2$ test.
 * We can use the `pchisq` function in R to calculate the probability of being at least as big as the $\chi^2$ test statistic:
 
 ```{r}
@@ -343,19 +369,22 @@ What's the conclusion to the $\chi^2$ test?
 :::
 
 
-## Conclusion
+## Conclusion {.nostretch}
 
-::: columns
-::: {.column width="50%"}
 Recall the hypotheses to our $\chi^2$ test:
 
 - $H_0$:  There is __no association__ between depression and being physically activity
 
-- $H_A$: There is an association between depression and being physically activity
+- $H_A$: There is __an association__ between depression and being physically activity
+
+::: columns
+::: {.column width="50%"}
 
 ```{r}
 #| fig.height: 3.5
+#| fig.width: 8
 #| echo: false
+
 ggplot(NULL, aes(c(0,50))) + # no dataset, create axes for x from 0 to 50
   # Draw & fill in chi-squared distribution from 0 to 41.2 (test stat value)
   geom_area(stat = "function", fun = dchisq, args = list(df=2),fill = "skyblue", alpha =0.9, xlim = c(0, 41.2)) +
@@ -373,42 +402,43 @@ ggplot(NULL, aes(c(0,50))) + # no dataset, create axes for x from 0 to 50
         panel.grid.minor = element_blank()) # remove the minor grid lines
 ```
 
-
 :::
 
 ::: {.column width="50%"}
 __Conclusion:__
 
-There is sufficient evidence that there is an association between depression and being physically activity (_p_-value < 0.001).
+Based a random sample of 400 US adults from 2009-2012, there is sufficient evidence that there is an association between depression and being physically activity (_p_-value < 0.001).
 :::
 :::
 
+::: {.callout-warning} 
+If we fail to reject, we DO NOT have evidence of no association. 
+:::
 
 
-## Technical assumptions
-
+## Technical conditions
 
 * __Independence__
     * Each case (person) that contributes a count to the table must be independent of all the other cases in the table
-        * In particular, cases cannot be in two categories
+        * In particular, observational units cannot be represented in more than one cell.
         * For example, someone cannot choose both "Several" and "Most" for depression status. They have to choose exactly one option for each variable.
 
 <hr>
 ::: columns
-::: {.column width="60%"}
+::: {.column width="65%"}
 * __Sample size__
-    * In order for the test statistic to be modeled by a chi-squared distribution we need
-    * __<span style="color:darkorange"> 2 $\times$ 2 table:</span> expected counts are at least 10 for each cell__
-    * __<span style="color:darkorange">larger tables:   </span>__
+    * In order for the distribution of the test statistic to be appropriately modeled by a chi-squared distribution we need
+    * __[ 2 $\times$ 2 table:]{style="color:darkorange"}__
+        * __expected counts are at least 10 for each cell__
+    * __[larger tables:   ]{style="color:darkorange"}__
         * __no more than 1/5 of the expected counts are less than 5__, and 
         * __all expected counts are greater than 1__
 :::
 
-::: {.column width="40%"}
+::: {.column width="35%"}
 ![](/img_slides/ChiSq_Table_Expected_brief_DepressionPA.png){fig-align="center"}
 :::
 :::
-
 
 
 # Chi-squared tests in R
@@ -442,6 +472,9 @@ DepPA <- tibble(
 Summary table of data:
 ```{r}
 DepPA %>% tabyl(Depression, PA) 
+
+# base R:
+table(DepPA)
 ```
 :::
 :::
@@ -449,14 +482,21 @@ DepPA %>% tabyl(Depression, PA)
 
 ## $\chi^2$ test in R using dataset
 
+If only have 2 columns in the dataset:
 
 ```{r}
-(ChisqTest_DepPA <- chisq.test(DepPA$PA, DepPA$Depression))
+(ChisqTest_DepPA <- chisq.test(table(DepPA)))
 ```
 
+If have >2 columns in the dataset, we need to specify which columns to table:
 
 ```{r}
-# `tidy()` the output (from `broom` package):
+(ChisqTest_DepPA <- chisq.test(table(DepPA$Depression, DepPA$PA)))
+```
+
+`tidy()` the output (from `broom` package):
+
+```{r}
 tidy(ChisqTest_DepPA)
 tidy(ChisqTest_DepPA)$p.value
 ```
@@ -466,7 +506,7 @@ tidy(ChisqTest_DepPA)$p.value
 ## Observed & expected counts in R
 
 ::: columns
-::: {.column width="60%"}
+::: {.column width="50%"}
 
 You can see what the __observed__ and __expected__ counts are from the saved chi-squared test results:
 ```{r}
@@ -475,7 +515,7 @@ ChisqTest_DepPA$expected
 ```
 :::
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 
 ![](/img_slides/ChiSq_Table_Expected_brief_DepressionPA.png){fig-align="center"}
 
@@ -564,8 +604,8 @@ chisq.test(DepPA100_table)$expected
 
 * Recall the __sample size__ condition
     * In order for the test statistic to be modeled by a chi-squared distribution we need
-    * __<span style="color:darkorange"> 2 $\times$ 2 table:</span> expected counts are at least 10 for each cell__
-    * __<span style="color:darkorange">larger tables:   </span>__
+    * __[ 2 $\times$ 2 table:]{style="color:darkorange"} expected counts are at least 10 for each cell__
+    * __[larger tables:   ]{style="color:darkorange"}__
         * __no more than 1/5 of the expected counts are less than 5__, and 
         * __all expected counts are greater than 1__
 
@@ -614,9 +654,10 @@ If there are only 2 levels in both of the categorical variables being tested, th
 
 __Example:__ On Day 15 we tested whether the proportion who had participated in sports betting was the same for college and noncollege young adults:
 
-$$~~~~H_0: p_{coll} - p_{noncoll} = 0\\
-H_A: p_{coll} - p_{noncoll} \neq 0$$
-
+\begin{align}
+H_0:& ~p_{coll} - p_{noncoll} = 0\\
+H_A:& ~p_{coll} - p_{noncoll} \neq 0
+\end{align}
 
 ```{r}
 SportsBet_table <- matrix(c(175, 94, 137, 77), nrow = 2, ncol = 2, byrow = T)
@@ -624,7 +665,6 @@ dimnames(SportsBet_table) <- list("Group" = c("College", "NonCollege"),   # row 
                               "Bet" = c("No", "Yes"))  # column names
 SportsBet_table
 ```
-
 
 
 
@@ -648,8 +688,10 @@ z <- sqrt(0.0199)
 
 * In a test of homogeneity, proportions can be compared between many groups
 
-$$~~~~H_0: p_1 = p_2 = p_2 = \ldots = p_n\\
-H_A: p_i \neq p_j \textrm{for at least one pair of } i, j$$
+\begin{align}
+H_0:&~ p_1 = p_2 = p_2 = \ldots = p_n\\
+H_A:&~ p_i \neq p_j \textrm{for at least one pair of } i, j
+\end{align}
 
 * It's an extension of a two proportions test.
 
