@@ -50,7 +50,7 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 * For book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes. 
 
-* Do not forget to include a discussion on whether you think the test (or CI) assumptions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test (or CI) as instructed.
+* Do not forget to include a discussion on whether you think the test (or CI) conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test (or CI) as instructed.
 
 :::
 
@@ -198,7 +198,7 @@ __Create density plots and box plots of the expenditures stratified by ethnicity
 
 ### t-test conditions: age groups
 
-__Are the assumptions for a t-test comparing the mean expenditures of the two ethnicities satisfied for either or both of the age groups?__ 
+__Are the conditions for a t-test comparing the mean expenditures of the two ethnicities satisfied for either or both of the age groups?__ 
 
 
 

@@ -146,7 +146,7 @@ It is a good idea to try rendering your document from time to time as you go alo
 ## 8.34 Coffee and Depression {.unnumbered}
 
 * [__Do not create a dataset and run the test in R. Use just the information given in the problem.__]{style="color:green"}
-* [__For (e), calculate the p-value "directly" (not using $\chi^2$ test command in R). Also comment on whether you think the sample size assumption would be met without computing the expected cell counts.__]{style="color:green"}
+* [__For (e), calculate the p-value "directly" (not using $\chi^2$ test command in R). Also comment on whether you think the sample size condition would be met without computing the expected cell counts.__]{style="color:green"}
 
 
 ## 8.38 (a) & (extra) Salt intake and CVD {.unnumbered}
@@ -156,7 +156,7 @@ Do not do parts (b)-(c) in the book
 ### (a) {.unnumbered}
 
 * [__You can use the expected cell counts from R's chi-squared test (you do not need to compute them using the formula).__]{style="color:green"} 
-* [__Comment on whether the sample size assumption is met or not for these data.__]{style="color:green"}
+* [__Comment on whether the sample size condition is met or not for these data.__]{style="color:green"}
 
 
 
