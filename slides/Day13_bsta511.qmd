@@ -1,5 +1,5 @@
 ---
-title: "DRAFT - Day 17: Chi-squared tests (Sections 8.3-8.4)"
+title: "Day 13: Chi-squared tests (Sections 8.3-8.4)"
 subtitle: "BSTA 511/611"
 author: "Meike Niederhausen, PhD"
 institute: "OHSU-PSU School of Public Health"
@@ -438,10 +438,11 @@ If we fail to reject, we DO NOT have evidence of no association.
 
 ## Depression vs. physical activity dataset
 
+Create dataset based on results table:
+
 ::: columns
 ::: {.column width="50%"}
 
- Create dataset based on results table:
 ```{r}
 DepPA <- tibble(
   Depression = c(rep("None", 314), 
@@ -460,39 +461,80 @@ DepPA <- tibble(
 
 ::: {.column width="50%"}
  ![](/img_slides/ChiSq_Table_Expected_brief_DepressionPA.png){fig-align="center"}
- 
-Summary table of data:
-```{r}
-DepPA %>% tabyl(Depression, PA) 
 
+:::
+:::
+
+Summary table of data:
+
+::: columns
+::: {.column width="50%"}
+```{r}
+DepPA %>% 
+  tabyl(Depression, PA)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
 # base R:
 table(DepPA)
 ```
+
 :::
 :::
 
 
 ## $\chi^2$ test in R using dataset
 
-If only have 2 columns in the dataset:
+::: columns
+::: {.column width="50%"}
+
+If only have [2 columns]{style="color:green"} in the dataset:
 
 ```{r}
-(ChisqTest_DepPA <- chisq.test(table(DepPA)))
+(ChisqTest_DepPA <- 
+   chisq.test(table(DepPA)))
 ```
 
-If have >2 columns in the dataset, we need to specify which columns to table:
+If have [>2 columns]{style="color:green"} in the dataset, we need to specify which columns to table:
 
 ```{r}
-(ChisqTest_DepPA <- chisq.test(table(DepPA$Depression, DepPA$PA)))
+(ChisqTest_DepPA <- 
+   chisq.test(table(
+     DepPA$Depression, DepPA$PA)))
 ```
+
+:::
+
+::: {.column width="50%"}
+The tidyverse way (fewer parentheses)
+
+```{r}
+table(DepPA$Depression, DepPA$PA) %>% 
+  chisq.test() 
+```
+
 
 `tidy()` the output (from `broom` package):
 
 ```{r}
-tidy(ChisqTest_DepPA)
-tidy(ChisqTest_DepPA)$p.value
+table(DepPA$Depression, DepPA$PA) %>% 
+  chisq.test() %>% 
+  tidy() %>% gt()
 ```
 
+Pull _p_-value
+
+```{r}
+table(DepPA$Depression, DepPA$PA) %>% 
+  chisq.test() %>% 
+  tidy() %>% pull(p.value)
+```
+
+
+:::
+:::
 
 
 ## Observed & expected counts in R
@@ -520,7 +562,7 @@ ChisqTest_DepPA$expected
 
 
 
-## $\chi^2$ test in R with 2-way table (1/2)
+## $\chi^2$ test in R with 2-way table
 
 Create a base R table of the results:
 
@@ -531,11 +573,7 @@ dimnames(DepPA_table) <- list("PA" = c("Yes", "No"),   # row names
 DepPA_table
 ```
 
-
-
-
-
-## $\chi^2$ test in R with 2-way table (2/2)
+Run $\chi^2$ test with 2-way table:
 
 ```{r}
 chisq.test(DepPA_table) 
@@ -544,26 +582,46 @@ chisq.test(DepPA_table)$expected
 
 
 
-## Continuity correction
+## (Yates') Continuity correction
 
-* Just like the proportions test, $\chi^2$ tests have the option of including a continuity correction
+* For a __2x2__ contingency table, 
+    * the $\chi^2$ test has the option of including a continuity correction
+    * just like with the proportions test 
 * The __default includes a continuity correction__
-    * Output below is without a CC - it looks the same for this example 
+* There is no CC for bigger tables 
 
 ```{r}
-chisq.test(DepPA_table, correct = FALSE) %>% tidy()
+(DepPA_table2x2 <- matrix(c(199, 27, 115, 59), nrow = 2, ncol = 2, byrow = T))
+dimnames(DepPA_table2x2) <- list("PA" = c("Yes", "No"),   # row names
+                              "Depression" = c("None", "Several/Most"))  # column names
+DepPA_table2x2
 ```
 
+::: columns
+::: {.column width="55%"}
+Output __without a CC__
 
+```{r}
+chisq.test(DepPA_table2x2, correct = FALSE) 
+```
+:::
 
+::: {.column width="45%"}
+Compare to output __with CC__:
+
+```{r}
+chisq.test(DepPA_table2x2) 
+```
+
+:::
+:::
 
 # Fischer's Exact Test
 
-Use this if sample size too small
+Use this if expected cell counts are too small
 
 
-
-## Example with small sample sizes 
+## Example with smaller sample size 
 
 * Suppose that instead of taking a random sample of 400 adults (from the NHANES data), a study takes a random sample of 100 such that
     * 50 people that are physically active and 
@@ -571,26 +629,20 @@ Use this if sample size too small
 
 ```{r}
 (DepPA100_table <- matrix(c(43, 5, 2, 40, 4, 6), nrow = 2, ncol = 3, byrow = T))
+
 dimnames(DepPA100_table) <- list("PA" = c("Yes", "No"),   # row names
                               "Depression" = c("None", "Several", "Most"))  # column names
-DepPA100_table
 
+DepPA100_table
 ```
 
 
-## Chi-squared test warning (1/2)
+## Chi-squared test warning 
 
 ```{r}
 #| warning: true
 chisq.test(DepPA100_table) 
-```
 
-
-
-## Chi-squared test warning (2/2)
-
-```{r}
-#| warning: true
 chisq.test(DepPA100_table)$expected
 ```
 
@@ -602,75 +654,87 @@ chisq.test(DepPA100_table)$expected
         * __all expected counts are greater than 1__
 
 
-
 ## Fisher's Exact Test
 
 * Called an exact test since it 
-    * calculates an exact p-value probability 
+    * calculates an exact probability for the p-value 
         * instead of using an asymptotic approximation, such as the normal, t, or chi-squared distributions
-    * For 2x2 tables the p-value is calculated using the hypergeometric probability distribution (see book for details)  
+    * For 2x2 tables the p-value is calculated using the __hypergeometric__ probability distribution (see book for details)  
 
 
 ```{r}
 fisher.test(DepPA100_table)
 ```
 
-Note: no test statistic & a two-sided test
+::: {.callout-caution icon=false} 
+## Comments
+
+* Note that there is no test statistic
+* There is also no CI
+* This is always a two-sided test
+* There is no continuity correction since the hypergeometric distribution is discrete
+:::
 
 
-## Another option: simulate p-value
 
-From the help file: 
+## __Simulate p-values__: another option for small expected counts
 
-* Simulation is done by random sampling from the set of all contingency tables with given marginals, and 
-    * works only if the marginals are strictly positive. 
-* Continuity correction is never used, and the statistic is quoted without it. 
-* Note that this is not the usual sampling situation assumed for the chi-squared test but rather that for Fisher's exact test.
+From the `chisq.test` help file: 
+
+* Simulation is done by random sampling from the set of all contingency tables with the same margin totals
+    * works only if the margin totals are strictly positive. 
+* For each simulation, a $\chi^2$ test statistic is calculated
+* _P_-value is the proportion of simulations that have a test statistic at least as big as the observed one.
+* No continuity correction
 
 ```{r}
+set.seed(567)
 chisq.test(DepPA100_table, simulate.p.value = TRUE) 
 ```
-
-
 
 
 
 # $\chi^2$ test vs. testing proportions
 
 
-
-
-## $\chi^2$ test vs. testing differences in proportions (1/2)
+## $\chi^2$ test vs. testing differences in proportions 
 
 If there are only 2 levels in both of the categorical variables being tested, then the _p_-value from the $\chi^2$ test is equal to the _p_-value from the differences in proportions test.
 
-__Example:__ On Day 15 we tested whether the proportion who had participated in sports betting was the same for college and noncollege young adults:
+::: columns
+::: {.column width="50%"}
+__Example:__ Previously we tested whether the proportion who had participated in sports betting was the same for college and noncollege young adults:
 
 \begin{align}
 H_0:& ~p_{coll} - p_{noncoll} = 0\\
 H_A:& ~p_{coll} - p_{noncoll} \neq 0
 \end{align}
 
+:::
+
+::: {.column width="50%"}
+::: {style="font-size: 90%;"}
 ```{r}
-SportsBet_table <- matrix(c(175, 94, 137, 77), nrow = 2, ncol = 2, byrow = T)
-dimnames(SportsBet_table) <- list("Group" = c("College", "NonCollege"),   # row names
-                              "Bet" = c("No", "Yes"))  # column names
+SportsBet_table <- matrix(
+  c(175, 94, 137, 77), 
+  nrow = 2, ncol = 2, byrow = T)
+
+dimnames(SportsBet_table) <- list(
+  "Group" = c("College", "NonCollege"), # row names
+  "Bet" = c("No", "Yes"))  # column names
+
 SportsBet_table
 ```
+:::
 
-
-
-## $\chi^2$ test vs. testing differences in proportions (2/2)
-
+:::
+:::
 ```{r}
-chisq.test(SportsBet_table) %>% tidy()
-prop.test(SportsBet_table) %>% tidy() 
-z <- sqrt(0.0199)
-2*pnorm(z, lower.tail=F)# p-value
-```
+chisq.test(SportsBet_table) %>% tidy() %>% gt()
+prop.test(SportsBet_table) %>% tidy() %>% gt()
 
-<!-- * Same test statistic (both shown as $\chi^2$) and _p_-value! -->
-<!-- * This is because $Z^2 \sim \chi_{df=1}^2$, if $Z\sim N(0,1)$. -->
+2*pnorm(sqrt(0.0199), lower.tail=F) # p-value
+```
 
 
 

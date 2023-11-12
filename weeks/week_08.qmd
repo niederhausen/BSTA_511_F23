@@ -22,12 +22,13 @@ editor_options:
 
 ### Slides
 
-* (Draft) [html](../slides/Day13_bsta511.qmd)
+_Note: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides._ 
 
-<!-- * [pdf]() -->
-<!-- * [webpage](../slides_md/Day13_bsta511_md.qmd) -->
-
-* (Draft) Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day13_bsta511_code.qmd), [html](../slides_code/Day13_bsta511_code.qmd)
+* [html](../slides/Day13_bsta511.qmd)
+* [pdf](https://drive.google.com/file/d/1KN51RBvBPJwIoEjIsDPGDwPSNhScmLbP/view?usp=sharing)
+* Slides with [notes](https://drive.google.com/file/d/1KICeogpenpwWQ01oePQ7jD_ZQiB4Zxzu/view?usp=sharing)
+* [webpage](../slides_md/Day13_bsta511_md.qmd)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day13_bsta511_code.qmd), [html](../slides_code/Day13_bsta511_code.qmd)
 
 
 ### Datasets
