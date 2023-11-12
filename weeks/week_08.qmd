@@ -42,7 +42,9 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 
 [Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
 
-* tbd
+Questions from HW 7
+
+* Book #8.28, 8.34, 8.38 (modified; see assignment), 8.32
 
 
 ## Exam 2 (Wednesday)

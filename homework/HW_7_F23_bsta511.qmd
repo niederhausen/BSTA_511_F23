@@ -1,5 +1,5 @@
 ---
-title: "DRAFT - HW 7: BSTA 511-611 F23"
+title: "HW 7: BSTA 511-611 F23"
 author: "Your name here - update this!!!!"
 date: "Due 11/18/23"
 format: 
@@ -115,8 +115,50 @@ __<font color="green">Calculate and interpret the 95% confidence interval for th
 
 
 
-
 ## 8.26 An apple a day keeps the doctor away {.unnumbered}
+
+
+
+
+## 8.28 True or false, Part II {.unnumbered}
+
+
+
+
+## 8.32 Diabetes and unemployment {.unnumbered}
+
+
+### (a) {.unnumbered}
+
+### (b) {.unnumbered}
+
+### (c) {.unnumbered}
+
+__In addition to answering the question in (c), run the 2 proportions test in R and calculated the "z" test statistic and p-value using the normal distribution based on the $\chi^2$ output in R's test.__
+
+
+### (d) extra part {.unnumbered}
+
+__Run the test as a $\chi^2$ as well, and compare your results to those in (c).__ 
+
+## 8.34 Coffee and Depression {.unnumbered}
+
+* __Do not create a dataset and run the test in R. Use just the information given in the problem.__
+* __For (e), calculate the p-value "directly" (not using $\chi^2$ test command in R). Also comment on whether you think the sample size assumption would be met without computing the expected cell counts.__
+
+
+## 8.38 (a) & (extra) Salt intake and CVD {.unnumbered}
+
+Do not do parts (b)-(c) in the book
+
+### (a)
+
+* __You can use the expected cell counts from R's chi-squared test (you do not need to compute them using the formula).__ 
+* __Comment on whether the sample size assumption is met or not for these data.__
+
+### (extra)
+
+__Run a Fisher's Exact test. Include the hypotheses and a conclusion in the context of the problem.__
 
 
 # PSS
@@ -139,16 +181,4 @@ __<font color="green">For the same test, what sample size would be needed for 80
 
 ### Effect size
 __<font color="green">If we increase the sample size, and keep the power and significance level the same, does the effect size increase or decrease? Why? </font>__ 
-
-
-
-
-
-# R exercises 
-
-## Load all the packages you need below here. 
-
-
-
-
 

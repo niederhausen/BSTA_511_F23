@@ -1131,7 +1131,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\nHW 2: BSTA 511-611 F23\n\n\n\n\n10/21/23\n\n\nHW 3: BSTA 511-611 F23\n\n\n\n\n10/28/23\n\n\nHW 4: BSTA 511-611 F23\n\n\n\n\n11/4/23\n\n\nHW 5: BSTA 511-611 F23\n\n\n\n\n11/11/23\n\n\nHW 6: BSTA 511-611 F23\n\n\n\n\n11/18/23\n\n\nDRAFT - HW 7: BSTA 511-611 F23\n\n\n\n\nundefined\n\n\nq4 Binomial\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\nHW 2: BSTA 511-611 F23\n\n\n\n\n10/21/23\n\n\nHW 3: BSTA 511-611 F23\n\n\n\n\n10/28/23\n\n\nHW 4: BSTA 511-611 F23\n\n\n\n\n11/4/23\n\n\nHW 5: BSTA 511-611 F23\n\n\n\n\n11/11/23\n\n\nHW 6: BSTA 511-611 F23\n\n\n\n\n11/18/23\n\n\nHW 7: BSTA 511-611 F23\n\n\n\n\nundefined\n\n\nq4 Binomial\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/Day02_bsta511.html#experiments-12",
@@ -9844,63 +9844,63 @@
   {
     "objectID": "homework/HW_7_F23_bsta511.html",
     "href": "homework/HW_7_F23_bsta511.html",
-    "title": "DRAFT - HW 7: BSTA 511-611 F23",
+    "title": "HW 7: BSTA 511-611 F23",
     "section": "",
     "text": "Due 11/18/23\nDownload the .qmd file for this assignment from https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_7_F23_bsta511.qmd"
   },
   {
     "objectID": "homework/HW_7_F23_bsta511.html#directions",
     "href": "homework/HW_7_F23_bsta511.html#directions",
-    "title": "DRAFT - HW 7: BSTA 511-611 F23",
+    "title": "HW 7: BSTA 511-611 F23",
     "section": "Directions",
     "text": "Directions\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\nR & LaTeX code\n\nSee the .qmd files with the code from class notes for LaTeX and R code.\nThe LaTeX code will make it easier to show your work in computations.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW_7_F23_bsta511.html#young-americans-part-i",
     "href": "homework/HW_7_F23_bsta511.html#young-americans-part-i",
-    "title": "DRAFT - HW 7: BSTA 511-611 F23",
+    "title": "HW 7: BSTA 511-611 F23",
     "section": "8.2 Young Americans, Part I",
     "text": "8.2 Young Americans, Part I"
   },
   {
     "objectID": "homework/HW_7_F23_bsta511.html#legalization-of-marijuana-part-i",
     "href": "homework/HW_7_F23_bsta511.html#legalization-of-marijuana-part-i",
-    "title": "DRAFT - HW 7: BSTA 511-611 F23",
+    "title": "HW 7: BSTA 511-611 F23",
     "section": "8.8 Legalization of marijuana, Part I",
     "text": "8.8 Legalization of marijuana, Part I\nAdditional instructions:\n\n(b): Calculate the CI both using the formula and using the appropriate R statistical test.\nAdd parts (e) & (f) as instructed below.\n\n\n(a)\n\n\n(b)\n\n\n(c)\n\n\n(d)\n\n\n(e)\nTest whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Do the test using both the formulas and running it in R (without a continuity correction).\n\n\n(f)\nAre the results from CI and hypothesis test consistent? Why or why not?"
   },
   {
     "objectID": "homework/HW_7_F23_bsta511.html#legalize-marijuana-part-ii",
     "href": "homework/HW_7_F23_bsta511.html#legalize-marijuana-part-ii",
-    "title": "DRAFT - HW 7: BSTA 511-611 F23",
+    "title": "HW 7: BSTA 511-611 F23",
     "section": "8.10 Legalize Marijuana, Part II",
     "text": "8.10 Legalize Marijuana, Part II"
   },
   {
     "objectID": "homework/HW_7_F23_bsta511.html#healthcare-law",
     "href": "homework/HW_7_F23_bsta511.html#healthcare-law",
-    "title": "DRAFT - HW 7: BSTA 511-611 F23",
+    "title": "HW 7: BSTA 511-611 F23",
     "section": "8.14 2010 Healthcare Law",
     "text": "8.14 2010 Healthcare Law"
   },
   {
     "objectID": "homework/HW_7_F23_bsta511.html#prenatal-vitamins-and-autism",
     "href": "homework/HW_7_F23_bsta511.html#prenatal-vitamins-and-autism",
-    "title": "DRAFT - HW 7: BSTA 511-611 F23",
+    "title": "HW 7: BSTA 511-611 F23",
     "section": "8.24 Prenatal vitamins and Autism",
     "text": "8.24 Prenatal vitamins and Autism\nAdditional instructions:\n\n(b): Do the hypothesis test both using the formula and using the appropriate R statistical test.\nAdd part (d) as instructed below.\n\n\n(a)\n\n\n(b)\n\n\n(c)\n\n\n(d)\nCalculate and interpret the 95% confidence interval for the difference in proportions using the formula. Is it consistent with CI from the R output of the hypothesis test?"
   },
   {
     "objectID": "homework/HW_7_F23_bsta511.html#an-apple-a-day-keeps-the-doctor-away",
     "href": "homework/HW_7_F23_bsta511.html#an-apple-a-day-keeps-the-doctor-away",
-    "title": "DRAFT - HW 7: BSTA 511-611 F23",
+    "title": "HW 7: BSTA 511-611 F23",
     "section": "8.26 An apple a day keeps the doctor away",
     "text": "8.26 An apple a day keeps the doctor away"
   },
   {
     "objectID": "homework/HW_7_F23_bsta511.html#pss1-legalize-marijuana-part-iii.",
     "href": "homework/HW_7_F23_bsta511.html#pss1-legalize-marijuana-part-iii.",
-    "title": "DRAFT - HW 7: BSTA 511-611 F23",
+    "title": "HW 7: BSTA 511-611 F23",
     "section": "1.1 PSS1: Legalize Marijuana, Part III.",
     "text": "1.1 PSS1: Legalize Marijuana, Part III.\n\n1.1.1 Power\nIn exercise 8.8 (e), we tested whether the proportion of US residents who think marijuana should be made legal is different than 0.586. Calculate the power for the hypothesis test and include an interpretation of the power in the context of the research question. Was it sufficiently powered?\n\n\n1.1.2 Sample size\nFor the same test, what sample size would be needed for 80% power? How about 90% power?\n\n\n1.1.3 Effect size\nIf we increase the sample size, and keep the power and significance level the same, does the effect size increase or decrease? Why?"
   },
@@ -9916,14 +9916,14 @@
     "href": "weeks/week_08.html",
     "title": "Week 8",
     "section": "",
-    "text": "Chi-squared tests of association and homogeneity\nFisher’s exact test\nSections 8.3-8.4\n\n\n\nNote: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides.\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nNo datasets for this class\n\n\n\n\nClass discussion Google doc link\n\ntbd"
+    "text": "Chi-squared tests of association and homogeneity\nFisher’s exact test\nSections 8.3-8.4\n\n\n\nNote: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides.\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nNo datasets for this class\n\n\n\n\nClass discussion Google doc link\nQuestions from HW 7\n\nBook #8.28, 8.34, 8.38 (modified; see assignment), 8.32"
   },
   {
     "objectID": "weeks/week_08.html#day-13",
     "href": "weeks/week_08.html#day-13",
     "title": "Week 8",
     "section": "",
-    "text": "Chi-squared tests of association and homogeneity\nFisher’s exact test\nSections 8.3-8.4\n\n\n\nNote: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides.\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nNo datasets for this class\n\n\n\n\nClass discussion Google doc link\n\ntbd"
+    "text": "Chi-squared tests of association and homogeneity\nFisher’s exact test\nSections 8.3-8.4\n\n\n\nNote: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides.\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nNo datasets for this class\n\n\n\n\nClass discussion Google doc link\nQuestions from HW 7\n\nBook #8.28, 8.34, 8.38 (modified; see assignment), 8.32"
   },
   {
     "objectID": "weeks/week_08.html#exam-2-wednesday",
@@ -10750,5 +10750,33 @@
     "title": "Day 13: Chi-squared tests (Sections 8.3-8.4)",
     "section": "What’s next?",
     "text": "What’s next?"
+  },
+  {
+    "objectID": "homework/HW_7_F23_bsta511.html#true-or-false-part-ii",
+    "href": "homework/HW_7_F23_bsta511.html#true-or-false-part-ii",
+    "title": "HW 7: BSTA 511-611 F23",
+    "section": "8.28 True or false, Part II",
+    "text": "8.28 True or false, Part II"
+  },
+  {
+    "objectID": "homework/HW_7_F23_bsta511.html#diabetes-and-unemployment",
+    "href": "homework/HW_7_F23_bsta511.html#diabetes-and-unemployment",
+    "title": "HW 7: BSTA 511-611 F23",
+    "section": "8.32 Diabetes and unemployment",
+    "text": "8.32 Diabetes and unemployment\n\n(a)\n\n\n(b)\n\n\n(c)\nIn addition to answering the question in (c), run the 2 proportions test in R and calculated the “z” test statistic and p-value using the normal distribution based on the \\(\\chi^2\\) output in R’s test.\n\n\n(d) extra part\nRun the test as a \\(\\chi^2\\) as well, and compare your results to those in (c)."
+  },
+  {
+    "objectID": "homework/HW_7_F23_bsta511.html#coffee-and-depression",
+    "href": "homework/HW_7_F23_bsta511.html#coffee-and-depression",
+    "title": "HW 7: BSTA 511-611 F23",
+    "section": "8.34 Coffee and Depression",
+    "text": "8.34 Coffee and Depression\n\nDo not create a dataset and run the test in R. Use just the information given in the problem.\nFor (e), calculate the p-value “directly” (not using \\(\\chi^2\\) test command in R). Also comment on whether you think the sample size assumption would be met without computing the expected cell counts."
+  },
+  {
+    "objectID": "homework/HW_7_F23_bsta511.html#a-extra-salt-intake-and-cvd",
+    "href": "homework/HW_7_F23_bsta511.html#a-extra-salt-intake-and-cvd",
+    "title": "HW 7: BSTA 511-611 F23",
+    "section": "8.38 (a) & (extra) Salt intake and CVD",
+    "text": "8.38 (a) & (extra) Salt intake and CVD\nDo not do parts (b)-(c) in the book\n\n0.0.1 (a)\n\nYou can use the expected cell counts from R’s chi-squared test (you do not need to compute them using the formula).\nComment on whether the sample size assumption is met or not for these data.\n\n\n\n0.0.2 (extra)\nRun a Fisher’s Exact test. Include the hypotheses and a conclusion in the context of the problem."
   }
 ]
