@@ -50,7 +50,7 @@ Questions from [HW 7](../homework/HW_7_F23_bsta511.qmd)
 ## Exam 2 (Wednesday)
 
 * Material will cover __Days 7-6__, 
-    * which is approximately __Chapters 3.3-3.4, 4, 5.1-5.4__ from the textbook, plus extra material for power & sample size calcualtions in slides.
+    * which is approximately __Chapters 3.3-3.4, 4, 5.1-5.4__ from the textbook, plus extra material for power & sample size calculations in slides.
 * The exam will be in-class and handwritten. Bring a calculator.
 * You may bring one page of notes on an 8.5" x 11" sheet of paper. 
     * You may use both sides. 
