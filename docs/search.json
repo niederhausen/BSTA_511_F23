@@ -10777,6 +10777,6 @@
     "href": "homework/HW_7_F23_bsta511.html#a-extra-salt-intake-and-cvd",
     "title": "HW 7: BSTA 511-611 F23",
     "section": "8.38 (a) & (extra) Salt intake and CVD",
-    "text": "8.38 (a) & (extra) Salt intake and CVD\nDo not do parts (b)-(c) in the book\n\n0.0.1 (a)\n\nYou can use the expected cell counts from R’s chi-squared test (you do not need to compute them using the formula).\nComment on whether the sample size assumption is met or not for these data.\n\n\n\n0.0.2 (extra)\nRun a Fisher’s Exact test. Include the hypotheses and a conclusion in the context of the problem."
+    "text": "8.38 (a) & (extra) Salt intake and CVD\nDo not do parts (b)-(c) in the book\n\n(a)\n\nYou can use the expected cell counts from R’s chi-squared test (you do not need to compute them using the formula).\nComment on whether the sample size assumption is met or not for these data.\n\n\n\n(extra)\nRun a Fisher’s Exact test. Include the hypotheses and a conclusion in the context of the problem."
   }
 ]
