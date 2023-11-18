@@ -1,0 +1,921 @@
+---
+title: "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)"
+subtitle: "BSTA 511/611"
+author: "Meike Niederhausen, PhD"
+institute: "OHSU-PSU School of Public Health"
+date: "11/20/2023"
+categories: ["Week 9"]
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    code-fold: show
+    code-tools: true
+    source: repo
+    html-math-method: mathjax
+execute:
+  echo: true
+  freeze: auto  # re-render only when source changes
+# editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE, fig.height=2.5, fig.width=6, message = F)
+```
+
+## Load packages
+
+* Packages need to be loaded _every time_ you restart R or render an Qmd file
+
+```{r}
+# run these every time you open Rstudio
+library(tidyverse)    
+library(oibiostat)
+library(janitor)
+library(rstatix)
+library(knitr)
+library(gtsummary)
+library(moderndive)
+library(gt)
+library(broom) 
+library(here) 
+library(pwr) # new-ish
+
+```
+
+
+- You can check whether a package has been loaded or not 
+  - by looking at the Packages tab and 
+  - seeing whether it has been checked off or not
+
+
+# Topics
+
+* When to use an ANOVA
+* Different sources of variation in ANOVA
+* ANOVA assumptions
+* Post-hoc testing of differences in means
+* Running an ANOVA in R
+
+## Additional Resource
+
+* BSTA 511 textbook (Vu & Harrington)
+    * Section 5.5: Comparing means with ANOVA
+    * Section 7.9: Connection between ANOVA and regression
+
+
+
+# Disability Discrimination Example 
+
+
+* The U.S. Rehabilitation Act of 1973 prohibited discrimination against people with physical disabilities. 
+    * The act defined a disabled person as any individual who has a physical or mental impairment that limits the person's major life activities.
+* A 1980's study examined whether physical disabilities affect people's perceptions of employment qualifications 
+    * ([Cesare, Tannenbaum, & Dalessio, 1990](https://psycnet.apa.org/record/1991-07629-001)). 
+]
+
+
+* Researchers prepared recorded job interviews, using _same actors and script each time_. 
+* Only difference: job applicant appeared with different disabilities.
+    * _No disability_
+    * _Leg amputation_
+    * _Crutches_
+    * _Hearing impairment_
+    * _Wheelchair confinement_
+* 70 undergrad students were randomly assigned to view one of the videotapes, 
+    * then __rated__ the candidate's qualifications on a __1-10 scale__.
+
+
+
+* The research question: __are qualifications evaluated differently depending on the applicant's presented disability?__
+
+
+
+### Load interview data from `.txt` file
+
+
+* `.txt` files are usually tab-deliminated files
+    * `.csv` files are comma-separated files
+* `read_delim` is from the `readr` package, just like `read_csv`
+
+```{r}
+employ <- read_delim(
+  file = here::here("data", "DisabilityEmployment.txt"), 
+  delim = "\t",   # tab delimited
+  trim_ws = TRUE)
+```
+
+`trim_ws`: 	Should leading and trailing whitespace be trimmed from each field before parsing it?
+
+
+
+```{r}
+summary(employ)
+employ %>% tabyl(disability)
+```
+
+
+
+
+
+### Factor variable: Make `disability` variable a factor variable
+
+
+```{r}
+glimpse(employ)
+employ <- employ %>% 
+  mutate(disability = factor(disability))
+glimpse(employ)
+```
+
+```{r}
+summary(employ)
+```
+
+
+
+
+### Factor variable: Change order & name of disability levels 
+
+```{r}
+levels(employ$disability)
+
+employ <- employ %>% 
+  mutate(
+    # make "none" the first level
+    # by only listing the level none, all other levels will be in original order
+    disability = fct_relevel(disability, "none"),
+    # change the level name amputee to amputation
+    disability = fct_recode(disability, amputation = "amputee")
+    )
+
+levels(employ$disability) # note the new order and new name
+```
+
+`fct_relevel()` and `fct_recode()` are from the `forcats` package: https://forcats.tidyverse.org/index.html. `forcats` is loaded with `library(tidyverse)`.
+
+
+
+### Data viz
+
+```{r}
+#| fig.width: 5.0
+#| fig.height: 4.0
+ggplot(employ, aes(x=score)) +
+  geom_density() +
+  facet_wrap(~ disability)
+```
+
+
+```{r}
+#| fig.width: 5.0
+#| fig.height: 3.1
+library(ggridges) 
+ggplot(employ, 
+       aes(x=score,
+           y = disability,
+           fill = disability)) + 
+  geom_density_ridges(alpha = 0.4) +
+  theme(legend.position="none")
+```
+
+
+
+
+
+
+
+```{r}
+#| fig.width: 5.0
+#| fig.height: 4.0
+ggplot(employ, aes(y=score, x = disability,
+                   fill = disability)) +
+  geom_boxplot(alpha =.3) +
+  coord_flip() +
+  geom_jitter(width =.1, alpha = 0.3) +
+  theme(legend.position = "none")
+```
+
+
+
+```{r}
+#| fig.width: 5.0
+#| fig.height: 4.0
+ggplot(employ, aes(x = disability, y=score, 
+    fill=disability, color=disability)) +
+  geom_dotplot(binaxis = "y", alpha =.5) +
+  geom_hline(aes(yintercept = mean(score)), 
+             lty = "dashed") +
+  stat_summary(fun ="mean", geom="point", 
+    size = 3, color = "grey33", alpha =1) +
+  theme(legend.position = "none")
+```
+
+
+
+# ANOVA
+
+
+
+## Hypotheses
+
+To test for a difference in means across _k_ treatment groups:
+
+\begin{align}
+H_0 &: \mu_1 = \mu_2 = ... = \mu_k\\
+\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j
+\end{align}
+
+
+__Hypothetical examples:__  
+In which set (A or B) do you believe the evidence will be stronger 
+that at least one population differs from the others?
+
+__See slides__
+
+
+
+## Comparing means
+
+Whether or not two means are significantly different depends on:
+* How far apart the means are
+* How much variability there is within each treatment group
+
+__Questions:__  
+* How to measure variability between treatment groups?
+* How to measure variability within treatment groups?
+* How to compare the two measures?
+* How to determine significance?
+
+
+
+
+## ANOVA in base R
+
+
+
+```{r}
+empl_lm <- lm(score ~ disability, data = employ)
+anova(empl_lm)
+```
+
+Hypotheses:
+
+\begin{align}
+H_0 &: \mu_{none} = \mu_{amputation} = \mu_{crutches} = \mu_{hearing} =  \mu_{wheelchair}\\
+\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j
+\end{align}
+
+Do we reject or fail to reject $H_0$?
+
+
+
+
+
+## ANOVA tables
+
+
+__See slides__
+
+
+
+## ANOVA: Analysis of Variance 
+
+__Analysis of Variance (ANOVA)__ compares the variability between treatments to the variability within treatments 
+
+$$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(y_{ij} -\bar{y}_{..})^2 \ \ = \ \sum_{i = 1}^k n_i(\bar{y}_{i.}-\bar{y}_{..})^2 \ \ + \ \ \sum_{i = 1}^k\sum_{j = 1}^{n_i}(y_{ij}-\bar{y}_{i.})^2$$
+
+
+
+
+## Notation
+
+
+* _k_ treatment groups
+* _n_ observations in each of the _k_ treatment groups
+* Total sample size is $N=\sum_{i=1}^{k}n_i$
+* $\bar{y}_{i.}$ = mean of observations in treatment _i_
+* $\bar{y}_{..}$ = mean of _all_ observations
+
+
+
+| Observation | *i* = 1      | *i* = 2      | *i* = 3      | $\ldots$ |*i* = *k*| overall|
+| :----------| :---------:| :---------:|:----------:|:----:|:-----:|:-----:|
+| *j* = 1       | $y_{11}$ | $y_{21}$ | $y_{31}$ | $\ldots$ | $y_{k1}$ ||
+| *j* = 2       | $y_{12}$ | $y_{22}$ | $y_{32}$ | $\ldots$ | $y_{k2}$ ||
+| *j* = 3       | $y_{13}$ | $y_{23}$ | $y_{33}$ | $\ldots$ | $y_{k3}$ ||
+| *j* = 4       | $y_{14}$ | $y_{24}$ | $y_{34}$ | $\ldots$ | $y_{k4}$ ||
+| $\vdots$    | $\vdots$ | $\vdots$ | $\vdots$ | $\ddots$ | $\vdots$ ||
+| *j* = $n_i$     | $y_{1n}$ | $y_{2n}$ | $y_{3n}$ | $\ldots$ | $y_{kn}$ ||
+| Means       | $\bar{y}_{1.}$ | $\bar{y}_{2.}$ | $\bar{y}_{3.}$ | $\ldots$ | $\bar{y}_{k.}$ | $\bar{y}_{..}$ |
+| Variance    | ${s}^2_{1.}$ | ${s}^2_{2.}$ | ${s}^2_{3.}$ | $\ldots$ | ${s}^2_{k.}$ | ${s}^2_{..}$ |
+
+
+
+
+
+
+## Total Sums of Squares Visually
+
+
+```{r}
+#| fig.width: 5.0
+#| fig.height: 6.0
+#| echo: false
+ggplot(employ, aes(x = disability, y=score, 
+      fill = disability, color = disability)) +
+  geom_dotplot(binaxis = "y", alpha =.9) +
+  geom_hline(aes(yintercept = mean(score)), 
+             lty = "dashed") +
+  # stat_summary(fun = "mean", geom = "point", 
+  #      size = 3, color = "grey33", alpha =1)  +
+  theme(legend.position = "none")
+```
+
+
+Total Sums of Squares:
+
+$$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(y_{ij} -\bar{y}_{..})^2 = (N-1)s^2_{..}$$
+where $N=\sum_{i=1}^{k}n_i$ is the total sample size and $s^2_{..}$ is the grand standard deviation of all the observations
+
+* This is the sum of the squared differences between each observed $y_{ij}$ value and the *grand mean*, $\bar{y}_{..}$. 
+
+* That is, it is the total deviation of the $y_{ij}$'s from the grand mean. 
+
+
+
+
+
+
+### Calculate Total Sums of Squares 
+
+
+Total Sums of Squares:
+
+$$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(y_{ij} -\bar{y}_{..})^2 = (N-1)s^2_{..}$$
+where $N=\sum_{i=1}^{k}n_i$ is the total sample size and $s^2_{..}$ is the grand standard deviation of all the observations
+
+
+
+
+```{r}
+(Ns <- employ %>% group_by(disability) %>% count())
+(SST <- (sum(Ns$n) - 1) * sd(employ$score)^2)
+```
+
+
+
+
+
+## ANOVA: Analysis of Variance 
+
+__ANOVA__ compares the variability between treatments to the variability within treatments 
+
+
+
+
+## Sums of Squares due to Treatments Visually ("between" treatments)
+
+
+```{r}
+#| fig.width: 5.0
+#| fig.height: 6.0
+#| echo: false
+ggplot(employ, aes(x = disability, y=score, 
+      fill = disability, color = disability)) +
+  geom_dotplot(binaxis = "y", alpha =.2) +
+  geom_hline(aes(yintercept = mean(score)), 
+             lty = "dashed") +
+  stat_summary(fun = "mean", geom = "point", 
+       size = 3, color = "grey33", alpha =1)  +
+  theme(legend.position = "none")
+```
+
+
+Sums of Squares due to Treatments:
+
+$$SSTr = \sum_{i = 1}^k n_i(\bar{y}_{i.}-\bar{y}_{..})^2$$
+
+* This is the sum of the squared differences between each *treatment* mean, $\bar{y}_{i.}$, and the *grand mean*, $\bar{y}_{..}$. 
+
+* That is, it is the deviation of the treatment means from the grand mean.
+
+* Also called the Model SS, or $SS_{model}.$
+
+
+
+
+
+
+### Calculate Sums of Squares due to Treatments ("between" treatments)
+
+
+Sums of Squares due to Treatments:
+
+$$SSTr = \sum_{i = 1}^k n_i(\bar{y}_{i.}-\bar{y}_{..})^2$$
+
+```{r}
+xbar_groups <- employ %>% 
+  group_by(disability) %>% 
+  summarise(mean = mean(score))
+xbar_groups
+
+(SSTr <- 14*sum(
+  (xbar_groups$mean - mean(employ$score))^2))
+```
+
+
+
+## Sums of Squares Error Visually (within treatments)
+
+
+```{r}
+#| fig.width: 5.0
+#| fig.height: 6.0
+#| echo: false
+ggplot(employ, aes(x = disability, y=score, 
+      fill = disability, color = disability)) +
+  geom_dotplot(binaxis = "y", alpha =.5) +
+  # geom_hline(aes(yintercept = mean(score)), 
+             # lty = "dashed") +
+  stat_summary(fun = "mean", geom = "point", 
+       size = 3, color = "grey33", alpha =1)  +
+  theme(legend.position = "none")
+```
+
+
+Sums of Squares Error:
+
+$$SSE = \sum_{i = 1}^k\sum_{j = 1}^{n_i}(y_{ij}-\bar{y}_{i.})^2 = \sum_{i = 1}^k(n_i-1)s_{i.}^2$$
+where $s_{i.}$ is the standard deviation of the $i^{th}$ treatment
+
+* This is the sum of the squared differences between each observed $y_{ij}$ value and its treatment mean $\bar{y}_{i.}$. 
+
+* That is, it is the deviation of the $y_{ij}$'s from the predicted score by treatment.
+
+* Also called the residual sums of squares, or $SS_{residual}.$
+
+
+
+
+
+
+
+### Calculate Sums of Squares Error (within treatments)
+
+
+Sums of Squares Error:
+
+$$SSE = \sum_{i = 1}^k\sum_{j = 1}^{n_i}(y_{ij}-\bar{y}_{i.})^2 = \sum_{i = 1}^k(n_i-1)s_{i.}^2$$
+where $s_{i.}$ is the standard deviation of the $i^{th}$ treatment
+
+
+
+
+
+
+```{r}
+sd_groups <- employ %>% 
+  group_by(disability) %>% 
+  summarise(SD = sd(score))
+sd_groups
+
+(SSE <- sum(
+  (14-1)*sd_groups$SD^2))
+```
+
+
+
+
+
+## Verify _SST = SSTr + SSE_
+
+__ANOVA__ compares the variability between treatments to the variability within treatments 
+
+
+$$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(y_{ij} -\bar{y}_{..})^2 \ \ = \ \ n_i\sum_{i = 1}^k(\bar{y}_{i.}-\bar{y}_{..})^2 \ \ + \ \ \sum_{i = 1}^k\sum_{j = 1}^{n_i}(y_{ij}-\bar{y}_{i.})^2$$
+
+$$(N-1)s^2_{..} \ \ = \ \sum_{i = 1}^k n_i(\bar{y}_{i.}-\bar{y}_{..})^2 \ \ + \ \ \sum_{i = 1}^k(n_i-1)s_{i.}^2$$
+
+```{r}
+SST
+```
+
+```{r}
+SSTr + SSE
+```
+
+
+
+
+## Thinking about the F-statistic
+
+
+__[If the treatments are actually different, then which of these is more accurate?]{style="color:green"}__
+
+1. The variability between treatments should be higher than the variability within treatments
+1. The variability within treatments should be higher than the variability between treatments
+
+
+__[If there really is a difference between the treatments, we would expect the F-statistic to be which of these: ]{style="color:green"}__
+
+1. Higher than we would observe by random chance
+1. Lower than we would observe by random chance
+
+$$F = \frac{MSG}{MSE}$$
+
+
+
+
+## ANOVA in base R
+
+```{r}
+empl_lm <- lm(score ~ disability, data = employ)
+tidy(anova(empl_lm))
+```
+
+Hypotheses:
+
+\begin{align}
+H_0 &: \mu_{none} = \mu_{amputation} = \mu_{crutches} = \mu_{hearing} =  \mu_{wheelchair}\\
+\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j
+\end{align}
+
+Do we reject or fail to reject $H_0$?
+
+
+
+## Conclusion to hypothesis test
+
+\begin{align}
+H_0 &: \mu_{none} = \mu_{amputation} = \mu_{crutches} = \mu_{hearing} =  \mu_{wheelchair}\\
+\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j
+\end{align}
+
+
+```{r}
+tidy(anova(empl_lm))  # cleaner anova output
+round(broom::tidy(anova(empl_lm))$p.value[1],2)
+```
+
+
+* Use $\alpha$ = 0.05.
+* Do we reject or fail to reject $H_0$?
+
+__Conclusion statement__:
+* There is sufficient evidence that at least one of the disability groups has a mean employment score statistically different from the other groups. ( $p$-value = `r round(broom::tidy(anova(empl_lm))$p.value[1],2)`).
+
+
+
+
+## Assumptions for ANOVA 
+
+[__IF__ the following conditions hold:]{style="color:green"}
+
+1. the null hypothesis is true
+1. sample sizes in each treatment group are large (each $n \ge 30$) 
+    * OR the data are relatively normally distributed
+1. variability is "similar" in all treatment groups:
+    * Is the within treatment group variability about the same for each treatment group?
+    * As a rough rule of thumb, this assumption is _violated if the standard deviation of one treatment group is more than double the standard deviation of another treatment group_
+
+[__THEN__ the sampling distribution of the   
+__F-statistic__ is an __F-distribution__]{style="color:green"}
+
+
+Checking the __equal variance__ assumption:
+
+```{r}
+sd_groups # previously defined
+max(sd_groups$SD) / min(sd_groups$SD)
+```
+
+
+
+## Testing variances (Assumption 3)
+
+__Bartlett’s test for equal variances__
+
+* $H_0:$ variances of treatment levels are equal
+* $H_A:$ variances of treatment levels are NOT equal
+
+_Note: $H_A$ is same as saying that at least one of the treatment levels has a different variance__
+
+* Caution: Bartlett's test assumes the data in each treatment group are normally distributed. Do not use if data do not satisfy the normality assumption. 
+
+```{r}
+bartlett.test(score ~ disability, data = employ)
+```
+
+* Levene's test for equality of variances is not as restrictive: see https://www.statology.org/levenes-test-r/ 
+
+
+## The F-distribution
+
+The F-distribution is skewed right:
+
+```{r}
+#| fig.width: 5.0
+#| fig.height: 3.0
+#| echo: false
+F_stat <- 2.8646
+ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
+  geom_vline(xintercept = F_stat, color = "red") +
+  # fun = df is specifying (d)ensity of (f) distribution
+  stat_function(fun = df, args = list(df1=4, df2=65), color = "cornflowerblue") +
+  geom_area(stat = "function", fun = df, args = list(df1=4, df2=65), fill = "red", alpha =0.3, xlim = c(F_stat, 5)) +
+  annotate("text", x = 3.5, y = .1, label = "p-value", size=6) 
+```
+
+
+
+The __F-distribution__ has two degrees of freedom:
+
+* one for the numerator of the ratio (k – 1) and 
+* one for the denominator (N – k)
+
+$p$-__value__:  
+For F-statistics, the _p_-value (the area as extreme or more extreme) is always the __upper tail__.
+
+```{r}
+# p-value using F-distribution
+pf(2.8646, df1=5-1, df2=70-5, 
+   lower.tail = FALSE)
+```
+
+
+
+## Which treatment groups are statistically different?
+
+
+* So far we've only determined that at least one of the treatment groups is different from the others, but we don't know which.
+
+* What's your guess?
+
+
+```{r}
+#| fig.width: 5.0
+#| fig.height: 4.0
+#| echo: false
+ggplot(employ, aes(x = disability, y=score, 
+      fill = disability, color = disability)) +
+  geom_dotplot(binaxis = "y", alpha =.5) +
+  geom_hline(aes(yintercept = mean(score)), 
+             lty = "dashed") +
+  stat_summary(fun = "mean", geom = "point", 
+       size = 3, color = "grey33", alpha =1)  +
+  theme(legend.position = "none")
+```
+
+
+
+
+# Post-hoc testing for ANOVA
+## _determining which groups are statistically different_
+
+
+## Post-hoc testing: pairwise t-tests
+
+
+* In post-hoc testing we run all the pairwise t-tests comparing the means from each pair of groups.
+* With 5 groups, this involves doing ${5 \choose 2} = \frac{5!}{2!3!} = \frac{5\cdot 4}{2}= 10$ different pairwise tests.
+
+__Problem:__
+
+Although test has an $\alpha$ chance of a Type I error (finding a difference between a pair that aren't different), the overall Type I error rate will be much higher when running many tests simultaneously.
+
+
+
+
+\begin{align}
+P(\text{making an error}) = & \alpha\\
+P(\text{not making an error}) = & 1-\alpha\\
+P(\text{not making an error in m tests}) = & (1-\alpha)^m\\
+P(\text{making at least 1 error in m tests}) = & 1-(1-\alpha)^m
+\end{align}
+
+```{r}
+#| fig.height: 4.0
+#| echo: false
+Prob_error_mtests <- tibble(
+  m = 1:100,
+  P_error = 1-(1-.05)^m,
+  P_err_Bonf = 1-(1-.05/m)^m)
+
+ggplot(Prob_error_mtests, aes(x=m, y = P_error)) +
+  geom_point() +
+  labs(x = "Number of tests",
+       y = "P(at least 1 false positive)",
+       title = "Likelihood of a false positive",
+       subtitle = "For m tests and using alpha = 0.05")
+```
+
+
+
+
+
+## The Bonferroni Correction (1/2)
+
+
+
+A very conservative (but very popular) approach is to divide the $\alpha$ level by how many tests $m$ are being done:
+
+$$\alpha_{Bonf} = \frac{\alpha}{m}$$
+
+* This is equivalent to multiplying the  
+_p_-values by m:
+
+$$p\textrm{-value} < \alpha_{Bonf} = \frac{\alpha}{m}$$ 
+is the same as
+$$m \cdot (p\textrm{-value}) < \alpha$$
+The Bonferroni correction is popular since it's very easy to implement.
+
+
+
+* The __plot below__ shows the __[likelihood of making at least one Type I error]{style="color:green"}__ depending on how may tests are done.
+* Notice the likelihood decreases very quickly
+    * Unfortunately the likelihood of a Type II error is increasing as well
+    * It becomes "harder" and harder to reject $H_0$ if doing many tests.
+
+```{r}
+#| fig.height: 3.3
+#| echo: false
+ggplot(Prob_error_mtests, aes(x=m, y = P_err_Bonf)) +
+  geom_point() +
+  labs(x = "Number of tests",
+       y = "P(at least 1 false positive)",
+       title = "Likelihood of a false positive with Bonferroni correction",
+       subtitle = "For m tests and using alpha = 0.05")
+```
+
+
+
+```{r}
+#| eval: false
+#| echo: false
+empl_lm <- lm(score ~ disability, data = employ)
+broom::tidy(anova(empl_lm))
+
+
+```
+
+
+
+
+
+## The Bonferroni Correction (2/2)
+
+
+Pairwise t-tests without any _p_-value adjustments:
+```{r}
+pairwise.t.test(employ$score, 
+                employ$disability, 
+                p.adj="none") 
+```
+
+
+
+
+Pairwise t-tests __[with Bonferroni _p_-value adjustments]{style="color:green"}__:
+```{r}
+pairwise.t.test(employ$score,  
+                employ$disability, 
+                p.adj="bonferroni")  
+```
+
+Since there were 10 tests, all the _p_-values were multiplied by 10.
+
+
+
+
+
+
+## Tukey's Honest Significance Test (HSD) (1/3)
+
+
+* Tukey's Honest Significance Test (HSD) controls the "family-wise probability" of making a Type I error using a much less conservative method than Bonferroni
+* __It is specific to ANOVA__
+* In addition to adjusted _p_-values, it also calculates Tukey adjusted CI's 
+
+The function `TukeyHSD()` creates a set of __confidence intervals__ on the differences between means with the specified __family-wise probability of coverage__.
+
+
+
+```{r}
+# need to run the model as an `aov` instead of `lm`
+empl_aov <- aov(score ~ disability, data = employ) 
+anova(empl_aov)  
+```
+
+
+
+
+
+
+## Tukey's Honest Significance Test (HSD) (2/3)
+
+Both Tukey HSD p-values and CI's for all pairwise differences.
+```{r}
+TukeyHSD(x=empl_aov, conf.level = 0.95) 
+```
+
+
+
+
+## Tukey's Honest Significance Test (HSD) (3/3)
+
+
+
+```{r}
+#| fig.height: 5.0
+plot(TukeyHSD(x=empl_aov, conf.level = 0.95))
+```
+
+
+
+* Visualization of pairwise CI's
+
+* __[Which pair(s) of disabilities are significant after Tukey's adjustments?]{style="color:green"}__
+
+
+
+
+
+# There are many more multiple testing adjustment procedures
+
+
+* Bonferroni is popular because it's so easy to apply
+* Tukey's HSD is usually used for ANOVA
+
+```{r}
+# default is Holm's adjustments
+pairwise.t.test(employ$score, 
+                employ$disability) 
+```
+
+
+
+Pairwise t-tests with __false discovery rate (fdr)__ _p_-value adjustments (popular in omics):
+```{r}
+pairwise.t.test(employ$score, 
+                employ$disability, 
+                p.adj="fdr") 
+```
+
+
+
+
+
+
+
+
+## Multiple testing
+
+ _post-hoc testing vs. testing many outcomes_
+
+
+
+## Multiple testing: controlling the Type I error rate
+
+
+* The multiple testing issue is not unique to ANOVA post-hoc testing.
+* It is also a concern when running separate tests for many related outcomes.
+* __[Beware of _p_-hacking!]{style="color:darkorange"}__
+
+__Problem:__
+
+Although test has an $\alpha$ chance of a Type I error (finding a difference between a pair that aren't different), the overall Type I error rate will be much higher when running many tests simultaneously.
+
+
+
+
+\begin{align}
+P(\text{making an error}) = & \alpha\\
+P(\text{not making an error}) = & 1-\alpha\\
+P(\text{not making an error in m tests}) = & (1-\alpha)^m\\
+P(\text{making at least 1 error in m tests}) = & 1-(1-\alpha)^m
+\end{align}
+
+```{r}
+#| fig.height: 4.0
+#| echo: false
+Prob_error_mtests <- tibble(
+  m = 1:100,
+  P_error = 1-(1-.05)^m,
+  P_err_Bonf = 1-(1-.05/m)^m)
+
+ggplot(Prob_error_mtests, aes(x=m, y = P_error)) +
+  geom_point() +
+  labs(x = "Number of tests",
+       y = "P(at least 1 false positive)",
+       title = "Likelihood of a false positive",
+       subtitle = "For m tests and using alpha = 0.05")
+```
+
+
+
+

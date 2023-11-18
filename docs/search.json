@@ -11,7 +11,7 @@
     "href": "weeks.html",
     "title": "Weekly Pages",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n9/25/23\n\n\nWeek 1\n\n\nIntro to R & RStudio\n\n\n\n\n10/2/23\n\n\nWeek 2\n\n\nData collection & EDA\n\n\n\n\n10/9/23\n\n\nWeek 3\n\n\nProbability\n\n\n\n\n10/16/23\n\n\nWeek 4\n\n\nRandom variables and probability distributions\n\n\n\n\n10/23/23\n\n\nWeek 5\n\n\nVariability in estimates and Exam 1\n\n\n\n\n10/30/23\n\n\nWeek 6\n\n\nConfidence intervals and hypothesis tests for one mean\n\n\n\n\n11/6/23\n\n\nWeek 7\n\n\nInference for difference in means, one proportion, and difference in proportions, and power\n\n\n\n\n11/13/23\n\n\nWeek 8\n\n\nChi-squared tests and Exam 2\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n9/25/23\n\n\nWeek 1\n\n\nIntro to R & RStudio\n\n\n\n\n10/2/23\n\n\nWeek 2\n\n\nData collection & EDA\n\n\n\n\n10/9/23\n\n\nWeek 3\n\n\nProbability\n\n\n\n\n10/16/23\n\n\nWeek 4\n\n\nRandom variables and probability distributions\n\n\n\n\n10/23/23\n\n\nWeek 5\n\n\nVariability in estimates and Exam 1\n\n\n\n\n10/30/23\n\n\nWeek 6\n\n\nConfidence intervals and hypothesis tests for one mean\n\n\n\n\n11/6/23\n\n\nWeek 7\n\n\nInference for difference in means, one proportion, and difference in proportions, and power\n\n\n\n\n11/13/23\n\n\nWeek 8\n\n\nChi-squared tests and Exam 2\n\n\n\n\n11/20/23\n\n\nWeek 9\n\n\nANOVA and Simple Linear Regression\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "weeks/week_01.html",
@@ -340,7 +340,7 @@
     "href": "class_slides.html",
     "title": "Class Slides",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n10/9/23\n\n\nDay 4: Probability Part 1\n\n\nWeek 3\n\n\n\n\n10/11/23\n\n\nDay 5: Probability Part 2 - Bayes’ Rule\n\n\nWeek 3\n\n\n\n\n10/16/23\n\n\nDay 6: Random variables and Binomial distribution\n\n\nWeek 4\n\n\n\n\n10/18/23\n\n\nDay 7: Normal and Poisson distributions\n\n\nWeek 4\n\n\n\n\n10/23/23\n\n\nDay 8: Variability in estimates\n\n\nWeek 5\n\n\n\n\n10/30/23\n\n\nDay 9: Confidence intervals (4.2)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 1: Hypothesis testing for mean from one-sample (Sections 4.3, 5.1)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)\n\n\nWeek 6\n\n\n\n\n11/6/23\n\n\nDay 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)\n\n\nWeek 7\n\n\n\n\n11/8/23\n\n\nDay 12: Inference for a single proportion or difference of two (independent) proportions (Sections 8.1-8.2)\n\n\nWeek 7\n\n\n\n\n11/13/23\n\n\nDay 13: Chi-squared tests (Sections 8.3-8.4)\n\n\nWeek 8\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n10/9/23\n\n\nDay 4: Probability Part 1\n\n\nWeek 3\n\n\n\n\n10/11/23\n\n\nDay 5: Probability Part 2 - Bayes’ Rule\n\n\nWeek 3\n\n\n\n\n10/16/23\n\n\nDay 6: Random variables and Binomial distribution\n\n\nWeek 4\n\n\n\n\n10/18/23\n\n\nDay 7: Normal and Poisson distributions\n\n\nWeek 4\n\n\n\n\n10/23/23\n\n\nDay 8: Variability in estimates\n\n\nWeek 5\n\n\n\n\n10/30/23\n\n\nDay 9: Confidence intervals (4.2)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 1: Hypothesis testing for mean from one-sample (Sections 4.3, 5.1)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)\n\n\nWeek 6\n\n\n\n\n11/6/23\n\n\nDay 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)\n\n\nWeek 7\n\n\n\n\n11/8/23\n\n\nDay 12: Inference for a single proportion or difference of two (independent) proportions (Sections 8.1-8.2)\n\n\nWeek 7\n\n\n\n\n11/13/23\n\n\nDay 13: Chi-squared tests (Sections 8.3-8.4)\n\n\nWeek 8\n\n\n\n\n11/20/23\n\n\nDRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)\n\n\nWeek 9\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides_md/Day01_bsta511_md.html",
@@ -10778,5 +10778,551 @@
     "title": "HW 7: BSTA 511-611 F23",
     "section": "8.38 (a) & (extra) Salt intake and CVD",
     "text": "8.38 (a) & (extra) Salt intake and CVD\nDo not do parts (b)-(c) in the book\n\n(a)\n\nYou can use the expected cell counts from R’s chi-squared test (you do not need to compute them using the formula).\nComment on whether the sample size condition is met or not for these data.\n\n\n\n(extra)\nRun a Fisher’s Exact test. Include the hypotheses and a conclusion in the context of the problem."
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html",
+    "href": "slides_code/Day14_bsta511_code.html",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "",
+    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n\nCode\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) \nlibrary(here) \nlibrary(pwr) # new-ish\n\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#load-packages",
+    "href": "slides_code/Day14_bsta511_code.html#load-packages",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "",
+    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n\nCode\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) \nlibrary(here) \nlibrary(pwr) # new-ish\n\n\n\nYou can check whether a package has been loaded or not\n\nby looking at the Packages tab and\nseeing whether it has been checked off or not"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#additional-resource",
+    "href": "slides_code/Day14_bsta511_code.html#additional-resource",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Additional Resource",
+    "text": "Additional Resource\n\nBSTA 511 textbook (Vu & Harrington)\n\nSection 5.5: Comparing means with ANOVA\nSection 7.9: Connection between ANOVA and regression"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#hypotheses",
+    "href": "slides_code/Day14_bsta511_code.html#hypotheses",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Hypotheses",
+    "text": "Hypotheses\nTo test for a difference in means across k treatment groups:\n\\[\\begin{align}\nH_0 &: \\mu_1 = \\mu_2 = ... = \\mu_k\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j\n\\end{align}\\]\nHypothetical examples:\nIn which set (A or B) do you believe the evidence will be stronger that at least one population differs from the others?\nSee slides"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#comparing-means",
+    "href": "slides_code/Day14_bsta511_code.html#comparing-means",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Comparing means",
+    "text": "Comparing means\nWhether or not two means are significantly different depends on: * How far apart the means are * How much variability there is within each treatment group\nQuestions:\n* How to measure variability between treatment groups? * How to measure variability within treatment groups? * How to compare the two measures? * How to determine significance?"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#anova-in-base-r",
+    "href": "slides_code/Day14_bsta511_code.html#anova-in-base-r",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA in base R",
+    "text": "ANOVA in base R\n\n\nCode\nempl_lm &lt;- lm(score ~ disability, data = employ)\nanova(empl_lm)\n\n\nAnalysis of Variance Table\n\nResponse: score\n           Df  Sum Sq Mean Sq F value  Pr(&gt;F)  \ndisability  4  30.521  7.6304  2.8616 0.03013 *\nResiduals  65 173.321  2.6665                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nHypotheses:\n\\[\\begin{align}\nH_0 &: \\mu_{none} = \\mu_{amputation} = \\mu_{crutches} = \\mu_{hearing} =  \\mu_{wheelchair}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j\n\\end{align}\\]\nDo we reject or fail to reject \\(H_0\\)?"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#anova-tables",
+    "href": "slides_code/Day14_bsta511_code.html#anova-tables",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA tables",
+    "text": "ANOVA tables\nSee slides"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#anova-analysis-of-variance",
+    "href": "slides_code/Day14_bsta511_code.html#anova-analysis-of-variance",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA: Analysis of Variance",
+    "text": "ANOVA: Analysis of Variance\nAnalysis of Variance (ANOVA) compares the variability between treatments to the variability within treatments\n\\[\\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(y_{ij} -\\bar{y}_{..})^2 \\ \\ = \\ \\sum_{i = 1}^k n_i(\\bar{y}_{i.}-\\bar{y}_{..})^2 \\ \\ + \\ \\ \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(y_{ij}-\\bar{y}_{i.})^2\\]"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#notation",
+    "href": "slides_code/Day14_bsta511_code.html#notation",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Notation",
+    "text": "Notation\n\nk treatment groups\nn observations in each of the k treatment groups\nTotal sample size is \\(N=\\sum_{i=1}^{k}n_i\\)\n\\(\\bar{y}_{i.}\\) = mean of observations in treatment i\n\\(\\bar{y}_{..}\\) = mean of all observations\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservation\ni = 1\ni = 2\ni = 3\n\\(\\ldots\\)\ni = k\noverall\n\n\n\n\nj = 1\n\\(y_{11}\\)\n\\(y_{21}\\)\n\\(y_{31}\\)\n\\(\\ldots\\)\n\\(y_{k1}\\)\n\n\n\nj = 2\n\\(y_{12}\\)\n\\(y_{22}\\)\n\\(y_{32}\\)\n\\(\\ldots\\)\n\\(y_{k2}\\)\n\n\n\nj = 3\n\\(y_{13}\\)\n\\(y_{23}\\)\n\\(y_{33}\\)\n\\(\\ldots\\)\n\\(y_{k3}\\)\n\n\n\nj = 4\n\\(y_{14}\\)\n\\(y_{24}\\)\n\\(y_{34}\\)\n\\(\\ldots\\)\n\\(y_{k4}\\)\n\n\n\n\\(\\vdots\\)\n\\(\\vdots\\)\n\\(\\vdots\\)\n\\(\\vdots\\)\n\\(\\ddots\\)\n\\(\\vdots\\)\n\n\n\nj = \\(n_i\\)\n\\(y_{1n}\\)\n\\(y_{2n}\\)\n\\(y_{3n}\\)\n\\(\\ldots\\)\n\\(y_{kn}\\)\n\n\n\nMeans\n\\(\\bar{y}_{1.}\\)\n\\(\\bar{y}_{2.}\\)\n\\(\\bar{y}_{3.}\\)\n\\(\\ldots\\)\n\\(\\bar{y}_{k.}\\)\n\\(\\bar{y}_{..}\\)\n\n\nVariance\n\\({s}^2_{1.}\\)\n\\({s}^2_{2.}\\)\n\\({s}^2_{3.}\\)\n\\(\\ldots\\)\n\\({s}^2_{k.}\\)\n\\({s}^2_{..}\\)"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#total-sums-of-squares-visually",
+    "href": "slides_code/Day14_bsta511_code.html#total-sums-of-squares-visually",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Total Sums of Squares Visually",
+    "text": "Total Sums of Squares Visually\n\n\n\n\n\nTotal Sums of Squares:\n\\[\\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(y_{ij} -\\bar{y}_{..})^2 = (N-1)s^2_{..}\\] where \\(N=\\sum_{i=1}^{k}n_i\\) is the total sample size and \\(s^2_{..}\\) is the grand standard deviation of all the observations\n\nThis is the sum of the squared differences between each observed \\(y_{ij}\\) value and the grand mean, \\(\\bar{y}_{..}\\).\nThat is, it is the total deviation of the \\(y_{ij}\\)’s from the grand mean.\n\n\nCalculate Total Sums of Squares\nTotal Sums of Squares:\n\\[\\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(y_{ij} -\\bar{y}_{..})^2 = (N-1)s^2_{..}\\] where \\(N=\\sum_{i=1}^{k}n_i\\) is the total sample size and \\(s^2_{..}\\) is the grand standard deviation of all the observations\n\n\nCode\n(Ns &lt;- employ %&gt;% group_by(disability) %&gt;% count())\n\n\n# A tibble: 5 × 2\n# Groups:   disability [5]\n  disability     n\n  &lt;fct&gt;      &lt;int&gt;\n1 none          14\n2 amputation    14\n3 crutches      14\n4 hearing       14\n5 wheelchair    14\n\n\nCode\n(SST &lt;- (sum(Ns$n) - 1) * sd(employ$score)^2)\n\n\n[1] 203.8429"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#anova-analysis-of-variance-1",
+    "href": "slides_code/Day14_bsta511_code.html#anova-analysis-of-variance-1",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA: Analysis of Variance",
+    "text": "ANOVA: Analysis of Variance\nANOVA compares the variability between treatments to the variability within treatments"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#sums-of-squares-due-to-treatments-visually-between-treatments",
+    "href": "slides_code/Day14_bsta511_code.html#sums-of-squares-due-to-treatments-visually-between-treatments",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Sums of Squares due to Treatments Visually (“between” treatments)",
+    "text": "Sums of Squares due to Treatments Visually (“between” treatments)\n\n\n\n\n\nSums of Squares due to Treatments:\n\\[SSTr = \\sum_{i = 1}^k n_i(\\bar{y}_{i.}-\\bar{y}_{..})^2\\]\n\nThis is the sum of the squared differences between each treatment mean, \\(\\bar{y}_{i.}\\), and the grand mean, \\(\\bar{y}_{..}\\).\nThat is, it is the deviation of the treatment means from the grand mean.\nAlso called the Model SS, or \\(SS_{model}.\\)\n\n\nCalculate Sums of Squares due to Treatments (“between” treatments)\nSums of Squares due to Treatments:\n\\[SSTr = \\sum_{i = 1}^k n_i(\\bar{y}_{i.}-\\bar{y}_{..})^2\\]\n\n\nCode\nxbar_groups &lt;- employ %&gt;% \n  group_by(disability) %&gt;% \n  summarise(mean = mean(score))\nxbar_groups\n\n\n# A tibble: 5 × 2\n  disability  mean\n  &lt;fct&gt;      &lt;dbl&gt;\n1 none        4.9 \n2 amputation  4.43\n3 crutches    5.92\n4 hearing     4.05\n5 wheelchair  5.34\n\n\nCode\n(SSTr &lt;- 14*sum(\n  (xbar_groups$mean - mean(employ$score))^2))\n\n\n[1] 30.52143"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#sums-of-squares-error-visually-within-treatments",
+    "href": "slides_code/Day14_bsta511_code.html#sums-of-squares-error-visually-within-treatments",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Sums of Squares Error Visually (within treatments)",
+    "text": "Sums of Squares Error Visually (within treatments)\n\n\n\n\n\nSums of Squares Error:\n\\[SSE = \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(y_{ij}-\\bar{y}_{i.})^2 = \\sum_{i = 1}^k(n_i-1)s_{i.}^2\\] where \\(s_{i.}\\) is the standard deviation of the \\(i^{th}\\) treatment\n\nThis is the sum of the squared differences between each observed \\(y_{ij}\\) value and its treatment mean \\(\\bar{y}_{i.}\\).\nThat is, it is the deviation of the \\(y_{ij}\\)’s from the predicted score by treatment.\nAlso called the residual sums of squares, or \\(SS_{residual}.\\)\n\n\nCalculate Sums of Squares Error (within treatments)\nSums of Squares Error:\n\\[SSE = \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(y_{ij}-\\bar{y}_{i.})^2 = \\sum_{i = 1}^k(n_i-1)s_{i.}^2\\] where \\(s_{i.}\\) is the standard deviation of the \\(i^{th}\\) treatment\n\n\nCode\nsd_groups &lt;- employ %&gt;% \n  group_by(disability) %&gt;% \n  summarise(SD = sd(score))\nsd_groups\n\n\n# A tibble: 5 × 2\n  disability    SD\n  &lt;fct&gt;      &lt;dbl&gt;\n1 none        1.79\n2 amputation  1.59\n3 crutches    1.48\n4 hearing     1.53\n5 wheelchair  1.75\n\n\nCode\n(SSE &lt;- sum(\n  (14-1)*sd_groups$SD^2))\n\n\n[1] 173.3214"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#verify-sst-sstr-sse",
+    "href": "slides_code/Day14_bsta511_code.html#verify-sst-sstr-sse",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Verify SST = SSTr + SSE",
+    "text": "Verify SST = SSTr + SSE\nANOVA compares the variability between treatments to the variability within treatments\n\\[\\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(y_{ij} -\\bar{y}_{..})^2 \\ \\ = \\ \\ n_i\\sum_{i = 1}^k(\\bar{y}_{i.}-\\bar{y}_{..})^2 \\ \\ + \\ \\ \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(y_{ij}-\\bar{y}_{i.})^2\\]\n\\[(N-1)s^2_{..} \\ \\ = \\ \\sum_{i = 1}^k n_i(\\bar{y}_{i.}-\\bar{y}_{..})^2 \\ \\ + \\ \\ \\sum_{i = 1}^k(n_i-1)s_{i.}^2\\]\n\n\nCode\nSST\n\n\n[1] 203.8429\n\n\n\n\nCode\nSSTr + SSE\n\n\n[1] 203.8429"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#thinking-about-the-f-statistic",
+    "href": "slides_code/Day14_bsta511_code.html#thinking-about-the-f-statistic",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Thinking about the F-statistic",
+    "text": "Thinking about the F-statistic\nIf the treatments are actually different, then which of these is more accurate?\n\nThe variability between treatments should be higher than the variability within treatments\nThe variability within treatments should be higher than the variability between treatments\n\nIf there really is a difference between the treatments, we would expect the F-statistic to be which of these:\n\nHigher than we would observe by random chance\nLower than we would observe by random chance\n\n\\[F = \\frac{MSG}{MSE}\\]"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#anova-in-base-r-1",
+    "href": "slides_code/Day14_bsta511_code.html#anova-in-base-r-1",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA in base R",
+    "text": "ANOVA in base R\n\n\nCode\nempl_lm &lt;- lm(score ~ disability, data = employ)\ntidy(anova(empl_lm))\n\n\n# A tibble: 2 × 6\n  term          df sumsq meansq statistic p.value\n  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 disability     4  30.5   7.63      2.86  0.0301\n2 Residuals     65 173.    2.67     NA    NA     \n\n\nHypotheses:\n\\[\\begin{align}\nH_0 &: \\mu_{none} = \\mu_{amputation} = \\mu_{crutches} = \\mu_{hearing} =  \\mu_{wheelchair}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j\n\\end{align}\\]\nDo we reject or fail to reject \\(H_0\\)?"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#conclusion-to-hypothesis-test",
+    "href": "slides_code/Day14_bsta511_code.html#conclusion-to-hypothesis-test",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Conclusion to hypothesis test",
+    "text": "Conclusion to hypothesis test\n\\[\\begin{align}\nH_0 &: \\mu_{none} = \\mu_{amputation} = \\mu_{crutches} = \\mu_{hearing} =  \\mu_{wheelchair}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j\n\\end{align}\\]\n\n\nCode\ntidy(anova(empl_lm))  # cleaner anova output\n\n\n# A tibble: 2 × 6\n  term          df sumsq meansq statistic p.value\n  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 disability     4  30.5   7.63      2.86  0.0301\n2 Residuals     65 173.    2.67     NA    NA     \n\n\nCode\nround(broom::tidy(anova(empl_lm))$p.value[1],2)\n\n\n[1] 0.03\n\n\n\nUse \\(\\alpha\\) = 0.05.\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement: * There is sufficient evidence that at least one of the disability groups has a mean employment score statistically different from the other groups. ( \\(p\\)-value = 0.03)."
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#assumptions-for-anova",
+    "href": "slides_code/Day14_bsta511_code.html#assumptions-for-anova",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Assumptions for ANOVA",
+    "text": "Assumptions for ANOVA\nIF the following conditions hold:\n\nthe null hypothesis is true\nsample sizes in each treatment group are large (each \\(n \\ge 30\\))\n\nOR the data are relatively normally distributed\n\nvariability is “similar” in all treatment groups:\n\nIs the within treatment group variability about the same for each treatment group?\nAs a rough rule of thumb, this assumption is violated if the standard deviation of one treatment group is more than double the standard deviation of another treatment group\n\n\nTHEN the sampling distribution of the\nF-statistic is an F-distribution\nChecking the equal variance assumption:\n\n\nCode\nsd_groups # previously defined\n\n\n# A tibble: 5 × 2\n  disability    SD\n  &lt;fct&gt;      &lt;dbl&gt;\n1 none        1.79\n2 amputation  1.59\n3 crutches    1.48\n4 hearing     1.53\n5 wheelchair  1.75\n\n\nCode\nmax(sd_groups$SD) / min(sd_groups$SD)\n\n\n[1] 1.210425"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#testing-variances-assumption-3",
+    "href": "slides_code/Day14_bsta511_code.html#testing-variances-assumption-3",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Testing variances (Assumption 3)",
+    "text": "Testing variances (Assumption 3)\nBartlett’s test for equal variances\n\n\\(H_0:\\) variances of treatment levels are equal\n\\(H_A:\\) variances of treatment levels are NOT equal\n\n_Note: \\(H_A\\) is same as saying that at least one of the treatment levels has a different variance__\n\nCaution: Bartlett’s test assumes the data in each treatment group are normally distributed. Do not use if data do not satisfy the normality assumption.\n\n\n\nCode\nbartlett.test(score ~ disability, data = employ)\n\n\n\n    Bartlett test of homogeneity of variances\n\ndata:  score by disability\nBartlett's K-squared = 0.7016, df = 4, p-value = 0.9511\n\n\n\nLevene’s test for equality of variances is not as restrictive: see https://www.statology.org/levenes-test-r/"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#the-f-distribution",
+    "href": "slides_code/Day14_bsta511_code.html#the-f-distribution",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "The F-distribution",
+    "text": "The F-distribution\nThe F-distribution is skewed right:\n\n\n\n\n\nThe F-distribution has two degrees of freedom:\n\none for the numerator of the ratio (k – 1) and\none for the denominator (N – k)\n\n\\(p\\)-value:\nFor F-statistics, the p-value (the area as extreme or more extreme) is always the upper tail.\n\n\nCode\n# p-value using F-distribution\npf(2.8646, df1=5-1, df2=70-5, \n   lower.tail = FALSE)\n\n\n[1] 0.02999488"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#which-treatment-groups-are-statistically-different",
+    "href": "slides_code/Day14_bsta511_code.html#which-treatment-groups-are-statistically-different",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Which treatment groups are statistically different?",
+    "text": "Which treatment groups are statistically different?\n\nSo far we’ve only determined that at least one of the treatment groups is different from the others, but we don’t know which.\nWhat’s your guess?"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#determining-which-groups-are-statistically-different",
+    "href": "slides_code/Day14_bsta511_code.html#determining-which-groups-are-statistically-different",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "determining which groups are statistically different",
+    "text": "determining which groups are statistically different"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#post-hoc-testing-pairwise-t-tests",
+    "href": "slides_code/Day14_bsta511_code.html#post-hoc-testing-pairwise-t-tests",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Post-hoc testing: pairwise t-tests",
+    "text": "Post-hoc testing: pairwise t-tests\n\nIn post-hoc testing we run all the pairwise t-tests comparing the means from each pair of groups.\nWith 5 groups, this involves doing \\({5 \\choose 2} = \\frac{5!}{2!3!} = \\frac{5\\cdot 4}{2}= 10\\) different pairwise tests.\n\nProblem:\nAlthough test has an \\(\\alpha\\) chance of a Type I error (finding a difference between a pair that aren’t different), the overall Type I error rate will be much higher when running many tests simultaneously.\n\\[\\begin{align}\nP(\\text{making an error}) = & \\alpha\\\\\nP(\\text{not making an error}) = & 1-\\alpha\\\\\nP(\\text{not making an error in m tests}) = & (1-\\alpha)^m\\\\\nP(\\text{making at least 1 error in m tests}) = & 1-(1-\\alpha)^m\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#the-bonferroni-correction-12",
+    "href": "slides_code/Day14_bsta511_code.html#the-bonferroni-correction-12",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "The Bonferroni Correction (1/2)",
+    "text": "The Bonferroni Correction (1/2)\nA very conservative (but very popular) approach is to divide the \\(\\alpha\\) level by how many tests \\(m\\) are being done:\n\\[\\alpha_{Bonf} = \\frac{\\alpha}{m}\\]\n\nThis is equivalent to multiplying the\np-values by m:\n\n\\[p\\textrm{-value} &lt; \\alpha_{Bonf} = \\frac{\\alpha}{m}\\] is the same as \\[m \\cdot (p\\textrm{-value}) &lt; \\alpha\\] The Bonferroni correction is popular since it’s very easy to implement.\n\nThe plot below shows the likelihood of making at least one Type I error depending on how may tests are done.\nNotice the likelihood decreases very quickly\n\nUnfortunately the likelihood of a Type II error is increasing as well\nIt becomes “harder” and harder to reject \\(H_0\\) if doing many tests."
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#the-bonferroni-correction-22",
+    "href": "slides_code/Day14_bsta511_code.html#the-bonferroni-correction-22",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "The Bonferroni Correction (2/2)",
+    "text": "The Bonferroni Correction (2/2)\nPairwise t-tests without any p-value adjustments:\n\n\nCode\npairwise.t.test(employ$score, \n                employ$disability, \n                p.adj=\"none\") \n\n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  employ$score and employ$disability \n\n           none   amputation crutches hearing\namputation 0.4477 -          -        -      \ncrutches   0.1028 0.0184     -        -      \nhearing    0.1732 0.5418     0.0035   -      \nwheelchair 0.4756 0.1433     0.3520   0.0401 \n\nP value adjustment method: none \n\n\nPairwise t-tests with Bonferroni p-value adjustments:\n\n\nCode\npairwise.t.test(employ$score,  \n                employ$disability, \n                p.adj=\"bonferroni\")  \n\n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  employ$score and employ$disability \n\n           none  amputation crutches hearing\namputation 1.000 -          -        -      \ncrutches   1.000 0.184      -        -      \nhearing    1.000 1.000      0.035    -      \nwheelchair 1.000 1.000      1.000    0.401  \n\nP value adjustment method: bonferroni \n\n\nSince there were 10 tests, all the p-values were multiplied by 10."
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#tukeys-honest-significance-test-hsd-13",
+    "href": "slides_code/Day14_bsta511_code.html#tukeys-honest-significance-test-hsd-13",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Tukey’s Honest Significance Test (HSD) (1/3)",
+    "text": "Tukey’s Honest Significance Test (HSD) (1/3)\n\nTukey’s Honest Significance Test (HSD) controls the “family-wise probability” of making a Type I error using a much less conservative method than Bonferroni\nIt is specific to ANOVA\nIn addition to adjusted p-values, it also calculates Tukey adjusted CI’s\n\nThe function TukeyHSD() creates a set of confidence intervals on the differences between means with the specified family-wise probability of coverage.\n\n\nCode\n# need to run the model as an `aov` instead of `lm`\nempl_aov &lt;- aov(score ~ disability, data = employ) \nanova(empl_aov)  \n\n\nAnalysis of Variance Table\n\nResponse: score\n           Df  Sum Sq Mean Sq F value  Pr(&gt;F)  \ndisability  4  30.521  7.6304  2.8616 0.03013 *\nResiduals  65 173.321  2.6665                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#tukeys-honest-significance-test-hsd-23",
+    "href": "slides_code/Day14_bsta511_code.html#tukeys-honest-significance-test-hsd-23",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Tukey’s Honest Significance Test (HSD) (2/3)",
+    "text": "Tukey’s Honest Significance Test (HSD) (2/3)\nBoth Tukey HSD p-values and CI’s for all pairwise differences.\n\n\nCode\nTukeyHSD(x=empl_aov, conf.level = 0.95) \n\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = score ~ disability, data = employ)\n\n$disability\n                            diff        lwr        upr     p adj\namputation-none       -0.4714286 -2.2031613  1.2603042 0.9399911\ncrutches-none          1.0214286 -0.7103042  2.7531613 0.4686233\nhearing-none          -0.8500000 -2.5817328  0.8817328 0.6442517\nwheelchair-none        0.4428571 -1.2888756  2.1745899 0.9517374\ncrutches-amputation    1.4928571 -0.2388756  3.2245899 0.1232819\nhearing-amputation    -0.3785714 -2.1103042  1.3531613 0.9724743\nwheelchair-amputation  0.9142857 -0.8174470  2.6460185 0.5781165\nhearing-crutches      -1.8714286 -3.6031613 -0.1396958 0.0277842\nwheelchair-crutches   -0.5785714 -2.3103042  1.1531613 0.8812293\nwheelchair-hearing     1.2928571 -0.4388756  3.0245899 0.2348141"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#tukeys-honest-significance-test-hsd-33",
+    "href": "slides_code/Day14_bsta511_code.html#tukeys-honest-significance-test-hsd-33",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Tukey’s Honest Significance Test (HSD) (3/3)",
+    "text": "Tukey’s Honest Significance Test (HSD) (3/3)\n\n\nCode\nplot(TukeyHSD(x=empl_aov, conf.level = 0.95))\n\n\n\n\n\n\nVisualization of pairwise CI’s\nWhich pair(s) of disabilities are significant after Tukey’s adjustments?"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#multiple-testing",
+    "href": "slides_code/Day14_bsta511_code.html#multiple-testing",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Multiple testing",
+    "text": "Multiple testing\npost-hoc testing vs. testing many outcomes"
+  },
+  {
+    "objectID": "slides_code/Day14_bsta511_code.html#multiple-testing-controlling-the-type-i-error-rate",
+    "href": "slides_code/Day14_bsta511_code.html#multiple-testing-controlling-the-type-i-error-rate",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Multiple testing: controlling the Type I error rate",
+    "text": "Multiple testing: controlling the Type I error rate\n\nThe multiple testing issue is not unique to ANOVA post-hoc testing.\nIt is also a concern when running separate tests for many related outcomes.\nBeware of p-hacking!\n\nProblem:\nAlthough test has an \\(\\alpha\\) chance of a Type I error (finding a difference between a pair that aren’t different), the overall Type I error rate will be much higher when running many tests simultaneously.\n\\[\\begin{align}\nP(\\text{making an error}) = & \\alpha\\\\\nP(\\text{not making an error}) = & 1-\\alpha\\\\\nP(\\text{not making an error in m tests}) = & (1-\\alpha)^m\\\\\nP(\\text{making at least 1 error in m tests}) = & 1-(1-\\alpha)^m\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides_code/test.html",
+    "href": "slides_code/test.html",
+    "title": "Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "",
+    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n\nCode\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) \nlibrary(here) \nlibrary(pwr) # new-ish"
+  },
+  {
+    "objectID": "slides_code/test.html#load-packages",
+    "href": "slides_code/test.html#load-packages",
+    "title": "Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "",
+    "text": "Packages need to be loaded every time you restart R or render an Qmd file\n\n\n\nCode\n# run these every time you open Rstudio\nlibrary(tidyverse)    \nlibrary(oibiostat)\nlibrary(janitor)\nlibrary(rstatix)\nlibrary(knitr)\nlibrary(gtsummary)\nlibrary(moderndive)\nlibrary(gt)\nlibrary(broom) \nlibrary(here) \nlibrary(pwr) # new-ish"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html",
+    "href": "slides/Day14_bsta511.html",
+    "title": "Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "",
+    "text": "When to use an ANOVA\nDifferent sources of variation in ANOVA\nANOVA assumptions\nPost-hoc testing of differences in means\nRunning an ANOVA in R\n\n\n\n\nBSTA 511 textbook (Vu & Harrington)\n\nSection 5.5: Comparing means with ANOVA\nSection 7.9: Connection between ANOVA and regression"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#topics",
+    "href": "slides/Day14_bsta511.html#topics",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Topics",
+    "text": "Topics\n\nWhen to use an ANOVA\nDifferent sources of variation in ANOVA\nANOVA assumptions\nPost-hoc testing of differences in means\nRunning an ANOVA in R\n\nAdditional Resource\n\nBSTA 511 textbook (Vu & Harrington)\n\nSection 5.5: Comparing means with ANOVA\nSection 7.9: Connection between ANOVA and regression"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#disability-discrimination-example",
+    "href": "slides/Day14_bsta511.html#disability-discrimination-example",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Disability Discrimination Example",
+    "text": "Disability Discrimination Example\n\n\n\nThe U.S. Rehabilitation Act of 1973 prohibited discrimination against people with physical disabilities.\n\nThe act defined a disabled person as any individual who has a physical or mental impairment that limits the person’s major life activities.\n\nA 1980’s study examined whether physical disabilities affect people’s perceptions of employment qualifications\n\n(Cesare, Tannenbaum, & Dalessio, 1990).\n\n\n\n\nResearchers prepared recorded job interviews, using same actors and script each time.\nOnly difference: job applicant appeared with different disabilities.\n\nNo disability\nLeg amputation\nCrutches\nHearing impairment\nWheelchair confinement\n\n70 undergrad students were randomly assigned to view one of the videotapes,\n\nthen rated the candidate’s qualifications on a 1-10 scale.\n\n\n\n\n\nThe research question: are qualifications evaluated differently depending on the applicant’s presented disability?"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#load-interview-data-from-.txt-file",
+    "href": "slides/Day14_bsta511.html#load-interview-data-from-.txt-file",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Load interview data from .txt file",
+    "text": "Load interview data from .txt file\n\n\n\n.txt files are usually tab-deliminated files\n\n.csv files are comma-separated files\n\nread_delim is from the readr package, just like read_csv\n\n\nemploy &lt;- read_delim(\n  file = here::here(\"data\", \"DisabilityEmployment.txt\"), \n  delim = \"\\t\",   # tab delimited\n  trim_ws = TRUE)\n\ntrim_ws: Should leading and trailing whitespace be trimmed from each field before parsing it?\n\n\nsummary(employ)\n\n  disability            score      \n Length:70          Min.   :1.400  \n Class :character   1st Qu.:3.700  \n Mode  :character   Median :5.050  \n                    Mean   :4.929  \n                    3rd Qu.:6.100  \n                    Max.   :8.500  \n\nemploy %&gt;% tabyl(disability)\n\n disability  n percent\n    amputee 14     0.2\n   crutches 14     0.2\n    hearing 14     0.2\n       none 14     0.2\n wheelchair 14     0.2"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#moritzs-tip-of-the-day",
+    "href": "slides/Day14_bsta511.html#moritzs-tip-of-the-day",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "MoRitz’s tip of the day",
+    "text": "MoRitz’s tip of the day\nRead OHSU’s Inclusive Language Guide (below is from pgs. 22-25)\n“… an evolving tool to help OHSU members learn about and use inclusive language…”\nSections on: Race and ethnicity, Immigration status, Gender and sexual orientation, and Ability (including physical, mental and chronological attributes)"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#factor-variable-make-disability-variable-a-factor-variable",
+    "href": "slides/Day14_bsta511.html#factor-variable-make-disability-variable-a-factor-variable",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Factor variable: Make disability variable a factor variable",
+    "text": "Factor variable: Make disability variable a factor variable\n\n\n\nglimpse(employ)\n\nRows: 70\nColumns: 2\n$ disability &lt;chr&gt; \"none\", \"none\", \"none\", \"none\", \"none\", \"none\", \"none\", \"no…\n$ score      &lt;dbl&gt; 1.9, 2.5, 3.0, 3.6, 4.1, 4.2, 4.9, 5.1, 5.4, 5.9, 6.1, 6.7,…\n\nemploy &lt;- employ %&gt;% \n  mutate(disability = factor(disability))\nglimpse(employ)\n\nRows: 70\nColumns: 2\n$ disability &lt;fct&gt; none, none, none, none, none, none, none, none, none, none,…\n$ score      &lt;dbl&gt; 1.9, 2.5, 3.0, 3.6, 4.1, 4.2, 4.9, 5.1, 5.4, 5.9, 6.1, 6.7,…\n\n\n\n\nsummary(employ)\n\n      disability     score      \n amputee   :14   Min.   :1.400  \n crutches  :14   1st Qu.:3.700  \n hearing   :14   Median :5.050  \n none      :14   Mean   :4.929  \n wheelchair:14   3rd Qu.:6.100  \n                 Max.   :8.500"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#factor-variable-change-order-name-of-disability-levels",
+    "href": "slides/Day14_bsta511.html#factor-variable-change-order-name-of-disability-levels",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Factor variable: Change order & name of disability levels",
+    "text": "Factor variable: Change order & name of disability levels\n\nlevels(employ$disability)\n\n[1] \"amputee\"    \"crutches\"   \"hearing\"    \"none\"       \"wheelchair\"\n\nemploy &lt;- employ %&gt;% \n  mutate(\n    # make \"none\" the first level\n    # by only listing the level none, all other levels will be in original order\n    disability = fct_relevel(disability, \"none\"),\n    # change the level name amputee to amputation\n    disability = fct_recode(disability, amputation = \"amputee\")\n    )\n\nlevels(employ$disability) # note the new order and new name\n\n[1] \"none\"       \"amputation\" \"crutches\"   \"hearing\"    \"wheelchair\"\n\n\nfct_relevel() and fct_recode() are from the forcats package: https://forcats.tidyverse.org/index.html. forcats is loaded with library(tidyverse)."
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#data-viz",
+    "href": "slides/Day14_bsta511.html#data-viz",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Data viz",
+    "text": "Data viz\n\n\n\nggplot(employ, aes(x=score)) +\n  geom_density() +\n  facet_wrap(~ disability)\n\n\n\n\n\n\nlibrary(ggridges) #&lt;&lt;\nggplot(employ, \n       aes(x=score,\n           y = disability,\n           fill = disability)) + \n  geom_density_ridges(alpha = 0.4) +#&lt;&lt;\n  theme(legend.position=\"none\")#&lt;&lt;\n\n\n\n\n\n\n\n\n\nggplot(employ, aes(y=score, x = disability,\n                   fill = disability)) +\n  geom_boxplot(alpha =.3) +\n  coord_flip() +\n  geom_jitter(width =.1, alpha = 0.3) +\n  theme(legend.position = \"none\")#&lt;&lt;\n\n\n\n\n\n\nggplot(employ, aes(x = disability, y=score, \n    fill=disability, color=disability)) +\n  geom_dotplot(binaxis = \"y\", alpha =.5) +#&lt;&lt;\n  geom_hline(aes(yintercept = mean(score)), \n             lty = \"dashed\") +\n  stat_summary(fun =\"mean\", geom=\"point\", #&lt;&lt;\n    size = 3, color = \"grey33\", alpha =1) +#&lt;&lt;\n  theme(legend.position = \"none\")"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#hypotheses",
+    "href": "slides/Day14_bsta511.html#hypotheses",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Hypotheses",
+    "text": "Hypotheses\nTo test for a difference in means across k treatment groups:\n\\[\\begin{align}\nH_0 &: \\mu_1 = \\mu_2 = ... = \\mu_k\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j\n\\end{align}\\]\nHypothetical examples:\nIn which set (A or B) do you believe the evidence will be stronger that at least one population differs from the others?"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#comparing-means",
+    "href": "slides/Day14_bsta511.html#comparing-means",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Comparing means",
+    "text": "Comparing means\nWhether or not two means are significantly different depends on: * How far apart the means are * How much variability there is within each treatment group\nQuestions:\n* How to measure variability between treatment groups? * How to measure variability within treatment groups? * How to compare the two measures? * How to determine significance?"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#anova-in-base-r",
+    "href": "slides/Day14_bsta511.html#anova-in-base-r",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA in base R",
+    "text": "ANOVA in base R\n\nempl_lm &lt;- lm(score ~ disability, data = employ)\nanova(empl_lm)\n\nAnalysis of Variance Table\n\nResponse: score\n           Df  Sum Sq Mean Sq F value  Pr(&gt;F)  \ndisability  4  30.521  7.6304  2.8616 0.03013 *\nResiduals  65 173.321  2.6665                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nHypotheses:\n\\[\\begin{align}\nH_0 &: \\mu_{none} = \\mu_{amputation} = \\mu_{crutches} = \\mu_{hearing} =  \\mu_{wheelchair}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j\n\\end{align}\\]\nDo we reject or fail to reject \\(H_0\\)?"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#anova-tables",
+    "href": "slides/Day14_bsta511.html#anova-tables",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA tables",
+    "text": "ANOVA tables\n\n\nDisability example ANOVA table \n\nGeneric ANOVA table"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#anova-table",
+    "href": "slides/Day14_bsta511.html#anova-table",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA table",
+    "text": "ANOVA table"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#anova-analysis-of-variance",
+    "href": "slides/Day14_bsta511.html#anova-analysis-of-variance",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA: Analysis of Variance",
+    "text": "ANOVA: Analysis of Variance\nANOVA compares the variability between treatments to the variability within treatments\n\n\n\n\n\n{fig-align=“center” width = “30%”} = {fig-align=“center” width = “30%”} + {fig-align=“center” width = “30%”}"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#anova-analysis-of-variance-1",
+    "href": "slides/Day14_bsta511.html#anova-analysis-of-variance-1",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA: Analysis of Variance",
+    "text": "ANOVA: Analysis of Variance\nAnalysis of Variance (ANOVA) compares the variability between treatments to the variability within treatments\n\n\n\n\n\n\\[\\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(y_{ij} -\\bar{y}_{..})^2 \\ \\ = \\ \\sum_{i = 1}^k n_i(\\bar{y}_{i.}-\\bar{y}_{..})^2 \\ \\ + \\ \\ \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(y_{ij}-\\bar{y}_{i.})^2\\]"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#notation",
+    "href": "slides/Day14_bsta511.html#notation",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Notation",
+    "text": "Notation\n\n\n\nk treatment groups\nn observations in each of the k treatment groups\nTotal sample size is \\(N=\\sum_{i=1}^{k}n_i\\)\n\\(\\bar{y}_{i.}\\) = mean of observations in treatment i\n\\(\\bar{y}_{..}\\) = mean of all observations\n\n\nObservation | i = 1 | i = 2 | i = 3 | \\(\\ldots\\) |i = k| overall|\n:-| ::| ::|:-:|:-:|:–:|:–:|\nj = 1 | \\(y_{11}\\) | \\(y_{21}\\) | \\(y_{31}\\) | \\(\\ldots\\) | \\(y_{k1}\\) ||\nj = 2 | \\(y_{12}\\) | \\(y_{22}\\) | \\(y_{32}\\) | \\(\\ldots\\) | \\(y_{k2}\\) ||\nj = 3 | \\(y_{13}\\) | \\(y_{23}\\) | \\(y_{33}\\) | \\(\\ldots\\) | \\(y_{k3}\\) ||\nj = 4 | \\(y_{14}\\) | \\(y_{24}\\) | \\(y_{34}\\) | \\(\\ldots\\) | \\(y_{k4}\\) ||\n\\(\\vdots\\) | \\(\\vdots\\) | \\(\\vdots\\) | \\(\\vdots\\) | \\(\\ddots\\) | \\(\\vdots\\) ||\nj = \\(n_i\\) | \\(y_{1n}\\) | \\(y_{2n}\\) | \\(y_{3n}\\) | \\(\\ldots\\) | \\(y_{kn}\\) ||\nMeans | \\(\\bar{y}_{1.}\\) | \\(\\bar{y}_{2.}\\) | \\(\\bar{y}_{3.}\\) | \\(\\ldots\\) | \\(\\bar{y}_{k.}\\) | \\(\\bar{y}_{..}\\) |\nVariance | \\({s}^2_{1.}\\) | \\({s}^2_{2.}\\) | \\({s}^2_{3.}\\) | \\(\\ldots\\) | \\({s}^2_{k.}\\) | \\({s}^2_{..}\\) |"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#total-sums-of-squares-visually",
+    "href": "slides/Day14_bsta511.html#total-sums-of-squares-visually",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Total Sums of Squares Visually",
+    "text": "Total Sums of Squares Visually\n\n\n\n\n\n\n\n\nTotal Sums of Squares:\n\\[\\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(y_{ij} -\\bar{y}_{..})^2 = (N-1)s^2_{..}\\] where \\(N=\\sum_{i=1}^{k}n_i\\) is the total sample size and \\(s^2_{..}\\) is the grand standard deviation of all the observations\n\nThis is the sum of the squared differences between each observed \\(y_{ij}\\) value and the grand mean, \\(\\bar{y}_{..}\\).\nThat is, it is the total deviation of the \\(y_{ij}\\)’s from the grand mean."
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#calculate-total-sums-of-squares",
+    "href": "slides/Day14_bsta511.html#calculate-total-sums-of-squares",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Calculate Total Sums of Squares",
+    "text": "Calculate Total Sums of Squares\n\n\nTotal Sums of Squares:\n\\[\\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(y_{ij} -\\bar{y}_{..})^2 = (N-1)s^2_{..}\\] where \\(N=\\sum_{i=1}^{k}n_i\\) is the total sample size and \\(s^2_{..}\\) is the grand standard deviation of all the observations\n\n\n(Ns &lt;- employ %&gt;% group_by(disability) %&gt;% count())\n\n# A tibble: 5 × 2\n# Groups:   disability [5]\n  disability     n\n  &lt;fct&gt;      &lt;int&gt;\n1 none          14\n2 amputation    14\n3 crutches      14\n4 hearing       14\n5 wheelchair    14\n\n(SST &lt;- (sum(Ns$n) - 1) * sd(employ$score)^2)\n\n[1] 203.8429"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#anova-analysis-of-variance-2",
+    "href": "slides/Day14_bsta511.html#anova-analysis-of-variance-2",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA: Analysis of Variance",
+    "text": "ANOVA: Analysis of Variance\nANOVA compares the variability between treatments to the variability within treatments\n\n&lt;img src=“img/SST_visually_unnamed-chunk-13-1.png){fig-align=”center” width = “30%”} = &lt;img src=“img/SSG_visually_unnamed-chunk-14-1.png){fig-align=”center” width = “30%”} + &lt;img src=“img/SSE_visually_unnamed-chunk-17-1.png){fig-align=”center” width = “30%”}"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#sums-of-squares-due-to-treatments-visually-between-treatments",
+    "href": "slides/Day14_bsta511.html#sums-of-squares-due-to-treatments-visually-between-treatments",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Sums of Squares due to Treatments Visually (“between” treatments)",
+    "text": "Sums of Squares due to Treatments Visually (“between” treatments)\n\n\n\n\n\n\n\n\nSums of Squares due to Treatments:\n\\[SSTr = \\sum_{i = 1}^k n_i(\\bar{y}_{i.}-\\bar{y}_{..})^2\\]\n\nThis is the sum of the squared differences between each treatment mean, \\(\\bar{y}_{i.}\\), and the grand mean, \\(\\bar{y}_{..}\\).\nThat is, it is the deviation of the treatment means from the grand mean.\nAlso called the Model SS, or \\(SS_{model}.\\)"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#calculate-sums-of-squares-due-to-treatments-between-treatments",
+    "href": "slides/Day14_bsta511.html#calculate-sums-of-squares-due-to-treatments-between-treatments",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Calculate Sums of Squares due to Treatments (“between” treatments)",
+    "text": "Calculate Sums of Squares due to Treatments (“between” treatments)\n\n\nSums of Squares due to Treatments:\n\\[SSTr = \\sum_{i = 1}^k n_i(\\bar{y}_{i.}-\\bar{y}_{..})^2\\]\n\n\n\n\n\n\n\nxbar_groups &lt;- employ %&gt;% \n  group_by(disability) %&gt;% \n  summarise(mean = mean(score))\nxbar_groups\n\n# A tibble: 5 × 2\n  disability  mean\n  &lt;fct&gt;      &lt;dbl&gt;\n1 none        4.9 \n2 amputation  4.43\n3 crutches    5.92\n4 hearing     4.05\n5 wheelchair  5.34\n\n(SSTr &lt;- 14*sum(\n  (xbar_groups$mean - mean(employ$score))^2))\n\n[1] 30.52143"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#anova-analysis-of-variance-3",
+    "href": "slides/Day14_bsta511.html#anova-analysis-of-variance-3",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA: Analysis of Variance",
+    "text": "ANOVA: Analysis of Variance\nANOVA compares the variability between treatments to the variability within treatments\n\n\n\n\n\n{fig-align=“center” width = “30%”} = {fig-align=“center” width = “30%”} + {fig-align=“center” width = “30%”}"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#sums-of-squares-error-visually-within-treatments",
+    "href": "slides/Day14_bsta511.html#sums-of-squares-error-visually-within-treatments",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Sums of Squares Error Visually (within treatments)",
+    "text": "Sums of Squares Error Visually (within treatments)\n\n\n\n\n\n\n\n\nSums of Squares Error:\n\\[SSE = \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(y_{ij}-\\bar{y}_{i.})^2 = \\sum_{i = 1}^k(n_i-1)s_{i.}^2\\] where \\(s_{i.}\\) is the standard deviation of the \\(i^{th}\\) treatment\n\nThis is the sum of the squared differences between each observed \\(y_{ij}\\) value and its treatment mean \\(\\bar{y}_{i.}\\).\nThat is, it is the deviation of the \\(y_{ij}\\)’s from the predicted score by treatment.\nAlso called the residual sums of squares, or \\(SS_{residual}.\\)"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#calculate-sums-of-squares-error-within-treatments",
+    "href": "slides/Day14_bsta511.html#calculate-sums-of-squares-error-within-treatments",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Calculate Sums of Squares Error (within treatments)",
+    "text": "Calculate Sums of Squares Error (within treatments)\n\n\nSums of Squares Error:\n\\[SSE = \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(y_{ij}-\\bar{y}_{i.})^2 = \\sum_{i = 1}^k(n_i-1)s_{i.}^2\\] where \\(s_{i.}\\) is the standard deviation of the \\(i^{th}\\) treatment\n\n\n\nsd_groups &lt;- employ %&gt;% \n  group_by(disability) %&gt;% \n  summarise(SD = sd(score))\nsd_groups\n\n# A tibble: 5 × 2\n  disability    SD\n  &lt;fct&gt;      &lt;dbl&gt;\n1 none        1.79\n2 amputation  1.59\n3 crutches    1.48\n4 hearing     1.53\n5 wheelchair  1.75\n\n(SSE &lt;- sum(\n  (14-1)*sd_groups$SD^2))\n\n[1] 173.3214"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#verify-sst-sstr-sse",
+    "href": "slides/Day14_bsta511.html#verify-sst-sstr-sse",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Verify SST = SSTr + SSE",
+    "text": "Verify SST = SSTr + SSE\nANOVA compares the variability between treatments to the variability within treatments\n\n\n\n\n\n\\[\\sum_{i = 1}^k \\sum_{j = 1}^{n_i}(y_{ij} -\\bar{y}_{..})^2 \\ \\ = \\ \\ n_i\\sum_{i = 1}^k(\\bar{y}_{i.}-\\bar{y}_{..})^2 \\ \\ + \\ \\ \\sum_{i = 1}^k\\sum_{j = 1}^{n_i}(y_{ij}-\\bar{y}_{i.})^2\\]\n\\[(N-1)s^2_{..} \\ \\ = \\ \\sum_{i = 1}^k n_i(\\bar{y}_{i.}-\\bar{y}_{..})^2 \\ \\ + \\ \\ \\sum_{i = 1}^k(n_i-1)s_{i.}^2\\]\n{fig-align=“center” width = “30%”}\n\n\n\nSST\n\n[1] 203.8429\n\n\n\n\nSSTr + SSE\n\n[1] 203.8429"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#anova-table-1",
+    "href": "slides/Day14_bsta511.html#anova-table-1",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA table",
+    "text": "ANOVA table"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#thinking-about-the-f-statistic",
+    "href": "slides/Day14_bsta511.html#thinking-about-the-f-statistic",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Thinking about the F-statistic",
+    "text": "Thinking about the F-statistic\n\n\n__If the treatments are actually different, then which of these is more accurate?\n\nThe variability between treatments should be higher than the variability within treatments\nThe variability within treatments should be higher than the variability between treatments\n\n\n\n\n\n\n\n__If there really is a difference between the treatments, we would expect the F-statistic to be which of these:\n\nHigher than we would observe by random chance\nLower than we would observe by random chance\n\n\\[F = \\frac{MSG}{MSE}\\]"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#anova-in-base-r-1",
+    "href": "slides/Day14_bsta511.html#anova-in-base-r-1",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "ANOVA in base R",
+    "text": "ANOVA in base R\n\nempl_lm &lt;- lm(score ~ disability, data = employ)\ntidy(anova(empl_lm))\n\n# A tibble: 2 × 6\n  term          df sumsq meansq statistic p.value\n  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 disability     4  30.5   7.63      2.86  0.0301\n2 Residuals     65 173.    2.67     NA    NA     \n\n\nHypotheses:\n\\[\\begin{align}\nH_0 &: \\mu_{none} = \\mu_{amputation} = \\mu_{crutches} = \\mu_{hearing} =  \\mu_{wheelchair}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j\n\\end{align}\\]\nDo we reject or fail to reject \\(H_0\\)?"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#conclusion-to-hypothesis-test",
+    "href": "slides/Day14_bsta511.html#conclusion-to-hypothesis-test",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Conclusion to hypothesis test",
+    "text": "Conclusion to hypothesis test\n\\[\\begin{align}\nH_0 &: \\mu_{none} = \\mu_{amputation} = \\mu_{crutches} = \\mu_{hearing} =  \\mu_{wheelchair}\\\\\n\\text{vs. } H_A&: \\text{At least one pair } \\mu_i \\neq \\mu_j\n\\end{align}\\]\n\n\n\ntidy(anova(empl_lm))  # cleaner anova output\n\n# A tibble: 2 × 6\n  term          df sumsq meansq statistic p.value\n  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 disability     4  30.5   7.63      2.86  0.0301\n2 Residuals     65 173.    2.67     NA    NA     \n\nround(broom::tidy(anova(empl_lm))$p.value[1],2)\n\n[1] 0.03\n\n\n\n\nUse \\(\\alpha\\) = 0.05.\nDo we reject or fail to reject \\(H_0\\)?\n\nConclusion statement: * There is sufficient evidence that at least one of the disability groups has a mean employment score statistically different from the other groups. ( \\(p\\)-value = 0.03)."
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#assumptions-for-anova",
+    "href": "slides/Day14_bsta511.html#assumptions-for-anova",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Assumptions for ANOVA",
+    "text": "Assumptions for ANOVA\n\n\nIF the following conditions hold:\n\nthe null hypothesis is true\nsample sizes in each treatment group are large (each \\(n \\ge 30\\))\n\nOR the data are relatively normally distributed\n\nvariability is “similar” in all treatment groups:\n\nIs the within treatment group variability about the same for each treatment group?\nAs a rough rule of thumb, this assumption is violated if the standard deviation of one treatment group is more than double the standard deviation of another treatment group\n\n\nTHEN the sampling distribution of the\nF-statistic is an F-distribution\n\nChecking the equal variance assumption:\n\nsd_groups # previously defined\n\n# A tibble: 5 × 2\n  disability    SD\n  &lt;fct&gt;      &lt;dbl&gt;\n1 none        1.79\n2 amputation  1.59\n3 crutches    1.48\n4 hearing     1.53\n5 wheelchair  1.75\n\nmax(sd_groups$SD) / min(sd_groups$SD)\n\n[1] 1.210425"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#testing-variances-assumption-3",
+    "href": "slides/Day14_bsta511.html#testing-variances-assumption-3",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Testing variances (Assumption 3)",
+    "text": "Testing variances (Assumption 3)\nBartlett’s test for equal variances\n\n\\(H_0:\\) variances of treatment levels are equal\n\\(H_A:\\) variances of treatment levels are NOT equal\n\n_Note: \\(H_A\\) is same as saying that at least one of the treatment levels has a different variance__\n\nCaution: Bartlett’s test assumes the data in each treatment group are normally distributed. Do not use if data do not satisfy the normality assumption.\n\n\nbartlett.test(score ~ disability, data = employ)\n\n\n    Bartlett test of homogeneity of variances\n\ndata:  score by disability\nBartlett's K-squared = 0.7016, df = 4, p-value = 0.9511\n\n\n\nLevene’s test for equality of variances is not as restrictive: see https://www.statology.org/levenes-test-r/"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#the-f-distribution",
+    "href": "slides/Day14_bsta511.html#the-f-distribution",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "The F-distribution",
+    "text": "The F-distribution\n\n\nThe F-distribution is skewed right:\n\n\n\n\n\n\nThe F-distribution has two degrees of freedom:\n\none for the numerator of the ratio (k – 1) and\none for the denominator (N – k)\n\n\\(p\\)-value:\nFor F-statistics, the p-value (the area as extreme or more extreme) is always the upper tail.\n\n# p-value using F-distribution\npf(2.8646, df1=5-1, df2=70-5, \n   lower.tail = FALSE)\n\n[1] 0.02999488"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#which-treatment-groups-are-statistically-different",
+    "href": "slides/Day14_bsta511.html#which-treatment-groups-are-statistically-different",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Which treatment groups are statistically different?",
+    "text": "Which treatment groups are statistically different?\n\n\n\nSo far we’ve only determined that at least one of the treatment groups is different from the others, but we don’t know which.\nWhat’s your guess?"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#post-hoc-testing-pairwise-t-tests",
+    "href": "slides/Day14_bsta511.html#post-hoc-testing-pairwise-t-tests",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Post-hoc testing: pairwise t-tests",
+    "text": "Post-hoc testing: pairwise t-tests\n\n\nIn post-hoc testing we run all the pairwise t-tests comparing the means from each pair of groups.\nWith 5 groups, this involves doing \\({5 \\choose 2} = \\frac{5!}{2!3!} = \\frac{5\\cdot 4}{2}= 10\\) different pairwise tests.\n\nProblem:\nAlthough test has an \\(\\alpha\\) chance of a Type I error (finding a difference between a pair that aren’t different), the overall Type I error rate will be much higher when running many tests simultaneously.\n\n\n\\[\\begin{align}\nP(\\text{making an error}) = & \\alpha\\\\\nP(\\text{not making an error}) = & 1-\\alpha\\\\\nP(\\text{not making an error in m tests}) = & (1-\\alpha)^m\\\\\nP(\\text{making at least 1 error in m tests}) = & 1-(1-\\alpha)^m\n\\end{align}\\]\n\n\n\n\n\n\n:::"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#the-bonferroni-correction-12",
+    "href": "slides/Day14_bsta511.html#the-bonferroni-correction-12",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "The Bonferroni Correction (1/2)",
+    "text": "The Bonferroni Correction (1/2)\n\n\nA very conservative (but very popular) approach is to divide the \\(\\alpha\\) level by how many tests \\(m\\) are being done:\n\\[\\alpha_{Bonf} = \\frac{\\alpha}{m}\\]\n\nThis is equivalent to multiplying the\np-values by m:\n\n\\[p\\textrm{-value} &lt; \\alpha_{Bonf} = \\frac{\\alpha}{m}\\] is the same as \\[m \\cdot (p\\textrm{-value}) &lt; \\alpha\\] The Bonferroni correction is popular since it’s very easy to implement.\n\n\nThe plot below shows the __likelihood of making at least one Type I error depending on how may tests are done.\nNotice the likelihood decreases very quickly\n\nUnfortunately the likelihood of a Type II error is increasing as well\nIt becomes “harder” and harder to reject \\(H_0\\) if doing many tests."
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#the-bonferroni-correction-22",
+    "href": "slides/Day14_bsta511.html#the-bonferroni-correction-22",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "The Bonferroni Correction (2/2)",
+    "text": "The Bonferroni Correction (2/2)\n\n\nPairwise t-tests without any p-value adjustments:\n\npairwise.t.test(employ$score, \n                employ$disability, \n                p.adj=\"none\") \n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  employ$score and employ$disability \n\n           none   amputation crutches hearing\namputation 0.4477 -          -        -      \ncrutches   0.1028 0.0184     -        -      \nhearing    0.1732 0.5418     0.0035   -      \nwheelchair 0.4756 0.1433     0.3520   0.0401 \n\nP value adjustment method: none \n\n\n\nPairwise t-tests __with Bonferroni p-value adjustments:\n\npairwise.t.test(employ$score,  \n                employ$disability, \n                p.adj=\"bonferroni\")  #&lt;&lt;\n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  employ$score and employ$disability \n\n           none  amputation crutches hearing\namputation 1.000 -          -        -      \ncrutches   1.000 0.184      -        -      \nhearing    1.000 1.000      0.035    -      \nwheelchair 1.000 1.000      1.000    0.401  \n\nP value adjustment method: bonferroni \n\n\nSince there were 10 tests, all the p-values were multiplied by 10."
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#tukeys-honest-significance-test-hsd-13",
+    "href": "slides/Day14_bsta511.html#tukeys-honest-significance-test-hsd-13",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Tukey’s Honest Significance Test (HSD) (1/3)",
+    "text": "Tukey’s Honest Significance Test (HSD) (1/3)\n\n\n\nTukey’s Honest Significance Test (HSD) controls the “family-wise probability” of making a Type I error using a much less conservative method than Bonferroni\nIt is specific to ANOVA\nIn addition to adjusted p-values, it also calculates Tukey adjusted CI’s\n\nThe function TukeyHSD() creates a set of confidence intervals on the differences between means with the specified family-wise probability of coverage.\n\n\n# need to run the model as an `aov` instead of `lm`\nempl_aov &lt;- aov(score ~ disability, data = employ) #&lt;&lt;\nanova(empl_aov)  #&lt;&lt;\n\nAnalysis of Variance Table\n\nResponse: score\n           Df  Sum Sq Mean Sq F value  Pr(&gt;F)  \ndisability  4  30.521  7.6304  2.8616 0.03013 *\nResiduals  65 173.321  2.6665                  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#tukeys-honest-significance-test-hsd-23",
+    "href": "slides/Day14_bsta511.html#tukeys-honest-significance-test-hsd-23",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Tukey’s Honest Significance Test (HSD) (2/3)",
+    "text": "Tukey’s Honest Significance Test (HSD) (2/3)\nBoth Tukey HSD p-values and CI’s for all pairwise differences.\n\nTukeyHSD(x=empl_aov, conf.level = 0.95) #&lt;&lt;\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = score ~ disability, data = employ)\n\n$disability\n                            diff        lwr        upr     p adj\namputation-none       -0.4714286 -2.2031613  1.2603042 0.9399911\ncrutches-none          1.0214286 -0.7103042  2.7531613 0.4686233\nhearing-none          -0.8500000 -2.5817328  0.8817328 0.6442517\nwheelchair-none        0.4428571 -1.2888756  2.1745899 0.9517374\ncrutches-amputation    1.4928571 -0.2388756  3.2245899 0.1232819\nhearing-amputation    -0.3785714 -2.1103042  1.3531613 0.9724743\nwheelchair-amputation  0.9142857 -0.8174470  2.6460185 0.5781165\nhearing-crutches      -1.8714286 -3.6031613 -0.1396958 0.0277842\nwheelchair-crutches   -0.5785714 -2.3103042  1.1531613 0.8812293\nwheelchair-hearing     1.2928571 -0.4388756  3.0245899 0.2348141"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#tukeys-honest-significance-test-hsd-33",
+    "href": "slides/Day14_bsta511.html#tukeys-honest-significance-test-hsd-33",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Tukey’s Honest Significance Test (HSD) (3/3)",
+    "text": "Tukey’s Honest Significance Test (HSD) (3/3)\n\n\n\nplot(TukeyHSD(x=empl_aov, conf.level = 0.95))\n\n\n\n\n\n\nVisualization of pairwise CI’s\n__Which pair(s) of disabilities are significant after Tukey’s adjustments?"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#there-are-many-more-multiple-testing-adjustment-procedures",
+    "href": "slides/Day14_bsta511.html#there-are-many-more-multiple-testing-adjustment-procedures",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "There are many more multiple testing adjustment procedures",
+    "text": "There are many more multiple testing adjustment procedures\n\n\n\nBonferroni is popular because it’s so easy to apply\nTukey’s HSD is usually used for ANOVA\n\n\n# default is Holm's adjustments\npairwise.t.test(employ$score, \n                employ$disability) \n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  employ$score and employ$disability \n\n           none  amputation crutches hearing\namputation 1.000 -          -        -      \ncrutches   0.719 0.165      -        -      \nhearing    0.866 1.000      0.035    -      \nwheelchair 1.000 0.860      1.000    0.321  \n\nP value adjustment method: holm \n\n\n\nPairwise t-tests with false discovery rate (fdr) p-value adjustments (popular in omics):\n\npairwise.t.test(employ$score, \n                employ$disability, \n                p.adj=\"fdr\") #&lt;&lt;\n\n\n    Pairwise comparisons using t tests with pooled SD \n\ndata:  employ$score and employ$disability \n\n           none  amputation crutches hearing\namputation 0.528 -          -        -      \ncrutches   0.257 0.092      -        -      \nhearing    0.289 0.542      0.035    -      \nwheelchair 0.528 0.287      0.503    0.134  \n\nP value adjustment method: fdr"
+  },
+  {
+    "objectID": "slides/Day14_bsta511.html#multiple-testing-controlling-the-type-i-error-rate",
+    "href": "slides/Day14_bsta511.html#multiple-testing-controlling-the-type-i-error-rate",
+    "title": "DRAFT: Day 14: Comparing Means with ANOVA (Section 5.5)",
+    "section": "Multiple testing: controlling the Type I error rate",
+    "text": "Multiple testing: controlling the Type I error rate\n\n\n\nThe multiple testing issue is not unique to ANOVA post-hoc testing.\nIt is also a concern when running separate tests for many related outcomes.\n__Beware of p-hacking!\n\nProblem:\nAlthough test has an \\(\\alpha\\) chance of a Type I error (finding a difference between a pair that aren’t different), the overall Type I error rate will be much higher when running many tests simultaneously.\n\n\\[\\begin{align}\nP(\\text{making an error}) = & \\alpha\\\\\nP(\\text{not making an error}) = & 1-\\alpha\\\\\nP(\\text{not making an error in m tests}) = & (1-\\alpha)^m\\\\\nP(\\text{making at least 1 error in m tests}) = & 1-(1-\\alpha)^m\n\\end{align}\\]"
+  },
+  {
+    "objectID": "weeks/week_09.html",
+    "href": "weeks/week_09.html",
+    "title": "Week 9",
+    "section": "",
+    "text": "ANOVA = Analysis of Variance\nComparing more than 2 means\nSection 5.5\n\n\n\nNote: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides.\n\nDRAFT html\nComing soon! pdf\nComing soon! Slides with notes\nComing soon! webpage\nDRAFT Code file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nDisabilityEmployment.txt\n\n\n\n\nClass discussion Google doc link\nQuestions from HW 7\n\nBook #8.28, 8.34, 8.38 (modified; see assignment), 8.32"
+  },
+  {
+    "objectID": "weeks/week_09.html#day-14",
+    "href": "weeks/week_09.html#day-14",
+    "title": "Week 9",
+    "section": "",
+    "text": "ANOVA = Analysis of Variance\nComparing more than 2 means\nSection 5.5\n\n\n\nNote: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides.\n\nDRAFT html\nComing soon! pdf\nComing soon! Slides with notes\nComing soon! webpage\nDRAFT Code file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nDisabilityEmployment.txt\n\n\n\n\nClass discussion Google doc link\nQuestions from HW 7\n\nBook #8.28, 8.34, 8.38 (modified; see assignment), 8.32"
+  },
+  {
+    "objectID": "weeks/week_09.html#homework",
+    "href": "weeks/week_09.html#homework",
+    "title": "Week 9",
+    "section": "Homework",
+    "text": "Homework\n\nComing soon! HW 8 due on Mon, 11/27\n\nCovers Days 14-15\nFor book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes.\nDo not forget to include a discussion on whether you think the test conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test as instructed."
+  },
+  {
+    "objectID": "weeks/week_09.html#recordings",
+    "href": "weeks/week_09.html#recordings",
+    "title": "Week 9",
+    "section": "Recordings",
+    "text": "Recordings\n\nPre-recorded lessons are on Echo Cloud (aka echo 360 or echo video).\n\nThese can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the Echo Cloud option in the left-side menu.\nThis will redirect you to an echo video page with a list of pre-recorded videos.\n\nIn-class recording links are on Sakai. Navigate to Course Materials -&gt; Schedule with links to in-class recordings. Note that the password to the recordings is at the top of the page."
+  },
+  {
+    "objectID": "weeks/week_09.html#day-15---coming-soon",
+    "href": "weeks/week_09.html#day-15---coming-soon",
+    "title": "Week 9",
+    "section": "Day 15 - coming soon!",
+    "text": "Day 15 - coming soon!"
   }
 ]
