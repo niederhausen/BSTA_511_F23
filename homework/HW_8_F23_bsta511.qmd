@@ -1,0 +1,188 @@
+---
+title: "DRAFT HW 8: BSTA 511-611 F23"
+author: "Your name here - update this!!!!"
+date: "Due 11/27/23"
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    toc_float:
+      collapsed: false
+    number-sections: true
+    number-depth: 3
+    theme: lumen
+    self-contained: true
+    html-math-method: mathjax
+---
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+**Due Monday 11/27/23**
+
+Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_8_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_8_F23_bsta511.qmd)
+
+
+## Directions {.unnumbered}
+
+* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
+* For each question, make sure to include all code and resulting output in the html file to support your answers. 
+
+
+### R & LaTeX code {.unnumbered}
+
+* See the .qmd files with the code from class notes for LaTeX and R code.
+* The LaTeX code will make it easier to show your work in computations.
+
+:::{.callout-tip}
+It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
+:::
+
+
+# Book exercises {.unnumbered}
+
+
+## 8.2 
+
+
+
+
+# PSS
+
+## PSS1:  
+
+
+
+# R exercises 
+
+## Load all the packages you need below here. 
+
+```{r}
+
+```
+
+
+## R1: Palmer Penguins
+
+
+* Use the `penguins` data from the `palmerpenguins` package.
+    * Don't forget to first __install__ the `palmerpenguins` package
+* You can learn more about the Palmer penguins data at <https://allisonhorst.github.io/palmerpenguins/>
+* We will test whether there are differences in penguins' mean bill depths when comparing different species.
+
+
+```{r}
+library(palmerpenguins)
+data(penguins)
+```
+
+
+### Dotplots
+
+__Make a dotplot of the penguins' bill depths stratified by species type. Include points for the mean of each species type as well as a horizontal dashed line for the overall mean.__ _See example from class for the plot I'm describing._
+
+
+
+
+### Which groups significantly different?
+
+__Based on the figure, which pairs of species look like they have significantly different mean bill depths?__ 
+
+
+
+
+### Hypotheses in words
+
+__Write out in words the null and alternative hypotheses.__  
+
+
+### Hypotheses in symbols
+
+__Write out in symbols the null and alternative hypotheses.__  
+
+
+
+### Run ANOVA in R
+
+__Using R, run the hypothesis test and display the output.__  
+
+
+### SST
+
+__Using the values from the ANOVA table, calculate the value of the SST (total sum of squares).__ 
+
+
+### MSG & MSE
+
+__Using the values from the ANOVA table, verify (calculate) the values of the MSG (mean square groups) and MSE (mean square error).__ 
+
+
+### F statistic
+
+__Using the values from the ANOVA table, verify (calculate) the value of the F statistic.__ 
+
+
+### p-value
+
+__Using the values from the ANOVA table, verify (calculate) the p-value.__ 
+
+
+
+
+### Decision?
+
+__Based on the p-value, will we reject or fail to reject the null hypothesis? Why?__
+
+
+
+
+### Conclusion
+
+__Write a conclusion to the hypothesis test in the context of the problem.__
+
+
+
+### Technical conditions
+
+__Investigate whether the technical conditions for using an ANOVA been satisfied. __
+
+
+
+
+### Post-hoc pairwise t-tests: no correction
+
+__Run post-hoc pairwise t-tests using NO p-value correction. Which pairs of species have significantly different bill depths?__
+
+
+
+
+### Post-hoc pairwise t-tests: Bonferroni correction
+
+__Run post-hoc pairwise t-tests using a Bonferroni correction. Which pairs of species have significantly different bill depths?__
+                
+
+
+### Hypothetical Bonferroni correction
+
+__If _hypothetically_ the p-value comparing the mean bill depths of the Adelie and Chinstrap species were 0.03 without any p-value adjustment, what would the p-value be after running the post-hoc pairwise t-tests using a Bonferroni correction?__
+
+
+
+                
+### Post-hoc pairwise t-tests: Tukey's Honest Significance Test correction
+
+__Run post-hoc pairwise t-tests using Tukey's Honest Significance Test correction. Which pairs of species have significantly different bill depths?__
+
+
+
+### Tukey confidence intervals
+
+__Make a plot showing the 95% family-wise Tukey confidence intervals. How does this plot visually confirm the which pairs of species have significantly different bill depths?__
+
+
+
+

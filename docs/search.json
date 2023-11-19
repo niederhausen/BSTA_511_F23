@@ -1131,7 +1131,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\nHW 2: BSTA 511-611 F23\n\n\n\n\n10/21/23\n\n\nHW 3: BSTA 511-611 F23\n\n\n\n\n10/28/23\n\n\nHW 4: BSTA 511-611 F23\n\n\n\n\n11/4/23\n\n\nHW 5: BSTA 511-611 F23\n\n\n\n\n11/11/23\n\n\nHW 6: BSTA 511-611 F23\n\n\n\n\n11/18/23\n\n\nHW 7: BSTA 511-611 F23\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\nHW 2: BSTA 511-611 F23\n\n\n\n\n10/21/23\n\n\nHW 3: BSTA 511-611 F23\n\n\n\n\n10/28/23\n\n\nHW 4: BSTA 511-611 F23\n\n\n\n\n11/4/23\n\n\nHW 5: BSTA 511-611 F23\n\n\n\n\n11/11/23\n\n\nHW 6: BSTA 511-611 F23\n\n\n\n\n11/18/23\n\n\nHW 7: BSTA 511-611 F23\n\n\n\n\n11/27/23\n\n\nDRAFT HW 8: BSTA 511-611 F23\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/Day02_bsta511.html#experiments-12",
@@ -11870,5 +11870,47 @@
     "title": "Day 14: Comparing Means with ANOVA (Section 5.5)",
     "section": "What’s next?",
     "text": "What’s next?"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html",
+    "href": "homework/HW_8_F23_bsta511.html",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "",
+    "text": "Due Monday 11/27/23\nDownload the .qmd file for this assignment from https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_8_F23_bsta511.qmd"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#directions",
+    "href": "homework/HW_8_F23_bsta511.html#directions",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "Directions",
+    "text": "Directions\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\nR & LaTeX code\n\nSee the .qmd files with the code from class notes for LaTeX and R code.\nThe LaTeX code will make it easier to show your work in computations.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#section",
+    "href": "homework/HW_8_F23_bsta511.html#section",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "0.1 8.2",
+    "text": "0.1 8.2"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#pss1",
+    "href": "homework/HW_8_F23_bsta511.html#pss1",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "1.1 PSS1:",
+    "text": "1.1 PSS1:"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#load-all-the-packages-you-need-below-here.",
+    "href": "homework/HW_8_F23_bsta511.html#load-all-the-packages-you-need-below-here.",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "2.1 Load all the packages you need below here.",
+    "text": "2.1 Load all the packages you need below here."
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#r1-palmer-penguins",
+    "href": "homework/HW_8_F23_bsta511.html#r1-palmer-penguins",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "2.2 R1: Palmer Penguins",
+    "text": "2.2 R1: Palmer Penguins\n\nUse the penguins data from the palmerpenguins package.\n\nDon’t forget to first install the palmerpenguins package\n\nYou can learn more about the Palmer penguins data at https://allisonhorst.github.io/palmerpenguins/\nWe will test whether there are differences in penguins’ mean bill depths when comparing different species.\n\n\nlibrary(palmerpenguins)\ndata(penguins)\n\n\n2.2.1 Dotplots\nMake a dotplot of the penguins’ bill depths stratified by species type. Include points for the mean of each species type as well as a horizontal dashed line for the overall mean. See example from class for the plot I’m describing.\n\n\n2.2.2 Which groups significantly different?\nBased on the figure, which pairs of species look like they have significantly different mean bill depths?\n\n\n2.2.3 Hypotheses in words\nWrite out in words the null and alternative hypotheses.\n\n\n2.2.4 Hypotheses in symbols\nWrite out in symbols the null and alternative hypotheses.\n\n\n2.2.5 Run ANOVA in R\nUsing R, run the hypothesis test and display the output.\n\n\n2.2.6 SST\nUsing the values from the ANOVA table, calculate the value of the SST (total sum of squares).\n\n\n2.2.7 MSG & MSE\nUsing the values from the ANOVA table, verify (calculate) the values of the MSG (mean square groups) and MSE (mean square error).\n\n\n2.2.8 F statistic\nUsing the values from the ANOVA table, verify (calculate) the value of the F statistic.\n\n\n2.2.9 p-value\nUsing the values from the ANOVA table, verify (calculate) the p-value.\n\n\n2.2.10 Decision?\nBased on the p-value, will we reject or fail to reject the null hypothesis? Why?\n\n\n2.2.11 Conclusion\nWrite a conclusion to the hypothesis test in the context of the problem.\n\n\n2.2.12 Technical conditions\nInvestigate whether the technical conditions for using an ANOVA been satisfied. \n\n\n2.2.13 Post-hoc pairwise t-tests: no correction\nRun post-hoc pairwise t-tests using NO p-value correction. Which pairs of species have significantly different bill depths?\n\n\n2.2.14 Post-hoc pairwise t-tests: Bonferroni correction\nRun post-hoc pairwise t-tests using a Bonferroni correction. Which pairs of species have significantly different bill depths?\n\n\n2.2.15 Hypothetical Bonferroni correction\nIf hypothetically the p-value comparing the mean bill depths of the Adelie and Chinstrap species were 0.03 without any p-value adjustment, what would the p-value be after running the post-hoc pairwise t-tests using a Bonferroni correction?\n\n\n2.2.16 Post-hoc pairwise t-tests: Tukey’s Honest Significance Test correction\nRun post-hoc pairwise t-tests using Tukey’s Honest Significance Test correction. Which pairs of species have significantly different bill depths?\n\n\n2.2.17 Tukey confidence intervals\nMake a plot showing the 95% family-wise Tukey confidence intervals. How does this plot visually confirm the which pairs of species have significantly different bill depths?"
   }
 ]
