@@ -292,10 +292,12 @@ $$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 \ \
 ## Notation
 
 * _k_ groups
-* _n_ observations in each of the _k_ groups
+* $n_i$ observations in each of the _k_ groups
 * Total sample size is $N=\sum_{i=1}^{k}n_i$
 * $\bar{x}_{i}$ = mean of observations in group _i_
 * $\bar{x}$ = mean of _all_ observations
+* $s_{i}$ = sd of observations in group _i_
+* $s$ = sd of _all_ observations
 
 | Observation | *i* = 1       | *i* = 2       | *i* = 3       | $\ldots$ | *i* = *k*     | overall   |
 |:------------|:-------------:|:-------------:|:-------------:|:--------:|:-------------:|:---------:|
@@ -304,9 +306,10 @@ $$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 \ \
 | *j* = 3     | $x_{13}$      | $x_{23}$      | $x_{33}$      | $\ldots$ | $x_{k3}$      |           |
 | *j* = 4     | $x_{14}$      | $x_{24}$      | $x_{34}$      | $\ldots$ | $x_{k4}$      |           |
 | $\vdots$    | $\vdots$      | $\vdots$      | $\vdots$      | $\ddots$ | $\vdots$      |           |
-| *j* = $n_i$ | $x_{1n_i}$      | $x_{2n_i}$      | $x_{3n_i}$      | $\ldots$ | $x_{kn_i}$      |           |
+| *j* = $n_i$ | $x_{1n_1}$      | $x_{2n_2}$      | $x_{3n_3}$      | $\ldots$ | $x_{kn_k}$      |           |
 | Means       | $\bar{x}_{1}$ | $\bar{x}_{2}$ | $\bar{x}_{3}$ | $\ldots$ | $\bar{x}_{k}$ | $\bar{x}$ |
 | Variance    | ${s}^2_{1}$   | ${s}^2_{2}$   | ${s}^2_{3}$   | $\ldots$ | ${s}^2_{k}$   | ${s}^2$   |
+
 
 
 ## Total Sums of Squares Visually
