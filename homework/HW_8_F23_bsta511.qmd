@@ -46,8 +46,13 @@ It is a good idea to try rendering your document from time to time as you go alo
 # Book exercises {.unnumbered}
 
 
-## 8.2 
+## 5.44 {.unnumbered}
 
+
+## 5.46 {.unnumbered}
+
+
+## 5.48 {.unnumbered}
 
 
 

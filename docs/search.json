@@ -11295,14 +11295,14 @@
     "href": "weeks/week_09.html",
     "title": "Week 9",
     "section": "",
-    "text": "ANOVA = Analysis of Variance\nComparing more than 2 means\nSection 5.5\n\n\n\n\n\n\n\nNote\n\n\n\nI moved the Kruskal-Wallis test to Day 15.\n\n\n\n\nNote: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides.\n\nhtml\npdf\nComing soon! Slides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nDisabilityEmployment.txt\n\n\n\n\nClass discussion Google doc link\n\n\nSlide 12: “Hypothetical examples” question\nSlide 29 questions\nBook # TBD"
+    "text": "ANOVA = Analysis of Variance\nComparing more than 2 means\nSection 5.5\n\n\n\n\n\n\n\nNote\n\n\n\nI moved the Kruskal-Wallis test to Day 15.\n\n\n\n\nNote: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides.\n\nhtml\npdf\nComing soon! Slides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nDisabilityEmployment.txt\n\n\n\n\nClass discussion Google doc link\n\n\nSlide 12: “Hypothetical examples” question\nSlide 29 questions\nBook # 5.46, 5.48, 5.44, R1"
   },
   {
     "objectID": "weeks/week_09.html#day-14",
     "href": "weeks/week_09.html#day-14",
     "title": "Week 9",
     "section": "",
-    "text": "ANOVA = Analysis of Variance\nComparing more than 2 means\nSection 5.5\n\n\n\n\n\n\n\nNote\n\n\n\nI moved the Kruskal-Wallis test to Day 15.\n\n\n\n\nNote: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides.\n\nhtml\npdf\nComing soon! Slides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nDisabilityEmployment.txt\n\n\n\n\nClass discussion Google doc link\n\n\nSlide 12: “Hypothetical examples” question\nSlide 29 questions\nBook # TBD"
+    "text": "ANOVA = Analysis of Variance\nComparing more than 2 means\nSection 5.5\n\n\n\n\n\n\n\nNote\n\n\n\nI moved the Kruskal-Wallis test to Day 15.\n\n\n\n\nNote: the title slide of the recording mistakenly shows Day 17 instead of Day 13. I fixed this in the posted slides.\n\nhtml\npdf\nComing soon! Slides with notes\nwebpage\nCode file: qmd, html\n\n\n\n\nAll datasets can be found on GitHub\n\nDisabilityEmployment.txt\n\n\n\n\nClass discussion Google doc link\n\n\nSlide 12: “Hypothetical examples” question\nSlide 29 questions\nBook # 5.46, 5.48, 5.44, R1"
   },
   {
     "objectID": "weeks/week_09.html#homework",
@@ -11889,8 +11889,8 @@
     "objectID": "homework/HW_8_F23_bsta511.html#section",
     "href": "homework/HW_8_F23_bsta511.html#section",
     "title": "DRAFT HW 8: BSTA 511-611 F23",
-    "section": "0.1 8.2",
-    "text": "0.1 8.2"
+    "section": "5.44",
+    "text": "5.44"
   },
   {
     "objectID": "homework/HW_8_F23_bsta511.html#pss1",
@@ -11912,5 +11912,19 @@
     "title": "DRAFT HW 8: BSTA 511-611 F23",
     "section": "2.2 R1: Palmer Penguins",
     "text": "2.2 R1: Palmer Penguins\n\nUse the penguins data from the palmerpenguins package.\n\nDon’t forget to first install the palmerpenguins package\n\nYou can learn more about the Palmer penguins data at https://allisonhorst.github.io/palmerpenguins/\nWe will test whether there are differences in penguins’ mean bill depths when comparing different species.\n\n\nlibrary(palmerpenguins)\ndata(penguins)\n\n\n2.2.1 Dotplots\nMake a dotplot of the penguins’ bill depths stratified by species type. Include points for the mean of each species type as well as a horizontal dashed line for the overall mean. See example from class for the plot I’m describing.\n\n\n2.2.2 Which groups significantly different?\nBased on the figure, which pairs of species look like they have significantly different mean bill depths?\n\n\n2.2.3 Hypotheses in words\nWrite out in words the null and alternative hypotheses.\n\n\n2.2.4 Hypotheses in symbols\nWrite out in symbols the null and alternative hypotheses.\n\n\n2.2.5 Run ANOVA in R\nUsing R, run the hypothesis test and display the output.\n\n\n2.2.6 SST\nUsing the values from the ANOVA table, calculate the value of the SST (total sum of squares).\n\n\n2.2.7 MSG & MSE\nUsing the values from the ANOVA table, verify (calculate) the values of the MSG (mean square groups) and MSE (mean square error).\n\n\n2.2.8 F statistic\nUsing the values from the ANOVA table, verify (calculate) the value of the F statistic.\n\n\n2.2.9 p-value\nUsing the values from the ANOVA table, verify (calculate) the p-value.\n\n\n2.2.10 Decision?\nBased on the p-value, will we reject or fail to reject the null hypothesis? Why?\n\n\n2.2.11 Conclusion\nWrite a conclusion to the hypothesis test in the context of the problem.\n\n\n2.2.12 Technical conditions\nInvestigate whether the technical conditions for using an ANOVA been satisfied. \n\n\n2.2.13 Post-hoc pairwise t-tests: no correction\nRun post-hoc pairwise t-tests using NO p-value correction. Which pairs of species have significantly different bill depths?\n\n\n2.2.14 Post-hoc pairwise t-tests: Bonferroni correction\nRun post-hoc pairwise t-tests using a Bonferroni correction. Which pairs of species have significantly different bill depths?\n\n\n2.2.15 Hypothetical Bonferroni correction\nIf hypothetically the p-value comparing the mean bill depths of the Adelie and Chinstrap species were 0.03 without any p-value adjustment, what would the p-value be after running the post-hoc pairwise t-tests using a Bonferroni correction?\n\n\n2.2.16 Post-hoc pairwise t-tests: Tukey’s Honest Significance Test correction\nRun post-hoc pairwise t-tests using Tukey’s Honest Significance Test correction. Which pairs of species have significantly different bill depths?\n\n\n2.2.17 Tukey confidence intervals\nMake a plot showing the 95% family-wise Tukey confidence intervals. How does this plot visually confirm the which pairs of species have significantly different bill depths?"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#section-1",
+    "href": "homework/HW_8_F23_bsta511.html#section-1",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "5.46",
+    "text": "5.46"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#section-2",
+    "href": "homework/HW_8_F23_bsta511.html#section-2",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "5.48",
+    "text": "5.48"
   }
 ]
