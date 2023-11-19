@@ -19,6 +19,9 @@ editor_options:
 * Comparing more than 2 means
 * Section 5.5
 
+:::{.callout-note}
+I moved the Kruskal-Wallis test to Day 15.
+:::
 
 ### Slides
 
