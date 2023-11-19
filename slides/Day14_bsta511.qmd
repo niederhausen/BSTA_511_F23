@@ -54,19 +54,28 @@ theme_set(theme_bw(base_size = 22))
 ```
 
 
+## Where are we?
+
+<br>
+<br>
+
+![](/img_slides/flowchart_511_continuous_categorical.png){fig-align="center"}
+
+## Where are we? Continuous outcome zoomed in
+
+<br>
+<br>
+
+![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
+
+
 ## Topics
 
 * When to use an ANOVA
 * Different sources of variation in ANOVA
-* ANOVA assumptions
+* ANOVA conditions
 * Post-hoc testing of differences in means
 * Running an ANOVA in R
-
-### Additional Resource
-
-* BSTA 511 textbook (Vu & Harrington)
-    * Section 5.5: Comparing means with ANOVA
-    * Section 7.9: Connection between ANOVA and regression
 
 
 
@@ -100,11 +109,9 @@ theme_set(theme_bw(base_size = 22))
 
 ## Load interview data from `.txt` file
 
-::: columns
-::: {.column width="50%"}
-* `.txt` files are usually tab-deliminated files
+* `.txt` (text) files are usually tab-deliminated files
     * `.csv` files are comma-separated files
-* `read_delim` is from the `readr` package, just like `read_csv`
+* `read_delim` is from the `readr` package, just like `read_csv`, and loads with other `tidyverse` packages
 
 ```{r}
 employ <- read_delim(
@@ -113,18 +120,27 @@ employ <- read_delim(
   trim_ws = TRUE)
 ```
 
-`trim_ws`: 	Should leading and trailing whitespace be trimmed from each field before parsing it?
-:::
+`trim_ws`: 	specify whether leading and trailing white space should be trimmed from each field before parsing it
 
+```{r}
+glimpse(employ)
+```
+
+
+::: columns
 ::: {.column width="50%"}
+
 ```{r}
 summary(employ)
-employ %>% tabyl(disability)
 ```
 :::
+::: {.column width="50%"}
+```{r}
+employ %>% tabyl(disability)
+```
+
 :::
-
-
+:::
 
 
 
@@ -140,9 +156,7 @@ Sections on: Race and ethnicity, Immigration status, Gender and sexual orientati
 ::: {.column width="50%"}
 
 ![](/img_slides/OHSU_Inclusive_Language_Guide_Ability_header.png){fig-align="center"}
-
 ![](/img_slides/OHSU_Inclusive_Language_Guide_Respectful.png){fig-align="center"}
-
 ![](/img_slides/OHSU_Inclusive_Language_Guide_Respectful_disability.png){fig-align="center"}
 
 :::
@@ -153,37 +167,59 @@ Sections on: Race and ethnicity, Immigration status, Gender and sexual orientati
 :::
 
 
-
-
-
-## Factor variable: Make `disability` variable a factor variable
+## Factor variable: Make `disability` a factor variable
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="70%"}
 ```{r}
-glimpse(employ)
-employ <- employ %>% 
-  mutate(disability = factor(disability))
 glimpse(employ)
 ```
 
 :::
-
-::: {.column width="50%"}
+::: {.column width="30%"}
 ```{r}
 summary(employ)
 ```
-
 :::
 :::
 
+Make `disability` a factor variable:
+
+```{r}
+employ <- employ %>% 
+  mutate(disability = factor(disability))
+```
+
+<br>
+
+What's different now?
+
+::: columns
+::: {.column width="70%"}
+```{r}
+glimpse(employ)
+```
+
+:::
+::: {.column width="30%"}
+```{r}
+summary(employ)
+```
+:::
+:::
 
 
 ## Factor variable: Change order & name of disability levels 
 
+[What are the current level names and order?]{style="color:purple"}
+
 ```{r}
 levels(employ$disability)
+```
 
+[What changes are being made below?]{style="color:green"}
+
+```{r}
 employ <- employ %>% 
   mutate(
     # make "none" the first level
@@ -192,21 +228,29 @@ employ <- employ %>%
     # change the level name amputee to amputation
     disability = fct_recode(disability, amputation = "amputee")
     )
+```
 
+* `fct_relevel()` and `fct_recode()` are from the `forcats` package: <https://forcats.tidyverse.org/index.html>. 
+* `forcats` is loaded with `library(tidyverse)`.
+
+[New order & names:]{style="color:purple"}
+
+```{r}
 levels(employ$disability) # note the new order and new name
 ```
 
-`fct_relevel()` and `fct_recode()` are from the `forcats` package: https://forcats.tidyverse.org/index.html. `forcats` is loaded with `library(tidyverse)`.
 
 
+## Data viz (1/2)
 
-## Data viz
+* What are the `score` distribution shapes within each group? 
+* Any unusual values?
 
 ::: columns
 ::: {.column width="50%"}
 ```{r}
-#| fig.width: 5.0
-#| fig.height: 4.0
+#| fig.width: 7.0
+#| fig.height: 6.0
 ggplot(employ, aes(x=score)) +
   geom_density() +
   facet_wrap(~ disability)
@@ -215,62 +259,67 @@ ggplot(employ, aes(x=score)) +
 
 ::: {.column width="50%"}
 ```{r}
-#| fig.width: 5.0
-#| fig.height: 3.1
-library(ggridges) #<<
+#| fig.width: 7.0
+#| fig.height: 5.0
+library(ggridges) 
 ggplot(employ, 
        aes(x=score,
            y = disability,
            fill = disability)) + 
-  geom_density_ridges(alpha = 0.4) +#<<
-  theme(legend.position="none")#<<
+  geom_density_ridges(alpha = 0.4) +
+  theme(legend.position="none")
 ```
 :::
 :::
 
+## Data viz (2/2)
 
+* Compare the `score` measures of __center__ and __spread__ between the groups
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="45%"}
 ```{r}
-#| fig.width: 5.0
-#| fig.height: 4.0
-ggplot(employ, aes(y=score, x = disability,
-                   fill = disability)) +
-  geom_boxplot(alpha =.3) +
+#| fig.width: 7.0
+#| fig.height: 6.0
+ggplot(employ, 
+       aes(y=score, 
+           x = disability,
+           fill = disability)) +
+  geom_boxplot(alpha = 0.3) +
   coord_flip() +
-  geom_jitter(width =.1, alpha = 0.3) +
-  theme(legend.position = "none")#<<
+  geom_jitter(width = 0.1, 
+              alpha = 0.3) +
+  theme(legend.position = "none")
 ```
 :::
 
-::: {.column width="50%"}
+::: {.column width="55%"}
 ```{r}
-#| fig.width: 5.0
-#| fig.height: 4.0
-ggplot(employ, aes(x = disability, y=score, 
-    fill=disability, color=disability)) +
-  geom_dotplot(binaxis = "y", alpha =.5) +#<<
+#| fig.width: 7.5
+#| fig.height: 4.5
+ggplot(employ, 
+       aes(x = disability, 
+           y=score, 
+           fill=disability, 
+           color=disability)) +
+  geom_dotplot(binaxis = "y", alpha = 0.5) +
   geom_hline(aes(yintercept = mean(score)), 
              lty = "dashed") +
-  stat_summary(fun ="mean", geom="point", #<<
-    size = 3, color = "grey33", alpha =1) +#<<
+  stat_summary(fun ="mean", geom="point", 
+    size = 3, color = "grey33", alpha = 1) +
   theme(legend.position = "none")
 ```
 :::
 :::
 
 
-
-
-
 ## Hypotheses
 
-To test for a difference in means across _k_ treatment groups:
+To test for a difference in means across _k_ groups:
 
 \begin{align}
 H_0 &: \mu_1 = \mu_2 = ... = \mu_k\\
-\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j
+\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j \text{ for } i \neq j
 \end{align}
 
 
@@ -281,89 +330,81 @@ that at least one population differs from the others?
 ![](/img_slides/hypothetical_disability_data_v2.png){fig-align="center"}
 
 
-
 ## Comparing means
 
 Whether or not two means are significantly different depends on:
-* How far apart the means are
-* How much variability there is within each treatment group
 
-__Questions:__  
-* How to measure variability between treatment groups?
-* How to measure variability within treatment groups?
-* How to compare the two measures?
+* How far apart the __means__ are
+* How much __variability__ there is within each group
+
+__[Questions:]{style="color:green"}__  
+
+* How to measure variability __between__ groups?
+* How to measure variability __within__ groups?
+* How to compare the two measures of variability?
 * How to determine significance?
-
 
 
 ## ANOVA in base R
 
+* There are several options to run an ANOVA model in R
+* Two most common are `lm` and `aov`
+    * `lm` = linear model; will be using frequently in BSTA 512
+
 ```{r}
-empl_lm <- lm(score ~ disability, data = employ)
-anova(empl_lm)
+lm(score ~ disability, data = employ) %>% anova()
+
+aov(score ~ disability, data = employ) %>% summary()
 ```
 
 Hypotheses:
 
 \begin{align}
 H_0 &: \mu_{none} = \mu_{amputation} = \mu_{crutches} = \mu_{hearing} =  \mu_{wheelchair}\\
-\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j
+\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j \text{ for } i \neq j
 \end{align}
 
 Do we reject or fail to reject $H_0$?
 
+## ANOVA tables {.nostretch}
 
+Disability example ANOVA table from R:
 
-## ANOVA tables
-
-::: columns
-::: {.column width="50%"}
-Disability example ANOVA table
-![](/img_slides/anova_table_example_R_output.png){fig-align="center"}
-
+::: {style="font-size: 90%;"}
+```{r}
+lm(score ~ disability, data = employ) %>% anova()
+```
 :::
 
-::: {.column width="50%"}
-Generic ANOVA table
-![](/img_slides/anova_table.png){fig-align="center"}
-:::
-:::
+Generic ANOVA table:
+
+![](/img_slides/anova_table.png){fig-align="center" width=80%}
+
+## ANOVA: Analysis of Variance  {.nostretch}
+
+__ANOVA__ compares the variability between groups to the variability within groups 
 
 
+![](/img_slides/anova_total_variability.png){fig-align="center" height=1.5in}
 
-## ANOVA table
-
-
-![](/img_slides/anova_table.png){fig-align="center"}
-
-
+![](/img_slides/SST_visually_unnamed-chunk-13-1.png){fig-align="center" width=30%} 
+![](/img_slides/SSG_visually_unnamed-chunk-14-1.png){fig-align="center" width=30%} 
+![](/img_slides/SSE_visually_unnamed-chunk-17-1.png){fig-align="center" width=30%} 
 
 
-## ANOVA: Analysis of Variance 
+## ANOVA: Analysis of Variance  {.nostretch}
 
-__ANOVA__ compares the variability between treatments to the variability within treatments 
+__Analysis of Variance (ANOVA)__ compares the variability between groups to the variability within groups 
 
-![](/img_slides/anova_total_variability.png){fig-align="center"}
-
-
-![](/img_slides/SST_visually_unnamed-chunk-13-1.png){fig-align="center" width = "30%"} =
-![](/img_slides/SSG_visually_unnamed-chunk-14-1.png){fig-align="center" width = "30%"} +
-![](/img_slides/SSE_visually_unnamed-chunk-17-1.png){fig-align="center" width = "30%"} 
+![](/img_slides/anova_total_variability.png){fig-align="center" height=1.5in}
 
 
+$$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 \ \ 
+= \ \sum_{i = 1}^k n_i(\bar{x}_{i}-\bar{x})^2 \ \ 
++ \ \ \sum_{i = 1}^k\sum_{j = 1}^{n_i}(x_{ij}-\bar{x}_{i})^2$$
 
 
-## ANOVA: Analysis of Variance 
-
-__Analysis of Variance (ANOVA)__ compares the variability between treatments to the variability within treatments 
-
-![](/img_slides/anova_total_variability.png){fig-align="center"}
-
-
-$$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(y_{ij} -\bar{y}_{..})^2 \ \ = \ \sum_{i = 1}^k n_i(\bar{y}_{i.}-\bar{y}_{..})^2 \ \ + \ \ \sum_{i = 1}^k\sum_{j = 1}^{n_i}(y_{ij}-\bar{y}_{i.})^2$$
-
-
-![](/img_slides/anova_SS_total.png){fig-align="center"}
+![](/img_slides/anova_SS_total.png){fig-align="center" height=1.5in}
 
 
 
@@ -371,28 +412,28 @@ $$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(y_{ij} -\bar{y}_{..})^2 \ \ = \ \sum_{i = 1}
 ## Notation
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="30%"}
 
-* _k_ treatment groups
-* _n_ observations in each of the _k_ treatment groups
+* _k_ groups
+* _n_ observations in each of the _k_ groups
 * Total sample size is $N=\sum_{i=1}^{k}n_i$
-* $\bar{y}_{i.}$ = mean of observations in treatment _i_
-* $\bar{y}_{..}$ = mean of _all_ observations
+* $\bar{x}_{i}$ = mean of observations in group _i_
+* $\bar{x}$ = mean of _all_ observations
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="70%"}
 
-| Observation | *i* = 1      | *i* = 2      | *i* = 3      | $\ldots$ |*i* = *k*| overall|
-| :-| ::| ::|:-:|:-:|:--:|:--:|
-| *j* = 1       | $y_{11}$ | $y_{21}$ | $y_{31}$ | $\ldots$ | $y_{k1}$ ||
-| *j* = 2       | $y_{12}$ | $y_{22}$ | $y_{32}$ | $\ldots$ | $y_{k2}$ ||
-| *j* = 3       | $y_{13}$ | $y_{23}$ | $y_{33}$ | $\ldots$ | $y_{k3}$ ||
-| *j* = 4       | $y_{14}$ | $y_{24}$ | $y_{34}$ | $\ldots$ | $y_{k4}$ ||
-| $\vdots$    | $\vdots$ | $\vdots$ | $\vdots$ | $\ddots$ | $\vdots$ ||
-| *j* = $n_i$     | $y_{1n}$ | $y_{2n}$ | $y_{3n}$ | $\ldots$ | $y_{kn}$ ||
-| Means       | $\bar{y}_{1.}$ | $\bar{y}_{2.}$ | $\bar{y}_{3.}$ | $\ldots$ | $\bar{y}_{k.}$ | $\bar{y}_{..}$ |
-| Variance    | ${s}^2_{1.}$ | ${s}^2_{2.}$ | ${s}^2_{3.}$ | $\ldots$ | ${s}^2_{k.}$ | ${s}^2_{..}$ |
+| Observation | *i* = 1       | *i* = 2       | *i* = 3       | $\ldots$ | *i* = *k*     | overall   |
+|:------------|:-------------:|:-------------:|:-------------:|:--------:|:-------------:|:---------:|
+| *j* = 1     | $x_{11}$      | $x_{21}$      | $x_{31}$      | $\ldots$ | $x_{k1}$      |           |
+| *j* = 2     | $x_{12}$      | $x_{22}$      | $x_{32}$      | $\ldots$ | $x_{k2}$      |           |
+| *j* = 3     | $x_{13}$      | $x_{23}$      | $x_{33}$      | $\ldots$ | $x_{k3}$      |           |
+| *j* = 4     | $x_{14}$      | $x_{24}$      | $x_{34}$      | $\ldots$ | $x_{k4}$      |           |
+| $\vdots$    | $\vdots$      | $\vdots$      | $\vdots$      | $\ddots$ | $\vdots$      |           |
+| *j* = $n_i$ | $x_{1n_i}$      | $x_{2n_i}$      | $x_{3n_i}$      | $\ldots$ | $x_{kn_i}$      |           |
+| Means       | $\bar{x}_{1}$ | $\bar{x}_{2}$ | $\bar{x}_{3}$ | $\ldots$ | $\bar{x}_{k}$ | $\bar{x}$ |
+| Variance    | ${s}^2_{1}$   | ${s}^2_{2}$   | ${s}^2_{3}$   | $\ldots$ | ${s}^2_{k}$   | ${s}^2$   |
 
 :::
 :::
@@ -405,48 +446,62 @@ $$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(y_{ij} -\bar{y}_{..})^2 \ \ = \ \sum_{i = 1}
 ::: columns
 ::: {.column width="40%"}
 ```{r}
-#| fig.width: 5.0
-#| fig.height: 6.0
+#| fig.width: 7
+#| fig.height: 10
 #| echo: false
 ggplot(employ, aes(x = disability, y=score, 
       fill = disability, color = disability)) +
-  geom_dotplot(binaxis = "y", alpha =.9) +#<<
+  geom_dotplot(binaxis = "y", alpha =.9) +
   geom_hline(aes(yintercept = mean(score)), 
              lty = "dashed") +
-  # stat_summary(fun = "mean", geom = "point", #<<
-  #      size = 3, color = "grey33", alpha =1)  +#<<
+  # stat_summary(fun = "mean", geom = "point", 
+  #      size = 3, color = "grey33", alpha =1)  +
   theme(legend.position = "none")
 ```
+
 :::
 ::: {.column width="60%"}
+
 Total Sums of Squares:
 
-$$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(y_{ij} -\bar{y}_{..})^2 = (N-1)s^2_{..}$$
-where $N=\sum_{i=1}^{k}n_i$ is the total sample size and $s^2_{..}$ is the grand standard deviation of all the observations
+$$SST = \sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 = (N-1)s^2$$
 
-* This is the sum of the squared differences between each observed $y_{ij}$ value and the *grand mean*, $\bar{y}_{..}$. 
+* where 
+    * $N=\sum_{i=1}^{k}n_i$ is the total sample size and
+    * $s^2$ is the grand standard deviation of all the observations
 
-* That is, it is the total deviation of the $y_{ij}$'s from the grand mean. 
+* This is the sum of the squared differences between each observed $x_{ij}$ value and the *grand mean*, $\bar{x}$. 
+
+* That is, it is the total deviation of the $x_{ij}$'s from the grand mean. 
 
 :::
 :::
-
 
 
 ## Calculate Total Sums of Squares 
 
-::: columns
-::: {.column width="40%"}
 Total Sums of Squares:
 
-$$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(y_{ij} -\bar{y}_{..})^2 = (N-1)s^2_{..}$$
-where $N=\sum_{i=1}^{k}n_i$ is the total sample size and $s^2_{..}$ is the grand standard deviation of all the observations
+$$SST = \sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 = (N-1)s^2$$
+
+::: columns
+::: {.column width="35%"}
+
+* where 
+    * $N=\sum_{i=1}^{k}n_i$ is the total sample size and
+    * $s^2$ is the grand standard deviation of all the observations
 :::
 
-::: {.column width="60%"}
+::: {.column width="65%"}
 
+Total sample size $N$:
 ```{r}
 (Ns <- employ %>% group_by(disability) %>% count())
+```
+
+$SST$: 
+
+```{r}
 (SST <- (sum(Ns$n) - 1) * sd(employ$score)^2)
 ```
 
@@ -454,47 +509,45 @@ where $N=\sum_{i=1}^{k}n_i$ is the total sample size and $s^2_{..}$ is the grand
 :::
 
 
-## ANOVA: Analysis of Variance 
+## ANOVA: Analysis of Variance  {.nostretch}
 
-__ANOVA__ compares the variability between treatments to the variability within treatments 
-
-![](/img_slides/anova_total_variability.png){fig-align="center"}
+__ANOVA__ compares the variability between groups to the variability within groups 
 
 
-<img src="img/SST_visually_unnamed-chunk-13-1.png){fig-align="center" width = "30%"} =
-<img src="img/SSG_visually_unnamed-chunk-14-1.png){fig-align="center" width = "30%"} +
-<img src="img/SSE_visually_unnamed-chunk-17-1.png){fig-align="center" width = "30%"} 
+![](/img_slides/anova_total_variability.png){fig-align="center" height=1.5in}
 
-
+![](/img_slides/SST_visually_unnamed-chunk-13-1.png){fig-align="center" width=30%} 
+![](/img_slides/SSG_visually_unnamed-chunk-14-1.png){fig-align="center" width=30%} 
+![](/img_slides/SSE_visually_unnamed-chunk-17-1.png){fig-align="center" width=30%} 
 
 
 
-## Sums of Squares due to Treatments Visually ("between" treatments)
+## Sums of Squares due to Groups Visually ("between" groups)
 
 ::: columns
 ::: {.column width="40%"}
 ```{r}
-#| fig.width: 5.0
-#| fig.height: 6.0
+#| fig.width: 7
+#| fig.height: 10
 #| echo: false
 ggplot(employ, aes(x = disability, y=score, 
       fill = disability, color = disability)) +
-  geom_dotplot(binaxis = "y", alpha =.2) +#<<
+  geom_dotplot(binaxis = "y", alpha =.2) +
   geom_hline(aes(yintercept = mean(score)), 
              lty = "dashed") +
-  stat_summary(fun = "mean", geom = "point", #<<
-       size = 3, color = "grey33", alpha =1)  +#<<
+  stat_summary(fun = "mean", geom = "point", 
+       size = 3, color = "grey33", alpha =1)  +
   theme(legend.position = "none")
 ```
 :::
 ::: {.column width="60%"}
-Sums of Squares due to Treatments:
+Sums of Squares due to Groups:
 
-$$SSTr = \sum_{i = 1}^k n_i(\bar{y}_{i.}-\bar{y}_{..})^2$$
+$$SSG = \sum_{i = 1}^k n_i(\bar{x}_{i}-\bar{x})^2$$
 
-* This is the sum of the squared differences between each *treatment* mean, $\bar{y}_{i.}$, and the *grand mean*, $\bar{y}_{..}$. 
+* This is the sum of the squared differences between each *group* mean, $\bar{x}_{i}$, and the *grand mean*, $\bar{x}$. 
 
-* That is, it is the deviation of the treatment means from the grand mean.
+* That is, it is the deviation of the group means from the grand mean.
 
 * Also called the Model SS, or $SS_{model}.$
 
@@ -502,76 +555,92 @@ $$SSTr = \sum_{i = 1}^k n_i(\bar{y}_{i.}-\bar{y}_{..})^2$$
 :::
 
 
+## Calculate Sums of Squares due to Groups ("between" groups)
 
-
-## Calculate Sums of Squares due to Treatments ("between" treatments)
+$$SSG = \sum_{i = 1}^k n_i(\bar{x}_{i}-\bar{x})^2$$
 
 ::: columns
 ::: {.column width="40%"}
-Sums of Squares due to Treatments:
 
-$$SSTr = \sum_{i = 1}^k n_i(\bar{y}_{i.}-\bar{y}_{..})^2$$
-
-![](/img_slides/SSG_visually_unnamed-chunk-14-1.png){fig-align="center"}
+```{r}
+#| fig.width: 7
+#| fig.height: 8
+#| echo: false
+ggplot(employ, aes(x = disability, y=score, 
+      fill = disability, color = disability)) +
+  geom_dotplot(binaxis = "y", alpha =.2) +
+  geom_hline(aes(yintercept = mean(score)), 
+             lty = "dashed") +
+  stat_summary(fun = "mean", geom = "point", 
+       size = 3, color = "grey33", alpha =1)  +
+  theme(legend.position = "none")
+```
 
 :::
-
 ::: {.column width="60%"}
+
+Calculate means $\bar{x}_i$ for each group:
+
 ```{r}
 xbar_groups <- employ %>% 
   group_by(disability) %>% 
   summarise(mean = mean(score))
 xbar_groups
+```
 
-(SSTr <- 14*sum(
+Calculate $SSG$:
+
+```{r}
+(SSG <- sum(Ns$n *
   (xbar_groups$mean - mean(employ$score))^2))
 ```
 
+
 :::
 :::
 
 
-## ANOVA: Analysis of Variance 
+## ANOVA: Analysis of Variance  {.nostretch}
 
-__ANOVA__ compares the variability between treatments to the variability within treatments 
-
-![](/img_slides/anova_total_variability.png){fig-align="center"}
+__ANOVA__ compares the variability between groups to the variability within groups 
 
 
-![](/img_slides/SST_visually_unnamed-chunk-13-1.png){fig-align="center" width = "30%"} =
-![](/img_slides/SSG_visually_unnamed-chunk-14-1.png){fig-align="center" width = "30%"} +
-![](/img_slides/SSE_visually_unnamed-chunk-17-1.png){fig-align="center" width = "30%"} 
+![](/img_slides/anova_total_variability.png){fig-align="center" height=1.5in}
+
+![](/img_slides/SST_visually_unnamed-chunk-13-1.png){fig-align="center" width=30%} 
+![](/img_slides/SSG_visually_unnamed-chunk-14-1.png){fig-align="center" width=30%} 
+![](/img_slides/SSE_visually_unnamed-chunk-17-1.png){fig-align="center" width=30%} 
 
 
 
 
-## Sums of Squares Error Visually (within treatments)
+## Sums of Squares Error Visually (within groups)
 
 ::: columns
 ::: {.column width="40%"}
 ```{r}
-#| fig.width: 5.0
-#| fig.height: 6.0
+#| fig.width: 7
+#| fig.height: 10
 #| echo: false
 ggplot(employ, aes(x = disability, y=score, 
       fill = disability, color = disability)) +
-  geom_dotplot(binaxis = "y", alpha =.5) +#<<
+  geom_dotplot(binaxis = "y", alpha =.5) +
   # geom_hline(aes(yintercept = mean(score)), 
              # lty = "dashed") +
-  stat_summary(fun = "mean", geom = "point", #<<
-       size = 3, color = "grey33", alpha =1)  +#<<
+  stat_summary(fun = "mean", geom = "point", 
+       size = 3, color = "grey33", alpha =1)  +
   theme(legend.position = "none")
 ```
 :::
 ::: {.column width="60%"}
 Sums of Squares Error:
 
-$$SSE = \sum_{i = 1}^k\sum_{j = 1}^{n_i}(y_{ij}-\bar{y}_{i.})^2 = \sum_{i = 1}^k(n_i-1)s_{i.}^2$$
-where $s_{i.}$ is the standard deviation of the $i^{th}$ treatment
+$$SSE = \sum_{i = 1}^k\sum_{j = 1}^{n_i}(x_{ij}-\bar{x}_{i})^2 = \sum_{i = 1}^k(n_i-1)s_{i}^2$$
+where $s_{i}$ is the standard deviation of the $i^{th}$ group
 
-* This is the sum of the squared differences between each observed $y_{ij}$ value and its treatment mean $\bar{y}_{i.}$. 
+* This is the sum of the squared differences between each observed $x_{ij}$ value and its group mean $\bar{x}_{i}$. 
 
-* That is, it is the deviation of the $y_{ij}$'s from the predicted score by treatment.
+* That is, it is the deviation of the $x_{ij}$'s from the predicted score by group.
 
 * Also called the residual sums of squares, or $SS_{residual}.$
 
@@ -579,32 +648,44 @@ where $s_{i.}$ is the standard deviation of the $i^{th}$ treatment
 :::
 
 
+## Calculate Sums of Squares Error (within groups)
 
-
-
-## Calculate Sums of Squares Error (within treatments)
+$$SSE = \sum_{i = 1}^k\sum_{j = 1}^{n_i}(x_{ij}-\bar{x}_{i})^2 = \sum_{i = 1}^k(n_i-1)s_{i}^2$$
+where $s_{i}$ is the standard deviation of the $i^{th}$ group
 
 ::: columns
-::: {.column width="60%"}
-Sums of Squares Error:
+::: {.column width="50%"}
 
-$$SSE = \sum_{i = 1}^k\sum_{j = 1}^{n_i}(y_{ij}-\bar{y}_{i.})^2 = \sum_{i = 1}^k(n_i-1)s_{i.}^2$$
-where $s_{i.}$ is the standard deviation of the $i^{th}$ treatment
-
-<img src="img/SSE_visually_unnamed-chunk-17-1.png" width="40%" height="100%"> 
+```{r}
+#| fig.width: 7
+#| fig.height: 5.5
+#| echo: false
+ggplot(employ, aes(x = disability, y=score, 
+      fill = disability, color = disability)) +
+  geom_dotplot(binaxis = "y", alpha =.5) +
+  # geom_hline(aes(yintercept = mean(score)), 
+             # lty = "dashed") +
+  stat_summary(fun = "mean", geom = "point", 
+       size = 3, color = "grey33", alpha =1)  +
+  theme(legend.position = "none")
+```
 
 :::
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 
+Calculate sd's $s_i$ for each group:
 ```{r}
 sd_groups <- employ %>% 
   group_by(disability) %>% 
   summarise(SD = sd(score))
 sd_groups
+```
 
+Calculate $SSE$:
+```{r}
 (SSE <- sum(
-  (14-1)*sd_groups$SD^2))
+  (Ns$n-1)*sd_groups$SD^2))
 ```
 
 :::
@@ -612,17 +693,20 @@ sd_groups
 
 
 
-## Verify _SST = SSTr + SSE_
+## Verify _SST = SSG + SSE_ {.nostretch}
 
-__ANOVA__ compares the variability between treatments to the variability within treatments 
+__ANOVA__ compares the variability between groups to the variability within groups 
 
-![](/img_slides/anova_total_variability.png){fig-align="center"}
+![](/img_slides/anova_total_variability.png){fig-align="center" height=1.25in}
 
-$$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(y_{ij} -\bar{y}_{..})^2 \ \ = \ \ n_i\sum_{i = 1}^k(\bar{y}_{i.}-\bar{y}_{..})^2 \ \ + \ \ \sum_{i = 1}^k\sum_{j = 1}^{n_i}(y_{ij}-\bar{y}_{i.})^2$$
+$$\sum_{i = 1}^k \sum_{j = 1}^{n_i}(x_{ij} -\bar{x})^2 \ \ = \ \ n_i\sum_{i = 1}^k(\bar{x}_{i}-\bar{x})^2 \ \ 
++ \ \ \sum_{i = 1}^k\sum_{j = 1}^{n_i}(x_{ij}-\bar{x}_{i})^2$$
 
-$$(N-1)s^2_{..} \ \ = \ \sum_{i = 1}^k n_i(\bar{y}_{i.}-\bar{y}_{..})^2 \ \ + \ \ \sum_{i = 1}^k(n_i-1)s_{i.}^2$$
+$$(N-1)s^2 \ \ 
+= \ \sum_{i = 1}^k n_i(\bar{x}_{i}-\bar{x})^2 \ \ 
++ \ \ \sum_{i = 1}^k(n_i-1)s_{i}^2$$
 
-![](/img_slides/anova_SS_total.png){fig-align="center" width = "30%"}
+![](/img_slides/anova_SS_total.png){fig-align="center" height=1.25in}
 
 ::: columns
 ::: {.column width="50%"}
@@ -633,7 +717,7 @@ SST
 
 ::: {.column width="50%"}
 ```{r}
-SSTr + SSE
+SSG + SSE
 ```
 :::
 :::
@@ -641,50 +725,68 @@ SSTr + SSE
 
 ## ANOVA table
 
-<img src="img/SS_all3_vertical.png" width="14%" height="100%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img align=top src="img/anova_table.png" width="65%" height="100%">
-
+::: columns
+::: {.column width="15%"}
+![](/img_slides/SS_all3_vertical.png){fig-align="center"} 
+:::
+::: {.column width="85%"}
+<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+![](/img_slides/anova_table.png){fig-align="center"}
+:::
+:::
 
 
 ## Thinking about the F-statistic
 
 ::: columns
 ::: {.column width="50%"}
-__[If the treatments are actually different, then which of these is more accurate?]{style="color:green"}
+__[If the groups are actually different, then which of these is more accurate?]{style="color:green"}__
 
-1. The variability between treatments should be higher than the variability within treatments
-1. The variability within treatments should be higher than the variability between treatments
+1. The variability between groups should be higher than the variability within groups
+1. The variability within groups should be higher than the variability between groups
 
-![](/img_slides/hypothetical_disability_data_v2.png){fig-align="center"}
 :::
 
 ::: {.column width="50%"}
-__[If there really is a difference between the treatments, we would expect the F-statistic to be which of these: ]{style="color:green"}
+__[If there really is a difference between the groups, we would expect the F-statistic to be which of these: ]{style="color:green"}__
 
 1. Higher than we would observe by random chance
 1. Lower than we would observe by random chance
 
+:::
+:::
+
+
+::: columns
+::: {.column width="25%"}
+
 $$F = \frac{MSG}{MSE}$$
 
 :::
+::: {.column width="75%"}
+![](/img_slides/hypothetical_disability_data_v2.png){fig-align="center"}
 :::
-
-
-
+:::
 
 
 ## ANOVA in base R
 
 ```{r}
-empl_lm <- lm(score ~ disability, data = employ)
-tidy(anova(empl_lm))
+# Note that I'm saving the tidy anova table
+# Will be pulling p-value from this on future slide
+
+empl_lm <- lm(score ~ disability, data = employ) %>% 
+  anova() %>% 
+  tidy()
+
+empl_lm %>% gt()
 ```
 
 Hypotheses:
 
 \begin{align}
 H_0 &: \mu_{none} = \mu_{amputation} = \mu_{crutches} = \mu_{hearing} =  \mu_{wheelchair}\\
-\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j
+\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j \text{ for } i \neq j
 \end{align}
 
 Do we reject or fail to reject $H_0$?
@@ -695,48 +797,67 @@ Do we reject or fail to reject $H_0$?
 
 \begin{align}
 H_0 &: \mu_{none} = \mu_{amputation} = \mu_{crutches} = \mu_{hearing} =  \mu_{wheelchair}\\
-\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j
+\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j \text{ for } i \neq j
 \end{align}
 
 ::: columns
-::: {.column width="60%"}
+::: {.column width="50%"}
 ```{r}
-tidy(anova(empl_lm))  # cleaner anova output
-round(broom::tidy(anova(empl_lm))$p.value[1],2)
+empl_lm  # tidy anova output
+
+# Note that this is a vector:
+empl_lm$p.value
 ```
+
+Pull the p-value using base R:
+
+```{r}
+round(empl_lm$p.value[1],2)
+```
+
+Pull the p-value using tidyverse:
+
+```{r}
+empl_lm %>% 
+  filter(term == "disability") %>% 
+  pull(p.value) %>% 
+  round(2)
+```
+
 :::
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 * Use $\alpha$ = 0.05.
 * Do we reject or fail to reject $H_0$?
 
 __Conclusion statement__:
-* There is sufficient evidence that at least one of the disability groups has a mean employment score statistically different from the other groups. ( $p$-value = `r round(broom::tidy(anova(empl_lm))$p.value[1],2)`).
+
+* There is sufficient evidence that at least one of the disability groups has a mean employment score statistically different from the other groups. ( $p$-value = `r round(empl_lm$p.value[1],2)`).
 
 :::
 :::
 
 
-## Assumptions for ANOVA 
+## Conditions for ANOVA 
+
+[__IF__ ALL of the following conditions hold:]{style="color:green"}
+
+1. The null hypothesis is true
+2. Sample sizes in each group group are large (each $n \ge 30$) 
+    * OR the data are relatively normally distributed
 
 ::: columns
 ::: {.column width="50%"}
-[__IF__ the following conditions hold:]{style="color:green"}
-
-1. the null hypothesis is true
-1. sample sizes in each treatment group are large (each $n \ge 30$) 
-    * OR the data are relatively normally distributed
-1. variability is "similar" in all treatment groups:
-    * Is the within treatment group variability about the same for each treatment group?
-    * As a rough rule of thumb, this assumption is _violated if the standard deviation of one treatment group is more than double the standard deviation of another treatment group_
-
-[__THEN__ the sampling distribution of the   
-__F-statistic__ is an __F-distribution__]{style="color:green"}
+3. Variability is "similar" in all group groups:
+    * Is the within group variability about the same for each group?
+    * As a rough rule of thumb, this condition is _violated if the standard deviation of one group is more than double the standard deviation of another group_
 
 :::
 
-::: {.column width="50%"}
-Checking the __equal variance__ assumption:
+::: {.column width="2%"}
+:::
+::: {.column width="48%"}
+Checking the __equal variance__ condition:
 
 ```{r}
 sd_groups # previously defined
@@ -746,36 +867,49 @@ max(sd_groups$SD) / min(sd_groups$SD)
 :::
 :::
 
+[__THEN__ the sampling distribution of the __F-statistic__ is an __F-distribution__]{style="color:green"}
 
 
-## Testing variances (Assumption 3)
+## Testing variances (Condition 3)
 
 __Bartlett’s test for equal variances__
 
-* $H_0:$ variances of treatment levels are equal
-* $H_A:$ variances of treatment levels are NOT equal
+* $H_0:$ variances of group levels are equal
+* $H_A:$ variances of group levels are NOT equal
 
-_Note: $H_A$ is same as saying that at least one of the treatment levels has a different variance__
+_Note: $H_A$ is same as saying that at least one of the group levels has a different variance_
 
-* Caution: Bartlett's test assumes the data in each treatment group are normally distributed. Do not use if data do not satisfy the normality assumption. 
+:::{.callout-caution}
+* Bartlett's test assumes the data in each group are normally distributed. 
+* Do not use if data do not satisfy the normality condition. 
+:::
 
 ```{r}
 bartlett.test(score ~ disability, data = employ)
 ```
 
-* Levene's test for equality of variances is not as restrictive: see https://www.statology.org/levenes-test-r/ 
+:::{.callout-tip}
+Levene's test for equality of variances is not as restrictive: see <https://www.statology.org/levenes-test-r/> 
+:::
 
 
 ## The F-distribution
 
+* The F-distribution is skewed right.
+* The F-distribution has __[two different degrees of freedom]{style="color:green"}__:
+    * one for the [numerator]{style="color:green"} of the ratio [(k – 1)]{style="color:green"} and 
+    * one for the [denominator (N – k)]{style="color:green"}
+
+* [$p$-__value__]{style="color:purple"}  
+    * is always the __[upper tail]{style="color:purple"}__
+    * (the area as extreme or more extreme)
+
 ::: columns
 ::: {.column width="50%"}
-The F-distribution is skewed right:
-
 
 ```{r}
 #| fig.width: 5.0
-#| fig.height: 3.0
+#| fig.height: 3.75
 #| echo: false
 F_stat <- 2.8646
 ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
@@ -790,16 +924,13 @@ ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
 :::
 
 ::: {.column width="50%"}
-The __F-distribution__ has two degrees of freedom:
 
-* one for the numerator of the ratio (k – 1) and 
-* one for the denominator (N – k)
-
-$p$-__value__:  
-For F-statistics, the _p_-value (the area as extreme or more extreme) is always the __upper tail__.
 
 ```{r}
+empl_lm %>% gt()
+
 # p-value using F-distribution
+
 pf(2.8646, df1=5-1, df2=70-5, 
    lower.tail = FALSE)
 ```
@@ -809,11 +940,17 @@ pf(2.8646, df1=5-1, df2=70-5,
 
 
 
-## Which treatment groups are statistically different?
+## Which groups are statistically different?
 
 ::: columns
 ::: {.column width="40%"}
-* So far we've only determined that at least one of the treatment groups is different from the others, but we don't know which.
+
+<br>
+
+* So far we've only determined that _at least one of the groups is different_ from the others, 
+    * but we don't know which.
+
+<br>
 
 * What's your guess?
 
@@ -821,16 +958,16 @@ pf(2.8646, df1=5-1, df2=70-5,
 
 ::: {.column width="60%"}
 ```{r}
-#| fig.width: 5.0
-#| fig.height: 4.0
+#| fig.width: 8.0
+#| fig.height: 7.0
 #| echo: false
 ggplot(employ, aes(x = disability, y=score, 
       fill = disability, color = disability)) +
-  geom_dotplot(binaxis = "y", alpha =.5) +#<<
+  geom_dotplot(binaxis = "y", alpha =.5) +
   geom_hline(aes(yintercept = mean(score)), 
              lty = "dashed") +
-  stat_summary(fun = "mean", geom = "point", #<<
-       size = 3, color = "grey33", alpha =1)  +#<<
+  stat_summary(fun = "mean", geom = "point", 
+       size = 3, color = "grey33", alpha =1)  +
   theme(legend.position = "none")
 ```
 
@@ -845,17 +982,23 @@ _determining which groups are statistically different_
 
 ## Post-hoc testing: pairwise t-tests
 
+::: columns
 ::: {.column width="40%"}
-* In post-hoc testing we run all the pairwise t-tests comparing the means from each pair of groups.
+* In post-hoc testing we [__run all the pairwise t-tests__]{style="color:green"} comparing the means from each pair of groups.
 * With 5 groups, this involves doing ${5 \choose 2} = \frac{5!}{2!3!} = \frac{5\cdot 4}{2}= 10$ different pairwise tests.
 
 __Problem:__
 
-Although test has an $\alpha$ chance of a Type I error (finding a difference between a pair that aren't different), the overall Type I error rate will be much higher when running many tests simultaneously.
+* Although the ANOVA test has an $\alpha$ chance of a Type I error (finding a difference between a pair that aren't different), 
+* the [overall Type I error rate will be much higher when running many tests simultaneously]{style="color:darkorange"}.
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="2%"}
+:::
+::: {.column width="58%"}
+::: {style="font-size: 85%;"}
+
 \begin{align}
 P(\text{making an error}) = & \alpha\\
 P(\text{not making an error}) = & 1-\alpha\\
@@ -863,8 +1006,10 @@ P(\text{not making an error in m tests}) = & (1-\alpha)^m\\
 P(\text{making at least 1 error in m tests}) = & 1-(1-\alpha)^m
 \end{align}
 
+:::
+
 ```{r}
-#| fig.height: 4.0
+#| fig.height: 6.0
 #| echo: false
 Prob_error_mtests <- tibble(
   m = 1:100,
@@ -881,7 +1026,6 @@ ggplot(Prob_error_mtests, aes(x=m, y = P_error)) +
 
 :::
 :::
-
 
 
 ## The Bonferroni Correction (1/2)
@@ -902,13 +1046,13 @@ The Bonferroni correction is popular since it's very easy to implement.
 :::
 
 ::: {.column width="50%"}
-* The __plot below__ shows the __[likelihood of making at least one Type I error]{style="color:green"} depending on how may tests are done.
+* The __plot below__ shows the __[likelihood of making at least one Type I error]{style="color:green"}__ depending on how may tests are done.
 * Notice the likelihood decreases very quickly
     * Unfortunately the likelihood of a Type II error is increasing as well
     * It becomes "harder" and harder to reject $H_0$ if doing many tests.
 
 ```{r}
-#| fig.height: 3.3
+#| fig.height: 5
 #| echo: false
 ggplot(Prob_error_mtests, aes(x=m, y = P_err_Bonf)) +
   geom_point() +
@@ -932,8 +1076,6 @@ broom::tidy(anova(empl_lm))
 
 
 
-
-
 ## The Bonferroni Correction (2/2)
 
 ::: columns
@@ -948,70 +1090,43 @@ pairwise.t.test(employ$score,
 :::
 
 ::: {.column width="50%"}
-Pairwise t-tests __[with Bonferroni _p_-value adjustments]{style="color:green"}:
+Pairwise t-tests __[with Bonferroni _p_-value adjustments]{style="color:green"}__:
 ```{r}
 pairwise.t.test(employ$score,  
                 employ$disability, 
-                p.adj="bonferroni")  #<<
+                p.adj="bonferroni")  
 ```
 
-Since there were 10 tests, all the _p_-values were multiplied by 10.
+* Since there were 10 tests, all the _p_-values were multiplied by 10.
+* Are there any significant pairwise differences?
 :::
 :::
 
 
 
+## Tukey's Honest Significance Test (HSD)
 
-
-## Tukey's Honest Significance Test (HSD) (1/3)
-
-::: columns
-::: {.column width="40%"}
 * Tukey's Honest Significance Test (HSD) controls the "family-wise probability" of making a Type I error using a much less conservative method than Bonferroni
-* __It is specific to ANOVA__
-* In addition to adjusted _p_-values, it also calculates Tukey adjusted CI's 
-
-The function `TukeyHSD()` creates a set of __confidence intervals__ on the differences between means with the specified __family-wise probability of coverage__.
-:::
-
-::: {.column width="60%"}
-```{r}
-# need to run the model as an `aov` instead of `lm`
-empl_aov <- aov(score ~ disability, data = employ) #<<
-anova(empl_aov)  #<<
-```
-
-:::
-:::
-
-
-
-
-## Tukey's Honest Significance Test (HSD) (2/3)
-
-Both Tukey HSD p-values and CI's for all pairwise differences.
-```{r}
-TukeyHSD(x=empl_aov, conf.level = 0.95) #<<
-```
-
-
-
-
-## Tukey's Honest Significance Test (HSD) (3/3)
+    * __It is specific to ANOVA__
+* In addition to adjusted _p_-values, it also calculates Tukey adjusted CI's for all pairwise differences
+* The function `TukeyHSD()` creates a __set of confidence intervals__ of the differences between means with the specified __family-wise probability of coverage__.
 
 ::: columns
 ::: {.column width="60%"}
 ```{r}
-#| fig.height: 5.0
-plot(TukeyHSD(x=empl_aov, conf.level = 0.95))
+# need to run the model using `aov` instead of `lm`
+empl_aov <- aov(score ~ disability, data = employ) 
+
+TukeyHSD(x=empl_aov, conf.level = 0.95) 
 ```
+
 :::
-
 ::: {.column width="40%"}
-* Visualization of pairwise CI's
-
-* __[Which pair(s) of disabilities are significant after Tukey's adjustments?]{style="color:green"}
-
+```{r}
+#| fig.height: 8
+plot(TukeyHSD(x=empl_aov, 
+        conf.level = 0.95))
+```
 :::
 :::
 
@@ -1020,9 +1135,10 @@ plot(TukeyHSD(x=empl_aov, conf.level = 0.95))
 ## There are many more multiple testing adjustment procedures
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="49%"}
 * Bonferroni is popular because it's so easy to apply
 * Tukey's HSD is usually used for ANOVA
+* Code below used Holm's adjustment
 
 ```{r}
 # default is Holm's adjustments
@@ -1031,12 +1147,16 @@ pairwise.t.test(employ$score,
 ```
 :::
 
-::: {.column width="50%"}
-Pairwise t-tests with __false discovery rate (fdr)__ _p_-value adjustments (popular in omics):
+::: {.column width="2%"}
+:::
+
+::: {.column width="49%"}
+* __False discovery rate (fdr)__ _p_-value adjustments are popular in omics, or whenever there are _many_ tests being run:
+
 ```{r}
 pairwise.t.test(employ$score, 
                 employ$disability, 
-                p.adj="fdr") #<<
+                p.adj="fdr") 
 ```
 
 :::
@@ -1047,10 +1167,9 @@ pairwise.t.test(employ$score,
 
 _post-hoc testing vs. testing many outcomes_
 
-
 ![](/img_slides/xkcd_significant2.png){fig-align="center"}
 
-https://xkcd.com/882/
+<https://xkcd.com/882/>
 
 
 
@@ -1060,15 +1179,20 @@ https://xkcd.com/882/
 ::: {.column width="40%"}
 * The multiple testing issue is not unique to ANOVA post-hoc testing.
 * It is also a concern when running separate tests for many related outcomes.
-* __[Beware of _p_-hacking!]{style="color:darkorange"}
+* __[Beware of _p_-hacking!]{style="color:darkorange"}__
 
 __Problem:__
 
-Although test has an $\alpha$ chance of a Type I error (finding a difference between a pair that aren't different), the overall Type I error rate will be much higher when running many tests simultaneously.
+* Although one test has an $\alpha$ chance of a Type I error (finding a difference between a pair that aren't different), 
+* the [__overall Type I error rate will be much higher when running many tests simultaneously__]{style="color:darkorange"}.
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="2%"}
+:::
+::: {.column width="58%"}
+::: {style="font-size: 85%;"}
+
 \begin{align}
 P(\text{making an error}) = & \alpha\\
 P(\text{not making an error}) = & 1-\alpha\\
@@ -1076,8 +1200,10 @@ P(\text{not making an error in m tests}) = & (1-\alpha)^m\\
 P(\text{making at least 1 error in m tests}) = & 1-(1-\alpha)^m
 \end{align}
 
+:::
+
 ```{r}
-#| fig.height: 4.0
+#| fig.height: 6.0
 #| echo: false
 Prob_error_mtests <- tibble(
   m = 1:100,
@@ -1095,7 +1221,61 @@ ggplot(Prob_error_mtests, aes(x=m, y = P_error)) +
 :::
 :::
 
+## ANOVA Summary
 
+::: {style="font-size: 90%;"}
+
+\begin{align}
+H_0 &: \mu_1 = \mu_2 = ... = \mu_k\\
+\text{vs. } H_A&: \text{At least one pair } \mu_i \neq \mu_j \text{ for } i \neq j
+\end{align}
+
+:::
+
+ANOVA table in R:
+
+::: {style="font-size: 90%;"}
+```{r}
+lm(score ~ disability, data = employ) %>% anova()
+```
+:::
+
+::: columns
+::: {.column width="50%"}
+
+ANOVA table
+
+![](/img_slides/anova_table.png){fig-align="center"}
+
+Post-hoc testing
+:::
+
+::: {.column width="50%"}
+F-distribution & p-value
+
+```{r}
+#| fig.width: 5
+#| fig.height: 3
+#| echo: false
+F_stat <- 2.8646
+
+ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
+  geom_vline(xintercept = F_stat, color = "red") +
+  # fun = df is specifying (d)ensity of (f) distribution
+  stat_function(fun = df, args = list(df1=4, df2=65), color = "cornflowerblue") +
+  geom_area(stat = "function", fun = df, args = list(df1=4, df2=65), fill = "red", alpha =0.3, xlim = c(F_stat, 5)) +
+  annotate("text", x = 3.5, y = .1, label = "p-value", size=6) 
+```
+:::
+:::
+
+
+## What's next?
+
+<br>
+<br>
+
+![](/img_slides/flowchart_only_continuous.jpg){fig-align="center"}
 
 
 
