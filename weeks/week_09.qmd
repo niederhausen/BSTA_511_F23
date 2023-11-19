@@ -29,7 +29,6 @@ _Note: the title slide of the recording mistakenly shows Day 17 instead of Day 1
 
 * [html](../slides/Day14_bsta511.qmd)
 * [pdf](https://drive.google.com/file/d/1KQfFdPsd-Gpur7b8gtdAlc6vu0IF0jMv/view?usp=sharing)
-
 * Coming soon! Slides with [notes]()
 * [webpage](../slides_md/Day14_bsta511_md.qmd)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day14_bsta511_code.qmd), [html](../slides_code/Day14_bsta511_code.qmd)
