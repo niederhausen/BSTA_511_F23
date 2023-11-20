@@ -47,8 +47,8 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 
 * Slide 12: "Hypothetical examples" question
 * Slide 29 questions
-* Questions from [HW 8](../homework/HW_7_F23_bsta511.qmd)
-    * Book # 5.46, 5.48, 5.44, R1
+* Questions from [HW 8](../homework/HW_8_F23_bsta511.qmd)
+    * Book # 5.46, 5.48, R1, 5.44
 
 
 ## Day 15 - coming soon!
