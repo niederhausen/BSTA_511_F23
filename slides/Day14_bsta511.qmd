@@ -851,7 +851,7 @@ __Conclusion statement__:
 
 1. The null hypothesis is true
 2. Sample sizes in each group group are large (each $n \ge 30$) 
-    * OR the data are relatively normally distributed
+    * OR the data are relatively normally distributed in each group
 
 ::: columns
 ::: {.column width="50%"}
@@ -881,8 +881,8 @@ max(sd_groups$SD) / min(sd_groups$SD)
 
 __Bartlett’s test for equal variances__
 
-* $H_0:$ variances of group levels are equal
-* $H_A:$ variances of group levels are NOT equal
+* $H_0:$ population variances of group levels are equal
+* $H_A:$ population variances of group levels are NOT equal
 
 _Note: $H_A$ is same as saying that at least one of the group levels has a different variance_
 
@@ -918,7 +918,7 @@ Levene's test for equality of variances is not as restrictive: see <https://www.
 #| fig.width: 5.0
 #| fig.height: 3.75
 #| echo: false
-F_stat <- 2.8646
+F_stat <- 2.86158
 ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
   geom_vline(xintercept = F_stat, color = "red") +
   # fun = df is specifying (d)ensity of (f) distribution
@@ -938,7 +938,7 @@ empl_lm %>% gt()
 
 # p-value using F-distribution
 
-pf(2.8646, df1=5-1, df2=70-5, 
+pf(2.86158, df1=5-1, df2=70-5, 
    lower.tail = FALSE)
 ```
 
@@ -1264,7 +1264,7 @@ F-distribution & p-value
 #| fig.width: 5
 #| fig.height: 3
 #| echo: false
-F_stat <- 2.8646
+F_stat <- 2.86158
 
 ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
   geom_vline(xintercept = F_stat, color = "red") +

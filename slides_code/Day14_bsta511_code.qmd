@@ -581,7 +581,7 @@ __Conclusion statement__:
 
 1. The null hypothesis is true
 2. Sample sizes in each group group are large (each $n \ge 30$) 
-    * OR the data are relatively normally distributed
+    * OR the data are relatively normally distributed in each group
 3. Variability is "similar" in all group groups:
     * Is the within group variability about the same for each group?
     * As a rough rule of thumb, this condition is _violated if the standard deviation of one group is more than double the standard deviation of another group_
@@ -603,8 +603,8 @@ max(sd_groups$SD) / min(sd_groups$SD)
 
 __Bartlett’s test for equal variances__
 
-* $H_0:$ variances of group levels are equal
-* $H_A:$ variances of group levels are NOT equal
+* $H_0:$ population variances of group levels are equal
+* $H_A:$ population variances of group levels are NOT equal
 
 _Note: $H_A$ is same as saying that at least one of the group levels has a different variance_
 
@@ -634,7 +634,7 @@ Levene's test for equality of variances is not as restrictive: see <https://www.
     * (the area as extreme or more extreme)
 
 ```{r}
-F_stat <- 2.8646
+F_stat <- 2.86158
 
 ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
   geom_vline(xintercept = F_stat, color = "red") +
@@ -651,7 +651,7 @@ empl_lm %>% gt()
 
 # p-value using F-distribution
 
-pf(2.8646, df1=5-1, df2=70-5, 
+pf(2.86158, df1=5-1, df2=70-5, 
    lower.tail = FALSE)
 ```
 
@@ -882,7 +882,7 @@ lm(score ~ disability, data = employ) %>% anova()
 #| fig.width: 5
 #| fig.height: 3
 #| echo: false
-F_stat <- 2.8646
+F_stat <- 2.86158
 
 ggplot(data.frame(x = c(0, 6)), aes(x = x)) + # set x-axis bounds from 0 to 6
   geom_vline(xintercept = F_stat, color = "red") +
