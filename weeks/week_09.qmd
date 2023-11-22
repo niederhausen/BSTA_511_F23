@@ -12,6 +12,10 @@ editor_options:
   chunk_output_type: console
 ---
 
+## Exam retakes
+
+* Retakes for Exams 1 & 2 will be in class on Wed, Nov 29th
+* Retake for Exam 3 will be on Fri, Dec 12th; time & place TBD
 
 ## Day 14 
 
@@ -20,7 +24,7 @@ editor_options:
 * Section 5.5
 
 :::{.callout-note}
-I moved the Kruskal-Wallis test to Day 15.
+I moved the Kruskal-Wallis test to Day 17, when we cover the other non-parametric tests.
 :::
 
 ### Slides
@@ -51,7 +55,24 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
     * Book # 5.46, 5.48, R1, 5.44
 
 
-## Day 15 - coming soon!
+## Day 15 
+
+* Simple Linear Regression (part 1)
+* Sections 6.1, 6.2
+
+
+### Slides
+
+* [pdf](https://drive.google.com/file/d/1KdvWhhX4SkbPGFi_JLo6FluDo-Oegnlg/view?usp=sharing)
+* Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day15_bsta511_code.qmd), [html](../slides_code/Day15_bsta511_code.qmd)
+
+<!-- * Slides with [notes](https://drive.google.com/file/d/1KZ2bLZz5CPPR5VV2nUvAFR6W7ZJDAuTw/view?usp=sharing) -->
+
+### Datasets
+
+All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F23/tree/main/data)
+
+* [DisabilityEmployment.txt](/data/DisabilityEmployment.txt)
 
 
 ## Homework
