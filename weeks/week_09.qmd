@@ -15,6 +15,7 @@ editor_options:
 ## Exam retakes
 
 * Retakes for Exams 1 & 2 will be in class on Wed, Nov 29th
+    * [Exam question topics for retakes](https://sakai.ohsu.edu/access/content/group/BSTA-511-1-AA-F23/Exam_samples/Exam_question_topics_BSTA511_F23.pdf)
 * Retake for Exam 3 will be on Fri, Dec 12th; time & place TBD
 
 ## Day 14 
