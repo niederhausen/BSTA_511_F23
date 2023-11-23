@@ -1,5 +1,5 @@
 ---
-title: "DRAFT HW 8: BSTA 511-611 F23"
+title: "HW 8: BSTA 511-611 F23"
 author: "Your name here - update this!!!!"
 date: "Due 11/27/23"
 format: 
