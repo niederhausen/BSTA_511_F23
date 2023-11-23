@@ -64,9 +64,10 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 ### Slides
 
 * [pdf](https://drive.google.com/file/d/1KdvWhhX4SkbPGFi_JLo6FluDo-Oegnlg/view?usp=sharing)
+* Slides with [notes](https://drive.google.com/file/d/1raQjJSDPNjOgy9BTQsA4gUnxRqFgl35z/view?usp=sharing)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day15_bsta511_code.qmd), [html](../slides_code/Day15_bsta511_code.qmd)
 
-<!-- * Slides with [notes](https://drive.google.com/file/d/1KZ2bLZz5CPPR5VV2nUvAFR6W7ZJDAuTw/view?usp=sharing) -->
+
 
 ### Datasets
 
