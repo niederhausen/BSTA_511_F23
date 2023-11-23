@@ -11903,8 +11903,8 @@
     "objectID": "homework/HW_8_F23_bsta511.html#load-all-the-packages-you-need-below-here.",
     "href": "homework/HW_8_F23_bsta511.html#load-all-the-packages-you-need-below-here.",
     "title": "DRAFT HW 8: BSTA 511-611 F23",
-    "section": "2.1 Load all the packages you need below here.",
-    "text": "2.1 Load all the packages you need below here."
+    "section": "1.1 Load all the packages you need below here.",
+    "text": "1.1 Load all the packages you need below here."
   },
   {
     "objectID": "homework/HW_8_F23_bsta511.html#r1-palmer-penguins",
@@ -12094,5 +12094,61 @@
     "title": "Week 9",
     "section": "Day 15",
     "text": "Day 15\n\nSimple Linear Regression (part 1)\nSections 6.1, 6.2\n\n\nSlides\n\npdf\nSlides with notes\nCode file: qmd, html\n\n\n\nDatasets\nAll datasets can be found on GitHub\n\nlifeexp_femlit_water_2011.csv"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#work-hours-and-education",
+    "href": "homework/HW_8_F23_bsta511.html#work-hours-and-education",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "5.44 Work hours and education",
+    "text": "5.44 Work hours and education"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#child-care-hours",
+    "href": "homework/HW_8_F23_bsta511.html#child-care-hours",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "5.46 Child care hours",
+    "text": "5.46 Child care hours"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#truefalse-anova-part-ii",
+    "href": "homework/HW_8_F23_bsta511.html#truefalse-anova-part-ii",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "5.48 True/False: ANOVA, Part II",
+    "text": "5.48 True/False: ANOVA, Part II"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#identify-relationships-part-ii",
+    "href": "homework/HW_8_F23_bsta511.html#identify-relationships-part-ii",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "6.2 Identify relationships, Part II",
+    "text": "6.2 Identify relationships, Part II"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#over-under-part-ii",
+    "href": "homework/HW_8_F23_bsta511.html#over-under-part-ii",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "6.6 Over-under, Part II",
+    "text": "6.6 Over-under, Part II"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#guppies-part-i",
+    "href": "homework/HW_8_F23_bsta511.html#guppies-part-i",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "6.10 Guppies, Part I",
+    "text": "6.10 Guppies, Part I"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#r1-palmer-penguins-anova",
+    "href": "homework/HW_8_F23_bsta511.html#r1-palmer-penguins-anova",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "1.2 R1: Palmer Penguins ANOVA",
+    "text": "1.2 R1: Palmer Penguins ANOVA\n\nUse the penguins data from the palmerpenguins package.\n\nDon’t forget to first install the palmerpenguins package\n\nYou can learn more about the Palmer penguins data at https://allisonhorst.github.io/palmerpenguins/\nWe will test whether there are differences in penguins’ mean bill depths when comparing different species.\n\n\nlibrary(palmerpenguins)\ndata(penguins)\n\n\n1.2.1 Dotplots\nMake a dotplot of the penguins’ bill depths stratified by species type. Include points for the mean of each species type as well as a horizontal dashed line for the overall mean. See example from class for the plot I’m describing.\n\n\n1.2.2 Which groups significantly different?\nBased on the figure, which pairs of species look like they have significantly different mean bill depths?\n\n\n1.2.3 Hypotheses in words\nWrite out in words the null and alternative hypotheses.\n\n\n1.2.4 Hypotheses in symbols\nWrite out in symbols the null and alternative hypotheses.\n\n\n1.2.5 Run ANOVA in R\nUsing R, run the hypothesis test and display the output.\n\n\n1.2.6 SST\nUsing the values from the ANOVA table, calculate the value of the SST (total sum of squares).\n\n\n1.2.7 MSG & MSE\nUsing the values from the ANOVA table, verify (calculate) the values of the MSG (mean square groups) and MSE (mean square error).\n\n\n1.2.8 F statistic\nUsing the values from the ANOVA table, verify (calculate) the value of the F statistic.\n\n\n1.2.9 p-value\nUsing the values from the ANOVA table, verify (calculate) the p-value.\n\n\n1.2.10 Decision?\nBased on the p-value, will we reject or fail to reject the null hypothesis? Why?\n\n\n1.2.11 Conclusion\nWrite a conclusion to the hypothesis test in the context of the problem.\n\n\n1.2.12 Technical conditions\nInvestigate whether the technical conditions for using an ANOVA been satisfied. \n\n\n1.2.13 Post-hoc pairwise t-tests: no correction\nRun post-hoc pairwise t-tests using NO p-value correction. Which pairs of species have significantly different bill depths?\n\n\n1.2.14 Post-hoc pairwise t-tests: Bonferroni correction\nRun post-hoc pairwise t-tests using a Bonferroni correction. Which pairs of species have significantly different bill depths?\n\n\n1.2.15 Hypothetical Bonferroni correction\nIf hypothetically the p-value comparing the mean bill depths of the Adelie and Chinstrap species were 0.03 without any p-value adjustment, what would the p-value be after running the post-hoc pairwise t-tests using a Bonferroni correction?\n\n\n1.2.16 Post-hoc pairwise t-tests: Tukey’s Honest Significance Test correction\nRun post-hoc pairwise t-tests using Tukey’s Honest Significance Test correction. Which pairs of species have significantly different bill depths?\n\n\n1.2.17 Tukey confidence intervals\nMake a plot showing the 95% family-wise Tukey confidence intervals. How does this plot visually confirm the which pairs of species have significantly different bill depths?"
+  },
+  {
+    "objectID": "homework/HW_8_F23_bsta511.html#r2-palmer-penguins-slr",
+    "href": "homework/HW_8_F23_bsta511.html#r2-palmer-penguins-slr",
+    "title": "DRAFT HW 8: BSTA 511-611 F23",
+    "section": "1.3 R2: Palmer Penguins SLR",
+    "text": "1.3 R2: Palmer Penguins SLR\n\n\n\n\n\n\nImportant\n\n\n\nBelow I frequently use the terminology variable1 vs. variable2. When we write this, the first variable is \\(y\\) (vertical axis) and the second is \\(x\\) (horizontal axis). Thus it’s always \\(y\\) vs. \\(x\\) (NOT \\(x\\) vs. \\(y\\)).\n\n\n\n1.3.1 Scatterplots\n\nFor each of the following pairs of variables, make a scatterplot showing the best fit line and describe the relationship between the variables.\nIn particular address\n\nwhether the association is linear,\nhow strong it is (based purely on the plot), and\nwhat direction (positive, negative, or neither).\n\n\n\nbody mass vs. flipper length\nbill depth vs. flipper length\nbill depth vs. bill length\n\n\n\n1.3.2 Correlations\n\nFor each of the following pairs of variables, find the correlation coefficient \\(r\\).\n\n\nbody mass vs. flipper length\nbill depth vs. flipper length\nbill depth vs. bill length\n\n\n\n1.3.3 Compare associations\nWhich pair of variables has the strongest association? Which has the weakest? Explain how you determined this.\n\n\n1.3.4 Body mass vs. flipper length SLR\nRun the simple linear regression model for body mass vs. flipper length, and display the regression table output.\n\n\n1.3.5 Regression equation\nWrite out the regression equation for this model, using the variable names instead of the generic \\(x\\) and \\(y\\), and inserting the regression coefficient values.\n\n\n1.3.6 \\(b_1\\) calculation\nVery that the formula \\(b_1 = r \\cdot \\frac{s_y}{s_x}\\) holds for this example using the values of the statistics.\n\n\n1.3.7 Interpret intercept\nWrite a sentence interpreting the intercept for this example. Is it meaningful in this example?\n\n\n1.3.8 Interpret slope\nWrite a sentence interpreting the slope for this example.\n\n\n1.3.9 Prediction\nWhat is the expected body mass of a penguin with flipper length 210 mm based on the model?"
   }
 ]

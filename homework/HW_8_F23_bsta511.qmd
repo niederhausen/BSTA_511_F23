@@ -46,19 +46,23 @@ It is a good idea to try rendering your document from time to time as you go alo
 # Book exercises {.unnumbered}
 
 
-## 5.44 {.unnumbered}
+## 5.44 Work hours and education {.unnumbered}
 
 
-## 5.46 {.unnumbered}
+## 5.46 Child care hours {.unnumbered}
 
 
-## 5.48 {.unnumbered}
+## 5.48 True/False: ANOVA, Part II {.unnumbered}
 
 
+## 6.2 Identify relationships, Part II {.unnumbered}
 
-# PSS
 
-## PSS1:  
+## 6.6 Over-under, Part II  {.unnumbered}
+
+
+## 6.10 Guppies, Part I {.unnumbered}
+
 
 
 
@@ -71,7 +75,7 @@ It is a good idea to try rendering your document from time to time as you go alo
 ```
 
 
-## R1: Palmer Penguins
+## R1: Palmer Penguins ANOVA
 
 
 * Use the `penguins` data from the `palmerpenguins` package.
@@ -187,6 +191,84 @@ __Run post-hoc pairwise t-tests using Tukey's Honest Significance Test correctio
 ### Tukey confidence intervals
 
 __Make a plot showing the 95% family-wise Tukey confidence intervals. How does this plot visually confirm the which pairs of species have significantly different bill depths?__
+
+
+## R2: Palmer Penguins SLR
+
+
+:::{.callout-important}
+Below I frequently use the terminology _variable1 vs. variable2_. When we write this, the first variable is $y$ (vertical axis) and the second is $x$ (horizontal axis). Thus it's always $y$ vs. $x$ (NOT $x$ vs. $y$). 
+:::
+
+
+### Scatterplots
+
+* __For each of the following pairs of variables, make a scatterplot showing the best fit line and describe the relationship between the variables.__
+* In particular address 
+  * whether the association is linear, 
+  * how strong it is (based purely on the plot), and 
+  * what direction (positive, negative, or neither).
+
+1. __body mass vs. flipper length__
+
+
+
+2. __bill depth vs. flipper length__
+
+
+
+3. __bill depth vs. bill length__
+
+
+
+### Correlations
+
+* __For each of the following pairs of variables, find the correlation coefficient $r$.__
+
+1. __body mass vs. flipper length__
+
+
+
+2. __bill depth vs. flipper length__
+
+
+3. __bill depth vs. bill length__
+
+
+### Compare associations
+
+ __Which pair of variables has the strongest association? Which has the weakest? Explain how you determined this.__
+
+
+### Body mass vs. flipper length SLR
+
+__Run the simple linear regression model for body mass vs. flipper length, and display the regression table output.__
+
+
+### Regression equation
+
+__Write out the regression equation for this model, using the variable names instead of the generic $x$ and $y$, and inserting the regression coefficient values.__
+
+### $b_1$ calculation
+
+__Very that the formula__ $b_1 = r \cdot \frac{s_y}{s_x}$ __holds for this example using the values of the statistics.__
+
+
+### Interpret intercept 
+
+__Write a sentence interpreting the intercept for this example. Is it meaningful in this example?__ 
+
+
+### Interpret slope
+
+__Write a sentence interpreting the slope for this example.__ 
+
+
+### Prediction
+
+__What is the expected body mass of a penguin with flipper length 210 mm based on the model?__ 
+
+
 
 
 
