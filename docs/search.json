@@ -11,7 +11,7 @@
     "href": "weeks.html",
     "title": "Weekly Pages",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n9/25/23\n\n\nWeek 1\n\n\nIntro to R & RStudio\n\n\n\n\n10/2/23\n\n\nWeek 2\n\n\nData collection & EDA\n\n\n\n\n10/9/23\n\n\nWeek 3\n\n\nProbability\n\n\n\n\n10/16/23\n\n\nWeek 4\n\n\nRandom variables and probability distributions\n\n\n\n\n10/23/23\n\n\nWeek 5\n\n\nVariability in estimates and Exam 1\n\n\n\n\n10/30/23\n\n\nWeek 6\n\n\nConfidence intervals and hypothesis tests for one mean\n\n\n\n\n11/6/23\n\n\nWeek 7\n\n\nInference for difference in means, one proportion, and difference in proportions, and power\n\n\n\n\n11/13/23\n\n\nWeek 8\n\n\nChi-squared tests and Exam 2\n\n\n\n\n11/20/23\n\n\nWeek 9\n\n\nANOVA and Simple Linear Regression\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n9/25/23\n\n\nWeek 1\n\n\nIntro to R & RStudio\n\n\n\n\n10/2/23\n\n\nWeek 2\n\n\nData collection & EDA\n\n\n\n\n10/9/23\n\n\nWeek 3\n\n\nProbability\n\n\n\n\n10/16/23\n\n\nWeek 4\n\n\nRandom variables and probability distributions\n\n\n\n\n10/23/23\n\n\nWeek 5\n\n\nVariability in estimates and Exam 1\n\n\n\n\n10/30/23\n\n\nWeek 6\n\n\nConfidence intervals and hypothesis tests for one mean\n\n\n\n\n11/6/23\n\n\nWeek 7\n\n\nInference for difference in means, one proportion, and difference in proportions, and power\n\n\n\n\n11/13/23\n\n\nWeek 8\n\n\nChi-squared tests and Exam 2\n\n\n\n\n11/20/23\n\n\nWeek 9\n\n\nANOVA and Simple Linear Regression\n\n\n\n\n11/27/23\n\n\nWeek 10\n\n\nSimple Linear Regression and Nonparametric tests\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "weeks/week_01.html",
@@ -340,7 +340,7 @@
     "href": "class_slides.html",
     "title": "Class Slides",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n10/9/23\n\n\nDay 4: Probability Part 1\n\n\nWeek 3\n\n\n\n\n10/11/23\n\n\nDay 5: Probability Part 2 - Bayes’ Rule\n\n\nWeek 3\n\n\n\n\n10/16/23\n\n\nDay 6: Random variables and Binomial distribution\n\n\nWeek 4\n\n\n\n\n10/18/23\n\n\nDay 7: Normal and Poisson distributions\n\n\nWeek 4\n\n\n\n\n10/23/23\n\n\nDay 8: Variability in estimates\n\n\nWeek 5\n\n\n\n\n10/30/23\n\n\nDay 9: Confidence intervals (4.2)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 1: Hypothesis testing for mean from one-sample (Sections 4.3, 5.1)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)\n\n\nWeek 6\n\n\n\n\n11/6/23\n\n\nDay 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)\n\n\nWeek 7\n\n\n\n\n11/8/23\n\n\nDay 12: Inference for a single proportion or difference of two (independent) proportions (Sections 8.1-8.2)\n\n\nWeek 7\n\n\n\n\n11/13/23\n\n\nDay 13: Chi-squared tests (Sections 8.3-8.4)\n\n\nWeek 8\n\n\n\n\n11/20/23\n\n\nDay 14: Comparing Means with ANOVA (Section 5.5)\n\n\nWeek 9\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nCategories\n\n\n\n\n\n\n9/27/23\n\n\nDay 1: Intro to R & Rstudio\n\n\nWeek 1\n\n\n\n\n10/2/23\n\n\nDay 2: Data collection & numerical summaries\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization - Part 2\n\n\nWeek 2\n\n\n\n\n10/4/23\n\n\nDay 3: Data visualization\n\n\nWeek 2\n\n\n\n\n10/9/23\n\n\nDay 4: Probability Part 1\n\n\nWeek 3\n\n\n\n\n10/11/23\n\n\nDay 5: Probability Part 2 - Bayes’ Rule\n\n\nWeek 3\n\n\n\n\n10/16/23\n\n\nDay 6: Random variables and Binomial distribution\n\n\nWeek 4\n\n\n\n\n10/18/23\n\n\nDay 7: Normal and Poisson distributions\n\n\nWeek 4\n\n\n\n\n10/23/23\n\n\nDay 8: Variability in estimates\n\n\nWeek 5\n\n\n\n\n10/30/23\n\n\nDay 9: Confidence intervals (4.2)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 1: Hypothesis testing for mean from one-sample (Sections 4.3, 5.1)\n\n\nWeek 6\n\n\n\n\n11/1/23\n\n\nDay 10 Part 2: Inference for mean difference from two-sample dependent/paired data (Section 5.2)\n\n\nWeek 6\n\n\n\n\n11/6/23\n\n\nDay 11: Inference for difference in means from two independent samples and Power (Sections 5.3, 5.4)\n\n\nWeek 7\n\n\n\n\n11/8/23\n\n\nDay 12: Inference for a single proportion or difference of two (independent) proportions (Sections 8.1-8.2)\n\n\nWeek 7\n\n\n\n\n11/13/23\n\n\nDay 13: Chi-squared tests (Sections 8.3-8.4)\n\n\nWeek 8\n\n\n\n\n11/20/23\n\n\nDay 14: Comparing Means with ANOVA (Section 5.5)\n\n\nWeek 9\n\n\n\n\n11/22/23\n\n\nDay 15: Simple Linear Regression (Sections 6.1-6.2)\n\n\nWeek 9\n\n\n\n\n11/27/23\n\n\nDRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)\n\n\nWeek 10\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides_md/Day01_bsta511_md.html",
@@ -1131,7 +1131,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\nHW 2: BSTA 511-611 F23\n\n\n\n\n10/21/23\n\n\nHW 3: BSTA 511-611 F23\n\n\n\n\n10/28/23\n\n\nHW 4: BSTA 511-611 F23\n\n\n\n\n11/4/23\n\n\nHW 5: BSTA 511-611 F23\n\n\n\n\n11/11/23\n\n\nHW 6: BSTA 511-611 F23\n\n\n\n\n11/18/23\n\n\nHW 7: BSTA 511-611 F23\n\n\n\n\n11/27/23\n\n\nHW 8: BSTA 511-611 F23\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\nHW 2: BSTA 511-611 F23\n\n\n\n\n10/21/23\n\n\nHW 3: BSTA 511-611 F23\n\n\n\n\n10/28/23\n\n\nHW 4: BSTA 511-611 F23\n\n\n\n\n11/4/23\n\n\nHW 5: BSTA 511-611 F23\n\n\n\n\n11/11/23\n\n\nHW 6: BSTA 511-611 F23\n\n\n\n\n11/18/23\n\n\nHW 7: BSTA 511-611 F23\n\n\n\n\n11/27/23\n\n\nHW 8: BSTA 511-611 F23\n\n\n\n\n12/2/23\n\n\nHW 9: BSTA 511-611 F23\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/Day02_bsta511.html#experiments-12",
@@ -11309,7 +11309,7 @@
     "href": "weeks/week_09.html#homework",
     "title": "Week 9",
     "section": "Homework",
-    "text": "Homework\n\nComing soon! HW 8 due on Mon, 11/27\n\nCovers Days 14-15\nFor book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes.\nDo not forget to include a discussion on whether you think the test conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test as instructed."
+    "text": "Homework\n\nHW 8 due on Mon, 11/27\n\nCovers Days 14-15\nFor book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes.\nDo not forget to include a discussion on whether you think the test conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test as instructed."
   },
   {
     "objectID": "weeks/week_09.html#recordings",
@@ -12150,5 +12150,663 @@
     "title": "HW 8: BSTA 511-611 F23",
     "section": "1.3 R2: Palmer Penguins SLR",
     "text": "1.3 R2: Palmer Penguins SLR\n\n\n\n\n\n\nImportant\n\n\n\nBelow I frequently use the terminology variable1 vs. variable2. When we write this, the first variable is \\(y\\) (vertical axis) and the second is \\(x\\) (horizontal axis). Thus it’s always \\(y\\) vs. \\(x\\) (NOT \\(x\\) vs. \\(y\\)).\n\n\n\n1.3.1 Scatterplots\n\nFor each of the following pairs of variables, make a scatterplot showing the best fit line and describe the relationship between the variables.\nIn particular address\n\nwhether the association is linear,\nhow strong it is (based purely on the plot), and\nwhat direction (positive, negative, or neither).\n\n\n\nbody mass vs. flipper length\nbill depth vs. flipper length\nbill depth vs. bill length\n\n\n\n1.3.2 Correlations\n\nFor each of the following pairs of variables, find the correlation coefficient \\(r\\).\n\n\nbody mass vs. flipper length\nbill depth vs. flipper length\nbill depth vs. bill length\n\n\n\n1.3.3 Compare associations\nWhich pair of variables has the strongest association? Which has the weakest? Explain how you determined this.\n\n\n1.3.4 Body mass vs. flipper length SLR\nRun the simple linear regression model for body mass vs. flipper length, and display the regression table output.\n\n\n1.3.5 Regression equation\nWrite out the regression equation for this model, using the variable names instead of the generic \\(x\\) and \\(y\\), and inserting the regression coefficient values.\n\n\n1.3.6 \\(b_1\\) calculation\nVery that the formula \\(b_1 = r \\cdot \\frac{s_y}{s_x}\\) holds for this example using the values of the statistics.\n\n\n1.3.7 Interpret intercept\nWrite a sentence interpreting the intercept for this example. Is it meaningful in this example?\n\n\n1.3.8 Interpret slope\nWrite a sentence interpreting the slope for this example.\n\n\n1.3.9 Prediction\nWhat is the expected body mass of a penguin with flipper length 210 mm based on the model?"
+  },
+  {
+    "objectID": "slides/Day15_bsta511.html",
+    "href": "slides/Day15_bsta511.html",
+    "title": "Day 15: Simple Linear Regression (Sections 6.1-6.2)",
+    "section": "",
+    "text": "Download pdf of slides"
+  },
+  {
+    "objectID": "homework/HW_9_F23_bsta511.html",
+    "href": "homework/HW_9_F23_bsta511.html",
+    "title": "HW 9: BSTA 511-611 F23",
+    "section": "",
+    "text": "Due 12/2/23\nDownload the .qmd file for this assignment from https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_8_F23_bsta511.qmd"
+  },
+  {
+    "objectID": "homework/HW_9_F23_bsta511.html#directions",
+    "href": "homework/HW_9_F23_bsta511.html#directions",
+    "title": "HW 9: BSTA 511-611 F23",
+    "section": "Directions",
+    "text": "Directions\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\nR & LaTeX code\n\nSee the .qmd files with the code from class notes for LaTeX and R code.\nThe LaTeX code will make it easier to show your work in computations.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
+  },
+  {
+    "objectID": "homework/HW_9_F23_bsta511.html#trends-in-the-residuals",
+    "href": "homework/HW_9_F23_bsta511.html#trends-in-the-residuals",
+    "title": "HW 9: BSTA 511-611 F23",
+    "section": "6.12 Trends in the residuals",
+    "text": "6.12 Trends in the residuals"
+  },
+  {
+    "objectID": "homework/HW_9_F23_bsta511.html#load-all-the-packages-you-need-below-here.",
+    "href": "homework/HW_9_F23_bsta511.html#load-all-the-packages-you-need-below-here.",
+    "title": "HW 9: BSTA 511-611 F23",
+    "section": "1.1 Load all the packages you need below here.",
+    "text": "1.1 Load all the packages you need below here."
+  },
+  {
+    "objectID": "homework/HW_9_F23_bsta511.html#r1-palmer-penguins-anova",
+    "href": "homework/HW_9_F23_bsta511.html#r1-palmer-penguins-anova",
+    "title": "HW 9: BSTA 511-611 F23",
+    "section": "1.2 R1: Palmer Penguins ANOVA",
+    "text": "1.2 R1: Palmer Penguins ANOVA\n\nUse the penguins data from the palmerpenguins package.\n\nDon’t forget to first install the palmerpenguins package\n\nYou can learn more about the Palmer penguins data at https://allisonhorst.github.io/palmerpenguins/\nWe will test whether there are differences in penguins’ mean bill depths when comparing different species.\n\n\nlibrary(palmerpenguins)\ndata(penguins)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#where-are-we",
+    "href": "slides/Day16_bsta511.html#where-are-we",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Where are we?",
+    "text": "Where are we?"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#goals-for-today-sections-6.3-6.4",
+    "href": "slides/Day16_bsta511.html#goals-for-today-sections-6.3-6.4",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Goals for today (Sections 6.3-6.4)",
+    "text": "Goals for today (Sections 6.3-6.4)\n\nSimple Linear Regression Part 2\nBest-fit line (aka regression line or least-squares line)\nCoefficient interpretation\nPrediction\nResiduals\nLINE assumptions"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#life-expectancy-vs.-female-adult-literacy-rate",
+    "href": "slides/Day16_bsta511.html#life-expectancy-vs.-female-adult-literacy-rate",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Life expectancy vs. female adult literacy rate",
+    "text": "Life expectancy vs. female adult literacy rate\nhttps://www.gapminder.org/tools/#$model$markers$bubble$encoding$x$data$concept=literacy_rate_adult_female_percent_of_females_ages_15_above&source=sg&space@=country&=time;;&scale$domain:null&zoomed:null&type:null;;&frame$value=2011;;;;;&chart-type=bubbles&url=v1"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#dataset-description",
+    "href": "slides/Day16_bsta511.html#dataset-description",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Dataset description",
+    "text": "Dataset description\n\nData file: lifeexp_femlit_water_2011.csv\nData were downloaded from https://www.gapminder.org/data/\n2011 is the most recent year with the most complete data\nLife expectancy = the average number of years a newborn child would live if current mortality patterns were to stay the same. Source: https://www.gapminder.org/data/documentation/gd004/\nAdult literacy rate is the percentage of people ages 15 and above who can, with understanding, read and write a short, simple statement on their everyday life. Source: http://data.uis.unesco.org/\nAt least basic water source (%) = the percentage of people using at least basic water services. This indicator encompasses both people using basic water services as well as those using safely managed water services. Basic drinking water services is defined as drinking water from an improved source, provided collection time is not more than 30 minutes for a round trip. Improved water sources include piped water, boreholes or tubewells, protect dug wells, protected springs, and packaged or delivered water."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#get-to-know-the-data",
+    "href": "slides/Day16_bsta511.html#get-to-know-the-data",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Get to know the data",
+    "text": "Get to know the data\n\ngapm &lt;- read_csv(here::here(\"data\", \"lifeexp_femlit_water_2011.csv\"))\n\nglimpse(gapm)\n\nRows: 194\nColumns: 5\n$ country                    &lt;chr&gt; \"Afghanistan\", \"Albania\", \"Algeria\", \"Andor…\n$ life_expectancy_years_2011 &lt;dbl&gt; 56.7, 76.7, 76.7, 82.6, 60.9, 76.9, 76.0, 7…\n$ female_literacy_rate_2011  &lt;dbl&gt; 13.0, 95.7, NA, NA, 58.6, 99.4, 97.9, 99.5,…\n$ water_basic_source_2011    &lt;dbl&gt; 52.6, 88.1, 92.6, 100.0, 40.3, 97.0, 99.5, …\n$ water_2011_quart           &lt;chr&gt; \"Q1\", \"Q2\", \"Q2\", \"Q4\", \"Q1\", \"Q3\", \"Q4\", \"…\n\n\n\n\n\nggplot(gapm, \n       aes(x = female_literacy_rate_2011,\n           y = life_expectancy_years_2011)) +\n  geom_point() +\n  labs(x = \"female literacy rate\", \n       y = \"life expectancy\",\n       title = \"Life expectancy vs. \n             female literacy rate\") +  \n  geom_smooth(method = \"lm\", \n              se = FALSE)\n\n\nIs there a relationship between the two variables?\nIs it positive or negative?\nStrong, moderate, or weak?\nIs it linear?"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#association-between-life-expectancy-and-female-literacy-rate",
+    "href": "slides/Day16_bsta511.html#association-between-life-expectancy-and-female-literacy-rate",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Association between life expectancy and female literacy rate",
+    "text": "Association between life expectancy and female literacy rate\n\n\n\nggplot(gapm, \n       aes(x = female_literacy_rate_2011,\n           y = life_expectancy_years_2011)) +\n  geom_point() +\n  labs(x = \"female literacy rate\", \n       y = \"life expectancy\",\n       title = \"Life expectancy vs. \n             female literacy rate in 2011\") +  \n  geom_smooth(method = \"lm\", \n              se = FALSE)\n\n\nIs there a relationship between the two variables?\nIs it positive or negative?\nStrong, moderate, or weak?\nIs it linear?"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#regression-line-best-fit-line",
+    "href": "slides/Day16_bsta511.html#regression-line-best-fit-line",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Regression line = best-fit line",
+    "text": "Regression line = best-fit line\n\n\n\\[\\widehat{y} = b_0 + b_1 \\cdot x \\]\n\n\\(\\hat{y}\\) is the predicted outcome for a specific value of \\(x\\).\n\\(b_0\\) is the intercept\n\\(b_1\\) is the slope of the line, i.e., the increase in \\(\\hat{y}\\) for every increase of one (unit increase) in \\(x\\).\n\nslope = rise over run\n\n\n\n\n\n\n\n\n\n\n\nIntercept\n\nThe expected outcome for the \\(y\\)-variable when the \\(x\\)-variable is 0.\n\nSlope\n\nFor every increase of 1 unit in the \\(x\\)-variable, there is an expected increase of, on average, \\(b_1\\) units in the \\(y\\)-variable.\nWe only say that there is an expected increase and not necessarily a causal increase."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#residuals",
+    "href": "slides/Day16_bsta511.html#residuals",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Residuals",
+    "text": "Residuals\n\n\n\nObserved values \\(y_i\\)\n\nthe values in the dataset\n\nFitted values \\(\\widehat{y}_i\\)\n\nthe values that fall on the best-fit line for a specific \\(x_i\\)\n\nResiduals \\(e_i = y_i - \\widehat{y}_i\\)\n\nthe differences between the observed and fitted values"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#regression-in-r-summary",
+    "href": "slides/Day16_bsta511.html#regression-in-r-summary",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Regression in R: summary()",
+    "text": "Regression in R: summary()\n\nmodel1 &lt;- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,\n                 data = gapm)\n\nsummary(model1)\n\n\nCall:\nlm(formula = life_expectancy_years_2011 ~ female_literacy_rate_2011, \n    data = gapm)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-22.299  -2.670   1.145   4.114   9.498 \n\nCoefficients:\n                          Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)               50.92790    2.66041  19.143  &lt; 2e-16 ***\nfemale_literacy_rate_2011  0.23220    0.03148   7.377  1.5e-10 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.142 on 78 degrees of freedom\n  (114 observations deleted due to missingness)\nMultiple R-squared:  0.4109,    Adjusted R-squared:  0.4034 \nF-statistic: 54.41 on 1 and 78 DF,  p-value: 1.501e-10\n\ntidy(model1) %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    (Intercept)\n50.9278981\n2.66040695\n19.142898\n3.325312e-31\n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#regression-equation",
+    "href": "slides/Day16_bsta511.html#regression-equation",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Regression equation",
+    "text": "Regression equation\nThe values in the estimate column are the intercept and slope of the regression model.\n\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    (Intercept)\n50.9278981\n2.66040695\n19.142898\n3.325312e-31\n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10\n  \n  \n  \n\n\n\n\nGeneric regression equation:\n\\[\\widehat{y} = b_0 + b_1 \\cdot x \\]\nRegression equation for our model:\n\\[\\widehat{\\textrm{life expectancy}} = 50.9 + 0.232 \\cdot \\textrm{female literacy rate} \\]"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#the-population-regresison-model",
+    "href": "slides/Day16_bsta511.html#the-population-regresison-model",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "The (population) regresison model",
+    "text": "The (population) regresison model\n\nThe (population) regression model is denoted by\n\n\\[y = \\beta_0 + \\beta_1 \\cdot x + \\epsilon\\]\n\n\\(\\beta_0\\) and \\(\\beta_1\\) are unknown population parameters\n\\(\\epsilon\\) (epsilon) is the error about the line\n\nIt is assumed to be a random variable with a\n\nnormal distribution with\nmean 0 and\nconstant variance \\(\\sigma^2\\)\n\n\nThe line is the average (expected) value of \\(Y\\) given a value of \\(x\\): \\(E(Y|x)\\).\nThe point estimates based on a sample are denoted by \\(b_0, b_1, s_{residuals}^2\\)\n\nNote: also common notation is \\(\\widehat{\\beta}_0, \\widehat{\\beta}_1, \\widehat{\\sigma}^2\\)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#the-population-regresison-model-visually",
+    "href": "slides/Day16_bsta511.html#the-population-regresison-model-visually",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "The (population) regresison model visually",
+    "text": "The (population) regresison model visually\n\\[y = \\beta_0 + \\beta_1 \\cdot x + \\epsilon, \\text{ where } \\epsilon \\sim N(0, \\sigma^2)\\]\n\n\nhttps://bookdown.org/roback/bookdown-bysh/ch-MLRreview.html#ordinary-least-squares-ols-assumptions"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#what-are-the-line-conditions",
+    "href": "slides/Day16_bsta511.html#what-are-the-line-conditions",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "What are the LINE conditions?",
+    "text": "What are the LINE conditions?\nFor “good” model fit and to be able to make inferences and predictions based on our models, 4 conditions need to be satisfied.\nBriefly:\n\nL inearity of relationship between variables\nI ndependence of the Y values\nN ormality of the residuals\nE quality of variance of the residuals (homoscedasticity)\n\nMore in depth:\n\nL : there is a linear relationship between the mean response (Y) and the explanatory variable (X),\nI : the errors are independent—there’s no connection between how far any two points lie from the regression line,\nN : the responses are normally distributed at each level of X, and\nE : the variance or, equivalently, the standard deviation of the responses is equal for all levels of X."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#l-linearity-of-relationship-between-variables",
+    "href": "slides/Day16_bsta511.html#l-linearity-of-relationship-between-variables",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "L: Linearity of relationship between variables",
+    "text": "L: Linearity of relationship between variables\nIs the association between the variables linear?\n\nDiagnostic tools:\n\nScatterplot\nResidual plot (see later section for E : Equality of variance of the residuals)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#i-independence-of-the-residuals-y-values",
+    "href": "slides/Day16_bsta511.html#i-independence-of-the-residuals-y-values",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "I: Independence of the residuals (\\(Y\\) values)",
+    "text": "I: Independence of the residuals (\\(Y\\) values)\n\nAre the data points independent of each other?\nExamples of when they are not independent, include\n\nrepeated measures (such as baseline, 3 months, 6 months)\ndata from clusters, such as different hospitals or families\n\nThis condition is checked by reviewing the study design and not by inspecting the data\nHow to analyze data using regression models when the \\(Y\\)-values are not independent is covered in BSTA 519 (Longitudinal data)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#n-normality-of-the-residuals-1",
+    "href": "slides/Day16_bsta511.html#n-normality-of-the-residuals-1",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "N: Normality of the residuals",
+    "text": "N: Normality of the residuals\n\nThe responses Y are normally distributed at each level of x\n\n\n\nhttps://bookdown.org/roback/bookdown-bysh/ch-MLRreview.html#ordinary-least-squares-ols-assumptions"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#extract-models-residuals-in-r",
+    "href": "slides/Day16_bsta511.html#extract-models-residuals-in-r",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Extract model’s residuals in R",
+    "text": "Extract model’s residuals in R\n\nFirst extract the residuals’ values from the model output using the augment() function from the broom package.\nGet a tibble with the orginal data, as well as the residuals and some other important values.\n\n\nmodel1 &lt;- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011, \n                data = gapm)\naug1 &lt;- augment(model1) \n\nglimpse(aug1)\n\nRows: 80\nColumns: 9\n$ .rownames                  &lt;chr&gt; \"1\", \"2\", \"5\", \"6\", \"7\", \"8\", \"14\", \"22\", \"…\n$ life_expectancy_years_2011 &lt;dbl&gt; 56.7, 76.7, 60.9, 76.9, 76.0, 73.8, 71.0, 7…\n$ female_literacy_rate_2011  &lt;dbl&gt; 13.0, 95.7, 58.6, 99.4, 97.9, 99.5, 53.4, 9…\n$ .fitted                    &lt;dbl&gt; 53.94643, 73.14897, 64.53453, 74.00809, 73.…\n$ .resid                     &lt;dbl&gt; 2.7535654, 3.5510294, -3.6345319, 2.8919074…\n$ .hat                       &lt;dbl&gt; 0.13628996, 0.01768176, 0.02645854, 0.02077…\n$ .sigma                     &lt;dbl&gt; 6.172684, 6.168414, 6.167643, 6.172935, 6.1…\n$ .cooksd                    &lt;dbl&gt; 1.835891e-02, 3.062372e-03, 4.887448e-03, 2…\n$ .std.resid                 &lt;dbl&gt; 0.48238134, 0.58332052, -0.59972251, 0.4757…"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#check-normality-with-usual-distribution-plots",
+    "href": "slides/Day16_bsta511.html#check-normality-with-usual-distribution-plots",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Check normality with “usual” distribution plots",
+    "text": "Check normality with “usual” distribution plots\nNote that below I save each figure, and then combine them together in one row of output using grid.arrange() from the gridExtra package.\n\nhist1 &lt;- ggplot(aug1, aes(x = .resid)) +\n  geom_histogram()\n\ndensity1 &lt;- ggplot(aug1, aes(x = .resid)) +\n  geom_density()\n\nbox1 &lt;- ggplot(aug1, aes(x = .resid)) +\n  geom_boxplot()\n\nlibrary(gridExtra) # NEW!!!\ngrid.arrange(hist1, density1, box1, nrow = 1)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#normal-q-q-plots-q-q-quantile-quantile",
+    "href": "slides/Day16_bsta511.html#normal-q-q-plots-q-q-quantile-quantile",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Normal Q-Q plots (Q-Q = quantile-quantile)",
+    "text": "Normal Q-Q plots (Q-Q = quantile-quantile)\n\nIt can be tricky to eyeball with a histogram or density plot whether the residuals are normal or not\nQ-Q plots are often used to help with this\n\n\n\n\nVertical axis: data quantiles\n\ndata points are sorted in order and\nassigned quantiles based on how many data points there are\n\nHorizontal axis: theoretical quantiles\n\nmean and standard deviation (SD) calculated from the data points\ntheoretical quantiles are calculated for each point, assuming the data are modeled by a normal distribution with the mean and SD of the data\n\n\n\n\n\n\n\n\n\n\n\nData are approximately normal if points fall on a line.\n\nSee more info at https://data.library.virginia.edu/understanding-q-q-plots/"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-normal-q-q-plots-15",
+    "href": "slides/Day16_bsta511.html#examples-of-normal-q-q-plots-15",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Normal Q-Q plots (1/5)",
+    "text": "Examples of Normal Q-Q plots (1/5)\nData: Body measurements from 507 physically active individuals in their 20’s or early 30’s within normal weight range."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-normal-q-q-plots-25",
+    "href": "slides/Day16_bsta511.html#examples-of-normal-q-q-plots-25",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Normal Q-Q plots (2/5)",
+    "text": "Examples of Normal Q-Q plots (2/5)\n\nSkewed distribution"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-normal-q-q-plots-35",
+    "href": "slides/Day16_bsta511.html#examples-of-normal-q-q-plots-35",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Normal Q-Q plots (3/5)",
+    "text": "Examples of Normal Q-Q plots (3/5)\n\nLong tails in distribution"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-normal-q-q-plots-45",
+    "href": "slides/Day16_bsta511.html#examples-of-normal-q-q-plots-45",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Normal Q-Q plots (4/5)",
+    "text": "Examples of Normal Q-Q plots (4/5)\n\nBimodal distribution"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-normal-q-q-plots-55",
+    "href": "slides/Day16_bsta511.html#examples-of-normal-q-q-plots-55",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Normal Q-Q plots (5/5)",
+    "text": "Examples of Normal Q-Q plots (5/5)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#qq-plot-of-residuals-of-model1",
+    "href": "slides/Day16_bsta511.html#qq-plot-of-residuals-of-model1",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "QQ plot of residuals of model1",
+    "text": "QQ plot of residuals of model1\n\n\n\n\n\n\n\n\n\nggplot(aug1, aes(sample = .resid)) + \n  stat_qq() +     # points\n  stat_qq_line()  # line"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-simulated-normal-q-q-plots-22",
+    "href": "slides/Day16_bsta511.html#examples-of-simulated-normal-q-q-plots-22",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Simulated Normal Q-Q plots (2/2)",
+    "text": "Examples of Simulated Normal Q-Q plots (2/2)\n\n\nWith fewer data points,\n\nsimulated Q-Q plots are\nmore likely to look “less normal”\neven though the data points were sampled from normal distributions.\n\n\n\nQQ plots for random normal samples of size 10\n\n\nsamplesize &lt;- 10\n\nrand_qq1 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\") # line y=x\n\nrand_qq2 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\nrand_qq3 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\nrand_qq4 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\ngrid.arrange(rand_qq1, rand_qq2, rand_qq3, rand_qq4, ncol =2)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-simulated-normal-q-q-plots-22-1",
+    "href": "slides/Day16_bsta511.html#examples-of-simulated-normal-q-q-plots-22-1",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Simulated Normal Q-Q plots (2/2)",
+    "text": "Examples of Simulated Normal Q-Q plots (2/2)\n\n\nWith fewer data points,\n\nsimulated Q-Q plots are\nmore likely to look “less normal”\neven though the data points were sampled from normal distributions.\n\n\n\nQQ plots for random normal samples of size 1000\n\n\nsamplesize &lt;- 1000\n\nrand_qq1 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\") # line y=x\n\nrand_qq2 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\nrand_qq3 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\nrand_qq4 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\ngrid.arrange(rand_qq1, rand_qq2, rand_qq3, rand_qq4, ncol =2)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#example-qq-plot-of-residuals-23",
+    "href": "slides/Day16_bsta511.html#example-qq-plot-of-residuals-23",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Example: QQ plot of Residuals (2/3)",
+    "text": "Example: QQ plot of Residuals (2/3)\n\n\nResiduals from Life Expectancy vs. Female Literacy Rate Regression\n\nggplot(aug1, \n      aes(sample = .resid)) + \n  stat_qq() + \n  stat_qq_line() \n\nCompare this to the random QQ plot on the next slide."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#example-simulated-qq-plot-33",
+    "href": "slides/Day16_bsta511.html#example-simulated-qq-plot-33",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Example: Simulated QQ plot (3/3)",
+    "text": "Example: Simulated QQ plot (3/3)\n\n\nSimulated QQ plot of Normal Residuals with n = 187\n\n# number of observations \n# in fitted model\nnobs(model1) \n\n[1] 80\n\n\n\nggplot() +\n  stat_qq(aes(\n    sample = rnorm(187))) + \n  geom_abline(\n    intercept = 0, \n    slope = 1, \n    color = \"blue\", \n    size = 0.5, \n    alpha = 0.8)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#e-equality-of-variance-of-the-residuals",
+    "href": "slides/Day16_bsta511.html#e-equality-of-variance-of-the-residuals",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "E: Equality of variance of the residuals",
+    "text": "E: Equality of variance of the residuals\n\nThe variance or, equivalently, the standard deviation of the responses is equal for all values of x.\nThis is called homoskedasticity (top row)\nIf there is heteroskedasticity (bottom row), then the assumption is not met."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#example-equality-of-variance-of-the-residuals",
+    "href": "slides/Day16_bsta511.html#example-equality-of-variance-of-the-residuals",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Example: Equality of variance of the residuals",
+    "text": "Example: Equality of variance of the residuals\n\n\n\n\\(x\\) = explanatory variable from regression model,\nor the fitted values for a multiple regression\n\\(y\\) = residuals from regression model\n\n\nggplot(aug1, \n       aes(x = female_literacy_rate_2011, \n           y = .resid)) + \n  geom_point() +\n  geom_abline(\n    intercept = 0, \n    slope = 0, \n    color = \"orange\") +\n  labs(title = \"Residual plot\")"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#r2-coefficient-of-determination-12",
+    "href": "slides/Day16_bsta511.html#r2-coefficient-of-determination-12",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "\\(R^2\\) = Coefficient of determination (1/2)",
+    "text": "\\(R^2\\) = Coefficient of determination (1/2)\n\nRecall that the correlation coefficient \\(r\\) measures the strength of the linear relationship between two numerical variables\n\\(R^2\\) is usually used to measure the strength of a linear fit\n\nFor a simple linear regression model (one numerical predictor), \\(R^2\\) is just the square of the correlation coefficient\n\nIn general, \\(R^2\\) is the proportion of the variability of the dependent variable that is explained by the independent variable(s)\n\n\\[R^2 = \\frac{\\textrm{variance of predicted y-values}}\n{\\textrm{variance of observed y-values}} = \\frac{\\sum_{i=1}^n(\\widehat{y}_i-\\bar{y})^2}\n{\\sum_{i=1}^n(y_i-\\bar{y})^2}\n= \\frac{s_y^2 - s_{\\textrm{residuals}}^2}\n{s_y^2}\\] \\[R^2 = 1- \\frac{s_{\\textrm{residuals}}^2}\n{s_y^2}\\] where \\(\\frac{s_{\\textrm{residuals}}^2}{s_y^2}\\) is the proportion of “unexplained” variability in the \\(y\\) values,\nand thus \\(R^2 = 1- \\frac{s_{\\textrm{residuls}}^2}{s_y^2}\\) is the proportion of “explained” variability in the \\(y\\) values"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#r2-coefficient-of-determination-22",
+    "href": "slides/Day16_bsta511.html#r2-coefficient-of-determination-22",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "\\(R^2\\) = Coefficient of determination (2/2)",
+    "text": "\\(R^2\\) = Coefficient of determination (2/2)\n\nRecall, \\(-1&lt;r&lt;1\\)\nThus, \\(0&lt;R^2&lt;1\\)\nIn practice, we want “high” \\(R^2\\) values, i.e. \\(R^2\\) as close to 1 as possible.\n\nCalculating \\(R^2\\) in R using glance() from the broom package:\n\nglance(model1)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     0.411         0.403  6.14      54.4 1.50e-10     1  -258.  521.  529.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;\n\nglance(model1)$r.squared\n\n[1] 0.4109366\n\n\n\n\n\n\n\n\nWarning\n\n\n\nA model can have a high \\(R^2\\) value when there is a curved pattern.\nAlways first check whether a linear model is reasonable or not."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#r2-in-summary-r-output",
+    "href": "slides/Day16_bsta511.html#r2-in-summary-r-output",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "\\(R^2\\) in summary() R output",
+    "text": "\\(R^2\\) in summary() R output\n\nsummary(model1)\n\n\nCall:\nlm(formula = life_expectancy_years_2011 ~ female_literacy_rate_2011, \n    data = gapm)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-22.299  -2.670   1.145   4.114   9.498 \n\nCoefficients:\n                          Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)               50.92790    2.66041  19.143  &lt; 2e-16 ***\nfemale_literacy_rate_2011  0.23220    0.03148   7.377  1.5e-10 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.142 on 78 degrees of freedom\n  (114 observations deleted due to missingness)\nMultiple R-squared:  0.4109,    Adjusted R-squared:  0.4034 \nF-statistic: 54.41 on 1 and 78 DF,  p-value: 1.501e-10\n\n\nCompare to the square of the correlation coefficient \\(r\\):\n\nr &lt;- cor(x = gapm$life_expectancy_years_2011, \n    y = gapm$female_literacy_rate_2011,\n    use =  \"complete.obs\")\nr\n\n[1] 0.6410434\n\nr^2\n\n[1] 0.4109366"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#day-4-coefficient-of-determination-r2",
+    "href": "slides/Day16_bsta511.html#day-4-coefficient-of-determination-r2",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "512 Day 4: Coefficient of determination: \\(R^2\\)",
+    "text": "512 Day 4: Coefficient of determination: \\(R^2\\)\nIt can be shown that the square of the correlation coefficient \\(r\\) is equal to\n\\[R^2 = \\frac{SSR}{SSY} = \\frac{SSY - SSE}{SSY}\\]\n\n\\(R^2\\) is called the coefficient of determination.\nInterpretation #1\n\nNumerator is the reduction in \\(SSY\\) due to using \\(X\\) to predict \\(Y\\)\nThus the fraction is the proportionate reduction\n\nInterpretation #2\n\nThe proportion of variation in the \\(Y\\) values explained by the regression model\n\n\\(R^2\\) measures the strength of the linear relationship between \\(X\\) and \\(Y\\):\n\n\\(R^2 = \\pm 1\\): Perfect relationship\n\nHappens when \\(SSE = 0\\), i.e. no error, all points on the line\n\n\\(R^2 = 0\\): No relationship\n\nHappens when \\(SSY = SSE\\), i.e. using the line doesn’t not improve model fit over using \\(\\bar{Y}\\) to model the \\(Y\\) values."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#r-example",
+    "href": "slides/Day16_bsta511.html#r-example",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "R Example",
+    "text": "R Example\n\ncor(x = gapm$life_expectancy_years_2011, \n    y = gapm$female_literacy_rate_2011)\n\n[1] NA\n\nr &lt;- cor(x = gapm$life_expectancy_years_2011, \n    y = gapm$female_literacy_rate_2011,\n    use =  \"complete.obs\")\nr\n\n[1] 0.6410434\n\nr^2\n\n[1] 0.4109366\n\nsummary(model1) # for R^2 value\n\n\nCall:\nlm(formula = life_expectancy_years_2011 ~ female_literacy_rate_2011, \n    data = gapm)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-22.299  -2.670   1.145   4.114   9.498 \n\nCoefficients:\n                          Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)               50.92790    2.66041  19.143  &lt; 2e-16 ***\nfemale_literacy_rate_2011  0.23220    0.03148   7.377  1.5e-10 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.142 on 78 degrees of freedom\n  (114 observations deleted due to missingness)\nMultiple R-squared:  0.4109,    Adjusted R-squared:  0.4034 \nF-statistic: 54.41 on 1 and 78 DF,  p-value: 1.501e-10"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#corrrelation-doesnt-imply-causation",
+    "href": "slides/Day16_bsta511.html#corrrelation-doesnt-imply-causation",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Corrrelation doesn’t imply causation*!",
+    "text": "Corrrelation doesn’t imply causation*!\n\nThis might seem obvious, but make sure to not write your analysis results in a way that implies causation if the study design doesn’t warrant it (such as an observational study).\nBeware of spurious correlations: http://www.tylervigen.com/spurious-correlations\n\n\n\n*Caveat: there is a whole field of statistics/epidemiology on causal inference. https://ftp.cs.ucla.edu/pub/stat_ser/r350.pdf"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#beware-of-spurious-correlations",
+    "href": "slides/Day16_bsta511.html#beware-of-spurious-correlations",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Beware of spurious correlations",
+    "text": "Beware of spurious correlations\nhttp://www.tylervigen.com/spurious-correlations"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#whats-next",
+    "href": "slides/Day16_bsta511.html#whats-next",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "What’s next?",
+    "text": "What’s next?"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#example-life-expectancy-vs.-female-literacy-rate",
+    "href": "slides/Day16_bsta511.html#example-life-expectancy-vs.-female-literacy-rate",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Example: Life expectancy vs. female literacy rate",
+    "text": "Example: Life expectancy vs. female literacy rate\n\n\n\n\n\n\n\n\nBest-fit line = regression line = least-squares line\n\\[\\widehat{y} = b_0 + b_1 \\cdot x \\]\n\n\\(\\hat{y}\\) is the predicted outcome for a specific value of \\(x\\).\n\\(b_0\\) is the intercept\n\nthe expected outcome for the y-variable when the x-variable is 0.\n\n\\(b_1\\) is the slope of the line, i.e., the increase in \\(\\hat{y}\\) for every increase of one (unit increase) in \\(x\\)."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#regression-table",
+    "href": "slides/Day16_bsta511.html#regression-table",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Regression table",
+    "text": "Regression table\n\n# Fit regression model:\nmodel1 &lt;- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,\n                 data = gapm)\n# Get regression table:\ntidy(model1, conf.int = TRUE) # conf.int = TRUE part is new! \n\n# A tibble: 2 × 7\n  term                  estimate std.error statistic  p.value conf.low conf.high\n  &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)             50.9      2.66       19.1  3.33e-31   45.6      56.2  \n2 female_literacy_rate…    0.232    0.0315      7.38 1.50e-10    0.170     0.295\n\n\n\\[\\begin{align}\n\\widehat{y} =& b_0 + b_1 \\cdot x\\\\\n\\widehat{\\text{life expectancy}} =& 50.9 + 0.232 \\cdot \\text{female literacy rate}\n\\end{align}\\]\nToday:\n\nHow do we calculate the standard error, statistic, p-value, and CI?\nWhat are \\(H_0\\) and \\(H_A\\)?"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#regression-inference-ci-and-hypothesis-test-of-population-slope",
+    "href": "slides/Day16_bsta511.html#regression-inference-ci-and-hypothesis-test-of-population-slope",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Regression inference: CI and hypothesis test of population slope",
+    "text": "Regression inference: CI and hypothesis test of population slope\n\n\nPopulation model\nline + random “noise”\n\\[y = \\beta_0 + \\beta_1 \\cdot x + \\varepsilon\\] with \\(\\varepsilon \\sim N(0,\\sigma)\\)\n\\(\\sigma\\) is the variability (SD) of the residuals\n\nSample best-fit line:\n\\[\\widehat{y} = b_0 + b_1 \\cdot x \\]\nNote: Some sources use \\(\\widehat{\\beta}\\) instead of \\(b\\).\n\nUse statistical theory to\n\nConstruct a 95% confidence interval for the population slope \\(\\beta_1\\)\n\n\n\nConduct the hypothesis test\n\n\\[\\begin{align}\nH_0 &: \\beta_1 = 0\\\\\n\\text{vs. } H_A&: \\beta_1 \\neq 0\n\\end{align}\\]\n\nNote: R reports p-values for 2-sided tests"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#calculate-ci-using-theory",
+    "href": "slides/Day16_bsta511.html#calculate-ci-using-theory",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Calculate CI using theory",
+    "text": "Calculate CI using theory\nRecall the general CI formula:\n\\[\\textrm{Point Estimate} \\pm t^*\\cdot SE_{\\textrm{Point Estimate}}\\]\nFor the CI of the coefficient \\(b_1\\) this translates to\n\\[b_1 \\pm t^*\\cdot SE_{b_1}\\] where \\(t^*\\) is the critical value from a \\(t\\)-distribution with \\(df = n -2\\).\nHow is \\(\\text{SE}_{b_1}\\) calculated? See next slide.\n\ntidy(model1, conf.int = TRUE)\n\n# A tibble: 2 × 7\n  term                  estimate std.error statistic  p.value conf.low conf.high\n  &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)             50.9      2.66       19.1  3.33e-31   45.6      56.2  \n2 female_literacy_rate…    0.232    0.0315      7.38 1.50e-10    0.170     0.295"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#standard-error-of-fitted-coefficient-b_1",
+    "href": "slides/Day16_bsta511.html#standard-error-of-fitted-coefficient-b_1",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Standard error of fitted coefficient \\(b_1\\)",
+    "text": "Standard error of fitted coefficient \\(b_1\\)\n\n\n\\(\\text{SE}_{b_1}\\) is the variability of the statistic \\(b_1\\)\n\\[\\text{SE}_{b_1} = \\frac{\\frac{s_y}{s_x} \\cdot \\sqrt{1-r^2}}{\\sqrt{n-2}}\\]\n\n\\(s_x\\) and \\(s_y\\) are the sample standard deviations of the explanatory variable \\(x\\) and the response variable \\(y\\)\n\\(r\\) is the sample correlation coefficient between \\(x\\) and \\(y\\)\n\\(n\\) is the sample size, or the number of (complete) pairs of points\n\n\nHow to interpret this formula:\n\n\\(\\frac{s_y}{s_x}\\) is the relationship between the variability of the response and explanatory variables\n\n\\(\\text{SE}_{b_1}\\) is bigger when \\(s_y &gt; s_x\\)\n\n\\(\\sqrt{1-r^2}\\) measures how the two variables relate to each other\n\nIf \\(r=\\pm1\\), then \\(\\sqrt{1-r^2} = 0\\) and thus \\(\\text{SE}_{b_1}=0\\)\nIf \\(r=0\\), then \\(\\sqrt{1-r^2} = 1\\)\n\n\\(\\sqrt{n-2}\\) in the denominator\n\nAs \\(n\\) increases, \\(\\text{SE}_{b_1}\\) decreases and thus our estimate \\(b_1\\) of the population slope \\(\\beta_1\\) is more precise\n\\(n-2\\) is the degrees of freedom of the statistic"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#ci-of-the-coefficient-b_1-using-theory-12",
+    "href": "slides/Day16_bsta511.html#ci-of-the-coefficient-b_1-using-theory-12",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "CI of the coefficient \\(b_1\\) using theory (1/2)",
+    "text": "CI of the coefficient \\(b_1\\) using theory (1/2)\n\n\n\\[b_1 \\pm t^*\\cdot SE_{b_1}\\]\nwhere \\(t^*\\) is the \\(t\\)-distribution critical value with \\(df = n -2\\).\n\n\nnobs(model1) # sample size n\n\n[1] 80\n\n(tstar &lt;- qt(.975, df = 80-2))\n\n[1] 1.990847"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#ci-of-the-coefficient-b_1-using-theory-22",
+    "href": "slides/Day16_bsta511.html#ci-of-the-coefficient-b_1-using-theory-22",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "CI of the coefficient \\(b_1\\) using theory (2/2)",
+    "text": "CI of the coefficient \\(b_1\\) using theory (2/2)\n\ntidy(model1, conf.int = TRUE)\n\n# A tibble: 2 × 7\n  term                  estimate std.error statistic  p.value conf.low conf.high\n  &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)             50.9      2.66       19.1  3.33e-31   45.6      56.2  \n2 female_literacy_rate…    0.232    0.0315      7.38 1.50e-10    0.170     0.295\n\nmodel1_b1 &lt;-tidy(model1) %&gt;% filter(term == \"female_literacy_rate_2011\")\n\n\n\n\\[b_1 \\pm t^*\\cdot SE_{b_1}\\]\n\nb1 &lt;- model1_b1$estimate\nSE_b1 &lt;- model1_b1$std.error\n\nCompare CI bounds to the right with the ones in the regression table above.\n\n\n(CI_LB &lt;- b1 - tstar*SE_b1)\n\n[1] 0.1695284\n\n(CI_UB &lt;- b1 + tstar*SE_b1)\n\n[1] 0.2948619"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#hypothesis-test-test-statistic-using-theory",
+    "href": "slides/Day16_bsta511.html#hypothesis-test-test-statistic-using-theory",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Hypothesis test & test statistic using theory",
+    "text": "Hypothesis test & test statistic using theory\n\n\n\\[\\begin{align}\nH_0 &: \\beta_1 = 0\\\\\n\\text{vs. } H_A&: \\beta_1 \\neq 0.\n\\end{align}\\]\nThe test statistic for \\(b_1\\) is\n\\[t = \\frac{ b_1 - \\beta_1}{ \\text{SE}_{b_1}} = \\frac{ b_1}{ \\text{SE}_{b_1}}\\]\nwhen we assume \\(H_0: \\beta_1 = 0\\) is true.\n\n\n# recall model1_b1 is regression table \n# restricted to b1 row\n(TestStat &lt;- model1_b1$estimate/\n              model1_b1$std.error)\n\n[1] 7.376557\n\n\nCompare this test statistic value to the one from the regression table below\n\n\n\ntidy(model1, conf.int = TRUE)\n\n# A tibble: 2 × 7\n  term                  estimate std.error statistic  p.value conf.low conf.high\n  &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)             50.9      2.66       19.1  3.33e-31   45.6      56.2  \n2 female_literacy_rate…    0.232    0.0315      7.38 1.50e-10    0.170     0.295"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#p-value-using-theory",
+    "href": "slides/Day16_bsta511.html#p-value-using-theory",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "\\(p\\)-value using theory",
+    "text": "\\(p\\)-value using theory\n\n\nAs usual, the \\(p\\)-value is the probability of obtaining a test statistic just as extreme or more extreme than the observed test statistic assuming the null hypothesis \\(H_0\\) is true.\nTo calculate the \\(p\\)-value, we need to know the probability distribution of the test statistic (the null distribution) assuming \\(H_0\\) is true.\n\n\nStatistical theory tells us that the test statistic \\(t\\) can be modeled by a \\(t\\)-distribution with \\(df = n-2\\).\nRecall that this is a 2-sided test:\n\n\n(pv = 2*pt(TestStat, df=80-2, lower.tail=F))\n\n[1] 1.501286e-10\n\n\n\n\n\ntidy(model1, conf.int = TRUE)  # compare p-value calculated above to p-value in table\n\n# A tibble: 2 × 7\n  term                  estimate std.error statistic  p.value conf.low conf.high\n  &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)             50.9      2.66       19.1  3.33e-31   45.6      56.2  \n2 female_literacy_rate…    0.232    0.0315      7.38 1.50e-10    0.170     0.295"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#conditions-for-inference-for-regression-day-9-slides",
+    "href": "slides/Day16_bsta511.html#conditions-for-inference-for-regression-day-9-slides",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Conditions for inference for regression (Day 9 slides)",
+    "text": "Conditions for inference for regression (Day 9 slides)\nFor “good” model fit and to be able to make inferences and predictions based on our models, 4 conditions need to be satisfied.\nBriefly: (from ModernDive 10.3)\n\n__L__inearity of relationship between variables\n__I__ndependence of the residuals\n__N__ormality of the residuals\n__E__quality of variance of the residuals\n\nMore in depth:\n\nL : there is a linear relationship between the mean response (Y) and the explanatory variable (X),\nI : the errors are independent—there’s no connection between how far any two points lie from the regression line,\nN : the responses are normally distributed at each level of X, and\nE : the variance or, equivalently, the standard deviation of the responses is equal for all levels of X."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#whats-next-1",
+    "href": "slides/Day16_bsta511.html#whats-next-1",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "What’s next?",
+    "text": "What’s next?"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#regression-in-r-lm-summary-tidy",
+    "href": "slides/Day16_bsta511.html#regression-in-r-lm-summary-tidy",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Regression in R: lm(), summary(), & tidy()",
+    "text": "Regression in R: lm(), summary(), & tidy()\n\nmodel1 &lt;- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,\n                 data = gapm)\n\nsummary(model1)\n\n\nCall:\nlm(formula = life_expectancy_years_2011 ~ female_literacy_rate_2011, \n    data = gapm)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-22.299  -2.670   1.145   4.114   9.498 \n\nCoefficients:\n                          Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)               50.92790    2.66041  19.143  &lt; 2e-16 ***\nfemale_literacy_rate_2011  0.23220    0.03148   7.377  1.5e-10 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.142 on 78 degrees of freedom\n  (114 observations deleted due to missingness)\nMultiple R-squared:  0.4109,    Adjusted R-squared:  0.4034 \nF-statistic: 54.41 on 1 and 78 DF,  p-value: 1.501e-10\n\ntidy(model1) %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    (Intercept)\n50.9278981\n2.66040695\n19.142898\n3.325312e-31\n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#normal-qq-plots-qq-quantile-quantile",
+    "href": "slides/Day16_bsta511.html#normal-qq-plots-qq-quantile-quantile",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Normal QQ plots (QQ = quantile-quantile)",
+    "text": "Normal QQ plots (QQ = quantile-quantile)\n\nIt can be tricky to eyeball with a histogram or density plot whether the residuals are normal or not\nQQ plots are often used to help with this\n\n\n\n\nVertical axis: data quantiles\n\ndata points are sorted in order and\nassigned quantiles based on how many data points there are\n\nHorizontal axis: theoretical quantiles\n\nmean and standard deviation (SD) calculated from the data points\ntheoretical quantiles are calculated for each point, assuming the data are modeled by a normal distribution with the mean and SD of the data\n\n\n\n\n\n\n\n\n\n\n\nData are approximately normal if points fall on a line.\n\nSee more info at https://data.library.virginia.edu/understanding-QQ-plots/"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-normal-qq-plots-15",
+    "href": "slides/Day16_bsta511.html#examples-of-normal-qq-plots-15",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Normal QQ plots (1/5)",
+    "text": "Examples of Normal QQ plots (1/5)\n\nData:\n\nBody measurements from 507 physically active individuals\nin their 20’s or early 30’s\nwithin normal weight range."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-normal-qq-plots-25",
+    "href": "slides/Day16_bsta511.html#examples-of-normal-qq-plots-25",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Normal QQ plots (2/5)",
+    "text": "Examples of Normal QQ plots (2/5)\nSkewed right distribution"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-normal-qq-plots-35",
+    "href": "slides/Day16_bsta511.html#examples-of-normal-qq-plots-35",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Normal QQ plots (3/5)",
+    "text": "Examples of Normal QQ plots (3/5)\nLong tails in distribution"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-normal-qq-plots-45",
+    "href": "slides/Day16_bsta511.html#examples-of-normal-qq-plots-45",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Normal QQ plots (4/5)",
+    "text": "Examples of Normal QQ plots (4/5)\nBimodal distribution"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-normal-qq-plots-55",
+    "href": "slides/Day16_bsta511.html#examples-of-normal-qq-plots-55",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Normal QQ plots (5/5)",
+    "text": "Examples of Normal QQ plots (5/5)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-simulated-normal-qq-plots-22",
+    "href": "slides/Day16_bsta511.html#examples-of-simulated-normal-qq-plots-22",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Simulated Normal QQ plots (2/2)",
+    "text": "Examples of Simulated Normal QQ plots (2/2)\n\n\nWith fewer data points,\n\nsimulated QQ plots are\nmore likely to look “less normal”\neven though the data points were sampled from normal distributions.\n\n\n\nQQ plots for random normal samples of size 1000\n\n\nsamplesize &lt;- 1000\n\nrand_qq1 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\") # line y=x\n\nrand_qq2 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\nrand_qq3 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\nrand_qq4 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\ngrid.arrange(rand_qq1, rand_qq2, rand_qq3, rand_qq4, ncol =2)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-simulated-normal-qq-plots-22-1",
+    "href": "slides/Day16_bsta511.html#examples-of-simulated-normal-qq-plots-22-1",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Simulated Normal QQ plots (2/2)",
+    "text": "Examples of Simulated Normal QQ plots (2/2)\n\n\nWith fewer data points,\n\nsimulated QQ plots are\nmore likely to look “less normal”\neven though the data points were sampled from normal distributions.\n\n\n\nQQ plots for random normal samples of size 1000\n\n\nsamplesize &lt;- 1000\n\nrand_qq1 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\") # line y=x\n\nrand_qq2 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\nrand_qq3 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\nrand_qq4 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, color = \"blue\")\n\ngrid.arrange(rand_qq1, rand_qq2, rand_qq3, rand_qq4, ncol =2)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#randomly-generated-normal-qq-plots",
+    "href": "slides/Day16_bsta511.html#randomly-generated-normal-qq-plots",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Randomly generated Normal QQ plots",
+    "text": "Randomly generated Normal QQ plots\n\nNote that stat_qq_line() doesn’t work with randomly generated samples, and thus the code below manually creates the line that the points should be on (which is \\(y=x\\) in this case.)\n\n\n\n\n\nsamplesize &lt;- 80\n\nrand_qq1 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  # line y=x\n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\") \n\nrand_qq2 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq3 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq4 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\n\n\n\ngrid.arrange(rand_qq1, rand_qq2, \n             rand_qq3, rand_qq4, ncol =2)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#compare-to-randomly-generated-normal-qq-plots",
+    "href": "slides/Day16_bsta511.html#compare-to-randomly-generated-normal-qq-plots",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Compare to randomly generated Normal QQ plots",
+    "text": "Compare to randomly generated Normal QQ plots\nHow “good” we can expect a QQ plot to look depends on the sample size.\n\nThe QQ plots on the next slides are randomly generated\n\nusing random samples from actual normal distributions\n\nThus, all the points in the QQ plots should theoretically fall in a line\nHowever, there is sampling variability…"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#randomly-generated-normal-qq-plots-n80",
+    "href": "slides/Day16_bsta511.html#randomly-generated-normal-qq-plots-n80",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Randomly generated Normal QQ plots: n=80",
+    "text": "Randomly generated Normal QQ plots: n=80\n\nNote that stat_qq_line() doesn’t work with randomly generated samples, and thus the code below manually creates the line that the points should be on (which is \\(y=x\\) in this case.)\n\n\n\n\n\nsamplesize &lt;- 80\n\nrand_qq1 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  # line y=x\n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\") \n\nrand_qq2 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq3 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq4 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\n\n\n\ngrid.arrange(rand_qq1, rand_qq2, \n             rand_qq3, rand_qq4, ncol =2)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-simulated-normal-qq-plots-n10-22",
+    "href": "slides/Day16_bsta511.html#examples-of-simulated-normal-qq-plots-n10-22",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of Simulated Normal QQ plots: n=10 (2/2)",
+    "text": "Examples of Simulated Normal QQ plots: n=10 (2/2)\nWith fewer data points, * simulated QQ plots are more likely to look “less normal” * even though the data points were sampled from normal distributions.\n\n\n\n\nsamplesize &lt;- 10. # only change made to code!\n\nrand_qq1 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  # line y=x\n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\") \n\nrand_qq2 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq3 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq4 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\n\n\n\ngrid.arrange(rand_qq1, rand_qq2, \n             rand_qq3, rand_qq4, ncol =2)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-simulated-normal-qq-plots-n10",
+    "href": "slides/Day16_bsta511.html#examples-of-simulated-normal-qq-plots-n10",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of simulated Normal QQ plots: n=10",
+    "text": "Examples of simulated Normal QQ plots: n=10\nWith fewer data points,\n\nsimulated QQ plots are more likely to look “less normal”\neven though the data points were sampled from normal distributions.\n\n\n\n\n\nsamplesize &lt;- 10  # only change made to code!\n\nrand_qq1 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  # line y=x\n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\") \n\nrand_qq2 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq3 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq4 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\n\n\n\ngrid.arrange(rand_qq1, rand_qq2, \n             rand_qq3, rand_qq4, ncol =2)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#examples-of-simulated-normal-qq-plots-n1000",
+    "href": "slides/Day16_bsta511.html#examples-of-simulated-normal-qq-plots-n1000",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Examples of simulated Normal QQ plots: n=1,000",
+    "text": "Examples of simulated Normal QQ plots: n=1,000\nWith more data points,\n\nsimulated QQ plots are more likely to look “more normal”\n\n\n\n\n\nsamplesize &lt;- 1000 # only change made to code!\n\nrand_qq1 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  # line y=x\n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\") \n\nrand_qq2 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq3 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq4 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\n\n\n\ngrid.arrange(rand_qq1, rand_qq2, \n             rand_qq3, rand_qq4, ncol =2)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#randomly-generated-normal-qq-plots-n100",
+    "href": "slides/Day16_bsta511.html#randomly-generated-normal-qq-plots-n100",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Randomly generated Normal QQ plots: n=100",
+    "text": "Randomly generated Normal QQ plots: n=100\n\nNote that stat_qq_line() doesn’t work with randomly generated samples, and thus the code below manually creates the line that the points should be on (which is \\(y=x\\) in this case.)\n\n\n\n\n\nsamplesize &lt;- 100\n\nrand_qq1 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  # line y=x\n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\") \n\nrand_qq2 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq3 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\nrand_qq4 &lt;- ggplot() +\n  stat_qq(aes(sample = rnorm(samplesize))) + \n  geom_abline(intercept = 0, slope = 1, \n              color = \"blue\")\n\n\n\n\ngrid.arrange(rand_qq1, rand_qq2, \n             rand_qq3, rand_qq4, ncol =2)"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#back-to-our-example",
+    "href": "slides/Day16_bsta511.html#back-to-our-example",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Back to our example",
+    "text": "Back to our example\n\n\nResiduals from Life Expectancy vs. Female Literacy Rate Regression\n\nggplot(aug1, \n      aes(sample = .resid)) + \n  stat_qq() + \n  stat_qq_line() \n\n\n\n\n\n\n\n\n\nSimulated QQ plot of Normal Residuals with n = 80\n\n\n\n# number of observations \n# in fitted model\nnobs(model1) \n\n[1] 80\n\n\n\nggplot() +\n  stat_qq(aes(\n    sample = rnorm(80))) + \n  geom_abline(\n    intercept = 0, slope = 1, \n    color = \"blue\")"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#e-equality-of-variance-of-the-residuals-homoscedasticity",
+    "href": "slides/Day16_bsta511.html#e-equality-of-variance-of-the-residuals-homoscedasticity",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "E: Equality of variance of the residuals (Homoscedasticity)",
+    "text": "E: Equality of variance of the residuals (Homoscedasticity)\n\nThe variance or, equivalently, the standard deviation of the responses is equal for all values of x.\nThis is called homoskedasticity (top row)\nIf there is heteroskedasticity (bottom row), then the assumption is not met."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#residual-plot",
+    "href": "slides/Day16_bsta511.html#residual-plot",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Residual plot",
+    "text": "Residual plot\n\n\\(x\\) = explanatory variable from regression model,\n\nor the fitted values for a multiple regression\n\n\\(y\\) = residuals from regression model\n\n\n\n\nnames(aug1)\n\n[1] \".rownames\"                  \"life_expectancy_years_2011\"\n[3] \"female_literacy_rate_2011\"  \".fitted\"                   \n[5] \".resid\"                     \".hat\"                      \n[7] \".sigma\"                     \".cooksd\"                   \n[9] \".std.resid\"                \n\n\n\n\nggplot(aug1, \n       aes(x = female_literacy_rate_2011, \n           y = .resid)) + \n  geom_point() +\n  geom_abline(\n    intercept = 0, \n    slope = 0, \n    color = \"orange\") +\n  labs(title = \"Residual plot\")"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#inference-for-the-population-slope-ci-and-hypothesis-test",
+    "href": "slides/Day16_bsta511.html#inference-for-the-population-slope-ci-and-hypothesis-test",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Inference for the population slope: CI and hypothesis test",
+    "text": "Inference for the population slope: CI and hypothesis test\n\n\nPopulation model\nline + random “noise”\n\\[y = \\beta_0 + \\beta_1 \\cdot x + \\varepsilon\\] with \\(\\varepsilon \\sim N(0,\\sigma)\\)\n\\(\\sigma\\) is the variability (SD) of the residuals\n\nSample best-fit (least-squares) line:\n\\[\\widehat{y} = b_0 + b_1 \\cdot x \\]\nNote: Some sources use \\(\\widehat{\\beta}\\) instead of \\(b\\).\n\n\nConstruct a 95% confidence interval for the population slope \\(\\beta_1\\)\n\n\n\nConduct the hypothesis test\n\n\\[\\begin{align}\nH_0 &: \\beta_1 = 0\\\\\n\\text{vs. } H_A&: \\beta_1 \\neq 0\n\\end{align}\\]\n\nNote: R reports p-values for 2-sided tests"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#ci-for-population-slope",
+    "href": "slides/Day16_bsta511.html#ci-for-population-slope",
+    "title": "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "CI for population slope",
+    "text": "CI for population slope\nRecall the general CI formula:\n\\[\\textrm{Point Estimate} \\pm t^*\\cdot SE_{\\textrm{Point Estimate}}\\]\nFor the CI of the coefficient \\(b_1\\) this translates to\n\\[b_1 \\pm t^*\\cdot SE_{b_1}\\] where \\(t^*\\) is the critical value from a \\(t\\)-distribution with \\(df = n -2\\).\n\nHow is \\(\\text{SE}_{b_1}\\) calculated? See next slide.\n\n\ntidy(model1, conf.int = TRUE)\n\n# A tibble: 2 × 7\n  term                  estimate std.error statistic  p.value conf.low conf.high\n  &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)             50.9      2.66       19.1  3.33e-31   45.6      56.2  \n2 female_literacy_rate…    0.232    0.0315      7.38 1.50e-10    0.170     0.295"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#ci-for-population-slope-beta_1",
+    "href": "slides/Day16_bsta511.html#ci-for-population-slope-beta_1",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "CI for population slope \\(\\beta_1\\)",
+    "text": "CI for population slope \\(\\beta_1\\)\nRecall the general CI formula:\n\\[\\textrm{Point Estimate} \\pm t^*\\cdot SE_{\\textrm{Point Estimate}}\\]\nFor the CI of the coefficient \\(b_1\\) this translates to\n\\[b_1 \\pm t^*\\cdot SE_{b_1}\\] where \\(t^*\\) is the critical value from a \\(t\\)-distribution with \\(df = n -2\\).\n\nHow is \\(\\text{SE}_{b_1}\\) calculated? See next slide.\n\n\ntidy(model1, conf.int = TRUE)\n\n# A tibble: 2 × 7\n  term                  estimate std.error statistic  p.value conf.low conf.high\n  &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)             50.9      2.66       19.1  3.33e-31   45.6      56.2  \n2 female_literacy_rate…    0.232    0.0315      7.38 1.50e-10    0.170     0.295"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#standard-error-of-fitted-slope-b_1",
+    "href": "slides/Day16_bsta511.html#standard-error-of-fitted-slope-b_1",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Standard error of fitted slope \\(b_1\\)",
+    "text": "Standard error of fitted slope \\(b_1\\)\n\n\n\\(\\text{SE}_{b_1}\\) is the variability of the statistic \\(b_1\\)\n\\[\\text{SE}_{b_1} = \\frac{\\frac{s_y}{s_x} \\cdot \\sqrt{1-r^2}}{\\sqrt{n-2}}\\]\n\n\\(s_x\\) and \\(s_y\\) are the sample standard deviations of the explanatory variable \\(x\\) and the response variable \\(y\\)\n\\(r\\) is the sample correlation coefficient between \\(x\\) and \\(y\\)\n\\(n\\) is the sample size, or the number of (complete) pairs of points\n\n\nHow to interpret this formula:\n\n\\(\\frac{s_y}{s_x}\\) is the relationship between the variability of the response and explanatory variables\n\n\\(\\text{SE}_{b_1}\\) is bigger when \\(s_y &gt; s_x\\)\n\n\\(\\sqrt{1-r^2}\\) measures how the two variables relate to each other\n\nIf \\(r=\\pm1\\), then \\(\\sqrt{1-r^2} = 0\\) and thus \\(\\text{SE}_{b_1}=0\\)\nIf \\(r=0\\), then \\(\\sqrt{1-r^2} = 1\\)\n\n\\(\\sqrt{n-2}\\) in the denominator\n\nAs \\(n\\) increases, \\(\\text{SE}_{b_1}\\) decreases and thus our estimate \\(b_1\\) of the population slope \\(\\beta_1\\) is more precise\n\\(n-2\\) is the degrees of freedom of the statistic"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#calculate-ci-for-population-slope-beta_1",
+    "href": "slides/Day16_bsta511.html#calculate-ci-for-population-slope-beta_1",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Calculate CI for population slope \\(\\beta_1\\)",
+    "text": "Calculate CI for population slope \\(\\beta_1\\)\n\n\n\\[b_1 \\pm t^*\\cdot SE_{b_1}\\]\n\nwhere \\(t^*\\) is the \\(t\\)-distribution critical value with \\(df = n -2\\).\n\n\n\ntidy(model1, conf.int = TRUE) %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n50.9278981\n2.66040695\n19.142898\n3.325312e-31\n45.6314348\n56.2243615\n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10\n0.1695284\n0.2948619\n  \n  \n  \n\n\n\n\nSave regression output for the row with the slope’s information:\n\nmodel1_b1 &lt;-tidy(model1) %&gt;% filter(term == \"female_literacy_rate_2011\")\nmodel1_b1 %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10\n  \n  \n  \n\n\n\n\n\n\nSave values needed for CI:\n\nb1 &lt;- model1_b1$estimate\nSE_b1 &lt;- model1_b1$std.error\n\n\nnobs(model1) # sample size n\n\n[1] 80\n\n(tstar &lt;- qt(.975, df = 80-2))\n\n[1] 1.990847\n\n\n\nCompare CI bounds below with the ones in the regression table above.\n\n(CI_LB &lt;- b1 - tstar*SE_b1)\n\n[1] 0.1695284\n\n(CI_UB &lt;- b1 + tstar*SE_b1)\n\n[1] 0.2948619"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#hypothesis-test-for-population-slope-beta_1",
+    "href": "slides/Day16_bsta511.html#hypothesis-test-for-population-slope-beta_1",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Hypothesis test for population slope \\(\\beta_1\\)",
+    "text": "Hypothesis test for population slope \\(\\beta_1\\)\n\n\n\\[\\begin{align}\nH_0 &: \\beta_1 = 0\\\\\n\\text{vs. } H_A&: \\beta_1 \\neq 0\n\\end{align}\\]\n\nThe test statistic for \\(b_1\\) is\n\\[t = \\frac{ b_1 - \\beta_1}{ \\text{SE}_{b_1}} = \\frac{ b_1}{ \\text{SE}_{b_1}}\\]\nwhen we assume \\(H_0: \\beta_1 = 0\\) is true.\n\n\n\ntidy(model1, conf.int = TRUE) %&gt;% gt()\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n50.9278981\n2.66040695\n19.142898\n3.325312e-31\n45.6314348\n56.2243615\n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10\n0.1695284\n0.2948619\n  \n  \n  \n\n\n\n\nCalculate the test statistic using the values in the regression table:\n\n# recall model1_b1 is regression table restricted to b1 row\n(TestStat &lt;- model1_b1$estimate / model1_b1$std.error)\n\n[1] 7.376557\n\n\nCompare this test statistic value to the one from the regression table above"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#p-value-for-testing-population-slope-beta_1",
+    "href": "slides/Day16_bsta511.html#p-value-for-testing-population-slope-beta_1",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "\\(p\\)-value for testing population slope \\(\\beta_1\\)",
+    "text": "\\(p\\)-value for testing population slope \\(\\beta_1\\)\n\nAs usual, the \\(p\\)-value is the probability of obtaining a test statistic just as extreme or more extreme than the observed test statistic assuming the null hypothesis \\(H_0\\) is true.\nTo calculate the \\(p\\)-value, we need to know the probability distribution of the test statistic (the null distribution) assuming \\(H_0\\) is true.\nStatistical theory tells us that the test statistic \\(t\\) can be modeled by a \\(t\\)-distribution with \\(df = n-2\\).\nRecall that this is a 2-sided test:\n\n\n(pv = 2*pt(TestStat, df=80-2, lower.tail=F))\n\n[1] 1.501286e-10\n\n\nCompare the \\(p\\)-value to the one from the regression table below\n\ntidy(model1, conf.int = TRUE) %&gt;% gt()  # compare p-value calculated above to p-value in table\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n50.9278981\n2.66040695\n19.142898\n3.325312e-31\n45.6314348\n56.2243615\n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10\n0.1695284\n0.2948619"
+  },
+  {
+    "objectID": "weeks/week_10.html",
+    "href": "weeks/week_10.html",
+    "title": "Week 10",
+    "section": "",
+    "text": "Retakes for Exams 1 & 2 will be in class on Wed, Nov 29th\n\nExam question topics for retakes (resource on Sakai)\n\nRetake for Exam 3 will be on Fri, Dec 12th; time & place TBD"
+  },
+  {
+    "objectID": "weeks/week_10.html#exam-retakes",
+    "href": "weeks/week_10.html#exam-retakes",
+    "title": "Week 10",
+    "section": "",
+    "text": "Retakes for Exams 1 & 2 will be in class on Wed, Nov 29th\n\nExam question topics for retakes (resource on Sakai)\n\nRetake for Exam 3 will be on Fri, Dec 12th; time & place TBD"
+  },
+  {
+    "objectID": "weeks/week_10.html#day-16",
+    "href": "weeks/week_10.html#day-16",
+    "title": "Week 10",
+    "section": "Day 16",
+    "text": "Day 16\n\nSimple Linear Regression Part 2\nSections 6.3-6.4\n\n\nSlides\n\nhtml\npdf\nSlides with notes\nwebpage\nCode file: qmd, html\n\n\n\nDatasets\nAll datasets can be found on GitHub\n\nlifeexp_femlit_water_2011.csv\n\n\n\nClass discussion\nClass discussion Google doc link\n\nQuestions from HW 9\n\nBook # 5.46, 5.48, R1, 5.44"
+  },
+  {
+    "objectID": "weeks/week_10.html#day-17",
+    "href": "weeks/week_10.html#day-17",
+    "title": "Week 10",
+    "section": "Day 17",
+    "text": "Day 17\n\nNonparametric tests\n\n\nSlides\n\n\n\n\n\n\n\nDatasets\nAll datasets can be found on GitHub"
+  },
+  {
+    "objectID": "weeks/week_10.html#homework",
+    "href": "weeks/week_10.html#homework",
+    "title": "Week 10",
+    "section": "Homework",
+    "text": "Homework\n\nComing soon! HW 9 due on Mon, 11/27\n\nCovers Days 16-17\nFor book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes.\nDo not forget to include a discussion on whether you think the test conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test as instructed."
+  },
+  {
+    "objectID": "weeks/week_10.html#recordings",
+    "href": "weeks/week_10.html#recordings",
+    "title": "Week 10",
+    "section": "Recordings",
+    "text": "Recordings\n\nPre-recorded lessons are on Echo Cloud (aka echo 360 or echo video).\n\nThese can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the Echo Cloud option in the left-side menu.\nThis will redirect you to an echo video page with a list of pre-recorded videos.\n\nIn-class recording links are on Sakai. Navigate to Course Materials -&gt; Schedule with links to in-class recordings. Note that the password to the recordings is at the top of the page."
+  },
+  {
+    "objectID": "weeks/week_10_test.html",
+    "href": "weeks/week_10_test.html",
+    "title": "Week 10",
+    "section": "",
+    "text": "Retakes for Exams 1 & 2 will be in class on Wed, Nov 29th\n\nExam question topics for retakes (resource on Sakai)\n\nRetake for Exam 3 will be on Fri, Dec 12th; time & place TBD"
+  },
+  {
+    "objectID": "weeks/week_10_test.html#exam-retakes",
+    "href": "weeks/week_10_test.html#exam-retakes",
+    "title": "Week 10",
+    "section": "",
+    "text": "Retakes for Exams 1 & 2 will be in class on Wed, Nov 29th\n\nExam question topics for retakes (resource on Sakai)\n\nRetake for Exam 3 will be on Fri, Dec 12th; time & place TBD"
+  },
+  {
+    "objectID": "weeks/week_10_test.html#day-16",
+    "href": "weeks/week_10_test.html#day-16",
+    "title": "Week 10",
+    "section": "Day 16",
+    "text": "Day 16\n\nSimple Linear Regression Part 2\nSections 6.3-6.4\n\n\nSlides\n\nhtml\n\n\n\n\n\n\n\nDatasets\nAll datasets can be found on GitHub\n\nlifeexp_femlit_water_2011.csv\n\n\n\nClass discussion\nClass discussion Google doc link"
+  },
+  {
+    "objectID": "weeks/week_10_test.html#day-17",
+    "href": "weeks/week_10_test.html#day-17",
+    "title": "Week 10",
+    "section": "Day 17",
+    "text": "Day 17\n\nNonparametric tests\n\n\nSlides\n\n\nDatasets\nAll datasets can be found on GitHub\n\n\nClass discussion\nClass discussion Google doc link"
+  },
+  {
+    "objectID": "weeks/week_10_test.html#homework",
+    "href": "weeks/week_10_test.html#homework",
+    "title": "Week 10",
+    "section": "Homework",
+    "text": "Homework\n\nComing soon! HW 9 due on Sat, 12/2\n\nCovers Days 16-17\nFor book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes.\nDo not forget to include a discussion on whether you think the test conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test as instructed."
+  },
+  {
+    "objectID": "weeks/week_10_test.html#recordings",
+    "href": "weeks/week_10_test.html#recordings",
+    "title": "Week 10",
+    "section": "Recordings",
+    "text": "Recordings\n\nPre-recorded lessons are on Echo Cloud (aka echo 360 or echo video).\n\nThese can be accessed in Sakai by navigating to the BSTA 511/611 page and clicking on the Echo Cloud option in the left-side menu.\nThis will redirect you to an echo video page with a list of pre-recorded videos.\n\nIn-class recording links are on Sakai. Navigate to Course Materials -&gt; Schedule with links to in-class recordings. Note that the password to the recordings is at the top of the page."
   }
 ]

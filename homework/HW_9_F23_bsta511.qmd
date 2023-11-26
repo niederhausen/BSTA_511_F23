@@ -1,0 +1,83 @@
+---
+title: "HW 9: BSTA 511-611 F23"
+author: "Your name here - update this!!!!"
+date: "Due 12/2/23"
+format: 
+  html:
+    link-external-newwindow: true
+    toc: true
+    toc_float:
+      collapsed: false
+    number-sections: true
+    number-depth: 3
+    theme: lumen
+    self-contained: true
+    html-math-method: mathjax
+---
+
+```{r}
+#| label: "setup"
+#| include: false
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+**Due 12/2/23**
+
+Download the .qmd file for this assignment from [https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_8_F23_bsta511.qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_8_F23_bsta511.qmd)
+
+
+## Directions {.unnumbered}
+
+* Please upload your homework to Sakai. __Upload both your .qmd code file and the rendered .html file__.
+* For each question, make sure to include all code and resulting output in the html file to support your answers. 
+
+
+### R & LaTeX code {.unnumbered}
+
+* See the .qmd files with the code from class notes for LaTeX and R code.
+* The LaTeX code will make it easier to show your work in computations.
+
+:::{.callout-tip}
+It is a good idea to try rendering your document from time to time as you go along!  Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly.
+:::
+
+
+# Book exercises {.unnumbered}
+
+
+## 6.12 Trends in the residuals {.unnumbered}
+
+
+
+
+
+
+
+# R exercises 
+
+## Load all the packages you need below here. 
+
+```{r}
+
+```
+
+
+## R1: Palmer Penguins ANOVA
+
+
+* Use the `penguins` data from the `palmerpenguins` package.
+    * Don't forget to first __install__ the `palmerpenguins` package
+* You can learn more about the Palmer penguins data at <https://allisonhorst.github.io/palmerpenguins/>
+* We will test whether there are differences in penguins' mean bill depths when comparing different species.
+
+
+```{r}
+library(palmerpenguins)
+data(penguins)
+```
+
+
+
+
+

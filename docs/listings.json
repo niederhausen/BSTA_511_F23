@@ -10,7 +10,8 @@
       "/weeks/week_06.html",
       "/weeks/week_07.html",
       "/weeks/week_08.html",
-      "/weeks/week_09.html"
+      "/weeks/week_09.html",
+      "/weeks/week_10_test.html"
     ]
   },
   {
@@ -31,7 +32,9 @@
       "/slides/Day11_bsta511.html",
       "/slides/Day12_bsta511.html",
       "/slides/Day13_bsta511.html",
-      "/slides/Day14_bsta511.html"
+      "/slides/Day14_bsta511.html",
+      "/slides/Day15_bsta511.html",
+      "/slides/Day16_bsta511.html"
     ]
   },
   {
@@ -44,7 +47,8 @@
       "/homework/HW_5_F23_bsta511.html",
       "/homework/HW_6_F23_bsta511.html",
       "/homework/HW_7_F23_bsta511.html",
-      "/homework/HW_8_F23_bsta511.html"
+      "/homework/HW_8_F23_bsta511.html",
+      "/homework/HW_9_F23_bsta511.html"
     ]
   }
 ]
