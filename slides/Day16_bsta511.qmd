@@ -1,5 +1,5 @@
 ---
-title: "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)"
+title: "Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)"
 subtitle: "BSTA 511/611"
 author: "Meike Niederhausen, PhD"
 institute: "OHSU-PSU School of Public Health"
@@ -66,13 +66,24 @@ theme_set(theme_bw(base_size = 22))
 
 ## Goals for today (Sections 6.3-6.4)
 
-* Simple Linear Regression Part 2 
+Simple Linear Regression Part 2 
 
-+ Best-fit line (aka regression line or least-squares line)
-+ Coefficient interpretation
-+ Prediction
-+ Residuals
-+ LINE assumptions
++ Review of 
+    * best-fit line (aka regression line or least-squares line)
+    * residuals
+    * population model
++ LINE conditions and how to assess them
+    * New diagnostic tools:
+        * Normal QQ plots of residuals
+        * Residual plots
++ Coefficient of determination ($R^2$)
++ Regression inference
+    1. Inference for population [__slope__]{style="color:green"} $\beta_1$
+        * CI & hypothesis test
+    2. CI for mean response $\mu_{Y|x^*}$
+    3. Prediction interval for predicting __individual__ observations
+    + Confidence bands vs. predictions bands
+
 
 ## Life expectancy vs. female adult literacy rate
 
@@ -143,48 +154,6 @@ gapm %>% select(life_expectancy_years_2011, female_literacy_rate_2011) %>%
 :::
 
 
-## Association between life expectancy & female literacy rate
-
-::: columns
-::: {.column width="55%"}
-
-
-```{r}
-#| label: assoc
-#| fig.show: hide
-#| fig.height: 6.0
-#| fig.width: 6.0
-ggplot(gapm, 
-       aes(x = female_literacy_rate_2011,
-           y = life_expectancy_years_2011)) +
-  geom_point() +
-  labs(x = "female literacy rate", 
-       y = "life expectancy",
-       title = "Life expectancy vs. 
-             female literacy rate") +  
-  geom_smooth(method = "lm", 
-              se = FALSE)
-```
-
-* Is there a relationship between the two variables? 
-* Is it positive or negative? 
-* Strong, moderate, or weak? 
-* Is it linear?
-
-:::
-
-::: {.column width="45%"}
-```{r}
-#| ref.label: assoc
-#| echo: false
-#| fig.height: 8.0
-#| fig.width: 8.0
-
-```
-:::
-:::
-
-
 
 ## Regression line = best-fit line
 
@@ -225,6 +194,21 @@ ggplot(gapm, aes(x = female_literacy_rate_2011,
     - We only say that there is an expected increase and not necessarily a causal increase.
 
 
+
+
+## Regression in R: `lm()`, `summary()`, & `tidy()`
+
+```{r}
+model1 <- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,
+                 data = gapm)
+summary(model1)
+
+tidy(model1) %>% gt()
+```
+
+Regression equation for our model:
+
+$$\widehat{\textrm{life expectancy}} = 50.9 + 0.232 \cdot \textrm{female literacy rate} $$
 
 ## Residuals
 
@@ -277,39 +261,11 @@ ggplot(regression_points,
 :::
 :::
 
-## Regression in R: `lm()`, `summary()`, & `tidy()`
-
-```{r}
-model1 <- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,
-                 data = gapm)
-
-summary(model1)
-
-tidy(model1) %>% gt()
-```
-
-
----
-
-## Regression equation
-
-The values in the `estimate` column are the intercept and slope of the regression model.
-
-```{r}
-#| echo: false
-tidy(model1) %>% gt()
-```
-
-
-Generic regression equation:
-
-$$\widehat{y} = b_0 + b_1 \cdot x $$
-
-Regression equation for our model:
-
-$$\widehat{\textrm{life expectancy}} = 50.9 + 0.232 \cdot \textrm{female literacy rate} $$
 
 ## The (population) regresison model
+
+::: columns
+::: {.column width="50%"}
 
 * The (population) regression model is denoted by
 
@@ -317,21 +273,12 @@ $$Y = \beta_0 + \beta_1 \cdot X + \epsilon$$
 
 * $\beta_0$ and $\beta_1$ are unknown population parameters
 * $\epsilon$ (epsilon) is the error about the line
-    * It is assumed to be a random variable with a 
-        * normal distribution with
-        * mean 0 and
-        * constant variance $\sigma^2$
+    * It is assumed to be a random variable: 
+        * $\epsilon \sim N(0, \sigma^2)$
+        * variance $\sigma^2$ is constant
+:::
 
-* The __line__ is the average (expected) value of $Y$ given a value of $x$: $E(Y|x)$.
-
-* The point estimates based on a sample are denoted by $b_0, b_1, s_{residuals}^2$
-    * Note: also common notation is $\widehat{\beta}_0, \widehat{\beta}_1, \widehat{\sigma}^2$
-    
-    
-    
-## The (population) regresison model visually
-
-$$Y = \beta_0 + \beta_1 \cdot X + \epsilon, \text{ where } \epsilon \sim N(0, \sigma^2)$$
+::: {.column width="50%"}
 
 ![](/img_slides/OLSassumptions-1.png){fig-align="center"}
 
@@ -339,6 +286,13 @@ $$Y = \beta_0 + \beta_1 \cdot X + \epsilon, \text{ where } \epsilon \sim N(0, \s
 <https://bookdown.org/roback/bookdown-bysh/ch-MLRreview.html#ordinary-least-squares-ols-assumptions>
 :::
 
+:::
+:::
+
+* The [__line__]{style="color:blue"} is the average (expected) value of $Y$ given a value of $x$: [$E(Y|x)$]{style="color:blue"}.
+
+* The point estimates for $\beta_0$ and $\beta_1$ based on a sample are denoted by $b_0, b_1, s_{residuals}^2$
+    * Note: also common notation is $\widehat{\beta}_0, \widehat{\beta}_1, \widehat{\sigma}^2$
 
 
 
@@ -403,8 +357,9 @@ ggplot(gapm, aes(x = female_literacy_rate_2011,
 # N: Normality of the residuals
 
 * Extract residuals from regression model in R
-* Distribution plots of residuals
-* QQ plots
+* Diagnostic tools:
+    * Distribution plots of residuals
+    * QQ plots
 
 ## N: Normality of the residuals
 
@@ -576,8 +531,10 @@ ggplot(aug1, aes(sample = .resid)) +
 How "_good_" we can expect a QQ plot to look depends on the sample size. 
 
 * The QQ plots on the next slides are randomly generated
-    * using random samples from actual normal distributions
+    * using random samples from actual standard normal distributions $N(0,1)$.
+
 * Thus, all the points in the QQ plots __should theoretically__ fall in a line
+
 * However, there is sampling variability...
 
 
@@ -805,7 +762,7 @@ ggplot() +
 # E: Equality of variance of the residuals {.nostretch}
 
 * Homoscedasticity
-* Check using a __residual plot__
+* Diagnostic tool: __residual plot__
 
 ![](/img_slides/OLSassumptions-1.png){fig-align="center" width=60%}
 
@@ -816,8 +773,8 @@ ggplot() +
 
 ## Residual plot
 
-* $x$ = explanatory variable from regression model,  
-    * or the fitted values for a multiple regression
+* $x$ = explanatory variable from regression model  
+    * (or the fitted values for a multiple regression)
 * $y$ = residuals from regression model
 
 
@@ -937,6 +894,11 @@ r^2
 
 # Regression inference
 
+1. Inference for population [__slope__]{style="color:green"} $\beta_1$
+2. CI for mean response $\mu_{Y|x^*}$
+3. Prediction interval for predicting __individual__ observations
+
+
 ## Inference for population [__slope__]{style="color:green"} $\beta_1$
 
 
@@ -960,7 +922,7 @@ tidy(model1, conf.int = TRUE) %>% gt() # conf.int = TRUE part is new!
 
 
 :::{.callout-note}
-* We can also test/ find CI for the population intercept
+* We can also test & calculate CI for the population intercept
 * This will be covered in BSTA 512
 :::
 
@@ -1067,7 +1029,7 @@ $\text{SE}_{b_1}$ is the __variability__ of the statistic $b_1$
 ```{r}
 glance(model1)
 
-# standard deviation of the residuals
+# standard deviation of the residuals (Residual standard error in summary() output)
 (s_resid <- glance(model1)$sigma)
 
 # standard deviation of x's
@@ -1192,7 +1154,10 @@ Compare the $p$-value to the one from the regression table below
 tidy(model1, conf.int = TRUE) %>% gt()  # compare p-value calculated above to p-value in table
 ```
 
-# Prediction
+# Prediction (& inference)
+
+1. Prediction for mean response 
+2. Prediction for new individual observation
 
 ## Prediction with regression line
 
@@ -1398,7 +1363,7 @@ ggplot(gapm,
 
 ## Width of confidence bands for mean response
 
-* For what values of x are the confidence bands (intervals) narrowest? widest?
+* For what values of $x^*$ are the confidence bands (intervals) narrowest? widest?
 
 \begin{align}
 \widehat{E[Y|x^*]} &\pm t_{n-2}^* \cdot SE_{\widehat{E[Y|x^*]}}\\
@@ -1527,6 +1492,7 @@ model1_pred_bands <- augment(model1, interval = "prediction")
 # take a look at new object:
 names(model1_pred_bands) 
 
+# glimpse of select variables of interest:
 model1_pred_bands %>% 
   select(life_expectancy_years_2011, female_literacy_rate_2011, 
          .fitted:.upper) %>% 
