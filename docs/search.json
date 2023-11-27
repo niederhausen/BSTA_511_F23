@@ -12268,14 +12268,14 @@
     "href": "slides/Day16_bsta511.html#the-population-regresison-model",
     "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
     "section": "The (population) regresison model",
-    "text": "The (population) regresison model\n\nThe (population) regression model is denoted by\n\n\\[y = \\beta_0 + \\beta_1 \\cdot x + \\epsilon\\]\n\n\\(\\beta_0\\) and \\(\\beta_1\\) are unknown population parameters\n\\(\\epsilon\\) (epsilon) is the error about the line\n\nIt is assumed to be a random variable with a\n\nnormal distribution with\nmean 0 and\nconstant variance \\(\\sigma^2\\)\n\n\nThe line is the average (expected) value of \\(Y\\) given a value of \\(x\\): \\(E(Y|x)\\).\nThe point estimates based on a sample are denoted by \\(b_0, b_1, s_{residuals}^2\\)\n\nNote: also common notation is \\(\\widehat{\\beta}_0, \\widehat{\\beta}_1, \\widehat{\\sigma}^2\\)"
+    "text": "The (population) regresison model\n\nThe (population) regression model is denoted by\n\n\\[Y = \\beta_0 + \\beta_1 \\cdot X + \\epsilon\\]\n\n\\(\\beta_0\\) and \\(\\beta_1\\) are unknown population parameters\n\\(\\epsilon\\) (epsilon) is the error about the line\n\nIt is assumed to be a random variable with a\n\nnormal distribution with\nmean 0 and\nconstant variance \\(\\sigma^2\\)\n\n\nThe line is the average (expected) value of \\(Y\\) given a value of \\(x\\): \\(E(Y|x)\\).\nThe point estimates based on a sample are denoted by \\(b_0, b_1, s_{residuals}^2\\)\n\nNote: also common notation is \\(\\widehat{\\beta}_0, \\widehat{\\beta}_1, \\widehat{\\sigma}^2\\)"
   },
   {
     "objectID": "slides/Day16_bsta511.html#the-population-regresison-model-visually",
     "href": "slides/Day16_bsta511.html#the-population-regresison-model-visually",
     "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
     "section": "The (population) regresison model visually",
-    "text": "The (population) regresison model visually\n\\[y = \\beta_0 + \\beta_1 \\cdot x + \\epsilon, \\text{ where } \\epsilon \\sim N(0, \\sigma^2)\\]\n\n\nhttps://bookdown.org/roback/bookdown-bysh/ch-MLRreview.html#ordinary-least-squares-ols-assumptions"
+    "text": "The (population) regresison model visually\n\\[Y = \\beta_0 + \\beta_1 \\cdot X + \\epsilon, \\text{ where } \\epsilon \\sim N(0, \\sigma^2)\\]\n\n\nhttps://bookdown.org/roback/bookdown-bysh/ch-MLRreview.html#ordinary-least-squares-ols-assumptions"
   },
   {
     "objectID": "slides/Day16_bsta511.html#what-are-the-line-conditions",
@@ -12681,7 +12681,7 @@
     "href": "slides/Day16_bsta511.html#inference-for-the-population-slope-ci-and-hypothesis-test",
     "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
     "section": "Inference for the population slope: CI and hypothesis test",
-    "text": "Inference for the population slope: CI and hypothesis test\n\n\nPopulation model\nline + random “noise”\n\\[y = \\beta_0 + \\beta_1 \\cdot x + \\varepsilon\\] with \\(\\varepsilon \\sim N(0,\\sigma)\\)\n\\(\\sigma\\) is the variability (SD) of the residuals\n\nSample best-fit (least-squares) line:\n\\[\\widehat{y} = b_0 + b_1 \\cdot x \\]\nNote: Some sources use \\(\\widehat{\\beta}\\) instead of \\(b\\).\n\n\nConstruct a 95% confidence interval for the population slope \\(\\beta_1\\)\n\n\n\nConduct the hypothesis test\n\n\\[\\begin{align}\nH_0 &: \\beta_1 = 0\\\\\n\\text{vs. } H_A&: \\beta_1 \\neq 0\n\\end{align}\\]\n\nNote: R reports p-values for 2-sided tests"
+    "text": "Inference for the population slope: CI and hypothesis test\n\n\nPopulation model\nline + random “noise”\n\\[Y = \\beta_0 + \\beta_1 \\cdot X + \\varepsilon\\] with \\(\\varepsilon \\sim N(0,\\sigma)\\)\n\\(\\sigma\\) is the variability (SD) of the residuals\n\nSample best-fit (least-squares) line:\n\\[\\widehat{y} = b_0 + b_1 \\cdot x \\]\nNote: Some sources use \\(\\widehat{\\beta}\\) instead of \\(b\\).\n\n\nConstruct a 95% confidence interval for the population slope \\(\\beta_1\\)\n\n\n\nConduct the hypothesis test\n\n\\[\\begin{align}\nH_0 &: \\beta_1 = 0\\\\\n\\text{vs. } H_A&: \\beta_1 \\neq 0\n\\end{align}\\]\n\nNote: R reports p-values for 2-sided tests"
   },
   {
     "objectID": "slides/Day16_bsta511.html#ci-for-population-slope",
@@ -12702,7 +12702,7 @@
     "href": "slides/Day16_bsta511.html#standard-error-of-fitted-slope-b_1",
     "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
     "section": "Standard error of fitted slope \\(b_1\\)",
-    "text": "Standard error of fitted slope \\(b_1\\)\n\n\n\\[\\text{SE}_{b_1} = \\frac{s_{\\textrm{residuals}}}{s_x\\sqrt{n-1}}\\]\n\n\\(\\text{SE}_{b_1}\\) is the variability of the statistic \\(b_1\\)\n\n\n\n\n\n\n\\(s_{\\textrm{residuals}}^2\\) is the sd of the residuals\n\n\n\n\n\n\\(s_x\\) is the sample sd of the explanatory variable \\(x\\)\n\n\n\n\n\n\\(n\\) is the sample size, or the number of (complete) pairs of points\n\n\n\n\n\nglance(model1)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     0.411         0.403  6.14      54.4 1.50e-10     1  -258.  521.  529.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;\n\n# standard deviation of the residuals\n(s_resid &lt;- glance(model1)$sigma)\n\n[1] 6.142157\n\n# standard deviation of x's\n(s_x &lt;- sd(gapm$female_literacy_rate_2011))\n\n[1] 21.95371\n\n# number of pairs of complete observations\n(n &lt;- nobs(model1))\n\n[1] 80\n\n(se_b1 &lt;- s_resid/(s_x * sqrt(n-1))) # compare se in regression output\n\n[1] 0.03147744"
+    "text": "Standard error of fitted slope \\(b_1\\)\n\n\n\\[\\text{SE}_{b_1} = \\frac{s_{\\textrm{residuals}}}{s_x\\sqrt{n-1}}\\]\n\n\\(\\text{SE}_{b_1}\\) is the variability of the statistic \\(b_1\\)\n\n\n\n\n\n\n\\(s_{\\textrm{residuals}}^2\\) is the sd of the residuals\n\n\n\n\n\n\\(s_x\\) is the sample sd of the explanatory variable \\(x\\)\n\n\n\n\n\n\\(n\\) is the sample size, or the number of (complete) pairs of points\n\n\n\n\n\nglance(model1)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     0.411         0.403  6.14      54.4 1.50e-10     1  -258.  521.  529.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;\n\n# standard deviation of the residuals\n(s_resid &lt;- glance(model1)$sigma)\n\n[1] 6.142157\n\n# standard deviation of x's\n(s_x &lt;- sd(gapm$female_literacy_rate_2011))\n\n[1] 21.95371\n\n# number of pairs of complete observations\n(n &lt;- nobs(model1))\n\n[1] 80\n\n(se_b1 &lt;- s_resid/(s_x * sqrt(n-1))) # compare to SE in regression output\n\n[1] 0.03147744"
   },
   {
     "objectID": "slides/Day16_bsta511.html#calculate-ci-for-population-slope-beta_1",
@@ -12836,5 +12836,152 @@
     "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
     "section": "Association between life expectancy & female literacy rate",
     "text": "Association between life expectancy & female literacy rate\n\n\n\nggplot(gapm, \n       aes(x = female_literacy_rate_2011,\n           y = life_expectancy_years_2011)) +\n  geom_point() +\n  labs(x = \"female literacy rate\", \n       y = \"life expectancy\",\n       title = \"Life expectancy vs. \n             female literacy rate\") +  \n  geom_smooth(method = \"lm\", \n              se = FALSE)\n\n\nIs there a relationship between the two variables?\nIs it positive or negative?\nStrong, moderate, or weak?\nIs it linear?"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#inference-for-slope",
+    "href": "slides/Day16_bsta511.html#inference-for-slope",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Inference for slope",
+    "text": "Inference for slope\n\n# Fit regression model:\nmodel1 &lt;- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,\n                 data = gapm)\n# Get regression table:\ntidy(model1, conf.int = TRUE) %&gt;% gt() # conf.int = TRUE part is new! \n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n50.9278981\n2.66040695\n19.142898\n3.325312e-31\n45.6314348\n56.2243615\n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10\n0.1695284\n0.2948619\n  \n  \n  \n\n\n\n\n\\[\\begin{align}\n\\widehat{y} =& b_0 + b_1 \\cdot x\\\\\n\\widehat{\\text{life expectancy}} =& 50.9 + 0.232 \\cdot \\text{female literacy rate}\n\\end{align}\\]\n\nWhat are \\(H_0\\) and \\(H_A\\)?\nHow do we calculate the standard error, statistic, p-value, and CI?\n\n\n\n\n\n\n\nNote\n\n\n\nWe can also test/ find CI for the population intercept\nThis will be covered in BSTA 512"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#inference-for-population-slope-beta_1",
+    "href": "slides/Day16_bsta511.html#inference-for-population-slope-beta_1",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Inference for population slope \\(\\beta_1\\)",
+    "text": "Inference for population slope \\(\\beta_1\\)\n\n# Fit regression model:\nmodel1 &lt;- lm(life_expectancy_years_2011 ~ female_literacy_rate_2011,\n                 data = gapm)\n# Get regression table:\ntidy(model1, conf.int = TRUE) %&gt;% gt() # conf.int = TRUE part is new! \n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n      conf.low\n      conf.high\n    \n  \n  \n    (Intercept)\n50.9278981\n2.66040695\n19.142898\n3.325312e-31\n45.6314348\n56.2243615\n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10\n0.1695284\n0.2948619\n  \n  \n  \n\n\n\n\n\\[\\begin{align}\n\\widehat{y} =& b_0 + b_1 \\cdot x\\\\\n\\widehat{\\text{life expectancy}} =& 50.9 + 0.232 \\cdot \\text{female literacy rate}\n\\end{align}\\]\n\nWhat are \\(H_0\\) and \\(H_A\\)?\nHow do we calculate the standard error, statistic, p-value, and CI?\n\n\n\n\n\n\n\nNote\n\n\n\nWe can also test/ find CI for the population intercept\nThis will be covered in BSTA 512"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#prediction-with-regression-line",
+    "href": "slides/Day16_bsta511.html#prediction-with-regression-line",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Prediction with regression line",
+    "text": "Prediction with regression line\n\n\n\n\n\n\n  \n    \n    \n      term\n      estimate\n      std.error\n      statistic\n      p.value\n    \n  \n  \n    (Intercept)\n50.9278981\n2.66040695\n19.142898\n3.325312e-31\n    female_literacy_rate_2011\n0.2321951\n0.03147744\n7.376557\n1.501286e-10\n  \n  \n  \n\n\n\n\n\\[\\widehat{\\textrm{life expectancy}} = 50.9 + 0.232 \\cdot \\textrm{female literacy rate} \\]\nWhat is the predicted life expectancy for a country with female literacy rate 60%?\n\\[\\widehat{\\textrm{life expectancy}} = 50.9 + 0.232 \\cdot 60 = 64.82\\]\n\n(y_60 &lt;- 50.9 + 0.232*60)\n\n[1] 64.82\n\n\n\n\nHow do we interpret the predicted value?\nHow variable is it?"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#prediction-with-regression-line-1",
+    "href": "slides/Day16_bsta511.html#prediction-with-regression-line-1",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Prediction with regression line",
+    "text": "Prediction with regression line\n\n\nRecall the population model:\nline + random “noise”\n\\[Y = \\beta_0 + \\beta_1 \\cdot X + \\varepsilon\\] with \\(\\varepsilon \\sim N(0,\\sigma)\\)\n\\(\\sigma\\) is the variability (SD) of the residuals\n\n\nWhen we take the expected value, at a given value \\(x^*\\), we have that the predicted response is the average expected response at \\(x^*\\):\n\n\\[\\widehat{E[Y|x^*]} = b_0 + b_1 x^*\\]\n\n\n\n\n\n\n\n\n\nThese are the points on the regression line.\nThe mean responses has variability, and we can calculate a CI for it, for every value of \\(x^*\\)."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#ci-for-mean-response-mu_yx",
+    "href": "slides/Day16_bsta511.html#ci-for-mean-response-mu_yx",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "CI for mean response \\(\\mu_{Y|x^*}\\)",
+    "text": "CI for mean response \\(\\mu_{Y|x^*}\\)\n\\[\\widehat{E[Y|x^*]} \\pm t_{n-2}^* \\cdot SE_{\\widehat{E[Y|x^*]}}\\]\n\n\\(SE_{\\widehat{E[Y|x^*]}}\\) is calculated using\n\n\\[SE_{\\widehat{E[Y|x^*]}} = s_{residuals} \\sqrt{\\frac{1}{n} + \\frac{(x^* - \\bar{x})^2}{(n-1)s_x^2}}\\]\n\n\\(\\widehat{E[Y|x^*]}\\) is the predicted value at the specified point \\(x^*\\) of the explanatory variable\n\\(s_{\\textrm{residuals}}^2\\) is the sd of the residuals\n\\(n\\) is the sample size, or the number of (complete) pairs of points\n\\(\\bar{x}\\) is the sample mean of the explanatory variable \\(x\\)\n\\(s_x\\) is the sample sd of the explanatory variable \\(x\\)\n\n\n\nRecall that \\(t_{n-2}^*\\) is calculated using qt() and depends on the confidence level."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#example-ci-for-mean-response-mu_yx",
+    "href": "slides/Day16_bsta511.html#example-ci-for-mean-response-mu_yx",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Example: CI for mean response \\(\\mu_{Y|x^*}\\)",
+    "text": "Example: CI for mean response \\(\\mu_{Y|x^*}\\)\nFind the 95% CI for the mean life expectancy when the female literacy rate is 60.\n\n\\[\\begin{align}\n\\widehat{E[Y|x^*]} &\\pm t_{n-2}^* \\cdot SE_{\\widehat{E[Y|x^*]}}\\\\\n64.8596 &\\pm 1.990847 \\cdot s_{residuals} \\sqrt{\\frac{1}{n} + \\frac{(x^* - \\bar{x})^2}{(n-1)s_x^2}}\\\\\n64.8596 &\\pm 1.990847 \\cdot 6.142157 \\sqrt{\\frac{1}{80} + \\frac{(60 - 81.65375)^2}{(80-1)21.95371^2}}\\\\\n64.8596 &\\pm 1.990847 \\cdot 0.9675541\\\\\n64.8596 &\\pm 1.926252\\\\\n(62.93335 &, 66.78586)\n\\end{align}\\]\n\n\n\n\n\n(Y60 &lt;- 50.9278981 + 0.2321951 * 60)\n\n[1] 64.8596\n\n(tstar &lt;- qt(.975, df = 78))\n\n[1] 1.990847\n\n(s_resid &lt;- glance(model1)$sigma)\n\n[1] 6.142157\n\n\n\n\n(n &lt;- nobs(model1))\n\n[1] 80\n\n(mx &lt;- mean(gapm$female_literacy_rate_2011))\n\n[1] 81.65375\n\n(s_x &lt;- sd(gapm$female_literacy_rate_2011))\n\n[1] 21.95371\n\n\n\n\n\n(SE_Yx &lt;- s_resid *sqrt(1/n + (60 - mx)^2/((n-1)*s_x^2)))\n\n[1] 0.9675541\n\n\n\n\n\n(MOE_Yx &lt;- SE_Yx*tstar)\n\n[1] 1.926252\n\n\n\n\n\n\nY60 - MOE_Yx\n\n[1] 62.93335\n\n\n\n\n\n\nY60 + MOE_Yx\n\n[1] 66.78586"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#using-r",
+    "href": "slides/Day16_bsta511.html#using-r",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Using R",
+    "text": "Using R\n\nnewdata\n\n  female_literacy_rate_2011\n1                        40\n2                        60\n3                        80\n\npredict(model1, \n        newdata=newdata, \n        interval=\"prediction\")\n\n       fit      lwr      upr\n1 60.21570 47.63758 72.79382\n2 64.85961 52.48072 77.23849\n3 69.50351 57.19879 81.80823"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#confidence-bands",
+    "href": "slides/Day16_bsta511.html#confidence-bands",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Confidence bands",
+    "text": "Confidence bands\n\nOften we plot the CI for many values of X, creating confidence bands\nThe confidence bands are what ggplot creates when we set se = TRUE within geom_smooth\nFor what values of x are the confidence bands (intervals) narrowest?\n\n\nggplot(gapm,\n       aes(x=female_literacy_rate_2011, \n           y=life_expectancy_years_2011)) +\n  geom_point()+\n  geom_smooth(method = lm, se=TRUE)+\n  ggtitle(\"Life expectancy vs. female literacy rate\")"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#prediction-interval-for-predicting-individual-values",
+    "href": "slides/Day16_bsta511.html#prediction-interval-for-predicting-individual-values",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Prediction interval for predicting individual values",
+    "text": "Prediction interval for predicting individual values\n\nWe do not call this interval a CI since Y is a random variables instead of a parameter\nThe form is similar to a CI though:\n\n\\[\\widehat{Y}_{x^*} \\pm t_{n-2}^* \\cdot s_{residuals} \\sqrt{1 + \\frac{1}{n} + \\frac{(x^* - \\bar{x})^2}{(n-1)s_x^2}}\\]\n\nNote that the only difference to the CI for a mean value of y is the additional 1+ under the square root.\n\nThus the width is wider!\n\n\nExample: Prediction interval\nFind the 95% prediction interval for the life expectancy when the female literacy rate is 60.\n\\[\\begin{align}\n\\widehat{Y}_{x^*} &\\pm t_{n-2}^* \\cdot s_{residuals} \\sqrt{1 + \\frac{1}{n} + \\frac{(x^* - \\bar{x})^2}{(n-1)s_x^2}}\\\\\n64.8596 &\\pm 1.990847 \\cdot 6.142157 \\sqrt{1+\\frac{1}{80} + \\frac{(60 - 81.65375)^2}{(80-1)21.95371^2}}\\\\\n(52.44112 &, 77.19888)\n\\end{align}\\]\n\n(Y60 &lt;- 50.9278981 + 0.2321951 * 60)\n\n[1] 64.8596\n\n(tstar &lt;- qt(.975, df = 78))\n\n[1] 1.990847\n\nsd(gapm$female_literacy_rate_2011, na.rm = T)\n\n[1] 21.95371\n\nmean(gapm$female_literacy_rate_2011, na.rm = T)\n\n[1] 81.65375\n\n(pred_SE_Yx &lt;- 6.142157 *sqrt(1 + 1/80 + (60 - 81.65375)^2/((80-1)*21.95371^2)))\n\n[1] 6.217898\n\n(pred_MOE_Yx &lt;- pred_SE_Yx*tstar)\n\n[1] 12.37888\n\nY60 - pred_MOE_Yx\n\n[1] 52.48072\n\nY60 + pred_MOE_Yx\n\n[1] 77.23849\n\n\nUsing R\n\nnewdata\n\n  female_literacy_rate_2011\n1                        40\n2                        60\n3                        80\n\npredict(model1, \n        newdata=newdata, \n        interval=\"prediction\")\n\n       fit      lwr      upr\n1 60.21570 47.63758 72.79382\n2 64.85961 52.48072 77.23849\n3 69.50351 57.19879 81.80823\n\n\nPrediction bands\nCreate a scatterplot with the regression line, 95% confidence bands, and 95% prediction bands.\n\nnames(model1)\n\n [1] \"coefficients\"  \"residuals\"     \"effects\"       \"rank\"         \n [5] \"fitted.values\" \"assign\"        \"qr\"            \"df.residual\"  \n [9] \"xlevels\"       \"call\"          \"terms\"         \"model\"        \n\n# data used to create the regression model are stored in `model`\n# Useful since rows with missing values already removed\nhead(model1$model)  \n\n  life_expectancy_years_2011 female_literacy_rate_2011\n1                       56.7                      13.0\n2                       76.7                      95.7\n3                       60.9                      58.6\n4                       76.9                      99.4\n5                       76.0                      97.9\n6                       73.8                      99.5\n\npred &lt;- predict(model1, \n                interval=\"prediction\")\nhead(pred)\n\n       fit      lwr      upr\n1 53.94643 40.91166 66.98121\n2 73.14897 60.81324 85.48470\n3 64.53453 52.14572 76.92334\n4 74.00809 61.65365 86.36253\n5 73.65980 61.31347 86.00613\n6 74.03131 61.67631 86.38632\n\n# cbind is column bind to merge datasets together\ndata_pred_bands &lt;- cbind(model1$model, pred)\nglimpse(data_pred_bands)\n\nRows: 80\nColumns: 5\n$ life_expectancy_years_2011 &lt;dbl&gt; 56.7, 76.7, 60.9, 76.9, 76.0, 73.8, 71.0, 7…\n$ female_literacy_rate_2011  &lt;dbl&gt; 13.0, 95.7, 58.6, 99.4, 97.9, 99.5, 53.4, 9…\n$ fit                        &lt;dbl&gt; 53.94643, 73.14897, 64.53453, 74.00809, 73.…\n$ lwr                        &lt;dbl&gt; 40.91166, 60.81324, 52.14572, 61.65365, 61.…\n$ upr                        &lt;dbl&gt; 66.98121, 85.48470, 76.92334, 86.36253, 86.…\n\nggplot(data_pred_bands, \n       aes(x=female_literacy_rate_2011,\n           y=life_expectancy_years_2011)) +\n  geom_point() +\n  geom_smooth(method=lm) +\n  geom_line(aes(y=lwr), \n            color=\"violet\", \n            linetype=\"dashed\")+\n  geom_line(aes(y=upr), \n            color=\"violet\", \n            linetype=\"dashed\")"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#example-using-r-for-ci-for-mean-response-mu_yx",
+    "href": "slides/Day16_bsta511.html#example-using-r-for-ci-for-mean-response-mu_yx",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Example: Using R for CI for mean response \\(\\mu_{Y|x^*}\\)",
+    "text": "Example: Using R for CI for mean response \\(\\mu_{Y|x^*}\\)\nFind the 95% CI’s for the mean life expectancy when the female literacy rate is 40, 60, and 80.\n\nUse the base R predict() function\nRequires specification of a newdata “value”\n\nThe newdata value is \\(x^*\\)\nThis has to be in the format of a data frame though\nwith column name identical to the predictor variable in the model\n\n\n\nnewdata &lt;- data.frame(female_literacy_rate_2011 = c(40, 60, 80)) \nnewdata\n\n  female_literacy_rate_2011\n1                        40\n2                        60\n3                        80\n\n\n\n\n\npredict(model1, \n        newdata=newdata, \n        interval=\"confidence\")\n\n       fit      lwr      upr\n1 60.21570 57.26905 63.16236\n2 64.85961 62.93335 66.78586\n3 69.50351 68.13244 70.87457\n\n\n\nInterpretation\nWe are 95% confident that the average life expectancy for a country with a 60% female literacy rate will be between 62.9 and 66.8 years."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#width-of-confidence-bands",
+    "href": "slides/Day16_bsta511.html#width-of-confidence-bands",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Width of confidence bands",
+    "text": "Width of confidence bands\n\nFor what values of x are the confidence bands (intervals) narrowest? widest?\n\n\\[\\begin{align}\n\\widehat{E[Y|x^*]} &\\pm t_{n-2}^* \\cdot SE_{\\widehat{E[Y|x^*]}}\\\\\n\\widehat{E[Y|x^*]} &\\pm t_{n-2}^* \\cdot s_{residuals} \\sqrt{\\frac{1}{n} + \\frac{(x^* - \\bar{x})^2}{(n-1)s_x^2}}\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#confidence-bands-for-mean-response",
+    "href": "slides/Day16_bsta511.html#confidence-bands-for-mean-response",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Confidence bands for mean response",
+    "text": "Confidence bands for mean response\n\nOften we plot the CI for many values of X, creating confidence bands\nThe confidence bands are what ggplot creates when we set se = TRUE within geom_smooth\nFor what values of x are the confidence bands (intervals) narrowest?\n\n\nggplot(gapm,\n       aes(x=female_literacy_rate_2011, \n           y=life_expectancy_years_2011)) +\n  geom_point()+\n  geom_smooth(method = lm, se=TRUE)+\n  ggtitle(\"Life expectancy vs. female literacy rate\")"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#width-of-confidence-bands-for-mean-response",
+    "href": "slides/Day16_bsta511.html#width-of-confidence-bands-for-mean-response",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Width of confidence bands for mean response",
+    "text": "Width of confidence bands for mean response\n\nFor what values of x are the confidence bands (intervals) narrowest? widest?\n\n\\[\\begin{align}\n\\widehat{E[Y|x^*]} &\\pm t_{n-2}^* \\cdot SE_{\\widehat{E[Y|x^*]}}\\\\\n\\widehat{E[Y|x^*]} &\\pm t_{n-2}^* \\cdot s_{residuals} \\sqrt{\\frac{1}{n} + \\frac{(x^* - \\bar{x})^2}{(n-1)s_x^2}}\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#prediction-of-new-value-of-y-at-x",
+    "href": "slides/Day16_bsta511.html#prediction-of-new-value-of-y-at-x",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Prediction of new value of Y at \\(x^*\\)",
+    "text": "Prediction of new value of Y at \\(x^*\\)\n\nWe can use the regression equation to predict values of Y given X.\n\nRegression equation for our model:\n\n\n\\[\\widehat{\\textrm{life expectancy}} = 50.9 + 0.232 \\cdot \\textrm{female literacy rate} \\]\n\nWhat do we predict a country’s life expectancy to be when its female literacy rate is 60?\n\n\n(Y60 &lt;- 50.9278981 + 0.2321951 * 60)\n\n[1] 64.8596"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#prediction-interval-for-predicting-individual-observations",
+    "href": "slides/Day16_bsta511.html#prediction-interval-for-predicting-individual-observations",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Prediction interval for predicting individual observations",
+    "text": "Prediction interval for predicting individual observations\n\nWe do not call this interval a CI since \\(Y\\) is a random variable instead of a parameter\nThe form is similar to a CI though:\n\n\\[\\widehat{Y|x^*} \\pm t_{n-2}^* \\cdot s_{residuals} \\sqrt{1 + \\frac{1}{n} + \\frac{(x^* - \\bar{x})^2}{(n-1)s_x^2}}\\]\n\nNote that the only difference to the CI for a mean value of y is the additional 1+ under the square root.\n\nThus the width is wider!"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#example-prediction-interval",
+    "href": "slides/Day16_bsta511.html#example-prediction-interval",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Example: Prediction interval",
+    "text": "Example: Prediction interval\nFind the 95% prediction interval for the life expectancy when the female literacy rate is 60.\n\\[\\begin{align}\n\\widehat{Y|x^*} &\\pm t_{n-2}^* \\cdot s_{residuals} \\sqrt{1 + \\frac{1}{n} + \\frac{(x^* - \\bar{x})^2}{(n-1)s_x^2}}\\\\\n64.8596 &\\pm 1.990847 \\cdot 6.142157 \\sqrt{1+\\frac{1}{80} + \\frac{(60 - 81.65375)^2}{(80-1)21.95371^2}}\\\\\n(52.48072 &, 77.23849)\n\\end{align}\\]\n\n\n\n\n(Y60 &lt;- 50.9278981 + 0.2321951 * 60)\n\n[1] 64.8596\n\n(tstar &lt;- qt(.975, df = 78))\n\n[1] 1.990847\n\n(s_resid &lt;- glance(model1)$sigma)\n\n[1] 6.142157\n\n\n\n\n(n &lt;- nobs(model1))\n\n[1] 80\n\n(mx &lt;- mean(gapm$female_literacy_rate_2011))\n\n[1] 81.65375\n\n(s_x &lt;- sd(gapm$female_literacy_rate_2011))\n\n[1] 21.95371\n\n\n\n\n\n(SE_Ypred &lt;- s_resid *sqrt(1 + 1/n + (60 - mx)^2/((n-1)*s_x^2)))\n\n[1] 6.217898\n\n\n\n\n\n(MOE_Ypred &lt;- SE_Ypred*tstar)\n\n[1] 12.37888\n\n\n\n\n\n\nY60 - MOE_Ypred\n\n[1] 52.48072\n\n\n\n\n\n\nY60 + MOE_Ypred\n\n[1] 77.23849"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#prediction-bands",
+    "href": "slides/Day16_bsta511.html#prediction-bands",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Prediction bands",
+    "text": "Prediction bands\nCreate a scatterplot with the regression line, 95% confidence bands, and 95% prediction bands.\n\nnames(model1)\n\n [1] \"coefficients\"  \"residuals\"     \"effects\"       \"rank\"         \n [5] \"fitted.values\" \"assign\"        \"qr\"            \"df.residual\"  \n [9] \"xlevels\"       \"call\"          \"terms\"         \"model\"        \n\n# data used to create the regression model are stored in `model`\n# Useful since rows with missing values already removed\nhead(model1$model)  \n\n  life_expectancy_years_2011 female_literacy_rate_2011\n1                       56.7                      13.0\n2                       76.7                      95.7\n3                       60.9                      58.6\n4                       76.9                      99.4\n5                       76.0                      97.9\n6                       73.8                      99.5\n\npred &lt;- predict(model1, \n                interval=\"prediction\")\nhead(pred)\n\n       fit      lwr      upr\n1 53.94643 40.91166 66.98121\n2 73.14897 60.81324 85.48470\n3 64.53453 52.14572 76.92334\n4 74.00809 61.65365 86.36253\n5 73.65980 61.31347 86.00613\n6 74.03131 61.67631 86.38632\n\n# cbind is column bind to merge datasets together\ndata_pred_bands &lt;- cbind(model1$model, pred)\nglimpse(data_pred_bands)\n\nRows: 80\nColumns: 5\n$ life_expectancy_years_2011 &lt;dbl&gt; 56.7, 76.7, 60.9, 76.9, 76.0, 73.8, 71.0, 7…\n$ female_literacy_rate_2011  &lt;dbl&gt; 13.0, 95.7, 58.6, 99.4, 97.9, 99.5, 53.4, 9…\n$ fit                        &lt;dbl&gt; 53.94643, 73.14897, 64.53453, 74.00809, 73.…\n$ lwr                        &lt;dbl&gt; 40.91166, 60.81324, 52.14572, 61.65365, 61.…\n$ upr                        &lt;dbl&gt; 66.98121, 85.48470, 76.92334, 86.36253, 86.…\n\nggplot(data_pred_bands, \n       aes(x=female_literacy_rate_2011,\n           y=life_expectancy_years_2011)) +\n  geom_point() +\n  geom_smooth(method=lm) +\n  geom_line(aes(y=lwr), \n            color=\"violet\", \n            linetype=\"dashed\")+\n  geom_line(aes(y=upr), \n            color=\"violet\", \n            linetype=\"dashed\")"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#example-using-r-for-prediction-interval",
+    "href": "slides/Day16_bsta511.html#example-using-r-for-prediction-interval",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Example: Using R for prediction interval",
+    "text": "Example: Using R for prediction interval\nFind the 95% prediction intervals for the life expectancy when the female literacy rate is 40, 60, and 80.\n\nnewdata  # previously defined for CI's\n\n  female_literacy_rate_2011\n1                        40\n2                        60\n3                        80\n\npredict(model1, \n        newdata=newdata, \n        interval=\"prediction\")  # prediction instead of \"confidence\"\n\n       fit      lwr      upr\n1 60.21570 47.63758 72.79382\n2 64.85961 52.48072 77.23849\n3 69.50351 57.19879 81.80823\n\n\n\nInterpretation\nWe are 95% confident that a new selected country with a 60% female literacy rate will have a life expectancy between 52.5 and 77.2 years."
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#prediction-bands-vs.-confidence-bands",
+    "href": "slides/Day16_bsta511.html#prediction-bands-vs.-confidence-bands",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Prediction bands vs. confidence bands",
+    "text": "Prediction bands vs. confidence bands\nCreate a scatterplot with the regression line, 95% confidence bands, and 95% prediction bands.\n\n\nFirst create a data frame with the original data points (both x and y values), their respective predicted values, andtheir respective prediction intervals\nCan do this with augment() from the broom package.\n\n\n\n\nmodel1_pred_bands &lt;- augment(\n  model1, interval = \"prediction\")\n\n# take a look at new object:\nnames(model1_pred_bands) \n\n [1] \"life_expectancy_years_2011\" \"female_literacy_rate_2011\" \n [3] \".fitted\"                    \".lower\"                    \n [5] \".upper\"                     \".resid\"                    \n [7] \".hat\"                       \".sigma\"                    \n [9] \".cooksd\"                    \".std.resid\"                \n\nmodel1_pred_bands %&gt;% \n  select(life_expectancy_years_2011, \n         female_literacy_rate_2011, \n         .fitted:.upper) %&gt;% \n  glimpse()\n\nRows: 80\nColumns: 5\n$ life_expectancy_years_2011 &lt;dbl&gt; 56.7, 76.7, 60.9, 76.9, 76.0, 73.8, 71.0, 7…\n$ female_literacy_rate_2011  &lt;dbl&gt; 13.0, 95.7, 58.6, 99.4, 97.9, 99.5, 53.4, 9…\n$ .fitted                    &lt;dbl&gt; 53.94643, 73.14897, 64.53453, 74.00809, 73.…\n$ .lower                     &lt;dbl&gt; 40.91166, 60.81324, 52.14572, 61.65365, 61.…\n$ .upper                     &lt;dbl&gt; 66.98121, 85.48470, 76.92334, 86.36253, 86.…\n\n\n\n\nggplot(model1_pred_bands, \n       aes(x=female_literacy_rate_2011,\n           y=life_expectancy_years_2011)) +\n  geom_point() +\n  geom_ribbon(aes(ymin = .lower, ymax = .upper), \n              alpha = 0.2, fill = \"red\") +\n  geom_smooth(method=lm) +\n  labs(title = \"SLR with Confidence & Prediction Bands\")"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#prediction-bands-vs.-confidence-bands-12",
+    "href": "slides/Day16_bsta511.html#prediction-bands-vs.-confidence-bands-12",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Prediction bands vs. confidence bands (1/2)",
+    "text": "Prediction bands vs. confidence bands (1/2)\nCreate a scatterplot with the regression line, 95% confidence bands, and 95% prediction bands.\n\nFirst create a data frame with the original data points (both x and y values), their respective predicted values, andtheir respective prediction intervals\nCan do this with augment() from the broom package.\n\n\nmodel1_pred_bands &lt;- augment(model1, interval = \"prediction\")\n\n# take a look at new object:\nnames(model1_pred_bands) \n\n [1] \"life_expectancy_years_2011\" \"female_literacy_rate_2011\" \n [3] \".fitted\"                    \".lower\"                    \n [5] \".upper\"                     \".resid\"                    \n [7] \".hat\"                       \".sigma\"                    \n [9] \".cooksd\"                    \".std.resid\"                \n\nmodel1_pred_bands %&gt;% \n  select(life_expectancy_years_2011, female_literacy_rate_2011, \n         .fitted:.upper) %&gt;% \n  glimpse()\n\nRows: 80\nColumns: 5\n$ life_expectancy_years_2011 &lt;dbl&gt; 56.7, 76.7, 60.9, 76.9, 76.0, 73.8, 71.0, 7…\n$ female_literacy_rate_2011  &lt;dbl&gt; 13.0, 95.7, 58.6, 99.4, 97.9, 99.5, 53.4, 9…\n$ .fitted                    &lt;dbl&gt; 53.94643, 73.14897, 64.53453, 74.00809, 73.…\n$ .lower                     &lt;dbl&gt; 40.91166, 60.81324, 52.14572, 61.65365, 61.…\n$ .upper                     &lt;dbl&gt; 66.98121, 85.48470, 76.92334, 86.36253, 86.…"
+  },
+  {
+    "objectID": "slides/Day16_bsta511.html#prediction-bands-vs.-confidence-bands-22",
+    "href": "slides/Day16_bsta511.html#prediction-bands-vs.-confidence-bands-22",
+    "title": "DRAFT Day 16: Simple Linear Regression Part 2 (Sections 6.3-6.4)",
+    "section": "Prediction bands vs. confidence bands (2/2)",
+    "text": "Prediction bands vs. confidence bands (2/2)\n\nnames(model1_pred_bands) \n\n [1] \"life_expectancy_years_2011\" \"female_literacy_rate_2011\" \n [3] \".fitted\"                    \".lower\"                    \n [5] \".upper\"                     \".resid\"                    \n [7] \".hat\"                       \".sigma\"                    \n [9] \".cooksd\"                    \".std.resid\"                \n\n\n\nggplot(model1_pred_bands, \n       aes(x=female_literacy_rate_2011, y=life_expectancy_years_2011)) +\n  geom_point() +\n  geom_ribbon(aes(ymin = .lower, ymax = .upper), # prediction bands\n              alpha = 0.2, fill = \"red\") +\n  geom_smooth(method=lm) +  # confidence bands\n  labs(title = \"SLR with Confidence & Prediction Bands\")"
   }
 ]
