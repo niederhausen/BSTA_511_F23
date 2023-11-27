@@ -1131,7 +1131,7 @@
     "href": "homework.html",
     "title": "Homework",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\nHW 2: BSTA 511-611 F23\n\n\n\n\n10/21/23\n\n\nHW 3: BSTA 511-611 F23\n\n\n\n\n10/28/23\n\n\nHW 4: BSTA 511-611 F23\n\n\n\n\n11/4/23\n\n\nHW 5: BSTA 511-611 F23\n\n\n\n\n11/11/23\n\n\nHW 6: BSTA 511-611 F23\n\n\n\n\n11/18/23\n\n\nHW 7: BSTA 511-611 F23\n\n\n\n\n11/27/23\n\n\nHW 8: BSTA 511-611 F23\n\n\n\n\n12/2/23\n\n\nHW 9: BSTA 511-611 F23\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\n10/7/23\n\n\nHW 1: BSTA 511-611 F22\n\n\n\n\n10/14/23\n\n\nHW 2: BSTA 511-611 F23\n\n\n\n\n10/21/23\n\n\nHW 3: BSTA 511-611 F23\n\n\n\n\n10/28/23\n\n\nHW 4: BSTA 511-611 F23\n\n\n\n\n11/4/23\n\n\nHW 5: BSTA 511-611 F23\n\n\n\n\n11/11/23\n\n\nHW 6: BSTA 511-611 F23\n\n\n\n\n11/18/23\n\n\nHW 7: BSTA 511-611 F23\n\n\n\n\n11/27/23\n\n\nHW 8: BSTA 511-611 F23\n\n\n\n\n12/2/23\n\n\nDRAFT HW 9: BSTA 511-611 F23\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/Day02_bsta511.html#experiments-12",
@@ -12161,35 +12161,35 @@
   {
     "objectID": "homework/HW_9_F23_bsta511.html",
     "href": "homework/HW_9_F23_bsta511.html",
-    "title": "HW 9: BSTA 511-611 F23",
+    "title": "DRAFT HW 9: BSTA 511-611 F23",
     "section": "",
     "text": "Due 12/2/23\nDownload the .qmd file for this assignment from https://github.com/niederhausen/BSTA_511_F23/blob/main/homework/HW_8_F23_bsta511.qmd"
   },
   {
     "objectID": "homework/HW_9_F23_bsta511.html#directions",
     "href": "homework/HW_9_F23_bsta511.html#directions",
-    "title": "HW 9: BSTA 511-611 F23",
+    "title": "DRAFT HW 9: BSTA 511-611 F23",
     "section": "Directions",
     "text": "Directions\n\nPlease upload your homework to Sakai. Upload both your .qmd code file and the rendered .html file.\nFor each question, make sure to include all code and resulting output in the html file to support your answers.\n\n\nR & LaTeX code\n\nSee the .qmd files with the code from class notes for LaTeX and R code.\nThe LaTeX code will make it easier to show your work in computations.\n\n\n\n\n\n\n\nTip\n\n\n\nIt is a good idea to try rendering your document from time to time as you go along! Note that rendering automatically saves your Qmd file and rendering frequently helps you catch your errors more quickly."
   },
   {
     "objectID": "homework/HW_9_F23_bsta511.html#trends-in-the-residuals",
     "href": "homework/HW_9_F23_bsta511.html#trends-in-the-residuals",
-    "title": "HW 9: BSTA 511-611 F23",
+    "title": "DRAFT HW 9: BSTA 511-611 F23",
     "section": "6.12 Trends in the residuals",
     "text": "6.12 Trends in the residuals"
   },
   {
     "objectID": "homework/HW_9_F23_bsta511.html#load-all-the-packages-you-need-below-here.",
     "href": "homework/HW_9_F23_bsta511.html#load-all-the-packages-you-need-below-here.",
-    "title": "HW 9: BSTA 511-611 F23",
+    "title": "DRAFT HW 9: BSTA 511-611 F23",
     "section": "1.1 Load all the packages you need below here.",
     "text": "1.1 Load all the packages you need below here."
   },
   {
     "objectID": "homework/HW_9_F23_bsta511.html#r1-palmer-penguins-anova",
     "href": "homework/HW_9_F23_bsta511.html#r1-palmer-penguins-anova",
-    "title": "HW 9: BSTA 511-611 F23",
+    "title": "DRAFT HW 9: BSTA 511-611 F23",
     "section": "1.2 R1: Palmer Penguins ANOVA",
     "text": "1.2 R1: Palmer Penguins ANOVA\n\nUse the penguins data from the palmerpenguins package.\n\nDon’t forget to first install the palmerpenguins package\n\nYou can learn more about the Palmer penguins data at https://allisonhorst.github.io/palmerpenguins/\nWe will test whether there are differences in penguins’ mean bill depths when comparing different species.\n\n\nlibrary(palmerpenguins)\ndata(penguins)"
   },
