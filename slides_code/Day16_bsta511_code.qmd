@@ -1008,7 +1008,7 @@ We are 95% confident that the __average__ life expectancy for a country with a 6
 
 
 
-### Confidence bands for mean response
+### Confidence bands for mean response $\mu_{Y|x^*}$
 
 * Often we plot the CI for many values of X, creating __confidence bands__
 * The confidence bands are what ggplot creates when we set `se = TRUE` within `geom_smooth`
@@ -1025,7 +1025,7 @@ ggplot(gapm,
 
 
 
-### Width of confidence bands for mean response
+### Width of confidence bands for mean response $\mu_{Y|x^*}$
 
 * For what values of $x^*$ are the confidence bands (intervals) narrowest? widest?
 
