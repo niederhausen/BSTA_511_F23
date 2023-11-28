@@ -67,7 +67,7 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 
 All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F23/tree/main/data)
 
-
+* No datasets needed for Day 17
 
 ### Class discussion
 
