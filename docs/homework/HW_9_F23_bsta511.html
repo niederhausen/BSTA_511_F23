@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
 }
-
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-{ counter-reset: source-line 0; }
-pre.numberSource code > span
-{ position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-{ content: counter(source-line);
-position: relative; left: -1em; text-align: right; vertical-align: baseline;
-border: none; display: inline-block;
--webkit-touch-callout: none; -webkit-user-select: none;
--khtml-user-select: none; -moz-user-select: none;
--ms-user-select: none; user-select: none;
-padding: 0 4px; width: 4em;
-}
-pre.numberSource { margin-left: 3em; padding-left: 4px; }
-div.sourceCode
-{ }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -4618,11 +4584,15 @@ vertical-align: -.125em;
   <li><a href="#book-exercises" id="toc-book-exercises" class="nav-link" data-scroll-target="#book-exercises">Book exercises</a>
   <ul class="collapse">
   <li><a href="#trends-in-the-residuals" id="toc-trends-in-the-residuals" class="nav-link" data-scroll-target="#trends-in-the-residuals">6.12 Trends in the residuals</a></li>
+  <li><a href="#guppies-part-iv" id="toc-guppies-part-iv" class="nav-link" data-scroll-target="#guppies-part-iv">6.20 Guppies, Part IV</a></li>
+  <li><a href="#a-e-helmets-and-lunches" id="toc-a-e-helmets-and-lunches" class="nav-link" data-scroll-target="#a-e-helmets-and-lunches">6.26 (a, e) Helmets and lunches</a></li>
+  <li><a href="#guppies-part-v" id="toc-guppies-part-v" class="nav-link" data-scroll-target="#guppies-part-v">6.28 Guppies, Part V</a></li>
+  <li><a href="#a-b-guppies-part-vi" id="toc-a-b-guppies-part-vi" class="nav-link" data-scroll-target="#a-b-guppies-part-vi">6.32 (a, b) Guppies, Part VI</a></li>
   </ul></li>
   <li><a href="#r-exercises" id="toc-r-exercises" class="nav-link" data-scroll-target="#r-exercises"><span class="header-section-number">1</span> R exercises</a>
   <ul class="collapse">
   <li><a href="#load-all-the-packages-you-need-below-here." id="toc-load-all-the-packages-you-need-below-here." class="nav-link" data-scroll-target="#load-all-the-packages-you-need-below-here."><span class="header-section-number">1.1</span> Load all the packages you need below here.</a></li>
-  <li><a href="#r1-palmer-penguins-anova" id="toc-r1-palmer-penguins-anova" class="nav-link" data-scroll-target="#r1-palmer-penguins-anova"><span class="header-section-number">1.2</span> R1: Palmer Penguins ANOVA</a></li>
+  <li><a href="#r1-coming-soon" id="toc-r1-coming-soon" class="nav-link" data-scroll-target="#r1-coming-soon"><span class="header-section-number">1.2</span> R1: Coming soon!</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -4693,26 +4663,29 @@ Tip
 <section id="trends-in-the-residuals" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="trends-in-the-residuals">6.12 Trends in the residuals</h2>
 </section>
+<section id="guppies-part-iv" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="guppies-part-iv">6.20 Guppies, Part IV</h2>
+</section>
+<section id="a-e-helmets-and-lunches" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="a-e-helmets-and-lunches">6.26 (a, e) Helmets and lunches</h2>
+<p><strong>Skip parts (b)-(d). To complete (e), use that the slope from part (b) is −0.537, and the intercept is 55.34.</strong></p>
+<p><em>Note: if you have time, it would be good practice to calculate the regression line as well. This was covered on the previous assignment.</em></p>
+</section>
+<section id="guppies-part-v" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="guppies-part-v">6.28 Guppies, Part V</h2>
+</section>
+<section id="a-b-guppies-part-vi" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="a-b-guppies-part-vi">6.32 (a, b) Guppies, Part VI</h2>
+<p><strong>Skip part (c).</strong></p>
+</section>
 </section>
 <section id="r-exercises" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> R exercises</h1>
 <section id="load-all-the-packages-you-need-below-here." class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="load-all-the-packages-you-need-below-here."><span class="header-section-number">1.1</span> Load all the packages you need below here.</h2>
 </section>
-<section id="r1-palmer-penguins-anova" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="r1-palmer-penguins-anova"><span class="header-section-number">1.2</span> R1: Palmer Penguins ANOVA</h2>
-<ul>
-<li>Use the <code>penguins</code> data from the <code>palmerpenguins</code> package.
-<ul>
-<li>Don’t forget to first <strong>install</strong> the <code>palmerpenguins</code> package</li>
-</ul></li>
-<li>You can learn more about the Palmer penguins data at <a href="https://allisonhorst.github.io/palmerpenguins/" class="uri">https://allisonhorst.github.io/palmerpenguins/</a></li>
-<li>We will test whether there are differences in penguins’ mean bill depths when comparing different species.</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="r1-coming-soon" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="r1-coming-soon"><span class="header-section-number">1.2</span> R1: Coming soon!</h2>
 
 
 </section>

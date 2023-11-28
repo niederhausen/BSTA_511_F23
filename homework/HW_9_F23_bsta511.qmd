@@ -48,7 +48,21 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 ## 6.12 Trends in the residuals {.unnumbered}
 
+## 6.20 Guppies, Part IV {.unnumbered}
 
+## 6.26 (a, e) Helmets and lunches {.unnumbered}
+
+__Skip parts (b)-(d). To complete (e), use that the slope from part (b) is −0.537, and the intercept is 55.34.__
+
+_Note: if you have time, it would be good practice to calculate the regression line as well. This was covered on the previous assignment._ 
+
+
+
+## 6.28 Guppies, Part V {.unnumbered}
+
+## 6.32 (a, b) Guppies, Part VI  {.unnumbered}
+
+__Skip part (c).__
 
 
 
@@ -63,21 +77,7 @@ It is a good idea to try rendering your document from time to time as you go alo
 ```
 
 
-## R1: Palmer Penguins ANOVA
-
-
-* Use the `penguins` data from the `palmerpenguins` package.
-    * Don't forget to first __install__ the `palmerpenguins` package
-* You can learn more about the Palmer penguins data at <https://allisonhorst.github.io/palmerpenguins/>
-* We will test whether there are differences in penguins' mean bill depths when comparing different species.
-
-
-```{r}
-library(palmerpenguins)
-data(penguins)
-```
-
-
+## R1: Coming soon! 
 
 
 
