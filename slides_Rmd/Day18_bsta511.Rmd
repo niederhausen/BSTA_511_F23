@@ -1,0 +1,225 @@
+---
+title: "Day 18 BSTA 511/611 Fall 2022"
+subtitle: "Non-parametric tests - Supplemental material"
+author: "Meike Niederhausen, PhD"
+output:
+  xaringan::moon_reader:
+    css: [css/xaringan-themer.css, css/my-theme.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: tomorrow #http://arm.rbind.io/slides/xaringan.html#77
+      highlightLines: true
+      highlightLanguage: r
+      countIncrementalSlides: false
+      titleSlideClass: ["left", "middle", "inverse"]
+      ratio: "16:9"
+    includes:
+      in_header: header.html   
+editor_options: 
+  chunk_output_type: console
+---
+
+
+layout: true
+  
+<!-- <div class="my-footer"><span>bit.ly/berd_tidy</span></div>  -->
+
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+options(knitr.table.format = "html") 
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(here)
+# library(fivethirtyeight)
+library(moderndive)
+library(infer)
+library(knitr)
+library(skimr)
+library(broom)
+library(gt)
+library(rstatix)
+library(oibiostat)
+library(janitor)
+
+set.seed(48539)
+
+# theme_update(text = element_text(size=16))  # set global text size for ggplots
+
+knitr::opts_chunk$set(
+  warning=FALSE, 
+  message=FALSE, 
+  #fig.width=10.5, 
+  #fig.height=4,
+  fig.align = "center",
+  rows.print=7,
+  echo=TRUE,
+  highlight = TRUE,
+  # prompt = TRUE, # IF TRUE adds a > before each code input
+  # comment = NA # PRINTS IN FRONT OF OUTPUT, default is '##' which comments out output
+  comment = '##'
+  )
+
+# set ggplot theme
+theme_set(theme_bw(base_size = 24))
+```
+
+```{r xaringan-themer, include = FALSE}
+# creates xaringan theme
+# devtools::install_github("gadenbuie/xaringanthemer")
+library(xaringanthemer)
+style_mono_light(
+  base_color =  "#3A6185", ## OHSU Marquam
+  code_highlight_color = "#cbdded",
+  link_color = "#38BDDE",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i","400i","700"),
+  code_font_google   = NULL,
+  text_font_size = "24px",
+  code_font_size = "20px",
+  header_h1_font_size = "45px",
+  header_h2_font_size = "40px",
+  header_h3_font_size = "35px",
+  padding = "0em 2em 1em 2em",
+  outfile = "css/xaringan-themer.css"
+)
+```
+
+
+
+
+
+# MoRitz's tip: write "nice" R code
+
+Check out the tidyverse style guide: https://style.tidyverse.org/index.html
+
+Especially, Chapter 4: [Pipes](https://style.tidyverse.org/pipes.html#pipes) and  Chapter 5: [ggplot2](https://style.tidyverse.org/ggplot2.html#ggplot2)
+
+
+---
+
+# Where are we?
+
+* We've covered inference for
+    * continuous outcomes: 
+        * mean for one group
+        * mean difference of two paired groups
+        * difference in means of two independent groups
+    * binary outcomes:
+        * proportion for one group
+        * difference in proportions of two independent groups
+        * BSTA 513: 
+            * inference for paired proportions (Mc Nemar's test)
+
+<hr>
+Last time:
+
+* Statistical inference for __categorical data__ when either are 
+    * comparing __more than two groups__ or
+    * have categorical outcomes that have __more than 2 levels__ or
+    * both
+* Chi-squared tests of association (independence)
+* Fisher's Exact Test
+
+
+---
+
+
+# Goals for today (Supplemental material)
+
+
+* The motivations of the non-parametric approach
+
+* What the following tests are & how to use them:
+    * __Sign test__ 
+    * __(Wilcoxon) sign-rank test__ 
+    * __Wilcoxon Rank-sum test__/ __Mann-Whitney test__
+
+* How to interpret the results
+
+* How to use R for each test
+
+
+
+---
+
+# Non-parametric tests
+
+## Background
+
+### Parametric vs nonparametric
+   
+* Prior methods for means involving continuous data ($t$-based) had supporting theory assuming the underlying population was normal (at least approx.).
+* Normal distribution is completely described by two parameters, $\mu$
+and $\sigma$. The first was often the parameter of interest, while the latter was assumed known ($Z$-test) or estimated ($t$-tests).
+* The above are therefore described as "parametric" procedures.
+
+* __Nonparametric__ procedures 
+    * make fewer assumptions about the structure of the underlying  population from which the samples were collected
+    * work well when distributional assumptions are in doubt
+   
+---
+
+### The good and the bad
+
+There are several good things about nonparametric tests.
+
+__Good__  
+* Fewer assumptions. 
+* Tests are based on ranks, therefore outliers have no greater influence than non-outliers.
+* Since tests are based on ranks we can apply these procedures to
+ordinal data (where means and standard deviations are not meaningful).
+
+__Drawbacks__
+
+* Less powerful than parametric tests (due to loss of information when data are converted to ranks)
+* While the test is easy, it may require substantial (computer) work to develop a confidence interval [by "inverting" the test].
+* Theory is developed for continuous data (where ties are not possible); if population or data contain many ties, then a correction to the procedures must be implemented.
+* Some procedures have "large" and "small" sample versions; the small sample versions require special tables or a computer.
+
+
+---
+class: inverse, middle, center
+
+# Sign test
+
+For paired data or single samples
+
+---
+
+## Example: Intraocular pressure of glaucoma patients
+
+.pull-left[
+* Intraocular pressure of glaucoma patients is often reduced by treatment with adrenaline. 
+* A __new synthetic drug__ is being considered, but it is more expensive than the __current adrenaline alternative__. 
+* 7 glaucoma patients were treated with both drugs: 
+    * one eye with adrenaline and 
+    * the other with the synthetic drug
+* __Reduction in pressure__ was recorded in each eye after following treatment (larger numbers indicate greater reduction)
+]
+
+.pull-right[
+
+```{r echo=FALSE}
+IOP_table <- tibble(
+  Patient = 1:7,
+  Adren = c(3.5, 2.6, 3, 1.9, 2.9, 2.4, 2),
+  Synth = c(3.2, 3.1, 3.3, 2.4, 2.9, 2.8, 2.6)
+  ) %>% 
+  mutate(
+    d = Synth - Adren,
+    Sign = case_when(
+      d < 0 ~ "-",
+      d > 0 ~ "+"
+      )
+    )
+IOP_table %>% gt()
+
+```
+
+* __d__ is the difference in reduction of pressure: __Synth - Adren__
+* __Sign__ is `+` if the difference is positive and `-` if the difference is negative
+]

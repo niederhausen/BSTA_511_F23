@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Day 18 BSTA 511/611 Fall 2022</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Meike Niederhausen, PhD" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+
+    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/my-theme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: left, middle, inverse, title-slide
+
+.title[
+# Day 18 BSTA 511/611 Fall 2022
+]
+.subtitle[
+## Non-parametric tests - Supplemental material
+]
+.author[
+### Meike Niederhausen, PhD
+]
+
+---
+
+
+
+layout: true
+  
+&lt;!-- &lt;div class="my-footer"&gt;&lt;span&gt;bit.ly/berd_tidy&lt;/span&gt;&lt;/div&gt;  --&gt;
+
+---
+
+
+
+
+
+
+
+
+
+# MoRitz's tip: write "nice" R code
+
+Check out the tidyverse style guide: https://style.tidyverse.org/index.html
+
+Especially, Chapter 4: [Pipes](https://style.tidyverse.org/pipes.html#pipes) and  Chapter 5: [ggplot2](https://style.tidyverse.org/ggplot2.html#ggplot2)
+
+
+---
+
+# Where are we?
+
+* We've covered inference for
+    * continuous outcomes: 
+        * mean for one group
+        * mean difference of two paired groups
+        * difference in means of two independent groups
+    * binary outcomes:
+        * proportion for one group
+        * difference in proportions of two independent groups
+        * BSTA 513: 
+            * inference for paired proportions (Mc Nemar's test)
+
+&lt;hr&gt;
+Last time:
+
+* Statistical inference for __categorical data__ when either are 
+    * comparing __more than two groups__ or
+    * have categorical outcomes that have __more than 2 levels__ or
+    * both
+* Chi-squared tests of association (independence)
+* Fisher's Exact Test
+
+
+---
+
+
+# Goals for today (Supplemental material)
+
+
+* The motivations of the non-parametric approach
+
+* What the following tests are &amp; how to use them:
+    * __Sign test__ 
+    * __(Wilcoxon) sign-rank test__ 
+    * __Wilcoxon Rank-sum test__/ __Mann-Whitney test__
+
+* How to interpret the results
+
+* How to use R for each test
+
+
+
+---
+
+# Non-parametric tests
+
+## Background
+
+### Parametric vs nonparametric
+   
+* Prior methods for means involving continuous data ($t$-based) had supporting theory assuming the underlying population was normal (at least approx.).
+* Normal distribution is completely described by two parameters, `\(\mu\)`
+and `\(\sigma\)`. The first was often the parameter of interest, while the latter was assumed known ($Z$-test) or estimated ($t$-tests).
+* The above are therefore described as "parametric" procedures.
+
+* __Nonparametric__ procedures 
+    * make fewer assumptions about the structure of the underlying  population from which the samples were collected
+    * work well when distributional assumptions are in doubt
+   
+---
+
+### The good and the bad
+
+There are several good things about nonparametric tests.
+
+__Good__  
+* Fewer assumptions. 
+* Tests are based on ranks, therefore outliers have no greater influence than non-outliers.
+* Since tests are based on ranks we can apply these procedures to
+ordinal data (where means and standard deviations are not meaningful).
+
+__Drawbacks__
+
+* Less powerful than parametric tests (due to loss of information when data are converted to ranks)
+* While the test is easy, it may require substantial (computer) work to develop a confidence interval [by "inverting" the test].
+* Theory is developed for continuous data (where ties are not possible); if population or data contain many ties, then a correction to the procedures must be implemented.
+* Some procedures have "large" and "small" sample versions; the small sample versions require special tables or a computer.
+
+
+---
+class: inverse, middle, center
+
+# Sign test
+
+For paired data or single samples
+
+---
+
+## Example: Intraocular pressure of glaucoma patients
+
+.pull-left[
+* Intraocular pressure of glaucoma patients is often reduced by treatment with adrenaline. 
+* A __new synthetic drug__ is being considered, but it is more expensive than the __current adrenaline alternative__. 
+* 7 glaucoma patients were treated with both drugs: 
+    * one eye with adrenaline and 
+    * the other with the synthetic drug
+* __Reduction in pressure__ was recorded in each eye after following treatment (larger numbers indicate greater reduction)
+]
+
+.pull-right[
+
+<div id="naonhwdjiq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#naonhwdjiq table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#naonhwdjiq thead, #naonhwdjiq tbody, #naonhwdjiq tfoot, #naonhwdjiq tr, #naonhwdjiq td, #naonhwdjiq th {
+  border-style: none;
+}
+
+#naonhwdjiq p {
+  margin: 0;
+  padding: 0;
+}
+
+#naonhwdjiq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#naonhwdjiq .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#naonhwdjiq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#naonhwdjiq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#naonhwdjiq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#naonhwdjiq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#naonhwdjiq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#naonhwdjiq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#naonhwdjiq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#naonhwdjiq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#naonhwdjiq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#naonhwdjiq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#naonhwdjiq .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#naonhwdjiq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#naonhwdjiq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#naonhwdjiq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#naonhwdjiq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#naonhwdjiq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#naonhwdjiq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#naonhwdjiq .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#naonhwdjiq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#naonhwdjiq .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#naonhwdjiq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#naonhwdjiq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#naonhwdjiq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#naonhwdjiq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#naonhwdjiq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#naonhwdjiq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#naonhwdjiq .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#naonhwdjiq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#naonhwdjiq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#naonhwdjiq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#naonhwdjiq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#naonhwdjiq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#naonhwdjiq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#naonhwdjiq .gt_left {
+  text-align: left;
+}
+
+#naonhwdjiq .gt_center {
+  text-align: center;
+}
+
+#naonhwdjiq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#naonhwdjiq .gt_font_normal {
+  font-weight: normal;
+}
+
+#naonhwdjiq .gt_font_bold {
+  font-weight: bold;
+}
+
+#naonhwdjiq .gt_font_italic {
+  font-style: italic;
+}
+
+#naonhwdjiq .gt_super {
+  font-size: 65%;
+}
+
+#naonhwdjiq .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#naonhwdjiq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#naonhwdjiq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#naonhwdjiq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#naonhwdjiq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#naonhwdjiq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#naonhwdjiq .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Patient">Patient</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Adren">Adren</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Synth">Synth</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="d">d</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Sign">Sign</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Patient" class="gt_row gt_right">1</td>
+<td headers="Adren" class="gt_row gt_right">3.5</td>
+<td headers="Synth" class="gt_row gt_right">3.2</td>
+<td headers="d" class="gt_row gt_right">-0.3</td>
+<td headers="Sign" class="gt_row gt_right">-</td></tr>
+    <tr><td headers="Patient" class="gt_row gt_right">2</td>
+<td headers="Adren" class="gt_row gt_right">2.6</td>
+<td headers="Synth" class="gt_row gt_right">3.1</td>
+<td headers="d" class="gt_row gt_right">0.5</td>
+<td headers="Sign" class="gt_row gt_right">+</td></tr>
+    <tr><td headers="Patient" class="gt_row gt_right">3</td>
+<td headers="Adren" class="gt_row gt_right">3.0</td>
+<td headers="Synth" class="gt_row gt_right">3.3</td>
+<td headers="d" class="gt_row gt_right">0.3</td>
+<td headers="Sign" class="gt_row gt_right">+</td></tr>
+    <tr><td headers="Patient" class="gt_row gt_right">4</td>
+<td headers="Adren" class="gt_row gt_right">1.9</td>
+<td headers="Synth" class="gt_row gt_right">2.4</td>
+<td headers="d" class="gt_row gt_right">0.5</td>
+<td headers="Sign" class="gt_row gt_right">+</td></tr>
+    <tr><td headers="Patient" class="gt_row gt_right">5</td>
+<td headers="Adren" class="gt_row gt_right">2.9</td>
+<td headers="Synth" class="gt_row gt_right">2.9</td>
+<td headers="d" class="gt_row gt_right">0.0</td>
+<td headers="Sign" class="gt_row gt_right">NA</td></tr>
+    <tr><td headers="Patient" class="gt_row gt_right">6</td>
+<td headers="Adren" class="gt_row gt_right">2.4</td>
+<td headers="Synth" class="gt_row gt_right">2.8</td>
+<td headers="d" class="gt_row gt_right">0.4</td>
+<td headers="Sign" class="gt_row gt_right">+</td></tr>
+    <tr><td headers="Patient" class="gt_row gt_right">7</td>
+<td headers="Adren" class="gt_row gt_right">2.0</td>
+<td headers="Synth" class="gt_row gt_right">2.6</td>
+<td headers="d" class="gt_row gt_right">0.6</td>
+<td headers="Sign" class="gt_row gt_right">+</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+
+* __d__ is the difference in reduction of pressure: __Synth - Adren__
+* __Sign__ is `+` if the difference is positive and `-` if the difference is negative
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "tomorrow",
+"highlightLines": true,
+"highlightLanguage": "r",
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
