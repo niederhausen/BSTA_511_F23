@@ -74,13 +74,20 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 
 [Class discussion Google doc link](https://docs.google.com/document/d/1m_sOZWZHlnL89N60RyfdFG6wphcEpofLevd2kMc1wYc/edit?usp=sharing)
 
+* Work on HW 9
 
 ## Homework
 
-* Coming soon! [HW 9](../homework/HW_9_F23_bsta511.qmd) due on __Sat, 12/2__
+* [HW 9](../homework/HW_9_F23_bsta511.qmd) due on __Mon, 12/4__
+    * Datasets
+        * [Gapminder_2011_LifeExp_CO2.csv](/data/Gapminder_2011_LifeExp_CO2.csv)
+        * [chol213.csv](/data/chol213.csv) (from Day 10 Part 2)
+        * [CaffeineTaps.csv](/data/CaffeineTaps.csv) (from Day 11)
     * Covers Days 16-17
     * For book exercises, make sure to include all steps in a hypothesis test (where applicable) as outlined in the class notes. 
     * Do not forget to include a discussion on whether you think the test conditions have been satisfied. Are there assumptions you need to make in order for them to be satisfied? Whether you believe they are satisfied or not, continue to run the hypothesis test as instructed.
+
+
 
 
 ## Recordings
