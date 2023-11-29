@@ -80,6 +80,11 @@ Especially, Chapter 4: [Pipes](https://style.tidyverse.org/pipes.html#pipes) and
 
 * How to use R for each test & interpret the results
 
+## Additional resource
+
+* Chapter 13: Nonparametric tests of Pagano's _Principles of Biostatistics_, 2022 edition
+* Can download chapter from OHSU library eBook at <https://ebookcentral.proquest.com/lib/ohsu/detail.action?docID=6950388&pq-origsite=primo>
+
 
 # Nonparametric tests
 

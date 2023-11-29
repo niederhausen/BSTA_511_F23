@@ -54,7 +54,8 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 ## Day 17 
 
 * Nonparametric tests
-
+* This material is not in our textbook. Please see Chapter 13: Nonparametric tests of Pagano's _Principles of Biostatistics_, 2022 edition as a supplementary resource.
+    * This chapter can be downloaded from the OHSU library's eBook at <https://ebookcentral.proquest.com/lib/ohsu/detail.action?docID=6950388&pq-origsite=primo>
 
 ### Slides
 
