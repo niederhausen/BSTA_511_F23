@@ -18,7 +18,7 @@ editor_options:
 * Review day
     * I will answer any questions you have
     * I will not be preparing a review
-
+* See link below to past exam questions on material
 
 ## Exam 3 (Wednesday)
 
@@ -35,7 +35,12 @@ editor_options:
 
 ### Past exams
 
-* Coming soon!
+* The linked to file includes questions from [past exams]https://sakai.ohsu.edu/access/content/group/BSTA-511-1-AA-F23/Exam_samples/Exam_3_samples_Ch8_5.5_6_nonpar.pdf), which cover the same material as  Exam 3 this quarter. (Requires Sakai login)
+
+
+<!-- * [Answers]() to past BSTA 511 exams -->
+
+
 
 ## Exam 3 retakes
 
