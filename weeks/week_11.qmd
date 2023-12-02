@@ -33,7 +33,7 @@ editor_options:
     * You will be turning in the page of notes with the exam, so please add your name to the sheet. 
 
 
-### Past exams
+### Samples of past exam questions
 
 * The linked to file includes questions from [past exams]https://sakai.ohsu.edu/access/content/group/BSTA-511-1-AA-F23/Exam_samples/Exam_3_samples_Ch8_5.5_6_nonpar.pdf), which cover the same material as  Exam 3 this quarter. (Requires Sakai login)
 
