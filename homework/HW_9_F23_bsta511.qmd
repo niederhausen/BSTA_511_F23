@@ -57,9 +57,9 @@ It is a good idea to try rendering your document from time to time as you go alo
 
 ## 6.26 (a, e) Helmets and lunches {.unnumbered}
 
-__Skip parts (b)-(d). To complete (e), use that the slope from part (b) is −0.537, and the intercept is 55.34.__
+[__Skip parts (b)-(d). To complete (e), use that the slope from part (b) is −0.537, and the intercept is 55.34.__]{style="color:purple"}
 
-_Note: if you have time, it would be good practice to calculate the regression line as well. This was covered on the previous assignment._ 
+[_Note: if you have time, it would be good practice to calculate the regression line as well. This was covered on the previous assignment._]{style="color:purple"} 
 
 
 
@@ -71,7 +71,7 @@ _Note: if you have time, it would be good practice to calculate the regression l
 
 ## 6.32 (a, b) Guppies, Part VI  {.unnumbered}
 
-__Skip part (c).__
+[__Skip part (c).__]{style="color:purple"}
 
 
 
@@ -250,7 +250,7 @@ When covering paired t-tests on Day 10 Part 2, the class notes used the example 
 
 ### Hypotheses
 
-__What are the hypotheses for the sign test (2-sided) in the context of the problem?__ 
+__What are the hypotheses for the (Wilcoxon) Signed-rank test (2-sided) in the context of the problem?__ 
 
 
 
@@ -374,7 +374,7 @@ __What condition needs to be satisfied to apply the Wilcoxon rank-sum test and i
 
 
 
-__Answer the following questions using the Wilcoxon rank-sum test whether you think the condition has been satisfied or not.__ 
+[__Answer the following questions using the Wilcoxon rank-sum test whether you think the condition has been satisfied or not.__ ]{style="color:green"}
 
 ### Why Wilcoxon rank-sum test?
 

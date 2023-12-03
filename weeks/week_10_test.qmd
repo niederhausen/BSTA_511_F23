@@ -62,7 +62,9 @@ All datasets can be found on [GitHub](https://github.com/niederhausen/BSTA_511_F
 * [pdf](https://drive.google.com/file/d/1Kl15Q5EPbDz6u1Hg-rXCFxFI7_g2Ht-l/view?usp=sharing)
 * Slides with [notes](https://drive.google.com/file/d/1Klf9EAfhdyM-vIGxwpbITCfp-t7yHoEY/view?usp=sharing)
 * Code file: [qmd](https://github.com/niederhausen/BSTA_511_F23/blob/main/slides_code/Day17_bsta511_code.qmd), [html](../slides_code/Day17_bsta511_code.qmd)
-
+    * 12/2/23: Updates made to code file for creating ranks using R's `rank()` function that has an option `ties.method` to specify how to calculate ties. 
+    * Search "New:" for updates made. 
+    * Updates are not in the slides.
 
 ### Datasets
 

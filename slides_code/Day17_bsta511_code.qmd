@@ -432,6 +432,34 @@ IOP_ranks %>% gt()
 ```
 
 
+### New: Calculate ranks using R's `rank()` function
+
+* Below I create the ranks using R's `rank()` function that has an option `ties.method` to specify how to calculate ties. 
+* This doesn't require first sorting the data. 
+* However, it includes a difference of 0 in the ranking, and thus below I first remove the row with $d=0$ from the data.
+* In the output below, I called this column `Rank_R`.
+
+```{r}
+IOP_Ranks_R <- IOP_ranks %>% 
+  filter(d != 0) %>% 
+  mutate(
+    # create column with absolute values of differences
+    # it's the absolute values that get ranked
+    abs_d = abs(d), 
+    # create column with ranks that accounts for ties using R's rank() function
+    # you don't need to first sort the data to use this command
+    Rank_R = rank(abs_d, ties.method = "average"),
+    Signed_Rank_R = case_when(
+      d < 0 ~ -Rank_R,
+      d > 0 ~ Rank_R
+      )
+    ) 
+
+IOP_Ranks_R %>% gt()
+
+```
+
+
 
 ## Test statistic (Wilcoxon) Signed-rank test
 
@@ -712,7 +740,23 @@ CPZdata_long %>% gt()
 ```
 
 
-    
+### New: calculate ranks's using `rank()`
+
+* Below I create the ranks using R's `rank()` function that has an option `ties.method` to specify how to calculate ties. 
+* This doesn't require first sorting the data. 
+* In the output below, I called this column `Rank_R`.
+
+```{r}
+CPZdata_long <- CPZdata_long %>% 
+  mutate(
+    # create column with ranks that accounts for ties using R's rank() function
+    # you don't need to first sort the data to use this command
+    Rank_R = rank(Current, ties.method = "average")
+    ) 
+
+CPZdata_long %>% gt()
+
+```    
  
  
 ## Exact p-value approach
@@ -974,6 +1018,26 @@ ranks_Oz_mnth %>%
   summarise(sumRank = sum(Rank))
 ```
 
+
+
+### New: calculate ranks's using `rank()`
+
+* Below I create the ranks using R's `rank()` function that has an option `ties.method` to specify how to calculate ties. 
+* This doesn't require first sorting the data. 
+* In the output below, I called this column `Rank_R`.
+
+```{r}
+ranks_Oz_mnth <- ranks_Oz_mnth %>% 
+  mutate(
+    # create column with ranks that accounts for ties using R's rank() function
+    # you don't need to first sort the data to use this command
+    Rank_R = rank(Ozone, ties.method = "average")
+    ) 
+
+# Compare "simple" ranks not including ties with tie-corrected ranks
+head(ranks_Oz_mnth, 20)
+
+``` 
 
 
 ## K-W test in R
