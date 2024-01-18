@@ -698,7 +698,7 @@ getwd()
 * Posit's (RStudio's) directions for creating Projects
   * [https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects)
 
-* See file [Projects in RStudio](../slides_code/Projects_in_R.html) for more information on R Projects.
+* See file [Projects in RStudio](../resources/Projects_in_R.html) for more information on R Projects.
 
 
 ## Load the dataset
