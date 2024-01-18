@@ -63,13 +63,13 @@ Below are various resources to learn more about RStudio Projects.
   * [https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects](https://support.rstudio.com/hc/en-us/articles/200526207-Using-RStudio-Projects)
   * This page provides concise directions, but not much motivation on why you should be using Projects. 
 * R for Data Science
-    * Excellent book for learning R for data science by by Hadley Wickham and Garrett Grolemund
-    * See Chapter 8: Workflow: Projects (https://r4ds.had.co.nz/workflow-projects.html) for 
-      * [What is real?](https://r4ds.had.co.nz/workflow-projects.html#what-is-real)
-      * [Where does your analysis live?](https://r4ds.had.co.nz/workflow-projects.html#where-does-your-analysis-live)
-      * [Paths and directories](https://r4ds.had.co.nz/workflow-projects.html#paths-and-directories)
-      * [RStudio Projects](https://r4ds.had.co.nz/workflow-projects.html#rstudio-projects)
-      * [Summary](https://r4ds.had.co.nz/workflow-projects.html#summary)
+    * Excellent book R for Data Science (2nd edition) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund
+    * See Chapter 6 Section 2: Projects (https://r4ds.hadley.nz/workflow-scripts#projects) for 
+      * [What is the source of truth?](https://r4ds.hadley.nz/workflow-scripts#what-is-the-source-of-truth)
+      * [Where does your analysis live?](https://r4ds.hadley.nz/workflow-scripts#where-does-your-analysis-live)
+      * [RStudio Projects](https://r4ds.hadley.nz/workflow-scripts#rstudio-projects)
+      * [Relative and absolute paths](https://r4ds.hadley.nz/workflow-scripts#relative-and-absolute-paths)
+      * [Summary](https://r4ds.hadley.nz/workflow-scripts#summary)
 
 * Jenny Bryant's STAT 545 class notes
     * Check out Chapter 2 R basics and workflows [https://stat545.com/r-basics.html](https://stat545.com/r-basics.html)
